@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef Tenderloin Crostini_BeefTenderloinCrostini.png" name="Beef Tenderloin Crostini" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="12" units="SERVING"/>
+    <Times prep="37" cook="42"/>
+  </Title>
+  <Nutrition calories="100" fat="35" carbs="15" sugar="1" fiber="2"/>
+  <Description>Tender beef tenderloin on toasted baguette rounds with garlic mayo and arugula.</Description>
+  <Prerequisites>
+    <Prerequisite>Pre-heat over to 400. </Prerequisite>
+    <Prerequisite>Pre-heat a large cast iron skillet over medium-high heat with some EVOO. </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Tenderloin</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Medium onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thinly</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Crimini mushrooms</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Washed</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Butter</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bagette</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>1/2</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijon mustard</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic mayo</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Arugula or baby spinach</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Cook steak, turning once or twice to brown evenly, until medium-rare and lightly charred, 8 to 10 minutes. Transfer steak to a cutting board and let rest for at least 15 minutes. </Step>
+    <Step image="">Sauté sliced onions and mushrooms in butter with a 1/4 teaspoon of the minced garlic until they release all their water and start to get sticky and caramelized, about 10 to 12 minutes. Add salt and pepper to taste. </Step>
+    <Step image="">Lay the sliced bread flat on a baking sheet. Drizzle the remaining olive oil on the slices and quickly rub each with the minced garlic. Bake until crusty and slightly golden, but not too crunchy, turning once during baking time. </Step>
+    <Step image="">Slice the beef thin. Place toasted bread, cut side up, on a platter and slather half with a bit of stone ground mustard and some with garlic mayo. Pile high a few pieces of sliced beef on each piece and season with salt and pepper. Add sautéed onions and mushrooms to the top of the beef. Garnish with baby spinach or arugula tossed in a little olive oil and salt. Serve Immediately. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,2 +1,2 @@
-# RecipeWebServer
-node.js aplplication providing web server for creating and editing recipes.
+# RecipeServer
+node.js app for recipe website.

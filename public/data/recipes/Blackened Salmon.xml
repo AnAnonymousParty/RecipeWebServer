@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Blackened Salmon_Blackened Salmon.jpg" name="Blackened Salmon" category="ENTREE_FISH" cuisine="CAJUN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="15" cook="10"/>
+  </Title>
+  <Nutrition calories="500" fat="30" carbs="5" sugar="1" fiber="1"/>
+  <Description>Succulent blackened salmon fillets with an exciting blend of Cajun spices.</Description>
+  <Prerequisites>
+    <Prerequisite>Acquire ingredients.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Salmon filtets, skin on</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Remove any pin bones.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Butter</Name>
+      <Quantity units="TSP">4</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cayenne pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme, dried</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oregano, dried</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix paprika, cayenne pepper, onion powder, salt, white and black pepper, thyme, and oregano together in a prep bowl.</Step>
+    <Step image="">Brush salmon fillets on both sides with 1/4 cup butter, and sprinkle evenly with the spice mixture. </Step>
+    <Step image="">Heat 2 tablespoons melted butter in a large, heavy skillet over high heat. Add salmon and cook until blackened, 2 to 5 minutes. </Step>
+    <Step image="">Lift fillets, add remaining melted butter to the skillet, and flip fillets into the butter. Cook until the other side is blackened and fish flakes easily with a fork, 3 to 5 minutes. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,269 @@
+<form id="viewRecipeForm"> 
+ <input id="recipeName" type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
+ 
+ <div class="centered">
+  <table class="plain-table">
+   <tr>
+    <th>
+     CUISINE
+    </th>
+    <th>
+     COURSE
+    </th>  
+    <th colspan="5">
+     NUTRITION
+    </th>   
+    <th colspan="1">
+     YIELD
+    </th> 
+    <th colspan="3">
+     TIMES
+    </th>     
+   </tr>     
+   <tr>
+    <td>
+     <% var i = recipeData.Recipe.Title[0].$.cuisine; %> <%= enumUtils.GetDescFromCuisineType(i) %>
+    </td>    
+    <td>
+     <% var i = recipeData.Recipe.Title[0].$.category; %> <%= enumUtils.GetDescFromCategoryType(i) %>
+    </td>
+    <td>
+     Calories: <%= recipeData.Recipe.Nutrition[0].$.calories %> 
+    </td>
+    <td>
+     Fat: <%= recipeData.Recipe.Nutrition[0].$.fat %> g 
+    </td>
+    <td>
+     Carbs: <%= recipeData.Recipe.Nutrition[0].$.carbs %> g
+    </td>
+    <td>
+     Sugar: <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
+    </td>
+    <td>
+     Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
+    </td>
+    <td>
+     <%= recipeData.Recipe.Title[0].Yield[0].$.amount %> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
+    </td>
+    <td>
+     Prep Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep)); %>
+    </td>
+    <td>
+     Cook Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.cook)); %>
+    </td>
+    <td>
+     Total Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep) + parseInt(recipeData.Recipe.Title[0].Times[0].$.cook)); %>
+    </td>
+   </tr>
+  </table>  
+ </div>
+ 
+ <br>
+ 
+ <div class="centered">
+  <%
+   var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; margin: 10px 0px 10px 0px; visibility: collapse;" : "display: inline; margin: 10px 0px 10px 0px; visibility: visible;");
+  %> 
+  <img height="300px" onclick='ViewImage("/images/Recipes/<%=recipeData.Recipe.Title[0].$.image %>");' src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" style="<%=style %>" width="300px">
+ </div> 
+ <br>
+ <div style="margin-left: auto; margin-right: auto; width: 80%;">
+  <div style="text-align: left;">
+   <%- commonUtils.RenderNewlines(recipeData.Recipe.Description); %>
+  </div>
+ </div> 
+ 
+ <br>
+ 
+ <%
+  if (Object.getOwnPropertyNames(recipeData.Recipe.Prerequisites[0]).includes("Prerequisite")) {
+ %>       
+ <div class="table-container" id="Prerequisites">
+  <div class="heading">
+   PREREQUISITES
+  </div>
+  <br>
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="prerequisitesTable" width="500px">
+    <thead>
+     <tr>
+      <th>
+       Prerequisite
+      </th>   
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var prerequisites = recipeData.Recipe.Prerequisites[0].Prerequisite; 
+      for(ndx = 0; ndx < prerequisites.length; ++ndx) { 
+     %> 
+      <tr>
+       <td style="max-width: 505px; min-width: 505px; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(prerequisites[ndx]); %>
+       </td>
+      </tr> 
+     <%}%>
+    </tbody>
+   </table>
+  </div>
+ </div> 
+ <%} %> 
+ 
+ <br>
+  
+ <%
+  if (Object.getOwnPropertyNames(recipeData.Recipe.Ingredients[0]).includes("Ingredient")) { 
+ %>       
+ <div class="table-container">
+  <div class="heading">
+   INGREDIENTS
+  </div>
+  <br>
+  <div class="centered">
+  <table align="center" class="scrolling-table" id="ingredientsTable" width="880px">
+   <thead>
+    <tr>
+     <th width="250px">
+      Ingredient
+     </th>
+     <th width="70px">
+      Quantity
+     </th>
+     <th width="80px">
+      Measure
+     </th>    
+     <th width="130px">
+      Preparation
+     </th>  
+     <th width="250px">
+      Notes
+     </th>        
+    </tr>
+   </thead>
+   <tbody>
+    <% 
+     var ingredients = recipeData.Recipe.Ingredients[0].Ingredient;
+     for(ndx = 0; ndx < ingredients.length; ++ndx) { 
+      var prep  = enumUtils.GetDescFromPrepType(ingredients[ndx].Prep[0]);
+      var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
+    %> 
+    <tr>
+     <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%=ingredients[ndx].Name[0] %> </td>
+     <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%=ingredients[ndx].Quantity[0]._ %></td>
+     <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
+     <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
+     <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
+    </tr> 
+    <%}%>  
+   </tbody>
+  </table>
+  </div>
+ </div>  
+<%} %> 
+ 
+ <br>
+ 
+ <%
+  if (Object.getOwnPropertyNames(recipeData.Recipe.Method[0]).includes("Step")) {
+ %>       
+ <div class="table-container">
+  <div class="heading">
+   METHOD
+  </div>
+  <br> 
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="stepsTable" width="700px">
+    <thead>
+     <tr>
+      <th width="500px">
+       Step
+      </th>
+      <th width="150px">
+       Image
+      </th>   
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var steps = recipeData.Recipe.Method[0].Step; 
+
+      for (ndx = 0; ndx < steps.length; ++ndx) {
+       var step = "";
+       
+       if (undefined != steps[ndx]._) {
+        step = steps[ndx]._;
+       } else {
+        step = steps[ndx];
+       }
+       
+       var imgSrc = "";
+       
+       if ("undefined" != typeof(steps[ndx].$)) {
+        if ("undefined" != typeof(steps[ndx].$.image)) {
+         if ("" != steps[ndx].$.image) {
+          imgSrc = steps[ndx].$.image; 
+         }
+        }
+       }       
+     %> 
+      <tr>
+       <td style="max-width: 500px; min-width: 500px; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(step); %>
+       </td>
+       <td style="text-align: center; max-width: 150px; min-width: 150px; word-wrap: break-word;">
+        <%
+         if ("" != imgSrc) {
+        %>
+          <img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px">
+        <%  
+         } else {
+        %>        
+          &nbsp;
+        <%  
+         }
+        %>
+       </td>
+      </tr> 
+     <%}%>  
+    </tbody>
+   </table>
+  </div> 
+ <%} %> 
+ 
+ <br>
+ 
+ <%
+  if (Object.getOwnPropertyNames(recipeData.Recipe.Variations[0]).includes("Variation")) {
+ %>       
+ <div class="table-container" id="Variations">
+  <div class="heading">
+   VARIATIONS / SUBSTITUTIONS
+  </div>
+  <br>
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="variationsTable" width="500px">
+    <thead>
+     <tr>
+      <th>
+       Variation
+      </th>   
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var variations = recipeData.Recipe.Variations[0].Variation; 
+      for(ndx = 0; ndx < variations.length; ++ndx) { 
+     %> 
+      <tr>
+       <td style="max-width: 500px; min-width: 500px; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(variations[ndx]); %>
+       </td>
+      </tr> 
+     <%}%>
+    </tbody>
+   </table>
+  </div>
+ </div> 
+ <%} %>  
+ 
+</form>

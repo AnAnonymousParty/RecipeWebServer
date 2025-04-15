@@ -1,0 +1,291 @@
+a {
+ color: #00B7FF;
+}
+
+body {
+    font: 14px "Verdana", Helvetica, Arial, sans-serif; 
+ padding: 20px;
+}
+
+.centered {
+ text-align: center;
+      width: auto;
+}
+
+.content-section {
+      align-items: center;
+       background: rgb(240, 255, 255, 0.8); 
+     border-color: Blue;
+     border-style: solid;
+     border-width: 0px 1px 0px 1px; 
+          display: block;
+           height: 500px;
+  justify-content: center;
+       overflow-y: auto;
+          padding: 10px;
+   vertical-align: top;
+}
+
+.field-header {
+         display: inline-block;
+      text-align: right;
+  vertical-align: top;
+           width: 30%;
+}
+
+.field-value {
+         display: inline-block;
+      text-align: left;
+           width: 30%;
+}
+
+.filters {
+      align-items: center;
+ background-color: AliceBlue;
+    border-radius: 10px 10px 10px 10px;
+          display: flex;
+           height: 30px;
+  justify-content: center;
+          padding: 10Px;
+}
+
+.footer-section {
+      align-items: center;
+ background-color: CornflowerBlue;
+     border-color: Blue;
+    border-radius: 0px 0px 20px 20px;
+     border-style: solid;
+     border-width: 0px 1px 1px 1px;
+          display: flex;
+           height: 80px;
+  justify-content: center;
+}
+
+.header-section {
+      align-items: center;
+ background-color: CornflowerBlue;
+     border-color: Blue;
+    border-radius: 20px 20px 0px 0px;
+     border-style: solid;
+     border-width: 1px 1px 0px 1px;
+          display: flex;
+           height: 80px;
+  justify-content: center;
+}
+
+.heading {
+     align-items: center;
+         display: flex;
+          height: auto;
+ justify-content: center;
+}
+
+.lefted {
+ text-align: left;
+      width: auto;
+}
+
+.notifier {
+     align-items: center;
+           color: blue;
+         display: none;
+ justify-content: center;
+      visibility: collapse;
+}
+
+.plain-preamble {
+          display: flex;                 
+   flex-direction: row;            
+        flex-wrap: nowrap;              
+  justify-content: space-between; 
+}
+
+.plain-preamble-div div {
+ height: 100px;
+  width: 100px;
+}
+
+.preamble {
+ background-color: lightblue;
+           border: 1px solid blue;
+    border-radius: 10px; 
+          display: flex;                 
+   flex-direction: row;            
+        flex-wrap: nowrap;              
+  justify-content: space-between; 
+}
+
+.preamble-div div {
+ height: 100px;
+  width: 100px;
+}
+
+.recipe-line {
+     margin: 0 auto;
+    padding: 0px 0px 5px 0px;
+   position: relative;
+ text-align: center;
+}
+
+.request-div {
+    display: block;
+ visibility: visible;
+}
+
+.righted {
+ text-align: rightt
+      width: auto;
+}
+
+.table-container {
+ background-color: AliceBlue;
+     border-color: Blue;
+    border-radius: 10px 10px 10px 10px;
+     border-style: solid;
+     border-width: 1px;        
+           height: auto;
+           margin: 0 auto;
+          padding: 10px;
+            width: 80%;
+}
+
+// Styles for tables:
+
+.scrolling-table {
+ border-collapse: collapse;
+    border-color: darkblue;
+    border-style: solid;
+    border-width: 1px; 
+         padding: 10px 10px 10px 10px;
+    table-layout: fixed;
+           width: 100%;
+}
+
+.scrolling-table tbody {
+          border: 1px solid darkblue;
+ border-collapse: collapse;
+         display: block;
+          height: 100px;
+        overflow: auto;
+    table-layout: fixed;
+           width: 100%;
+}
+
+.scrolling-table thead tr {
+          border: 1px solid darkblue;
+ border-collapse: collapse;
+         display: table-header-group;
+           width: 100%;
+}
+
+.scrolling-table thead {
+      background: blue;
+ border-collapse: collapse;  
+           color: cyan;
+         display: table-header-group;
+}
+
+.scrolling-table th {
+          border: 1px solid darkblue;
+ border-collapse: collapse;
+         padding: 5px;
+      text-align: center;
+  vertical-align: top;
+}
+  
+.scrolling-table td {
+          border: 1px solid darkblue;
+ border-collapse: collapse;
+         padding: 5px;
+      text-align: left;
+  vertical-align: top;
+}
+
+.plain-table {
+ border-collapse: collapse;
+          margin: 10px;
+     margin-left: auto;
+    margin-right: auto;          
+           width: 90%;
+}
+
+.plain-table th {
+     border: 1px solid black;
+  font-size: 12px;
+    padding: 8px;
+ text-align: center;
+}
+
+.plain-table td {
+      border: 1px solid black;
+   font-size: 12px;
+     padding: 8px;
+  text-align: center;
+ white-space: nowrap;
+}
+
+.simple-table {
+  border-collapse: collapse;
+            width: 90%;
+}
+
+.simple-table th {
+   border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.simple-table td {
+      border: 1px solid #ddd;
+     padding: 8px;
+  text-align: left;
+}
+
+.simple-table tr:nth-child(even) {
+ background-color: #f2f2f2;
+}
+
+
+// Styles for popup windows:
+
+.no-overlay {
+          display: none;
+         position: fixed;
+              top: 0;
+             left: 0;
+ background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+           height: 100%;
+          z-index: 1;
+}
+
+.overlay {
+          display: block;
+         position: fixed;
+              top: 0;
+             left: 0;
+ background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+           height: 100%;
+          z-index: 1;
+}
+
+.popup {
+      align-items: center;
+ background-color: AliceBlue;
+           border: 3px solid cyan;
+    border-radius: 15px;
+           bottom: 0;
+            color: darkblue; 
+          display: none;              
+           height: fit-content;  
+  justify-content: center;             
+             left: 0;
+           margin: auto;     
+          padding: 10px;        
+         position: absolute;
+            right: 0;         
+              top: 0;
+       visibility: collapse;
+            width: 50%;
+          z-index: 10;
+}

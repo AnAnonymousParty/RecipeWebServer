@@ -1,0 +1,718 @@
+<form action="UpdateRecipe" id="editRecipeForm" method="post" name="editRecipeForm"> 
+ <input id="recipeName" name="recipeName" type="hidden" value="<%= recipeData.Recipe.Title[0].$.name %>">   
+   
+ <div class="recipe-line">
+  <span class="field-header">
+   Cuisine:
+  </span>
+  <span class="field-value">
+   <select id="cuisines" name="cuisine">
+    <%  
+     Object.keys(enums.CuisineTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == recipeData.Recipe.Title[0].$.cuisine ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enums.CuisineTypes); 
+    %>
+   </select>
+  </span>
+ </div>
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Course:
+  </span>
+  <span class="field-value">
+   <select id="categories" name="category">
+    <%  
+     Object.keys(enums.CategoryTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == recipeData.Recipe.Title[0].$.category ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enums.CategoryTypes); 
+    %>
+   </select>    
+  </span>
+ </div>
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Yield:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="yield" max="999" min="1" name="yield" type="number" value="<%=recipeData.Recipe.Title[0].Yield[0].$.amount %>">
+   <select id="yieldUnit" name="yieldUnit">
+    <%  
+     Object.keys(enums.UnitTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == recipeData.Recipe.Title[0].Yield[0].$.units ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enums.UnitTypes); 
+    %>
+   </select>
+  </span>
+ </div> 
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Preparation Time:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="prepTime" max="999" min="1" name="prepTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.prep %>"> minutes
+  </span>
+ </div> 
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Cook Time:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="cookTime" max="999" min="1" name="cookTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.cook %>"> minutes
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Calories:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="calories" max="999" min="1" name="calories" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.calories %>"> 
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Fat:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="fat" max="999" min="1" name="fat" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fat %>"> g
+  </span>
+ </div> 
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Carbs:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="carbs" max="999" min="1" name="carbs" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.carbs %>"> g
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Sugar:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="sugar" max="999" min="1" name="sugar" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.sugar %>"> g
+  </span>
+ </div> 
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Fiber:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="fiber" max="999" min="1" name="fiber" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fiber %>"> g
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Description:
+  </span>
+  <span class="field-value">
+   <textarea cols="64" data-validation="vAlNum" id="description" maxlength="4096" name="description" required="required" rows="4"><%= recipeData.Recipe.Description %></textarea>   
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Image:
+  </span>
+  <span class="field-value">
+   <%
+    var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; margin: 10px 0px 0px 0px; visibility: collapse;" : "display: inline; margin: 10px 0px 0px 0px; visibility: visible;");
+   %> 
+   <img height="300px" id="mainImage" onclick='ViewImage("/images/Recipes/recipeData.Recipe.Title[0].$.image %>");' src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" style="<%=style %>" width="300px">
+   <input id="mainImageName" name="mainImageName" readonly="readonly" type="hidden" value="<%=recipeData.Recipe.Title[0].$.image %>">
+  </span>
+ </div> 
+ 
+  <div class="recipe-line">
+  <span class="field-header">
+   &nbsp;
+  </span>
+  <span class="field-value">
+   <button onclick='ShowFileUploadPopup("mainImage", "");' type="button">Change</button>
+  </span>
+ </div> 
+ 
+ <br>
+ 
+ <div class="table-container">
+  <div class="heading">
+   PREREQUISITES
+  </div>
+  <br>
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="prerequisitesTable" width="340px">
+    <thead>
+     <tr>
+      <th width="200px">
+       Prerequisite
+      </th>   
+      <th colspan="2" width="95px">
+       &nbsp;
+      </th> 
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var ps = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Prerequisites[0]).includes("Prerequisite")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      if (Object.getOwnPropertyNames(recipeData.Recipe.Prerequisites[0]).includes("Prerequisite")) {
+       var prerequisites = recipeData.Recipe.Prerequisites[0].Prerequisite;      
+       for (ndx = 0; ndx < prerequisites.length; ++ndx) { 
+     %> 
+       <tr>
+        <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
+         <%- commonUtils.RenderNewlines(prerequisites[ndx]); %>
+         <input name="prerequisite" type="hidden" value="<%=prerequisites[ndx] %>">
+        </td>
+        <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
+         <span>
+          <button onclick="DeletePrerequisite(<%=ndx %>);" type="button">Delete</button>
+          <button onclick="EditPrerequisite(<%=ndx %>);" type="button">Edit</button>   
+         </span>         
+        </td>
+       </tr> 
+     <%} }%>
+    </tbody>
+   </table>
+  </div>
+  <br>
+  <div class="centered">
+   <button onclick="HandleAddPrerequisiteBtnClkd();" type="button">Add Prerequisite</button>
+   <button id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" style="<%=ps %>" type="button">Delete All Prerequisites</button> 
+  </div> 
+ </div> 
+ 
+ <br>
+ 
+ <div class="table-container">
+  <div class="heading">
+   INGREDIENTS
+  </div>
+  <br>
+  <div class="centered">
+  <table align="center" class="scrolling-table" id="ingredientsTable" width="940px">
+   <thead>
+    <tr>
+     <th width="200px">
+      Ingredient
+     </th>
+     <th width="70px">
+      Quantity
+     </th>
+     <th width="80px">
+      Measure
+     </th>    
+     <th width="130px">
+      Preparation
+     </th>  
+     <th width="200px">
+      Notes
+     </th>   
+     <th colspan="2" width="150px">
+      &nbsp;
+     </th>      
+    </tr>
+   </thead>
+   <tbody>
+    <% 
+      var is = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Ingredients[0]).includes("Ingredient")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      if (Object.getOwnPropertyNames(recipeData.Recipe.Ingredients[0]).includes("Ingredient")) {    
+       var ingredients = recipeData.Recipe.Ingredients[0].Ingredient;
+       for (ndx = 0; ndx < ingredients.length; ++ndx) { 
+        var prep  = enums.GetDescFromPrepType(ingredients[ndx].Prep[0]);
+        var units = enums.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
+    %> 
+      <tr>
+       <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
+        <%=ingredients[ndx].Name[0] %>
+        <input name="ingredient" type="hidden" value="<%=ingredients[ndx].Name[0] %>">
+       </td>
+       <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;">
+        <%=ingredients[ndx].Quantity[0]._ %>
+        <input name="quantity" type="hidden" value="<%=ingredients[ndx].Quantity[0]._ %>">
+       </td>
+       <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;">
+        <%=units %>
+        <input name="measure" type="hidden" value="<%=units %>">
+       </td>
+       <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;">
+        <%=prep %> 
+        <input name="prep" type="hidden" value="<%=prep %>">        
+       </td>
+       <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %>
+        <input name="notes" type="hidden" value="<%=ingredients[ndx].Notes[0] %>">        
+       </td>
+       <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
+        <button onclick="DeleteIngredient(<%=ndx %>);"   type="button">Delete</button>
+        <button onclick="EditIngredient(<%=ndx %>);"     type="button">Edit</button>      
+        <button onclick="MoveIngredientUp(<%=ndx %>);"   type="button">↑</button>    
+        <button onclick="MoveIngredientDown(<%=ndx %>);" type="button">↓</button>            
+       </td>       
+      </tr> 
+    <%} }%>  
+   </tbody>
+  </table>
+  </div>
+  <br>
+  <div class="centered">
+   <button onclick="HandleAddIngredientBtnClkd();" type="button">Add Ingredient</button>
+   <button id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();" style="<%=is %>" type="button">Delete All Ingredients</button></div>
+ </div>  
+ 
+ <br> 
+  
+ <div class="table-container">
+  <div class="heading">
+   METHOD
+  </div>
+  <br> 
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="stepsTable" width="655px">
+    <thead>
+     <tr>
+      <th width="400px">
+       Step
+      </th>
+      <th width="100px">
+       Image
+      </th>   
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var ss = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Method[0]).includes("Step")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      if (Object.getOwnPropertyNames(recipeData.Recipe.Method[0]).includes("Step")) {
+       var steps = recipeData.Recipe.Method[0].Step; 
+       for(ndx = 0; ndx < steps.length; ++ndx) {
+        var imgSrc = "";
+        
+        if ("undefined" != typeof(steps[ndx].$)) {
+         if ("undefined" != typeof(steps[ndx].$.image)) {
+          if ("" != steps[ndx].$.image) {
+           imgSrc = steps[ndx].$.image; 
+          }
+         }
+        }
+         
+        var step = "";
+        
+        if (undefined != steps[ndx]._) {
+         step = steps[ndx]._;
+        } else {
+         step = steps[ndx];
+        }         
+     %> 
+        <tr>
+         <td style="max-width: 400px; min-width: 400px; word-wrap: break-word;">
+          <%- commonUtils.RenderNewlines(steps[ndx]._); %>
+          <input name="step" type="hidden" value="<%=step %>">
+         </td>
+         <% // *** DO NOT put the elements within the following td on separate lines or else images will not be editable. --> %>
+         <td style="text-align: center; max-width: 100px; min-width: 100px; word-wrap: break-word;"><% 
+          if ("" != imgSrc) { %><img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px"><input name="stepImage" type="hidden" value="<%=imgSrc %>"> <% } else { %><span>&nbsp;</span><input name="stepImage" type="hidden" value="<%=imgSrc %>"><%}%></td>         
+         <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
+          <button onclick="DeleteStep(<%=ndx %>);" type="button">Delete</button>
+          <button onclick="EditStep(<%=ndx %>);"   type="button">Edit</button>        
+         </td>        
+        </tr> 
+     <%} }%>   
+    </tbody>
+   </table>
+  </div> 
+  <br>
+  <div class="centered">
+   <button onclick="HandleAddStepBtnClkd();" type="button">Add Step</button>
+   <button id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();" style="<%=ss %>" type="button">Delete All Steps</button>  
+  </div> 
+ </div>  
+
+ <br>
+ 
+ <div class="table-container">
+  <div class="heading">
+   VARIATIONS / SUBSTITUTIONS
+  </div>
+  <br>
+  <div class="centered">
+   <table align="center" class="scrolling-table" id="variationsTable" width="340px">
+    <thead>
+     <tr>
+      <th width="200px">
+       Variation
+      </th>   
+      <th colspan="2" width="95px">
+       &nbsp;
+      </th> 
+     </tr>
+    </thead>
+    <tbody>
+     <% 
+      var ps = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Variations[0]).includes("Variation")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      if (Object.getOwnPropertyNames(recipeData.Recipe.Variations[0]).includes("Variation")) {
+       var variations = recipeData.Recipe.Variations[0].Variation;      
+       for (ndx = 0; ndx < variations.length; ++ndx) { 
+     %> 
+       <tr>
+        <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
+         <%- commonUtils.RenderNewlines(variations[ndx]); %>
+         <input name="variation" type="hidden" value="<%=variations[ndx] %>">
+        </td>
+        <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
+         <span>
+          <button onclick="DeleteVariation(<%=ndx %>);" type="button">Delete</button>
+          <button onclick="EditVariation(<%=ndx %>);"   type="button">Edit</button>   
+         </span>         
+        </td>
+       </tr> 
+     <%} }%>
+    </tbody>
+   </table>
+  </div>
+  <br>
+  <div class="centered">
+   <button onclick="HandleAddVariationBtnClkd();" type="button">Add Variation</button>
+   <button id="delAllVariationsBtn" onclick="HandleDelAllVariationsBtnClkd();" style="<%=ps %>" type="button">Delete All Variations</button> 
+  </div> 
+ </div>  
+</form>
+
+<!-- Conditionally displayed items for pop-ups, notifications, etc. -->
+
+<!-- Add Ingredient Popup. -->
+<div class="popup" id="addIngredientPopup">
+ <form >
+  <div class="heading">
+   ADD INGREDIENT&nbsp;<img height="32px" onclick="HideAddIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addIngredientForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Ingredient:
+    </span>
+    <span class="field-value">
+     <input data-validation="vAlNum" id="ingredient2Add" name="ingredient2Add" type="text">
+    </span>
+   </div>
+   <div class="recipe-line">
+    <span class="field-header">
+     Quantity:
+    </span>
+    <span class="field-value">
+     <input data-validation="vNumeric" id="quantity2Add" max="999" min="1" name="quantity2Add" type="number">
+    </span>
+   </div>  
+   <div class="recipe-line">
+    <span class="field-header">
+     Measure:
+    </span>
+    <span class="field-value">
+     <select id="measure2Add" name="measure2Add">
+      <% Object.keys(enums.UnitTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.UnitTypes); %>
+     </select>
+    </span>
+   </div>  
+   <div class="recipe-line">
+    <span class="field-header">
+     Preparation:
+    </span>
+    <span class="field-value">
+     <select id="preparation2Add" name="preparation2Add">
+      <% Object.keys(enums.PreparationTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.PreparationTypes); %>
+     </select>
+    </span>
+   </div>   
+   <div class="recipe-line">
+    <span class="field-header">
+     Notes:
+    </span>
+    <span class="field-value">
+     <input data-validation="vAlNum" id="notes2Add" name="notes2Add" type="text">
+    </span>
+   </div>
+   <br>
+   <div class="centered">
+    <button onclick="AddIngredient();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Add Prerequisite Popup. -->
+<div class="popup" id="addPrerequisitePopup">
+ <form >
+  <div class="heading">
+   ADD PREREQUISITE&nbsp;<img height="32px" onclick="HideAddPrerequisitePopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addPrerequisiteForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Prerequisite:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="prerequisite2Add" maxlength="4096" name="prerequisite2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>      
+    </span>
+   </div> 
+   <br> 
+   <div class="centered">
+    <button onclick="AddPrerequisite();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Add Step Popup. -->
+<div class="popup" id="addStepPopup">
+ <form >
+  <div class="heading">
+   ADD STEP&nbsp;<img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addStepForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Step:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="step2Add" maxlength="4096" name="step2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>     
+    </span>
+   </div> 
+   <div class="recipe-line">
+    <span class="field-header">
+     Image (optional):
+    </span>
+    <span class="field-value">
+     <div style="display: inline-block;">
+      <button onclick="ShowFileUploadPopup('stepImage', 'addStepPopup');" type="button">Upload</button>
+      <img height="80px" id="stepAddImage" src="" style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" width="80px">
+     </div>
+    </span>
+   </div>    
+   <br> 
+   <div class="centered">
+    <button onclick="AddStep();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Add Variation Popup. -->
+<div class="popup" id="addVariationPopup">
+ <form >
+  <div class="heading">
+   ADD VARIATION&nbsp;<img height="32px" onclick="HideAddVariationPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addVariationForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Variation:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="variation2Add" maxlength="4096" name="variation2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>      
+    </span>
+   </div> 
+   <br> 
+   <div class="centered">
+    <button onclick="AddVariation();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Edit Ingredient Popup. -->
+<div class="popup" id="editIngredientPopup">
+ <form >
+  <input id="ingredientAction" type="hidden" value="">
+  <input id="ingredientRowId"  type="hidden" value="">
+  <div class="heading">
+   EDIT INGREDIENT&nbsp;<img height="32px" onclick="HideEditIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editIngredientForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Ingredient:
+    </span>
+    <span class="field-value">
+     <input id="ingredient2Edit" name="ingredient2Edit" type="text">
+    </span>
+   </div>
+   <div class="recipe-line">
+    <span class="field-header">
+     Quantity:
+    </span>
+    <span class="field-value">
+     <input data-validation="vNumeric" id="quantity2Edit" max="999" min="1" name="quantity2Add" type="number">
+    </span>
+   </div>  
+   <div class="recipe-line">
+    <span class="field-header">
+     Measure:
+    </span>
+    <span class="field-value">
+     <select id="measure2Edit" name="measure2Edit">
+      <% Object.keys(enums.UnitTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.UnitTypes); %>
+     </select>
+    </span>
+   </div>  
+   <div class="recipe-line">
+    <span class="field-header">
+     Preparation:
+    </span>
+    <span class="field-value">
+     <select id="preparation2Edit" name="preparation2Edit">
+      <% Object.keys(enums.PreparationTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.PreparationTypes); %>
+     </select>
+    </span>
+   </div>   
+   <div class="recipe-line">
+    <span class="field-header">
+     Notes:
+    </span>
+    <span class="field-value">
+     <input id="notes2Edit" name="notes2Edit" type="text">
+    </span>
+   </div>
+   <br>
+   <div class="centered">
+    <button onclick="SaveIngredient();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Edit Prerequisite Popup. -->
+<div class="popup" id="editPrerequisitePopup">
+ <form >
+  <input id="prerequisiteAction" type="hidden" value="">
+  <input id="prerequisiteRowId"  type="hidden" value="">
+  <div class="heading">
+   EDIT PREREQUISITE&nbsp;<img height="32px" onclick="HideEditPrerequisitePopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editPrerequisiteForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Prerequisite:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="prerequisite2Edit" maxlength="4096" name="prerequisite2Rdit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>      
+    </span>
+   </div> 
+  </div>
+  <br> 
+  <div class="centered">
+   <button onclick="SavePrerequisite();" type="button">Save</button>
+  </div>  
+ </form>
+</div>
+
+<!-- Edit Step Popup. -->
+<div class="popup" id="editStepPopup">
+ <form >
+  <input id="stepAction" type="hidden" value="">
+  <input id="stepRowId"  type="hidden" value="">
+  <div class="heading">
+   EDIT STEP&nbsp;<img height="32px" onclick="HideEditStepPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editStepForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Step:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="step2Edit" maxlength="4096" name="step2Edit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea> 
+    </span>
+   </div> 
+   <div class="recipe-line">
+    <span class="field-header">
+     Image (optional):
+    </span>
+    <span class="field-value">
+     <div style="display: inline-block;">
+      <!-- Buttons / images conditionally displayed. -->
+      <button id="addImgBtn" onclick="ShowFileUploadPopup('stepImage', 'editStepPopup');" type="button">Upload</button>
+      <button id="delImgBtn" onclick="DeleteStepImage();" type="button">Delete</button>
+      <img height="80px" id="image2Edit" src="" style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" width="80px">
+     </div>
+    </span>
+   </div>    
+  </div>
+  <br> 
+  <div class="centered">
+   <button onclick="SaveStep();" type="button">Save</button>
+  </div>  
+ </form>
+</div>
+
+<!-- Edit Variation Popup. -->
+<div class="popup" id="editVariationPopup">
+ <form >
+  <input id="Action" type="hidden" value="">
+  <input id="variationRowId"  type="hidden" value="">
+  <div class="heading">
+   EDIT VARIATION&nbsp;<img height="32px" onclick="HideEditVariationPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editVariationForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Variation:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="variation2Edit" maxlength="4096" name="variation2Rdit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>      
+    </span>
+   </div> 
+  </div>
+  <br> 
+  <div class="centered">
+   <button onclick="SaveVariation();" type="button">Save</button>
+  </div>  
+ </form>
+</div>
+
+<!-- File Uploader Popup. -->
+<div class="popup" id="fileUploadPopup" style="width: 30%;">
+ <div class="heading">
+  UPLOAD IMAGE&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideFileUploadPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+ </div>
+ <br>
+ <div class="centered">
+  <form action="/uploadImage" enctype="multipart/form-data" method="post">
+   <input id="imageUse" type="hidden" value="">
+   <input id="puInvoker" type="hidden" value="">
+   <div class="request-div" id="fileUploadForm">
+    <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
+    <button onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" type="button">Upload</button>
+   </div>
+  </form>
+  <div class="notifier" id="response">File Uploaded</div>
+ </div>
+</div>
