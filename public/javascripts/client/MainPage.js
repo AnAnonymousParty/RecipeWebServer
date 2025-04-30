@@ -17,14 +17,14 @@ function AddIngredient() {
  if (true == IsEmpty(quantity)) {
   valid = false;
   
-  errs += "Quantity must be a number 1 - 999.\n";
+  errs += "Quantity must be a number 0.01 - 999.\n";
   
   document.getElementById("quantity2Add").style.backgroundColor = errBg;
  } else {
-  if (false == IsDigits(quantity)) {
+  if (false == IsNumeric(quantity)) {
    valid = false;
    
-   errs += "Quantity must be a number 1 - 999.\n";
+   errs += "Quantity must be a number 0.01 - 999.\n";
    
    document.getElementById("quantity2Add").style.backgroundColor = errBg;
   } else {
@@ -81,8 +81,8 @@ function AddIngredient() {
  
  cell = row.insertCell();
  cell.colspan         = "2";
- cell.style.maxWidth  = "95px"; 
- cell.style.minWidth  = "95px"; 
+ cell.style.maxWidth  = "150px"; 
+ cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right"; 
  cell.innerHTML = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
                 + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
@@ -998,6 +998,52 @@ function MoveIngredientUp(rowNum) {
  }
 }
 
+function MoveStepDown(rowNum) {
+ var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+ 
+  if (rowNum == tbody.rows.length) {
+  return;
+ }
+ 
+ var currentRow = tbody.rows[rowNum];
+ var targetRow  = tbody.rows[rowNum + 1];
+ 
+ for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
+  if (2 == colNdx) { 
+   continue;  // Don't swap the buttons, keep the row identifiers consistent.
+  }
+  
+  var currentCell = currentRow.cells[colNdx].innerHTML;
+  
+  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
+  
+  targetRow.cells[colNdx].innerHTML = currentCell;
+ }
+}
+
+function MoveStepUp(rowNum) {
+ if (0 == rowNum) {
+  return;
+ } 
+ 
+ var tbody      = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+ var currentRow = tbody.rows[rowNum];
+ 
+ var targetRow  = tbody.rows[rowNum - 1];
+ 
+ for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
+  if (2 == colNdx) { 
+   continue;  // Don't swap the buttons, keep the row identifiers consistent.
+  }
+  
+  var currentCell = currentRow.cells[colNdx].innerHTML;
+  
+  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
+  
+  targetRow.cells[colNdx].innerHTML = currentCell;
+ }
+}
+
 function PrintRecipe() {
  HideElement("PrintRecipeBtn");
  
@@ -1086,17 +1132,17 @@ function SaveIngredient() {
   document.getElementById("ingredient2Edit").style.backgroundColor = validBg;
  } 
  
-  if (true == IsEmpty(quantity)) {
+ if (true == IsEmpty(quantity)) {
   valid = false;
   
-  errs += "Quantity must be a number 1 - 999.\n";
+  errs += "Quantity must be a number 0 - 999.\n";
   
   document.getElementById("quantity2Edit").style.backgroundColor = errBg;
  } else {
-  if (false == IsDigits(quantity)) {
+  if (false == IsNumeric(quantity)) {
    valid = false;
    
-   errs += "Quantity must be a number 1 - 999.\n";
+   errs += "Quantity must be a number 0 - 999.\n";
    
    document.getElementById("quantity2Edit").style.backgroundColor = errBg;
   } else {
@@ -1216,6 +1262,7 @@ function SaveRecipe() {
       HideElement("DeleteAllRecipesBtn");
      } else {   
       document.getElementById("recipesListContainer").innerHTML = data;
+      ApplyFilter();
       UnHideElement("DeleteAllRecipesBtn", "inline");
      } 
     } else {
@@ -1260,6 +1307,7 @@ function SaveRecipe() {
       HideElement("DeleteAllRecipesBtn");
      } else {   
       document.getElementById("recipesListContainer").innerHTML = data;
+      ApplyFilter();
       UnHideElement("DeleteAllRecipesBtn", "inline");
      } 
     } else {
@@ -1401,9 +1449,11 @@ function ShowRecipesList(category, cuisine) {
    
    if ("" == data) { 
     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
+    
     HideElement("DeleteAllRecipesBtn");
    } else {   
     document.getElementById("recipesListContainer").innerHTML = data;
+    
     UnHideElement("DeleteAllRecipesBtn", "inline");
    }
   } else {

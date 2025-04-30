@@ -40,7 +40,7 @@
    Prep Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="prepTime" max="999" min= "1" name="prepTime" type="number"> minutes
+   <input data-validation="vNumeric" id="prepTime" max="999" min= "0" name="prepTime" type="number"> minutes
   </span>
  </div>  
  
@@ -49,7 +49,7 @@
    Cook Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="cookTime" max="999" min= "1" name="cookTime" type="number"> minutes
+   <input data-validation="vNumeric" id="cookTime" max="999" min= "0" name="cookTime" type="number"> minutes
   </span>
  </div> 
  
@@ -58,7 +58,7 @@
    Calories:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="calories" max="999" min= "1" name="calories" type="number">
+   <input data-validation="vNumeric" id="calories" max="999" min= "0" name="calories" type="number">
   </span>
  </div>
  
@@ -67,7 +67,7 @@
    Fat:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fat" max="999" min= "1" name="fat" type="number"> g
+   <input data-validation="vNumeric" id="fat" max="999" min= "0" name="fat" type="number"> g
   </span>
  </div>
  
@@ -76,16 +76,25 @@
    Carbs:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="carbs" max="999" min= "1" name="carbs" type="number"> g
+   <input data-validation="vNumeric" id="carbs" max="999" min= "0" name="carbs" type="number"> g
   </span>
  </div>
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Protein:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="protein" max="999" min= "0" name="protein" type="number"> g
+  </span>
+ </div> 
  
  <div class="recipe-line">
   <span class="field-header">
    Sugar:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="sugar" max="999" min= "1" name="sugar" type="number"> g
+   <input data-validation="vNumeric" id="sugar" max="999" min= "0" name="sugar" type="number"> g
   </span>
  </div>
  
@@ -94,7 +103,7 @@
    Fiber:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fiber" max="999" min= "1" name="fiber" type="number"> g
+   <input data-validation="vNumeric" id="fiber" max="999" min= "0" name="fiber" type="number"> g
   </span>
  </div> 
  
@@ -157,7 +166,7 @@
   </div>
   <br>
   <div class="centered">
-  <table align="center" class="scrolling-table" id="ingredientsTable" width="860px">
+  <table align="center" class="scrolling-table" id="ingredientsTable" width="940px">
    <thead>
     <tr>
      <th width="200px">
@@ -175,7 +184,7 @@
      <th width="200px">
       Notes
      </th>   
-     <th colspan="2" width="90px">
+     <th colspan="2" width="120px">
       &nbsp;
      </th>      
     </tr>
@@ -279,7 +288,7 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Add" max="999" min="1" name="quantity2Add" type="number">
+     <input data-validation="vNumeric" id="quantity2Add" max="999" min="0" name="quantity2Add" type="number">
     </span>
    </div>  
    <div class="recipe-line">

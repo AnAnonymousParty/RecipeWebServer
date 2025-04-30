@@ -52,6 +52,24 @@ function IsDigits(sString)
          return(true);
         }
         
+function IsNumeric(sString)
+        {
+         if (0 == sString.length)
+           {
+            return(false);
+           }
+
+         for (var i = 0; i < sString.length; ++i)
+            {
+             if (-1 == (".0123456789").indexOf(sString.charAt(i)))
+               {
+                return(false);
+               }
+            }
+
+         return(true);
+        }        
+        
 function IsEmpty(sString)
         {
          return(0 == sString.length);

@@ -21,6 +21,7 @@ var enums             = require(path.join(__dirname, '/public/javascripts/server
 
 var indexRouter       = require('./routes/index');
 var editRecipeRouter  = require('./routes/editRecipe');
+var getRecipeRouter   = require('./routes/getRecipe');
 var newRecipeRouter   = require('./routes/newRecipe');
 var printRecipeRouter = require('./routes/printRecipe');
 var viewRecipeRouter  = require('./routes/viewRecipe');
@@ -260,6 +261,7 @@ app.post("/uploadImage", function (req, res) {
 /*------------------------ Route handlers ----------------------------------*/
 
 app.use('/',                    indexRouter);
+app.use('/GetRecipe',           getRecipeRouter);
 app.use('/ShowEditRecipePage',  editRecipeRouter);
 app.use('/ShowNewRecipePage',   newRecipeRouter);
 app.use('/ShowPrintRecipePage', printRecipeRouter);
@@ -310,6 +312,7 @@ function ParsePostDataToXml(postData) {
  nutrition.att('calories', postData.calories);
  nutrition.att('fat',      postData.fat); 
  nutrition.att('carbs',    postData.carbs); 
+ nutrition.att('protein',  postData.protein); 
  nutrition.att('sugar',    postData.sugar); 
  nutrition.att('fiber',    postData.fiber);  
  

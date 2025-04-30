@@ -10,7 +10,7 @@
     <th>
      COURSE
     </th>  
-    <th colspan="5">
+    <th colspan="6">
      NUTRITION
     </th>   
     <th colspan="1">
@@ -36,6 +36,9 @@
     <td>
      Carbs: <%= recipeData.Recipe.Nutrition[0].$.carbs %> g
     </td>
+    <td>
+     Protein: <%= recipeData.Recipe.Nutrition[0].$.protein %> g
+    </td>    
     <td>
      Sugar: <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
     </td>
@@ -148,8 +151,8 @@
       var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
     %> 
     <tr>
-     <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%=ingredients[ndx].Name[0] %> </td>
-     <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%=ingredients[ndx].Quantity[0]._ %></td>
+     <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %> </td>
+     <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %></td>
      <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
      <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
      <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>

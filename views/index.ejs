@@ -33,7 +33,7 @@
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
     <button id="SaveRecipeBtn"       onclick="SaveRecipe();"         style="margin: 0px 10px 0px 0px;" type="button">Save Recipe</button>
-    <button id="ShowRecipesListBtn"  onclick="ShowRecipesList('ALL', 'ALL');"                          type="button">Return to Recipes List</button>   
+    <button id="ShowRecipesListBtn"  onclick="ApplyFilter();"                                          type="button">Return to Recipes List</button>   
    </div>  
    <div id="indexPageBtns" style="display: inline; visibility: visible;">
     <button id="AddNewRecipeBtn"     onclick="ShowAddRecipePopup();" style="margin: 0px 10px 0px 0px;" type="button">Add new recipe</button>
@@ -43,7 +43,7 @@
     <button id="EditRecipeBtn"       onclick="EditRecipe();"           style="margin: 0px 10px 0px 0px;" type="button">Edit Recipe</button>
     <button id="DeleteRecipeBtn"     onclick="DeleteRecipe();"         style="margin: 0px 10px 0px 0px;" type="button">Delete Recipe</button>
     <button id="PrintRecipeBtn"      onclick="RequestPrintableView();" style="margin: 0px 10px 0px 0px;" type="button">Print Ready Version</button>
-    <button id="ShowRecipesListBtn"  onclick="ShowRecipesList('ALL', 'ALL');"                            type="button">Return to Recipes List</button>   
+    <button id="ShowRecipesListBtn"  onclick="ApplyFilter();"                                            type="button">Return to Recipes List</button>   
    </div>   
   </div>
   

@@ -6,6 +6,7 @@ const CategoryTypes = Object.freeze({
  BEVERAGE:       "Beverage",
  CASSEROLE:      "Casserole",
  DESSERT:        "Dessert",
+ ELEMENT:        "Element",
  ENTREE_BEEF:    "Entree (beef)",
  ENTREE_FISH:    "Entree (fish)",
  ENTREE_PORK:    "Entree (pork)",
@@ -13,6 +14,7 @@ const CategoryTypes = Object.freeze({
  ENTREE_SEAFOOD: "Entree (seafood)",  
  PASTA:          "Pasta",
  SALAD:          "Salad",
+ SAUCE:          "Sauce",
  SIDE:           "Side Dish",
  SNACK:          "Snack",
  SOUP:           "Soup",
@@ -45,14 +47,20 @@ function GetEnumFromCategoryDesc(desc) {
 export
 const CuisineTypes = Object.freeze({
  ALL:           "All",
+ AFRICAN:       "African",
  AMERICAN:      "American",
  ASIAN:         "Asian",
  CAJUN:         "Cajun",
  CARIBBEAN:     "Caribbean",
+ FRENCH:        "French",
+ GERMAN:        "German",
  ITALIAN:       "Italian",
  INDIAN:        "Indian", 
  MEDITERRANEAN: "Mediterranean",
- MEXICAN:       "Mexican"
+ MEXICAN:       "Mexican",
+ POLYNESIAN:    "Polynesian",
+ SOUTHAMERICAN: "South American",
+ SPANISH:       "Spainsh"
 });
 
 export
@@ -120,7 +128,8 @@ const PreparationTypes = Object.freeze({
  STRAIN:      "Strained",
  TOASTED:     "Toasted",
  TOURNEED:    "Tournéed",
- WHIPPED:     "Whipped"
+ WHIPPED:     "Whipped",
+ WHISKED:     "Whisked"
 });
 
 export
@@ -148,6 +157,7 @@ function GetEnumFromPrepDesc(desc) {
 
 export
 const UnitTypes = Object.freeze({
+ BAG:      "Bag",
  BUSHEL:   "Bushels",
  CLOVE:    "Cloves",    
  CUP:      "Cups",

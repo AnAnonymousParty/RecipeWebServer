@@ -67,7 +67,11 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   if (category != categoryFilter) {
    continue;
   }
- } 
+ } else {
+  if ("ELEMENT" == category) {
+   continue;  // Don't show elements unless specifically requested.
+  }
+ }
   
  if ("ALL" != cuisineFilter && "ALL" != cuisine) {
   if (cuisine != cuisineFilter) {
@@ -75,7 +79,7 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   }
  }
    
-  var fileName = "";
+ var fileName = "";
   
  try { 
   fileName = fileNameExt.split('.').slice(0, -1).join('.');

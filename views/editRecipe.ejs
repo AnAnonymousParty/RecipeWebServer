@@ -61,7 +61,7 @@
    Preparation Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="prepTime" max="999" min="1" name="prepTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.prep %>"> minutes
+   <input data-validation="vNumeric" id="prepTime" max="999" min="0" name="prepTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.prep %>"> minutes
   </span>
  </div> 
  
@@ -70,7 +70,7 @@
    Cook Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="cookTime" max="999" min="1" name="cookTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.cook %>"> minutes
+   <input data-validation="vNumeric" id="cookTime" max="999" min="0" name="cookTime" type="number" value="<%=recipeData.Recipe.Title[0].Times[0].$.cook %>"> minutes
   </span>
  </div>  
  
@@ -79,7 +79,7 @@
    Calories:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="calories" max="999" min="1" name="calories" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.calories %>"> 
+   <input data-validation="vNumeric" id="calories" max="999" min="0" name="calories" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.calories %>"> 
   </span>
  </div>  
  
@@ -88,7 +88,7 @@
    Fat:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fat" max="999" min="1" name="fat" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fat %>"> g
+   <input data-validation="vNumeric" id="fat" max="999" min="0" name="fat" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fat %>"> g
   </span>
  </div> 
  
@@ -97,7 +97,16 @@
    Carbs:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="carbs" max="999" min="1" name="carbs" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.carbs %>"> g
+   <input data-validation="vNumeric" id="carbs" max="999" min="0" name="carbs" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.carbs %>"> g
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Protein:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="protein" max="999" min="0" name="protein" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.protein %>"> g
   </span>
  </div>  
  
@@ -106,7 +115,7 @@
    Sugar:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="sugar" max="999" min="1" name="sugar" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.sugar %>"> g
+   <input data-validation="vNumeric" id="sugar" max="999" min="0" name="sugar" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.sugar %>"> g
   </span>
  </div> 
  
@@ -115,7 +124,7 @@
    Fiber:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fiber" max="999" min="1" name="fiber" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fiber %>"> g
+   <input data-validation="vNumeric" id="fiber" max="999" min="0" name="fiber" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.fiber %>"> g
   </span>
  </div>  
  
@@ -241,7 +250,7 @@
     %> 
       <tr>
        <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
-        <%=ingredients[ndx].Name[0] %>
+        <%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %>
         <input name="ingredient" type="hidden" value="<%=ingredients[ndx].Name[0] %>">
        </td>
        <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;">
@@ -285,7 +294,7 @@
   </div>
   <br> 
   <div class="centered">
-   <table align="center" class="scrolling-table" id="stepsTable" width="655px">
+   <table align="center" class="scrolling-table" id="stepsTable" width="720px">
     <thead>
      <tr>
       <th width="400px">
@@ -294,6 +303,9 @@
       <th width="100px">
        Image
       </th>   
+      <th colspan="2" width="150px">
+       &nbsp;
+      </th>       
      </tr>
     </thead>
     <tbody>
@@ -328,9 +340,11 @@
          <% // *** DO NOT put the elements within the following td on separate lines or else images will not be editable. --> %>
          <td style="text-align: center; max-width: 100px; min-width: 100px; word-wrap: break-word;"><% 
           if ("" != imgSrc) { %><img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px"><input name="stepImage" type="hidden" value="<%=imgSrc %>"> <% } else { %><span>&nbsp;</span><input name="stepImage" type="hidden" value="<%=imgSrc %>"><%}%></td>         
-         <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
+         <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
           <button onclick="DeleteStep(<%=ndx %>);" type="button">Delete</button>
-          <button onclick="EditStep(<%=ndx %>);"   type="button">Edit</button>        
+          <button onclick="EditStep(<%=ndx %>);"   type="button">Edit</button>   
+          <button onclick="MoveStepUp(<%=ndx %>);"   type="button">↑</button>    
+          <button onclick="MoveStepDown(<%=ndx %>);" type="button">↓</button>           
          </td>        
         </tr> 
      <%} }%>   
@@ -417,7 +431,7 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Add" max="999" min="1" name="quantity2Add" type="number">
+     <input data-validation="vNumeric" id="quantity2Add" max="999" min="0" name="quantity2Add" type="number">
     </span>
    </div>  
    <div class="recipe-line">
@@ -565,7 +579,7 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Edit" max="999" min="1" name="quantity2Add" type="number">
+     <input data-validation="vNumeric" id="quantity2Edit" max="999" min="0" name="quantity2Add" type="number">
     </span>
    </div>  
    <div class="recipe-line">
