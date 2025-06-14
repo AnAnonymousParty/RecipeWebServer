@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Powder_TomatoPowder.jpg" name="Tomato Powder" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="750" cook="0"/>
+  </Title>
+  <Nutrition calories="9" fat="0" carbs="2" protein=".4" sugar=".5" sodium="0" fiber="2" servings="1" servingsUnit="TBSP"/>
+  <Description>Dried tomato powder for flavoring and garnishes.</Description>
+  <Prerequisites>
+    <Prerequisite>Food dehydrator, or oven or air fryer with dehydrator function, preheated to 135F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomato skins&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Lay the tomato skins on dehydrator sheets and dehydrate them at 135 degrees F for 8-12 hours until they become brittle and lose all moisture.</Step>
+    <Step image="">Transfer the dried skins to a coffee grinder and process them until you have a fine powder. Store the powder in an airtight jar.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

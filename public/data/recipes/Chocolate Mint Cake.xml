@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Mint Cake_ChocolateMintCake.jpg" name="Chocolate Mint Cake" category="DESSERT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="10" cook="40"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Moist chocolate cake with mint layers.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat over to 350F.</Prerequisite>
+    <Prerequisite>Grease and flour 3 8 inch round cake pans.</Prerequisite>
+    <Prerequisite>Set aside five of the Andes thin mint candies. </Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Chocolate%20Mint%20Icing'&gt;Chocolate Mint Icing&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=%20Mint%20Cream'&gt;Mint Cream&lt;/a&gt;</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking soda</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking powder</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes>Unsalted.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Hot.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mint%20Cream'&gt;Mint Cream&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chocolate%20Mint%20Icing'&gt;Chocolate Mint Icing&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Andes Creme de Menthe candies</Name>
+      <Quantity units="EACH">28</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Reserve 5 for garnish.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Sift together the flour, baking soda, salt and baking powder into a medium bowl and set aside. </Step>
+    <Step image="">Use a stand mixer to beat together the softened &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and granulated sugar for three minutes. </Step>
+    <Step image="">Add in the eggs and beat for five minutes more until the mixture is very light. </Step>
+    <Step image="">Stir the cocoa powder into the hot water until it's dissolved. </Step>
+    <Step image="">Add the flour mixture to the butter and eggs, alternating with the cocoa water, running the mixer on low speed.
+Scrape the bowl once or twice, and only mix until the ingredients are just combined. </Step>
+    <Step image="">Divide the batter between the three prepared pans. </Step>
+    <Step image="">Bake for about 25 minutes, until the cake springs back when lightly touched. </Step>
+    <Step image="">Cool the cakes in the pans for 10 minutes, then carefully remove them from the pans to finish cooling on a wire rack. </Step>
+    <Step image="">Place one of the cooled cake rounds onto a cake plate.
+Scoop 1 cup of the whipped cream filling into a small dish (to save for a finishing touch) and put it back in the fridge.
+Spread half of the remaining filling evenly over the cake. Sprinkle 1/3 of the portions of chopped candies over the cream. </Step>
+    <Step image="">Carefully place a cake round on the filling.
+Spread the rest of the filling over the cake, and sprinkle another 1/3 of chopped candies over it.
+</Step>
+    <Step image="">Place the last cake round on the top. Put the cake into the fridge to chill for one hour. </Step>
+    <Step image="">When the cake is chilled, run a knife around the outside to make sure the cream filling is even with the cake layers.
+Use an offset spatula to frost the top and sides of the cake with the chocolate frosting. </Step>
+    <Step image="">Pour the remaining portion of chopped Andes candies into a mound in the top center of the cake. </Step>
+    <Step image="Chocolate%20Mint%20Cake_ChocolateMintCake2.jpg">Take the 1 cup of reserved whipped cream and make five dollops around the top of the cake.
+(You can do this with a piping bag and large tip, or just use a spoon.)
+Finally, unwrap the 5 reserved Andes mints and stick one into each of the dollops of whipped cream. </Step>
+    <Step image="Chocolate%20Mint%20Cake_ChocolateMintCake3.jpg">Hold the finished cake in the fridge until you're ready to serve. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tourneed Carrots glazed with basil_GlazedTurnedCarrots.jpeg" name="Tourneed Carrots glazed with basil" category="SIDE" cuisine="FRENCH">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="120" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>You probably won't do this often because tournéing is a pain in the ass, but it's cool to serve to guests.</Description>
+  <Prerequisites>
+    <Prerequisite>&lt;a href='/GetRecipe?recipeName=Big%20Pot%20Blanching'&gt;Blanch and shock&lt;/a&gt; carrots.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Carrots</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>TOURNEED</Prep>
+      <Notes>See &lt;a href='/GetRecipe?recipeName=Tournee'&gt;Tournée&lt;/a&gt;</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Basil</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Maple Syrup</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Real Maple Syrup, not Mrs. Butterworth's shit.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Paprika</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Pepper</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt butter in sauté pan, add carrots, syrup and paprika, sauté and toss, adding butter as necessary, until well glazed.</Step>
+    <Step image="">Season with salt and pepper.  Toss with basil immediately before serving. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

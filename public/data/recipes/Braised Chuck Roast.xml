@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Braised Chuck Roast_PotRoast.jpg" name="Braised Chuck Roast" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="480"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>A.K.A. Pot Roast.</Description>
+  <Prerequisites>
+    <Prerequisite>Read about &lt;a href='/GetRecipe?recipeName=Braising'&gt;braising&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;mirepoix&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Caramelized%20Leeks'&gt;Caramelized Leeks&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 275F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Chuck Roast</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Ask for a &lt;i&gt;Seven Bone Roast&lt;/i&gt;.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fate</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For searing the meat.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For dredging the meat.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry red wine.</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;Brown Beef Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="SPRIG">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Thyme</Name>
+      <Quantity units="SPRIG">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Bay Leaves</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="SPRIG">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Peppercorns</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Carrots</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Russet Potatoes</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>QUARTERED</Prep>
+      <Notes>Peeled.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Caramelized%20Leeks'&gt;Caramelized Leeks&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef1.jpg">Optional: Marinate chuck roast overnite in the red wine.</Step>
+    <Step image="">Lightly season the meat with salt and pepper and let stand to come to room temperature.</Step>
+    <Step image="">Melt bacon grease in a skillet and place it on high heat.</Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef2.jpg">Dredge the roast in flour and shake off the excess. You are going for a very light dusting of flour, not a breaded coating.</Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef3.jpg">As the fat reaches its smoke point, lay the roast in and start browning it.  The idea is to get them well browned (caramelized) on all surfaces, so you will have to move them around, press them into the oil, stand them on their edges.  (yes, it's hard to brown curved bony surfaces, but remember:  browning = flavor and more browning = more flavor)  Oh yeah, this can be kind of messy, oil popping and splattering everywhere, just so you know . . . </Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef4.jpg">Transfer the roast to a plate to hold. Discard all the oil from the searing pan, and the deglaze the pan with the red wine and allow the residual heat in the pan to reduce it. Place the prepared mirepoix in the bottom of the pan, add the aromatics (parsley stems, bay leaves and rosemary).</Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef5.jpg">Pscr the roast on top of the mirepoix. Add stock, a little at a time, until the meat is not quite covered. </Step>
+    <Step image="">Cover the pan and put it in the oven for at least four hours, six to eight is better.  Check the pan occasionally to ensure the liquid never boils dry, add more as necessary.  The cooking should be a slow simmer, not a boil. </Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef6.jpg">Remove the pan from the heat, transfer roast (carefully, as they will be falling apart), to a plate and cover to keep warm. </Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef7.jpg">Strain the cooking liquid through a fine mesh chinois and then thoroughly degrease it.  Remove any large chunks of fat and gristle from the roast.</Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef8.jpg">Put the roast back in the pan and add the strained liquid. Peel carrots and potatoes. Cut carrots into 2</Step>
+    <Step image="Braised%20Chuck%20Roast_BraisedBeef9.jpg">Serve with &lt;a href='/GetRecipe?recipeName=Cottage%20Cheese%20Biscuits'&gt;Cottage Cheese Biscuits&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Basic Ice Cream_IceCream.jpg" name="Basic Ice Cream" category="DESSERT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Base recipe for ice cream, to which additional flavors may be added.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare ice cream mixer.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add mixture to ice cream maker, process 20-30 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

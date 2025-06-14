@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef Carpaccio Salad_BeefCarpaccioSalad.jpg" name="Beef Carpaccio Salad" category="SALAD" cuisine="ALL">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Thin slices of herbed and seared rare beef tenderloin with peppery greens and aromatic vegetables.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Tenderloin</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Radishes, with tops</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes>Remove and reserve tops.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh ginger root</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red chili pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>JULIENNE</Prep>
+      <Notes>Seeds removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Poblano pepper</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>JULIENNE</Prep>
+      <Notes>Seeds removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green chili pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>JULIENNE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cilantro</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes>Stems removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">8</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>Cut in half.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oilive oil</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame oil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lime juice</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oregano, dried</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Coriander seed</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>CRUSHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Rosemary, fresh</Name>
+      <Quantity units="SPRIG">3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Soy sauce</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Slice (shave) radishes. Juliene ginger.</Step>
+    <Step image="">Lay out large piece of foil. Cover it with the chopped rosemary, cracked black pepper, oregano, salt and crushed coriander.</Step>
+    <Step image=""> Pat tenderloin dry with paper towels. Rub the meat with the cut garlic, squeezing the cloves to get the garlic oil onto the surface of the meat. Drizzle with olive oil to coat the tenderloin.</Step>
+    <Step image="">Roll the tenderloin in the herb mixture on the foil, pressing it into the herbs to get it thoroughly coated.</Step>
+    <Step image="Beef%20Carpaccio%20Salad_BeefCarpaccioSalad2.jpg">Sear the meat, either in a very hot skillet, under a broiler or on a hot gas or charcoal grill, until the surface of the meat is browned and crisp on all sides. The meat will be quite rare (if you want it less rare, cook it in the oven at 350 degrees to your taste -but carpaccio is supposed to be very rare). Remove meat from heat and let stand for at least 5 minutes.</Step>
+    <Step image="">Cover a large platter with the radish tops. Slice the beef, across the grain, as thinly as possible, and lay it on the platter. Scatter the ginger slices onto the beef, followed by the chili peppers, radish slices, cilantro and parsley. Sprinkle with soy sauce and lime juice, then drizzle with sesame oil. </Step>
+  </Method>
+  <Variations>
+    <Variation>Add shaved parmesan, avocado slices as desired.</Variation>
+  </Variations>
+</Recipe>

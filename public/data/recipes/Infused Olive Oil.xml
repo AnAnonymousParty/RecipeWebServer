@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Infused Olive Oil_InfusedOliveOil.jpg" name="Infused Olive Oil" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Olive oil infused with herbs and spices.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Herbs</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Aromatic herbs: Rosemary, oregano, sage, basil, thyme, tarragon, dill, etc.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place oil in microwave safe boil.</Step>
+    <Step image="">Add herbs.</Step>
+    <Step image="">Microwave for 15-30 seconds.</Step>
+    <Step image="">Use or save in a jar.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

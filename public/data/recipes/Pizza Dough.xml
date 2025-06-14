@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pizza Dough_PizzaDough.jpg" name="Pizza Dough" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Chewy, stretchy dough perfect for pizza.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='https://shop.kingarthurbaking.com/items/bread-flour'&gt;King Arthur bread flour&lt;/a&gt;</Name>
+      <Quantity units="CUP">2.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>High protein flour.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yeast</Name>
+      <Quantity units="TSP">2.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Warm water</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place and water and yeast in bowl of stand mixer, let stand until dissolved. </Step>
+    <Step image="">Add olive oil, sugar, and salt to water/yeast mixture. </Step>
+    <Step image="">Add flour in stages, mixing on low speed until well blended. </Step>
+    <Step image="">Continue kneading until smooth and elastic  &lt;i&gt;... the quality of a good dough is revealed when it can be stretched to the point of translucency without tearing ...&lt;/i&gt;</Step>
+    <Step image="">Form it into a ball, rub it with oil, place it in a large bowl and cover with damp towel, let stand in warm place to rise until doubled. </Step>
+    <Step image="">Use, refrigerate for up to two days, or freeze.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

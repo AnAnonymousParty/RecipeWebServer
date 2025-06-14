@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Fried Cauliflower_FriedCauliflower.jpg" name="Fried Cauliflower" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="270" fat="20" carbs="20" protein="4" sugar="4" sodium="" fiber="2" servings="" servingsUnit="CUP"/>
+  <Description>Bite sized pieces of cauliflower, breaded and fried to perfection.</Description>
+  <Prerequisites>
+    <Prerequisite>Deep fryer with oil.</Prerequisite>
+    <Prerequisite>Large pot of salted boiling water.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Cauliflower</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>WHISKED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Panko bread crumbs</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Salt</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic powder</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Fried%20Cauliflower_20250430_112808.jpg">Remove leaves from cauliflower and separate florets into bite sized piece</Step>
+    <Step image="Fried%20Cauliflower_20250430_143122.jpg">Blanch florets in boiling water for a couple of minutes until just softened and drain.</Step>
+    <Step image="">Arrange a series of pans in a row with AP flour in the first, eggs in the second, and bread crumbs in the third.</Step>
+    <Step image="Fried%20Cauliflower_20250430_160905.jpg">Dredge cauliflower in flour, coat with egg and roll in bread crumbs and arrange on a sheet pan.  </Step>
+    <Step image="">Heat oil in fryer to 350F.</Step>
+    <Step image="">Fry cauliflower in batches until golden brown, drain on sheet pan lined with paper towels.</Step>
+    <Step image="">Serve with ranch dressing.</Step>
+  </Method>
+  <Variations>
+    <Variation>To prepare ahead. Follow recipe instructions but fry for only a minute, until the breading is set. 
+Set aside or freeze and they can be fried to finish later.</Variation>
+  </Variations>
+</Recipe>

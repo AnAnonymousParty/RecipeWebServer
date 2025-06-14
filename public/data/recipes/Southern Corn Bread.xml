@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Southern Corn Bread_CornBread.jpg" name="Southern Corn Bread" category="BAKEDGOOD" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Traditional corn bread.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 425F.</Prerequisite>
+    <Prerequisite>Coat pan (10</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Corn Meal</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Buttermilk</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg (large)</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking Powder</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking Soda</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix together dry ingredients in a bowl.</Step>
+    <Step image="">Add buttermilk, egg and blend.</Step>
+    <Step image="">Stir in &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Step>
+    <Step image="">Add batter to preheated pan.</Step>
+    <Step image="">Bake 20 minutes, or passing toothpick test.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

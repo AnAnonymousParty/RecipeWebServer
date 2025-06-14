@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Potato-Leek Soup_PotatoLeekSoup.jpg" name="Potato-Leek Soup" category="SOUP" cuisine="ALL">
+    <Yield amount="" units="BAG"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>Thick, creamy, potatoey, leeky soup.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Leeks</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion, medium</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Potatoes, medium</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chick%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>White pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Chervil</Name>
+      <Quantity units="SPRIG">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For garnish.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Dice the white part of the leeks.
+Dice the potatoes.</Step>
+    <Step image="">Melt butter in a large heavy skillet.  Add leeks, onions and potatoes.  Sauté over high heat until tender and lightly caramelized. </Step>
+    <Step image="">Add stock, bring to a boil, reduce to simmer until vegetable are tender. </Step>
+    <Step image="">Remove vegetables (strain through a colander or china cap), pureé in a food processor or blender until smooth and return to the stock.</Step>
+    <Step image="">Add cream to desired consistency. </Step>
+    <Step image="">Garnish with chervil sprigs. </Step>
+  </Method>
+  <Variations>
+    <Variation>To make this a day or two ahead:  Stop the cooking just before adding the cream, chill and refrigerate and hold it for up to two days.  To complete the cooking, simply reheat to a simmer and then add the cream.</Variation>
+  </Variations>
+</Recipe>

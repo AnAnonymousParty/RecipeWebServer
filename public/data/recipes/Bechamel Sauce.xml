@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Bechamel Sauce_Bechamel.jpg" name="Bechamel Sauce" category="SAUCE" cuisine="ALL">
+    <Yield amount="3" units="CUP"/>
+    <Times prep="1" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>This is one of the five famous &lt;a href='https://en.wikipedia.org/wiki/French_mother_sauces'&gt;mother sauces&lt;/a&gt;, and is basically milk thickened with starch.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Roux'&gt;white roux&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Roux'&gt;White roux&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh nutmeg</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt &lt;a href='/GetRecipe?recipeName=roux'&gt;roux&lt;/a&gt; in a heavy sauce pan over low heat.</Step>
+    <Step image="">Add milk to roux, a little at a time, whisking constantly, until you have a smooth base in which you are sure there is no lumps (about 1/4 of the milk).</Step>
+    <Step image="">Add the rest of the milk while whisking to mix. Bring to a boil, reduce to a simmer and cook for about 30 minutes.</Step>
+    <Step image="">Season with salt, pepper and nutmeg (preferably freshly ground).</Step>
+    <Step image="">Strain through a chinois.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

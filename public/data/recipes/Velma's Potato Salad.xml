@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Velma's Potato Salad_PotatoSalad.jpg" name="Velma's Potato Salad" category="SALAD" cuisine="AMERICAN">
+    <Yield amount="12" units="SERVING"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Just like grandma Velma used to make with eggs and plenty of bacon.</Description>
+  <Prerequisites>
+    <Prerequisite>Make and peel &lt;a href='/GetRecipe?recipeName=Hard%20Boild%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Red Potatoes</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Any size, as long as they are all the same size.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Hard%20Boiled%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon</Name>
+      <Quantity units="OZ">12</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mayonnaise'&gt;Mayonnaise&lt;/a&gt;</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Prepared Mustard</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Vinegar</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet pickle relish</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet Gherkins</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thin.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet Pickle juice</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so, as needed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Paprika</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Choose a large serving bowl. Fill with potatoes and that's how many potatoes you need.</Step>
+    <Step image="">Place potatoes in a large pot and cover with water. Add enough salt so that the water tastes like sea water. Add 1 tbsp of vinegar, which will bind to Calcium in the potatoes and help keep them from becoming too mushy when cooked. </Step>
+    <Step image="">Bring potatoes to a boil and reduce to a simmer. Meanwhile...</Step>
+    <Step image="">Fry bacon in a heavy skillet until just crisp. Meanwhile...</Step>
+    <Step image="">Check potatoes, when easily pierced with a fork, drain the water and fill the pot with cold water.</Step>
+    <Step image="">Drain the bacon bits.</Step>
+    <Step image="">Make dressing: Combine &lt;a href='/GetRecipe?recipeName=Mayonnaise'&gt;Mayonnaise&lt;/a&gt;, mustard, vinegar, celery salt, pepper and pickle juice. Adjust the seasoning. If too tart, add more pickle juice, or more vinegar if too sweet. Add water to thin consistency, if needed.
+</Step>
+    <Step image="">Peel potatoes, quarter and slice in to 1/4 in slices.</Step>
+    <Step image="">Add the potatoes, bacon, pickle relish, all but 2 eggs worth of the boiled eggs to the bowl and mix.</Step>
+    <Step image="">Add dressing and mix.</Step>
+    <Step image="">Smooth the top of the salad and wipe the edges of the bowl.</Step>
+    <Step image="">Top with slices of boiled egg, and then with slice sweet gherkins. Sprinkle with paprika.</Step>
+    <Step image="">Chill and serve. Tell a story about Grandma Velma.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

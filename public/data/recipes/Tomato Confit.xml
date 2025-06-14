@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Confit_TomatoConfit.JPG" name="Tomato Confit" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="120"/>
+  </Title>
+  <Nutrition calories="100" fat="7.5" carbs="9" protein="2" sugar="2.3" sodium="20" fiber="2.7" servings="1" servingsUnit="CUP"/>
+  <Description>&lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt; roasted in olive oil and thyme.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 250F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Tomatoes</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>See &lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt; for peeling instructions.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh thyme sprigs</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black papper</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Tomato%20Confit_Concasse2.jpg">Cut peeled tomatoes between the ribbed sections, discard the seeds and pulp (the idea is to end up with a bunch of flat tomato flesh sections).</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes">Take a non-stick cookie sheet and sprinkle on it some sea salt and cracked black pepper.</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes"> Dip each piece of tomato in olive oil and place them on the cookie sheet.  Sprinkle more salt and pepper onto the tomatoes and place a small sprig of thyme on each piece of tomato.</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes">Bake at 250 for 1-2 hours, until they are not quite dried out.</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes">Remove from oven, remove thyme and put the tomatoes and any remaining oil in a container, then fill the container with good, extra-virgin olive oil and cover. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

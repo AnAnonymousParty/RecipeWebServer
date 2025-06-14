@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Chip Cookies_ChocolateChipCookies.jpg" name="Chocolate Chip Cookies" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="48" units="EACH"/>
+    <Times prep="15" cook="11"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="ITEM"/>
+  <Description>Chocolatey yummy cookies.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 375F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">2.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking Soda</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes>(2 Sticks) Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown sugar</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Packed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Larger eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vanilla extract</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="OZ">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Ghiardelli 60% cacao.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>(Optional) Walnuts</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix flour, salt and baking soda in a bowl.</Step>
+    <Step image="">Beat butter and sugar in stand mixture until well whipped, light and airy, approximately 10 minutes.</Step>
+    <Step image="">Add vanilla, and eggs, one at a time, until well incorporated.</Step>
+    <Step image="">Blend in dry ingredients until just mixed. Do not overwork dough.</Step>
+    <Step image="">Add chocolate chips and nuts. if desired.</Step>
+    <Step image="">Scoop dough balls using an ice cream scoop onto sheet pan lined with parchment or silicone baking sheet.</Step>
+    <Step image="">Bake 9-10 minutes, until lightly browned.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

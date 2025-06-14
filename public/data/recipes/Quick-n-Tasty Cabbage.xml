@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Quick-n-Tasty Cabbage_QuickCabbage.jpg" name="Quick-n-Tasty Cabbage" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="10" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Bright green buttery cabbage and your kitchen doesn't smell like a Russian prison kitchen.</Description>
+  <Prerequisites>
+    <Prerequisite>Setup to &lt;a href='/GetRecipe?recipeName=Big%20Pot%20Blanching'&gt;blanch&lt;/a&gt; and shock: Set a large pot of water boiling and fill large bowl with iced water.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Green Cabbage</Name>
+      <Quantity units="HEAD">1</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="STICK">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Croutons'&gt;Crouton&lt;/a&gt; Crumbs</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry Mustard</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Caraway Seeds</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt butter in a large skillet, add mustard and caraways seeds, cook until butter just begins to brown, add croutons, toss and remove from heat.</Step>
+    <Step image="">Add shredded cabbage in small batches to boiling water, never so much that the water stops boiling, cook until color turns bright green, but no more than a couple of minutes (if you SMELL cooked cabbage, you cooked it too long), remove cabbage from pot, plunge into ice water.  Repeat until all cabbage is cooked.</Step>
+    <Step image="">Drain the ice water, try to get the cabbage as dry as possible.</Step>
+    <Step image="">Add cabbage to skillet with butter and crouton sauce.  Toss over medium heat until hot enough to serve. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

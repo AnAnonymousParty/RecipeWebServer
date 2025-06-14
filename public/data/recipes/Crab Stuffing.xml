@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Crab Stuffing_CrabStuffing.jpg" name="Crab Stuffing" category="ELEMENT" cuisine="ALL">
+    <Yield amount="3" units="CUP"/>
+    <Times prep="5" cook="5"/>
+  </Title>
+  <Nutrition calories="230" fat="5" carbs="15" protein="9" sugar="2" sodium="400" fiber="1" servings=".3" servingsUnit="CUP"/>
+  <Description>You can use the stuffing right away for say, chicken breasts, lobster, or in &lt;a href='/GetRecipe?recipeName=Baked%20Fish%20with%20Crab%20Stuffing'&gt;Baked Fish with Crab Stuffing&lt;/a&gt;. It also freezes well.
+
+  </Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Crab meat chunks</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Fresh, canned or thawed from frozen.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bread crumbs</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Old Bay seasoning</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Crab%20Stuffing_CrabStuffing1.jpg">In a small saute pan, sweat shallots and celery in &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; until soft and translucent.</Step>
+    <Step image="Crab%20Stuffing_CrabStuffing2.jpg">Add olive oil, crab meat, Old Bay, salt and pepper. Toss until just heated through.</Step>
+    <Step image="Crab%20Stuffing_CrabStuffing3.jpg">Add bread crumbs and parsley, mix thorougly. Add more bread crumbs as necessary to absorb all the liquid. If the mix is too dry, add either butter, olive oil, clam juice or any liquid from the crab. The mixture should be the consistency of moist sand.Add bread crumbs and parsley, mix thorougly. Add more bread crumbs as necessary to absorb all the liquid. If the mix is too dry, add either butter, olive oil, clam juice or any liquid from the crab. The mixture should be the consistency of moist sand.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

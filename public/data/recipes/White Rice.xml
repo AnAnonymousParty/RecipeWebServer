@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="White Rice_WhiteRice.jpg" name="White Rice" category="SIDE" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="1" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Plain white rice.
+
+Rinsing the rice removes excess starch to help prevent foaming when cooking and sticking after cooking, The butter is extra insurance against foaming.</Description>
+  <Prerequisites>
+    <Prerequisite>Rinse rice until water runs clear.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>White RIce</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Approximately.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; in a sauce pan.</Step>
+    <Step image="">Add rinsed rice.</Step>
+    <Step image="">Add water, until the rice is cover to the depth of the first joint of you index finger. IOW, when the tip of your finger is touching the rice, the water is at the first bend of your finger.</Step>
+    <Step image="">Add salt.</Step>
+    <Step image="">Cover, bring rice to a boil, reduce to a simmer until all water is absorbed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

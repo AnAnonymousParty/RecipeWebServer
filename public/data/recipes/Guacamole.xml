@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Guacamole_Guacamole.jpg" name="Guacamole" category="APPETIZER" cuisine="MEXICAN">
+    <Yield amount="2" units="CUP"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="23" fat="2" carbs="1" protein=".3" sugar=".1" sodium="22" fiber="1" servings="1" servingsUnit="TBSP"/>
+  <Description>Guacamole is an avocado-based dip, spread, or salad first developed in Mexico.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato concassé&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Avocados, ripe</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>PITTED</Prep>
+      <Notes>Peeled</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato concassé&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red onion</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>DICESMALL</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MASHED</Prep>
+      <Notes>Grind in mortar with salt.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Jalepeno pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes>Seeded, membranes removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cilantro</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lemon juice</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lime juice</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Hot sauce</Name>
+      <Quantity units="DASH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Tabasco, Cholula, whatever you like.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mash avocados with garlic and lemon and lime juice.</Step>
+    <Step image="">Combine with other ingredients.</Step>
+    <Step image="">Serve with blue corn tortilla chips.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

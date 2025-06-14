@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roux_Roux.jpg" name="Roux" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="1" cook="10"/>
+  </Title>
+  <Nutrition calories="140" fat="6" carbs="17" protein="2" sugar="0" sodium="0" fiber="1" servings="1" servingsUnit="TBSP"/>
+  <Description>A.k.a. 'kitchen napalm', the OG thickener.
+
+Approximately equal parts of fat and flour, cooked to varying degrees of doneness.
+</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Fat</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Bacon grease, duck fat, schmaltz, tallow, clarified butter, etc.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Plus extra, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Heat fat in a heavy bottomed skillet or pan.</Step>
+    <Step image="Roux_Roux1.jpg">Add flour.</Step>
+    <Step image="Roux_Roux2.jpg">Cook the roux, stirring constantly, until it reaches the desired shade.</Step>
+    <Step image="">Use or refrigerate.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Fried Artichoke Hearts_FriedArtichokes.jpg" name="Fried Artichoke Hearts" category="APPETIZER" cuisine="ALL">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="55" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".25" servingsUnit="CUP"/>
+  <Description>Lightly battered artichoke hearts, deep fried golden-brown and delicious.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare a &lt;a href='/GetRecipe?recipeName=Standard%20Breading%20Method%20-%20A%20l%27Alglaise'&gt;Standard Breading Method - A l'Alglaise&lt;/a&gt; setup.</Prerequisite>
+    <Prerequisite>Preheat deep fryer to 375F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Artichoke Hearts</Name>
+      <Quantity units="CAN">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Fresh or canned (water packed).</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For dredging.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bread crumbs</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Treat artichoke hearts &lt;a href='/GetRecipe?recipeName=Standard%20Breading%20Method%20-%20A%20l%27Alglaise'&gt;A l'Alglaise&lt;/a&gt;.</Step>
+    <Step image="">Fry until golden brown.</Step>
+    <Step image="">Drain on paper towels.</Step>
+    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Ranch%20Dressing'&gt;Ranch Dressing&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

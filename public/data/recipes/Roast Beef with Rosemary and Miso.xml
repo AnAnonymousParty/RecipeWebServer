@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roast Beef with Rosemary and Miso_RoastedBeefMisoRosemary.jpg" name="Roast Beef with Rosemary and Miso" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="3" units="POUND"/>
+    <Times prep="10" cook="40"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="4" servingsUnit="OZ"/>
+  <Description>Browned on the outside, with the strong aroma of rosemary and garlic but subtle undertones of hickory smoke and miso. Juicy and pink on the inside, the meat positively &lt;i&gt;glistens&lt;/i&gt;.
+
+This is a two stage cooking process. First we slow roast the meat to minimize juice loss, encrusted in herbs and aromatics for an infusion of flavor, encased in bacon to insulate and baste. Then we do a quick sear under high heat to brown the surface of the meat for that deep roasted flavor. We stop the cooking when it is just done to rare, and let carryover heat take it to medium as it rests.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven or charcoal grille to 275°F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Top Round Roast</Name>
+      <Quantity units="POUND">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Hatcho (red) Miso</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="SPRIG">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Stems removed, save one intact sprig.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Bay Leaves</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CRACKED</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Roast%20Beef%20with%20Rosemary%20and%20Miso_rbr5.jpg">Season the roast with salt. Rub the surface of the roast liberally with miso. Season the roast with cracked black pepper. Remove the leaves from a sprig of rosemary and stick them to the surfaces of the roast. Turn the roast fat side up and sprinkle with garlic slices.</Step>
+    <Step image="Roast%20Beef%20with%20Rosemary%20and%20Miso_rbr8.jpg">Cover the roast with a layer of bay leaves and then lay strips of bacon over the roast so as to encase it.</Step>
+    <Step image="Roast%20Beef%20with%20Rosemary%20and%20Miso_rbr9.jpg">Place the roast on a rack over a pan or skillet and insert a meat thermometer. Put the roast in the oven or on the grill and cook until the internal temperature reaches 133°F.</Step>
+    <Step image="">Remove the roast and let sit under foil for about ten minutes, turn oven to 500°F.</Step>
+    <Step image="">Remove the bacon and save it to make &lt;a href='/GetRecipe?recipeName=Baked%20Beans'&gt;Baked Beans&lt;/a&gt; later. </Step>
+    <Step image="">Discard the bay leaves and garlic.</Step>
+    <Step image="Roast%20Beef%20with%20Rosemary%20and%20Miso_rbr10.jpg">Return the roast to the oven and cook until the internal temperature hits 140 degrees.</Step>
+    <Step image="">Remove roast from oven and let stand under foil for another ten minutes, it will continue to cook somewhat due to 'carryover' heat. Meanwhile, make pan &lt;a href='/GetRecipe?recipeName=Gravy'&gt;gravy&lt;/a&gt;.</Step>
+    <Step image="Roast%20Beef%20with%20Rosemary%20and%20Miso_rbr12.jpg">Slice the meat, drizzle with gravy.</Step>
+    <Step image="">Serve with horseradish &lt;a href='/GetRecipe?recipeName=Mashed%20Potatoes'&gt;Mashed Potatoes&lt;/a&gt; and &lt;a href='/GetRecipe?recipeName=Green%20Beans'&gt;Green Beans&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

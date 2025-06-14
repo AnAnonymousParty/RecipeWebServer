@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Poultry Stock_PoultryStock.jpg" name="Poultry Stock" category="ELEMENT" cuisine="ALL">
+    <Yield amount="2" units="QUART"/>
+    <Times prep="60" cook="720"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Fonds de Volaille.
+
+</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Optional: Crack bones with clean hammer or hatchet.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Veal shin and knuckle bones</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes>Trim any meat from bones and reserve.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chicken carcass</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black peppercorns</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Cold</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Cut all the meat from the bones and save it.  Rinse the meat and bones under cold running water, try to rub off as much visible blood as you can.</Step>
+    <Step image="">Place the bones in a kettle of cold water.  Slowly bring the water to simmer, immediately skimming any of the gray scum which will accumulate at the surface.</Step>
+    <Step image="">Once the water begins to simmer, remove the pot from the heat and dump it into a clean sink.  Rinse the bones under cold running water until they no longer feel slimy.  Clean the simmering kettle. </Step>
+    <Step image="">Place the rinsed bones in the kettle. Add cold water, &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;mirepoix&lt;/a&gt;, &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;bouquet garni&lt;/a&gt; and spices.</Step>
+    <Step image="">Slowly bring the pot to a very, very slow simmer.  Skim the scum from the surface of the stock and wipe any residue from the edge of the pot.</Step>
+    <Step image="">Cover and let it cook this way for at least 12 hours, checking  it from time to time, always skimming any crud which accumulates at the surface.</Step>
+    <Step image="">Let it cool slightly, strain it and chill it until all of the residual fat hardens at the surface and can be removed.</Step>
+    <Step image="">Strain the stock again (line a colander or sieve with paper towels).  Freeze it in pint containers, use as needed. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

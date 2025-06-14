@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pork Sandwich_20250521_151930.jpg" name="Pork Sandwich" category="SANDWICH" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="5" cook="2"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Roasted pork loin on a hoagie roll with Monterey Jack cheese.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Roasted Pork Loin</Name>
+      <Quantity units="POUND">.25</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Hoagie Roll</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>TOASTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Monterey Jack cheese</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black pepper</Name>
+      <Quantity units="PINCH">2</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mayonnaise'&gt;Mayonnaise&lt;/a&gt; (optional)</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Pork%20Sandwich_20250521_151313.jpg">Brush hoagie roll with butter.</Step>
+    <Step image="Pork%20Sandwich_20250521_151435.jpg">Toast roll on a hot skillet.</Step>
+    <Step image="Pork%20Sandwich_20250521_151535.jpg">Hold toasted roll on serving plate. Add a smear of mayo, if desired.</Step>
+    <Step image="Pork%20Sandwich_20250521_151645.jpg">Heat sliced pork in skillet.</Step>
+    <Step image="Pork%20Sandwich_20250521_151930.jpg">Top roll with port and cheese, heat under broiler until cheese is melted.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

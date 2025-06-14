@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Lobster and Shrimp Pizza_LobsterShrimpPizza.jpg" name="Lobster and Shrimp Pizza" category="APPETIZER" cuisine="ITALIAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="30" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Your favorite seafood items on crispy cheesy pizza.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Pizza%20Dough'&gt;Pizza Dough&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Place a baking stone (pizza stone) in the over and preheat to 450F degrees. </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Pizza%20Dough'&gt;Pizza Dough&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lobster tail and claw meat</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Medium Shrimp</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>PEELVEIN</Prep>
+      <Notes>16-20s</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Marinara%20Sauce'&gt;Marinara Sauce&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet BBQ sauce</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Worchershire Sauce</Name>
+      <Quantity units="DASH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon Juice</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Horseradish</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Young Fontina Cheese</Name>
+      <Quantity units="OZ">8</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Aged Fontina Cheese</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Make sauce: Combine Marinara Sauce, BBQ Sauce, Worcestershire sauce, lemon juice, EVOO, horseradish, garlic and salt.</Step>
+    <Step image="">Punch down dough if not done already.  Form into a ball and flatten in to a thick pancake.  If you know how to toss and spin dough, proceed; otherwise, lay dough on counter and spread it out using hand pressure only, pushing from the center to the edge.  You can make a round pizza, a square/rectangular pizza, whatever shape you like.</Step>
+    <Step image="">Sprinkle some cornmeal onto the back of a baking flat and set the dough on it.  Ladle some of the tomato sauce onto the dough and spread it out until it's about 1</Step>
+    <Step image="">Shake the baking flat to check that the dough hasn't stuck to the pan.  Transfer the pizza to the oven (hover the baking flat over the stone, tip the front edge till the pizza starts to slide off and then whip the baking flat out).  Bake for 5-10 minutes, until the cheese is bubbly and the crust is browned.</Step>
+    <Step image="">Slide the pizza off the stone and back onto the baking flat, let sit for a few minutes, until the cheese sets.  Brush the edges of the crust with olive oil, cut into pieces and serve. </Step>
+  </Method>
+  <Variations>
+    <Variation>Add rings of sliced squid, mussels, clams if desired.</Variation>
+  </Variations>
+</Recipe>

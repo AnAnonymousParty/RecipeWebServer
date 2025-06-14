@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Charred Cabbage Gratin_CharredCabbageGratin.png" name="Charred Cabbage Gratin" category="SIDE" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Cabbage wedges baked in heavy cream until tender are topped with bacon bits, blue cheese, and walnuts. </Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 400°F.</Prerequisite>
+    <Prerequisite>Cook bacon, crumble, reserve bacon fat.</Prerequisite>
+    <Prerequisite>Remove green part from leek, cut white part in half lengthwise, rinse under cold water to remove any dirt/grit and then slice into half-moons.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Green Cabbage</Name>
+      <Quantity units="HEAD">1</Quantity>
+      <Prep>QUARTERED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Leek</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon</Name>
+      <Quantity units="SLICE">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Walnuts</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>TOASTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Blue Cheese</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>CRUMBLED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Stems removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Cook leeks in bacon fat over medium heat until just tender, 1 to 2 minutes. </Step>
+    <Step image="">Add 2 tablespoons unsalted butter. Once the butter is melted, turn the heat off. </Step>
+    <Step image="">Add 1 1/2 cups heavy cream, the remaining 1 tablespoon thyme, remaining 1 teaspoon kosher salt, 1/2 teaspoon black pepper, and 1/2 teaspoon red pepper flakes, and stir to combine. </Step>
+    <Step image="">Using tongs, place 1 cabbage wedge in the skillet and turn to coat in the cream mixture; position rounded-side down.
+Repeat with the second cabbage wedge.
+Coat the third wedge in the cream mixture and stack on top of the first two wedges (so there's room to coat the fourth wedge).
+Coat the fourth wedge, then arrange the third and fourth wedges in the skillet rounded-side down. </Step>
+    <Step image="">Cover the pan tightly with aluminum foil.
+Transfer to the upper rack of the oven and bake until the wedges have collapsed and are tender through the core, 30 to 35 minutes. </Step>
+    <Step image="Charred%20Cabbage%20Gratin_CharredCabbageGratin1.png">&lt;a href='/GetRecipe?recipeName=Gratin'&gt;Gratin&lt;/a&gt;: Uncover the cabbage and continue to bake until the tops of the wedges are charred, 25 to 30 minutes more.
+Sprinkle with the bacon and walnuts.
+Crumble 2 ounces blue cheese over the top and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

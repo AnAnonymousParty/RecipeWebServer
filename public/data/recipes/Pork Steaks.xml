@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pork Steaks_PorkSteak.jpg" name="Pork Steaks" category="ENTREE_PORK" cuisine="ALL">
+    <Yield amount="2" units="EACH"/>
+    <Times prep="60" cook="120"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>A Saint Louis original.
+
+Smoky, sticky, savory-sweet glorious porky goodness!</Description>
+  <Prerequisites>
+    <Prerequisite>Charcoal grill or Gas grill, smoker box with hickory chips.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Pork Rub&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Pork Steaks.</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Pork Rub&lt;/a&gt;</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Beer</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Pork%20Steaks_PorkSteak2.jpg">Prepare pork steaks by placing on a baking rack over a sheet pan.</Step>
+    <Step image="Pork%20Steaks_PorkSteak3.jpg">Coat pork steak with &lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Pork Rub&lt;/a&gt; and refrigerate for am hour, or overnight.</Step>
+    <Step image="Pork%20Steaks_PorkSteak4.jpg">Cook pork steaks over low indirect heat, turning occasionally, until well smoked.</Step>
+    <Step image="">Transfer pork steaks to baking dish, add beer, cover and let pork steaks sweat on the grill for an hour or more.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

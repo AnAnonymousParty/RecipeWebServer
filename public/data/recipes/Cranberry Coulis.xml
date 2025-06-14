@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cranberry Coulis_CranberryCoulis.jpg" name="Cranberry Coulis" category="SAUCE" cuisine="ALL">
+    <Yield amount="3" units="CUP"/>
+    <Times prep="2" cook="15"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".25" servingsUnit="CUP"/>
+  <Description>Cranberry sauce on steroids.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Fresh cranberries</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Orange zest</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon zest</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red currant jelly</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Orange marmalade</Name>
+      <Quantity units="TSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijon mustard</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot, small</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Horseradish (optional)</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Put water in sauce pan, bring to a boil.  Add cranberries.</Step>
+    <Step image="">When water reboils, cover and cook a few minutes, until at least half of the berries have burst.</Step>
+    <Step image="">Add sugar and orange zest, cook for about 5 minutes; the longer you cook, the thicker the sauce. </Step>
+    <Step image="">Reserve 1-1/2 cups of sauce in the pan, add all of the other ingredients, except the horseradish.</Step>
+    <Step image="">Simmer, stirring often, until the currant jelly melts.  Set aside to cool.</Step>
+    <Step image="">Transfer to blender and puree.</Step>
+    <Step image="">Strain through china cap or large mesh strainer back into the saucepan.</Step>
+    <Step image="">Reheat and add horseradish just prior to serving. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

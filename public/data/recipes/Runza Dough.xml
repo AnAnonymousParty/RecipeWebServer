@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Runza Dough_RunzaDough.jpg" name="Runza Dough" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="75" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Soft dough for &lt;a href='/GetRecipe?recipeName=Runzas'&gt;runzas&lt;/a&gt;, buns, etc.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">4.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yeast</Name>
+      <Quantity units="PACKAGE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>(5 tsp)</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Start by placing 2 cups flour, sugar, yeast, and salt into a large mixing bowl. </Step>
+    <Step image="">Either in a small saucepan over medium heat or a microwave safe bowl, heat the milk, water, and butter to 100F. </Step>
+    <Step image="">Pour heated wet ingredients into flour mixture. Stir slightly before adding beaten eggs. </Step>
+    <Step image="">Continue by adding the remaining flour, one cup at a time, until when kneaded the dough comes together and is smooth and elastic. </Step>
+    <Step image="">Place dough in a greased bowl, cover and let rise in a warm place for about 1 hour. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

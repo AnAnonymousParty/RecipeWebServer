@@ -4,7 +4,7 @@
     <Yield amount="4" units="SERVING"/>
     <Times prep="15" cook="10"/>
   </Title>
-  <Nutrition calories="500" fat="30" carbs="5" sugar="1" fiber="1"/>
+  <Nutrition calories="500" fat="30" carbs="5" protein="5" sugar="1" fiber="1"/>
   <Description>Succulent blackened salmon fillets with an exciting blend of Cajun spices.</Description>
   <Prerequisites>
     <Prerequisite>Acquire ingredients.</Prerequisite>

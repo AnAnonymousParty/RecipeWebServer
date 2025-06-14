@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Non-Reuben Corned Beef Sandwich_CornedBeefSandwich.jpg" name="Non-Reuben Corned Beef Sandwich" category="SANDWICH" cuisine="AMERICAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="5" cook="1"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>This is the best corned beef sandwich that isn't a Reuben.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Rye%20on%20Corned%20Beef'&gt;Corned Beef&lt;/a&gt;</Name>
+      <Quantity units="OZ">6</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Rye bread</Name>
+      <Quantity units="SLICE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cream Cheese</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Onion</Name>
+      <Quantity units="SLICE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Heat corned beef in a skillet with 1 tbsp of butter.</Step>
+    <Step image="">Spread cream cheese on one slice of rye bread.</Step>
+    <Step image="">Add corned beef and onion slices.</Step>
+    <Step image="">Top with second slice of bread.</Step>
+    <Step image="">Brush both sides of sandwich with butter and toast in a hot pan.</Step>
+    <Step image="">Serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

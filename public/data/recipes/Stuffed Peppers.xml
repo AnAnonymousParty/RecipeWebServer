@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Stuffed Peppers_Stuffed Peppers.jpg" name="Stuffed Peppers" category="ENTREE" cuisine="AMERICAN">
+    <Yield amount="6" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Sweet bell peppers, stuffed with &lt;a href='/GetRecipe?recipeName=Beef%20and%20Rice%20Stuffing'&gt;&lt;/a&gt;herbed rice and beef&lt;/a&gt;.</Description>
+  <Prerequisites>
+    <Prerequisite>Slice top from pepper and remove stem. Use a sppon to scoop out seeds and membranes. &lt;a href='/GetRecipe?recipeName=Big%20Pot%20Blanching'&gt;&lt;/a&gt;Blanch and shock&lt;/a&gt; peppers.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Beef%20and%20Rice%20Stuffing'&gt;&lt;/a&gt;Beef and Rice Stuffing&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Grease a large baking dish.</Prerequisite>
+    <Prerequisite>Preheat oven to 350°F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Sweet Bell Peppers</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>BLANCH</Prep>
+      <Notes>Green/Yellow/Red  </Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Beef%20and%20Rice%20Stuffing'&gt;&lt;/a&gt;Beef and Rice Stuffing&lt;/a&gt;.</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;&lt;/a&gt;Tomato Concasse&lt;/a&gt;.</Name>
+      <Quantity units="CUP">.1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place peppers in greased baking dish.</Step>
+    <Step image="">Fill peppers with Beef and Rice Stuffing, top with pepper top previously removed. Place pat of butter on top of each pepper.</Step>
+    <Step image="">Mix tomato concasse and chicken stock.</Step>
+    <Step image="">Add stock mixture.</Step>
+    <Step image="">Bake peppers for 30-45 minutes.</Step>
+    <Step image="">Remove peppers from baking dish and reduce sauce, season with salt and pepper.</Step>
+    <Step image="">Serve peppers, drizzled with the sauce.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

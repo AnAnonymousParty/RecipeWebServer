@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Soft Chocolate Cheesecake Cookies_SoftChocolateChipCheesecakeCookies.png" name="Soft Chocolate Cheesecake Cookies" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="36" units="SERVING"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Bite sized cheesecake cookies with chocolate chips.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven 375F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cornstarch</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking powder</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cream cheese</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Powdered sugar</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Sift the flour, cornstarch and baking powder together in a bowl. </Step>
+    <Step image="">In another bowl, cream the butter and cream cheese together with an electric mixer. </Step>
+    <Step image="">Add the egg, milk and vanilla.
+Mix well. </Step>
+    <Step image="">Add the powdered sugar and continue to mix. </Step>
+    <Step image="">Add the flour mixture and stir to combine. </Step>
+    <Step image="">Fold in the chocolate chips. </Step>
+    <Step image="">Refrigerate for about 1 hour before baking. </Step>
+    <Step image="">Shape the chilled dough into balls and place on parchment paper-lined baking sheets.
+Flatten the balls a little with your hands.
+If desired, top with a few more chocolate chips. </Step>
+    <Step image="">Bake for about 10 minutes. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

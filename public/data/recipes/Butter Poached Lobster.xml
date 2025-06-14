@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Butter Poached Lobster_ButterPoachedLobster.jpg" name="Butter Poached Lobster" category="ENTREE_SEAFOOD" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="150" fat="1" carbs=".1" protein="24" sugar="0" fiber="0"/>
+  <Description>Mmm . . . Lobster . . .
+
+According to &lt;a href='https://en.wikipedia.org/wiki/Thomas_Keller'&gt;Thomas Keller&lt;/a&gt;, plunging lobster into boiling water causes the exterior surface of the meat to toughen and become impervious to any external, additional flavors you might want to add.  Also, since different parts of the lobster cook at different rates, by the time the claws are done the tails are overcooked -stringy and rubbery.
+
+Keller advises a preparation somewhere between blanching/par-boiling and poaching, pouring boiling water over lobsters and letting them set a few minutes, before extracting the meat for other cooking techniques.
+
+This recipe is based on Keller's technique. 
+
+The butter poached lobster can be used as is, or in other recipes.
+
+&lt;a href='https://en.wikipedia.org/wiki/Ron_Siegel'&gt;Ron_Siegel&lt;/a&gt; used it to beat &lt;a href='https://en.wikipedia.org/wiki/Hiroyuki_Sakai'&gt;Hiroyuki_Sakai&lt;/a&gt; on &lt;a href='https://en.wikipedia.org/wiki/Iron_Chef'&gt;Iron Chef&lt;/a&gt;.
+</Description>
+  <Prerequisites>
+    <Prerequisite>Obtain pot larger enough to contain lobsters.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Lobster</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Approximately</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vinegar</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=/Beurre%20Monte'&gt;Beurre monté&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Pack lobsters in large pot. Add water to cover lobsters.</Step>
+    <Step image="">Remove lobsters, measure remaining water.</Step>
+    <Step image="">Add 1/2 cup of vinegar for every 8 quarts of water.</Step>
+    <Step image="">Bring water to a boil.</Step>
+    <Step image="Butter%20Poached%20Lobster_BPL1.jpg">Turn off heat. Add lobsters to water.</Step>
+    <Step image="">Let lobster steep in water. About two minutes for 1-1/2 pound lobsters or 3 minutes for 2 pound lobsters.</Step>
+    <Step image="Butter%20Poached%20Lobster_BPL2.jpg">Remove lobsters from pot. Twist of tails and set aside. Twist off claws and return to water for an additional five minutes.</Step>
+    <Step image="">Remove claws from pot. Crack shells and remove meat.</Step>
+    <Step image="Butter%20Poached%20Lobster_BPL3.jpg">Remove tail meat from shells. Remove vein and slice in half lengthwise.</Step>
+    <Step image="">Place lobster meat in sauce pan.</Step>
+    <Step image="">Add beurre monté to pan with lobster pieces and hold temperature at 160-180 degrees for 5-6 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

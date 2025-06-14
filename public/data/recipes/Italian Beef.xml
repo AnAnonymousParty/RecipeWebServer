@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Italian Beef_ItalianBeef.jpg" name="Italian Beef" category="ENTREE_BEEF" cuisine="ITALIAN">
+    <Yield amount="4" units="POUND"/>
+    <Times prep="10" cook="480"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="5" servingsUnit="OZ"/>
+  <Description>I treat this stuff as a &lt;a href='/GetRecipe?recipeName=Braise'&gt;braise&lt;/a&gt;; however, skipping the initial marinade and cooking very slowly for a long time over really low (never more than 200 degrees) heat. Sometimes I do the initial searing in hot oil, sometimes over an incredibly hot hickory fire.</Description>
+  <Prerequisites>
+    <Prerequisite>Check out &lt;a href='/GetRecipe?recipeName=Braising'&gt;Braising&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepox&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Brisket Round or Chuck Roast</Name>
+      <Quantity units="POUND">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon Fat</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For searing.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;brown beef stock&lt;/a&gt; </Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Worchestershire sauce.</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Balsammic vinegar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepox&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CRACKED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay Leaves</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fress Rosemary</Name>
+      <Quantity units="SPRIG">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">6</Quantity>
+      <Prep>SMASHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oregano</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pepperoncini</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Italian%20Beef_ib1.jpg">Lightly season the meat with salt and pepper and allow to come to room temperature.</Step>
+    <Step image="Italian%20Beef_ib2.jpg">Melt some bacon grease in a skillet and place it on high heat.  As the oil reaches its smoke point, lay the brisket in and start browning it.  The idea is to get it well browned (caramelized) on all surfaces, so you will have to move it around, press it into the oil, stand it on edge, etc.  (yes, it's hard to brown curved surfaces, but remember:  browning = flavor and more browning = more flavor)  Oh yeah, this can be kind of messy</Step>
+    <Step image="">Get a really large piece of aluminum foil, enough to wrap the brisket twice completely. Fold the foil in half. </Step>
+    <Step image="Italian%20Beef_ib3.jpg">Place the mirepoix in a layer in the center of the foil.</Step>
+    <Step image="">Place half the bay leaves on the mirepoix. Now add the seared brisket, fat side up. </Step>
+    <Step image="">Sprinkle with more salt, pepper, the MSG, and then with the paprika. Cover with the remaining bay leaves and top with the rosemary sprig.</Step>
+    <Step image="Italian%20Beef_ib5.jpg">Add the worchestershire and vinegar to the stock. Bring the foil up and roll-fold it tightly, the full length of the brisket. Then roll-fold one of the remaining open ends. Tilt this package up so you can pour the liquid into it and then roll-fold the open end. The idea is to create a tightly sealed package. While you could probably use a covered cooking vessel or even a crock pot, I find that this foil package yields the best results. </Step>
+    <Step image="">Put this package on a sheet pan (to contain any leaks) and place it in a low (250-275 degree) oven or gas grill. Cook for 8-12 hours. </Step>
+    <Step image="Italian%20Beef_ib7.jpg">When the cooking is complete, remove it from the foil, being careful to reserve all the liquid inside.</Step>
+    <Step image="">Strain and refrigerate the liquid.</Step>
+    <Step image="Italian%20Beef_ib8.jpg">Use a couple of forks to shred the meat (it will be falling apart anyway) and cut into bite-sized pieces.</Step>
+    <Step image="">After the reserved liquid has chilled to the point where any of its fat has hardened into a solid layer at the surface, remove the fat. (You could also use a gravy separator, if you have one). </Step>
+    <Step image="">Put the shredded meat in a large skillet or other cooking vessel with a lid. Pour the reserved liquid over the meat, add garlic, oregano and basil. Add olive oil and pepperoncinis.</Step>
+    <Step image="">Adjust the seasoning with salt and pepper. Ready to use or refrigerate and use within a week. This stuff freezes well, better with more liquid (add a little stock if necessary). </Step>
+  </Method>
+  <Variations/>
+</Recipe>

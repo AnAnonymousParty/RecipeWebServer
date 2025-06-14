@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Brown Veal Stock_BrownVealStock.jpg" name="Brown Veal Stock" category="ELEMENT" cuisine="ALL">
+    <Yield amount="2" units="QUART"/>
+    <Times prep="60" cook="720"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Fonds du Veau Brun.
+
+</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+    <Prerequisite>Optional: Crack bones with clean hammer or hatchet.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Veal shin and knuckle bones</Name>
+      <Quantity units="POUND">6</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes>Trim any meat from bones and reserve.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black peppercorns</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Whole cloves</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Cold</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Get a roasting pan and place the bones and meat on a rack.</Step>
+    <Step image="Brown%20Veal%20Stock_BrownBones.jpg">Roast the bones and meat in the oven until it is nicely browned -times and temperatures vary, start at 350, look in the oven once in a while until you see brown.</Step>
+    <Step image="">Put the browned bones and meat in a big stockpot with the &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;mirepoix&lt;/a&gt;, &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;bouquet garni&lt;/a&gt;, pepper and cloves, and add the water.</Step>
+    <Step image="">Slowly bring the pot to a very, very slow simmer.
+
+Do not let it boil.</Step>
+    <Step image="">Skim the scum from the surface of the stock and wipe any residue from the edge of the pot.</Step>
+    <Step image="">Cover and let it cook this way for 12 hours, checking  it from time to time, always skimming any crud which accumulates at the surface.</Step>
+    <Step image="">When this is done, let it cool slightly, strain it and chill it until all of the residual fat hardens at the surface and can be removed.</Step>
+    <Step image="">Strain the stock again (line a colander or sieve with paper towels).</Step>
+    <Step image=""> Freeze it in pint containers, use as needed. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

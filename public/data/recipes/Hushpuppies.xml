@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Hushpuppies_hushpuppies.jpg" name="Hushpuppies" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="24" units="EACH"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="30" fat="2" carbs="8" protein="1" sugar=".75" fiber=".5"/>
+  <Description>Cornmeal fritters.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Corn meal</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking Powder</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic powder</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion powder</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Paprika</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Large</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Buttermilk</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Butter</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Cold</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Preheat oil in deep fryer.</Step>
+    <Step image="">In a medium sized mixing bowl add the flour, cornmeal, sugar, baking powder, salt, garlic powder, onion powder, paprika, and pepper.</Step>
+    <Step image="Hushpuppies_hushpuppies-2.jpg">In a separate bowl, whisk the egg and buttermilk together. Add cubed butter and minced onions. Add to dry ingredients, mix well.</Step>
+    <Step image="">Using 1 oz scoop, drop the batter by in the hot oil. Let cook until they are golden brown 2-3 minutes. Remove with a metal strainer on a paper toweled lined plate.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

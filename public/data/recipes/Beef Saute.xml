@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef Saute_BeefSaute.jpg" name="Beef Saute" category="ENTREE_BEEF" cuisine="FRENCH">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>This is basically French, a quick sauté of beef, potatoes, mushrooms and onions with stock-cream sauce.  Being a sauté it is important that you use a heavy, thick-bottomed pan, oil VERY hot (just beginning to smoke) and that ingredients are DRY when they hit the sauté pan.  When this dish is done right, each ingredient retains its own character, only the sauce carries the blended flavors which ties it all together (unlike a stew, where everything tastes like everything else). </Description>
+  <Prerequisites>
+    <Prerequisite>Peel onions:  Drop them into  boiling water for a minute, then drain.  Shave peel from root and tip ends then you can just give 'em a squeeze and pop them out of their skins.  Cut a 1/4</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Tenderloin</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>DICELARGE</Prep>
+      <Notes>1 inch cubes.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pearl Onions</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>See Prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mushrooms</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>QUARTERED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallots</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley tops</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Russet Potatoes</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>DICELARGE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry WhiteWine</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;brown beef stock&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=Brown%20Vealf%20Stock'&gt;brown veal stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tarragon</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Simmer onions in stock with parsley stems until tender, about 20 minutes.  Meanwhile...</Step>
+    <Step image="">Sauté potatoes in 1 tbsp butter and a little olive oil with the tarragon until browned and tender.  Set aside. </Step>
+    <Step image="">Sauté mushrooms in butter. Add 1/4 of the shallots as the mushrooms begin to brown then transfer to a bowl. </Step>
+    <Step image="">Sauté meat in olive oil and butter, salt and pepper lightly.  Cook until just browned, meat should still be rare inside, transfer to bowl with mushrooms. </Step>
+    <Step image="">Remove all but 1 tbsp of fat from the pan, add remainder of shallots and sauté for a minute -just sweat them, deglaze the pan with the wine and add the stock, reserving the onions and discarding the parsley stems.  Reduce the sauce to a syrupy consistency, then add the cream. </Step>
+    <Step image="">Add the meat, mushrooms and onions, allow to simmer while you chop the parsley tops. </Step>
+    <Step image="">Return the potatoes to high heat to crisp (add another tbsp of butter if needed), then add to the other ingredients. </Step>
+    <Step image="">Adjust the seasoning, garnish with parsley and serve immediately.</Step>
+  </Method>
+  <Variations>
+    <Variation>Served with buttered Egg Noodles.</Variation>
+  </Variations>
+</Recipe>

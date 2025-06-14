@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Biscuits and Gravy_BiscuitsAndGravy.jpg" name="Biscuits and Gravy" category="BREAKFAST" cuisine="ALL">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Fluffy &lt;a href='/GetRecipe?recipeName=Buttermilk%20Drop%20Biscuits'&gt;biscuits&lt;/a&gt; smothered in &lt;a href='/GetRecipe?recipeName=Sausage%20Gravy'&gt;sausage gravy&lt;/a&gt;.</Description>
+  <Prerequisites>
+    <Prerequisite>&lt;a href='/GetRecipe?recipeName=Buttermilk%20Drop@20Biscuits'&gt;Buttermilk Biscuits&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>&lt;a href='/GetRecipe?recipeName=Sausage%20Gravy'&gt;Sausage Gravy&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Buttermilk%20Drop%20Biscuits'&gt;Buttermilk Biscuits&lt;/a&gt;.</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Sausage%20Gravy'&gt;Sausage Gravy&lt;/a&gt;</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Make &lt;a href='/GetRecipe?recipeName=Sausage%20Gravy'&gt;sausage gravy&lt;/a&gt; and &lt;a href='/GetRecipe?recipeName=Buttermilk%20BiscuitsSausage%20Gravy'&gt;buttermilk biscuits&lt;/a&gt;.</Step>
+    <Step image="">Top two biscuits with a ladle of sausage gravy.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

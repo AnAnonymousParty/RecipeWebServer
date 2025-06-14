@@ -234,6 +234,8 @@ app.post("/UpdateRecipe", function (req, res) {
  });
 
  var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ 
+ console.log("< UpdateRecipe()"); 
     
  res.status(200).send(rv);
 });
@@ -309,12 +311,15 @@ function ParsePostDataToXml(postData) {
  
  var nutrition = root.ele('Nutrition');
  
- nutrition.att('calories', postData.calories);
- nutrition.att('fat',      postData.fat); 
- nutrition.att('carbs',    postData.carbs); 
- nutrition.att('protein',  postData.protein); 
- nutrition.att('sugar',    postData.sugar); 
- nutrition.att('fiber',    postData.fiber);  
+ nutrition.att('calories',     postData.calories);
+ nutrition.att('fat',          postData.fat); 
+ nutrition.att('carbs',        postData.carbs); 
+ nutrition.att('protein',      postData.protein); 
+ nutrition.att('sugar',        postData.sugar); 
+ nutrition.att('sodium',       postData.sodium); 
+ nutrition.att('fiber',        postData.fiber);  
+ nutrition.att('servings',     postData.servings); 
+ nutrition.att('servingsUnit', postData.servingsUnit);  
  
  
  var desc = root.ele('Description');

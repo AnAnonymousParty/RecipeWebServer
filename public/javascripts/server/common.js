@@ -62,18 +62,21 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   
  var category = recipeDataJson.Recipe.Title[0].$.category;
  var cuisine  = recipeDataJson.Recipe.Title[0].$.cuisine;
+ var imageSrc = recipeDataJson.Recipe.Title[0].$.image;
+ var imgStyle = ("" == imageSrc ? "display: none;   height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;" 
+                                : "display: inline; height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;");
  
  if ("ALL" != categoryFilter && "ALL" != category) {
   if (category != categoryFilter) {
    continue;
   }
  } else {
-  if ("ELEMENT" == category) {
-   continue;  // Don't show elements unless specifically requested.
+  if ("ELEMENT" == category || "SAUCE" == category || "TECHNIQUE" == category) {
+   continue;  // Some things are shown only when specifically requested.
   }
  }
   
- if ("ALL" != cuisineFilter && "ALL" != cuisine) {
+ if ("ALL" != cuisineFilter) {
   if (cuisine != cuisineFilter) {
    continue;
   }
@@ -88,14 +91,18 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
  }
    
  if ("xml" == fext) {   
-  htmlRsp += ('<div class="recipe-line"><span class="field-header">' 
-           + fileName 
-           + '</span><span class="field-value">'
-           + '<button style="margin: 0px 5px 0px 20px;" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' type="button">View</button>'
-           + '<button style="margin: 0px 5px 0px 0px;"  onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' type="button">View Print Ready Version</button>'              
-           + '<button style="margin: 0px 5px 0px 0px;"  onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' type="button">Edit</button>'
-           + '<button style="margin: 0px 0px 0px 0px;"  onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' type="button">Delete</button>'          
-           + '</span></div>\n');
+  htmlRsp += ('<div class="recipeLine">'
+           +  '<span class="recipeTitle">' 
+           +  '<span style="display: inline-block; vertical-align: middle; height: 50px;">' + fileName + '</span>'
+           +  '<img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">'
+           +  '</span> '
+           +  '<span class="recipeActions">'
+           +  '<button style="margin: 0px 5px 0px 20px;" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' type="button">View</button>'
+           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' type="button">View Print Ready Version</button>'              
+           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' type="button">Edit</button>'
+           +  '<button style="margin: 0px 0px 0px 0px;"  onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' type="button">Delete</button>'          
+           +  '</span><'
+           +  '/div>\n');
   }
  }
   

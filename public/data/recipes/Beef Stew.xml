@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef Stew_Beef Stew.jpg" name="Beef Stew" category="STEW" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="20" cook="120"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Tender chunks of beef, with carrots and potatoes in a thick beefy broth.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Chuck Roast or </Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For searing meat and making roux.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For dredging meat and making roux.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;brown beef stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Russet Potatoes</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>QUARTERED</Prep>
+      <Notes>Peeled.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Carrrots</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Peeled.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery</Name>
+      <Quantity units="STALK">2</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay Leaves</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="SPRIG">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Stem discarded.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Season the meat with salt in pepper, then dredge in flour. What you want is a really light dusting flour, not a breaded coating.</Step>
+    <Step image="">Melt bacon fat and continue heating until it begins to smoke, add the meat and sauté quickly until it is just well browned -you aren't trying to cook it thoroughly at this point. </Step>
+    <Step image="">Transfer meat to a large stock pot. Add stock. You could use canned broth, but ... and if you do I'd add a can of canned beef consommé. Add water, bay leaves and red pepper flakes and set to boil. </Step>
+    <Step image="">Meanwhile, peel and dice onions, add to pot. Trim and slice celery, add to pot. Peel and slice carrots, add to pot. Reduce heat to simmer and cook for 1-2 hours.</Step>
+    <Step image="">Peel and quarter potatoes, add to pot. Add rosemary. Simmer until potatoes are fork-tender, probably another 20 minutes.</Step>
+    <Step image="">The starches from the flour and potatoes should have thickened the liquid by now. If you want it thicker, add a little &lt;a href='/GetRecipe?recipeName=Brown%20Roux'&gt;Brown Roux&lt;/a&gt; until you get the right consistency.</Step>
+    <Step image="">Adjust the seasoning, serve with &lt;a href='/GetRecipe?recipeName=Buttermilk%20Drop%20Biscuits'&gt;Buttermilk Biscuits&lt;/a&gt;. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

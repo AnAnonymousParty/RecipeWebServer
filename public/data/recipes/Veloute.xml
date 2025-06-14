@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Veloute_Veloute.jpg" name="Veloute" category="SAUCE" cuisine="ALL">
+    <Yield amount="" units="BAG"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>White stock thickened with starch, one of the five &lt;a href='https://en.wikipedia.org/wiki/French_mother_sauces'&gt;mother sauces&lt;/a&gt;.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=White%20Roux'&gt;White Roux&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=White%20Beef%20Stock'&gt;White Beef Stock&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=White%20Veal%20Stock'&gt;White Veal Stock&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=White%20Roux'&gt;White Roux&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=White%20Beef%20Stock'&gt;White Beef Stock&lt;/a&gt; or  &lt;a href='/GetRecipe?recipeName=White%20Veal%20Stock'&gt;White Veal Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mushroom peelings/trimmings</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Nutmeg</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place cold stock in a sauce pan. </Step>
+    <Step image="">Add roux and dissolve.</Step>
+    <Step image="">Bring to a boil, stirring with a whisk to prevent sticking.</Step>
+    <Step image="">Reduce heat to a simmer and set the pan half off the burner to set up a convection current. Be attentive during this time to skim any scum which collects on the surface.</Step>
+    <Step image="">Season with salt and pepper.</Step>
+    <Step image="">Strain through a chinois.</Step>
+  </Method>
+  <Variations>
+    <Variation>Substitute Chicken or Fish Stock as you wish to accompany whatever it is with which the sauce will be served. </Variation>
+  </Variations>
+</Recipe>

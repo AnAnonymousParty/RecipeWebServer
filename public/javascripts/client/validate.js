@@ -91,4 +91,5 @@ function IsFileName(sString)
             }
 
          return(true);
-        }        
+        }     
+        

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ciopino_cioppino.JPG" name="Ciopino" category="SOUP" cuisine="ITALIAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Seafood in a tomatoey broth.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Small clams, mussels, fresh, in the shell</Name>
+      <Quantity units="EACH">18</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes>Beards removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shrimp</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>PEELVEIN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Crab legs.</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Frim white fish</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt;</Name>
+      <Quantity units="OZ">16</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Clam juice</Name>
+      <Quantity units="OZ">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomato paste</Name>
+      <Quantity units="OZ">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsely</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Basil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry white winr</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a large sauté pan, sauté onions and garlic in olive oil until well caramelized. </Step>
+    <Step image="">Add tomatoes, tomato paste, water, wine, clam juice, parsley and herbs, salt and pepper. </Step>
+    <Step image=""> Bring to a boil, reduce to simmer and cook for 10 minutes.</Step>
+    <Step image="">Add clams/mussels and fish, cook, covered,  for 5 more minutes.</Step>
+    <Step image="">Add crab legs and shrimp, cook until shimp turn pink.  Discard any clams/mussels whose shells remain closed</Step>
+    <Step image="">Serve with hard crusty sourdough bread. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

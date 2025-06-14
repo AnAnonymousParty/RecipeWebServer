@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Root Vegetable Brunoise_brunoise.jpg" name="Root Vegetable Brunoise" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="15" cook="5"/>
+  </Title>
+  <Nutrition calories="25" fat="0" carbs="3.3" protein=".3" sugar="3" sodium="5" fiber="1.5" servings="3" servingsUnit="OZ"/>
+  <Description>This is a fancy (a.k.a. French) word for finely diced root vegetables.
+
+This stuff is used extensively in garnishes and sauces. 
+
+Make it up in large batches and freeze it in sandwich bags in a large plastic container -it keeps for months.</Description>
+  <Prerequisites>
+    <Prerequisite>Peel/clean ingredients.</Prerequisite>
+    <Prerequisite>Large pot of salted, boiling water.</Prerequisite>
+    <Prerequisite>Large pot of chilled water.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Turnip</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICESMALL</Prep>
+      <Notes>1/16</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Leek tops</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICESMALL</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Carrots</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>DICESMALL</Prep>
+      <Notes>1/16</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Blanch each vegetable separately in boiling salted water (Do each batch in a &lt;a href='https://en.wikipedia.org/wiki/Chinois'&gt;chinois&lt;/a&gt;  to get it in and out of the water quickly) for a minute or so, until it's just tender and the color is set, then submerge under cold water before turning out onto paper toweling to drain.</Step>
+    <Step image="">Mix all the batches together and use as needed, keep refrigerated for a few days or freeze for a few months.</Step>
+  </Method>
+  <Variations>
+    <Variation>Can also use other vegetables such as celery, fennel, parsnips, radish, etc.</Variation>
+  </Variations>
+</Recipe>

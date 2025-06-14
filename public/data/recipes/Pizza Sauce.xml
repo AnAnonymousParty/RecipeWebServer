@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pizza Sauce_PizzaSauce.jpg" name="Pizza Sauce" category="SAUCE" cuisine="ITALIAN">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Herbed tomato sauce for pizza.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Marina%20Sauce'&gt;Marinara Sauce&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Marina%20Sauce'&gt;Marinara Sauce&lt;/a&gt;</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parmesan cheese</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add parmesan cheese to marina sauce.</Step>
+    <Step image="">Blend sauce until smooth.</Step>
+    <Step image="">Use, refrigerate or freeze until needed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

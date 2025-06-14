@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pie Crust_PieCrust.jpg" name="Pie Crust" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Pie crust is as easy as ... well, it's really easy at any rate. You don't even need a recipe if you can remember "3, 2, 1; Flour, fat, water, and a pinch of salt -by weight". Uh, yep it's that easy. But of course there's the question of fat. Some folks say shortening or margarine, some folks say &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;. Some folks claim their grandma's crust was flaky because she used lard. Actually, the kind of fat don't matter, in fact, I've tried shortening, margerine, butter, lard and even bacon grease, but I prefer &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; for taste. You can use any fat that's solid at room temperature and get a flaky crust as long as you employ the proper technique. Ah yes, the ever elusive technique. Fortunately, there's really not much to it. First, all the ingredients, tools and work surfaces must be cold. Really cold. You don't want the fat to melt. Second, you want to work the dough as little as possible to avoid activating the gluten (the stuff that makes bread chewy) in the flour protein. </Description>
+  <Prerequisites>
+    <Prerequisite>Two hours before you make the crust, sift 3 cups of flour with salt into a glass or ceramic mixing bowl and place in freezer.</Prerequisite>
+    <Prerequisite>Cut &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; into 1/2 inch cubes.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Ice cold</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Koaher salt</Name>
+      <Quantity units="PINCH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Pie%20Crust_Pie%20Crust2.jpg">Using your hands or a pastry cutter, combine butter and flour until you have clumps about the size of marbles.</Step>
+    <Step image="Pie%20Crust_Pie%20Crust3.jpg">Add water and stir until it just barely sticks together. It will be a shaggy mass (mess).</Step>
+    <Step image="Pie%20Crust_Pie%20Crust4.jpg">Mist your chilled counter top with water and cover with a piece of waxed paper and dust with flour. Plop 1/2 of the dough onto the waxed paper. Dust the dough with flour and place another sheet of waxed paper on top. Roll the dough out with a rolling pin. Peel the top layer of waxed paper away. Yes, some of the dough will stick to the waxed paper. Nevermind that.</Step>
+    <Step image="Pie%20Crust_Pie%20Crust5.jpg">Either place an inverted pie pan over the dough and flip the mess over, or pick up the bottom piece of waxed paper and flip the dough into the pie pan, it doesn't matter, it is going to be messy. Get over it. No, the dough won't be completely sticking together, but that's the point -if it ain't flaky now, it ain't gonna be flaky later. Patch it together as best you can, keep dipping your fingers in flour to keep them from sticking to the dough when you patch and shape the edges. Don't worry, don't panic, once it's in the oven the fat will melt and a homogenous crust will form. However, here's a cheat if you just gotta have a smooth top crust or lattice crust and still be flaky: Knead your top crust half until you get the consistency you want. Divide it into three or four pieces and chill them for about a half an hour. Thinly roll out one piece at a time, dust with flour and stack them together to make one top crust. The individual layers will flake.</Step>
+    <Step image="">Fill the crust, top and bake per pie recipe directions.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

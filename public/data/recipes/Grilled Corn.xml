@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Grilled Corn_GrilledCorn3.jpg" name="Grilled Corn" category="SIDE" cuisine="ALL">
+    <Yield amount="2" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".25" servingsUnit="CUP"/>
+  <Description>Corn blistered on the grill, finished with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat grill on high heat.</Prerequisite>
+    <Prerequisite>Prepare corn cobs.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Corn on cob</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Pork%Rub'&gt;Pork Rub&lt;/a&gt; (optional).</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Grilled%20Corn_GrilledCorn1.jpg">Place corn on hot grill</Step>
+    <Step image="Grilled%20Corn_GrilledCorn2.jpg">Grill until popping and slightly charred.</Step>
+    <Step image="Grilled%20Corn_GrilledCorn3.jpg">Melt butter in sauce pan over low heat, add corn stripped from cob and stir to combine.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add a tablespoon of &lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Pork Rub&lt;/a&gt;, especially if serving with BBQ pork.</Variation>
+  </Variations>
+</Recipe>

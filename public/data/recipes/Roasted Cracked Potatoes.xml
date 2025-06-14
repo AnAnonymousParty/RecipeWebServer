@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roasted Cracked Potatoes_RoastedCrackedPotatoes.jpg" name="Roasted Cracked Potatoes" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="2" units="POUND"/>
+    <Times prep="10" cook="35"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Busted up potatoes roasted with red wine and corriander.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat ovens and large backing sheet to 425°F.</Prerequisite>
+    <Prerequisite>Put coriander in small pan over medium heat, shaking until coriander is lightly toasted and begins to release a pleasant aroma, set aside to cool.</Prerequisite>
+    <Prerequisite>Using a suitably heavy tool (hammer, small 2X4), whack the potatoes in such a way so they become cracked, but otherwise stay whole and retain their shape.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>New small potatoes</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Red, White, Purple, mixed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry Red Wine</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Corriander Seeds</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>See Preparations.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt.</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste,</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley Tops</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For garnish.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chives</Name>
+      <Quantity units="STICK">10</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For Garnish</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Put potatoes in a large bowl. Toss with oil and coriander, season with salt and pepper. </Step>
+    <Step image="">Transfer to baking sheet in oven. Bake until potatoes are tender, maybe 30 minutes. Meanwhile...</Step>
+    <Step image="">Bring wine to a boil in a sauce pan and reduce slightly, maybe 5-10 minutes.</Step>
+    <Step image="">When potatoes are done, transfer to a large serving bowl, toss with wine.</Step>
+    <Step image="">Garnish with parsley sprigs and chive sticks. Serve immediately.  </Step>
+  </Method>
+  <Variations/>
+</Recipe>

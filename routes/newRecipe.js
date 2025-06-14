@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
                             categoryTypes:    enums.CategoryTypes, 
                             cuisineTypes:     enums.CuisineTypes, 
                             preparationTypes: enums.PreparationTypes,
+                            servingSizeTypes: enums.ServingSizeTypes,
                             unitTypes:        enums.UnitTypes          });
 });
 

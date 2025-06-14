@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Mint Cream_MintIcing.jpg" name="Mint Cream" category="DESSERT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="OZ"/>
+  <Description>Light mint cream filling for desserts.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Powdered sugar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mint extract</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green food coloring</Name>
+      <Quantity units="DROP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add the heavy cream to the bowl of a stand mixer and whisk on low speed.</Step>
+    <Step image="">Add mint extract and green food coloring and increase speed.</Step>
+    <Step image="">When the mixture starts to thicken, begin gradually adding the powdered sugar.</Step>
+    <Step image="">Once the sugar is incorporated (scrape the sides of the bowl as necessary) increase the speed and whip until soft peaks form. </Step>
+    <Step image="">Refrigerate for 1 hour.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beurre Monte_BeurreMonte2.jpg" name="Beurre Monte" category="SAUCE" cuisine="ALL">
+    <Yield amount="3" units="TBSP"/>
+    <Times prep="1" cook="5"/>
+  </Title>
+  <Nutrition calories="306" fat="34.5" carbs="0.3" protein=".36" sugar="0" sodium="" fiber="0" servings="" servingsUnit="CUP"/>
+  <Description>Butter 'sauce'.
+
+You can use it to finish sauces á la minute, you baste meats with it, you can mix flavors into it and use it as is, you can poach lobster in it -for all the things on which you'd use whole butter, you can use this.  It's embarrassingly easy to make. </Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or more. Seriously. As much as you wish.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Heat water in a pan.</Step>
+    <Step image="Beurre%20Monte_BeureeMonte.jpg">Whisk butter into the water, a tablespoon at a time.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

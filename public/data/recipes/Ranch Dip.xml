@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ranch Dip_RanchDip.jpg" name="Ranch Dip" category="APPETIZER" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="2" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Tasty dip for vegetables, chicken wings, or anything you want to dip in it.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Ranch%20Seasoning'&gt;Ranch Seasoning&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Ranch%20Seasoning'&gt;Ranch Seasoning&lt;a&gt;</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sour Cream</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix. Serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

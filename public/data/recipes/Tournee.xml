@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tournee_TourneeCut.jpg" name="Tournee" category="TECHNIQUE" cuisine="ALL">
+    <Yield amount="" units="BAG"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>The Tournée cut is a seven sided foot ball shape.</Description>
+  <Prerequisites/>
+  <Ingredients/>
+  <Method/>
+  <Variations/>
+</Recipe>

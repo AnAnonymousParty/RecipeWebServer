@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Whipped Butter_WhippedButter.jpg" name="Whipped Butter" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="POUND"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="3264" fat="368" carbs=".32" protein="3.84" sugar="0" sodium="" fiber="0" servings="" servingsUnit="CUP"/>
+  <Description>Whipping air into butter keeps it spreadable even when chilled.
+
+You can also add aromatic herbs to make a compound butter.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Cut into cubes.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place butter in mixer and run at slow speed until butter consolidates into a mass.</Step>
+    <Step image="">Turn up speed and continue to whip until it's light and fluffy -about 5 minutes</Step>
+    <Step image="">Put in plastic containers or turn onto sheets of waxed paper or plastic wrap, roll up and refrigerate until you can shape into sticks again.</Step>
+  </Method>
+  <Variations>
+    <Variation>While the butter is in the mixer, add 3-4 tblsps extra-virgin olive oil (break out the good stuff) and your favorite selection of chopped herbs (chives, parsley, sage, rosemary and thyme). </Variation>
+  </Variations>
+</Recipe>

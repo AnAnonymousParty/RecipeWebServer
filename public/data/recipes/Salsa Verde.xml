@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Salsa Verde_SalsaVerde.jpg" name="Salsa Verde" category="SAUCE" cuisine="MEXICAN">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="20" cook="0"/>
+  </Title>
+  <Nutrition calories="10" fat="0" carbs="2.5" protein="0" sugar="1" sodium="250" fiber=".7" servings="2" servingsUnit="TBSP"/>
+  <Description>Tomatillos and roasted jalepeno peppers.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat grill to char tomatillos and peppers.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Tomatillos</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Remove outer papery husks.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Jalepeno pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion</Name>
+      <Quantity units="CUP">.67</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cilantro</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lime juice</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Honey</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>If needed, to taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Char tomatillos and jaleeno peppers over a hot grill.</Step>
+    <Step image="">Remove skins from tomatillos and peppers. Remove stems, membranes and seeds from peppers.</Step>
+    <Step image="">Chop tomatillos and peppers.</Step>
+    <Step image="">Combine all ingredients in a bowl.</Step>
+    <Step image="">Adjust seasoning. Refrigerate for at least 2 hours.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

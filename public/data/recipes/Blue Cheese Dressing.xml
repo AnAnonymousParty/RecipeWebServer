@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Blue Cheese Dressing_BlueCheeseDressing.jpg" name="Blue Cheese Dressing" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="10" cook="5"/>
+  </Title>
+  <Nutrition calories="90" fat="9" carbs="1" protein="1" sugar="1" sodium="250" fiber="0" servings="1" servingsUnit="TBSP"/>
+  <Description>Tasty dressing for salads and chicken wings.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Blue Cheese</Name>
+      <Quantity units="OZ">5</Quantity>
+      <Prep>CRUMBLED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Buttermilk</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sour Cream</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Wine Vinegar</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic Powder</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TSP">.125</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To Taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Combine all ingredients.
+Use or refrigerate.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

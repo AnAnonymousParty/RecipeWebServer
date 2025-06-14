@@ -58,6 +58,25 @@
  
  <div class="recipe-line">
   <span class="field-header">
+   Serving Size:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="servings" max="999" min="1" name="servings" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.servings %>">
+   <select id="servingsUnit" name="servingsUnit">
+    <%  
+     Object.keys(enums.ServingSizeTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == recipeData.Recipe.Nutrition[0].$.servingsUnit ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enums.ServingSizeTypes); 
+    %>
+   </select>
+  </span>
+ </div>  
+ 
+ <div class="recipe-line">
+  <span class="field-header">
    Preparation Time:
   </span>
   <span class="field-value">
@@ -116,6 +135,15 @@
   </span>
   <span class="field-value">
    <input data-validation="vNumeric" id="sugar" max="999" min="0" name="sugar" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.sugar %>"> g
+  </span>
+ </div> 
+ 
+  <div class="recipe-line">
+  <span class="field-header">
+   Sodium:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="sodium" max="999" min="0" name="sodium" type="number" value="<%=recipeData.Recipe.Nutrition[0].$.sodium %>"> mg
   </span>
  </div> 
  
@@ -297,10 +325,10 @@
    <table align="center" class="scrolling-table" id="stepsTable" width="720px">
     <thead>
      <tr>
-      <th width="400px">
+      <th width="500px">
        Step
       </th>
-      <th width="100px">
+      <th width="150px">
        Image
       </th>   
       <th colspan="2" width="150px">
@@ -512,6 +540,7 @@
      </textarea>     
     </span>
    </div> 
+   <br>
    <div class="recipe-line">
     <span class="field-header">
      Image (optional):
@@ -664,6 +693,7 @@
      </textarea> 
     </span>
    </div> 
+   <br>
    <div class="recipe-line">
     <span class="field-header">
      Image (optional):

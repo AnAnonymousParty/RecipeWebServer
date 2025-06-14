@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Crab Dip_CrabDip.jpg" name="Crab Dip" category="APPETIZER" cuisine="ALL">
+    <Yield amount="2" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="TBSP"/>
+  <Description>Crabby cheesy dip.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Crab meat</Name>
+      <Quantity units="OZ">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cream Cheese</Name>
+      <Quantity units="PACKAGE">1</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes>8 oz.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot (small)</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green onion tops</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thin as possible.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>No stems.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh black pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cayenne pepper</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt cream cheese in sauce pan with heavy cream.</Step>
+    <Step image="">All all the other ingredients.</Step>
+    <Step image="">Continue heating, stirring until smooth.</Step>
+    <Step image="">Adjust seasoning.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

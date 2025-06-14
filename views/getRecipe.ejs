@@ -11,9 +11,10 @@
   <script src="/javascripts/client/validate.js"></script>
   <title><%= title %></title>
  </head>
+ 
  <body background="/images/veges.jpg" onload="InitPage();">
   <div class="header-section"> 
-   <span class="filters" id="filtersContainer" style="display: inline; line-height: 30px; visibility: visible;">
+   <span class="filters" id="filtersContainer" style="display: none; line-height: 30px; visibility: collapse;">
     Cuisine: 
     <select id="cuisines" name="cuisines" onChange="ApplyFilter();" style="margin: 0px 10px 0px 5px;">
      <% Object.keys(enumUtils.CuisineTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enumUtils.CuisineTypes); %>
@@ -23,14 +24,13 @@
      <% Object.keys(enumUtils.CategoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enumUtils.CategoryTypes); %>
     </select>
    </span>
-   <span id="recipeTitleContainer" style="display: none; visibility: collapse; text-align: center;">
-    <h2 id="recipeTitle">Placeholder</h2>
+   <span id="recipeTitleContainer" style="display: inline; visibility: visible; text-align: center;">
+    <h2 id="recipeTitle"><%=recipeData.Recipe.Title[0].$.name %></h2>
    </span>   
   </div>
   <div class="content-section" id="recipesListContainer">
    <form id="viewRecipeForm"> 
     <input id="recipeName" type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
-    
     <div class="centered">
      <table class="plain-table">
       <tr>

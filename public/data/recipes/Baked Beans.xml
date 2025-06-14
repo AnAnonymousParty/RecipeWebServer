@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Baked Beans_BakedBeans.jpg" name="Baked Beans" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="480" cook="360"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Not Pork-n-Beans with BBQ sauce, but real baked beans.</Description>
+  <Prerequisites>
+    <Prerequisite>Put beans in a colander, rinse under cold water, discard dirt, small stones, discolored beans -anything that ain't a bean. Put beans in a large stock pot with 6 cups cold water and let soak over night.</Prerequisite>
+    <Prerequisite>The next day, preheat oven to 275°F.</Prerequisite>
+    <Prerequisite>Chop bacon into 1/4 slices, fry until browned and mostly crisp. Drain fat.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Dried Great Norther Beans.</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Seriously? Seriously.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yewwlo Onion, large</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomato Paste</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Cento</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Molasses</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown Sugar</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry Mustard</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Some like it hot. If you don't, omit.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Losher/Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Baked%20Beans_bkb2.jpg">Presoak beans.</Step>
+    <Step image="Baked%20Beans_caronion.jpg">Caramelize onions in a heavy skillet in the fat from the bacon.</Step>
+    <Step image="Baked%20Beans_bkb5.jpg">Add the bacon to the onions to reheat it.</Step>
+    <Step image="">Add the beans to a oven safe lidded casserole.</Step>
+    <Step image="">Add 4 cups of water, and stir in all of the other ingredients.</Step>
+    <Step image="Baked%20Beans_bkb7.jpg">Cook in the oven for 6 hours.</Step>
+  </Method>
+  <Variations>
+    <Variation>This can also be made in a crock pot.</Variation>
+  </Variations>
+</Recipe>

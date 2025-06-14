@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="French Dip Squares_FrenchDipSquares.jpg" name="French Dip Squares" category="APPETIZER" cuisine="FRENCH">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="10" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Mini flaky French Dip sandwiches perfect for snacking.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350°F.</Prerequisite>
+    <Prerequisite>Grease a 9X13 inch baking sheet with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Prepared Crescent Rolls</Name>
+      <Quantity units="PACKAGE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>8oz.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Divided.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Deli Roast Beef</Name>
+      <Quantity units="POUND">.5</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lorraine Swiss</Name>
+      <Quantity units="SLICE">9</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="SPRIG">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Leaves removed from stems.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="SPRIG">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Stems removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijin Mustard</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Beef Consommé</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place one unrolled can of crescent rools on prepared baking sheet and pinch together seams. </Step>
+    <Step image="">Bake until edges are slightly golden, about 12 minutes. Remove from oven and set aside. </Step>
+    <Step image="">Build squares: Spread an even layer of mustard onto prepared crescent, leaving a 1/2</Step>
+    <Step image="">Unroll remaining tube of crescent rolls and place on top of onion layer. Press seam into bottom crust to seal all edges. Melt 1 tablespoon butter and brush all over top of crescent dough, then sprinkle with parsley and salt. </Step>
+    <Step image="">Bake until dough is golden and cooked through, about 35 minutes. (If dough is browning too quickly, cover with foil.) </Step>
+    <Step image="">Let cool 15 minutes before slicing into squares. </Step>
+    <Step image="">Serve squares with au jus on the side for dipping. </Step>
+  </Method>
+  <Variations>
+    <Variation>Top meat with caramelized onions, mushrooms</Variation>
+  </Variations>
+</Recipe>

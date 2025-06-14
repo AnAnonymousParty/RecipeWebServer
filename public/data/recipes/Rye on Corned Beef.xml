@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Rye on Corned Beef_RyeCornedBeef.jpg" name="Rye on Corned Beef" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="3" units="POUND"/>
+    <Times prep="10" cook="240"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="6" servingsUnit="OZ"/>
+  <Description>My first idea for this was as a way of cooking corned beef other than stewing it in a pot, so I tried slow cooking it in a charcoal smoker.  It turned out pretty good, but it needed ... something.  I experimented with several glazes until I hit upon a mustard-caraway glaze.  </Description>
+  <Prerequisites>
+    <Prerequisite>Day before: Soak Corned beef in several quarts of water to draw out some of the salt.</Prerequisite>
+    <Prerequisite>Set up smoker.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Corned Beef flat</Name>
+      <Quantity units="POUND">3</Quantity>
+      <Prep>SOAKED</Prep>
+      <Notes>See Prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijon mustard</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Caraway seeds</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CRACKED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Rye%20on%20Corned%20Beef_CornedBeef1.jpg">Pat corned beef dry.</Step>
+    <Step image="Rye%20on%20Corned%20Beef_CornedBeef2.jpg">Turn brisket fat side up and with a sharp knife, cut diagonal slices about 1/4</Step>
+    <Step image="Rye%20on%20Corned%20Beef_CornedBeef5.jpg">Using a brush, coat the top surface of the brisket with the mustard glaze.  Sprinkle more caraway seeds over the brisket and put it in the smoker on a grate or rack over the water pan. </Step>
+    <Step image="">Put hickory chips on the coals. </Step>
+    <Step image="Rye%20on%20Corned%20Beef_CornedBeef5.jpg">Check the water pan about every 15 minutes or so for the first hour to get a feel for how rapidly it's boiling off.  Don't let the water pan go dry!  Add more hickory chips every half hour.  Add more charcoal when you think you need it to maintain the boiling rate in the water pan.  Don't let the water pan go dry!</Step>
+    <Step image="">Check the meat after a couple of hours, and re-glaze it.  The brisket should be ready in about 4 hours, the original cuts you made in the surface will have widened to about 1/4</Step>
+    <Step image="">Glaze once more, let cook for about 10 more minutes -the glaze should be thick and gooey. </Step>
+    <Step image="">Remove from the smoker and let rest 20 minutes.  Slice (perpendicular to the grain) and serve. </Step>
+  </Method>
+  <Variations>
+    <Variation>Make the &lt;a href='/GetRecipe?recipeName=Non-Reuben%20Corned%20Beef%20Sandwich'&gt;Best Corned Beef Sandwich&lt;/a&gt;.</Variation>
+  </Variations>
+</Recipe>

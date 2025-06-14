@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomatoes_Tomatoes.jpg" name="Tomatoes" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="1" cook="1"/>
+  </Title>
+  <Nutrition calories="18" fat=".2" carbs="3.9" protein=".9" sugar="2.6" sodium="0" fiber="1.2" servings="3.5" servingsUnit="OZ"/>
+  <Description>Tomatoes. 
+
+What are they? Nobody knows.
+
+Are they a fruit? Yes, botanically.
+Are they a vegetable? Yes, commercially.
+
+Are they poisonous? The fruit, no. The plant, slightly.
+
+Are they good to eat? When they are in season and fresh, they can be exquisite. Out of season, strip-mined in Texas and processed through some DuPont facility, they are insipid.
+
+What can you do with them? &lt;i&gt;What can't you do with them&lt;/i&gt;? 
+
+You &lt;i&gt;can&lt;/i&gt; peel them, as follows...</Description>
+  <Prerequisites>
+    <Prerequisite>Large pot of boiling water.</Prerequisite>
+    <Prerequisite>Sink full of chilled water.</Prerequisite>
+  </Prerequisites>
+  <Ingredients/>
+  <Method>
+    <Step image="">Put tomatoes in boiling water for 20 - 30 seconds.</Step>
+    <Step image="">Remove tomatoes from pot and into chilled water.</Step>
+    <Step image="">Slip skins from tomatoes, remove core.</Step>
+    <Step image="">Use or refrigerate the tomatoes.
+
+Use the skins to make &lt;a href='/GetRecipe?recipeName=Tomato%20Confetti'&gt;Tomato Confetti&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=Tomato%20Powder'&gt;Tomato Powder&lt;/a&gt;</Step>
+  </Method>
+  <Variations>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato Concassé&lt;/a&gt;.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Tomato%20Confit'&gt;Tomato Confit&lt;/a&gt;.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Tomato%20Coulis'&gt;Tomato Coulis&lt;/a&gt;.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Tomato%20Confetti'&gt;Tomato Confetti&lt;/a&gt;.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Tomato%20Powder'&gt;Tomato Powder&lt;/a&gt;</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Lori%27s%20Favorite%20Salsa'&gt;Lori's Favorite Salsa&lt;/a&gt;.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Pico%20de%20Gallo'&gt;Pico de Gallo&lt;/a&gt;.</Variation>
+  </Variations>
+</Recipe>

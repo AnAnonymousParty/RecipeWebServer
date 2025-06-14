@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Baked Fish with Crab Stuffing_BakeFishCrabStuffing.jpg" name="Baked Fish with Crab Stuffing" category="ENTREE_FISH" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="330" fat="11" carbs="14" protein="43" sugar="2" sodium="900" fiber="1" servings="1" servingsUnit="ITEM"/>
+  <Description>Flaky white fish baked with a crab stuffing.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Crab%20Stuffing'&gt;Crab Stuffing&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Beurre%20Blanc'&gt;Beurre Blanc&lt;/a&gt; with lemon juice and hold.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;Clarified butter&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 325F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>White fish filets.</Name>
+      <Quantity units="PIECE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Flounder, grouper, etc, per guest/serving.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Crab%20Stuffing'&gt;Crab Stuffing&lt;/a&gt;</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Per serving</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Beurre%20Blanc'&gt;Beurre Blanc&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;Clarified butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Old Bay seasoning</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Per serving</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Lemon zest</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh chives</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes>For garnish</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tiny cooked peeled shrimp</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes>For garnish</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Season fish filets with salt and pepper, sprinkle with Old Bay.</Step>
+    <Step image="">Brush the bottom of an oven safe dish with &lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;clarified butter&lt;/a&gt;.</Step>
+    <Step image="Baked%20Fish%20with%20Crab%20Stuffing_BakeFishCrabStuffing1.jpg">Lay a piece of fish on the dish. Brush top of filet with &lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;clarified butter&lt;/a&gt;.</Step>
+    <Step image="Baked%20Fish%20with%20Crab%20Stuffing_BakeFishCrabStuffing2.jpg"> Place a mound of &lt;a href='/GetRecipe?recipeName=Crab%20Stuffing'&gt;crab stuffing&lt;/a&gt; on the fish filet.</Step>
+    <Step image="">Place another fish filet atop the mound of stuffing. Try to arrange the pieces to contain the stuffing as much as possible, you could probably roll the stuffing into the filets if you are so in your mind to.</Step>
+    <Step image="">Brush the top filet with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Step>
+    <Step image="">Bake at 325 degrees for 20 - 30 minutes, of until the fish is just done.</Step>
+    <Step image="">Check the fish at around 10 minutes, baste with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;
+ and check on the progress of the cooking.</Step>
+    <Step image="">Transfer a stuffed filet to a (heated) plate. Scatter some cooked tiny shrimp over the filet. Drizzle over with &lt;a href='/GetRecipe?recipeName=Beurre%20Blanc'&gt;beurre blanc&lt;/a&gt;. Sprinkle with chopped chive and some fresh ground pepper. Top with lemon zest and serve immediately.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

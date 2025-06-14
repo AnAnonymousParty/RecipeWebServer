@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Big Pot Blanching_Blanch.jpg" name="Big Pot Blanching" category="TECHNIQUE" cuisine="ALL">
+    <Yield amount="" units="BAG"/>
+    <Times prep="1" cook="2"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>Big Pot Blanching involves partially cooking an item in a relatively large amount of boiling water for a few minutes before placing the item in iced water to halt the cooking process.
+
+See &lt;a href='https://en.wikipedia.org/wiki/Blanching_(cooking)'&gt;Blanching&lt;/a&gt; (Wikipedia) or &lt;a href='https://www.masterclass.com/classes/thomas-keller-teaches-cooking-techniques/chapters/big-pot-blanching-asparagus'&gt;Thomas Keller&lt;/a&gt;.</Description>
+  <Prerequisites/>
+  <Ingredients/>
+  <Method/>
+  <Variations/>
+</Recipe>

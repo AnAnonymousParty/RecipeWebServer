@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Aioli_Ailoi.jpg" name="Aioli" category="SAUCE" cuisine="ITALIAN">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="150" fat="16" carbs="2" protein="0" sugar="0" sodium="20" fiber="0" servings="1" servingsUnit="TBSP"/>
+  <Description>Garlicy mayonaise.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mayonnaise'&gt;Mayonnaise&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Matonnaise'&gt;Mayonnaise&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix mayonnaise, garlic, lemon juice, salt, and pepper in a bowl. </Step>
+    <Step image="">Cover and refrigerate for at least 30 minutes before serving. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Brown Sauce_BrownSauce.jpg" name="Brown Sauce" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="GALLON"/>
+    <Times prep="10" cook="60"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Sauce Espagnole.
+
+This is one of the five famous &lt;a href='https://en.wikipedia.org/wiki/French_mother_sauces'&gt;mother sauces&lt;/a&gt;, and is basically a brown beef stock thickened with starch. This recipe make about a gallon, which is a lot less than you'll find you'll need -you'll be surprised just how often you'll end up using it as a base for a variety of other sauces. It freezes really well. Here's a tip: Take an empty plastic ice tray, fill it with water then pour the water into a measuring cup to measure it . Use a permanent marker to mark how much liquid the ice tray holds (probably 2 cups). Freeze the sauce in the ice tray and put the frozen sauce cubes in ziplock bags, marking how many cups is in each bag. Easy to store, easy to measure, easy to use, keeps for months. 
+
+By the way, by itself, this stuff really doesn't have what you'd call a great flavor. About the best way to describe it is that it lives up to it's name. What's amazing is what happens when you star mixing other things into it . . . which is why it is not seasoned with salt and pepper, it is likely that whatever sauce it is finished into will be greatly reduced -seasoning now would become overwhelming later.
+ 
+</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;brown beef stock&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=Brown%20Vealf%20Stock'&gt;brown veal stock&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;mirepox&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make a &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;bouquet garni&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Beef%20Stock'&gt;Brown beef stock&lt;/a&gt;</Name>
+      <Quantity units="GALLON">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or &lt;a href='/GetRecipe?recipeName=Brown%20Veal%20Stock'&gt;brown veal stock&lt;/a&gt;</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Roux'&gt;Brown roux&lt;/a&gt;</Name>
+      <Quantity units="OZ">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepox&lt;/a&gt;</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Sachet%20dEspices'&gt;Sachet d`Éspices&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomato paste</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;Clarified butteri&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt &lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;clarified butter&lt;/a&gt; in a large stock pot.</Step>
+    <Step image="">Add &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;mirepox&lt;/a&gt; and cook until browned.</Step>
+    <Step image="">Add tomato paste and brown stock. Bring to a simmer.</Step>
+    <Step image="">Whisk in brown roux.</Step>
+    <Step image="">When the mixture begins to simmer again, add the sachet.</Step>
+    <Step image="">Simmer for at least an hour, taking care to skim any scum (coagulated proteins from the stock (partly) and flour in the roux (mainly) that forms on the surface of the simmering sauce. It sometimes helps to set the pot partly off the burner, the natural convection current will cause all of the muck to accumulate on one side of the pot. In any case you need to reduce it to about a gallon of remaining liquid.</Step>
+    <Step image="">Strain through cheesecloth or a chinois, use or chill and freeze.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

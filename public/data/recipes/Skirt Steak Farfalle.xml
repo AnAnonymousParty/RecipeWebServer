@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Skirt Steak Farfalle_20250603_175808.jpg" name="Skirt Steak Farfalle" category="ENTREE_BEEF" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="30" cook="15"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Grilled Skirt Steak over a bed of bowtie pasta and spinach.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Skirt Steak</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dried Farfalle pasta</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>1 #</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Spinach</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Montreal%20Steak%20Seasoning'&gt;Montreal Steak Seasoning&lt;/a&gt;.</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame oil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parmesan Reggiano</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Sauce'&gt;Brown Sauce&lt;/a&gt;.</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="SPRIG">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="SPRIG">10</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Stems removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Rub skirt steak with 1 tbsp sesame oil.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_164004.jpg">Sprinkle steak liberally with steak seasoning and MSG.</Step>
+    <Step image="">Roll steak up and refrigerate for 2-4 hours.</Step>
+    <Step image="">Remove steak from refrigerator, unroll and allow to come to room temperature. Meanwhile ...</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_164344.jpg">In a skillet, sweat the shallots in a little olive oil.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_164606.jpg">Add brown sauce, garlic, and half of the rosemary.Simmer for 10-20 minutes, until slightly reduced, skimming any foam.</Step>
+    <Step image="">Strain the sauce, return to heat to keep warm.</Step>
+    <Step image="">Preheat grill to high heat.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_171754.jpg">Oil the grill and add the steak.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_172508.jpg">Grill the steak to medium rare.</Step>
+    <Step image="">Remove steak and allow to rest in a warmed oven. Meanwhile ...</Step>
+    <Step image="">Bring a large pot of water to a boil.</Step>
+    <Step image="">Add salt and pasta to boiling water, stir and cook to al dente.</Step>
+    <Step image="">Drain the pasta, reserving some of the pasta water.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_174948.jpg">Return paste to pot. Combine with the spinach, sauce, 3/4 of the parsley and the remaining rosemary.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_175224.jpg">Cut the steak, across the grain, into strips.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_175525.jpg">Add any juices from the steak to the pot with the pasta.</Step>
+    <Step image="Skirt%20Steak%20Farfalle_20250603_175808.jpg">Plate a serving of pasta. Top with a serving of steak. Garnish with the grated cheese and some parsley.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

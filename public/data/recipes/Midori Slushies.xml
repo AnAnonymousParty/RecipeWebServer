@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Midori Slushies_MidoriSlush.jpg" name="Midori Slushies" category="BEVERAGE" cuisine="ALL">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Honeydew melon and Midori liqueur.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Hondeydew Melon</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>PEELEDSEEDED</Prep>
+      <Notes>Biggest, ripest on you can find.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>7-Up</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Rum</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Midiori Melon Liqueur</Name>
+      <Quantity units="BOTTLE">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Cut melon into 1/2 inch slices.</Step>
+    <Step image="">Using a blender, puree the melon.  The puree might be quite foamy, but it's okay, the foam will go away during the freezing process -in fact, the foam probably helps keep the frozen slush from becoming too solid.</Step>
+    <Step image="">Add the 7-UP, rum, and the Midori.  Stir well and place in the freezer. </Step>
+    <Step image="">About every 2 hours or so, run a whisk or large fork through the mixture to whip air into it, distribute the flavors and alcohol.  This is kind of like making a freezer sorbet.
+ In about 8 hours the slush will be ready to serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

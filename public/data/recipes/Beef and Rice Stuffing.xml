@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef and Rice Stuffing_BeefRiceStuffing.jpg" name="Beef and Rice Stuffing" category="ELEMENT" cuisine="AMERICAN">
+    <Yield amount="1" units="POUND"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Herby beef and rice stuffing for cabbage rolls, stuffed peppers, dolmades, etc.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=White%20Rice'&gt;White Rice&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Seasoned Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes>Seasoned with salt, pepper and MSG.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=White%20Rice'&gt;White Rice&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh thyme leaves</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary leaves</Name>
+      <Quantity units="SPRIG">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Sweat onions and shallots in butter. Add garlic and cook another minute.</Step>
+    <Step image="">Combine with all other ingredients.</Step>
+    <Step image="">Use or refrigerate/freeze.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

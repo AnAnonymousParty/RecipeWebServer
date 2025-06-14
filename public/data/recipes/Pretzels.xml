@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pretzels_Pretzels.jpg" name="Pretzels" category="SNACK" cuisine="GERMAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="15" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Warm, chewy soft pretzels.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 450 degrees.</Prerequisite>
+    <Prerequisite>Measure water, by cups, into a large skillet or sauté pan until it is at least 2</Prerequisite>
+    <Prerequisite>Dissolve yeast in 1/8 cup warm water.  </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">4.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yeast</Name>
+      <Quantity units="TSP">2.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>See prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking soda</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>1 tblsp per cup of boiling water, see prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown sugar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Warm water</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Coarse salt</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a large bowl, mix water, brown sugar and the prepared yeast.</Step>
+    <Step image="Pretzels_Pretzels1.JPG">Stir in flour gradually, a cup at a time.  You have enough flour when the dough no longer sticks to the bowl.</Step>
+    <Step image="Pretzels_Pretzels2.JPG">Turn dough out onto a floured surface and knead lightly, just long enough to produce a smooth ball of dough.</Step>
+    <Step image="Pretzels_Pretzels3.JPG">To form pretzels, pinch off a piece of dough about the size of a golf ball.  Roll it between your hands into a cigar shape.  Keep rolling it into a long (8-10 inch) thin tube, either with your hands or on a counter top.  You can either leave them straight or twist them into the typical pretzel shape (twist the dough into a loop using a single twist, then fold the loop over the twist and drape it over the loose ends -you know, a pretzel), or make it any shape you like. </Step>
+    <Step image="Pretzels_Pretzels4.JPG">Place the pretzels onto a non-stick baking sheet.  When the sheet is full, remove them to the boiling water for 30 seconds.</Step>
+    <Step image="">Transfer them back to the baking sheet and sprinkle them with as much salt as you like. </Step>
+    <Step image="">Bake until golden brown, approximately 15 minutes.  Best served warm. </Step>
+  </Method>
+  <Variations>
+    <Variation>Sprinkle with sesame seeds before baking.</Variation>
+    <Variation>Sprinkle with Everything Bagel mix before baking.</Variation>
+  </Variations>
+</Recipe>

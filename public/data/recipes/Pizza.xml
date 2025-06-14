@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pizza_Pizza.jpg" name="Pizza" category="ENTREE" cuisine="ITALIAN">
+    <Yield amount="8" units="SLICE"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Mmmm ... pizza.</Description>
+  <Prerequisites/>
+  <Ingredients/>
+  <Method/>
+  <Variations/>
+</Recipe>

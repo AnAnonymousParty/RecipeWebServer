@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Coulis_TomatoCoulis.jpg" name="Tomato Coulis" category="SAUCE" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="5"/>
+  </Title>
+  <Nutrition calories="100" fat="7.5" carbs="9" protein="2" sugar="3" sodium="20" fiber="2.7" servings="1" servingsUnit="CUP"/>
+  <Description>Uncooked tomato sauce.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt;</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>See &lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt; for peeling instructions.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Balsamic vinegar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Quarter peeled tomatoes, discarding seeds and pulp and then chop flesh into 1</Step>
+    <Step image="">Roll the pieces up in a cloth towel and wring the towel to remove most of the liquid from the tomatoes.</Step>
+    <Step image="">Blend tomatoes along with all of the other ingredients.</Step>
+    <Step image="">Strain through a &lt;a href='https://en.wikipedia.org/wiki/Chinois'&gt;chinois&lt;/a&gt; and refrigerate or use</Step>
+  </Method>
+  <Variations/>
+</Recipe>

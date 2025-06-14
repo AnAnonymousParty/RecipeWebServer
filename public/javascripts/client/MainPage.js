@@ -230,12 +230,14 @@ function AddStep() {
  
  cell = row.insertCell(-1);
  cell.colspan         = "2";
- cell.style.maxWidth  = "90px"; 
- cell.style.minWidth  = "90px"; 
+ cell.style.maxWidth  = "150px"; 
+ cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right"; 
- cell.innerHTML = "<button onclick=\"DeleteStep(" + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                + "<button onclick=\"EditStep("   + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>";
- 
+ cell.innerHTML = "<button onclick=\"DeleteStep("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
+                + "<button onclick=\"EditStep("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
+                + "<button onclick=\"MoveStepUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
+                + "<button onclick=\"MoveStepDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+
  var btnStyle = document.getElementById("delAllStepsBtn").style;
  
  btnStyle.display    = "inline";
@@ -820,6 +822,8 @@ function HandleAddStepBtnClkd() {
  
  HideElement("stepAddImage");
  
+ document.getElementById("image2Upload").value = "";
+ 
  ToggleVisibility("addStepPopup");
  
  document.getElementById('step2Add').focus();
@@ -946,6 +950,7 @@ function HideRecipeExistsWarningPopup() {
 function InitPage() {
  if (0 == document.getElementById("recipesListContainer").children.length) {
   document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+  
   HideElement("DeleteAllRecipesBtn");
  } else {
    UnHideElement("DeleteAllRecipesBtn", "inline");
@@ -1350,8 +1355,8 @@ function SaveStep() {
  var rowNdx = document.getElementById("stepRowId").value;
  var tbody  = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
 
- tbody.rows[rowNdx].cells[0].innerHTML = document.getElementById("step2Edit").value 
-                                       + '<input name="step" type="hidden" value="' + document.getElementById("step2Edit").value + '">';
+ tbody.rows[rowNdx].cells[0].innerHTML = step
+                                       + '<input name="step" type="hidden" value="' + step + '">';
  
  var imgUri  = document.getElementById("image2Edit").src;
  var imgName = imgUri.substring(imgUri.lastIndexOf("/") + 1, imgUri.length);
@@ -1413,6 +1418,8 @@ function ShowAddRecipePopup() {
 }
 
 function ShowFileUploadForm() {
+ document.getElementById("image2Upload").value = "";
+ 
  ToggleVisibility("response");
  ToggleVisibility("fileUploadForm");
 }

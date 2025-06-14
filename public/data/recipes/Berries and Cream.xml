@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Berries and Cream_BerriesAndCream.jpg" name="Berries and Cream" category="DESSERT" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Blueberry coulis and fresh blue berries over angel food cake, topped with fresh whipped cream.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Whipped%20Cream'&gt;Whipped Cream&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Fresh bluberries</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cinnamon</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Arrowroot powder</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Can substitute corn starch.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh mint</Name>
+      <Quantity units="SPRIG">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For garnish</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh &lt;a href='/GetRecipe?recipeName=Whipped%20Cream'&gt;Whipped Cream&lt;/a&gt;.</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Angel food cake</Name>
+      <Quantity units="SLICE">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Berries%20and%20Cream_20250602_125516.jpg">Puree about half of the blueberries and add to a sauce pan with the sugar, cinnamon and arrow root</Step>
+    <Step image="Berries%20and%20Cream_20250602_130723.jpg">Heat the puree over medium heat, stirring, until mixture begins to bubble, then set aside to cool.</Step>
+    <Step image="">Add some of the blueberry coulis to a plate. Arrange slices of angel food cake on top of the coulis. Drizzle more of the coulis over the cake. Top with a dollop of whipped cream. </Step>
+    <Step image="">Garnish with fresh whole blue berries and a sprig of mint.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Torte_ChocolateTorte.jpg" name="Chocolate Torte" category="DESSERT" cuisine="FRENCH">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>A &lt;a href='https://en.wikipedia.org/wiki/Torte'&gt;torte&lt;/a&gt; is a cake made from mealed nuts, instead of flour.
+&lt;br&gt;&lt;br&gt;
+This can be a challenging recipe, as you can't tell by the usual means when the cake is fully baked, so an accurate oven temperature is important and baking to the required time. If you are using a convection oven that doesn't automatically auto-adjust, reduce the baking temperature by 25 degrees.
+&lt;br&gt;&lt;br&gt;
+For best results, use the freshest eggs you can get and a stand mixer is a must. </Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 400F.</Prerequisite>
+    <Prerequisite>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt; and flour an 8</Prerequisite>
+    <Prerequisite>Set pan of water to boil.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Chocolate%20Ganache'&gt;Chocolate Ganache&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Nuts</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>You choose: Pecans, walnuts, almonds, pistachios.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="OZ">5</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Unsalted.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg yolks</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg whites</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>The fresher, the better.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chocolate%20Ganache'&gt;Chocolate Ganache&lt;/a&gt; </Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Using a mixer, cream &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and sugar at low speed for a minute, then at high until light and creamy.</Step>
+    <Step image="">Scrape down bowl and beater and resume mixing.</Step>
+    <Step image="">To the &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and sugar mixture add in egg yolks, one at a time.</Step>
+    <Step image="">Scrape down bowl and beater and resume mixing to achieve a satin consistency.</Step>
+    <Step image="">Transfer mixture to another bowl and clean mixing bowl thoroughly.</Step>
+    <Step image="">Fold nuts and chocolate into the sugar, &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and egg mixture with a spatula, working the mixture as little as possible.</Step>
+    <Step image="">Using a wire whisk attachment on the stand mixer, Whip egg whites until light and stiff.</Step>
+    <Step image="">Gently fold 1/3 of egg whites into first mixture to make it easier to work.</Step>
+    <Step image="">Gently fold in remaining egg whites, again working the mixture as little as possible.</Step>
+    <Step image="">Pour batter into cake pan.</Step>
+    <Step image="">Set cake pan in a shallow roasting pan (or oven safe skillet) then add boiling water to the roasting pan until it reaches the halfway up the cake pan.</Step>
+    <Step image="">Bake at 400 degrees for 45 - 50 minutes, until top of cake is firm to the touch.</Step>
+    <Step image="">Remove from oven, allow to cool, in the pan, for 15 minutes.</Step>
+    <Step image="">Turn out onto a plate, cover and chill.</Step>
+    <Step image="">Cover with &lt;a href='/GetRecipe?recipeName=Chocolate%20Ganache'&gt;Chocolate Ganache&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

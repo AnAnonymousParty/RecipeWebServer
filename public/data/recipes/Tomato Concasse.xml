@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Concasse_Concasse.jpg" name="Tomato Concasse" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="40" fat=".45" carbs="9" protein="2" sugar="2.3" sodium="0" fiber="2.7" servings="1" servingsUnit="CUP"/>
+  <Description>A.K.A. chopped tomatoes.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Tomatoes</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>See &lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt; for peeling instructions.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Tomato%20Concasse_Concasse2.jpg">Remove cores and seeds/pulp from tomatoes.</Step>
+    <Step image="Tomato%20Concasse_Concasse.jpg">Chop tomatoes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

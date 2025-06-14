@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Gratin_Gratin.jpg" name="Gratin" category="TECHNIQUE" cuisine="FRENCH">
+    <Yield amount="" units="BAG"/>
+    <Times prep="1" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>Gratin is a culinary technique in which a dish is topped with a browned crust, often using breadcrumbs, grated cheese, egg or cheese. The term may be applied to any dish made using this method such as Potatoes au gratin. Gratin is usually prepared in a shallow dish of some kind. A gratin is baked or cooked under an overhead grill or broiler to form a golden crust on top and is often served in its baking dish.
+
+A gratin dish is a shallow oven-proof container that is commonly used to prepare gratins and similar dishes. </Description>
+  <Prerequisites/>
+  <Ingredients/>
+  <Method/>
+  <Variations/>
+</Recipe>

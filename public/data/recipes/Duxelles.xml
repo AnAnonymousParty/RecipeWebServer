@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Duxelles_Duxelles.jpg" name="Duxelles" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="40" carbs="1" protein="1" sugar="1" sodium="75" fiber="0" servings="3" servingsUnit="OZ"/>
+  <Description>A French cuisine term that refers to a mince of mushrooms, onions, herbs (such as thyme or parsley), and black pepper, sautéed in butter and reduced to a paste</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Mushrooms, button or portobello/crimini</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes>Cleaned</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion, yellow</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Nutneg, whole</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Saute onions and shallots in &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and olive oil in a skillet.</Step>
+    <Step image="">Place mushrooms in clean cloth towel, roll it up and wring the excess moisture from the mushrooms. </Step>
+    <Step image="">Add mushrooms to pan, add nutmeg and continue cooking until no moisture remains.</Step>
+    <Step image="">Use, refrigerate or freeze.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

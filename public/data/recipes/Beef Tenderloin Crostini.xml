@@ -4,7 +4,7 @@
     <Yield amount="12" units="SERVING"/>
     <Times prep="37" cook="42"/>
   </Title>
-  <Nutrition calories="100" fat="35" carbs="15" sugar="1" fiber="2"/>
+  <Nutrition calories="100" fat="35" carbs="15" protein="5" sugar="1" fiber="2"/>
   <Description>Tender beef tenderloin on toasted baguette rounds with garlic mayo and arugula.</Description>
   <Prerequisites>
     <Prerequisite>Pre-heat over to 400. </Prerequisite>

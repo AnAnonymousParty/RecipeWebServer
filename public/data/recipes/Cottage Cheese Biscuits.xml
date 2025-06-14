@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cottage Cheese Biscuits_CottageCheeseBiscuits.jpg" name="Cottage Cheese Biscuits" category="BAKEDGOOD" cuisine="AMERICAN">
+    <Yield amount="10" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Fluffy, flaky, easy to make biscuits.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 425F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP flour</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>SIFT</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking powder</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cayenne pepper</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cottage cheese</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Evaporated milk</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a bowl, combine flour, baking powder, salt, cayenne pepper and celery seed.</Step>
+    <Step image="">Cut butter into dry ingredients with a pastry blender until the mixture looks like coarse cornmeal.</Step>
+    <Step image="">Add the cottage cheese and milk. Mix with a fork or wooden spoon. </Step>
+    <Step image="">Add the cottage cheese and milk. Mix with a fork or wooden spoon.&lt;br&gt;Have at least 1/4 cup of flour in a small pile on the side of your board.&lt;br&gt;&lt;br&gt;
+The dough is rather sticky right after mixing, and you'll need to add more flour while kneading and folding the dough.
+Add extra flour, as needed, a little bit at a time, until the dough just stops being sticky. </Step>
+    <Step image="">Roll dough about 1/2-inch thick and cut into biscuits. </Step>
+    <Step image="">Bake for 12-15 minutes until brown. </Step>
+    <Step image="">Cool for at least 5 minutes, then serve hot, warm or at room temperature. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

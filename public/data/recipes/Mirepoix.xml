@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Mirepoix_Mirepoix.jpg" name="Mirepoix" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="15"/>
+  </Title>
+  <Nutrition calories="40" fat="20" carbs="8" protein="1" sugar="4" sodium="60" fiber="1" servings="1" servingsUnit="CUP"/>
+  <Description>This is a fancy (a.k.a. French) word for cooked root vegetables.</Description>
+  <Prerequisites>
+    <Prerequisite>Gather vegetables, clean and peel.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Carrots</Name>
+      <Quantity units="CUP">1.3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion</Name>
+      <Quantity units="CUP">1.3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery</Name>
+      <Quantity units="CUP">1.3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Mirepoix_Mirepoix2.jpg">Melt butter in a pan and add ingredients.</Step>
+    <Step image="Mirepoix_Mirepoix3.jpg">Cook until vegetables have softened.</Step>
+    <Step image="">Use, refrigerate or freeze.</Step>
+  </Method>
+  <Variations>
+    <Variation>Matignon: Finely dice or mince the vegetables before cooking.</Variation>
+    <Variation>Cajun Trinity: Onion, green bell pepper and celery.</Variation>
+    <Variation>Soffritto (italian): Matignon, browned.</Variation>
+    <Variation>Pinçage: Mirepoix with tomato paste added.</Variation>
+    <Variation>Sofrito (spanish): &lt;a href='/GetRecipe?recipeName=tomatoes'&gt;Tomatoes&lt;/a&gt;, onions, garlic, and bell peppers,</Variation>
+  </Variations>
+</Recipe>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Croutons_Croutons.jpg" name="Croutons" category="ELEMENT" cuisine="ALL">
+    <Yield amount="6" units="CUP"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="290" fat="14" carbs="29" protein="9" sugar="4" sodium="400" fiber="4" servings="1" servingsUnit="CUP"/>
+  <Description>Crispy crunchy toasted bits of seasoned bread.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350°F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Stale Bread</Name>
+      <Quantity units="CUP">6</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fat</Name>
+      <Quantity units="TBSP">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Bacon fat, Olive Oil, &lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;, etc. in any combination.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Koser/Sea Salt</Name>
+      <Quantity units="TSP">.75</Quantity>
+      <Prep>POWDERED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.75</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic Powder</Name>
+      <Quantity units="TSP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion powder</Name>
+      <Quantity units="TSP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a large bowl, toss cubed bread with melted fat until evenly coated. Add in salt, pepper, garlic powder, onion powder, and Parmesan, and toss to combine until evenly distributed. Divide seasoned bread between two large baking sheets.</Step>
+    <Step image="">Bake until golden and crispy, flipping halfway through, about 15 minutes total.</Step>
+    <Step image="">Use, or store in a lidded container.</Step>
+  </Method>
+  <Variations>
+    <Variation>Talanya's Croutons: Deep fry the break chunks before tossing with the herbs and seasonings.</Variation>
+    <Variation>Try different blends of herbs.</Variation>
+  </Variations>
+</Recipe>

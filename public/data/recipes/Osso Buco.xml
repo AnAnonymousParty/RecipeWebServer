@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Osso Buco_OssoBuco.jpg" name="Osso Buco" category="ENTREE_BEEF" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="15" cook="240"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>A.k.a. Beef Shank Braised in Onions and Red Wine.
+
+The 'shank' is the muscular portion of the legs just above the knees. Since these are some of the more heavily used muscles, they tend to be some of the tastier cuts of beef; however, they are also some of the tougher cuts and so a long, slow cooking method is called for . . . and braising is just the thing. </Description>
+  <Prerequisites>
+    <Prerequisite>About &lt;a href='/GetRecipe?recipeName=Braising'&gt;Braising&lt;/a&gt;...</Prerequisite>
+    <Prerequisite>Reduce stock by 1/2.</Prerequisite>
+    <Prerequisite>Marinate shanks overnight in wine.</Prerequisite>
+    <Prerequisite>Clarify the marinade after use by slowly bringing it to a simmer. As it comes to simmer, all the blood and dissolved meat proteins will coagulate and rise to the surface where they can be skimmed off, or you can strain it through a chinois or paper towel.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Beef Shanks w/bone</Name>
+      <Quantity units="SLICE">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>1-1/2 inch thick.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For browning the meat.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed for dredging.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry Red Wine</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>See prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onions</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Rosemary</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="SPRIG">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Stems discarded.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Bay Leaves</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>CRUSHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Lightly season the meat with salt and pepper and let stand to come to room temperature.</Step>
+    <Step image="Osso%20Buso_bbs1.jpg">Sauté onions in olive oil until quite brown and caramelized, set aside.</Step>
+    <Step image="Osso%20Buso_bbs3.jpg">Melt bacon grease in a skillet and place it on high heat.  Dredge the beef shanks in flour and shake off the excess. You are going for a very light dusting of flour, not a breaded coating. As the fat reaches its smoke point, lay the beef shanks in and start browning them.  The idea is to get them well browned (caramelized) on all surfaces, so you will have to move them around, press them into the oil, stand them on their edges.  (yes, it's hard to brown curved bony surfaces, but remember:  browning = flavor and more browning = more flavor)  Oh yeah, this can be kind of messy, oil popping and splattering everywhere, just so you know . . . </Step>
+    <Step image="">Transfer the beef shanks to a plate to hold.</Step>
+    <Step image="">Discard all the oil from the searing pan, and the deglaze the pan with the red wine marinade and allow the residual heat in the pan to reduce it.</Step>
+    <Step image="Osso%20Buso_bbs5.jpg"> Put the onions in the bottom of the pan, then lay in the shanks.</Step>
+    <Step image="Osso%20Buso_bbs6.jpg">e it. Put the onions in the bottom of the pan, then lay in the shanks. Add stock, a little at a time, until the meat is not quite covered.  Add bay leaves, garlic and one sprig of rosemary, season with some additional pepper.</Step>
+    <Step image="">Cover the pan and put it to simmer (or in the oven at about 275) for four hours.  Check the pan occasionally to ensure the liquid never boils dry, add more as necessary.  The cooking should be a slow simmer, not a boil. </Step>
+    <Step image="">Remove the pan from the heat, remove and discard the bones (your dog will love you) and transfer shanks (carefully, as they will be falling apart), to a plate and cover to keep warm. </Step>
+    <Step image="Osso%20Buso_bbs9.jpg">Strain the cooking liquid through a fine mesh chinois and then thoroughly degrease it.  Strain the liquid a final time through a paper towel lined chinois into a sauce pan.  Set the liquid to boil; but place the pan about 1/2 - 3/4 off the burner.  You are going to reduce it to a glaze.  Something like a cup or more of liquid down to just a few tablespoons.   Keep an eye on it as it boils, you don't want to boil the pot dry and you'll also want to skim off any foam and skin that forms on the surface (placing the pan only partly on the burner makes this easier by setting up a natural convection current which will push that 'stuff' to one side of the pan where it is easily skimmed off.  Eventually it will reach a syrupy consistency (coats the back of a spoon when inserted). </Step>
+    <Step image="Osso%20Buso_bbs10.jpg">Remove it from the heat, adjust the seasoning with a little salt (if needed) and swirl a tablespoon of butter through this sauce to finish it. </Step>
+    <Step image="">Drizzle the sauce over the surface of the meat and garnish with a single sprig of fresh rosemary. </Step>
+    <Step image="">Serve with tossed salad, steamed broccoli, &lt;a href='/GetRecipe?recipeName=Mashed%20Potatoes'&gt;mashed potatoes&lt;/a&gt; drizzled with white truffle oil, and fresh baked herbed &lt;a href='/GetRecipe?recipeName=Italian%20Bread'&gt;Italian Bread&lt;/a&gt;. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

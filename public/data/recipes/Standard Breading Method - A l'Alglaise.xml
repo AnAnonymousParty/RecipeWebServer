@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Standard Breading Method - A l'Alglaise_SBM.jpg" name="Standard Breading Method - A l'Alglaise" category="TECHNIQUE" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="OZ"/>
+  <Description>This is the standard method for preparing foods for deep frying.</Description>
+  <Prerequisites>
+    <Prerequisite>Three shallow pans.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bread crumbs</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>WHISKED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Salt</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Blakc pepper</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Arrange pans with ingredients in the following order:&lt;br&gt;&lt;br&gt;
+Flour, eggs, bread crumbs.</Step>
+    <Step image="">Mix salt and pepper into the flour.</Step>
+    <Step image="">Dredge food in flour, shake off excess flour. Dip eggs and then coat with bread crumbs.</Step>
+    <Step image="">Place items on wire rack and allow coating to dry/set.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

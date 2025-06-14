@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Avocado and Corn Salad_AvocadoCornSalad.png" name="Avocado and Corn Salad" category="SALAD" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Fresh corn, avocado and crisp bacon in a tangy dressing.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Fresh corn off the cob.</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Large Avocado</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Peels and seed discarded.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green onions</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Jalepeno pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon, cooked</Name>
+      <Quantity units="PIECE">6</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cilantro</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Plain greek yogurt</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lime Zest</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>One lime's worth.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red pepper flakes</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Combine all ingredients in a bowl.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cabbage Rolls_CabbageRolls.jpg" name="Cabbage Rolls" category="ENTREE" cuisine="GERMAN">
+    <Yield amount="12" units="EACH"/>
+    <Times prep="30" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="ITEM"/>
+  <Description>Herbed beef in rice inside leaves of cabbage.</Description>
+  <Prerequisites>
+    <Prerequisite>Separate leaves from head of cabbage, then  &lt;a href='/GetRecipe?recipeName=Big%20Pot%20Blanching'&gt;blanch and shock&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Beef%20and%20Rice%20Stuffing'&gt;Beef and Rice Stuffing&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Brown ground beef.</Prerequisite>
+    <Prerequisite>Grease (butter) a large baking dish.</Prerequisite>
+    <Prerequisite>Preheat oven to 350°F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Cabbage</Name>
+      <Quantity units="HEAD">1</Quantity>
+      <Prep>BLANCH</Prep>
+      <Notes>See Prerequisites.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Beef%20and%20Rice%20Stuffing'&gt;Beef and Rice Stuffing&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomato paste</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Paprika</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place a small amount of filling in the center of a cabbage leaf, then fold the edges in a overlapping manner to form a closed pouch with the goodies inside. </Step>
+    <Step image="">Place the pouch in the baking dish, folded side down.  Repeat until the pan is full or you run out of ingredients.</Step>
+    <Step image="">Mix the chicken stock and tomato paste and  add it to the dish.</Step>
+    <Step image="">Place a small pat of butter atop each roll.</Step>
+    <Step image="">Sprinkle with paprika.</Step>
+    <Step image="">Cover, bake at 350°F for 45-55 minutes, until cabbage is tender. </Step>
+    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Potato%20Pancakes'&gt;Potato Pancakes&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

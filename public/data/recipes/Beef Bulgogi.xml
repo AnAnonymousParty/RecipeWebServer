@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef Bulgogi_KoreanBeefBulgogi.jpg" name="Beef Bulgogi" category="ENTREE_BEEF" cuisine="ASIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="130" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Bulgogi, sometimes known as Korean BBQ beef, is a dish of thinly sliced grilled steak that has been marinated in a sweet soy, sesame, and garlic sauce.</Description>
+  <Prerequisites>
+    <Prerequisite>Freeze steak for 30 minutes to make it easier to slice.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Ribeye Steak</Name>
+      <Quantity units="POUND">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pear, small</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes>Peeled.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Soy Sauce</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown Sugar</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame Oil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Gochujang, Korean red pepper paste</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green Oinions</Name>
+      <Quantity units="SLICE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Very thin.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame Seeds</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>TOASTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vegetable Oil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a medium bowl, combine pear, soy sauce, brown sugar, sesame oil, garlic, ginger and gochujang. </Step>
+    <Step image="">In a gallon size Ziploc bag, combine soy sauce mixture and steak; marinate for at least 2 hours to overnight, turning the bag occasionally. </Step>
+    <Step image="">Heat 1 tablespoon vegetable oil in a cast iron grill pan over medium-high heat. </Step>
+    <Step image="">Working in batches, add steak to the grill pan in a single layer and cook, flipping once, until charred and cooked through, about 2-3 minutes per side.  Repeat with remaining 1 tablespoon vegetable oil and steak. </Step>
+  </Method>
+  <Variations>
+    <Variation>Can use tenderloin, top sirloin, flank or shirt steak instead of ribeye steak.</Variation>
+  </Variations>
+</Recipe>

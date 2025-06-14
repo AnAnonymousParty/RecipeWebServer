@@ -1,5 +1,3 @@
- <% console.log("CRAP"); %>
-
 <!DOCTYPE html>
 
 <html>
@@ -25,10 +23,10 @@
      </th>
      <th>
       COURSE
-     </th>  
-     <th colspan="6">
-      NUTRITION
-     </th>   
+     </th>    
+     <th colspan="7">
+      NUTRITION, per serving (<%= recipeData.Recipe.Nutrition[0].$.servings %> <% var i = recipeData.Recipe.Nutrition[0].$.servingsUnit; %> <%= enumUtils.GetDescFromServingSizeType(i) %>)
+     </th>      
      <th colspan="1">
       YIELD
      </th> 
@@ -58,6 +56,9 @@
      <td>
       Sugar: <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
      </td>
+     <td>
+      Sodium: <%= recipeData.Recipe.Nutrition[0].$.sodium %> g 
+     </td>      
      <td>
       Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
      </td>
@@ -213,14 +214,14 @@
         }        
       %> 
        <tr>
-        <td style="max-width: 500px; min-width: 500px; word-wrap: break-word;">
+        <td style="max-width: 500px; min-width: 500px; vertical-align:top; word-wrap: break-word;">
          <%- commonUtils.RenderNewlines(step) %>
         </td>
         <td style="text-align: center; max-width: 150px; min-width: 150px; word-wrap: break-word;">
          <%         
           if ("" != imgSrc) {
          %>
-           <img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px">
+           <img height="100px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="100px">
          <%  
           } else {
          %>        

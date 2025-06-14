@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sauage Cabbage and Potato Stew_20250607_163722.jpg" name="Sausage Cabbage and Potato Stew" category="ENTREE" cuisine="EASTEUROPE">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="CUP"/>
+  <Description>Chunks of smoked sausage with potatoes and cabbage in a savory broth.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Smoked sausage</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>1 inch chunks.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red potatoes, medium</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>OBLIQUE</Prep>
+      <Notes>Cut into eigths.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cabbage</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;.</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thinly.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Caraway seeds</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dill seed</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery seed</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Smoked paprika</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Sauage%20Cabbage%20and%20Potato%20Stew_20250607_152005.jpg">Melt 1 tbsp of &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; in a heavy skillet. Add sausage and saute until browned and set aside.</Step>
+    <Step image="Sauage%20Cabbage%20and%20Potato%20Stew_20250607_153518.jpg">Melt 1 tbps of &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; in same skillet, add cabbage and saute until browned and set aside.</Step>
+    <Step image="Sauage%20Cabbage%20and%20Potato%20Stew_20250607_154512.jpg">Melt 1 tbps of &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; in same skillet, add potatoes and saute until browned.</Step>
+    <Step image="">Add sausage to pan.</Step>
+    <Step image="">Add chicken stock, pepper, caraway, dill, celery seed, paprika and MSG to pan.</Step>
+    <Step image="Sauage%20Cabbage%20and%20Potato%20Stew_20250607_154624.jpg">Add garlic, shallots and cabbage to pan. Stir and bring to a boil.</Step>
+    <Step image="Sauage%20Cabbage%20and%20Potato%20Stew_20250607_154714.jpg">Reduce to a simmer and cook until potatoes are tender, about 20 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

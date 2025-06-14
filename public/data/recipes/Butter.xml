@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Butter_Butter.jpg" name="Butter" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="TBSP"/>
+    <Times prep="0" cook="0"/>
+  </Title>
+  <Nutrition calories="102" fat="11.5" carbs=".01" protein=".12" sugar="0" sodium="" fiber="0" servings="" servingsUnit="CUP"/>
+  <Description>&lt;a href='https://en.wikipedia.org/wiki/Butter'&gt;&lt;b&gt;Butter&lt;/b&gt;&lt;/a&gt; is an essential element in cooking. 
+
+Salted butter is used mainly in savory dishes.
+
+Unsalted butter is typically used in baking.</Description>
+  <Prerequisites/>
+  <Ingredients/>
+  <Method/>
+  <Variations>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;Clarified Butter&lt;/a&gt;</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Beurre%20Monte'&gt;Beurre Monté&lt;/a&gt;</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Beurre%20Blanc'&gt;Beurre Blanc&lt;/a&gt;</Variation>
+    <Variation>&lt;a href='/GetRecipe?Whipped%20Butter'&gt;Whipped Butter&lt;/a&gt;</Variation>
+  </Variations>
+</Recipe>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Tortellini Soup_TomatoTotelliniSoup.jpg" name="Tomato Tortellini Soup" category="SOUP" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="15" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Rich tomato soup with bites of cheesy tortellini.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Butter</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion, medium</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Balsamic vinegar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chicken Stock</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Crushe/pureed tomatoes</Name>
+      <Quantity units="OZ">28</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay Leaves</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oregano</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Basli, fresh</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cheese tortellini</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>14 oz</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parmesan Reggianio</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For garnish</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt the butter in a Dutch oven over medium heat. Add the onion, garlic, salt, and pepper and cook, stirring occasionally, until tender.</Step>
+    <Step image="">Stir in the vinegar. Add the crushed tomatoes, broth, cream, and bay leaves, and bring to a boil.</Step>
+    <Step image="">Reduce the heat to a simmer and simmer for 5 minutes.</Step>
+    <Step image="">Add the tortellini and simmer until cooked through, 5 to 6 minutes more (check at 3 minutes for fresh tortellini).</Step>
+    <Step image="">Remove from the heat, remove and discard the bay leaves, and stir in the basil.</Step>
+    <Step image="">Serve with Parmesan cheese and more basil.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

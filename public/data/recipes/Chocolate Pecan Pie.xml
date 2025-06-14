@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Pecan Pie_PecanPie.jpg" name="Chocolate Pecan Pie" category="DESSERT" cuisine="AMERICAN">
+    <Yield amount="2" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>This is basically the recipe off the back of the Karo syrup bottle ... with a couple of additions.</Description>
+  <Prerequisites>
+    <Prerequisite>Make, and pre-bake &lt;a href='/GetRecipe?recipeName=Pie%20Crust'&gt;pie crust&lt;/a&gt; at 400F for 5 minutes.</Prerequisite>
+    <Prerequisite>Preheat oven to 325 degrees.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Pie%20Crust'&gt;Pie Crust&lt;/a&gt;.</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Light corn syrup</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Amaretto</Name>
+      <Quantity units="DASH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pecans</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Chocolate%20Pecan%20Pie_PecanPie1.jpg">Mix the eggs, sugar, syrup, vanilla and &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; together in a bowl.</Step>
+    <Step image="Chocolate%20Pecan%20Pie_PecanPie2.jpg">Add Amaretto.</Step>
+    <Step image="Chocolate%20Pecan%20Pie_Pecan%20Pie3.jpg">Add pecans.</Step>
+    <Step image="Chocolate%20Pecan%20Pie_Pecan%20Pie4.jpg">Add chocolate chips.</Step>
+    <Step image="">Pour mixture into pie crusts.</Step>
+    <Step image="Chocolate%20Pecan%20Pie_Pecan%20Pie5.jpg">Bake 50 - 55 minutes, until set (toothpick inserted in center of pie comes out gooey but not runny or, better, pie feels set when pressed in center -yields to light pressure, but not distinctly 'liquid').</Step>
+  </Method>
+  <Variations/>
+</Recipe>

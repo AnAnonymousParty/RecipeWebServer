@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cajun  Seafood Gumbo_Gumbo.jpg" name="Cajun  Seafood Gumbo" category="SOUP" cuisine="CAJUN">
+    <Yield amount="12" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>While this is a fairly involved and somewhat expensive recipe to make, it won an award for taste. </Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Roux'&gt;roux&lt;/a&gt; using 1/2 cup bacon grease, 1/2 cup olive oil and one cup flour.  This should be a brown &lt;a href='/GetRecipe?recipeName=Roux'&gt;roux&lt;/a&gt; (caramel color), and yes, it's a heavier &lt;a href='/GetRecipe?recipeName=Roux'&gt;roux&lt;/a&gt; substituting bacon grease for butter.</Prerequisite>
+    <Prerequisite>Put large stock pot on to boil with the 4 cups of water and the peppercorns.
+Peel and de-vein shrimp, toss shells in boiling water. Add all the trimmings from the other vegetables.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Medium shrimp</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>PEELVEIN</Prep>
+      <Notes>16-20s.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Crawfish tails.</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lump crab meat</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Skinned chicken breasts</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Andouille Sausage</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Oysters</Name>
+      <Quantity units="QUART">1</Quantity>
+      <Prep>SHUCKED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery</Name>
+      <Quantity units="STICK">8</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green Bell Pepper, large</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomatoes, large</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Peeled.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Okra</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">8</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt; </Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brooks&lt;sup&gt;&lt;font size=-2&gt;tm&lt;/font&gt;&lt;/sup&gt; catsup</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tabasco&lt;sup&gt;&lt;font size=-2&gt;tm&lt;/font&gt;&lt;/sup&gt; Sauce</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Worcester Sauce</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Picapeppa&lt;sup&gt;&lt;font size=-2&gt;tm&lt;/font&gt;&lt;/sup&gt; Sauce</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White vinegar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon grease</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For roux.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Olive Oil</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For roux.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For roux.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon grease</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For sweating trinity.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Light brown sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Whole pepper corns</Name>
+      <Quantity units="EACH">30</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cayenne pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Bay Leaves</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Filé powder</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cooked &lt;a href='/GetRecipe?recipeName=White%20Rice'&gt;White Rice&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Per guest.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Make the trinity: Sauté onions, peppers and celery in bacon grease until lightly caramelized, transfer to holding dish. </Step>
+    <Step image="">Cook okra in vinegar until no longer slimy, transfer to holding dish. </Step>
+    <Step image="">Brown sausage, render and reserve excess fat, transfer to holding dish.</Step>
+    <Step image="">Sauté chicken in rendered Andouille fat until slightly browned, transfer to holding dish. </Step>
+    <Step image="">Remove boiling stock and let cool slightly, strain and return liquid to stock pot, discard solid contents. </Step>
+    <Step image="">Add chicken stock. </Step>
+    <Step image="">Stir in roux. </Step>
+    <Step image="">Add sautéed vegetables and okra. </Step>
+    <Step image="">Add chicken and sausage. </Step>
+    <Step image="">Add catsup, Worcestershire and Pickapeppa sauces, brown sugar, cayenne, rosemary, thyme, bay leaves and minced garlic. </Step>
+    <Step image="">Simmer for about 3 hours (should reach consistency of syrup).  Skim any fat and foam that collects at the surface.</Step>
+    <Step image="">Add shrimp, crab meat, oysters w/liquid, saffron, parsley and lemon juice.  Simmer until edges of oysters and shrimp begin to curl.  Adjust seasoning</Step>
+    <Step image="">To serve, place some rice in bowl, sprinkle with filé powder and top with gumbo. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

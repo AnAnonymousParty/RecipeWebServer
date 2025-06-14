@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="No-Knead Rustic Bread_NoKneadArtisanBread.jpg" name="No-Knead Rustic Bread" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="2" units="LOAF"/>
+    <Times prep="345" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="SLICE"/>
+  <Description>Round loaves of crusty bread.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='https://shop.kingarthurbaking.com/items/bread-flour'&gt;King Arthur bread flour&lt;/a&gt;</Name>
+      <Quantity units="CUP">6.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>High protein flour.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Warm</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yeast</Name>
+      <Quantity units="TSP">2.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="No-Knead%20Rustic%20Bread_RB1.jpg">In a large bowl, dissolve yeast in water. </Step>
+    <Step image="No-Knead%20Rustic%20Bread_RB2.jpg">Mix all ingredients in the large bowl. </Step>
+    <Step image="No-Knead%20Rustic%20Bread_RB3.jpg">Cover bowl with plastic wrap and proof in a warm place for about two hours, until dough has doubled in size.</Step>
+    <Step image="">Refrigerate for 3 hours.</Step>
+    <Step image="No-Knead%20Rustic%20Bread_20250602_124323.jpg">Place a piece of baking parchment paper on a an unrimmed baking sheet. Sprinkle the surface of your dough in the container with flour. Pull up and cut off about a 1-pound piece of dough (about the size of a grapefruit), using scissors or a serrated knife. Gently stretch the surface of the dough around to the bottom on all four sides, rotating the ball as you go. Dust your hands with flour if you need to. This is just to prevent sticking - you don't want to incorporate the flour into the dough. The top of the dough should be smooth - the object here is to create a gluten cloak or surface tension. It doesn't matter what the bottom looks like, but you need to have a smooth, tight top. This whole step should take about 30 seconds! Place the dough onto your parchment paper. </Step>
+    <Step image="No-Knead%20Rustic%20Bread_20250602_124646.jpg">Dust the loaf with a little flour and slash the top with a knife. This slashing is necessary to release some of the trapped gas, which can deform your bread. It also makes the top of your bread look pretty - you can slash the bread in a tic tac toe pattern, a cross, or just parallel slashes. You need a very sharp knife or a razor blade - you don't want the blade to drag across the dough and pull it. As the bread bakes, this area opens and is known as </Step>
+    <Step image="">Rise 45 minutes.</Step>
+    <Step image="">Set a cup of water next to your oven. Slide the bread (including the parchment paper) right onto the hot baking stone. Quickly pour the water right into the pan underneath the baking stone and close the oven door. This creates the necessary steam to make a nice crisp crust on the bread. Bake at 450 F for about 30 - 35 minutes, depending on the size of your loaf. Make sure the crust is a deep golden brown. When you remove the loaf from the oven, you will hear it crackle for a while. In baking terms, this is called "sing" and it is exactly what you want. </Step>
+    <Step image="">Refrigerate remaining dough to use as needed. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

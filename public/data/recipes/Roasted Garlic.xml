@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roasted Garlic_RoastedGarlic1.jpg" name="Roasted Garlic" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Garlic Roasted in olive oil makes spreadable goodness.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350° F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="BULB">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Olive Oil</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Trim root ends of garlic and remove most loose skin (don't skin completely or break apart bulbs), then slice off about last 1/4 inch or so of the other end of the bulb. </Step>
+    <Step image="Roasted%20Garlic_RoastedGarlic2.jpg">Submerse bulb in oil and either wrap each bulb tightly in foil, or, if you do the batch method, pack them into whatever pan you decide to use and drizzle oil over each bulb until pan is about 1/3-1/2 full. </Step>
+    <Step image="Roasted%20Garlic_RoastedGarlic3.jpg">Roast in oven for about 30 minutes (covered) or until they get soft. When they are done you just squeeze the garlic out like toothpaste and use it or save it.</Step>
+    <Step image="Roasted%20Garlic_RoastedGarlic5.jpg">Make this stuff in large batches (a dozen garlic bulbs) and keep it in a earthenware crock in the fridge covered with about 1/8 inch of olive oil, keeps for weeks, maybe more -it just never lasts that long . . . </Step>
+  </Method>
+  <Variations/>
+</Recipe>

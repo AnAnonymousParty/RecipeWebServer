@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Italian Bread_ItalianBread.jpg" name="Italian Bread" category="BAKEDGOOD" cuisine="ITALIAN">
+    <Yield amount="1" units="LOAF"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="SLICE"/>
+  <Description>Crusty bread covered in sesame seeds.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Bread%20Dough'&gt;Bread Dough&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Bread%20Dough'&gt;Bread Dough&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame seeds</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>WHISKED</Prep>
+      <Notes>With 1 tbsp water.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame oil</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Shape dough into a ball on a sheet pan.</Step>
+    <Step image="">Brush/rub with sesame oil.</Step>
+    <Step image="">Prepare oven by placing shallow pan on bottom rack of oven, with another rack above. 
+
+Preheat to 400F.</Step>
+    <Step image="">Add water to pan in oven and immediately put pan with dough in oven.</Step>
+    <Step image="">Bake for 15 minutes.</Step>
+    <Step image="">Brush loaf with egg wash and cover with sesame seeds.</Step>
+    <Step image="">Bake an additional 15 minutes, until loaf has internal temperature of 200F.</Step>
+    <Step image="">Allow bread to cool slightly before slicing and serving.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

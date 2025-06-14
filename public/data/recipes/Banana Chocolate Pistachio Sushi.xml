@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Banana Chocolate Pistachio Sushi_BananaChocolatePistachioSushi.PNG" name="Banana Chocolate Pistachio Sushi" category="DESSERT" cuisine="ALL">
+    <Yield amount="2" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="5" servingsUnit="SLICE"/>
+  <Description>Bananas, draped in chocolate and topped with pistachios.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Bananas</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes>60% Cacao.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pistachios</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Dip banana in chocolate. </Step>
+    <Step image="">Roll in nuts.</Step>
+    <Step image="">Place bananas in freezer for 15 minutes,</Step>
+    <Step image="">Slice and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

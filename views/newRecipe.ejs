@@ -35,6 +35,18 @@
   </span>
  </div> 
  
+  <div class="recipe-line">
+  <span class="field-header">
+   Serving Size:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="servings" max="999" min= "1" name="servings" type="number">
+   <select id="servingsUnit" name="servingsUnit">
+    <% Object.keys(servingSizeTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, servingSizeTypes); %>
+   </select>
+  </span>
+ </div> 
+ 
  <div class="recipe-line">
   <span class="field-header">
    Prep Time:
@@ -95,6 +107,15 @@
   </span>
   <span class="field-value">
    <input data-validation="vNumeric" id="sugar" max="999" min= "0" name="sugar" type="number"> g
+  </span>
+ </div>
+ 
+  <div class="recipe-line">
+  <span class="field-header">
+   Sodium:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="sodium" max="999" min= "0" name="sodium" type="number"> mg
   </span>
  </div>
  
@@ -209,13 +230,13 @@
   </div>
   <br> 
   <div class="centered">
-   <table align="center" class="scrolling-table" id="stepsTable" width="650px">
+   <table align="center" class="scrolling-table" id="stepsTable" width="720px">
     <thead>
      <tr>
-      <th width="400px">
+      <th width="500px">
        Step
       </th>
-      <th width="100px">
+      <th width="150px">
        Image
       </th>   
      </tr>
@@ -369,6 +390,7 @@
      </textarea>     
     </span>
    </div> 
+   <br>
    <div class="recipe-line">
     <span class="field-header">
      Image (optional):
@@ -519,6 +541,7 @@
      <input id="step2Edit" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="textarea">
     </span>
    </div> 
+   <br>
    <div class="recipe-line">
     <span class="field-header">
      Image (optional):

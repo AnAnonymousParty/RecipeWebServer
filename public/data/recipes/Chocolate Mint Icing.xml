@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Mint Icing_ChocolateIcing.jpg" name="Chocolate Mint Icing" category="DESSERT" cuisine="ALL">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="OZ"/>
+  <Description>Chocolatey minty icing for all your chocolatey minty icing needs.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes>Unsalted.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Powdered sugar</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>SIFT</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cocoa powder</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>SIFT</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vanilla extract</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mint extract</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Beat 1 cup softened butter in a big bowl with a mixer on high speed, until it's smooth and creamy.</Step>
+    <Step image="">Sift in the four cups of powdered sugar and cocoa powder.</Step>
+    <Step image="">Add the vanilla extract and mint extract.</Step>
+    <Step image="">Run the mixer on low speed to bring everything together.</Step>
+    <Step image="">Gradually add together in the milk while mixing until the frosting reaches a practiced spreading consistency.</Step>
+    <Step image="">Then, beat the frosting on high speed for v minutes until it's light and fluffy.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

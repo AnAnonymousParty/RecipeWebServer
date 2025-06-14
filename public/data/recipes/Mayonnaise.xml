@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Mayonnaise_Mayonnaise.jpg" name="Mayonnaise" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="1" cook="4"/>
+  </Title>
+  <Nutrition calories="60" fat="6" carbs="0" protein=".15" sugar="1" sodium="100" fiber="0" servings="1" servingsUnit="TBSP"/>
+  <Description>Creamy dressing with a variety of uses.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Egg yolks</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Light vegetable oil</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lemon juice</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Whisk yolks in a bowl,</Step>
+    <Step image="">Whisk in lemon juice.</Step>
+    <Step image="">Slowly, a few drops at a time, pour the oil into the bowl while whisking constantly. Once the mayonnaise has started to thicken, pour the oil in a slow and steady stream. If the oil starts to build up at all, stop pouring and whisk the mayonnaise briskly until the oil has incorporated.</Step>
+    <Step image="">Whisk in salt.</Step>
+  </Method>
+  <Variations>
+    <Variation>Ok to thin with a small amount of water.</Variation>
+    <Variation>&lt;a href='/GetRecipe?recipeName=Aioli'&gt;Aioli&lt;/a&gt;.</Variation>
+  </Variations>
+</Recipe>

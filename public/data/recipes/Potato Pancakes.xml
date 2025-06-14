@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Potato Pancakes_PotatoPancakes.jpg" name="Potato Pancakes" category="SIDE" cuisine="GERMAN">
+    <Yield amount="12" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="ITEM"/>
+  <Description>Crispy on the outside, fluffy on the inside, potatoey all over.</Description>
+  <Prerequisites>
+    <Prerequisite>Peel and grate potatoes. Roll up grated potatoes in a dry towel and wring tightly to extract as much water and moisture from the potatoes as possible.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Russet Potatoes, Large</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>See Preparations.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion, Sma;;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>AP Flour</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Light Oil</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For pan frying.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a large mixing bowl, beat eggs togehter with flour, salt and pepper until well blended.</Step>
+    <Step image="">Add grated onions, mix.</Step>
+    <Step image="">Add potatoes to bowl, mix thoroughly. </Step>
+    <Step image="">Heat a small amount of oil in a skillet.</Step>
+    <Step image="">Place small mounds (~1/4 cup) of potato mix in the oil, flatten out.  </Step>
+    <Step image="">Fry until bottom side is crispy, golden-brown, flip and continue frying until crispy overall.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add different herbs and seasonings.</Variation>
+    <Variation>Add your favorite grated cheese.</Variation>
+  </Variations>
+</Recipe>

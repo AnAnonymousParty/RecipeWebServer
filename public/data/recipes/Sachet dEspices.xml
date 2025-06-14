@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sachet dEspices_SachetdEspices.jpg" name="Sachet dEspices" category="ELEMENT" cuisine="ALL">
+    <Yield amount="" units="BAG"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>A Sachet d`Éspices is a &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt; with some additions, tied in a cheesecloth pouch,</Description>
+  <Prerequisites>
+    <Prerequisite>Small piece of cheese cloth and piece of butcher's twine or string.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="UNDEFINED">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="UNDEFINED">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay leaf</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chervil</Name>
+      <Quantity units="UNDEFINED">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tarragon</Name>
+      <Quantity units="UNDEFINED">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chives</Name>
+      <Quantity units="UNDEFINED">10</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black peppercorns</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place all ingredients on a piece of cheesecloth pouch and tie it with a piece of string.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

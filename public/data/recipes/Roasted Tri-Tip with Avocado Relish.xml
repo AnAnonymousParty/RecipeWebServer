@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roasted Tri-Tip with Avocado Relish_RoastedTriTip.PNG" name="Roasted Tri-Tip with Avocado Relish" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="2" units="POUND"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="5" servingsUnit="OZ"/>
+  <Description>Medium rare roasted beef with a nice relish.</Description>
+  <Prerequisites>
+    <Prerequisite>8 hours ahead: Stir 1 1/2 teaspoons granulated garlic, 1 1/2 teaspoons kosher salt, and 1 1/2 teaspoons coarsely ground black pepper together in a small bowl. Pat 1 (about 2 1/2-pound) beef tri-tip roast dry with paper towels. If there is any silver skin on the surface, trim it off (here's how). Rub all over with the garlic mixture.Refrigerate uncovered. </Prerequisite>
+    <Prerequisite>Preheat oven to 450°F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Tri-tip Roast</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>MARINATED</Prep>
+      <Notes>See Prerequisites,</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TBSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic Powder</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Avocado</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICEMEDIUM</Prep>
+      <Notes>Peeled, seed removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>English Cucumber</Name>
+      <Quantity units="EACH">.3</Quantity>
+      <Prep>DICEMEDIUM</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Roma Tomato</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICEMEDIUM</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley tops</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon Juice</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Sear roast. </Step>
+    <Step image="">Transfer the pan to the oven and roast until an instant-read thermometer inserted into the thickest part of the tri-tip registers about 125ºF for medium, 20 to 30 minutes. </Step>
+    <Step image="">Rest roast. Meanwhile... </Step>
+    <Step image="">Combine relish ingredients. </Step>
+    <Step image="">Halve roast, slice on bias, serve with relish. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Bouquet Garni_BouquetGarni.jpg" name="Bouquet Garni" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="1" cook="0"/>
+  </Title>
+  <Nutrition calories="0" fat="0" carbs="0" protein="0" sugar="0" sodium="0" fiber="0" servings="1" servingsUnit="OZ"/>
+  <Description>Another French term which just means a bunch of herbs tied up with a string.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="BAG">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="UNDEFINED">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay leaf</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Celery stalk or leek top</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Stuff a couple sprigs of parsley, a sprig of thyme and a bay leaf into a celery stalk or leek top and tie it up with string.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

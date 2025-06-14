@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Elephant Stew_ElephantStew.jpg" name="Elephant Stew" category="ENTREE" cuisine="AFRICAN">
+    <Yield amount="900" units="POUND"/>
+    <Times prep="480" cook="720"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Succulent elephant in a savory gravy.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Medium Elephant</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>1 inch cubes</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown gravy</Name>
+      <Quantity units="GALLON">500</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Salt</Name>
+      <Quantity units="POUND">10</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh black pepper</Name>
+      <Quantity units="POUND">5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Rabbits (optional)</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add elephant, water, salt and pepper to a very large pot (cauldron).</Step>
+    <Step image="">Bring to a boil, reduce to a simmer for 12 hours.</Step>
+    <Step image="">Add rabbit meat, if desired, and simmer an additional hour, or omit if you don't like hare in your soup.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

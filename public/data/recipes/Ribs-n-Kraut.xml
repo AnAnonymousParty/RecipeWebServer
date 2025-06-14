@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ribs-n-Kraut_RibsKraut.jpg" name="Ribs-n-Kraut" category="ALL" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="360"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="8" servingsUnit="OZ"/>
+  <Description>Country style ribs braised in sauerkraut.</Description>
+  <Prerequisites>
+    <Prerequisite>Check out &lt;a href='/GetRecipe?recipeName=Braising'&gt;Braising&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Country Stye Ribs</Name>
+      <Quantity units="POUND">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Bone-in preferred.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sauerkraut</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CRACKED</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Season ribs with salt. pepper and MSG.</Step>
+    <Step image="">In large, heavy bottomed pot, melt bacon fat over medium high heat.</Step>
+    <Step image="">Add ribs to the pot and sear all sides until well browned.</Step>
+    <Step image="">Add chicken stock.</Step>
+    <Step image="">Bring to a boil, reduce to a simmer and cook for 4 hours.</Step>
+    <Step image="">Add sauerkraut and cook for 2 hours.</Step>
+    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Mashed%20Potatoes'&gt;Mashed Potatoes&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

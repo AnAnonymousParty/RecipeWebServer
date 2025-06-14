@@ -120,11 +120,28 @@ body {
   width: 100px;
 }
 
-.recipe-line {
-     margin: 0 auto;
-    padding: 0px 0px 5px 0px;
-   position: relative;
- text-align: center;
+.recipeLine {
+        display: block;
+         margin: 0 auto;
+        padding: 0px 0px 5px 0px;
+       position: relative;
+     text-align: center;
+ vertical-align: middle; 
+}
+
+.recipeTitle {
+        display: inline-block;
+     text-align: right;
+ vertical-align: middle; 
+          width: 30%;
+}
+
+.recipeActions {
+         display: inline-block;
+          height: 50px;
+      text-align: left;
+  vertical-align: middle;
+           width: 30%;
 }
 
 .request-div {

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Berry Kale Coconut Smoothie_BerryKaleCoconutSmoothie.png" name="Berry Kale Coconut Smoothie" category="BEVERAGE" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Refreshing yet healthy smoothie.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Coconut milk</Name>
+      <Quantity units="OZ">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kale</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Banana</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes>Cut in chunks.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Berries</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Blueberries, black berries, raspberries, etc.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chia seeds</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cinnamon 	</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ice</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh mint 	</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For garnish.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add everything but the mint to a blender and blend it up.</Step>
+    <Step image="">Serve with a sprig of mint.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

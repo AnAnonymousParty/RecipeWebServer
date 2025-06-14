@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pommes Anna_PommesAnna.jpg" name="Pommes Anna" category="SIDE" cuisine="FRENCH">
+    <Yield amount="" units="BAG"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
+  <Description>Pommes Anna is a classic French side dish made of just three simple ingredients: potatoes, butter, and salt. It’s simple and elegant all at the same time; slices of potato arranged in overlapping concentric circles, creating layers upon layers into a round cake that resembles a flower. The outside is golden-brown and crispy — like the fanciest hash browns you’ll ever have — and makes a satisfying crunch when you slice it into wedges. It really goes with anything you’d serve potatoes with (read: pretty much anything). Here’s how to make this simple and delicious potato side dish at home.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 425°F.</Prerequisite>
+    <Prerequisite>Brush a heavy skillet (cast iron is best) with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Butter a sheet of aluminum foil to fit the pan.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Yukon Gold Potatoes</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>1/8: slices, peeled if you wish.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>White Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste,</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Starting in the center and overlapping the slices by about half, arrange one pile of the slices in a spiral pattern, making sure the bottom is completely and evenly covered. Use smaller slices in the center and larger slices on the edges. Brush with 1/2 tablespoon of the melted butter and sprinkle with 1/4 teaspoon of the kosher salt. </Step>
+    <Step image="">This time, working your way from the outside in to the center (again using the larger slices on the edges), arrange the second pile of potato slices to build the second layer. Brush with 1/2 tablespoon of the butter and sprinkle with 1/4 teaspoon of the kosher salt. </Step>
+    <Step image="">Repeat arranging the third layer, working from the inside out, then buttering and seasoning. Build the fourth and final layer of potatoes from the outside in. Brush all the remaining butter onto the top layer and season with the remaining 1/4 teaspoon kosher salt. </Step>
+    <Step image="">Place the foil butter-side down onto the potatoes, then weigh down the foil by topping it with a 9-inch cake pan or pie plate. Fill the cake pan or pie plate with pie weights. Bake for 25 minutes.</Step>
+    <Step image="">Remove the weights and foil. Bake uncovered until knife-tender and the bottom is golden brown, about 20 minutes more.</Step>
+    <Step image="">Turn the oven to broil on high. Broil until the top is golden brown, about 5 minutes. </Step>
+    <Step image="">Gently shake the pan to see if the potato cake slides around easily. If it doesn't, run a thin knife around the edges and slide the spatula underneath the potato cake to loosen. Invert a cutting board over the pan. Grasping both the board and the pan (careful, hot!), flip over and remove the pan. Cut the potato cake into wedges. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

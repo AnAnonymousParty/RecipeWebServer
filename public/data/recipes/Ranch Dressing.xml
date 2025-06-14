@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ranch Dressing_RanchDressing.jpg" name="Ranch Dressing" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="110" fat="11" carbs="1" protein="1" sugar="1" sodium="240" fiber="0" servings="1" servingsUnit="TBSP"/>
+  <Description>A creamy tangy buttermilk ranch dressing that is perfect for salads and a delicious dip for veggies, chips, or chicken wings. </Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Ranch%20Dip'&gt;Ranch Dip&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Make &lt;a href='/GetRecipe?recipeName=Ranch%20Dip'&gt;Ranch Dip&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk or Buttermilk</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add milk or buttermilk to Make &lt;a href='/GetRecipe?recipeName=Ranch%20Dip'&gt;Ranch Dip&lt;/a&gt; To desired consistency.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

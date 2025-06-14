@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chocolate Ganache_ChocolateGanache.jpg" name="Chocolate Ganache" category="SAUCE" cuisine="ALL">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="2" cook="10"/>
+  </Title>
+  <Nutrition calories="350" fat="24" carbs="31" protein="6" sugar="21" sodium="120" fiber="2" servings="3" servingsUnit="TBSP"/>
+  <Description>Chocolate ganache is the silky glaze poured over confectioneries like cakes, pastries, brownies and truffles. It serves a dual purpose, enhancing the presentation of the food by giving it a glass-like sheen and imparting a creamy mouthfeel to desserts. Despite its sophisticated appearance, chocolate ganache is remarkably easy to make from equal parts of chocolate and heavy cream.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Chocolate chips</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy cream</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a small non-stick skillet heat the chocolate and cream over low heat, stirring until fully blended, </Step>
+  </Method>
+  <Variations/>
+</Recipe>

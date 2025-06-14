@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Crab Stuffed Potato Balls_CrabStuffedPotatoBalls.jpg" name="Crab Stuffed Potato Balls" category="APPETIZER" cuisine="ALL">
+    <Yield amount="12" units="SERVING"/>
+    <Times prep="30" cook="5"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".3" servingsUnit="CUP"/>
+  <Description>Balls of mashed potatoes, stuff with crab and cream cheese, breaded and deep fried.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Crab%20Dip'&gt;Crab Dip&lt;/a&gt; and chill for at least two hours.</Prerequisite>
+    <Prerequisite>Set up &lt;a href='/GetRecipe?recipeName=Standard%20Breading%20Method%20-%20A%20l%27Alglaisek'&gt;Standard Breading Method - A l'Alglaise&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat deep fryer to 375F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Russet Potatoes, medium.</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Crab%20Dip'&gt;Crab Dip&lt;a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bread Crumbs</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Quarter and par-boil the potatoes in salt water. </Step>
+    <Step image="">Shock them (immerse in cold water) when done.</Step>
+    <Step image="">Shred the potatoes with a cheese grater, using the 1/4 inch openings, kinda like preparing raw potatoes for hash-browns.</Step>
+    <Step image="">Put some shredded potato in one hand and mash it out with the other, like you were making hamburgers. </Step>
+    <Step image="">Put a dollop of the crab dip in the center and then fold all of the edges up to the center.  The idea is to make a ball with the dip on the inside and the potato on the outside.  It's both easier and messier than it sounds -don't worry if the dip oozes out in places, we'll fix that in the next step, and/or you can patch holes with bits of potato.  Keep in mind that the more you work them and roll them, the stickier they get and the better they bind together -but don't work them so much that you end up mixing the dip and potato completely. </Step>
+    <Step image="">Roll the ball in the beaten egg, coat it completely, then roll it in the bread crumbs. Set it on a plate with a thin layer of bread crumbs. </Step>
+    <Step image="">Fry in batches until golden brown. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Bread Dough_HardDough.jpg" name="Bread Dough" category="BAKEDGOOD" cuisine="ALL">
+    <Yield amount="5" units="CUP"/>
+    <Times prep="20" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="5" servingsUnit="CUP"/>
+  <Description>This is a good dough for italian bread, baguettes.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='https://shop.kingarthurbaking.com/items/bread-flour'&gt;King Arthur bread flour&lt;/a&gt;</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>High protein flour.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yeast</Name>
+      <Quantity units="TSP">2.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Warm water</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For blooming yeast.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Milk</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>SCALD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vitamin C powder</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Dissolve yeast in 1/4 cup of warm (90F) water.</Step>
+    <Step image="">Combine water, milk, 1 tbsp of sugar, Vitamin C powder and butter in a bowl.</Step>
+    <Step image="">Add flour, 2 tsp of salt, 2 tsp of sugar to bowl of stand mixer.</Step>
+    <Step image="">Using a dough hook attachment, start the mixer and add the liquid a little at a time. Once the dough forms a ball, allow the mixer to run on its lowest setting for 2-3 minutes. </Step>
+    <Step image="">If the dough seems to be sticking to the bowl, add flour by spoonfuls until the dough forms a smooth ball. </Step>
+    <Step image="">Stop the mixer an remove the dough, add it to an oiled bowl large enough to contain a ball about 3 times as big. Cover with plastic wrap and let sit in a warm place for about two hours or until the dough doubles in size.
+</Step>
+    <Step image="">Punch down the dough (press on it, reform it into the ball it started as, all you really want to do is expel the excess CO2 gas) and it is ready for use. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

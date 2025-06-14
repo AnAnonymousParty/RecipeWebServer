@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beurre Blanc_BeurreBlanc.jpg" name="Beurre Blanc" category="SAUCE" cuisine="ALL">
+    <Yield amount="3" units="TBSP"/>
+    <Times prep="1" cook="2"/>
+  </Title>
+  <Nutrition calories="306" fat="34.5" carbs=".3" protein=".36" sugar="0" sodium="" fiber="0" servings="" servingsUnit="CUP"/>
+  <Description>White butter sauce. 
+
+This is basically &lt;a href='/GetRecipe?recipeName=Beurre%20Monte'&gt;beurre monté&lt;/a&gt; with additional flavoring. This is the same stuff you get at restaurants, variously called 'wine and butter sauce' or 'lemon butter sauce', etc., depending on the flavoring ingredient. Follow the directions for beurre monte, but substitute a flavored liquid for the water; lemon juice, white wine, clam juice, vinegar, cognac, Grand Mariner, etc.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water or flavorful liquid</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Heat water or flavorful liquid in a pan. </Step>
+    <Step image="">Whisk butter into the liquid, a tablespoon at a time. </Step>
+  </Method>
+  <Variations>
+    <Variation>Lemon juice</Variation>
+    <Variation>White wine</Variation>
+    <Variation>Clam juice</Variation>
+    <Variation>Cognac</Variation>
+    <Variation>Grand Mariner</Variation>
+    <Variation>Vinegar</Variation>
+  </Variations>
+</Recipe>

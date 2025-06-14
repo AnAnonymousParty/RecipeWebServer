@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Wild West Shrimp_WildWestShrimp.jpg" name="Wild West Shrimp" category="APPETIZER" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Shrimp and peppers in a buttery spice sauce, just like Longhorn Steakhouse.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Frozen popcorn shrimp</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>12 oz (&lt;a href='https://seapak.com/product/popcorn-shrimp/'&gt;Seapack&lt;/a&gt; brand recommended).</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pickled Cherry Peppers</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Most seeds removed</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lemon juice</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>One lemon's worth.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Butter</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ranch dressing</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For dipping</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Prairie Dust'&gt;Prairie Dust&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place 1 stick of butter in sauce pan add lemon juice and melt together. </Step>
+    <Step image="">Add peppers and 1 tbsp of prairie dust.</Step>
+    <Step image="">Fry shrimp in deep fryer according to package directions, drain,</Step>
+    <Step image="">Add shrimp to pan with butter and pepper, toss to coat.</Step>
+    <Step image="">Serve in a bowl with an extra sprinkling of prarie dust, with ranch dressing for dipping.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

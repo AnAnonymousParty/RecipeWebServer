@@ -10,8 +10,8 @@
     <th>
      COURSE
     </th>  
-    <th colspan="6">
-     NUTRITION
+    <th colspan="7">
+     NUTRITION, per serving (<%= recipeData.Recipe.Nutrition[0].$.servings %> <% var i = recipeData.Recipe.Nutrition[0].$.servingsUnit; %> <%= enumUtils.GetDescFromServingSizeType(i) %>)
     </th>   
     <th colspan="1">
      YIELD
@@ -42,6 +42,9 @@
     <td>
      Sugar: <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
     </td>
+    <td>
+     Sodium: <%= recipeData.Recipe.Nutrition[0].$.sodium %> mg 
+    </td>    
     <td>
      Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
     </td>
@@ -175,7 +178,7 @@
   </div>
   <br> 
   <div class="centered">
-   <table align="center" class="scrolling-table" id="stepsTable" width="700px">
+   <table align="center" class="scrolling-table" id="stepsTable" width="720px">
     <thead>
      <tr>
       <th width="500px">

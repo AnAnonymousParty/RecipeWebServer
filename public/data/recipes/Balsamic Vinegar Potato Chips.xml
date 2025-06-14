@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Balsamic Vinegar Potato Chips_BalsamicVInegarPotatoChips.jpg" name="Balsamic Vinegar Potato Chips" category="SNACK" cuisine="ALL">
+    <Yield amount="2" units="BAG"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>For pregnant cravings.</Description>
+  <Prerequisites>
+    <Prerequisite>Large bowl/sink of chilled water.</Prerequisite>
+    <Prerequisite>Prepare and preheat fryer to 375F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Russet potatoes</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Balsamic vinegar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>POWDERED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Using a mandolin, make paper thin slices of potato -thin enough to read through.</Step>
+    <Step image="">Place the potato slices in the ice water bath for about 30 minutes or so, stirring occasionally, to leach the excess starch from the potatoes.</Step>
+    <Step image="">Remove potato slices and blot dry with paper towels. </Step>
+    <Step image="">Put balsamic vinegar in a small bowl.  Dip slices of potato in the vinegar, then drop into the hot oil in small batches.  Cook until crisp, drain excess oil, salt to taste </Step>
+  </Method>
+  <Variations/>
+</Recipe>

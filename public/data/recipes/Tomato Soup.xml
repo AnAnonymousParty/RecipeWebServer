@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Soup_TomatoSoup.png" name="Tomato Soup" category="SOUP" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Tomato soup that doesn't taste like watered down ketchup. (I'm looking at you, Campbells.)</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Fresh &lt;a href='/GetRecipe?recipeName=Tomato%20Concassse'&gt;Tomato Concasse&lt;/a&gt;</Name>
+      <Quantity units="OZ">28</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>OK to use canned if tomatoes are not in season.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion, small</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicked%20Stock'&gt;Chicken Stock&lt;/a&gt; </Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>White pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Heavy Cream (optional)</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Honey or Molasses (optional)</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste, depending on tartness of tomatoes.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Sweat onions in butter. Carmelize them for  sweetness if the tomatoes are tart.</Step>
+    <Step image="">Add garlic.</Step>
+    <Step image="">Add tomatoes </Step>
+    <Step image="">Add stock.</Step>
+    <Step image="">Simmer for 1/2 hour.</Step>
+    <Step image="">Puree.</Step>
+    <Step image="">Adjust seasoning ans serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add a little honey or molasses if needed to cut tartness in the tomatoes.</Variation>
+    <Variation>Add a little heavy cream if desired.</Variation>
+  </Variations>
+</Recipe>

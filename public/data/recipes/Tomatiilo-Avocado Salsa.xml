@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomatiilo-Avocado Salsa_TomatilloAvocadoSalsa.jpg" name="Tomatiilo-Avocado Salsa" category="SAUCE" cuisine="MEXICAN">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="10" fat="0" carbs="2.5" protein=".1" sugar="1" sodium="200" fiber="2.7" servings="2" servingsUnit="TBSP"/>
+  <Description>Like salsa verde, with chunks of creamy avocado.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Tomatiilos, husked.</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion, small.</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Serano pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Avocados, pelled, seeds removed.</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>DICELARGE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cilantro</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh lime juice</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="GetRecipe?recipeName=Tomatoes">Put tomatillos, onions, peppers and garlic in a medium sauté pan (there should be a single layer). Toss them over high heat until they char in spots, but don't cook until tender, the ingredients should remain firm.</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes">Transfer contents of pan to food processor, pulse to chop coarsely (or chop by hand).</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes"> Add the remaining ingredients (except salt), then process to desired consistency.</Step>
+    <Step image="GetRecipe?recipeName=Tomatoes">Season to taste with salt. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

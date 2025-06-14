@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Escargots_Escargot.jpg" name="Escargots" category="APPETIZER" cuisine="FRENCH">
+    <Yield amount="2" units="SERVING"/>
+    <Times prep="5" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="6" servingsUnit="ITEM"/>
+  <Description>These snails are shell fish, like mussels or clams.
+
+There are several ways to prepare this.  You can buy special dishes which look like miniature glass muffin pans in which you can cook snails individually, six at a time.  You can use regular muffin pans and cook servings of 4-6 snails in each section.  You can cook them en masse in an earthenware vessel.  The trick is to make sure they aren't packed tightly together, and that they are about 1/2 submerged in butter.  The 'French way' involves using the snail's shell as the cooking and serving vessel.
+</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Snails</Name>
+      <Quantity units="EACH">24</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cognac</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallots</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher/sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Melt butter in a sauce pan, add garlic and shallots, sweat them without browning.  </Step>
+    <Step image="">Pour the mixture over the snails, top with parsley and bake for about 10 minutes, until they are bubbly. </Step>
+  </Method>
+  <Variations>
+    <Variation>You can treat these as you would a scampi, adding some lemon to the butter. </Variation>
+    <Variation>You can top them with bread crumbs and/or parmesan and run them under the broiler. </Variation>
+    <Variation>You can line your muffin pan with phyllo dough, which makes for a really tasty and visually pleasing presentation.</Variation>
+    <Variation>You can add them to &lt;a href='/GetRecipe?recipeName=Stuffed%20Mushrooms'&gt;Stuffed Mushrooms&lt;/a&gt;.</Variation>
+  </Variations>
+</Recipe>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Runzas_Runzas.jpg" name="Runzas" category="ENTREE" cuisine="EASTEUROPE">
+    <Yield amount="24" units="EACH"/>
+    <Times prep="60" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>It is not possible to make too many, or even enough of these.
+
+What are they?  Hmm, how 'bout the Eastern European version of the Calzone or Pierogi?  Beef and cabbage, baked in a bread shell.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Runza%20Dough'&gt;Runza Dough&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 400F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Runza%20Dough'&gt;Runza Dough&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">6</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cabbage</Name>
+      <Quantity units="HEAD">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh black pepper</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Runzas_runza2.jpg">Add ground beef to a large pot and begin browning it.</Step>
+    <Step image="Runzas_runza3.jpg">Add salt, pepper, msg and onions and continue cooking until onion begin to soften.</Step>
+    <Step image="Runzas_runza4.jpg">Add cabbage and cook until cabbage softens.</Step>
+    <Step image="Runzas_runza5.jpg">Sprinkle some flour on your countertop, then plop down about a softball sized piece of dough.  Sprinkle some flour on it an roll it out to about 1/8</Step>
+    <Step image="Runzas_runza6.jpg">Cut the dough into about 4</Step>
+    <Step image="">Place the runza on a greased (or ungreased non-stick) baking flat, with the seams on the bottom.  Space them about an 1</Step>
+    <Step image="Runzas_runza8.jpg"> Bake for about 10-15 minutes until they just begin to turn brown.  At this point, brush the tops with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; and then continue baking until they reach your desired browness. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

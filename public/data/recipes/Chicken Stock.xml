@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chicken Stock_ChickenStock.jpg" name="Chicken Stock" category="ELEMENT" cuisine="ALL">
+    <Yield amount="2" units="QUART"/>
+    <Times prep="5" cook="360"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Fonds de Poulet.
+
+</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Optional: Crack bones with clean hammer or hatchet.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Chicken carcass</Name>
+      <Quantity units="POUND">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Mirepoix'&gt;Mirepoix&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Bouquet%20Garni'&gt;Bouquet Garni&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black peppercorns</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="QUART">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Cold</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Put all the stuff in a pot, add cold water, slowly bring the pot to a very, very slow simmer.</Step>
+    <Step image="">Skim the scum from the surface of the stock and wipe any residue from the edge of the pot.</Step>
+    <Step image="">Cover and let it cook this way for 4-6 hours.</Step>
+    <Step image="">When this is done, let it cool slightly, strain it and chill it until all of the residual fat hardens at the surface and can be removed.</Step>
+    <Step image="">Strain the stock (line a colander or sieve with paper towels).</Step>
+    <Step image="">Freeze it in pint containers, use as needed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
