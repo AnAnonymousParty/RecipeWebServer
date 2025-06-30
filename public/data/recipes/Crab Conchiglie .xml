@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Crab Conchiglie _CrabStuffedPasta.jpg" name="Crab Conchiglie " category="PASTA" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="15" cook="15"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="9" servingsUnit="ITEM"/>
+  <Description>Conchiglie (shell) pasta stuffed with crab in a garlic wine sauce.</Description>
+  <Prerequisites>
+    <Prerequisite>Cook pasta in large pot of salted boiling water, drain and rinse under cold water.</Prerequisite>
+    <Prerequisite>Preheat oven to 275F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Large Conchiglie shell pasta</Name>
+      <Quantity units="PACKAGE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>~36</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lump Crab Meat</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Provolone Cheese</Name>
+      <Quantity units="SLICE">36</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Enough to line each pasta shell.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Olives</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pimiento</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallots</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Basil</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dried Oregano</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry White Wine</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Put 1 tbsp butter in sauté pan and cook shallots until well caramelized. Reduce heat.</Step>
+    <Step image="">Add crab, olives, pimiento, herbs and some of the parsley. </Step>
+    <Step image="">Add just enough oil to keep contents of pan from sticking.  </Step>
+    <Step image="">Cook a few minutes, season with salt and pepper and remove from heat and let set until cool enough to work with. </Step>
+    <Step image="">Into each pasta shell, place a slice of cheese and a spoonful of the crab mixture and then set them a greased (buttered!) baking or casserole dish which will accept a cover.  When all of the shells have been stuffed, make sauce. </Step>
+    <Step image="">Reheat the pan in which the crab was cooked, deglaze the pan with the white wine and reduce by half.  Add fresh lemon juice to taste -the lemon flavor should be 'there' but not pronounced.  Finish seasoning with salt and pepper, then swirl a tbsp or two of butter through the sauce. </Step>
+    <Step image="">Drizzle lemon sauce over them until the dish is about 1/3 filled.  Sprinkle grated parmesan over the top and bake covered for about 20 minutes (just long enough to heat through and melt the provelone cheese). </Step>
+    <Step image="">Sprinkle some more of the parsley and it's ready to serve. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

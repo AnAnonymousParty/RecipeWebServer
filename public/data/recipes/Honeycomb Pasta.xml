@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Honeycomb Pasta_HoneyCombPasta2.jpg" name="Honeycomb Pasta" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="25"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Rigatoni filled with a tomato meat sauce, topped by melted cheese.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+    <Prerequisite>Boil pasta until 3 min underdone, rinse, toss with EVOO, set aside. </Prerequisite>
+    <Prerequisite>Cook Italian sausage, drain fat. </Prerequisite>
+    <Prerequisite>Oil sides and bottom of springform pan. </Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Marinara%20Sauce'&gt;Marinara Sauce&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Rigatoni</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Marinara%20Sauce'&gt;Marinara Sauce&lt;/a&gt;</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Italian Sausage</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mozzarella Cheese</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dried Oregano</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Basil</Name>
+      <Quantity units="SPRIG">1</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes>For garnish.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Coat bottom of spring form pan with 1 cup of sauce. </Step>
+    <Step image="">Top with Italian sausage and some of the mozzarella. </Step>
+    <Step image="">Sprinkle with some of the oregano. </Step>
+    <Step image="">Add the pasta, standing upright until pan is filled tight. </Step>
+    <Step image="">Top with remaining marinara sauce, using spoon to force sauce into pasta. </Step>
+    <Step image="">Sprinkle with remaining mozzarella, filling the pasta. </Step>
+    <Step image="">Top with parmesan cheese. </Step>
+    <Step image="">Sprinkle with oregano. </Step>
+    <Step image="">Bake for 20-25 minutes. </Step>
+    <Step image="">Cool for 10 minutes. </Step>
+    <Step image="Honeycomb%20Pasta_HoneyCombPasta1.jpg">Garnish with basil and serve</Step>
+  </Method>
+  <Variations/>
+</Recipe>

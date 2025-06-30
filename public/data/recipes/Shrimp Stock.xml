@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="" name="Shrimp Stock" category="ELEMENT" cuisine="ALL">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="5" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>SHrimpy stock for all your shrimpy stock needs.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Shrimp Shells, heads, tails</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Vegetable trimmings</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Parsley, carrots, celery.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add all ingredients to a large sauce pan, bring to a boil, then simmer for 30 minutes.</Step>
+    <Step image="">Strain, use or freeze.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

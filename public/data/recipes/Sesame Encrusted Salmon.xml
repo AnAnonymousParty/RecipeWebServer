@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sesame Encrusted Salmon_wmsalmon.jpg" name="Sesame Encrusted Salmon" category="ENTREE_FISH" cuisine="ASIAN">
+    <Yield amount="1" units="SERVING"/>
+    <Times prep="5" cook="15"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Salmon encrusted in sesame seeds, with wasabi mayo on a bed of wild rice.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Brunoise'&gt;brunoise&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Wasabi%20Mayonnaise'&gt;Wasabi Mayinnaise&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Wild%20Rice%20Stuffing'&gt;Wild Rice&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 300F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Salmon Filet</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SEASONED</Prep>
+      <Notes>2</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For sauteing.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame Seeds</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brunoise'&gt;Brunoise&lt;/a&gt;</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Chive Sticks</Name>
+      <Quantity units="STICK">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Wild%20Rice'&gt;Wild Rice&lt;/a&gt;.</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Sesame%20Encrusted%20Salmon_wmsalmon1.jpg">Season the salmon.</Step>
+    <Step image="Sesame%20Encrusted%20Salmon_wmsalmon2.jpg">Put sesame seeds in a bowl or on a plate and roll the salmon filet to coat, pressing the fish firmly into the seeds to get an even coat.</Step>
+    <Step image="Sesame%20Encrusted%20Salmon_wmsalmon3.jpg">Put olive oil and butter in a medium sauce pan over high heat. Add the salmon and cook until lightly browned, then flip and cook the other side. </Step>
+    <Step image="Sesame%20Encrusted%20Salmon_wmsalmon4.jpg">After the salmon is cooked, pour out all the excess oil and place the pan in the oven to finish cooking, about 10-15 minutes.
+</Step>
+    <Step image="">Put some wild rice in the center of the plate, place the salmon on top. Spoon the wasabi mayonnaise over the salmon. Garnish with a spoonful of brunoise and two crossed chive sticks. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

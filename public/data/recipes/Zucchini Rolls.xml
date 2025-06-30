@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Zucchini Rolls_ZucchiniRolls.png" name="Zucchini Rolls" category="ENTREE" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="5" servingsUnit="OZ"/>
+  <Description>Slices of zucchini in a thin omelet, wrapped around a savory meat filling.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+    <Prerequisite>Line a rimmed baking sheet with parchment paper </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Medium Zucchini</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thinly</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">8</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Avocado Oil</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion, small</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tomato Paste</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ketchup</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijon Mustard</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Monterrey Jack Cheese</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Lay the zucchini slices on the prepared baking sheet and season lightly with sea salt and pepper. </Step>
+    <Step image="">Bake for 6 to 8 minutes. </Step>
+    <Step image="">Blot excess moisture from the zucchini with a paper towel. </Step>
+    <Step image="">In a large bowl, add the eggs with a pinch of sea salt and pepper.
+Beat until well combined. </Step>
+    <Step image="">Pour the beaten eggs over the zucchini into an even layer. </Step>
+    <Step image="">Bake for 12 to 15 minutes or until eggs are fully cooked through the center. </Step>
+    <Step image="">Set aside to cool down until ready to handle. </Step>
+    <Step image="">Heat the oil in a large skillet over medium-high heat. </Step>
+    <Step image="">Add in the onion and garlic and sauté for 2 to 3 minutes. </Step>
+    <Step image="">Add the beef and cook for 6 to 8 minutes, mincing it with a wooden spoon. </Step>
+    <Step image="">Add in the tomato paste, ketchup and mustard and stir well to combine. </Step>
+    <Step image="">Remove from the heat and stir in the cheese and chopped parsley. </Step>
+    <Step image="">Gently spread the meat mixture over the zucchini omelet. </Step>
+    <Step image="">Roll it up from one end with the help of the parchment paper. </Step>
+    <Step image="">Return the zucchini roll into the oven and bake for 10 minutes more to heat through. </Step>
+    <Step image="">Once it's done, let the roll rest for a couple of minutes, then slice and serve. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

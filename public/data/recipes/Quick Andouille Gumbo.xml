@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Quick Andouille Gumbo_AndouilleGumbo.jpg" name="Quick Andouille Gumbo" category="SOUP" cuisine="CAJUN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>This isn't a true gumbo as it lacks okra.  You could add it if you like.  You could add chicken too.
+
+It's rather important to use the same pan from start to finish, preferably a large sauté pan.  You're gonna cook some stuff, remove and hold, cook some more stuff in the oil left behind, remove and hold, etc.  At each step you are building on the flavors of the step before, adding as little extra fat as possible.  Eventually everything returns to that pan to come together in a rich, deep, complex flavored sauce. </Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Andouille Sausage</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet Pepper</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>SEEDEDPLUS</Prep>
+      <Notes>Red, Green amd Yellow.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Yellow Onion</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato Concasse&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Brown%20Roux'&gt;Brown Roux&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://www.pickapeppa.com/'&gt;Picapeppa Sauce&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Original.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://www.tabasco.com/'&gt;Tabasco Sauce&lt;/a&gt;</Name>
+      <Quantity units="DASH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bay Leaf</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Cajun%20Seasoning'&gt;Cajun Seasoning&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Filé powder (powdered sassafras)</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Chop peppers to a small dice.</Step>
+    <Step image="">Sauté sausage until browned. Transfer to a bowl to hold. </Step>
+    <Step image="">Add peppers and onions to skillet, add butter (if necessary) and sauté until lightly caramelized. Transfer to bowl with sausage. </Step>
+    <Step image="">Whisk in chicken stock and roux, bring to a boil.</Step>
+    <Step image="">Add tomato concasse, previously cooked sausage and browned vegetables.  </Step>
+    <Step image="">Add garlic, Picapeppa sauce, bay leaf, thyme, and 3/4 of the parsley.  </Step>
+    <Step image="">Reduce heat to simmer, cook for 15-20 minutes, until sauce thickens to syrup consistency. </Step>
+    <Step image="">Add salt and pepper, Tabasco to taste. </Step>
+    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Cajun%20Rice'&gt;&lt;/a&gt;Cajun Rice&lt;/a&gt; and some Filé powder.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

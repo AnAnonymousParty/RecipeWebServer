@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Salmon with Bonito Wasabi Sauce_SalmonBonitoWasabi.jpg" name="Salmon with Bonito Wasabi Sauce" category="ENTREE_FISH" cuisine="ASIAN">
+    <Yield amount="1" units="SERVING"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Salmon sautéed in Sesame Oil with Bonito/Wasabi sauce</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Salmon Filet</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SEASONED</Prep>
+      <Notes>2</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sesame oil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallots</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bonito flakes</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sweet vermouth</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Wasabi</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Chives</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Season salmon with salt and pepper and let stand to allow salt to penetrate the meat.</Step>
+    <Step image="">Set a pot to boil with 1-2 cups of water. When the water is boiling, add the Bonito flakes, yes it is &lt;i&gt;very&lt;/i&gt; fishy smelling, but most of the odor boils off rather quickly and it will mellow out. Reduce heat to a simmer.</Step>
+    <Step image="">Heat sesame oil in a sauté pan over high heat, at the point where the oil just begins to smoke, add the salmon filet and cook for a minute or so, until the salmon is well browned, then flip and brown the other side. Use tongs to hold the salmon and brown all the edges, you are going for a browned, crispy outer coat -the salmon won't be fully cooked at this point.</Step>
+    <Step image="">Remove salmon to a dish and hold.</Step>
+    <Step image="">Add shallots to the sauté pan, off the heat, and sauté briefly.</Step>
+    <Step image="">Strain the Bonito broth into the pan and return to the heat.</Step>
+    <Step image="">Reduce the liquid by half. Return the salmon to the pan and cook at a simmer for five minutes, turning once.</Step>
+    <Step image="">Return the salmon to the holding dish.</Step>
+    <Step image="">Increase the heat until the liquid is almost completely reduced.</Step>
+    <Step image="">With the pan off the heat, add the vermouth.</Step>
+    <Step image="">Return to the heat and reduce again by half.</Step>
+    <Step image="">Add wasabi to taste. Swirl a pat of butter through this sauce, pour it over the salmon. Garnish with chives and serve immediately.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

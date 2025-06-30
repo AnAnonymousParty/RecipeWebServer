@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Asiago Chicken Pasta_AsiagoChickenPasta.jpg" name="Asiago Chicken Pasta" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Sauteed chick breasts smothered in Asiago cheese over a bed of pasta.</Description>
+  <Prerequisites>
+    <Prerequisite>Set large pot of salted water (should taste like the sea) to boil for the pasta.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Boneless, skinless chicken breasts</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>POUNDED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Asiago cheese</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallots</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Clarified%20Butter'&gt;Clarified Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed for sauteing.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Basil</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dried Oregano</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry White Wine</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt; </Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fettucini</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Saute cubed chicken breasts in clarified butter over high heat until browned on all sides, then transfer to a dish to hold.</Step>
+    <Step image="">Deglaze the pan with white wine and add shallots, bring to a boil and reduce to a syrup consistency. </Step>
+    <Step image="">Add chicken stock, reduce heat to a simmer and cook until the liquid is reduced by half.</Step>
+    <Step image="">While the sauce is reducing, cook pasta, drain, toss with just enough olive oil to prevent it from sticking together.</Step>
+    <Step image="">Return chicken to simmering sauce, season with salt and pepper, add herbs and half of the parsley.</Step>
+    <Step image="">Stir in asiago cheese and immediately pour over and toss with pasta. Garnish with remaining parsley. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

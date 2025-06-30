@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Shrimp Scampi_Scampi.jpg" name="Shrimp Scampi" category="ENTREE_FISH" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="5" cook="15"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Scampi is the (plural) Italian word for &lt;a href='https://en.wikipedia.org/wiki/Nephrops_norvegicus'&gt;langoustine&lt;/a&gt;, a kind of very small lobster. It has come to be known as a style of dish using crustaceans such as shrimp, prawns and, of course,  langoustines or langostinos (Spanish), or even lobster.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350F. </Prerequisite>
+    <Prerequisite>Find a shallow pan, large enough so that the shrimp may be placed in it in a single layer, or you can use individual dishes.  Rub the pan(s) with butter. </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Medium Shrimp</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>PEELVEIN</Prep>
+      <Notes>Save shells to make &lt;a href='/GetRecipe?recipeName=Shrimp%20Stock'&gt;Shrimp Stock&lt;/a&gt;.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry white wine</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Garlic</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green Onion tops</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh black pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon Juice</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>SQUEEZED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon Zest</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mace</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Lay the shrimp in the pan, then add the wine, lemon juice and zest, garlic, salt, pepper, mace, parsley and green onion tops.</Step>
+    <Step image="">Cover the shrimp with thin slices of butter. </Step>
+    <Step image="">Bake at 350 for 10-15 minutes, until almost done, finish under broiler. </Step>
+  </Method>
+  <Variations>
+    <Variation>&lt;b&gt;Scampi au gratin&lt;/b&gt;: Just before the shrimp are done, right before the broiling step, top with grated &lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan&lt;/a&gt;.</Variation>
+    <Variation>&lt;b&gt;Scampi á la griglia&lt;/b&gt;: Season shrimp with salt, pepper and mace.  Marinate shrimp in lemon juice w/minced garlic for 5-10 minutes.  Saute garlic in butter briefly.  Dip shrimp in garlic butter and roll them in bread crumbs before placing them in the cooking pan (they can also be done on skewers -good way to cook shrimp on a grill without totally drying them out).  Sprinkle with parsley and green onion tops.  Drizzle remaining butter overall.  Broil 5-10 minutes, until bread crumbs are browned. </Variation>
+  </Variations>
+</Recipe>

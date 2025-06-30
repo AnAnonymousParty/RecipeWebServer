@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pasta with Scallops and Clams and Artichoke Hearts_PastaScallopsClamsArtichokes.jpg" name="Pasta with Scallops and Clams and Artichoke Hearts" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Pasta with a sauce of scallops, clams and artichoke hearts.</Description>
+  <Prerequisites>
+    <Prerequisite>Set large pot of salted water (including artichoke water) to boil for pasta.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Bay Scallops</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh clams</Name>
+      <Quantity units="POUND">.5</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Artichoke hearts</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>QUARTERED</Prep>
+      <Notes>Juice reserved for pasta water.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Scallions</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Soy sauce.</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Soy sauce? Yeah, soy sauce.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Balsamic Vinegar</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry White Wine</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon juice</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>SQUEEZED</Prep>
+      <Notes>1/2 a lemon's worth.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher /Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Feash Blak Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Linguine</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Start pasta. While it's cooking...</Step>
+    <Step image="">Melt butter and olive oil in a large sauté pan over medium heat. </Step>
+    <Step image="">Add scallions, garlic and clams and sauté for a minute. </Step>
+    <Step image="">Add half the wine (off the flame) and squeeze in some lemon juice.</Step>
+    <Step image="">Bring to a boil and reduce to a simmer.</Step>
+    <Step image="">Add scallops, stir, simmer for less than a couple of minutes. </Step>
+    <Step image="">Reduce heat, add remaining wine (off the flame), stir in artichoke hearts, soy, vinegar and red pepper flakes.</Step>
+    <Step image="">Season with salt and pepper,  remove from heat. </Step>
+    <Step image="">Drain pasta, toss with the stuff you made in the sauté pan, transfer to serving dish. </Step>
+    <Step image="">Cover with cheese, garnish with parsley. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

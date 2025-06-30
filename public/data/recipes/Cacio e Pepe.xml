@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cacio e Pepe_CacioEPepe.jpg" name="Cacio e Pepe" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="5" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Literally, cheese and pepper. Just three ingredients that, together, taste like so much more.</Description>
+  <Prerequisites>
+    <Prerequisite>Set large pot of salted water (should taste like sea water) to boil for pasta.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Bucatini, if you can or spaghetti, if you must.</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pecorino romano cheese.</Name>
+      <Quantity units="OZ">5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Fresh Black Pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>Or more...</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ice water</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Combine cheese and pepper. </Step>
+    <Step image="">Drizzle in 1/3 cup ice water and use the fork to whisk it into the cheese mixture, then press the mixture against the side of the bowl, as needed, to form a thick, mostly smooth and lump-free paste; set aside. </Step>
+    <Step image="">Add 1 pound dried pasta to the boiling water and cook until al dente, about 8 minutes.</Step>
+    <Step image="">Reserve 1/2 cup of the pasta water. </Step>
+    <Step image="">Drain the pasta and working quickly, immediately add it to the large bowl of cheese paste and use the fork to vigorously stir and toss the pasta with the cheese paste, adding 1 tablespoon of the reserved pasta water at a time to loosen the paste until it evenly coats the pasta in a creamy sauce.
+(You'll likely use only about 2 to 3 tablespoons of the pasta water total and not use all of it.) </Step>
+    <Step image="">Serve immediately, topping with the reserved grated Pecorino and a few coarse grinds of black pepper. </Step>
+  </Method>
+  <Variations/>
+</Recipe>
