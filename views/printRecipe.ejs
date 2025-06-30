@@ -166,7 +166,7 @@
       <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%=ingredients[ndx].Quantity[0]._ %></td>
       <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
       <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
-      <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%=ingredients[ndx].Notes[0] %> </td>
+      <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %> </td>
      </tr> 
      <%}%>  
     </tbody>
