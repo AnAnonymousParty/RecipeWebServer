@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cheese Ball_CheeseBall.jpg" name="Cheese Ball" category="APPETIZER" cuisine="AMERICAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="TBSP"/>
+  <Description>Lori K's Holiday Cheese Ball.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Cream Cheese</Name>
+      <Quantity units="OZ">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>As one would expect in a cheese ball.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Deli Roast Beef, shaved.</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Green Onions</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Worchestershire Sauce</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Seasoned%20Salt'&gt;Seasoned Salt&lt;/a&gt;</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic </Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Reserve 1/3 of the green onions for garnish.</Step>
+    <Step image="">Combine all of the remaining ingredients, form into a ball.</Step>
+    <Step image="">Top with reserved green onions.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add other kinds of cheese as desired.</Variation>
+  </Variations>
+</Recipe>

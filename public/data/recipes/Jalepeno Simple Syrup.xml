@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Jalepeno Simple Syrup_JalepenoSimpleSyrup.jpg" name="Jalepeno Simple Syrup" category="ELEMENT" cuisine="MEXICAN">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="1" cook="10"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".25" servingsUnit="CUP"/>
+  <Description>Jalepeno infused simple syrup for making spicy drinks.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Water</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Jalepeno</Name>
+      <Quantity units="EACH">.75</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Add all ingredients to a small sauce pan.</Step>
+    <Step image="">Bring to a boil.</Step>
+    <Step image="">Chill.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

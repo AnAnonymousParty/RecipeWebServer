@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Spinach Salad_SpinachSalad.webp" name="Spinach Salad" category="SALAD" cuisine="AMERICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="280" fat="25" carbs="5" protein="10" sugar="2" sodium="370" fiber="1" servings="1.75" servingsUnit="CUP"/>
+  <Description>Wilted spinach with a warm bacony dressing.</Description>
+  <Prerequisites>
+    <Prerequisite>Make and peel &lt;a href='/GetRecipe?recipeName=Hard%20Boiled%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Fry bacon, reserve fat for dressing.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Spinach</Name>
+      <Quantity units="CUP">8</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon</Name>
+      <Quantity units="SLICE">3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Fried semi-crisp.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Onion</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Brown Sugar</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dijon Mustaed</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cider Vinegar</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.128</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Pepper Flakes</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Hard%20Boiled%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bacon fat.</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">In a skillet over low heat, whisk vinegar, garlic, brown sugar, mustard and seasonings with bacon drippings.</Step>
+    <Step image="">Place spinach, onion and eggs in a large warm bowl. Toss with warm dressing. Add cooked bacon and serve immediately.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

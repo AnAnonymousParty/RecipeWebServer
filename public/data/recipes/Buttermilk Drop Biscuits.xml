@@ -16,7 +16,7 @@
       <Name>Self rising flour</Name>
       <Quantity units="CUP">2</Quantity>
       <Prep>NONE</Prep>
-      <Notes>Low protein preferred like, Lily White.</Notes>
+      <Notes>Low protein preferred like, &lt;a href='https://www.whitelily.com//'&gt;White Lily&lt;/a&gt;.</Notes>
     </Ingredient>
     <Ingredient>
       <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
@@ -56,7 +56,7 @@
     <Step image="">Put AP flour in another bowl.</Step>
     <Step image="">Scoop portions of dough into the AP flour and shape the dough into a ball before placing them into the greased pan.
 
-The biscuits should be touching and fill the pan,</Step>
+The biscuits should be touching and fill the pan.</Step>
     <Step image="">Bake for 20-25 minutes until biscuits are golden brown.</Step>
     <Step image="">Brush the tops of the biscuits with the remaining butter, melted.</Step>
   </Method>

@@ -25,26 +25,26 @@
       <Notes>Seriously? Seriously.</Notes>
     </Ingredient>
     <Ingredient>
-      <Name>Yewwlo Onion, large</Name>
+      <Name>Yellow Onion, large</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
     <Ingredient>
       <Name>Tomato Paste</Name>
-      <Quantity units="CUP">.3</Quantity>
+      <Quantity units="CUP">.34</Quantity>
       <Prep>NONE</Prep>
       <Notes>Cento</Notes>
     </Ingredient>
     <Ingredient>
       <Name>Molasses</Name>
-      <Quantity units="CUP">.3</Quantity>
+      <Quantity units="CUP">.33</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
     <Ingredient>
       <Name>Brown Sugar</Name>
-      <Quantity units="CUP">.3</Quantity>
+      <Quantity units="CUP">.333334</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
@@ -61,7 +61,7 @@
       <Notes>Some like it hot. If you don't, omit.</Notes>
     </Ingredient>
     <Ingredient>
-      <Name>Losher/Sea Salt</Name>
+      <Name>Kosher/Sea Salt</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste.</Notes>

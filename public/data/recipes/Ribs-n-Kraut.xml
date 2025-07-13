@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Ribs-n-Kraut_RibsKraut.jpg" name="Ribs-n-Kraut" category="ALL" cuisine="ALL">
+  <Title image="Ribs-n-Kraut_RibsKraut.jpg" name="Ribs-n-Kraut" category="ENTREE_PORK" cuisine="GERMAN">
     <Yield amount="4" units="SERVING"/>
     <Times prep="20" cook="360"/>
   </Title>

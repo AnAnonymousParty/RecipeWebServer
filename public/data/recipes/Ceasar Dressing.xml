@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ceasar Dressing_CeasarDressing.jpg" name="Ceasar Dressing" category="SAUCE" cuisine="AMERICAN">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Tangy garlicy anchovy laden dressing for the perfect Ceasar Salad.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Coddled%20Egg'&gt;Coddled Egg&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Coddled%20Egg'&gt;Coddled Egg&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Dry mustard</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or more.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lemon Juice</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Wine Vinegar</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Worchestershire Sauce</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Anchovies</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>A chunk.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Combine all ingredients in a food processor and process until smooth.</Step>
+    <Step image="">Use or refrigerate until needed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

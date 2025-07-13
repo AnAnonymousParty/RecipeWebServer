@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pasta House Salad_PastaHouseSalad.jpg" name="Pasta House Salad" category="SALAD" cuisine="ITALIAN">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="10" cook="0"/>
+  </Title>
+  <Nutrition calories="300" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1.5" servingsUnit="CUP"/>
+  <Description>Just like the Pasta House.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='https://en.wikipedia.org/wiki/Pasta%20House%20Salad%20Dressing'&gt;Pasta House Salad Dressing.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Romaine Lettuce</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Iceberg Lettuce</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Water packed Artichoke Hearts</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Small Red Onion</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Thinly.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pimiento</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>DRAINED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Pasta%20House%20Salad%20Dressing'&gt;Pasta House Salad Dressing&lt;/a&gt;</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">.6</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Pepperoncini Peppers</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>DRAINED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Tear lettuces and add to bowl.</Step>
+    <Step image="">Combine with artichokes, onion and parmesan cheese.</Step>
+    <Step image="">Add salad dressing, toss.</Step>
+    <Step image="">Serve with pepperoncinis.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

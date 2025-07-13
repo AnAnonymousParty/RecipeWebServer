@@ -29,6 +29,12 @@
       <Notes/>
     </Ingredient>
     <Ingredient>
+      <Name>Carrot</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>DICESMALL</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
       <Name>Garlic</Name>
       <Quantity units="CLOVE">4</Quantity>
       <Prep>MINCED</Prep>
@@ -73,7 +79,7 @@
   </Ingredients>
   <Method>
     <Step image="">Heat olive oil in a large, heavy, lidded sauce pan.</Step>
-    <Step image="">Sauté onions until translucent but not caramelized.</Step>
+    <Step image="">Cook carrots and onions until translucent but not caramelized.</Step>
     <Step image="">Add garlic and continue to sauté until you can smell the garlic.</Step>
     <Step image="">Add tomato concassé, paste, oregano, bay leaves and red pepper flakes.</Step>
     <Step image="">Add just enough water to thin the mixture in preparation for simmering.  Simmer, covered, until the sauce reaches the desired thickness and consistency.</Step>

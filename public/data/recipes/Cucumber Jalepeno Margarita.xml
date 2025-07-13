@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cucumber Jalepeno Margarita_CucumberJalepenoMargarita.jpg" name="Cucumber Jalepeno Margarita" category="BEVERAGE" cuisine="MEXICAN">
+    <Yield amount="2" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="8" servingsUnit="OZ"/>
+  <Description>Spicy yet refreshing summer cocktail.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Jalepeno%20Simple%20Syrup'&gt;Jalepeno Symple Syrup&lt;/a&gt;, reserving a couple of jalepeno slices for garnish.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Jalepeno%20Simple%20Syrup'&gt;Jalepeno Simple Syrup&lt;/a&gt;</Name>
+      <Quantity units="OZ">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Tequila</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Lime Juice</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cucumber</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Smoky-Spicy%20Rim%20Salt'&gt;Smoky-Spicy Rim Salt&lt;/a&gt;</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Ice</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Using a wider peeler or mandoline, shave long strips from the center of the cucumber for garnish.</Step>
+    <Step image="">Peel the remaining cucumber, dice, and muddle in a large glass.</Step>
+    <Step image="">Strain the liquid into a cocktail shaker filled with ice. Then add 4 ounces of chilled tequila, 2 ounces of lime juice and 2 ounces of the jalapeño simple syrup.</Step>
+    <Step image="">Shake vigorously for 30 seconds before straining into the two refrigerated glasses.</Step>
+    <Step image="">Rub the rim of two glasses with lime and dip in the Smoky-Spicy Rim Salt.</Step>
+    <Step image="">Pour into the prepared glasses, garnish with cucumber strips, jalepeno slices and lime wedge. Enjoy. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -7,7 +7,7 @@
   <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
   <Description>Just like grandma Velma used to make with eggs and plenty of bacon.</Description>
   <Prerequisites>
-    <Prerequisite>Make and peel &lt;a href='/GetRecipe?recipeName=Hard%20Boild%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Make and peel &lt;a href='/GetRecipe?recipeName=Hard%20Boiled%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;.</Prerequisite>
   </Prerequisites>
   <Ingredients>
     <Ingredient>

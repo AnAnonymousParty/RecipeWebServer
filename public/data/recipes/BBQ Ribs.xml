@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="BBQ Ribs_1000040609.jpg" name="BBQ Ribs" category="ENTREE_PORK" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="10" cook="240"/>
+  </Title>
+  <Nutrition calories="253" fat="19" carbs="8" protein="13" sugar="6" sodium="245" fiber="0" servings="2" servingsUnit="SLICE"/>
+  <Description>St. Louis style ribs coated in a dry rub and braised in beer.</Description>
+  <Prerequisites>
+    <Prerequisite>Set up grill for low heat smoking.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>St.Louis Ribs</Name>
+      <Quantity units="SLAB">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Silver skin removed.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Rib Rub&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Beer</Name>
+      <Quantity units="BOTTLE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Lager</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="BBQ%20Ribs_1000040601.jpg">Use a catfish skinner to remove silver skin from rib slab.</Step>
+    <Step image="BBQ%20Ribs_1000040603.jpg">Coat ribs liberally with rub.</Step>
+    <Step image="BBQ%20Ribs_20250706_100134.jpg">Set ribs on a rack over a sheet pan for 1 hour.</Step>
+    <Step image="BBQ%20Ribs_20250706_104626.jpg">Smoke ribs over low heat for 2 hours.</Step>
+    <Step image="BBQ%20Ribs_1000040606.jpg">Place ribs in sheet pan. Add beer and cover with aluminum foil.</Step>
+    <Step image="">Return ribs to grill over low heat for 1-2 hours.</Step>
+    <Step image="BBQ%20Ribs_1000040611.jpg">Remove ribs from grill.</Step>
+    <Step image="BBQ%20Ribs_1000040608.jpg">Reduce braising liquid to syrup consistency and use it to coat ribs.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

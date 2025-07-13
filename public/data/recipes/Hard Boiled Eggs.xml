@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Hard Boiled Eggs_HardBoiledEggs.jpg" name="Hard Boiled Eggs" category="ELEMENT" cuisine="ALL">
+    <Yield amount="12" units="EACH"/>
+    <Times prep="1" cook="13"/>
+  </Title>
+  <Nutrition calories="60" fat="4" carbs="0" protein="5" sugar="0" sodium="0" fiber="0" servings="1" servingsUnit="ITEM"/>
+  <Description>Old eggs peel easier than fresh eggs.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Eggs</Name>
+      <Quantity units="EACH">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place eggs in large pot.</Step>
+    <Step image="">Add COLD water to cover eggs by 1 inch.</Step>
+    <Step image="">Bring to a boil.</Step>
+    <Step image="">Remove from heat and let sit for 13 minutes.</Step>
+    <Step image="">Submerge under cold water.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

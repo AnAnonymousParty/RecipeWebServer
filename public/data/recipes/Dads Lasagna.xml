@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Dads Lasagna_20241225_161247.jpg" name="Dads Lasagna" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="45" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Layers of pasta and meat sauce and cheese and pasta and cheese and pasta and meat sauce and pasta and cheese...</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350°F.</Prerequisite>
+    <Prerequisite>Pre-cook pasta in pot of salted water, to about 80% al dente.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient>
+      <Name>Lasagna Noodles</Name>
+      <Quantity units="PACKAGE">1.5</Quantity>
+      <Prep>BLANCH</Prep>
+      <Notes>Or so.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Marinar%20Sauce'&gt;Marinara Sauce&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Italian Sausage</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Cottage Cheese</Name>
+      <Quantity units="OZ">8</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Small Crud.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Mozzarella</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes>NOT Pre-shredded.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Pecorino'&gt;Pecorio Romano Cheese&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Italian Seasoning</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Oil an 8 X 13 casserole dish.</Step>
+    <Step image="">Add a layer of pasta.</Step>
+    <Step image="">Cover with mozzarella cheese.</Step>
+    <Step image="">Add a layer of pasta.</Step>
+    <Step image="">Cover with some marinara sauce and italian sausage.</Step>
+    <Step image="">Add a layer of pasta.</Step>
+    <Step image="">Cover with cottage cheese.</Step>
+    <Step image="">Add a layer of pasta.</Step>
+    <Step image="">Add remaining marinara sauce and sausage.</Step>
+    <Step image="">Top with pecorino and parmesan cheese.</Step>
+    <Step image="">Top with parsley and italian seasoning.</Step>
+    <Step image="">Bake for ~30 minutes, until cheese is bubbly.</Step>
+    <Step image="">Remove from oven, let stand for 15 minutes.</Step>
+    <Step image="">Slice and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

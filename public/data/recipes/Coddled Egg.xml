@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Coddled Egg_CoddledEgg.jpg" name="Coddled Egg" category="ELEMENT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="1" cook="2"/>
+  </Title>
+  <Nutrition calories="72" fat="5" carbs="0" protein="6" sugar="0" sodium="70" fiber="0" servings="1" servingsUnit="ITEM"/>
+  <Description>Partially cooked egg perfect for making &lt;a href='/GetRecipe?recipeName=Ceasar%20Dressing'&gt;Ceasar Dressing&lt;/a&gt;.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Large Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Place egg in pan with enough water to cover it.</Step>
+    <Step image="">Bring to a boil.</Step>
+    <Step image="">Remove from heat and let stand for 2 minutes.</Step>
+    <Step image="">Cool egg in cold water.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

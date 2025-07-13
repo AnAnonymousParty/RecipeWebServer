@@ -30,6 +30,12 @@
       <Notes>1" chunks</Notes>
     </Ingredient>
     <Ingredient>
+      <Name>Crawfish, whole</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
       <Name>Corn on cob</Name>
       <Quantity units="EACH">6</Quantity>
       <Prep>SLICED</Prep>
@@ -105,7 +111,7 @@
   <Method>
     <Step image="">Add water, beer, sausage, crab boil mix, tabasco and garlic to a large stock pot and bring to a boil.</Step>
     <Step image="">Add potatoes, cook for 10 minutes.</Step>
-    <Step image="">Add corn, mushrooms and onions, cook for 10 minutes.</Step>
+    <Step image="Seafood%20Boil_20240331_170504.jpg">Add crawfish, corn, mushrooms and onions, cook for 10 minutes.</Step>
     <Step image="">Add lemons, crab and shrimp. Cook until shrimp are just pink and opaque.</Step>
     <Step image="Seafood%20Boil_Seafood%20boil2.jpg">Serve with melted butter on large paper lined sheet pans, allow guests to fill their own plates.</Step>
   </Method>

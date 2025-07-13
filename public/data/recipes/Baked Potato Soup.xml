@@ -4,7 +4,7 @@
     <Yield amount="8" units="SERVING"/>
     <Times prep="45" cook="30"/>
   </Title>
-  <Nutrition calories="300" fat="5" carbs="5" protein="5" sugar="1" fiber="5"/>
+  <Nutrition calories="300" fat="5" carbs="5" protein="5" sugar="1" sodium="" fiber="5" servings="" servingsUnit="CUP"/>
   <Description>Chunks of baked potatoes in a creamy base, with bacon.</Description>
   <Prerequisites>
     <Prerequisite>Preheat oven to 400F.</Prerequisite>

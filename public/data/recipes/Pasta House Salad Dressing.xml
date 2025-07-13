@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pasta House Salad Dressing_PastaHouseSaladDressing.jpg" name="Pasta House Salad Dressing" category="SAUCE" cuisine="ITALIAN">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="TBSP"/>
+  <Description>Just like the Pasta House.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Light Olive Oil</Name>
+      <Quantity units="CUP">.6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Red Wine Vinegar</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="">Mix Vinegar, Salt, Garlic and Pepper in a small jar until salt is dissolved.</Step>
+    <Step image="">Add oil to jar, shake vigorously until well mixed.</Step>
+    <Step image="">Use immediately before while still blended.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

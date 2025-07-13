@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="" name="Shrimp Stock" category="ELEMENT" cuisine="ALL">
+  <Title image="Shrimp Stock_ShrimpStock.jpg" name="Shrimp Stock" category="ELEMENT" cuisine="ALL">
     <Yield amount="4" units="CUP"/>
     <Times prep="5" cook="30"/>
   </Title>
   <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
-  <Description>SHrimpy stock for all your shrimpy stock needs.</Description>
+  <Description>Shrimpy stock for all your shrimpy stock needs.</Description>
   <Prerequisites/>
   <Ingredients>
     <Ingredient>

@@ -1,4 +1,5 @@
 var express      = require('express');
+var fractional   = require('fractional');
 var fs           = require('fs');
 var path         = require('path');
 var router       = express.Router();
@@ -17,7 +18,7 @@ router.get('/', function(req, res, next) {
  var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
- res.render('printRecipe', { commonUtils: common, enumUtils: enums, recipeData: recipeDataJson });
+ res.render('printRecipe', { commonUtils: common, enumUtils: enums, fractionUtils: fractional, recipeData: recipeDataJson });
  
  console.log("< printRecipe()");
 });
