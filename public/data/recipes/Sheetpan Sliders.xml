@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sheetpan Sliders_20250730_164649.jpg" name="Sheetpan Sliders" category="SANDWICH" cuisine="AMERICAN">
+    <Yield amount="16" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Description>Bite sized burger, easy and quick.</Description>
+  <Prerequisites>
+    <Prerequisite>Sheet pan, oiled.</Prerequisite>
+    <Prerequisite>Preheat oven to 400F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion, small.</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Seal Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Montreal%20Steak%20SeasoningBraising'&gt;Montreal Steak Seasoning&lt;/a&gt;</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Slider buns</Name>
+      <Quantity units="EACH">16</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cheese (optional)</Name>
+      <Quantity units="SLICE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Spead onions on sheet pan.</Step>
+    <Step type="STEP" image="Sheetpan%20Sliders_20250730_160907.jpg">Spread ground beef over onions, pat to a thin layer.</Step>
+    <Step type="STEP" image="">Season with salt, pepper and Montreal Steak Seasoning.</Step>
+    <Step type="STEP" image="Sheetpan%20Sliders_20250730_163530.jpg">Place in oven for about 20 minutes, until meat is browned.</Step>
+    <Step type="STEP" image="">Top with cheese, if desired.</Step>
+    <Step type="STEP" image="">Cut into bun sized squares using a pizza cutter.</Step>
+    <Step type="STEP" image="Sheetpan%20Sliders_20250730_164649.jpg">Add patties to buns.</Step>
+    <Step type="STEP" image="">Serve with sliced pickles.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

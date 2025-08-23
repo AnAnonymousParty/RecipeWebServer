@@ -11,14 +11,15 @@ var common = require('../public/javascripts/server/common.js');
 var enums  = require('../public/javascripts/server/enums.js');
 
 router.get('/', function(req, res, next) {  
- var recipeName = req.query.recipeToPrint;
+ var recipeName  = req.query.recipeToPrint;
+ var showButtons = req.query.ShowButtons;
  
- console.log("> printRecipe(" + recipeName + ")");
+ console.log("> printRecipe(" + recipeName + ", " + showButtons + ")");
  
  var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
- res.render('printRecipe', { commonUtils: common, enumUtils: enums, fractionUtils: fractional, recipeData: recipeDataJson });
+ res.render('printRecipe', { commonUtils: common, enumUtils: enums, fractionUtils: fractional, recipeData: recipeDataJson, showButtons: showButtons });
  
  console.log("< printRecipe()");
 });

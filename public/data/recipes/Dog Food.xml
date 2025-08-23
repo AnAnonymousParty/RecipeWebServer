@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Dog Food_20250730_160743.jpg" name="Dog Food" category="ENTREE" cuisine="ALL">
+    <Yield amount="16" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Nutritious food for dogs.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Mixed Frozen Vegetables</Name>
+      <Quantity units="PACKAGE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Oats</Name>
+      <Quantity units="CUP">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Beef of Chicken base</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Water</Name>
+      <Quantity units="CUP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Dog%20Food_20250730_160743.jpg">Brown ground beef.</Step>
+    <Step type="STEP" image="Dog%20Food_20250730_161920.jpg">Add ground beef to stock pot with frozen vegetables, soup base and water.</Step>
+    <Step type="STEP" image="Dog%20Food_20250730_162757.jpg">Bring to a boil.</Step>
+    <Step type="STEP" image="Dog%20Food_20250730_162951.jpg">Stir in oats, reduce to a simmer.</Step>
+    <Step type="STEP" image="">Remove from heat, allow to cool slightly, refrigerate and use as needed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

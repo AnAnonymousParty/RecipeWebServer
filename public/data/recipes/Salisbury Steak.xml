@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Salisbury Steak_20250716_171907.jpg" name="Salisbury Steak" category="ENTREE_BEEF" cuisine="AMERICAN">
+    <Yield amount="4" units="EACH"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="295" fat="16" carbs="5" protein="24" sugar="5" sodium="630" fiber="3" servings="1" servingsUnit="ITEM"/>
+  <Description>Seasoned patties of meat in a savory brown gravy.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient>
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Bread Crumbs</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Shallot</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Onion Powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Garlic Powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Thyme</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Rosemary</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Baking Soda</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Baking soda loawers the pH of the meat and helps it retain moisture during cooking.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Olive Oil</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For sweating shallots.</Notes>
+    </Ingredient>
+    <Ingredient>
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient>
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step image="Salisbury%20Steak_20250716_164119.jpg">Prepare ingredient. Sweat shallots in olive oil until lightly browned.</Step>
+    <Step image="">Combine all ingredients in a bowl.</Step>
+    <Step image="">Divide mixture into 4 balls, shape into patties.</Step>
+    <Step image="Salisbury%20Steak_20250716_171432.jpg">Brown patties in a skillet over medium-high heat.</Step>
+    <Step image="">Make &lt;a href='/GetRecipe?recipeName=Gravy'&gt;gravy&lt;/a&gt; using fat rendered from the patties.</Step>
+    <Step image="Salisbury%20Steak_20250716_171907.jpg">Add patties to pan with gravy.</Step>
+    <Step image="Salisbury%20Steak_20250716_171821.jpg">Simmer patties for 20 minutes.</Step>
+    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Mashed%20Potatoes'&gt;mashed potatoes&lt;/a&gt; and &lt;a href='/GetRecipe?recipeName=Tourneed%20carrots%20glazed%20with%20basil'&gt;tournéed carrots glazed with basil&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

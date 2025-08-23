@@ -218,6 +218,7 @@
   <br>
   <div class="centered">
    <button onclick="HandleAddIngredientBtnClkd();" type="button">Add Ingredient</button>
+   <button onclick="HandleAddIngredientHeadingBtnClkd();" type="button">Add Heading</button>   
    <button id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Ingredients</button>  
   </div>
  </div>  
@@ -249,6 +250,7 @@
   <br>
   <div class="centered">
    <button onclick="HandleAddStepBtnClkd();" type="button">Add Step</button>
+   <button onclick="HandleAddStepHeadingBtnClkd();" type="button">Add Heading</button>     
    <button id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Steps</button>  
   </div> 
  </div> 
@@ -290,7 +292,7 @@
 
 <!-- Add Ingredient Popup. -->
 <div class="popup" id="addIngredientPopup">
- <form >
+ <form>
   <div class="heading">
    ADD INGREDIENT&nbsp;<img height="32px" onclick="HideAddIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -340,17 +342,42 @@
      <input data-validation="vAlNum" id="notes2Add" name="notes2Add" type="text">
     </span>
    </div>
+  </div>
+  <br>
+  <div class="centered">
+   <button onclick="AddIngredient();" type="button">Save</button>
+  </div>
+ </form>
+</div>
+
+<!-- Add Ingredient Heading Popup. -->
+<div class="popup" id="addIngredientHeadingPopup">
+ <form>
+  <div class="heading">
+   ADD INGREDIENT HEADING&nbsp;<img height="32px" onclick="HideAddIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addIngredientHeadingForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading Text:
+    </span>
+    <span class="field-value">
+     <input data-validation="vAlNum" id="heading2Add" name="heading2Add" type="text">
+    </span>
+   </div>   
    <br>
    <div class="centered">
-    <button onclick="AddIngredient();" type="button">Save</button>
+    <button onclick="AddIngredientHeading();" type="button">Save</button>
    </div>
-  </div>
+  </div> 
  </form>
 </div>
 
 <!-- Add Prerequisite Popup. -->
 <div class="popup" id="addPrerequisitePopup">
- <form >
+ <form>
+  <input id=ingredientType" name="ingredientType" type="hidden" value="INGREDIENT">
   <div class="heading">
    ADD PREREQUISITE&nbsp;<img height="32px" onclick="HideAddPrerequisitePopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -375,7 +402,7 @@
 
 <!-- Add Step Popup. -->
 <div class="popup" id="addStepPopup">
- <form >
+ <form>
   <div class="heading">
    ADD STEP&nbsp;<img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -405,6 +432,31 @@
    <br> 
    <div class="centered">
     <button onclick="AddStep();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
+<!-- Add Step Heading Popup. -->
+<div class="popup" id="addStepHeadingPopup">
+ <form>
+  <div class="heading">
+   ADD STEP HEADING&nbsp;<img height="32px" onclick="HideAddStepHeadingPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addStepHeadingForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="stepHeading2Add" maxlength="256" name="stepHeading2Add" required="required" rows="1" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>     
+    </span>
+   </div>    
+   <br> 
+   <div class="centered">
+    <button onclick="AddStepHeading();" type="button">Save</button>
    </div>
   </div>
  </form>
@@ -497,6 +549,32 @@
  </form>
 </div>
 
+<!-- Edit Ingredient Heading Popup. -->
+<div class="popup" id="editIngredientHeadingPopup">
+ <form>
+  <input id="headingRowId"  type="hidden" value="">
+  <input id="ingredientAction" type="hidden" value="">
+  <div class="heading">
+   EDIT INGREDIENT HEADING&nbsp;<img height="32px" onclick="HideEditIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editIngredientHeadingForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <input id="heading2Edit" name="heading2Edit" type="text">
+    </span>
+   </div>
+   <br>
+   <div class="centered">
+    <button onclick="SaveIngredientHeading();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
 <!-- Edit Prerequisite Popup. -->
 <div class="popup" id="editPrerequisitePopup">
  <form >
@@ -559,6 +637,33 @@
   <br> 
   <div class="centered">
    <button onclick="SaveStep();" type="button">Save</button>
+  </div>  
+ </form>
+</div>
+
+<!-- Edit Step Heading Popup. -->
+<div class="popup" id="editStepHeadingPopup">
+ <form >
+  <input id="stepAction"       type="hidden" value="">
+  <input id="stepHeadingRowId" type="hidden" value="">
+  <div class="heading">
+   EDIT STEP HEADING&nbsp;<img height="32px" onclick="HideEditStepHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editStepForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <input id="stepHeading2Edit" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="textarea">
+    </span>
+   </div> 
+   <br>   
+  </div>
+  <br> 
+  <div class="centered">
+   <button onclick="SaveStepHeading();" type="button">Save</button>
   </div>  
  </form>
 </div>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Caramel_Caramel.jpg" name="Caramel" category="SAUCE" cuisine="ALL">
+    <Yield amount="2" units="CUP"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Silky creamy dessert gravy.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter</Name>
+      <Quantity units="STICK">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Warm.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Add sugar to a heavy bottomed sauce pan over medium heat.</Step>
+    <Step type="STEP" image="">Continue heating the sugar as it melts, stirring to prevent it from burning. Cover the pan with a lid when not stirring to prevent sugar crystals from forming on the sides of the pan.</Step>
+    <Step type="STEP" image="">Cook the sugar until it begins to bubble and brown, alternately covering and stirring.</Step>
+    <Step type="STEP" image="">Cook the sugar until it becomes amber brown, and it's a fine line line between caramelized and carbonized, so don't turn your back on it.</Step>
+    <Step type="STEP" image="">Remove from heat and stir in butter. Be prepared, it will boil up.</Step>
+    <Step type="STEP" image="">Once the butter is fully mixed in, add the vanilla and heavy cream, stir to blend fully</Step>
+    <Step type="STEP" image="">Allow to cool and use or refrigerate.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

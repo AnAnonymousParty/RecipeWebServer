@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Gringo Art's Salsa_20250816_102729.jpg" name="Gringo Art's Salsa" category="SAUCE" cuisine="MEXICAN">
+    <Yield amount="4" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".25" servingsUnit="CUP"/>
+  <Description>Make from fresh tomatoes in season or don't make it at all.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomatoes</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Red Onion</Name>
+      <Quantity units="EACH">.25</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">.25</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">4</Quantity>
+      <Prep>SMASHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Jelepeno Pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SEEDEDPLUS</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>SEEDEDPLUS</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="SPRIG">12</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dried Chiles</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>de Arbol, Chipotle, Pasilla, Ancho.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion Poeder</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic powder</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Molasses</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Optional, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Gringo%20Art's%20Salsa_20250816_100857.jpg">Peel tomatoes by blistering skins over stove burner.</Step>
+    <Step type="STEP" image="">Chop tomatoes and add to food processor.</Step>
+    <Step type="STEP" image="Gringo%20Art's%20Salsa_20250816_102131.jpg">Add onions, jalepeno, garlic, and seasonings to food processor.</Step>
+    <Step type="STEP" image="Gringo%20Art's%20Salsa_20250816_101937.jpg">Add onions to skillet with a little EVOO, add dried chiles and brown the onions.</Step>
+    <Step type="STEP" image="Gringo%20Art's%20Salsa_20250816_102248.jpg">Add onions and chiles and cilantro to food processor.</Step>
+    <Step type="STEP" image="">Process to desired smoothness.</Step>
+    <Step type="STEP" image="">Adjust seasoning, add a little molasses if needed depending on tartness of tomatoes.</Step>
+    <Step type="STEP" image="">Chill for an hour before serving.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

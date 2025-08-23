@@ -22,7 +22,10 @@
     <select id="categories" name="category" onChange="ApplyFilter();" style="margin: 0px 0px 0px 5px;">
      <% Object.keys(categoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, categoryTypes); %>
     </select>
-   </span>
+    <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
+    <button id="SearchBtn" onclick="HandleSearchBtnClkd();" style="margin: 0px 10px 0px 0px;" type="button">Search</button>
+    <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <%- recipesCnt %></span>
+   </span>   
    <span id="recipeTitleContainer" style="display: none; visibility: collapse; text-align: center;">
     <h2 id="recipeTitle">Placeholder</h2>
    </span>   

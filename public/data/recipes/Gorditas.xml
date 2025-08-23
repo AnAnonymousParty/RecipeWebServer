@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Gorditas_Gorditas.jpg" name="Gorditas" category="ENTREE_BEEF" cuisine="MEXICAN">
+    <Yield amount="6" units="EACH"/>
+    <Times prep="30" cook="120"/>
+  </Title>
+  <Nutrition calories="615" fat="20" carbs="85" protein="27" sugar="2" sodium="1030" fiber="7" servings="1" servingsUnit="ITEM"/>
+  <Description>Deep fried bread pouches filled with a beef and potato mixture.</Description>
+  <Prerequisites>
+    <Prerequisite>Cut sides of 1-quart zipper-lock bag, leaving bottom seam intact.</Prerequisite>
+    <Prerequisite>Line baking sheet with parchment paper.</Prerequisite>
+    <Prerequisite>Set wire rack in rimmed baking sheet and line with triple layer of paper towels.</Prerequisite>
+    <Prerequisite>Pre-heat deep fryer to 175F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="HEADING">
+      <Heading>Filling</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>85/15.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Russet Potato, Large</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICEMEDIUM</Prep>
+      <Notes>1/4 inch</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomato</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>DICEMEDIUM</Prep>
+      <Notes>Cored</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">3</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion, Medium</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cumin</Name>
+      <Quantity units="TSP">1.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>AP Flour</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Water</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Pastry Shell</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Masa Harina</Name>
+      <Quantity units="CUP">5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Colby Jack Cheese</Name>
+      <Quantity units="OZ">3</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Water</Name>
+      <Quantity units="CUP">3.6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="HEADING">Filling</Step>
+    <Step type="STEP" image="Gorditas_20250728_154958.jpg">Gather/prep ingredients.</Step>
+    <Step type="STEP" image="Gorditas_20250728_155516.jpg">Combine beef, potato, salt, and pepper in 12-inch nonstick skillet.</Step>
+    <Step type="STEP" image="Gorditas_20250728_155409.jpg">Cook over medium-high heat until beef and potato begin to brown, 6 to 8 minutes, breaking up meat with wooden spoon.</Step>
+    <Step type="STEP" image="Gorditas_20250728_155230.jpg">Add onion and tomato and cook until softened, 4 to 6 minutes.</Step>
+    <Step type="STEP" image="">Add garlic and cumin and cook until fragrant, about 30 seconds.</Step>
+    <Step type="STEP" image="Gorditas_20250728_155635.jpg">Stir in flour and cook for 1 minute.</Step>
+    <Step type="STEP" image="">Stir in water and bring to boil.</Step>
+    <Step type="STEP" image="">Cook until slightly thickened, about 1 minute. </Step>
+    <Step type="STEP" image="">Off heat, season with salt and pepper to taste.</Step>
+    <Step type="STEP" image="">Cover and set aside.</Step>
+    <Step type="HEADING">Pastry Shell</Step>
+    <Step type="STEP" image="">Whisk masa harina and salt together in large bowl.</Step>
+    <Step type="STEP" image="">Add room-temperature water and Colby Jack and knead with your hands until mixture is fully combined. (Mixture should have texture of Play-Doh and easily hold fingerprint.)</Step>
+    <Step type="STEP" image="Gorditas_20250728_163503.jpg">Divide dough into 12 level ½-cup portions and place on large plate; divide any remaining dough evenly among portions.</Step>
+    <Step type="STEP" image="">Working with 1 portion at a time (keep remaining dough covered with damp dish towel), roll dough into smooth ball between your wet hands, then return it to plate.</Step>
+    <Step type="STEP" image="">Enclose 1 dough ball in split bag. Using clear plate or dish (so you can see size of dough round), press dough into 4-inch round, about ½ inch thick. Smooth any cracks around edges of round; transfer to prepared sheet.</Step>
+    <Step type="STEP" image="Gorditas_20250728_164355.jpg">Repeat with remaining dough balls, placing second sheet of parchment on top once sheet is filled so you can stack dough rounds as needed.</Step>
+    <Step type="STEP" image="">Cover with damp dish towel. (Dough rounds can be covered tightly with plastic wrap, without dish towel, and refrigerated for up to 2 hours.)</Step>
+    <Step type="STEP" image="">Fry 4 dough rounds until golden brown on both sides, 5 minutes per side.</Step>
+    <Step type="STEP">Fry remaining dough rounds. Let fried rounds cool for 10 minutes. While rounds are cooling, reheat filling.</Step>
+    <Step type="STEP">Insert paring knife into side of fried dough rounds and split 180 degrees to create pocket. Stuff each pocket with ⅓ cup filling and serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add chopped chiles to filling.</Variation>
+    <Variation>Top with additional cheese, cilantro salsa.</Variation>
+  </Variations>
+</Recipe>

@@ -10,31 +10,31 @@
     <Prerequisite>Preheat oven to 250F.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Tomatoes</Name>
       <Quantity units="EACH">6</Quantity>
       <Prep>PEELED</Prep>
       <Notes>See &lt;a href='/GetRecipe?recipeName=Tomatoes'&gt;Tomatoes&lt;/a&gt; for peeling instructions.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>EVOO</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh thyme sprigs</Name>
       <Quantity units="EACH">12</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black papper</Name>
       <Quantity units="TSP">2</Quantity>
       <Prep>GROUND</Prep>
@@ -42,11 +42,11 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="Tomato%20Confit_Concasse2.jpg">Cut peeled tomatoes between the ribbed sections, discard the seeds and pulp (the idea is to end up with a bunch of flat tomato flesh sections).</Step>
-    <Step image="GetRecipe?recipeName=Tomatoes">Take a non-stick cookie sheet and sprinkle on it some sea salt and cracked black pepper.</Step>
-    <Step image="GetRecipe?recipeName=Tomatoes"> Dip each piece of tomato in olive oil and place them on the cookie sheet.  Sprinkle more salt and pepper onto the tomatoes and place a small sprig of thyme on each piece of tomato.</Step>
-    <Step image="GetRecipe?recipeName=Tomatoes">Bake at 250 for 1-2 hours, until they are not quite dried out.</Step>
-    <Step image="GetRecipe?recipeName=Tomatoes">Remove from oven, remove thyme and put the tomatoes and any remaining oil in a container, then fill the container with good, extra-virgin olive oil and cover. </Step>
+    <Step type="STEP" image="Tomato%20Confit_Concasse2.jpg">Cut peeled tomatoes between the ribbed sections, discard the seeds and pulp (the idea is to end up with a bunch of flat tomato flesh sections).</Step>
+    <Step type="STEP" image="">Take a non-stick cookie sheet and sprinkle on it some sea salt and cracked black pepper.</Step>
+    <Step type="STEP" image="Tomato%20Confit_20250726_084543.jpg"> Dip each piece of tomato in olive oil and place them on the cookie sheet.  Sprinkle more salt and pepper onto the tomatoes and place a small sprig of thyme on each piece of tomato.</Step>
+    <Step type="STEP" image="">Bake at 250 for 1-2 hours, until they are not quite dried out.</Step>
+    <Step type="STEP" image="">Remove from oven, remove thyme and put the tomatoes and any remaining oil in a container, then fill the container with good, extra-virgin olive oil and cover. </Step>
   </Method>
   <Variations/>
 </Recipe>

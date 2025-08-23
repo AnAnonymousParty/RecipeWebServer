@@ -10,19 +10,19 @@
     <Prerequisite>Set up grill for low heat smoking.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>St.Louis Ribs</Name>
       <Quantity units="SLAB">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>Silver skin removed.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Pork%20Rub'&gt;Rib Rub&lt;/a&gt;</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Beer</Name>
       <Quantity units="BOTTLE">1</Quantity>
       <Prep>NONE</Prep>

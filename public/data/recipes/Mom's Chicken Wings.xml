@@ -10,59 +10,59 @@
     <Prerequisite>Preheat oven to 350F.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Chicken Wings</Name>
       <Quantity units="EACH">24</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
       <Quantity units="STICK">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Butter</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>MELTED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher/Sea Salt</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>MSG</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Frank's Hot Sauce</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
-      <Notes/>
+      <Notes>We put that shit on everything.</Notes>
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Brush chicken wings with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Step>
-    <Step image="">Season chicken wings with salt, pepper and MSG.</Step>
-    <Step image="">Bake (or grill) chicken wings, turning once,  until browned, approximately 20 minutes.</Step>
-    <Step image="">In an oven safe dish, melt one stick of butter and add hot sauce.</Step>
-    <Step image="">Add chicken wings, toss to coat.</Step>
-    <Step image="">Reduce oven to 275F.</Step>
-    <Step image="">Cover dish and place in oven.</Step>
-    <Step image="">Cook chicken wings for at least an hour, or until bones can be easily pulled from wings.</Step>
-    <Step image="">Serve with &lt;a href='/GetRecipe?recipeName=Blue%20Cheese%20Dressing'&gt;Blue Cheese&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=Ranch%20Dressing'&gt;Ranch&lt;/a&gt; Dressing.
+    <Step type="STEP" image="">Brush chicken wings with &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt;.</Step>
+    <Step type="STEP" image="">Season chicken wings with salt, pepper and MSG.</Step>
+    <Step type="STEP" image="">Bake (or grill) chicken wings, turning once,  until browned, approximately 20 minutes.</Step>
+    <Step type="STEP" image="">In an oven safe dish, melt one stick of butter and add hot sauce.</Step>
+    <Step type="STEP" image="">Add chicken wings, toss to coat.</Step>
+    <Step type="STEP" image="">Reduce oven to 275F.</Step>
+    <Step type="STEP" image="">Cover dish and place in oven.</Step>
+    <Step type="STEP" image="">Cook chicken wings for at least an hour, or until bones can be easily pulled from wings.</Step>
+    <Step type="STEP" image="">Serve with &lt;a href='/GetRecipe?recipeName=Blue%20Cheese%20Dressing'&gt;Blue Cheese&lt;/a&gt; or &lt;a href='/GetRecipe?recipeName=Ranch%20Dressing'&gt;Ranch&lt;/a&gt; Dressing.
 </Step>
   </Method>
   <Variations>

@@ -149,17 +149,32 @@
    <tbody>
     <% 
      var ingredients = recipeData.Recipe.Ingredients[0].Ingredient;
-     for(ndx = 0; ndx < ingredients.length; ++ndx) { 
-      var prep  = enumUtils.GetDescFromPrepType(ingredients[ndx].Prep[0]);
-      var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
-    %> 
-    <tr>
-     <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %> </td>
-     <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %></td>
-     <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
-     <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
-     <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
-    </tr> 
+     
+     for (ndx = 0; ndx < ingredients.length; ++ndx) { 
+      var type = "INGREDIENT";
+      
+      if ("undefined" != typeof(ingredients[ndx].$)) {
+       type = ingredients[ndx].$.type;  
+      }
+     
+      if ("INGREDIENT" == type) {
+       var prep  = enumUtils.GetDescFromPrepType(ingredients[ndx].Prep[0]); 
+       var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
+     %>
+      <tr>
+       <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %> </td>
+       <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %></td>
+       <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
+       <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
+       <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
+      </tr>        
+     <%       
+      } else {
+     %> 
+      <tr>
+       <td colspan="5" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Heading[0]); %> </td>
+      </tr>        
+      <%}%> 
     <%}%>  
    </tbody>
   </table>
@@ -194,6 +209,14 @@
       var steps = recipeData.Recipe.Method[0].Step; 
 
       for (ndx = 0; ndx < steps.length; ++ndx) {
+       var type = "STEP";
+      
+       if ("undefined" != typeof(steps[ndx].$)) {
+        if ("undefined" != typeof(steps[ndx].$.type)) {
+         type = steps[ndx].$.type;
+        }
+       }
+     
        var step = "";
        
        if (undefined != steps[ndx]._) {
@@ -201,16 +224,17 @@
        } else {
         step = steps[ndx];
        }
-       
-       var imgSrc = "";
-       
-       if ("undefined" != typeof(steps[ndx].$)) {
-        if ("undefined" != typeof(steps[ndx].$.image)) {
-         if ("" != steps[ndx].$.image) {
-          imgSrc = steps[ndx].$.image; 
+        
+       if ("STEP" == type) {
+        var imgSrc = "";
+        
+        if ("undefined" != typeof(steps[ndx].$)) {
+         if ("undefined" != typeof(steps[ndx].$.image)) {
+          if ("" != steps[ndx].$.image) {
+           imgSrc = steps[ndx].$.image; 
+          }
          }
-        }
-       }       
+        }        
      %> 
       <tr>
        <td style="max-width: 500px; min-width: 500px; word-wrap: break-word;">
@@ -230,10 +254,16 @@
         %>
        </td>
       </tr> 
+     <% } else { %> 
+      <tr>
+       <td colspan="2" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;"><%- commonUtils.RenderNewlines(step); %> </td>
+      </tr>        
+     <%}%>      
      <%}%>  
     </tbody>
    </table>
   </div> 
+ </div>
  <%} %> 
  
  <br>

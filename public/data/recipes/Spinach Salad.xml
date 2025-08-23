@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Spinach Salad_SpinachSalad.webp" name="Spinach Salad" category="SALAD" cuisine="AMERICAN">
+  <Title image="Spinach Salad_20250814_182350.jpg" name="Spinach Salad" category="SALAD" cuisine="AMERICAN">
     <Yield amount="4" units="SERVING"/>
     <Times prep="20" cook="10"/>
   </Title>
@@ -11,73 +11,73 @@
     <Prerequisite>Fry bacon, reserve fat for dressing.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Spinach</Name>
       <Quantity units="CUP">8</Quantity>
       <Prep>CLEANED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Bacon</Name>
       <Quantity units="SLICE">3</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes>Fried semi-crisp.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Onion</Name>
       <Quantity units="CUP">.3</Quantity>
       <Prep>SLICED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
       <Quantity units="CLOVE">1</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Brown Sugar</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dijon Mustaed</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cider Vinegar</Name>
       <Quantity units="TBSP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher / Sea Salt</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TSP">.128</Quantity>
       <Prep>GROUND</Prep>
       <Notes>To taste.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Pepper Flakes</Name>
       <Quantity units="PINCH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Hard%20Boiled%20Eggs'&gt;Hard Boiled Eggs&lt;/a&gt;</Name>
       <Quantity units="EACH">4</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Bacon fat.</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
@@ -85,8 +85,12 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">In a skillet over low heat, whisk vinegar, garlic, brown sugar, mustard and seasonings with bacon drippings.</Step>
-    <Step image="">Place spinach, onion and eggs in a large warm bowl. Toss with warm dressing. Add cooked bacon and serve immediately.</Step>
+    <Step type="STEP" image="Spinach%20Salad_20250814_174412.jpg">Assemble ingredients.</Step>
+    <Step type="STEP" image="Spinach%20Salad_20250814_181748.jpg">In a skillet over low heat, whisk vinegar, garlic, brown sugar, mustard and seasonings with bacon drippings.</Step>
+    <Step type="STEP" image="Spinach%20Salad_20250814_181859.jpg">Place spinach, onion and bacon in a large warm bowl. Toss with warm dressing. </Step>
+    <Step type="STEP" image="Spinach%20Salad_20250814_182010.jpg">Once the spinach begins to wilt, serve with sliced boiled eggs.</Step>
   </Method>
-  <Variations/>
+  <Variations>
+    <Variation>Add &lt;a href='/GetRecipe?recipeName=Croutons'&gt;croutons&lt;/a&gt;, if desired.</Variation>
+  </Variations>
 </Recipe>

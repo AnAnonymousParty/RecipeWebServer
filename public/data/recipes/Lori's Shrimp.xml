@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Lori's Shrimp_20250810_165125.jpg" name="Lori's Shrimp" category="ENTREE_SEAFOOD" cuisine="AMERICAN">
+    <Yield amount="2" units="SERVING"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Cold boiled shrimp, cooked in beer and spices.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Medium shrimp, shell on.</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Beer, Lager</Name>
+      <Quantity units="BOTTLE">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Old Milwaukee, or Red Stripe.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lemon juice</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Fresh squeezed, about a lemon's worth.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Caynenne Pepper Flakes</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Bring pot of beer to a boil.</Step>
+    <Step type="STEP" image="">Add salt and cayenne pepper.</Step>
+    <Step type="STEP" image="Lori's%20Shrimp_20250810_163733.jpg">Add shrimp.</Step>
+    <Step type="STEP" image="">Cook until shrimp turn pink, 5 minutes or less.</Step>
+    <Step type="STEP" image="">Transfer shrimp to bowl filled with ice, toss.</Step>
+    <Step type="STEP" image="">Serve or chill and serve with &lt;a href='/GetRecipe?recipeName=Cocktail%20Sauce'&gt;Cocktail Sauce&lt;/a&gt;.
+</Step>
+  </Method>
+  <Variations/>
+</Recipe>

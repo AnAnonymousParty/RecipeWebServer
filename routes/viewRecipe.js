@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
  console.log("> viewRecipe(" + recipeName + ")");
- //console.log("JSON: ", JSON.stringify(recipeDataJson, null, 2));
+ console.log("JSON: ", JSON.stringify(recipeDataJson, null, 2));
  
  try {
   res.render('viewRecipe', { commonUtils: common, enumUtils: enums, recipeData: recipeDataJson });

@@ -10,43 +10,43 @@
     <Prerequisite>Preheat broiler.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Avocado</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>Seed removed.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Lime Juice</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>&lt;a href='/GetRecipe?recipeName=Parmesanr'&gt;Parmesane Cheese&lt;/a&gt;</Name>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>GRATE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh Herbs</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes>For garnisd, Basil, dill, tarragon...</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic Powder</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher/Sea Salt</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>White Pepper</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
@@ -54,10 +54,10 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Put the avocado halves into a baking dish. Sprinkle with garlic powder, salt and pepper. </Step>
-    <Step image="">Drizzle the lime juice over the avocodos. </Step>
-    <Step image="">Top with the Parmesan cheese. </Step>
-    <Step image="">Cook the avocados under a broiler for about 3 to 4 minutes or until cheese is melted. Garnish with chopped fresh herbs. </Step>
+    <Step type="STEP" image="">Put the avocado halves into a baking dish. Sprinkle with garlic powder, salt and pepper. </Step>
+    <Step type="STEP" image="">Drizzle the lime juice over the avocodos. </Step>
+    <Step type="STEP" image="">Top with the Parmesan cheese. </Step>
+    <Step type="STEP" image="">Cook the avocados under a broiler for about 3 to 4 minutes or until cheese is melted. Garnish with chopped fresh herbs. </Step>
   </Method>
   <Variations/>
 </Recipe>

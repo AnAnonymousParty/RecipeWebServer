@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cole Slaw_ColeSlaw.jpg" name="Cole Slaw" category="SALAD" cuisine="AMERICAN">
+    <Yield amount="8" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Use the following ratio for dressing: Mayo - 4 parts, White vinegar - 1 part, Pickle juice - 1 part.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Cabbage</Name>
+      <Quantity units="HEAD">.5</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Purple Cabbage</Name>
+      <Quantity units="HEAD">.5</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Carrot, large</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Onion</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Red Bell Pepper</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Matonnaise'&gt;Mayonnaise&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>White vinegar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sweet Pickle Juice</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher gherkins</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Combine mayonnaise, vinegar, pickle juice, minced pickles, sugar, salt and pepper in a mixing cup.</Step>
+    <Step type="STEP" image="">Combine cabbage, onion, bell pepper, carrot and green onion in a bowl.</Step>
+    <Step type="STEP" image="">Add dressing mixture and combine.</Step>
+    <Step type="STEP" image="">Chill for 30 minutes and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

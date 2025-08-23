@@ -6,32 +6,130 @@ function AddIngredient() {
  
  if (true == IsEmpty(ingredient)) {
   valid = false;
-  
+
   errs += "An ingredient must be provided.\n";
-  
+
   document.getElementById("ingredient2Add").style.backgroundColor = errBg;
  } else {
   document.getElementById("ingredient2Add").style.backgroundColor = validBg;
  } 
- 
+
  if (true == IsEmpty(quantity)) {
   valid = false;
-  
+
   errs += "Quantity must be a number 0.01 - 999.\n";
-  
+
   document.getElementById("quantity2Add").style.backgroundColor = errBg;
  } else {
   if (false == IsNumeric(quantity)) {
    valid = false;
-   
+ 
    errs += "Quantity must be a number 0.01 - 999.\n";
-   
+ 
    document.getElementById("quantity2Add").style.backgroundColor = errBg;
   } else {
    document.getElementById("quantity2Add").style.backgroundColor = validBg;
   }
- }
+ }   
+
+ if (false == valid) {
+  errs = "The following problems were detected and must be corrected:\n\n" + errs;
+  
+  alert(errs);
+  
+  return;
+ } 
  
+ var tbody = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
+ var row   = tbody.insertRow();
+ var cell  = row.insertCell();
+
+
+ var ingredient = document.getElementById("ingredient2Add").value;
+ 
+ cell.innerHTML      = ingredient + '<input name="ingredient"     type="hidden" value="' + ingredient + '">'
+                                  + '<input name="ingredientType" type="hidden" value="INGREDIENT">'; 
+ cell.style.maxWidth = "200px";
+ cell.style.minWidth = "200px";
+ cell.style.wordWrap = "break-word";
+
+
+ var quantity = document.getElementById("quantity2Add").value;
+ 
+ cell = row.insertCell();
+ 
+ cell.innerHTML       = quantity + '<input name="quantity" type="hidden" value="' + quantity + '">';
+ cell.style.maxWidth  = "70px"; 
+ cell.style.minWidth  = "70px"; 
+ cell.style.textAlign = "right"; 
+ cell.style.wordWrap  = "break-word";
+
+
+ var measure = GetDescFromUnitType(document.getElementById("measure2Add").value);
+ 
+ cell = row.insertCell();
+ 
+ cell.innerHTML      = measure + '<input name="measure" type="hidden" value="' + measure + '">';
+ cell.style.maxWidth = "80px"; 
+ cell.style.minWidth = "80px";  
+ cell.style.wordWrap = "break-word";
+
+
+ var prep = GetDescFromPrepType(document.getElementById("preparation2Add").value);
+ 
+ cell = row.insertCell();
+ 
+ cell.innerHTML      = prep + '<input name="prep" type="hidden" value="' + prep + '">';
+ cell.style.maxWidth = "130px"; 
+ cell.style.minWidth = "130px";  
+ cell.style.wordWrap = "break-word";
+
+
+ var notes = document.getElementById("notes2Add").value;
+ 
+ cell = row.insertCell();
+ 
+ cell.innerHTML      = notes + '<input name="notes" type="hidden" value="' + notes + '">'; 
+ cell.style.maxWidth = "200px"; 
+ cell.style.minWidth = "200px";  
+ cell.style.wordWrap = "break-word"; 
+ 
+ var cell = row.insertCell();
+ 
+ cell.colSpan         = "2";
+ cell.innerHTML       = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
+                      + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
+                      + "<button onclick=\"MoveIngredientUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
+                      + "<button onclick=\"MoveIngredientDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.style.maxWidth  = "150px"; 
+ cell.style.minWidth  = "150px"; 
+ cell.style.textAlign = "right";                 
+ 
+ var btnStyle = document.getElementById("delAllIngredientsBtn").style;
+ 
+ btnStyle.display    = "inline";
+ btnStyle.visibility = "visible"; 
+ 
+ HideAddIngredientPopup();
+}
+
+function AddIngredientHeading() {
+ var errs       = "";
+ var headingTxt = document.getElementById("heading2Add").value;
+ var ingredient = document.getElementById("ingredient2Add").value;
+ var quantity   = document.getElementById("quantity2Add").value;
+ var valid      = true;
+
+ if (true == IsEmpty(headingTxt)) {
+  valid = false;
+
+  errs += "A heading must be provided.\n";
+
+  document.getElementById("heading2Add").style.backgroundColor = errBg;
+ } else {
+  document.getElementById("heading2Add").style.backgroundColor = validBg;
+ }    
+
  if (false == valid) {
   errs = "The following problems were detected and must be corrected:\n\n" + errs;
   
@@ -44,57 +142,38 @@ function AddIngredient() {
  var row   = tbody.insertRow();
  var cell  = row.insertCell();
  
- var ingredient = document.getElementById("ingredient2Add").value;
- cell.style.maxWidth = "200px";
- cell.style.minWidth = "200px";
- cell.style.wordWrap = "break-word";
- cell.innerHTML = ingredient + '<input name="ingredient" type="hidden" value="' + ingredient + '">';
+ var heading = document.getElementById("heading2Add").value;
  
- var quantity = document.getElementById("quantity2Add").value;
- cell = row.insertCell();
- cell.style.maxWidth  = "70px"; 
- cell.style.minWidth  = "70px"; 
- cell.style.textAlign = "right"; 
- cell.style.wordWrap  = "break-word";
- cell.innerHTML = quantity + '<input name="quantity" type="hidden" value="' + quantity + '">';
+ cell.colSpan          = "5";
+ cell.innerHTML        = heading + '<input name="ingredient"     type="hidden" value="' + heading + '">'
+                                 + '<input name="ingredientType" type="hidden" value="HEADING">'
+                                 + '<input name="quantity"       type="hidden" value="0">'
+                                 + '<input name="measure"        type="hidden" value="">'
+                                 + '<input name="prep"           type="hidden" value="">'
+                                 + '<input name="notes"          type="hidden" value="">'; 
+ cell.style.fontWeight = "bold";
+ cell.style.maxWidth   = "500px";
+ cell.style.minWidth   = "700px";
+ cell.style.textAlign  = "center"; 
+ cell.style.wordWrap   = "break-word";                          
  
- var measure = GetDescFromUnitType(document.getElementById("measure2Add").value);
- cell = row.insertCell();
- cell.style.maxWidth = "80px"; 
- cell.style.minWidth = "80px";  
- cell.style.wordWrap = "break-word";
- cell.innerHTML = measure + '<input name="measure" type="hidden" value="' + measure + '">';
+ var cell  = row.insertCell();
  
- var prep = GetDescFromPrepType(document.getElementById("preparation2Add").value);
- cell = row.insertCell();
- cell.style.maxWidth = "130px"; 
- cell.style.minWidth = "130px";  
- cell.style.wordWrap = "break-word";
- cell.innerHTML = prep + '<input name="prep" type="hidden" value="' + prep + '">';
- 
- var notes = document.getElementById("notes2Add").value;
- cell = row.insertCell();
- cell.style.maxWidth = "200px"; 
- cell.style.minWidth = "200px";  
- cell.style.wordWrap = "break-word";
- cell.innerHTML = notes + '<input name="notes" type="hidden" value="' + notes + '">';
- 
- cell = row.insertCell();
- cell.colspan         = "2";
+ cell.colSpan         = "2";
+ cell.innerHTML       = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
+                      + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
+                      + "<button onclick=\"MoveIngredientUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
+                      + "<button onclick=\"MoveIngredientDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
- cell.style.textAlign = "right"; 
- cell.innerHTML = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
-                + "<button onclick=\"MoveIngredientUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
-                + "<button onclick=\"MoveIngredientDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.style.textAlign = "right";                 
  
  var btnStyle = document.getElementById("delAllIngredientsBtn").style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddIngredientPopup();
+ HideAddIngredientHeadingPopup();
 }
 
 function AddPrerequisite() { 
@@ -213,20 +292,25 @@ function AddStep() {
   
  var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
  var row   = tbody.insertRow();
+ 
  var cell  = row.insertCell(-1);
  
- cell.style.maxWidth = "400px";
- cell.style.minWidth = "400px";
- cell.style.wordWrap = "break-word";
- cell.innerHTML = document.getElementById("step2Add").value 
-                + '<input name="step" type="hidden" value="' + document.getElementById("step2Add").value + '">';
+ cell.innerHTML        = document.getElementById("step2Add").value 
+                       + '<input name="step"     type="hidden" value="' + document.getElementById("step2Add").value + '">'
+                       + '<input name="stepType" type="hidden" value="STEP">'; 
+ cell.style.maxWidth   = "400px";
+ cell.style.minWidth   = "400px";  
+ cell.style.wordWrap   = "break-word";                       
+ 
  
  cell = row.insertCell(-1); 
+
+ cell.innerHTML      = '<img height="80px" src="' + ("" == imgName ? '' : imgSrc) + '" ' + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
+                     + '<input name="stepImage" type="hidden" value="' + imgName + '">';
  cell.style.maxWidth = "100px";
  cell.style.minWidth = "100px";
- cell.style.wordWrap = "break-word";
- cell.innerHTML = '<img height="80px" src="' + ("" == imgName ? '' : imgSrc) + '" ' + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
-                + '<input name="stepImage" type="hidden" value="' + imgName + '">';
+ cell.style.wordWrap = "break-word";                
+ 
  
  cell = row.insertCell(-1);
  cell.colspan         = "2";
@@ -244,6 +328,64 @@ function AddStep() {
  btnStyle.visibility = "visible";
  
  HideAddStepPopup();
+}
+
+function AddStepHeading() {
+ var errs         = "";
+ var stepHeading  = document.getElementById("stepHeading2Add").value;
+ var valid        = true;
+ 
+ if (true == IsEmpty(stepHeading)) {
+  valid = false;
+  
+  errs += "Step heading text must be provided.\n";
+  
+  document.getElementById("stepHeading2Add").style.backgroundColor = errBg;
+ } else {
+  document.getElementById("stepHeading2Add").style.backgroundColor = validBg;
+ } 
+  
+ if (false == valid) {
+  errs = "The following problems were detected and must be corrected:\n\n" + errs;
+  
+  alert(errs);
+  
+  return;
+ }  
+  
+ var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+ var row   = tbody.insertRow();
+ 
+ var cell  = row.insertCell(-1);
+ 
+ cell.colSpan          = "2";
+ cell.innerHTML        = document.getElementById("stepHeading2Add").value 
+                       + '<input name="step"      type="hidden" value="' + document.getElementById("stepHeading2Add").value + '">'
+                       + '<input name="stepType"  type="hidden" value="HEADING">'
+                       + '<input name="stepImage" type="hidden" value="">'    
+ cell.style.fontWeight = "bold";                      
+ cell.style.minWidth   = "400px";
+ cell.style.textAlign  = "center"; 
+ cell.style.wordWrap   = "break-word";
+
+ 
+ cell = row.insertCell(-1);
+ 
+ cell.colspan         = "2";
+ cell.style.maxWidth  = "150px"; 
+ cell.style.minWidth  = "150px"; 
+ cell.style.textAlign = "right"; 
+ cell.innerHTML       = "<button onclick=\"DeleteStep("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
+                      + "<button onclick=\"EditStep("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
+                      + "<button onclick=\"MoveStepUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
+                      + "<button onclick=\"MoveStepDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+
+ var btnStyle = document.getElementById("delAllStepsBtn").style;
+ 
+ btnStyle.display    = "inline";
+ btnStyle.visibility = "visible";
+ 
+ HideAddStepHeadingPopup();
 }
 
 function AddVariation() { 
@@ -336,19 +478,28 @@ function DeleteAllRecipes() {
  
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
-   var data = xmlhttp.responseText;
-   
-   if ("" == data) { 
-    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
-    HideElement("DeleteAllRecipesBtn");
-   } else {   
-    document.getElementById("recipesListContainer").innerHTML = data;
-    UnHideElement("DeleteAllRecipesBtn", "inline");
+  if (4 == xmlhttp.readyState) {
+   if (200 == xmlhttp.status) {
+    var data = xmlhttp.responseText;
+    
+    const parser = new DOMParser();
+    const doc    = parser.parseFromString(data, 'text/html');
+    
+    var filesListCnt = doc.getElementById("filesListCnt").value;
+    
+    document.getElementById("displayCnt").innerText = filesListCnt;   
+    
+    if ("" == data) { 
+     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+     HideElement("DeleteAllRecipesBtn");
+    } else {   
+     document.getElementById("recipesListContainer").innerHTML = data;
+     UnHideElement("DeleteAllRecipesBtn", "inline");
+    }
    }
-  }
-  else {
-   // TODO: Handle failure, if needed.
+   else {
+    // TODO: Handle failure, if needed.
+   }
   }
  }
     
@@ -471,24 +622,33 @@ function DeleteRecipe(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
-   var data = xmlhttp.responseText;
+  if (4 == xmlhttp.readyState) {
+   if (200 == xmlhttp.status) {
+    var data = xmlhttp.responseText;
     
-   if ("" == data) { 
-    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
-    HideElement("DeleteAllRecipesBtn");
-   } else {   
-    document.getElementById("recipesListContainer").innerHTML = data;
-    UnHideElement("DeleteAllRecipesBtn", "inline");
+    const parser = new DOMParser();
+    const doc    = parser.parseFromString(data, 'text/html');
+    
+    var filesListCnt = doc.getElementById("filesListCnt").value;
+    
+    document.getElementById("displayCnt").innerText = filesListCnt;
+       
+    if ("" == data) { 
+     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+     HideElement("DeleteAllRecipesBtn");
+    } else {   
+     document.getElementById("recipesListContainer").innerHTML = data;
+     UnHideElement("DeleteAllRecipesBtn", "inline");
+    }
    }
-  }
-  else {
-   // TODO: Handle failure, if needed.
+   else {
+    // TODO: Handle failure, if needed.
+   }
   }
  }
  
  var params = encodeURIComponent(recipeName);
-    
+ 
  xmlhttp.open("GET", "/DeleteRecipe?recipe2Delete=" + params, true);
  
  xmlhttp.send(); 
@@ -606,57 +766,69 @@ function EditIngredient(rowNum) {
  var ingredient2Edit = "";
  var notes2Edit      = "";
  var quantity2Edit   = "";
+ var type            = "INGREDIENT";
  
  for (var elemNdx = 0; elemNdx < row.cells[0].children.length; ++elemNdx) {
   var elem = row.cells[0].children[elemNdx];
   
   if ("ingredient" == elem.name) {
    ingredient2Edit = elem.value;
-   
-   break;
   }
- }
- 
- for (var elemNdx = 0; elemNdx < row.cells[4].children.length; ++elemNdx) {
-  var elem = row.cells[4].children[elemNdx];
   
-  if ("notes" == elem.name) {
-   notes2Edit = elem.value;
-   
-   break;
+  if ("ingredientType" == elem.name) {
+   type = elem.value;
   }
  }
  
-   for (var elemNdx = 0; elemNdx < row.cells[1].children.length; ++elemNdx) {
-  var elem = row.cells[1].children[elemNdx];
+ if ("INGREDIENT" == type) {
+  for (var elemNdx = 0; elemNdx < row.cells[4].children.length; ++elemNdx) {
+   var elem = row.cells[4].children[elemNdx];
+   
+   if ("notes" == elem.name) {
+    notes2Edit = elem.value;
+    
+    break;
+   }
+  }
   
-  if ("quantity" == elem.name) {
-   quantity2Edit = elem.value;
+  for (var elemNdx = 0; elemNdx < row.cells[1].children.length; ++elemNdx) {
+   var elem = row.cells[1].children[elemNdx];
    
-   break;
+   if ("quantity" == elem.name) {
+    quantity2Edit = elem.value;
+    
+    break;
+   }
   }
- }
-
- document.getElementById("ingredientRowId").value = rowNum;
- document.getElementById("ingredient2Edit").value = ingredient2Edit;
- document.getElementById("quantity2Edit").value   = quantity2Edit;
- document.getElementById("notes2Edit").value      = notes2Edit;
- 
- var selectedMeasure = GetEnumFromUnitDesc(row.cells[2].innerText);
- 
- if ("UNDEFINED" != selectedMeasure) {
-  document.getElementById("measure2Edit").value = selectedMeasure;
- }
- 
+  
+  document.getElementById("ingredientRowId").value = rowNum;
+  document.getElementById("ingredient2Edit").value = ingredient2Edit;
+  document.getElementById("quantity2Edit").value   = quantity2Edit;
+  document.getElementById("notes2Edit").value      = notes2Edit;
+  
+  var selectedMeasure = GetEnumFromUnitDesc(row.cells[2].innerText);
+  
+  if ("UNDEFINED" != selectedMeasure) {
+   document.getElementById("measure2Edit").value = selectedMeasure;
+  }
+  
   var selectedPrep = GetEnumFromPrepDesc(row.cells[3].innerText);
- 
- if ("UNDEFINED" != selectedPrep) {
-  document.getElementById("preparation2Edit").value = selectedPrep;
+  
+  if ("UNDEFINED" != selectedPrep) {
+   document.getElementById("preparation2Edit").value = selectedPrep;
+  }
  }
  
  document.getElementById("overlayContainer").className = "overlay";
  
- ToggleVisibility("editIngredientPopup");
+ if ("INGREDIENT" == type) {
+  ToggleVisibility("editIngredientPopup");
+ } else {
+  document.getElementById("headingRowId").value = rowNum;
+  document.getElementById("heading2Edit").value = ingredient2Edit;
+  
+  ToggleVisibility("editIngredientHeadingPopup");
+ }
 }
 
 function EditPrerequisite(rowNum) { 
@@ -725,16 +897,19 @@ function EditStep(rowNum) {
  var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
  var row   = tbody.rows[rowNum];
  
-  var step2Edit = "";
+ var step2Edit = "";
+ var type      = "STEP";
  
  for (var elemNdx = 0; elemNdx < row.cells[0].children.length; ++elemNdx) {
   var elem = row.cells[0].children[elemNdx];
   
   if ("step" == elem.name) {
    step2Edit = elem.value;
-   
-   break;
   }
+  
+  if ("stepType" == elem.name) {
+   type = elem.value;
+  }  
  }
 
  document.getElementById("stepRowId").value = rowNum;
@@ -762,11 +937,40 @@ function EditStep(rowNum) {
   UnHideElement("image2Edit");
  }  
  
- // Handle image here.
+ document.getElementById("overlayContainer").className = "overlay";
+ 
+ if ("STEP" == type) {
+  ToggleVisibility("editStepPopup");
+ } else {
+  document.getElementById("stepHeadingRowId").value = rowNum;
+  document.getElementById("stepHeading2Edit").value = step2Edit;
+  
+  ToggleVisibility("editStepHeadingPopup");
+ }
+} 
+
+function EditStepHeading(rowNum) {
+ var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+ var row   = tbody.rows[rowNum];
+ 
+ var stepHeading2Edit = "";
+ 
+ for (var elemNdx = 0; elemNdx < row.cells[0].children.length; ++elemNdx) {
+  var elem = row.cells[0].children[elemNdx];
+  
+  if ("step" == elem.name) {
+   stepHeading2Edit = elem.value;
+   
+   break;
+  }
+ }
+
+ document.getElementById("stepHeadingRowId").value = rowNum;
+ document.getElementById("stepHeading2Edit").value = stepHeading2Edit;  
  
  document.getElementById("overlayContainer").className = "overlay";
  
- ToggleVisibility("editStepPopup");
+ ToggleVisibility("editStepHeadingPopup");
 } 
 
 function EditVariation(rowNum) { 
@@ -795,13 +999,27 @@ function EditVariation(rowNum) {
 function HandleAddIngredientBtnClkd() {
  document.getElementById("overlayContainer").className = "overlay";
  
+ document.getElementById("heading2Add").value    = ""; 
  document.getElementById("ingredient2Add").value = "";
  document.getElementById("notes2Add").value      = "";
- document.getElementById("quantity2Add").value   = "";
+ document.getElementById("quantity2Add").value   = "1";
  
  ToggleVisibility("addIngredientPopup");
  
  document.getElementById('ingredient2Add').focus();
+}
+
+function HandleAddIngredientHeadingBtnClkd() {
+ document.getElementById("overlayContainer").className = "overlay";
+ 
+ document.getElementById("heading2Add").value    = ""; 
+ document.getElementById("ingredient2Add").value = "";
+ document.getElementById("notes2Add").value      = "";
+ document.getElementById("quantity2Add").value   = "";
+ 
+ ToggleVisibility("addIngredientHeadingPopup");
+ 
+ document.getElementById('heading2Add').focus();
 }
 
 function HandleAddPrerequisiteBtnClkd() {
@@ -827,6 +1045,16 @@ function HandleAddStepBtnClkd() {
  ToggleVisibility("addStepPopup");
  
  document.getElementById('step2Add').focus();
+}
+
+function HandleAddStepHeadingBtnClkd() {
+ document.getElementById("overlayContainer").className = "overlay";
+ 
+ document.getElementById("stepHeading2Add").value = "";
+ 
+ ToggleVisibility("addStepHeadingPopup");
+ 
+ document.getElementById('stepHeading2Add').focus();
 }
 
 function HandleAddVariationBtnClkd() {
@@ -863,10 +1091,64 @@ function HandleDelAllVariationsBtnClkd() {
  }
 }
 
+function HandleSearchBtnClkd() {
+ var xmlhttpReq = new XMLHttpRequest();
+ 
+ var searchTerm = document.getElementById("searchTerm").value;
+ 
+ if ("" == searchTerm) {
+  alert("Please enter a search term to perform a search.");
+  
+  return;  
+ }
+ 
+ xmlhttpReq.open("GET", "/SearchRecipes?searchTerm=" + searchTerm); 
+
+ xmlhttpReq.onload = function() {
+   HideElement("editPageBtns");
+   HideElement("recipeTitleContainer");
+   HideElement("viewPageBtns");
+   
+   UnHideElement("indexPageBtns"); 
+   UnHideElement("filtersContainer");
+  
+  if (4 == xmlhttpReq.readyState && 200 === xmlhttpReq.status) {
+   var data = xmlhttpReq.responseText;
+   
+   const parser = new DOMParser();
+   const doc    = parser.parseFromString(data, 'text/html');
+   
+   var filesListCnt = doc.getElementById("filesListCnt").value;
+    
+   document.getElementById("displayCnt").innerText = filesListCnt;
+   
+   if ("" == data) { 
+    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
+    
+    HideElement("DeleteAllRecipesBtn");
+   } else {   
+    document.getElementById("recipesListContainer").innerHTML = data;
+    
+    UnHideElement("DeleteAllRecipesBtn", "inline");
+   }
+  } else {
+   document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
+  }
+ };
+
+ xmlhttpReq.send(); 
+} 
+
 function HideAddIngredientPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
  ToggleVisibility("addIngredientPopup");
+}
+
+function HideAddIngredientHeadingPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ ToggleVisibility("addIngredientHeadingPopup");
 }
 
 function HideAddPrerequisitePopup() {
@@ -887,6 +1169,12 @@ function HideAddStepPopup() {
  ToggleVisibility("addStepPopup");
 }
 
+function HideAddStepHeadingPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ ToggleVisibility("addStepHeadingPopup");
+}
+
 function HideAddVariationPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
@@ -899,6 +1187,12 @@ function HideEditIngredientPopup() {
  ToggleVisibility("editIngredientPopup");
 }
 
+function HideEditIngredientHeadingPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ ToggleVisibility("editIngredientHeadingPopup");
+}
+
 function HideEditPrerequisitePopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
@@ -909,6 +1203,12 @@ function HideEditStepPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
  ToggleVisibility("editStepPopup");
+}
+
+function HideEditStepHeadingPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ ToggleVisibility("editStepHeadingPopup");
 }
 
 function HideEditVariationPopup() {
@@ -948,11 +1248,15 @@ function HideRecipeExistsWarningPopup() {
 }
 
 function InitPage() {
- if (0 == document.getElementById("recipesListContainer").children.length) {
+ var recipesCnt = document.getElementById("recipesListContainer").children.length;
+ 
+ if (0 == recipesCnt) {
   document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
   
   HideElement("DeleteAllRecipesBtn");
  } else {
+   document.getElementById("displayCnt").innerText = recipesCnt;
+   
    UnHideElement("DeleteAllRecipesBtn", "inline");
  }
 }
@@ -960,69 +1264,89 @@ function InitPage() {
 function MoveIngredientDown(rowNum) {
  var tbody = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
  
-  if (rowNum == tbody.rows.length) {
-  return;
+ if (rowNum == tbody.rows.length - 1) {
+  return;  // Already at the bottom.
  }
  
- var currentRow = tbody.rows[rowNum];
- var targetRow  = tbody.rows[rowNum + 1];
+ var currentRow = tbody.rows[rowNum].innerHTML;
+ var targetRow  = tbody.rows[rowNum + 1].innerHTML;
  
- for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
-  if (5 == colNdx) { 
-   continue;  // Don't swap the buttons, keep the row identifiers consistent.
-  }
+ tbody.rows[rowNum + 1].innerHTML = currentRow;
+ tbody.rows[rowNum].innerHTML     = targetRow; 
+ 
+ for (var rowNdx = 0; rowNdx < tbody.rows.length; ++rowNdx) {
+  var cellCnt = tbody.rows[rowNdx].cells.length;
   
-  var currentCell = currentRow.cells[colNdx].innerHTML;
+  var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
-  
-  targetRow.cells[colNdx].innerHTML = currentCell;
- }
+  cell.innerHTML = "<button onclick=\"DeleteIngredient(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditIngredient(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveIngredientUp("
+                 + rowNdx 
+                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveIngredientDown(" 
+                 + rowNdx
+                 + ");\" type=\"button\">↓</button>";
+ } 
 }
 
 function MoveIngredientUp(rowNum) {
  if (0 == rowNum) {
-  return;
+  return;  // Row is as up as it can be.
  } 
  
  var tbody      = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
- var currentRow = tbody.rows[rowNum];
+ var currentRow = tbody.rows[rowNum].innerHTML;
+ var targetRow  = tbody.rows[rowNum - 1].innerHTML;
  
- var targetRow  = tbody.rows[rowNum - 1];
+ tbody.rows[rowNum - 1].innerHTML = currentRow;
+ tbody.rows[rowNum].innerHTML     = targetRow; 
  
- for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
-  if (5 == colNdx) { 
-   continue;  // Don't swap the buttons, keep the row identifiers consistent.
-  }
+ for (var rowNdx = 0; rowNdx < tbody.rows.length; ++rowNdx) {
+  var cellCnt = tbody.rows[rowNdx].cells.length;
   
-  var currentCell = currentRow.cells[colNdx].innerHTML;
+  var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
-  
-  targetRow.cells[colNdx].innerHTML = currentCell;
+  cell.innerHTML = "<button onclick=\"DeleteIngredient(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditIngredient(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveIngredientUp("
+                 + rowNdx 
+                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveIngredientDown(" 
+                 + rowNdx
+                 + ");\" type=\"button\">↓</button>";
  }
 }
 
 function MoveStepDown(rowNum) {
  var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
  
-  if (rowNum == tbody.rows.length) {
+ if (rowNum == tbody.rows.length - 1) {
   return;
  }
  
- var currentRow = tbody.rows[rowNum];
- var targetRow  = tbody.rows[rowNum + 1];
+ var currentRow = tbody.rows[rowNum].innerHTML;
+ var targetRow  = tbody.rows[rowNum + 1].innerHTML;
  
- for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
-  if (2 == colNdx) { 
-   continue;  // Don't swap the buttons, keep the row identifiers consistent.
-  }
+ tbody.rows[rowNum + 1].innerHTML = currentRow;
+ tbody.rows[rowNum].innerHTML     = targetRow; 
+ 
+ for (var rowNdx = 0; rowNdx < tbody.rows.length; ++rowNdx) {
+  var cellCnt = tbody.rows[rowNdx].cells.length;
   
-  var currentCell = currentRow.cells[colNdx].innerHTML;
+  var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
-  
-  targetRow.cells[colNdx].innerHTML = currentCell;
+  cell.innerHTML = "<button onclick=\"DeleteStep(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditStep(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveStepUp("
+                 + rowNdx 
+                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveStepDown(" 
+                 + rowNdx
+                 + ");\" type=\"button\">↓</button>";
  }
 }
 
@@ -1032,20 +1356,26 @@ function MoveStepUp(rowNum) {
  } 
  
  var tbody      = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
- var currentRow = tbody.rows[rowNum];
+ var currentRow = tbody.rows[rowNum].innerHTML;
+ var targetRow  = tbody.rows[rowNum - 1].innerHTML;
  
- var targetRow  = tbody.rows[rowNum - 1];
+ tbody.rows[rowNum - 1].innerHTML = currentRow;
+ tbody.rows[rowNum].innerHTML     = targetRow; 
  
- for (var colNdx = 0; colNdx < currentRow.cells.length; ++colNdx) {
-  if (2 == colNdx) { 
-   continue;  // Don't swap the buttons, keep the row identifiers consistent.
-  }
+ for (var rowNdx = 0; rowNdx < tbody.rows.length; ++rowNdx) {
+  var cellCnt = tbody.rows[rowNdx].cells.length;
   
-  var currentCell = currentRow.cells[colNdx].innerHTML;
+  var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  currentRow.cells[colNdx].innerHTML = targetRow.cells[colNdx].innerHTML;
-  
-  targetRow.cells[colNdx].innerHTML = currentCell;
+  cell.innerHTML = "<button onclick=\"DeleteStep(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditStep(" 
+                 + rowNdx 
+                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveStepUp("
+                 + rowNdx 
+                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveStepDown(" 
+                 + rowNdx
+                 + ");\" type=\"button\">↓</button>";
  }
 }
 
@@ -1129,26 +1459,26 @@ function SaveIngredient() {
  
  if (true == IsEmpty(ingredient)) {
   valid = false;
-  
+ 
   errs += "An ingredient must be provided.\n";
-  
+ 
   document.getElementById("ingredient2Edit").style.backgroundColor = errBg;
  } else {
   document.getElementById("ingredient2Edit").style.backgroundColor = validBg;
  } 
- 
+
  if (true == IsEmpty(quantity)) {
   valid = false;
-  
+ 
   errs += "Quantity must be a number 0 - 999.\n";
-  
+ 
   document.getElementById("quantity2Edit").style.backgroundColor = errBg;
  } else {
   if (false == IsNumeric(quantity)) {
    valid = false;
-   
+  
    errs += "Quantity must be a number 0 - 999.\n";
-   
+  
    document.getElementById("quantity2Edit").style.backgroundColor = errBg;
   } else {
    document.getElementById("quantity2Edit").style.backgroundColor = validBg;
@@ -1167,7 +1497,8 @@ function SaveIngredient() {
  var tbody  = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
 
  tbody.rows[rowNdx].cells[0].innerHTML = ingredient
-                                       + '<input name="ingredient" type="hidden" value="' + ingredient + '">';
+                                       + '<input name="ingredient"     type="hidden" value="' + ingredient + '">'
+                                       + '<input name="ingredientType" type="hidden" value="INGREDIENT">'; 
  tbody.rows[rowNdx].cells[1].innerHTML = quantity
                                        + '<input name="quantity" type="hidden" value="' + quantity + '">'; 
  tbody.rows[rowNdx].cells[2].innerHTML = measure
@@ -1178,6 +1509,72 @@ function SaveIngredient() {
                                        + '<input name="notes" type="hidden" value="' + notes + '">'; 
  HideEditIngredientPopup();
 } 
+
+function SaveIngredientHeading() {
+ var errs        = "";
+ var headingTxt  = document.getElementById("heading2Edit").value;
+ var valid       = true;
+ 
+  if (true == IsEmpty(headingTxt)) {
+   valid = false;
+  
+   errs += "A heading must be provided.\n";
+  
+   document.getElementById("heading2Edit").style.backgroundColor = errBg;
+  } else {
+   document.getElementById("heading2Edit").style.backgroundColor = validBg;
+  } 
+ 
+ if (false == valid) {
+  errs = "The following problems were detected and must be corrected:\n\n" + errs;
+  
+  alert(errs);
+  
+  return;
+ } 
+ 
+ var rowNdx = document.getElementById("headingRowId").value;
+ var tbody  = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
+
+ tbody.rows[rowNdx].cells[0].innerHTML = headingTxt
+                                       + '<input name="ingredient"     type="hidden" value="' + headingTxt + '">'
+                                       + '<input name="ingredientType" type="hidden" value="HEADING">'
+                                       + '<input name="quantity"       type="hidden" value="0">'
+                                       + '<input name="measure"        type="hidden" value="BAG">'
+                                       + '<input name="prep"           type="hidden" value="NONE">'
+                                       + '<input name="notes"          type="hidden" value=" ">'; 
+ HideEditIngredientHeadingPopup();
+} 
+
+function SavePDF(recipeName) {
+ var xmlhttp = new XMLHttpRequest();
+ 
+  xmlhttp.responseType = "blob";
+    
+ xmlhttp.onreadystatechange = function() {
+  if (4 == xmlhttp.readyState) {
+   if (200 == xmlhttp.status) {
+    let blob = new Blob([xmlhttp.response], {type: 'application/octet-stream'});
+    let uri = URL.createObjectURL(blob);
+    let link = document.createElement("a");
+    
+    link.download = recipeName + ".pdf";
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+   } else {
+    alert("Unable to download PDF");
+   }
+  }
+ }
+
+ var params = encodeURIComponent(recipeName);
+    
+ xmlhttp.open("GET", "/SavePDF?recipeName=" + params, true);
+ 
+ xmlhttp.send();  
+}
 
 function SavePrerequisite() {
  var errs         = "";
@@ -1356,14 +1753,14 @@ function SaveStep() {
  var tbody  = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
 
  tbody.rows[rowNdx].cells[0].innerHTML = step
-                                       + '<input name="step" type="hidden" value="' + step + '">';
+                                       + '<input name="step"     type="hidden" value="' + step + '">'
+                                       + '<input name="stepType" type="hidden" value="STEP">';
  
  var imgUri  = document.getElementById("image2Edit").src;
  var imgName = imgUri.substring(imgUri.lastIndexOf("/") + 1, imgUri.length);
  
  tbody.rows[rowNdx].cells[1].innerHTML = '<img height="80px" src="' + ("" == imgName ? '' : imgUri) + '" ' + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
                                        + '<input name="stepImage" type="hidden" value="' + imgName + '">';
-
  if ("" == imgName) {
   HideElement("image2Edit");
   HideElement("delImgBtn");
@@ -1376,6 +1773,39 @@ function SaveStep() {
 
  HideEditStepPopup();
 } 
+
+function SaveStepHeading() {
+ var errs       = "";
+ var headingTxt = document.getElementById("stepHeading2Edit").value;
+ var valid      = true;
+ 
+ if (true == IsEmpty(headingTxt)) {
+  valid = false;
+  
+  errs += "Heading text must be provided.\n";
+  
+  document.getElementById("stepHeading2Edit").style.backgroundColor = errBg;
+ } else {
+  document.getElementById("stepHeading2Edit").style.backgroundColor = validBg;
+ } 
+  
+ if (false == valid) {
+  errs = "The following problems were detected and must be corrected:\n\n" + errs;
+  
+  alert(errs);
+  
+  return;
+ }  
+ 
+ var rowNdx = document.getElementById("stepHeadingRowId").value;
+ var tbody  = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+
+ tbody.rows[rowNdx].cells[0].innerHTML = headingTxt
+                                       + '<input name="step"      type="hidden" value="' + headingTxt + '">'
+                                       + '<input name="stepType"  type="hidden" value="HEADING">'
+                                       + '<input name="stepImage" type="hidden" value="">';
+ HideEditStepHeadingPopup();
+}
 
 function SaveVariation() {
  var errs      = "";
@@ -1451,20 +1881,29 @@ function ShowRecipesList(category, cuisine) {
    UnHideElement("indexPageBtns"); 
    UnHideElement("filtersContainer");
   
-  if (4 == xmlhttpReq.readyState && 200 === xmlhttpReq.status) {
-   var data = xmlhttpReq.responseText;
-   
-   if ("" == data) { 
-    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
+  if (4 == xmlhttpReq.readyState) {
+   if (200 === xmlhttpReq.status) {
+    var data = xmlhttpReq.responseText;
     
-    HideElement("DeleteAllRecipesBtn");
-   } else {   
-    document.getElementById("recipesListContainer").innerHTML = data;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
     
-    UnHideElement("DeleteAllRecipesBtn", "inline");
+    var filesListCnt = doc.getElementById("filesListCnt").value;
+    
+    document.getElementById("displayCnt").innerText = filesListCnt;
+    
+    if ("" == data) { 
+     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
+     
+     HideElement("DeleteAllRecipesBtn");
+    } else {   
+     document.getElementById("recipesListContainer").innerHTML = data;
+     
+     UnHideElement("DeleteAllRecipesBtn", "inline");
+    }
+   } else {
+    document.getElementById("recipesListContainer").innerHTML = "No recipes can be displayed.";
    }
-  } else {
-   document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
   }
  };
 

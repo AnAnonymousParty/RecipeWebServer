@@ -8,67 +8,67 @@
   <Description>Fresh corn, avocado and crisp bacon in a tangy dressing.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh corn off the cob.</Name>
       <Quantity units="CUP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Large Avocado</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>SLICED</Prep>
       <Notes>Peels and seed discarded.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Green onions</Name>
       <Quantity units="EACH">4</Quantity>
       <Prep>SLICED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Jalepeno pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>SLICED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Bacon, cooked</Name>
       <Quantity units="PIECE">6</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cilantro</Name>
       <Quantity units="BUNCH">1</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Plain greek yogurt</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Lime Zest</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>One lime's worth.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red pepper flakes</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black pepper</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>GROUND</Prep>
       <Notes>To taste.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>

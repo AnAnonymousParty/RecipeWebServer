@@ -21,6 +21,8 @@ function FormatTime(timeVal) {
 
 export
 function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuisineFilter) {
+
+ var listCnt = 0;
  var htmlRsp = "";
  
  var filesList = fs.readdirSync(directoryPath);
@@ -82,6 +84,89 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   }
  }
    
+ var fileName = "";
+  
+ try { 
+  fileName = fileNameExt.split('.').slice(0, -1).join('.');
+ } catch (err) {
+  console.log(err);
+ }
+   
+ if ("xml" == fext) {   
+  ++listCnt; 
+  
+  htmlRsp += ('<div class="recipeLine">'
+           +  '<span class="recipeTitle">' 
+           +  '<span style="display: inline-block; vertical-align: middle; height: 50px;">' + fileName + '</span>'
+           +  '<img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">'
+           +  '</span> '
+           +  '<span class="recipeActions">'
+           +  '<button style="margin: 0px 5px 0px 20px;" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' type="button">View</button>'
+           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' type="button">View Print Ready Version</button>'              
+           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' type="button">Edit</button>'
+           +  '<button style="margin: 0px 0px 0px 0px;"  onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' type="button">Delete</button>'          
+           +  '</span><'
+           +  '/div>\n');
+  }
+ }
+  
+ htmlRsp += '<input id="filesListCnt" type="hidden" value="' + listCnt + '">';
+  
+ return htmlRsp;
+}
+
+export
+function GenerateFilesListHtmlFromList(fs, xml2jsParser, directoryPath, filesArray) {
+ console.log("> GenerateFilesListHtmlFromList()"); 
+ 
+ var htmlRsp = '<input id="filesListCnt" type="hidden" value="' + filesArray.length + '">';
+ 
+ if (0 == filesArray.length) {
+  htmlRsp += "No recipes contain the search term.";
+  
+  return htmlRsp;
+ }
+  
+ for (var i = 0; i < filesArray.length; ++i) { 
+  var fileNameExt = filesArray[i];
+  
+  var fobj;
+
+  try {
+   fobj = fs.statSync(directoryPath + "/" + fileNameExt);
+  } catch (err) {
+   console.log(err);
+  }
+
+ if (false == fobj.isFile()) { 
+  continue;
+ }
+  
+ var recipeDataXml = "";
+ 
+ var fname = directoryPath + "/" + fileNameExt;
+ 
+ try {
+  recipeDataXml = fs.readFileSync(fname, {encoding: 'utf8', flag: 'r'}); 
+ } catch (err) {
+  console.log(err);  
+ } 
+ 
+ var recipeDataJson = "";
+ 
+ try {
+  recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
+ } catch (err) {
+  console.log(err);
+ }
+  
+ var fext = GetFileExtension(directoryPath + "/" + fileNameExt);
+  
+ var category = recipeDataJson.Recipe.Title[0].$.category;
+ var cuisine  = recipeDataJson.Recipe.Title[0].$.cuisine;
+ var imageSrc = recipeDataJson.Recipe.Title[0].$.image;
+ var imgStyle = ("" == imageSrc ? "display: none;   height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;" 
+                                : "display: inline; height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;");
  var fileName = "";
   
  try { 

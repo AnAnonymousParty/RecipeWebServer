@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Steamed Broccoli_20250730_164656.jpg" name="Steamed Broccoli" category="SIDE" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Fresh broccoli, steamed to perfection.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Broccoli</Name>
+      <Quantity units="HEAD">1</Quantity>
+      <Prep>CLEANTRIM</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Soak broccoli florets in salted water for 5 minutes.</Step>
+    <Step type="STEP" image="Steamed%20Broccoli_20250730_160846.jpg">Pour water into sauce pan. Place broccoli in steamer basket ans season with salt and pepper.</Step>
+    <Step type="STEP" image="">Bring to a boil, cover with a lid and steam broccoli until tender.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

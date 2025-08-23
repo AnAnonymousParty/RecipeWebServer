@@ -8,9 +8,17 @@ var common = require(path.join(__dirname, '../public/javascripts/server/common.j
 var enums  = require(path.join(__dirname, '../public/javascripts/server/enums.js'));
 
 router.get('/', function(req, res, next) {
-  var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '../public/data/recipes'), 'ALL', 'ALL');
+  var directoryPath = path.join(__dirname, '../public/data/recipes');
  
-  res.render('index', { title: 'Recipe Server', categoryTypes: enums.CategoryTypes, cuisineTypes: enums.CuisineTypes, filesList: rv});
+  var recipesList = fs.readdirSync(directoryPath);
+ 
+  var rv = common.GenerateFilesList(fs, xml2jsParser, directoryPath, 'ALL', 'ALL');
+ 
+  res.render('index', { title: 'Recipe Server', 
+                        categoryTypes: enums.CategoryTypes,  
+                        cuisineTypes: enums.CuisineTypes, 
+                        filesList: rv,
+                        recipesCnt: recipesList.length});
 });
 
 module.exports = router;

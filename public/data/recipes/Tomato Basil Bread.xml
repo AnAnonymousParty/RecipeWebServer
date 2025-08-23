@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Tomato Basil Bread_20250726_142148.jpg" name="Tomato Basil Bread" category="BAKEDGOOD" cuisine="ITALIAN">
+    <Yield amount="1" units="LOAF"/>
+    <Times prep="120" cook="35"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="SLICE"/>
+  <Description>Yeasty bread filled with tomatoes, basil and garlic.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Tomato%20Confit'&gt;Tomato COnfit&lt;/a&gt;</Prerequisite>
+    <Prerequisite>Prepare &lt;a href='/GetRecipe?recipeName=Bread%20Dough'&gt;Bread Dough&lt;/a&gt;</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Bread%20Dough'&gt;Bread Dough&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomato%20Confit'&gt;Tomato Confit&lt;/a&gt;</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh Basil</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>CHIFFONADE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Mozzarella Cheese Balls</Name>
+      <Quantity units="EACH">16</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Prepare &lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pecorino Romano Cheese</Name>
+      <Quantity units="OZ">2</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Anchovy</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomato Paste</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Large Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sesame Seeds</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Italian Seasoning</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Combine tomatoes, basil, anchovy, Parmesan and Pecorino, garlic, tomato paste, and olive oil.</Step>
+    <Step type="STEP" image="">Roll bread dough to make a 12 inch by 15 inch rectangle.</Step>
+    <Step type="STEP" image="Tomato%20Basil%20Bread_20250726_114854.jpg">Spread tomato mixture over the bread dough, add mozzarella balls in random places.</Step>
+    <Step type="STEP" image="Tomato%20Basil%20Bread_20250726_115354.jpg">Roll dough into a loaf.</Step>
+    <Step type="STEP" image="">Coat loaf with olive oil, cover loosely with plastic wrap and let rise until doubled.</Step>
+    <Step type="STEP" image="">Preheat oven to 400F.</Step>
+    <Step type="STEP" image="Tomato%20Basil%20Bread_20250726_132108.jpg">Slash loaf with a sharp blade. Using a pastry brush, brush the loaf with the beaten egg, the coat with sesame seeds and Italian seasoning.</Step>
+    <Step type="STEP" image="">Bake for 30 minutes. Increase temperature to 450F and bake an additional 10 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

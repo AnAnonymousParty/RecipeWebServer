@@ -166,12 +166,13 @@
  </div>  
  
  <div class="recipe-line">
+  <br>
   <span class="field-header">
    Image:
   </span>
   <span class="field-value">
    <%
-    var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; margin: 10px 0px 0px 0px; visibility: collapse;" : "display: inline; margin: 10px 0px 0px 0px; visibility: visible;");
+    var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; visibility: collapse;" : "display: inline; visibility: visible;");
    %> 
    <img height="300px" id="mainImage" onclick='ViewImage("/images/Recipes/recipeData.Recipe.Title[0].$.image %>");' src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" style="<%=style %>" width="300px">
    <input id="mainImageName" name="mainImageName" readonly="readonly" type="hidden" value="<%=recipeData.Recipe.Title[0].$.image %>">
@@ -270,16 +271,26 @@
    <tbody>
     <% 
       var is = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Ingredients[0]).includes("Ingredient")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      
       if (Object.getOwnPropertyNames(recipeData.Recipe.Ingredients[0]).includes("Ingredient")) {    
        var ingredients = recipeData.Recipe.Ingredients[0].Ingredient;
+       
        for (ndx = 0; ndx < ingredients.length; ++ndx) { 
-        var prep  = enums.GetDescFromPrepType(ingredients[ndx].Prep[0]);
-        var units = enums.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
+        var type = "INGREDIENT";
+        
+        if ("undefined" != typeof(ingredients[ndx].$)) {
+         type = ingredients[ndx].$.type;  
+        }     
+
+        if ("INGREDIENT" == type) {
+         var prep  = enums.GetDescFromPrepType(ingredients[ndx].Prep[0]);
+         var units = enums.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);       
     %> 
       <tr>
        <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
         <%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %>
-        <input name="ingredient" type="hidden" value="<%=ingredients[ndx].Name[0] %>">
+        <input name="ingredient"     type="hidden" value="<%=ingredients[ndx].Name[0] %>">
+        <input name="ingredientType" type="hidden" value="INGREDIENT">
        </td>
        <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;">
         <%=ingredients[ndx].Quantity[0]._ %>
@@ -304,6 +315,25 @@
         <button onclick="MoveIngredientDown(<%=ndx %>);" type="button">↓</button>            
        </td>       
       </tr> 
+     <% } else { %> 
+      <tr>
+       <td colspan="5" style="font-weight: bold; max-width: 500px; min-width: 500px; text-align: center; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(ingredients[ndx].Heading[0]); %> 
+        <input name="ingredient"     type="hidden" value="<%=ingredients[ndx].Heading[0] %>">
+        <input name="ingredientType" type="hidden" value="HEADING">
+        <input name="quantity"       type="hidden" value="0">
+        <input name="measure"        type="hidden" value="">
+        <input name="prep"           type="hidden" value="">  
+        <input name="notes"          type="hidden" value="">
+       </td>
+       <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
+        <button onclick="DeleteIngredient(<%=ndx %>);"   type="button">Delete</button>
+        <button onclick="EditIngredient(<%=ndx %>);"     type="button">Edit</button>      
+        <button onclick="MoveIngredientUp(<%=ndx %>);"   type="button">↑</button>    
+        <button onclick="MoveIngredientDown(<%=ndx %>);" type="button">↓</button>            
+       </td>        
+      </tr>        
+      <%}%>       
     <%} }%>  
    </tbody>
   </table>
@@ -311,6 +341,7 @@
   <br>
   <div class="centered">
    <button onclick="HandleAddIngredientBtnClkd();" type="button">Add Ingredient</button>
+   <button onclick="HandleAddIngredientHeadingBtnClkd();" type="button">Add Heading</button>   
    <button id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();" style="<%=is %>" type="button">Delete All Ingredients</button></div>
  </div>  
  
@@ -339,19 +370,19 @@
     <tbody>
      <% 
       var ss = (true == (Object.getOwnPropertyNames(recipeData.Recipe.Method[0]).includes("Step")) ? 'display: inline; visibility: visible;' : 'display: none; visibility: collapse;');  
+      
       if (Object.getOwnPropertyNames(recipeData.Recipe.Method[0]).includes("Step")) {
        var steps = recipeData.Recipe.Method[0].Step; 
+       
        for(ndx = 0; ndx < steps.length; ++ndx) {
-        var imgSrc = "";
-        
+        var type = "STEP";
+       
         if ("undefined" != typeof(steps[ndx].$)) {
-         if ("undefined" != typeof(steps[ndx].$.image)) {
-          if ("" != steps[ndx].$.image) {
-           imgSrc = steps[ndx].$.image; 
-          }
+         if ("undefined" != typeof(steps[ndx].$.type)) {
+          type = steps[ndx].$.type;
          }
-        }
-         
+        }       
+        
         var step = "";
         
         if (undefined != steps[ndx]._) {
@@ -359,29 +390,57 @@
         } else {
          step = steps[ndx];
         }         
+        
+        if ("STEP" == type) {
+         var imgSrc = "";
+         
+         if ("undefined" != typeof(steps[ndx].$)) {
+          if ("undefined" != typeof(steps[ndx].$.image)) {
+           if ("" != steps[ndx].$.image) {
+            imgSrc = steps[ndx].$.image; 
+           }
+          }
+         }
      %> 
         <tr>
          <td style="max-width: 400px; min-width: 400px; word-wrap: break-word;">
           <%- commonUtils.RenderNewlines(steps[ndx]._); %>
-          <input name="step" type="hidden" value="<%=step %>">
+          <input name="step"     type="hidden" value="<%=step %>">
+          <input name="stepType" type="hidden" value="STEP">
          </td>
          <% // *** DO NOT put the elements within the following td on separate lines or else images will not be editable. --> %>
          <td style="text-align: center; max-width: 100px; min-width: 100px; word-wrap: break-word;"><% 
           if ("" != imgSrc) { %><img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px"><input name="stepImage" type="hidden" value="<%=imgSrc %>"> <% } else { %><span>&nbsp;</span><input name="stepImage" type="hidden" value="<%=imgSrc %>"><%}%></td>         
          <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-          <button onclick="DeleteStep(<%=ndx %>);" type="button">Delete</button>
-          <button onclick="EditStep(<%=ndx %>);"   type="button">Edit</button>   
+          <button onclick="DeleteStep(<%=ndx %>);"   type="button">Delete</button>
+          <button onclick="EditStep(<%=ndx %>);"     type="button">Edit</button>   
           <button onclick="MoveStepUp(<%=ndx %>);"   type="button">↑</button>    
           <button onclick="MoveStepDown(<%=ndx %>);" type="button">↓</button>           
          </td>        
         </tr> 
+     <% } else { %> 
+      <tr>
+       <td colspan="2" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(step); %> 
+        <input name="step"     type="hidden" value="<%=step %>">
+        <input name="stepType" type="hidden" value="HEADING">
+       </td>
+       <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
+        <button onclick="DeleteStep(<%=ndx %>);"   type="button">Delete</button>
+        <button onclick="EditStep(<%=ndx %>);"     type="button">Edit</button>   
+        <button onclick="MoveStepUp(<%=ndx %>);"   type="button">↑</button>    
+        <button onclick="MoveStepDown(<%=ndx %>);" type="button">↓</button>           
+       </td> 
+      </tr>        
+     <%}%>         
      <%} }%>   
     </tbody>
    </table>
   </div> 
   <br>
   <div class="centered">
-   <button onclick="HandleAddStepBtnClkd();" type="button">Add Step</button>
+   <button onclick="HandleAddStepBtnClkd();"        type="button">Add Step</button>
+   <button onclick="HandleAddStepHeadingBtnClkd();" type="button">Add Heading</button>      
    <button id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();" style="<%=ss %>" type="button">Delete All Steps</button>  
   </div> 
  </div>  
@@ -440,7 +499,7 @@
 
 <!-- Add Ingredient Popup. -->
 <div class="popup" id="addIngredientPopup">
- <form >
+ <form>
   <div class="heading">
    ADD INGREDIENT&nbsp;<img height="32px" onclick="HideAddIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -498,9 +557,33 @@
  </form>
 </div>
 
+<!-- Add Ingredient Heading Popup. -->
+<div class="popup" id="addIngredientHeadingPopup">
+ <form>
+  <div class="heading">
+   ADD INGREDIENT HEADING&nbsp;<img height="32px" onclick="HideAddIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addIngredientHeadingForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading Text:
+    </span>
+    <span class="field-value">
+     <input data-validation="vAlNum" id="heading2Add" name="heading2Add" type="text">
+    </span>
+   </div>   
+   <br>
+   <div class="centered">
+    <button onclick="AddIngredientHeading();" type="button">Save</button>
+   </div>
+  </div> 
+ </form>
+</div>
+
 <!-- Add Prerequisite Popup. -->
 <div class="popup" id="addPrerequisitePopup">
- <form >
+ <form>
   <div class="heading">
    ADD PREREQUISITE&nbsp;<img height="32px" onclick="HideAddPrerequisitePopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -525,7 +608,7 @@
 
 <!-- Add Step Popup. -->
 <div class="popup" id="addStepPopup">
- <form >
+ <form>
   <div class="heading">
    ADD STEP&nbsp;<img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -560,6 +643,31 @@
  </form>
 </div>
 
+<!-- Add Step Heading Popup. -->
+<div class="popup" id="addStepHeadingPopup">
+ <form>
+  <div class="heading">
+   ADD STEP HEADING&nbsp;<img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="addStepForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="stepHeading2Add" maxlength="4096" name="stepHeading2Add" required="required" rows="1" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea>     
+    </span>
+   </div> 
+   <br>
+   <div class="centered">
+    <button onclick="AddStepHeading();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
+</div>
+
 <!-- Add Variation Popup. -->
 <div class="popup" id="addVariationPopup">
  <form >
@@ -587,7 +695,7 @@
 
 <!-- Edit Ingredient Popup. -->
 <div class="popup" id="editIngredientPopup">
- <form >
+ <form>
   <input id="ingredientAction" type="hidden" value="">
   <input id="ingredientRowId"  type="hidden" value="">
   <div class="heading">
@@ -645,11 +753,37 @@
    </div>
   </div>
  </form>
+</div
+
+<!-- Edit Ingredient Heading Popup. -->
+<div class="popup" id="editIngredientHeadingPopup">
+ <form>
+  <input id="headingRowId"     type="hidden" value="">
+  <input id="ingredientAction" type="hidden" value="">
+  <div class="heading">
+   EDIT INGREDIENT HEADING&nbsp;<img height="32px" onclick="HideEditIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editIngredientForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <input id="heading2Edit" name="heading2Edit" type="text">
+    </span>
+   </div>
+   <br>
+   <div class="centered">
+    <button onclick="SaveIngredientHeading();" type="button">Save</button>
+   </div>
+  </div>
+ </form>
 </div>
 
 <!-- Edit Prerequisite Popup. -->
 <div class="popup" id="editPrerequisitePopup">
- <form >
+ <form>
   <input id="prerequisiteAction" type="hidden" value="">
   <input id="prerequisiteRowId"  type="hidden" value="">
   <div class="heading">
@@ -676,7 +810,7 @@
 
 <!-- Edit Step Popup. -->
 <div class="popup" id="editStepPopup">
- <form >
+ <form>
   <input id="stepAction" type="hidden" value="">
   <input id="stepRowId"  type="hidden" value="">
   <div class="heading">
@@ -715,9 +849,37 @@
  </form>
 </div>
 
+<!-- Edit Step Heading Popup. -->
+<div class="popup" id="editStepHeadingPopup">
+ <form>
+  <input id="stepAction"       type="hidden" value="">
+  <input id="stepHeadingRowId" type="hidden" value="">
+  <div class="heading">
+   EDIT STEP HEADING&nbsp;<img height="32px" onclick="HideEditStepHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  </div>
+  <br>
+  <div class="request-div" id="editStepHeadingForm">
+   <div class="recipe-line">
+    <span class="field-header">
+     Heading:
+    </span>
+    <span class="field-value">
+     <textarea cols="40" data-validation="vAlNum" id="stepHeading2Edit" maxlength="256" name="stepHeading2Edit" required="required" rows="1" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     </textarea> 
+    </span>
+   </div> 
+   <br>    
+  </div>
+  <br> 
+  <div class="centered">
+   <button onclick="SaveStepHeading();" type="button">Save</button>
+  </div>  
+ </form>
+</div>
+
 <!-- Edit Variation Popup. -->
 <div class="popup" id="editVariationPopup">
- <form >
+ <form>
   <input id="Action" type="hidden" value="">
   <input id="variationRowId"  type="hidden" value="">
   <div class="heading">

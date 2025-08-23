@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Southwest Shredded Chicken_ShreddedChicken.jpg" name="Southwest Shredded Chicken" category="ENTREE_POULTRY" cuisine="MEXICAN">
+    <Yield amount="2" units="SERVING"/>
+    <Times prep="5" cook="45"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="ITEM"/>
+  <Description>Seasoned chicken breast, shredded for tacos, nachos, etc.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Chicken Breast</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chicken Stock</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion</Name>
+      <Quantity units="EACH">.25</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>SMASHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dried Red Chiles</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>SEEDED</Prep>
+      <Notes>Ancho, Pasilla, Chipotle, de Arbol Combo.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cumin</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic Powder</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion Powder</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="SPRIG">12</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomato Paste</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Olive Oile</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Southwest%20Shredded%20Chicken_20250812_123339.jpg">Add oil to heavy sauce pan. Heat until oil begins to smoke. Add chicken breast and sear on both sides.</Step>
+    <Step type="STEP" image="Southwest%20Shredded%20Chicken_20250812_124101.jpg">Add all other ingredients to pan. Bring to a boil. </Step>
+    <Step type="STEP" image="">Reduce to a simmer, cover and cook for 45 minutes, until chicken can be easily separated with a fork.</Step>
+    <Step type="STEP" image="">Remove chicken to cutting board, shred with a fork.</Step>
+    <Step type="STEP" image="">Strain simmering liquid into a cup or bowl.</Step>
+    <Step type="STEP" image="">Return chicken to pan and add some of the reserved liquid.</Step>
+    <Step type="STEP" image="">Simmer chicken, uncovered, adding additional liquid as needed, for about 10-15 minutes,</Step>
+    <Step type="STEP" image="">Use or refrigerate/freeze for later use.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

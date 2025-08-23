@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sheetpan Pommes Anna-ish_PommesAnna.jpg" name="Sheetpan Pommes Anna-ish" category="SIDE" cuisine="FRENCH">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="20" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Thinly sliced potatoes layered with herbs and baked until the edges crisp.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 425F.</Prerequisite>
+    <Prerequisite>Line a sheet pan with a silicone baking mat or parchment paper.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Russet Potatoes</Name>
+      <Quantity units="EACH">6</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>As thin as possible, using a mandoline.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chives</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fat</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes>Butter (traditional), Bacon (sure), Duck (Oh my...)</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Sheetpan%20Pommes%20Anna-ish_20250817_161054.jpg">Paint silicone mat / parchment paper with melted fat using a pastry brush.</Step>
+    <Step type="STEP" image="Sheetpan%20Pommes%20Anna-ish_20250817_162154.jpg">Lay potato slices in and over lapping pattern on the sheet pad, brushing each with the melted fat.</Step>
+    <Step type="STEP" image="Sheetpan%20Pommes%20Anna-ish_20250817_162728.jpg">Sprinkle chopped chives and minced garlic over the potatoes, then season with salt, pepper, MSG, garlic powder and onion powder.</Step>
+    <Step type="STEP" image="Sheetpan%20Pommes%20Anna-ish_20250817_163428.jpg">Add a second layer of potatoes, season with salt and pepper.</Step>
+    <Step type="STEP" image="">Cover with an inverted sheet pan and bake for 25 minutes.</Step>
+    <Step type="STEP" image="">Remove sheet pan and bake an additional 10-15 minutes, until edges are browned. OK to use broiler to brown the top.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

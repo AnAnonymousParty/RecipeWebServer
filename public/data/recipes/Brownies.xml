@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Brownies_Brownies.jpg" name="Brownies" category="DESSERT" cuisine="ALL">
+    <Yield amount="9" units="SERVING"/>
+    <Times prep="10" cook="30"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Chewy, chocolatey chunks of goodness.</Description>
+  <Prerequisites>
+    <Prerequisite>Grease an 8 inch square pan.</Prerequisite>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Chocolate Chips</Name>
+      <Quantity units="OZ">5</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes>Ghiardelli, 70% cacao preferred.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Brown sugar</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Dark</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vegetable oil</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Self Rising Flour</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cocoa Powder</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Sift flour and cocoa powder together in a small bowl, set aside.</Step>
+    <Step type="STEP" image="">Add eggs, oil, sugar and vanilla to stand mixer. Blend until smooth.</Step>
+    <Step type="STEP" image="">Add melted chocolate to egg mixture. Blend until fully incorporated.</Step>
+    <Step type="STEP" image="">Add flour/cocoa to egg mixture. Stir until just blended.</Step>
+    <Step type="STEP" image="">Scoop batter into baking pan, smooth out as best as possible.</Step>
+    <Step type="STEP" image="">Bake 30-35 minutes unit center is set.</Step>
+    <Step type="STEP" image="">Cool, cut, serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add chopped walnuts to batter before baking.</Variation>
+    <Variation>Add additional mini chocolate chips before baking.</Variation>
+    <Variation>Top with &lt;a href='/GetRecipe?recipeName=Caramel'&gt;caramel&lt;/a&gt; and sprinkle with &lt;a href='https://en.wikipedia.org/wiki/Fleur_de_sel'&gt;Fleur de Sel&lt;/a&gt;.</Variation>
+  </Variations>
+</Recipe>

@@ -8,61 +8,61 @@
   <Description>This is a good dough for italian bread, baguettes.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='https://shop.kingarthurbaking.com/items/bread-flour'&gt;King Arthur bread flour&lt;/a&gt;</Name>
       <Quantity units="CUP">4</Quantity>
       <Prep>NONE</Prep>
       <Notes>High protein flour.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Yeast</Name>
       <Quantity units="TSP">2.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Water</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Warm water</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes>For blooming yeast.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Milk</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>SCALD</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Sugar</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Sugar</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>MELTED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Vitamin C powder</Name>
       <Quantity units="PINCH">1</Quantity>
       <Prep>NONE</Prep>
@@ -70,14 +70,15 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Dissolve yeast in 1/4 cup of warm (90F) water.</Step>
-    <Step image="">Combine water, milk, 1 tbsp of sugar, Vitamin C powder and butter in a bowl.</Step>
-    <Step image="">Add flour, 2 tsp of salt, 2 tsp of sugar to bowl of stand mixer.</Step>
-    <Step image="">Using a dough hook attachment, start the mixer and add the liquid a little at a time. Once the dough forms a ball, allow the mixer to run on its lowest setting for 2-3 minutes. </Step>
-    <Step image="">If the dough seems to be sticking to the bowl, add flour by spoonfuls until the dough forms a smooth ball. </Step>
-    <Step image="">Stop the mixer an remove the dough, add it to an oiled bowl large enough to contain a ball about 3 times as big. Cover with plastic wrap and let sit in a warm place for about two hours or until the dough doubles in size.
+    <Step type="STEP" image="Bread%20Dough_20250726_084743.jpg">Dissolve yeast in 1/4 cup of warm (90F) water.</Step>
+    <Step type="STEP" image="Bread%20Dough_20250726_085319.jpg">Combine water, milk, 1 tbsp of sugar, Vitamin C powder and butter in a bowl.</Step>
+    <Step type="STEP" image="">Add Yeast to water/milk mixture.</Step>
+    <Step type="STEP" image="Bread%20Dough_20250726_085747.jpg">Add flour, 2 tsp of salt, 2 tsp of sugar to bowl of stand mixer.</Step>
+    <Step type="STEP" image="Bread%20Dough_20250726_090104.jpg">Using a dough hook attachment, start the mixer and add the liquid a little at a time. Once the dough forms a ball, allow the mixer to run on its lowest setting for 2-3 minutes. </Step>
+    <Step type="STEP" image="Bread%20Dough_20250726_090646.jpg">If the dough seems to be sticking to the bowl, add flour by spoonfuls until the dough forms a smooth ball. </Step>
+    <Step type="STEP" image="Bread%20Dough_20250726_091925.jpg">Stop the mixer an remove the dough, add it to an oiled bowl large enough to contain a ball about 3 times as big. Cover with plastic wrap and let sit in a warm place for about two hours or until the dough doubles in size.
 </Step>
-    <Step image="">Punch down the dough (press on it, reform it into the ball it started as, all you really want to do is expel the excess CO2 gas) and it is ready for use. </Step>
+    <Step type="STEP" image="">Punch down the dough (press on it, reform it into the ball it started as, all you really want to do is expel the excess CO2 gas) and it is ready for use. </Step>
   </Method>
   <Variations/>
 </Recipe>

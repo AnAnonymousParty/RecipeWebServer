@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cocktail Sauce_Cocktail Sauce.jpg" name="Cocktail Sauce" category="SAUCE" cuisine="ALL">
+    <Yield amount=".75" units="CUP"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TBSP"/>
+  <Description>Traditional cocktail sauce for shrimp and seafood.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Catsup</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>BBQ Sauce</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Prepared Horesradish</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Worchestershire Sauce</Name>
+      <Quantity units="DASH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lemon Juice</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Fresh Squeezed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Combine all ingredients. Taste, adjust seasoning.</Step>
+    <Step type="STEP" image="">Chill and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

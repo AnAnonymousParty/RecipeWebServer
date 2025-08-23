@@ -1,23 +1,28 @@
-// What we need:
+// javascript libraries we need:
 
-var bodyParser   = require("body-parser");
-var cookieParser = require('cookie-parser');
-var createError  = require('http-errors');
-var eformidable  = require('express-formidable-v2');
-var express      = require('express');
-var favicon      = require('serve-favicon');
-var fs           = require('fs');
-var fsExtra      = require('fs-extra');
-var logger       = require('morgan');
-var path         = require('path');
-var xmlBuilder   = require('xmlbuilder2');
-var xml2js       = require('xml2js');
-var xml2jsParser = require('xml2js-parser');
+const bodyParser   = require("body-parser");
+const cookieParser = require('cookie-parser');
+const createError  = require('http-errors');
+const eformidable  = require('express-formidable-v2');
+const express      = require('express');
+const favicon      = require('serve-favicon');
+const fractional   = require('fractional');
+const fs           = require('fs');
+const fsExtra      = require('fs-extra');
+const logger       = require('morgan');
+const path         = require('path');
+const puppeteer    = require('puppeteer');
+const xmlBuilder   = require('xmlbuilder2');
+const xml2js       = require('xml2js');
+const xml2jsParser = require('xml2js-parser');
 
-// What we provide:
+// javascript we we provide:
 
-var common            = require(path.join(__dirname, '/public/javascripts/server/common.js'));
-var enums             = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
+var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
+var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
+var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
+
+// Route Handlers:
 
 var indexRouter       = require('./routes/index');
 var editRecipeRouter  = require('./routes/editRecipe');
@@ -40,7 +45,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + "/public/images/favicon.ico"));
 app.use(eformidable( { uploadDir: path.join(__dirname, "/public/images/Staging"), keepExtensions: true } ));
-
 
 /*------------------------- GET handlers ------------------------------------*/
 
@@ -130,10 +134,11 @@ var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/publi
 res.status(200).send(rv);
 });
 
-
 app.get('/GetRecipesList', (req, res) => {
  var category = req.query.category;
  var cuisine  = req.query.cuisine; 
+ 
+ var dirPath = path.join(__dirname, '/public/data/recipes');
 
  // Return the list of recipes: 
  
@@ -142,6 +147,43 @@ app.get('/GetRecipesList', (req, res) => {
  res.status(200).send(rv);
 });
 
+app.get('/SavePDF', (req, res) => {
+ var recipeName = req.query.recipeName;
+ 
+ console.log("> savePDF(" + recipeName + ")");
+ 
+ var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml); 
+ 
+ try {                          
+  handleSavePDF(req, res);
+ }
+ catch(err) {
+  console.error('Error generating PDF:', err);
+ } 
+ 
+ console.log("< savePDF()");
+});
+
+app.get('/SearchRecipes', (req, res) => {
+ console.log("> /SearchRecipe ");
+ 
+ var searchTerm = req.query.searchTerm;
+
+ var dirPath = path.join(__dirname, '/public/data/recipes')
+ 
+ var filesList = [];
+ 
+ filesList = searchUtils.SearchDirectory(fs, path, dirPath, searchTerm);
+
+ // Return the list of recipes: 
+ 
+ var rv = common.GenerateFilesListHtmlFromList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), filesList);
+    
+ console.log("< /SearchRecipe");
+ 
+ res.status(200).send(rv);
+});
 
 /*------------------------------- POST handlers -----------------------------*/
 
@@ -285,8 +327,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// Parse the POST data to XML for processing by converting it to JSON and
+// then using the sblBuilder library to convert the JSON to XML and return
+// it.
 function ParsePostDataToXml(postData) {
- //console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
+console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
  var doc = xmlBuilder.create({ version: '1.0' });
  
@@ -353,32 +398,54 @@ function ParsePostDataToXml(postData) {
  if (null != ingredientsData) {
   if (Array.isArray(ingredientsData)) {
    for (var i = 0; i < ingredientsData.length; ++i) {
-    var ingredientName     = ingredientsData[i];
-    var ingredientElem     = ingredientsElem.ele('Ingredient');
-    var ingredientNameElem = ingredientElem.ele("Name");
-    var quantityElem       = ingredientElem.ele("Quantity");
-    var prepElem           = ingredientElem.ele("Prep");
-    var notesElem          = ingredientElem.ele("Notes");
+    var ingredientName = ingredientsData[i];
+    var ingredientElem = ingredientsElem.ele('Ingredient');
+    var ingredientType = postData.ingredientType[i];
     
-    ingredientNameElem.txt(ingredientName);
-    quantityElem.att('units', enums.GetEnumFromUnitDesc(postData.measure[i]));
-    quantityElem.txt(postData.quantity[i]);
-    prepElem.txt(enums.GetEnumFromPrepDesc(postData.prep[i])); 
-    notesElem.txt(postData.notes[i]);
+    if ("INGREDIENT" == ingredientType) {
+     var ingredientNameElem = ingredientElem.ele("Name");
+     var quantityElem       = ingredientElem.ele("Quantity");
+     var prepElem           = ingredientElem.ele("Prep");
+     var notesElem          = ingredientElem.ele("Notes");     
+     
+     ingredientElem.att('type', "INGREDIENT");
+     ingredientNameElem.txt(ingredientName);
+     quantityElem.att('units', enums.GetEnumFromUnitDesc(postData.measure[i]));
+     quantityElem.txt(postData.quantity[i]);
+     prepElem.txt(enums.GetEnumFromPrepDesc(postData.prep[i])); 
+     notesElem.txt(postData.notes[i]);
+    } else {
+      ingredientElem.att('type', "HEADING");
+      
+      var headingElem = ingredientElem.ele('Heading'); 
+
+      headingElem.txt(ingredientName);     
+    }
    }
   } else {
-    var ingredientName     = ingredientsData;
-    var ingredientElem     = ingredientsElem.ele('Ingredient');
-    var ingredientNameElem = ingredientElem.ele("Name");
-    var quantityElem       = ingredientElem.ele("Quantity");
-    var prepElem           = ingredientElem.ele("Prep");
-    var notesElem          = ingredientElem.ele("Notes");
+    var ingredientName = ingredientsData;   
+    var ingredientType = postData.ingredientType;
     
-    ingredientNameElem.txt(ingredientName);
-    quantityElem.att('units', enums.GetEnumFromUnitDesc(postData.measure));
-    quantityElem.txt(postData.quantity);
-    prepElem.txt(enums.GetEnumFromPrepDesc(postData.prep)); 
-    notesElem.txt(postData.notes);
+    if ("INGREDIENT" == ingredientType) {
+     var ingredientElem     = ingredientsElem.ele('Ingredient');
+     var ingredientNameElem = ingredientElem.ele("Name");
+     var quantityElem       = ingredientElem.ele("Quantity");
+     var prepElem           = ingredientElem.ele("Prep");
+     var notesElem          = ingredientElem.ele("Notes");     
+     
+     ingredientElem.att('type', "INGREDIENT");
+     ingredientNameElem.txt(ingredientName);
+     quantityElem.att('units', enums.GetEnumFromUnitDesc(postData.measure));
+     quantityElem.txt(postData.quantity);
+     prepElem.txt(enums.GetEnumFromPrepDesc(postData.prep)); 
+     notesElem.txt(postData.notes);
+    } else {
+      ingredientElem.att('type', "HEADING");
+      
+      var headingElem = ingredientElem.ele('Heading');
+      
+      headingElem.txt(heading);
+    }
   }
  }
  
@@ -389,26 +456,40 @@ function ParsePostDataToXml(postData) {
  if (null != stepsData) {
   if (Array.isArray(stepsData)) {  
    for (var i = 0; i < stepsData.length; ++i) {
-    var step  = stepsData[i]; 
-    
-    var imgSrc = "";
-    
-    if ("undefined" != typeof(postData.stepImage)) {
-     imgSrc = postData.stepImage[i];
-    }
-    
+    var step     = stepsData[i]; 
     var stepElem = methodElem.ele('Step');
+    var stepType = postData.stepType[i]; 
     
-    stepElem.att('image', imgSrc);
     stepElem.txt(step);
+    
+    if ("STEP" == stepType) { 
+     stepElem.att('type', "STEP");  
+ 
+     var imgSrc = "";
+     
+     if ("undefined" != typeof(postData.stepImage)) {
+      imgSrc = postData.stepImage[i];
+     }
+     
+     stepElem.att('image', imgSrc);
+    } else { 
+     stepElem.att('type', "HEADING");    
+    }
    }
   } else {
-    var step = stepsData;
-   
+    var step     = stepsData;
     var stepElem = methodElem.ele('Step');
+    var stepType = postData.stepType; 
     
-    stepElem.att('image', postData.stepImage);
     stepElem.txt(step);
+   
+    if ("STEP" == stepType) {
+     stepElem.att('type', "STEP");
+     stepElem.att('image', postData.stepImage);
+
+    } else {
+     stepElem.att('type', "HEADING");
+    }
   }
  } 
  
@@ -439,6 +520,8 @@ function ParsePostDataToXml(postData) {
  return(rv);
 }
 
+// Remove any images from the image staging directory that are more than 
+// four hours old.
 function RemoveStaleImages() {
  var now = new Date().getTime();
  
@@ -460,6 +543,64 @@ function RemoveStaleImages() {
    }
   });
  }); 
+}
+
+// Use the puppeteer library to convert the printable version of the given
+// named recipe to a PDF document.
+async function generatePDFfromHTML(recipeName, outputFile) {
+ var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
+         + encodeURIComponent(recipeName)
+         + "&ShowButtons=N";
+ 
+ const browser = await puppeteer.launch();
+ const page    = await browser.newPage();
+ 
+ await page.goto(url, { waitForOptions: "networkidle0" }); 
+ await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
+ await browser.close();
+}
+
+async function handleSavePDF(req, res) {
+  var recipeName = req.query.recipeName;
+  
+  console.log("> handleSavePDF(" + recipeName + ")");
+  
+  // Generate PDF file from recipe's 'print' view:
+  
+  await generatePDFfromHTML(recipeName, recipeName + '.pdf');
+  
+  // Send the PDF file to the client:
+  
+  console.log('  handleSavePDF(): PDF ' + recipeName + '.pdf generated successfully.'); 
+  
+  var pdfFile = decodeURIComponent(req.query.recipeName);
+ 
+  var pdfFilePath = __dirname + "\\public\\data\\PDFs\\" + pdfFile + ".pdf";
+ 
+  const options = { headers: { 'Content-Type': 'application/octet-stream', }, };
+  
+  await res.download(pdfFilePath, pdfFile, options, (err) => {
+   if (err) {
+    res.status(500).send({ message: "Could not download the file. " + err});
+   } else {
+    // Remove the generated PDF file once it has been downloaded:
+    
+    fs.access(pdfFilePath, fs.constants.F_OK, (err) => {
+     if (err) {
+      fs.rmSync(pdfFilePath, {
+       force: true,
+      });
+     }
+     else {
+      fs.rmSync(pdfFilePath, {
+       force: true,
+      });
+     }
+    });     
+   }
+  });    
+
+  console.log("< handleSavePDF()");  
 }
 
 module.exports = app;
