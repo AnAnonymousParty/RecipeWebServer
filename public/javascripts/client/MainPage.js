@@ -1247,6 +1247,12 @@ function HideRecipeExistsWarningPopup() {
  ToggleVisibility("recipeExistsWarningPopup");
 }
 
+function HideSettingsPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+
+ ToggleVisibility("SettingsPopup");
+}
+
 function InitPage() {
  var recipesCnt = document.getElementById("recipesListContainer").children.length;
  
@@ -1908,6 +1914,10 @@ function ShowRecipesList(category, cuisine) {
  };
 
  xmlhttpReq.send();
+}
+
+function ShowSettingsPopup() {
+ ToggleVisibility("SettingsPopup");
 }
 
 function SubmitFileForUpload(imageUse) {

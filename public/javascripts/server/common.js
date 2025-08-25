@@ -101,10 +101,10 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
            +  '<img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">'
            +  '</span> '
            +  '<span class="recipeActions">'
-           +  '<button style="margin: 0px 5px 0px 20px;" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' type="button">View</button>'
-           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' type="button">View Print Ready Version</button>'              
-           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' type="button">Edit</button>'
-           +  '<button style="margin: 0px 0px 0px 0px;"  onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' type="button">Delete</button>'          
+           +  '<img height="20px" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/ViewBtn_48X48.jpg"   style="margin: 0px 5px 0px 20px;" title="View Recipe" width="20px">'           
+           +  '<img height="20px" onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' src="/images/Buttons/PrintBtn_48X48.png"  style="margin: 0px 5px 0px 0px;"  title="View Printable Version" width="20px">'           
+           +  '<img height="20px" onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/EditBtn_48X48.jpg"   style="margin: 0px 5px 0px 0px;"  title="Edit Recipe" width="20px">'  
+           +  '<img height="20px" onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' src="/images/Buttons/DeleteBtn_48X48.jpg" style="margin: 0px 5px 0px 0px;"  title="Delete Recipe" width="20px">'         
            +  '</span><'
            +  '/div>\n');
   }
@@ -182,10 +182,10 @@ function GenerateFilesListHtmlFromList(fs, xml2jsParser, directoryPath, filesArr
            +  '<img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">'
            +  '</span> '
            +  '<span class="recipeActions">'
-           +  '<button style="margin: 0px 5px 0px 20px;" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' type="button">View</button>'
-           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' type="button">View Print Ready Version</button>'              
-           +  '<button style="margin: 0px 5px 0px 0px;"  onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' type="button">Edit</button>'
-           +  '<button style="margin: 0px 0px 0px 0px;"  onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' type="button">Delete</button>'          
+           +  '<img height="20px" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/ViewBtn_48X48.jpg"   style="margin: 0px 5px 0px 20px;" title="View Recipe" width="20px">'            
+           +  '<img height="20px" onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' src="/images/Buttons/PrintBtn_48X48.png"  style="margin: 0px 5px 0px 0px;"  title="View Printable Version" width="20px">'               
+           +  '<img height="20px" onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/EditBtn_48X48.jpg"   style="margin: 0px 5px 0px 0px;"  title="Edit Recipe" width="20px">'
+           +  '<img height="20px" onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' src="/images/Buttons/DeleteBtn_48X48.jpg" style="margin: 0px 5px 0px 0px;"  title="Delete Recipe" width="20px">'         
            +  '</span><'
            +  '/div>\n');
   }

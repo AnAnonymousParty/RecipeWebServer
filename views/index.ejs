@@ -13,7 +13,8 @@
  </head>
  <body background="/images/veges.jpg" onload="InitPage();">
   <div class="header-section"> 
-   <span class="filters" id="filtersContainer" style="display: inline; line-height: 30px; visibility: visible;">
+   <span class="filters" id="filtersContainer">
+    <img height="20px" onclick="ShowSettingsPopup();" src="/images/Buttons/SettingsBtn_48X48.jpg" style="margin: 0px 10px 0px 0px;" title="Access Settings" width="20px">
     Cuisine: 
     <select id="cuisines" name="cuisines" onChange="ApplyFilter();" style="margin: 0px 10px 0px 5px;">
      <% Object.keys(cuisineTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, cuisineTypes); %>
@@ -23,7 +24,7 @@
      <% Object.keys(categoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, categoryTypes); %>
     </select>
     <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
-    <button id="SearchBtn" onclick="HandleSearchBtnClkd();" style="margin: 0px 10px 0px 0px;" type="button">Search</button>
+    <img height="20px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="20px">
     <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <%- recipesCnt %></span>
    </span>   
    <span id="recipeTitleContainer" style="display: none; visibility: collapse; text-align: center;">
@@ -35,18 +36,18 @@
   </div>  
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
-    <button id="SaveRecipeBtn"       onclick="SaveRecipe();"         style="margin: 0px 10px 0px 0px;" type="button">Save Recipe</button>
-    <button id="ShowRecipesListBtn"  onclick="ApplyFilter();"                                          type="button">Return to Recipes List</button>   
+    <img height="48px" id="SaveRecipesListBtn" onclick="SaveRecipe();"  src="/images/Buttons/SaveBtn_48X48.png"   style="margin: 0px 10px 0px 0px;" title="Save Recipe"            width="48px"> 
+    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();" src="/images/Buttons/ReturnBtn_48X48.png" style="margin: 0px 10px 0px 0px;" title="Return to Recipes List" width="48px">     
    </div>  
    <div id="indexPageBtns" style="display: inline; visibility: visible;">
-    <button id="AddNewRecipeBtn"     onclick="ShowAddRecipePopup();" style="margin: 0px 10px 0px 0px;" type="button">Add new recipe</button>
-    <button id="DeleteAllRecipesBtn" onclick="DeleteAllRecipes();"                                     type="button">Delete all recipes</button>
+    <img height="48px" id="AddNewRecipeBtn"    onclick="ShowAddRecipePopup();" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
+    <img height="48px" id="DeleteAllRecipeBtn" onclick="DeleteAllRecipes();"   src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
    </div> 
    <div id="viewPageBtns" style="display: none; visibility: collapse;">
-    <button id="EditRecipeBtn"       onclick="EditRecipe();"           style="margin: 0px 10px 0px 0px;" type="button">Edit Recipe</button>
-    <button id="DeleteRecipeBtn"     onclick="DeleteRecipe();"         style="margin: 0px 10px 0px 0px;" type="button">Delete Recipe</button>
-    <button id="PrintRecipeBtn"      onclick="RequestPrintableView();" style="margin: 0px 10px 0px 0px;" type="button">Print Ready Version</button>
-    <button id="ShowRecipesListBtn"  onclick="ApplyFilter();"                                            type="button">Return to Recipes List</button>   
+    <img height="48px" id="EditRecipeBtn"      onclick="EditRecipe();"           src="/images/Buttons/EditBtn_48X48_White.png"   style="margin: 0px 10px 0px 0px;" title="Edit Recipe"             width="48px">
+    <img height="48px" id="DeleteRecipeBtn"    onclick="DeleteRecipe();"         src="/images/Buttons/DeleteBtn_48X48_White.png" style="margin: 0px 10px 0px 0px;" title="Delete Recipe"           width="48px">    
+    <img height="48px" id="PrintRecipeBtn"     onclick="RequestPrintableView();" src="/images/Buttons/PrintBtn_48X48.png"        style="margin: 0px 10px 0px 0px;" title="Print Recipe"            width="48px">      
+    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();"          src="/images/Buttons/ReturnBtn_48X48.png"       style="margin: 0px 10px 0px 0px;" title="Return to Recipes List"  width="48px">    
    </div>   
   </div>
   
@@ -94,6 +95,19 @@
    <br>
    <div class="request-div">
     A recipe with that name already exists. 
+   </div>
+  </div>
+  
+    <!-- Settings Popup. -->
+  <div class="popup" id="SettingsPopup" style="width: 50%;">
+   <div class="heading">
+    SETTINGS&nbsp;<img height="32px" onclick="HideSettingsPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   </div>
+   <br>
+   <div class="request-div">
+    Import Recipes
+    <br>
+    Export Recipes
    </div>
   </div>
   

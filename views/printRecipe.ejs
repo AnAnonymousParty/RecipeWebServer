@@ -322,18 +322,20 @@
    
   <div class="centered" id="ButtonsSection">
    <% if ("N" != showButtons) { %>
-   <button id="PrintRecipeBtn"  
-           onclick="PrintRecipe();" 
-           
-           style="margin: 0px 10px 0px 0px;" type="button">
-    Print Recipe
-   </button>
-   <button id="SavePdfBtn"      
-           onclick='SavePDF("<%=recipeData.Recipe.Title[0].$.name %>");' 
-           style="margin: 0px 10px 0px 0px;" 
-           type="button">
-    Save as PDF
-   </button>
+   <img height="48px" 
+        id="PrintRecipeBtn"    
+        onclick="PrintRecipe();" 
+        src="/images/Buttons/PrintBtn_48X48.png"    
+        style="margin: 0px 10px 0px 0px;" 
+        title="Print Recipe"     
+        width="48px">
+   <img height="48px" 
+        id="SavePdfBtn"    
+        onclick='SavePDF("<%=recipeData.Recipe.Title[0].$.name %>");'
+        src="/images/Buttons/PDFBtn_48X48.jpg"    
+        style="margin: 0px 10px 0px 0px;" 
+        title="Save as PDF file"     
+        width="48px">
    <% } %>
   </div>  
   

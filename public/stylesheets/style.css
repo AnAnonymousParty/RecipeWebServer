@@ -43,10 +43,13 @@ body {
       align-items: center;
  background-color: AliceBlue;
     border-radius: 10px 10px 10px 10px;
-          display: flex;
+          display: inline-flex;
            height: 30px;
   justify-content: center;
-          padding: 10Px;
+      line_height: 15px;
+          padding: 10px;
+   vertical-align: middle;
+       visibility: visible;
 }
           
 .footer-section {
