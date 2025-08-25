@@ -1897,6 +1897,7 @@ function ShowRecipesList(category, cuisine) {
     var filesListCnt = doc.getElementById("filesListCnt").value;
     
     document.getElementById("displayCnt").innerText = filesListCnt;
+    document.getElementById("recipesCnt").innerText = recipesCnt;
     
     if ("" == data) { 
      document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";

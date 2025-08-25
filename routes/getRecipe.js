@@ -8,11 +8,18 @@ var common = require(path.join(__dirname, '../public/javascripts/server/common.j
 var enums  = require(path.join(__dirname, '../public/javascripts/server/enums.js'));
 
 router.get('/', function(req, res, next) {
+ var directoryPath  = path.join(__dirname, '../public/data/recipes');
  var recipeName     = req.query.recipeName;
- var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
+ var recipeDataXml  = fs.readFileSync(path.join(directoryPath, recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
- res.render('getRecipe', { title: 'Recipe Server', commonUtils: common, enumUtils: enums, recipeData: recipeDataJson});
+ var recipesList = fs.readdirSync(directoryPath);
+ 
+ res.render('getRecipe', { title: 'Recipe Server', 
+                           commonUtils: common, 
+                           enumUtils: enums, 
+                           recipeData: recipeDataJson,
+                           recipesCnt: recipesList.length});
 });
 
 module.exports = router;
