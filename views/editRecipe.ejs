@@ -184,7 +184,7 @@
    &nbsp;
   </span>
   <span class="field-value">
-   <button onclick='ShowFileUploadPopup("mainImage", "");' type="button">Change</button>
+   <img height="24px" onclick='ShowFileUploadPopup("mainImage", "");' src="/images/Buttons/ChangeBtn_48X48.png" title="Change Image" width="24px">    
   </span>
  </div> 
  
@@ -196,13 +196,13 @@
   </div>
   <br>
   <div class="centered">
-   <table align="center" class="scrolling-table" id="prerequisitesTable" width="340px">
+   <table align="center" class="scrolling-table" id="prerequisitesTable" width="500px">
     <thead>
      <tr>
-      <th width="200px">
+      <th width="400px">
        Prerequisite
       </th>   
-      <th colspan="2" width="95px">
+      <th colspan="2" width="55px">
        &nbsp;
       </th> 
      </tr>
@@ -215,14 +215,14 @@
        for (ndx = 0; ndx < prerequisites.length; ++ndx) { 
      %> 
        <tr>
-        <td style="max-width: 200px; min-width: 200px; word-wrap: break-word;">
+        <td style="max-width: 400px; min-width: 400px; word-wrap: break-word;">
          <%- commonUtils.RenderNewlines(prerequisites[ndx]); %>
          <input name="prerequisite" type="hidden" value="<%=prerequisites[ndx] %>">
         </td>
-        <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
+        <td colspan="2" style="max-width: 55px; min-width: 55px; text-align: right;">
          <span>
-          <button onclick="DeletePrerequisite(<%=ndx %>);" type="button">Delete</button>
-          <button onclick="EditPrerequisite(<%=ndx %>);" type="button">Edit</button>   
+          <img height="24px" onclick="DeletePrerequisite(<%=ndx %>);" src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Prerequisite" width="24px">  
+          <img height="24px" onclick="EditPrerequisite(<%=ndx %>);"   src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Prerequisite"   width="24px">       
          </span>         
         </td>
        </tr> 
@@ -232,8 +232,8 @@
   </div>
   <br>
   <div class="centered">
-   <button onclick="HandleAddPrerequisiteBtnClkd();" type="button">Add Prerequisite</button>
-   <button id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" style="<%=ps %>" type="button">Delete All Prerequisites</button> 
+   <img height="48px" id="AddPrerequisiteBtn"     onclick="HandleAddPrerequisiteBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"    style="margin: 0px 10px 0px 0px;" title="Add Prerequisite"         width="48px">   
+   <img height="48px" id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="<%=ps %>"                  title="Delete All Prerequisites" width="48px">   
   </div> 
  </div> 
  
@@ -309,10 +309,10 @@
         <input name="notes" type="hidden" value="<%=ingredients[ndx].Notes[0] %>">        
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <button onclick="DeleteIngredient(<%=ndx %>);"   type="button">Delete</button>
-        <button onclick="EditIngredient(<%=ndx %>);"     type="button">Edit</button>      
-        <button onclick="MoveIngredientUp(<%=ndx %>);"   type="button">↑</button>    
-        <button onclick="MoveIngredientDown(<%=ndx %>);" type="button">↓</button>            
+        <img height="24px" onclick="DeleteIngredient(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Ingredient"    width="24px">   
+        <img height="24px" onclick="EditIngredient(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Ingredient"      width="24px">        
+        <img height="24px" onclick="MoveIngredientUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Ingredient Up"   width="24px">   
+        <img height="24px" onclick="MoveIngredientDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Ingredient Down" width="24px">                  
        </td>       
       </tr> 
      <% } else { %> 
@@ -327,10 +327,10 @@
         <input name="notes"          type="hidden" value="">
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <button onclick="DeleteIngredient(<%=ndx %>);"   type="button">Delete</button>
-        <button onclick="EditIngredient(<%=ndx %>);"     type="button">Edit</button>      
-        <button onclick="MoveIngredientUp(<%=ndx %>);"   type="button">↑</button>    
-        <button onclick="MoveIngredientDown(<%=ndx %>);" type="button">↓</button>            
+        <img height="24px" onclick="DeleteIngredient(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Ingredient"    width="24px">   
+        <img height="24px" onclick="EditIngredient(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Ingredient"      width="24px">        
+        <img height="24px" onclick="MoveIngredientUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Ingredient Up"   width="24px">   
+        <img height="24px" onclick="MoveIngredientDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Ingredient Down" width="24px">            
        </td>        
       </tr>        
       <%}%>       
@@ -340,9 +340,10 @@
   </div>
   <br>
   <div class="centered">
-   <button onclick="HandleAddIngredientBtnClkd();" type="button">Add Ingredient</button>
-   <button onclick="HandleAddIngredientHeadingBtnClkd();" type="button">Add Heading</button>   
-   <button id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();" style="<%=is %>" type="button">Delete All Ingredients</button></div>
+   <img height="48px"                           onclick="HandleAddIngredientBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                      title="Add Ingredient"         width="48px">
+   <img height="48px"                           onclick="HandleAddIngredientHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  title="Add Ingredient Heading" width="48px">  
+   <img height="48px" id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png"  style="<%=is %>" title="Delete All Ingredients" width="48px">  
+  </div> 
  </div>  
  
  <br> 
@@ -412,10 +413,10 @@
          <td style="text-align: center; max-width: 100px; min-width: 100px; word-wrap: break-word;"><% 
           if ("" != imgSrc) { %><img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px"><input name="stepImage" type="hidden" value="<%=imgSrc %>"> <% } else { %><span>&nbsp;</span><input name="stepImage" type="hidden" value="<%=imgSrc %>"><%}%></td>         
          <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-          <button onclick="DeleteStep(<%=ndx %>);"   type="button">Delete</button>
-          <button onclick="EditStep(<%=ndx %>);"     type="button">Edit</button>   
-          <button onclick="MoveStepUp(<%=ndx %>);"   type="button">↑</button>    
-          <button onclick="MoveStepDown(<%=ndx %>);" type="button">↓</button>           
+          <img height="24px" onclick="DeleteStep(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Step"    width="24px">   
+          <img height="24px" onclick="EditStep(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Step"      width="24px">        
+          <img height="24px" onclick="MoveStepUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Step Up"   width="24px">   
+          <img height="24px" onclick="MoveStepDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Step Down" width="24px">            
          </td>        
         </tr> 
      <% } else { %> 
@@ -426,10 +427,10 @@
         <input name="stepType" type="hidden" value="HEADING">
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <button onclick="DeleteStep(<%=ndx %>);"   type="button">Delete</button>
-        <button onclick="EditStep(<%=ndx %>);"     type="button">Edit</button>   
-        <button onclick="MoveStepUp(<%=ndx %>);"   type="button">↑</button>    
-        <button onclick="MoveStepDown(<%=ndx %>);" type="button">↓</button>           
+        <img height="24px" onclick="DeleteStep(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Step"    width="24px">   
+        <img height="24px" onclick="EditStep(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Step"      width="24px">        
+        <img height="24px" onclick="MoveStepUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Step Up"   width="24px">   
+        <img height="24px" onclick="MoveStepDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Step Down" width="24px">                 
        </td> 
       </tr>        
      <%}%>         
@@ -439,9 +440,9 @@
   </div> 
   <br>
   <div class="centered">
-   <button onclick="HandleAddStepBtnClkd();"        type="button">Add Step</button>
-   <button onclick="HandleAddStepHeadingBtnClkd();" type="button">Add Heading</button>      
-   <button id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();" style="<%=ss %>" type="button">Delete All Steps</button>  
+   <img height="48px"                           onclick="HandleAddStepBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                      title="Add Step"         width="48px">
+   <img height="48px"                           onclick="HandleAddStepHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  title="Add Step Heading" width="48px">  
+   <img height="48px" id="delAllIngredientsBtn" onclick="HandleDelAllStepsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png"  style="<%=is %>" title="Delete All Steps" width="48px"> 
   </div> 
  </div>  
 
@@ -478,8 +479,8 @@
         </td>
         <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
          <span>
-          <button onclick="DeleteVariation(<%=ndx %>);" type="button">Delete</button>
-          <button onclick="EditVariation(<%=ndx %>);"   type="button">Edit</button>   
+          <img height="24px" onclick="DeleteVariation(<%=ndx %>);" src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Variation" width="24px">   
+          <img height="24px" onclick="EditVariation(<%=ndx %>);"   src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Variation"   width="24px">           
          </span>         
         </td>
        </tr> 
@@ -489,8 +490,8 @@
   </div>
   <br>
   <div class="centered">
-   <button onclick="HandleAddVariationBtnClkd();" type="button">Add Variation</button>
-   <button id="delAllVariationsBtn" onclick="HandleDelAllVariationsBtnClkd();" style="<%=ps %>" type="button">Delete All Variations</button> 
+   <img height="48px"                           onclick="HandleAddVariationBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"                     title="Add Variation"         width="48px">
+   <img height="48px" id="delAllVariationsBtn"  onclick="HandleDelAllVariationsBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="<%=ps %>" title="Delete All Variations" width="48px">    
   </div> 
  </div>  
 </form>
@@ -551,7 +552,7 @@
    </div>
    <br>
    <div class="centered">
-    <button onclick="AddIngredient();" type="button">Save</button>
+    <img height="48px" onclick="AddIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -575,7 +576,7 @@
    </div>   
    <br>
    <div class="centered">
-    <button onclick="AddIngredientHeading();" type="button">Save</button>
+    <img height="48px" onclick="AddIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div> 
  </form>
@@ -600,7 +601,7 @@
    </div> 
    <br> 
    <div class="centered">
-    <button onclick="AddPrerequisite();" type="button">Save</button>
+    <img height="48px" onclick="AddPrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -637,7 +638,7 @@
    </div>    
    <br> 
    <div class="centered">
-    <button onclick="AddStep();" type="button">Save</button>
+    <img height="48px" onclick="AddStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -647,7 +648,7 @@
 <div class="popup" id="addStepHeadingPopup">
  <form>
   <div class="heading">
-   ADD STEP HEADING&nbsp;<img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   ADD STEP HEADING&nbsp;<img height="32px" onclick="HideAddStepHeadingPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
   <br>
   <div class="request-div" id="addStepForm">
@@ -687,7 +688,7 @@
    </div> 
    <br> 
    <div class="centered">
-    <button onclick="AddVariation();" type="button">Save</button>
+    <img height="48px" onclick="AddVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -749,7 +750,7 @@
    </div>
    <br>
    <div class="centered">
-    <button onclick="SaveIngredient();" type="button">Save</button>
+    <img height="48px" onclick="SaveIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -775,7 +776,7 @@
    </div>
    <br>
    <div class="centered">
-    <button onclick="SaveIngredientHeading();" type="button">Save</button>
+    <img height="48px" onclick="SaveIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -803,7 +804,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SavePrerequisite();" type="button">Save</button>
+   <img height="48px" onclick="SavePrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -844,7 +845,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveStep();" type="button">Save</button>
+   <img height="48px" onclick="SaveStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -872,7 +873,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveStepHeading();" type="button">Save</button>
+   <img height="48px" onclick="SaveStepHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -899,7 +900,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveVariation();" type="button">Save</button>
+   <img height="48px" onclick="SaveVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -916,7 +917,7 @@
    <input id="puInvoker" type="hidden" value="">
    <div class="request-div" id="fileUploadForm">
     <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-    <button onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" type="button">Upload</button>
+    <img height="48px" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
    </div>
   </form>
   <div class="notifier" id="response">File Uploaded</div>

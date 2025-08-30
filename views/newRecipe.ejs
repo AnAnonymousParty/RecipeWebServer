@@ -144,7 +144,7 @@
   <span class="field-value">
    <input id="mainImageName" name="mainImageName" readonly="readonly" type="hidden" value="">
    <img height="80px" id="mainImage" src="" style="display: none; margin: 10px 0px 10px 0px; visibility: collapse;" width="80px">
-   <button onclick='ShowFileUploadPopup("mainImage", "");' type="button">Upload</button>
+   <img height="48px" onclick='ShowFileUploadPopup("mainImage", "");' src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px"> 
   </span>
  </div>  
  
@@ -173,9 +173,9 @@
    </table>
   </div>
   <br>
-  <div class="centered">
-   <button onclick="HandleAddPrerequisiteBtnClkd();" type="button">Add Prerequisite</button>
-   <button id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Prerequisites</button>  
+  <div class="centered"> 
+   <img height="48px" id="AddPrerequisiteBtn"     onclick="HandleAddPrerequisiteBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"    style="margin: 0px 10px 0px 0px;"            title="Add Prerequisite"         width="48px">   
+   <img height="48px" id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="display: none; visibility: collapse;" title="Delete All Prerequisites" width="48px">     
   </div> 
  </div> 
  
@@ -216,10 +216,10 @@
   </table>
   </div>
   <br>
-  <div class="centered">
-   <button onclick="HandleAddIngredientBtnClkd();" type="button">Add Ingredient</button>
-   <button onclick="HandleAddIngredientHeadingBtnClkd();" type="button">Add Heading</button>   
-   <button id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Ingredients</button>  
+  <div class="centered"> 
+   <img height="48px"                           onclick="HandleAddIngredientBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                                                 title="Add Ingredient"         width="48px">   
+   <img height="48px"                           onclick="HandleAddIngredientHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                                             title="Add Ingredient Heading" width="48px">   
+   <img height="48px" id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="display: none; visibility: collapse;" title="Delete All Ingredients" width="48px">     
   </div>
  </div>  
  
@@ -248,10 +248,10 @@
    </table>
   </div> 
   <br>
-  <div class="centered">
-   <button onclick="HandleAddStepBtnClkd();" type="button">Add Step</button>
-   <button onclick="HandleAddStepHeadingBtnClkd();" type="button">Add Heading</button>     
-   <button id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Steps</button>  
+  <div class="centered"> 
+   <img height="48px"                     onclick="HandleAddStepBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                                                 title="Add Step"         width="48px">   
+   <img height="48px"                     onclick="HandleAddStepHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                                             title="Add Step Heading" width="48px">   
+   <img height="48px" id="delAllStepsBtn" onclick="HandleDelAllStepsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="display: none; visibility: collapse;" title="Delete All Steps" width="48px">    
   </div> 
  </div> 
  
@@ -281,8 +281,8 @@
   </div>
   <br>
   <div class="centered">
-   <button onclick="HandleAddVariationBtnClkd();" type="button">Add Variation</button>
-   <button id="delAllVariationsBtn" onclick="HandleDelAllVariationsBtnClkd();" style="display: none; visibility: collapse;" type="button">Delete All Variations</button>  
+   <img height="48px"                          onclick="HandleAddVariationBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"                                                 title="Add Variation"         width="48px">                                                  
+   <img height="48px" id="delAllVariationsBtn" onclick="HandleDelAllVariationsBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="display: none; visibility: collapse;" title="Delete All Variations" width="48px">    
   </div> 
  </div>  
 </form>
@@ -345,7 +345,7 @@
   </div>
   <br>
   <div class="centered">
-   <button onclick="AddIngredient();" type="button">Save</button>
+   <img height="48px" onclick="AddIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">   
   </div>
  </form>
 </div>
@@ -368,7 +368,7 @@
    </div>   
    <br>
    <div class="centered">
-    <button onclick="AddIngredientHeading();" type="button">Save</button>
+    <img height="48px" onclick="AddIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div> 
  </form>
@@ -394,7 +394,7 @@
    </div> 
    <br> 
    <div class="centered">
-    <button onclick="AddPrerequisite();" type="button">Save</button>
+    <img height="48px" onclick="AddPrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -431,7 +431,7 @@
    </div>    
    <br> 
    <div class="centered">
-    <button onclick="AddStep();" type="button">Save</button>
+    <img height="48px" onclick="AddStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">    
    </div>
   </div>
  </form>
@@ -456,7 +456,7 @@
    </div>    
    <br> 
    <div class="centered">
-    <button onclick="AddStepHeading();" type="button">Save</button>
+    <img height="48px" onclick="AddStepHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -481,7 +481,7 @@
    </div> 
    <br> 
    <div class="centered">
-    <button onclick="AddVariation();" type="button">Save</button>
+    <img height="48px" onclick="AddVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">    
    </div>
   </div>
  </form>
@@ -543,7 +543,7 @@
    </div>
    <br>
    <div class="centered">
-    <button onclick="SaveIngredient();" type="button">Save</button>
+    <img height="48px" onclick="SaveIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">    
    </div>
   </div>
  </form>
@@ -569,7 +569,7 @@
    </div>
    <br>
    <div class="centered">
-    <button onclick="SaveIngredientHeading();" type="button">Save</button>
+    <img height="48px" onclick="SaveIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
    </div>
   </div>
  </form>
@@ -596,7 +596,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SavePrerequisite();" type="button">Save</button>
+   <img height="48px" onclick="SavePrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -636,7 +636,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveStep();" type="button">Save</button>
+   <img height="48px" onclick="SaveStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
   </div>  
  </form>
 </div>
@@ -663,7 +663,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveStepHeading();" type="button">Save</button>
+   <img height="48px" onclick="SaveStepHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">   
   </div>  
  </form>
 </div>
@@ -689,7 +689,7 @@
   </div>
   <br> 
   <div class="centered">
-   <button onclick="SaveVariation();" type="button">Save</button>
+   <img height="48px" onclick="SaveVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">   
   </div>  
  </form>
 </div>
@@ -706,7 +706,7 @@
    <input id="puInvoker" type="hidden" value="">
    <div class="request-div" id="fileUploadForm">
     <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-    <button onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" type="button">Upload</button>
+    <img height="48px" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
    </div>
   </form>
   <div class="notifier" id="response">File Uploaded</div>

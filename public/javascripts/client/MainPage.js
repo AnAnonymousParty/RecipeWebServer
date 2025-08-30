@@ -96,11 +96,21 @@ function AddIngredient() {
  
  var cell = row.insertCell();
  
- cell.colSpan         = "2";
- cell.innerHTML       = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                      + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
-                      + "<button onclick=\"MoveIngredientUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
-                      + "<button onclick=\"MoveIngredientDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.colSpan         = "2";                      
+ cell.innerHTML       = "<span>"
+                      + "<img height='24px' onclick='DeleteIngredient("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Ingredient' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditIngredient("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Ingredient' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveIngredientUp("
+                      + (tbody.rows.length - 1) 
+                      + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Ingredient Up' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveIngredientDown("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Ingredient Down' width='24px'>"
+                      + "</span>";                                            
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right";                 
@@ -160,10 +170,19 @@ function AddIngredientHeading() {
  var cell  = row.insertCell();
  
  cell.colSpan         = "2";
- cell.innerHTML       = "<button onclick=\"DeleteIngredient("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                      + "<button onclick=\"EditIngredient("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
-                      + "<button onclick=\"MoveIngredientUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
-                      + "<button onclick=\"MoveIngredientDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.innerHTML       = "<img height='24px' onclick='DeleteIngredient("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Ingredient' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditIngredient("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Ingredient' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveIngredientUp("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Ingredient Up' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveIngredientDown("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Ingredient Down' width='24px'>";                       
+                      
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right";                 
@@ -213,8 +232,10 @@ function AddPrerequisite() {
  cell.style.maxWidth  = "95px"; 
  cell.style.minWidth  = "95px"; 
  cell.style.textAlign = "right"; 
- cell.innerHTML = "<span> <button onclick=\"DeletePrerequisite(" + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                + "<button onclick=\"EditPrerequisite("   + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button></span>";
+ cell.innerHTML       = "<span>"
+                      + "<img height='24px' onclick='DeletePrerequisite(" + (tbody.rows.length - 1) + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Prerequisite' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditPrerequisite("   + (tbody.rows.length - 1) + ");' src='/images/Buttons/EditBtn_48X48.jpg'   title='Edit Prerequisite'   width='24px'>" 
+                      + "</span>"
  
  var btnStyle = document.getElementById("delAllPrerequisitesBtn").style;
  
@@ -295,12 +316,12 @@ function AddStep() {
  
  var cell  = row.insertCell(-1);
  
- cell.innerHTML        = document.getElementById("step2Add").value 
-                       + '<input name="step"     type="hidden" value="' + document.getElementById("step2Add").value + '">'
-                       + '<input name="stepType" type="hidden" value="STEP">'; 
- cell.style.maxWidth   = "400px";
- cell.style.minWidth   = "400px";  
- cell.style.wordWrap   = "break-word";                       
+ cell.innerHTML      = document.getElementById("step2Add").value 
+                     + '<input name="step"     type="hidden" value="' + document.getElementById("step2Add").value + '">'
+                     + '<input name="stepType" type="hidden" value="STEP">'; 
+ cell.style.maxWidth = "400px";
+ cell.style.minWidth = "400px";  
+ cell.style.wordWrap = "break-word";                       
  
  
  cell = row.insertCell(-1); 
@@ -317,10 +338,18 @@ function AddStep() {
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right"; 
- cell.innerHTML = "<button onclick=\"DeleteStep("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                + "<button onclick=\"EditStep("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
-                + "<button onclick=\"MoveStepUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
-                + "<button onclick=\"MoveStepDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.innerHTML       = "<img height='24px' onclick='DeleteStep("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditStep("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Step' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveStepUp("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Step Up' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveStepDown("
+                      + (tbody.rows.length - 1)
+                      + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>";                 
 
  var btnStyle = document.getElementById("delAllStepsBtn").style;
  
@@ -375,10 +404,18 @@ function AddStepHeading() {
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right"; 
- cell.innerHTML       = "<button onclick=\"DeleteStep("   + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                      + "<button onclick=\"EditStep("     + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button>&nbsp;"
-                      + "<button onclick=\"MoveStepUp("   + (tbody.rows.length - 1) + ");\" type=\"button\">↑</button>&nbsp;"   
-                      + "<button onclick=\"MoveStepDown(" + (tbody.rows.length - 1) + ");\" type=\"button\">↓</button>"; 
+ cell.innerHTML       = "<img height='24px' onclick='DeleteStep("
+                      + rowNdx 
+                      + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditStep("
+                      + rowNdx 
+                      + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Step' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveStepUp("
+                      + rowNdx 
+                      + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Step Up' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='MoveStepDown("
+                      + rowNdx
+                      + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>"; 
 
  var btnStyle = document.getElementById("delAllStepsBtn").style;
  
@@ -425,9 +462,13 @@ function AddVariation() {
  cell.style.maxWidth  = "95px"; 
  cell.style.minWidth  = "95px"; 
  cell.style.textAlign = "right"; 
- cell.innerHTML = "<span> <button onclick=\"DeleteVariation(" + (tbody.rows.length - 1) + ");\" type=\"button\">Delete</button>&nbsp;"
-                + "<button onclick=\"EditVariation("   + (tbody.rows.length - 1) + ");\" type=\"button\">Edit</button></span>";
- 
+ cell.innerHTML       = "<span>"
+                      + "<img height='24px' onclick='DeleteVariation(" + (tbody.rows.length - 1) 
+                      + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Variation' width='24px'> &nbsp;"
+                      + "<img height='24px' onclick='EditVariation(" + (tbody.rows.length - 1) 
+                      + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Variation' width='24px'>"
+                      + "</span>";
+
  var btnStyle = document.getElementById("delAllVariationsBtn").style;
  
  btnStyle.display    = "inline";
@@ -565,8 +606,8 @@ function DeleteIngredient(rowNum) {
   var row  = tbody.rows[i];
   var cell = row.cells[5];
   
-  cell.innerHTML = "<button onclick=\"DeleteIngredient(" + (i) + ");\" type=\"button\">Delete</button>&nbsp;"
-                 + "<button onclick=\"EditIngredient("   + (i) + ");\" type=\"button\">Edit</button>";
+  cell.innerHTML = "<img height='24px' onclick='DeleteIngredient(" + (i) + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Ingredient' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditIngredient("   + (i) + ");' src='/images/Buttons/EditBtn_48X48.jpg'   title='Edit Ingredient'   width='24px'>"                 
  }
  
  if (0 == tbody.rows.length) {
@@ -592,8 +633,8 @@ function DeletePrerequisite(rowNum) {
   var row  = tbody.rows[i];
   var cell = row.cells[1];
   
-  cell.innerHTML = "<button onclick=\"DeletePrerequisite(" + (i) + ");\" type=\"button\">Delete</button>&nbsp;"
-                 + "<button onclick=\"EditPrerequisite("   + (i) + ");\" type=\"button\">Edit</button>";
+  cell.innerHTML = "<img height='24px' onclick='DeletePrerequisite(" + (i) + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Prerequisite' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditPrerequisite("   + (i) + ");' src='/images/Buttons/EditBtn_48X48.jpg'   title='Edit Prerequisite'   width='24px'>" 
  }
  
  if (0 == tbody.rows.length) {
@@ -686,8 +727,8 @@ function DeleteStep(rowNum) {
   var row = tbody.rows[i];
   var cell= row.cells[2];
   
-  cell.innerHTML = "<button onclick=\"DeleteStep(" + (i) + ");\" type=\"button\">Delete</button>&nbsp;"
-                 + "<button onclick=\"EditStep("   + (i) + ");\" type=\"button\">Edit</button>";
+  cell.innerHTML = "<img height='24px' onclick='DeleteStep(" + (i) + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditStep("   + (i) + ");' src='/images/Buttons/EditBtn_48X48.jpg'   title='Edit Step'   width='24px'>"  
  }
  
  if (0 == tbody.rows.length) {
@@ -1285,15 +1326,18 @@ function MoveIngredientDown(rowNum) {
   
   var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  cell.innerHTML = "<button onclick=\"DeleteIngredient(" 
+  cell.innerHTML = "<img height='24px' onclick='DeleteIngredient("
                  + rowNdx 
-                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditIngredient(" 
+                 + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Ingredient' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditIngredient("
                  + rowNdx 
-                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveIngredientUp("
+                 + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Ingredient' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveIngredientUp("
                  + rowNdx 
-                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveIngredientDown(" 
+                 + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Ingredient Up' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveIngredientDown("
                  + rowNdx
-                 + ");\" type=\"button\">↓</button>";
+                 + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Ingredient Down' width='24px'>"; 
  } 
 }
 
@@ -1314,15 +1358,18 @@ function MoveIngredientUp(rowNum) {
   
   var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  cell.innerHTML = "<button onclick=\"DeleteIngredient(" 
+  cell.innerHTML = "<img height='24px' onclick='DeleteIngredient("
                  + rowNdx 
-                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditIngredient(" 
+                 + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Ingredient' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditIngredient("
                  + rowNdx 
-                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveIngredientUp("
+                 + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Ingredient' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveIngredientUp("
                  + rowNdx 
-                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveIngredientDown(" 
+                 + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Ingredient Up' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveIngredientDown("
                  + rowNdx
-                 + ");\" type=\"button\">↓</button>";
+                 + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Ingredient Down' width='24px'>"; 
  }
 }
 
@@ -1344,15 +1391,18 @@ function MoveStepDown(rowNum) {
   
   var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  cell.innerHTML = "<button onclick=\"DeleteStep(" 
+  cell.innerHTML = "<img height='24px' onclick='DeleteStep("
                  + rowNdx 
-                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditStep(" 
+                 + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditStep("
                  + rowNdx 
-                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveStepUp("
+                 + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Step' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveStepUp("
                  + rowNdx 
-                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveStepDown(" 
+                 + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Step Up' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveStepDown("
                  + rowNdx
-                 + ");\" type=\"button\">↓</button>";
+                 + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>"; 
  }
 }
 
@@ -1373,15 +1423,18 @@ function MoveStepUp(rowNum) {
   
   var cell = tbody.rows[rowNdx].cells[cellCnt - 1];
   
-  cell.innerHTML = "<button onclick=\"DeleteStep(" 
+  cell.innerHTML = "<img height='24px' onclick='DeleteStep("
                  + rowNdx 
-                 + ");\" type=\"button\">Delete</button>&nbsp;<button onclick=\"EditStep(" 
+                 + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='EditStep("
                  + rowNdx 
-                 + ");\" type=\"button\">Edit</button>&nbsp;<button onclick=\"MoveStepUp("
+                 + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Step' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveStepUp("
                  + rowNdx 
-                 + ");\" type=\"button\">↑</button>&nbsp;<button onclick=\"MoveStepDown(" 
+                 + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Step Up' width='24px'> &nbsp;"
+                 + "<img height='24px' onclick='MoveStepDown("
                  + rowNdx
-                 + ");\" type=\"button\">↓</button>";
+                 + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>"; 
  }
 }
 
