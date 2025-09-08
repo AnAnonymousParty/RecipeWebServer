@@ -48,19 +48,19 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\app.js";                  DestDir: "{app}";                   Flags: ignoreversion
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\package.json";            DestDir: "{app}";                   Flags: ignoreversion
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\README.md";               DestDir: "{app}";                   Flags: ignoreversion
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\StartServer.bat";         DestDir: "{app}";                   Flags: ignoreversion
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\InstallDependencies.bat"; DestDir: "{app}";                   Flags: ignoreversion
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\app.js";                  DestDir: "{app}";                   Flags: ignoreversion
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\package.json";            DestDir: "{app}";                   Flags: ignoreversion
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\README.md";               DestDir: "{app}";                   Flags: ignoreversion
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\StartServer.bat";         DestDir: "{app}";                   Flags: ignoreversion
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\InstallDependencies.bat"; DestDir: "{app}";                   Flags: ignoreversion
 
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\bin\*";                   DestDir: "{app}\bin";               Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\installer\*";             DestDir: "{app}\installer";         Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\node_modules\*";          DestDir: "{app}\node_modules";      Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\node_modules\.bin\*";     DestDir: "{app}\node_modules\.bin"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\public\*";                DestDir: "{app}\public";            Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\routes\*";                DestDir: "{app}\routes";            Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Bob\Data\PublicGithubProjects\RS\views\*";                 DestDir: "{app}\views";             Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\bin\*";                   DestDir: "{app}\bin";               Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\installer\*";             DestDir: "{app}\installer";         Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\node_modules\*";          DestDir: "{app}\node_modules";      Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\node_modules\.bin\*";     DestDir: "{app}\node_modules\.bin"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\public\*";                DestDir: "{app}\public";            Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\routes\*";                DestDir: "{app}\routes";            Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Bob\Data\PublicGithubProjects\RecipeWebServer\views\*";                 DestDir: "{app}\views";             Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 
