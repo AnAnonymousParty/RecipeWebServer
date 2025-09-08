@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "adm-zip": "^0.5.16",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.1.10",
@@ -20,6 +21,7 @@
     "morgan": "~1.9.1",
     "puppeteer": "^24.16.1",
     "serve-favicon": "^2.5.0",
+    "unzipper": "^0.12.3",
     "xml2js": "^0.6.2",
     "xml2js-parser": "^1.1.1",
     "xmlbuilder2": "^3.1.1"

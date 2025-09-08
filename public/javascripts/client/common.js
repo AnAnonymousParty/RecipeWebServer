@@ -56,10 +56,14 @@ function ToggleVisibility(id) {
 function UnHideElement(id, display) {
  var e = document.getElementById(id);
  
+ if (null == e) {
+  return;
+ }
+ 
  if (undefined == display) {
   e.style.display = 'block';
  } else {
-  e.style.display = display;
+   e.style.display = display;
  }
  
  e.style.visibility = "visible";

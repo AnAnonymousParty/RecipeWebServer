@@ -262,14 +262,19 @@ function AddRecipe() {
  
  var xmlhttp = new XMLHttpRequest();
     
- xmlhttp.onreadystatechange = function()
- {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
+ xmlhttp.onreadystatechange = function() {
+  if (4 != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (200 == xmlhttp.status || 304 == xmlhttp.status) {
    if ("NO" == xmlhttp.response) {
     ToggleVisibility("addRecipePopup");
+    
     RequestNewRecipePage(recipeName);
    } else {
     HideElement("addRecipePopup");
+    
     ToggleVisibility("recipeExistsWarningPopup");
    } 
   }
@@ -277,6 +282,7 @@ function AddRecipe() {
    // TODO: Handle failure, if needed.
   }
  }
+  
  
  var params = encodeURIComponent(recipeName);
     
@@ -319,8 +325,8 @@ function AddStep() {
  cell.innerHTML      = document.getElementById("step2Add").value 
                      + '<input name="step"     type="hidden" value="' + document.getElementById("step2Add").value + '">'
                      + '<input name="stepType" type="hidden" value="STEP">'; 
- cell.style.maxWidth = "400px";
- cell.style.minWidth = "400px";  
+ cell.style.maxWidth = "500px";
+ cell.style.minWidth = "500px";  
  cell.style.wordWrap = "break-word";                       
  
  
@@ -328,16 +334,16 @@ function AddStep() {
 
  cell.innerHTML      = '<img height="80px" src="' + ("" == imgName ? '' : imgSrc) + '" ' + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
                      + '<input name="stepImage" type="hidden" value="' + imgName + '">';
- cell.style.maxWidth = "100px";
- cell.style.minWidth = "100px";
+ cell.style.maxWidth = "130px";
+ cell.style.minWidth = "130px";
  cell.style.wordWrap = "break-word";                
  
  
  cell = row.insertCell(-1);
  cell.colspan         = "2";
- cell.style.maxWidth  = "150px"; 
- cell.style.minWidth  = "150px"; 
- cell.style.textAlign = "right"; 
+ cell.style.maxWidth  = "130px"; 
+ cell.style.minWidth  = "130px"; 
+ cell.style.textAlign = "left"; 
  cell.innerHTML       = "<img height='24px' onclick='DeleteStep("
                       + (tbody.rows.length - 1)
                       + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
@@ -393,28 +399,27 @@ function AddStepHeading() {
                        + '<input name="stepType"  type="hidden" value="HEADING">'
                        + '<input name="stepImage" type="hidden" value="">'    
  cell.style.fontWeight = "bold";                      
- cell.style.minWidth   = "400px";
+ cell.style.minWidth   = "640px";
  cell.style.textAlign  = "center"; 
  cell.style.wordWrap   = "break-word";
 
  
  cell = row.insertCell(-1);
  
- cell.colspan         = "2";
- cell.style.maxWidth  = "150px"; 
- cell.style.minWidth  = "150px"; 
- cell.style.textAlign = "right"; 
+ cell.style.maxWidth  = "130px"; 
+ cell.style.minWidth  = "130px"; 
+ cell.style.textAlign = "left"; 
  cell.innerHTML       = "<img height='24px' onclick='DeleteStep("
-                      + rowNdx 
+                      + (0 == tbody.rows.length ? 0 : tbody.rows.length - 1)
                       + ");' src='/images/Buttons/DeleteBtn_48X48.jpg' title='Delete Step' width='24px'> &nbsp;"
                       + "<img height='24px' onclick='EditStep("
-                      + rowNdx 
+                      + (0 == tbody.rows.length ? 0 : tbody.rows.length - 1)
                       + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Step' width='24px'> &nbsp;"
                       + "<img height='24px' onclick='MoveStepUp("
-                      + rowNdx 
+                      + (0 == tbody.rows.length ? 0 : tbody.rows.length - 1)
                       + ");' src='/images/Buttons/UpBtn_48X48.png' title='Move Step Up' width='24px'> &nbsp;"
                       + "<img height='24px' onclick='MoveStepDown("
-                      + rowNdx
+                      + (0 == tbody.rows.length ? 0 : tbody.rows.length - 1)
                       + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>"; 
 
  var btnStyle = document.getElementById("delAllStepsBtn").style;
@@ -517,30 +522,32 @@ function DeleteAllRecipes() {
  
  var xmlhttp = new XMLHttpRequest();
  
- xmlhttp.onreadystatechange = function()
- {
-  if (4 == xmlhttp.readyState) {
-   if (200 == xmlhttp.status) {
-    var data = xmlhttp.responseText;
+ xmlhttp.onreadystatechange = function() {
+  if (4 != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (200 == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+   
+   const parser = new DOMParser();
+   const doc    = parser.parseFromString(data, 'text/html');
+   
+   document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+   document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;  
+   
+   if (0 == doc.getElementById("totalFilesCnt").value) { 
+    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
     
-    const parser = new DOMParser();
-    const doc    = parser.parseFromString(data, 'text/html');
+    HideElement("DeleteAllRecipesBtn");
+   } else {   
+    document.getElementById("recipesListContainer").innerHTML = data;
     
-    var filesListCnt = doc.getElementById("filesListCnt").value;
-    
-    document.getElementById("displayCnt").innerText = filesListCnt;   
-    
-    if ("" == data) { 
-     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
-     HideElement("DeleteAllRecipesBtn");
-    } else {   
-     document.getElementById("recipesListContainer").innerHTML = data;
-     UnHideElement("DeleteAllRecipesBtn", "inline");
-    }
+    UnHideElement("DeleteAllRecipesBtn", "inline");
    }
-   else {
-    // TODO: Handle failure, if needed.
-   }
+  }
+  else {
+   // TODO: Handle failure, if needed.
   }
  }
     
@@ -663,28 +670,31 @@ function DeleteRecipe(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState) {
-   if (200 == xmlhttp.status) {
-    var data = xmlhttp.responseText;
+  if (4 != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (200 == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+   
+   const parser = new DOMParser();
+   const doc    = parser.parseFromString(data, 'text/html');
+   
+   document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+   document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
+      
+   if ("" == data) { 
+    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
     
-    const parser = new DOMParser();
-    const doc    = parser.parseFromString(data, 'text/html');
+    HideElement("DeleteAllRecipesBtn");
+   } else {   
+    document.getElementById("recipesListContainer").innerHTML = data;
     
-    var filesListCnt = doc.getElementById("filesListCnt").value;
-    
-    document.getElementById("displayCnt").innerText = filesListCnt;
-       
-    if ("" == data) { 
-     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
-     HideElement("DeleteAllRecipesBtn");
-    } else {   
-     document.getElementById("recipesListContainer").innerHTML = data;
-     UnHideElement("DeleteAllRecipesBtn", "inline");
-    }
+    UnHideElement("DeleteAllRecipesBtn", "inline");
    }
-   else {
-    // TODO: Handle failure, if needed.
-   }
+  }
+  else {
+   // TODO: Handle failure, if needed.
   }
  }
  
@@ -1132,6 +1142,101 @@ function HandleDelAllVariationsBtnClkd() {
  }
 }
 
+function HandleExportAllBtnClkd() {
+ var xmlhttpReq = new XMLHttpRequest();
+ 
+ document.getElementById("ExportRecipesResponseContainer").innerHTML = "Exporting all recipes.<br><br>Depending on the number of recipes, this can take some time.<br><br>Please be patient.";
+ 
+ HideElement("ExportContainer"); 
+ HideElement("ExportButtonsContainer");
+ UnHideElement("ExportRecipesResponseContainer"); 
+ 
+ xmlhttpReq.open("GET", "/ExportAllRecipes"); 
+ 
+ xmlhttpReq.responseType = "blob";
+
+ xmlhttpReq.onload = function() {
+  HideElement("editPageBtns");
+  HideElement("recipeTitleContainer");
+  HideElement("viewPageBtns");
+  
+  UnHideElement("indexPageBtns"); 
+  UnHideElement("filtersContainer");
+  
+  if (4 != xmlhttpReq.readyState) { 
+   return;
+  }
+  
+  if (200 === xmlhttpReq.status) {
+   document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
+   
+   HideElement("ExportContainer");
+   UnHideElement("ExportRecipesResponseContainer");
+
+   let blob = new Blob([xmlhttpReq.response], {type: 'application/zip'});
+   let uri  = URL.createObjectURL(blob);
+   let link = document.createElement("a");
+   
+   link.download = "recipes.zip";
+   link.href     = uri;
+
+   document.body.appendChild(link);
+   link.click();
+   document.body.removeChild(link);
+  } else {
+   alert("Unable to download .zip file");
+  }
+ };
+
+ xmlhttpReq.send(); 
+}
+
+function HandleExportSelectedBtnClkd() {
+ var xmlhttpReq = new XMLHttpRequest();
+ 
+ xmlhttpReq.open("POST", "/ExportSelectedRecipes", true); 
+ xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+ 
+ xmlhttpReq.responseType = "blob";
+ 
+ xmlhttpReq.onload = function() {
+  if (4 != xmlhttpReq.readyState) {
+   return;
+  }
+  
+  if (200 === xmlhttpReq.status) {
+   document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
+   
+   HideElement("ExportContainer");
+   UnHideElement("ExportRecipesResponseContainer");
+  
+   let blob = new Blob([xmlhttpReq.response], {type: 'application/octet-stream'});
+   let uri  = URL.createObjectURL(blob);
+   let link = document.createElement("a");
+   
+   link.download = "recipes.zip";
+   link.href     = uri;
+
+   document.body.appendChild(link);
+   link.click();
+   document.body.removeChild(link);
+  } else {
+   alert("Unable to download .zip file");
+  }
+ }; 
+ 
+ var formData = new FormData(document.getElementById("ExportRecipesForm"));
+ var obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
+ var json     = JSON.stringify(obj); 
+ 
+ document.getElementById("ExportRecipesResponseContainer").innerText = "Exporting selected recipes.<br><br>Depending on the number of recipes, this can take some time.<br><br>Please be patient.";
+ 
+ HideElement("ExportContainer"); 
+ UnHideElement("ExportButtonsContainer");
+
+ xmlhttpReq.send(json); 
+}
+
 function HandleSearchBtnClkd() {
  var xmlhttpReq = new XMLHttpRequest();
  
@@ -1268,6 +1373,12 @@ function HideErrorPopup(restoree) {
  ToggleVisibility("errorPopup");
 }
 
+function HideExportRecipesPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ ToggleVisibility("exportRecipesPopup");
+}
+
 function HideFileUploadPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
@@ -1278,6 +1389,14 @@ function HideFileUploadPopup() {
  }
  
  ToggleVisibility("fileUploadPopup");
+}
+
+function HideImportRecipesPopup() {
+ document.getElementById("overlayContainer").className = "no-overlay";
+ 
+ UnHideElement(document.getElementById("ppuInvoker").value);
+ 
+ ToggleVisibility("importRecipesPopup");
 }
 
 function HideRecipeExistsWarningPopup() {
@@ -1295,7 +1414,7 @@ function HideSettingsPopup() {
 }
 
 function InitPage() {
- var recipesCnt = document.getElementById("recipesListContainer").children.length;
+ var recipesCnt = document.getElementById("filesListCnt").value;
  
  if (0 == recipesCnt) {
   document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
@@ -1471,7 +1590,11 @@ function RequestNewRecipePage(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
+  if (4 != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (200 == xmlhttp.status) {
    document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
    document.getElementById("recipeName").value               = recipeName;
    document.getElementById("recipeTitle").innerText          = document.getElementById("recipeName").value; 
@@ -1608,7 +1731,7 @@ function SaveIngredientHeading() {
 function SavePDF(recipeName) {
  var xmlhttp = new XMLHttpRequest();
  
-  xmlhttp.responseType = "blob";
+ xmlhttp.responseType = "blob";
     
  xmlhttp.onreadystatechange = function() {
   if (4 == xmlhttp.readyState) {
@@ -1715,20 +1838,30 @@ function SaveRecipe() {
     UnHideElement("filtersContainer");
     UnHideElement("indexPageBtns"); 
     
-    if (4 == xmlhttpReq.readyState && 200 === xmlhttpReq.status) {
+    if (4 != xmlhttpReq.readyState) {
+     return;
+    }
+
+    if (200 === xmlhttpReq.status) {
      var data = xmlhttpReq.responseText;
      
      if ("" == data) { 
       document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+      
       HideElement("DeleteAllRecipesBtn");
      } else {   
       document.getElementById("recipesListContainer").innerHTML = data;
+      
       ApplyFilter();
+      
       UnHideElement("DeleteAllRecipesBtn", "inline");
      } 
     } else {
      document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
     }
+    
+    document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+    document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
    };   
 
    xmlhttpReq.send(json);  
@@ -1760,20 +1893,30 @@ function SaveRecipe() {
    UnHideElement("filtersContainer");
    UnHideElement("indexPageBtns");    
     
-    if (4 == xmlhttpReq.readyState && 200 === xmlhttpReq.status) {
+    if (4 != xmlhttpReq.readyState) {
+     return;
+    }
+
+    if (200 === xmlhttpReq.status) {
      var data = xmlhttpReq.responseText;
      
      if ("" == data) { 
       document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+      
       HideElement("DeleteAllRecipesBtn");
      } else {   
       document.getElementById("recipesListContainer").innerHTML = data;
+      
       ApplyFilter();
+      
       UnHideElement("DeleteAllRecipesBtn", "inline");
      } 
     } else {
-     document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
+     document.getElementById("recipesListContainer").innerHTML = "Recipe not saved";
     }
+    
+    document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+    document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
    };   
       
    xmlhttpReq.send(json);  
@@ -1906,11 +2049,46 @@ function ShowAddRecipePopup() {
  document.getElementById('recipeName2Add').focus();
 }
 
-function ShowFileUploadForm() {
- document.getElementById("image2Upload").value = "";
+function ShowExportRecipesPopup(parentElement) {
+ HideElement("ExportRecipesResponseContainer");
+ UnHideElement("ExportContainer"); 
+ UnHideElement("ExportButtonsContainer");
  
- ToggleVisibility("response");
- ToggleVisibility("fileUploadForm");
+ var xmlhttpReq = new XMLHttpRequest();
+ 
+ xmlhttpReq.open("GET", "/GetRecipesToExportList"); 
+
+ xmlhttpReq.onload = function() {  
+  if (4 != xmlhttpReq.readyState) {
+   return;
+  }
+  
+  if (200 === xmlhttpReq.status) {
+   document.getElementById("overlayContainer").className = "overlay";
+ 
+   if ("" != parentElement) {  
+    HideElement(parentElement);
+    
+    document.getElementById("ppuInvoker").value = parentElement;
+   }
+   
+   ToggleVisibility("exportRecipesPopup");
+   
+   var html = xmlhttpReq.responseText;
+   
+   if ("" == html) {
+    document.getElementById("exportFilesList").innerHTML = "There are no recipes in the system. Why do you add/import some?";
+    
+    HideElement("ExportButtonsContainer");
+   } else {
+    document.getElementById("exportFilesList").innerHTML = html;
+    
+    UnHideElement("ExportButtonsContainer");
+   }
+  }
+ };
+
+ xmlhttpReq.send();
 }
 
 function ShowFileUploadPopup(imageTgt, parentElement) {
@@ -1927,42 +2105,62 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
  ToggleVisibility("fileUploadPopup");
 }
 
+function ShowImportRecipesPopup(parentElement) {
+ document.getElementById("overlayContainer").className = "overlay";
+ 
+ HideElement("recipesUploadResponse");
+ UnHideElement("recipesImportForm");
+ 
+ if ("" != parentElement) {  
+  HideElement(parentElement);
+  
+  document.getElementById("ppuInvoker").value = parentElement;
+ }
+ 
+ ToggleVisibility("importRecipesPopup");
+}
+
 function ShowRecipesList(category, cuisine) {
  var xmlhttpReq = new XMLHttpRequest();
  
  xmlhttpReq.open("GET", "/GetRecipesList?category=" + category + "&cuisine=" + cuisine, true); 
 
  xmlhttpReq.onload = function() {
-   HideElement("editPageBtns");
-   HideElement("recipeTitleContainer");
-   HideElement("viewPageBtns");
-   
-   UnHideElement("indexPageBtns"); 
-   UnHideElement("filtersContainer");
+  HideElement("editPageBtns");
+  HideElement("recipeTitleContainer");
+  HideElement("viewPageBtns");
   
-  if (4 == xmlhttpReq.readyState) {
-   if (200 === xmlhttpReq.status) {
-    var data = xmlhttpReq.responseText;
+  UnHideElement("indexPageBtns"); 
+  UnHideElement("filtersContainer");
+  
+  if (4 != xmlhttpReq.readyState) {
+   return;
+  }
+  
+  if (200 === xmlhttpReq.status) {
+   var data = xmlhttpReq.responseText;
+   
+   const parser = new DOMParser();
+   const doc = parser.parseFromString(data, 'text/html');
+   
+   var filesListCnt = doc.getElementById("filesListCnt").value;
+   
+   document.getElementById("displayCnt").innerText = filesListCnt;
+   
+   if (0 == filesListCnt) { 
+    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
     
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
+    HideElement("DeleteAllRecipesBtn");
+   } else {   
+    document.getElementById("recipesListContainer").innerHTML = data;
     
-    var filesListCnt = doc.getElementById("filesListCnt").value;
-    
-    document.getElementById("displayCnt").innerText = filesListCnt;
-    
-    if ("" == data) { 
-     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
-     
-     HideElement("DeleteAllRecipesBtn");
-    } else {   
-     document.getElementById("recipesListContainer").innerHTML = data;
-     
-     UnHideElement("DeleteAllRecipesBtn", "inline");
-    }
-   } else {
-    document.getElementById("recipesListContainer").innerHTML = "No recipes can be displayed.";
+    UnHideElement("DeleteAllRecipesBtn", "inline");
    }
+   
+   document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+   document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value; 
+  } else {
+   document.getElementById("recipesListContainer").innerHTML = "No recipes can be displayed.";
   }
  };
 
@@ -1970,15 +2168,17 @@ function ShowRecipesList(category, cuisine) {
 }
 
 function ShowSettingsPopup() {
+ document.getElementById("overlayContainer").className = "overlay";
+ 
  ToggleVisibility("SettingsPopup");
 }
 
 function SubmitFileForUpload(imageUse) {
  // Create a FormData object and add the fields to it that we'll need in the
- // request we;ll sedn to the server to uplad the file:
+ // request we'll send to the server to upload the file:
  
- var formData   = new FormData();
- var image      = document.getElementById('image2Upload').files[0];
+ var formData = new FormData();
+ var image    = document.getElementById('image2Upload').files[0];
  
  formData.append('recipeName', document.getElementById('recipeName').value);
  formData.append('image',      image);
@@ -2005,7 +2205,12 @@ function SubmitFileForUpload(imageUse) {
     
    document.getElementById("fileUploadForm").style.display = "none";
     
-   setTimeout(ShowFileUploadForm, 3000)
+   setTimeout(function() {
+               document.getElementById("image2Upload").value = "";
+           
+               ToggleVisibility("response");
+               ToggleVisibility("fileUploadForm");
+              }, 3000);
    
    var recipeName = document.getElementById("recipeName").value;
     
@@ -2070,6 +2275,90 @@ function SubmitFileForUpload(imageUse) {
  
  
  // Send the request to the server:
+
+ xmlhttpReq.send(formData);
+}
+
+function SubmitRecipesForUpload() {
+ // Create a FormData object and add the fields to it that we'll need in the
+ // request we'll send to the server to upload the recipes import (.zip) file:
+ 
+ var formData           = new FormData();
+ var recipesFile2Upload = document.getElementById('recipesFile2Upload').files[0];
+ 
+ if ('undefined' === typeof recipesFile2Upload) {
+  alert("A recipe import file must be provided.");
+  
+  return;
+ }
+ 
+ formData.append('recipesFile', recipesFile2Upload);
+ 
+ 
+ // Build the request to send to the server:
+ 
+ var xmlhttpReq = new XMLHttpRequest();
+
+ xmlhttpReq.open('POST', '/uploadRecipes', true);
+ 
+
+ // Provide the callback function to handle the response from the server:
+ 
+ xmlhttpReq.onload = function() {
+  if (4 != xmlhttpReq.readyState) {
+   return;  // I shall serve no data before its time.
+  }
+  
+  if (200 === xmlhttpReq.status) {
+   var response = document.getElementById('recipesUploadResponse');
+   
+   document.getElementById('recipesUploadResponse').innerHTML = "Recipes Imported";
+   
+   UnHideElement("recipesUploadResponse");
+   
+   setTimeout(function() {
+               document.getElementById("recipesFile2Upload").value = "";
+
+               HideElement("recipesUploadResponse");
+               UnHideElement("recipesImportForm");
+              }, 3000);
+
+    var data = xmlhttpReq.responseText;
+    
+    const parser = new DOMParser();
+    const doc    = parser.parseFromString(data, 'text/html');
+    
+    var errs = doc.getElementById("messageFromServer").value;
+    
+    if ("" != errs) {
+       alert(errs);
+    }
+    
+    var filesListCnt = doc.getElementById("filesListCnt").value;
+    var totFilesCnt  = doc.getElementById("totalFilesCnt").value;
+    
+    document.getElementById("displayCnt").innerText = filesListCnt;
+    document.getElementById("totalCnt").innerText   = totFilesCnt;
+    
+    if ("" == data) { 
+     document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+     
+     HideElement("DeleteAllRecipesBtn");
+    } else {   
+     document.getElementById("recipesListContainer").innerHTML = data;
+     
+     UnHideElement("DeleteAllRecipesBtn", "inline");
+    }
+  } 
+ };
+ 
+ 
+ // Send the request to the server:
+ 
+ document.getElementById('recipesUploadResponse').innerHTML = "Importing...";
+ 
+ UnHideElement("recipesUploadResponse");
+ HideElement("recipesImportForm");
 
  xmlhttpReq.send(formData);
 }

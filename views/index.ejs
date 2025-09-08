@@ -25,7 +25,7 @@
     </select>
     <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
     <img height="20px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="20px">
-    <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <%- recipesCnt %></span>
+    <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <span id="totalCnt"><%- recipesCnt %></span></span>
    </span>   
    <span id="recipeTitleContainer" style="display: none; visibility: collapse; text-align: center;">
     <h2 id="recipeTitle">Placeholder</h2>
@@ -40,8 +40,8 @@
     <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();" src="/images/Buttons/ReturnBtn_48X48.png" style="margin: 0px 10px 0px 0px;" title="Return to Recipes List" width="48px">     
    </div>  
    <div id="indexPageBtns" style="display: inline; visibility: visible;">
-    <img height="48px" id="AddNewRecipeBtn"    onclick="ShowAddRecipePopup();" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
-    <img height="48px" id="DeleteAllRecipeBtn" onclick="DeleteAllRecipes();"   src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
+    <img height="48px" id="AddNewRecipeBtn"     onclick="ShowAddRecipePopup();" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
+    <img height="48px" id="DeleteAllRecipesBtn" onclick="DeleteAllRecipes();"   src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
    </div> 
    <div id="viewPageBtns" style="display: none; visibility: collapse;">
     <img height="48px" id="EditRecipeBtn"      onclick="EditRecipe();"           src="/images/Buttons/EditBtn_48X48_White.png"   style="margin: 0px 10px 0px 0px;" title="Edit Recipe"             width="48px">
@@ -87,6 +87,50 @@
    </div>
   </div>
   
+  <!-- Export Recipes Popup. -->
+  <div class="popup" id="exportRecipesPopup" style="width: 40%;">
+   <div class="heading">
+    EXPORT RECIPES&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideExportRecipesPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   </div>
+   <br>
+   <div class="centered" id="ExportContainer">
+    <form enctype="multipart/form-data" id="ExportRecipesForm" method="post" name="exportRecipesForm">
+     <input id="erppuInvoker" type="hidden" value="">
+     <div class="scroll" id="exportFilesList">
+      <!-- List placeholder, filled in by server upon request. -->
+     </div>    
+     <div class="centered" id="ExportButtonsContainer">
+      <button id="ExportSelected" name="ExportSelected" onclick="HandleExportSelectedBtnClkd();" type="button">Export Selected</button>
+      <button id="ExportAll"      name="ExportAll"      onclick="HandleExportAllBtnClkd();"      type="button">Export All</button>
+     </div>
+    </form>
+   </div>
+   <div class="notifier" id="ExportRecipesResponseContainer">
+    <!-- Placeholder, filled in by server as needed. -->  
+   </div>    
+  </div>
+  
+  <!-- Import Recipes Popup. -->
+  <div class="popup" id="importRecipesPopup" style="width: 30%;">
+   <div class="heading">
+    IMPORT RECIPES&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideImportRecipesPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   </div>
+   <br>
+   <div class="centered">
+    <form action="/uploadRecipes" enctype="multipart/form-data" method="post">
+     <input id="recipesFile" type="hidden" value="">
+     <input id="ppuInvoker"  type="hidden" value="">
+     <div class="request-div" id="recipesImportForm">
+      <input accept=".zip" id="recipesFile2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
+      <img height="48px" onclick="SubmitRecipesForUpload(document.getElementById('recipesFile').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Import Recipes" width="48px">    
+     </div>
+    </form>
+    <div class="notifier" id="recipesUploadResponse">
+     <!-- Placeholder, filled in by server as needed. -->
+    </div>
+   </div>
+  </div>
+  
   <!-- Recipe Exists Warning Popup. -->
   <div class="popup" id="recipeExistsWarningPopup" style="width: 35%;">
    <div class="heading">
@@ -105,9 +149,9 @@
    </div>
    <br>
    <div class="centered">
-    <img height="32px" onclick="ShowImportRecipesPopup();" src="/images/Buttons/ImportBtn_48X48.png" title="Import Recipes" width="32px">
+    <img height="32px" onclick='ShowImportRecipesPopup("SettingsPopup");' src="/images/Buttons/ImportBtn_48X48.png" title="Import Recipes" width="32px">
     &nbsp;
-    <img height="32px" onclick="ShowExportRecipesPopup();" src="/images/Buttons/ExportBtn_60X48.png" title="Export Recipes" width="32px">    
+    <img height="32px" onclick='ShowExportRecipesPopup("SettingsPopup");' src="/images/Buttons/ExportBtn_60X48.png" title="Export Recipes" width="32px">    
    </div>
   </div>
   

@@ -20,14 +20,60 @@ function FormatTime(timeVal) {
 }
 
 export
+function GenerateExportList(fs, path, directoryPath) {
+ console.log("> GetRecipesToExportList(,, " + directoryPath + ")"); 
+ 
+ var listCnt       = 0;
+ var htmlRsp       = "";
+ var filesList     = fs.readdirSync(directoryPath);
+ var totalFilesCnt = filesList.length;
+  
+ for (var i = 0; i < totalFilesCnt; ++i) { 
+  var fileNameExt = filesList[i];
+  
+  var fobj;
+
+  try {
+   fobj = fs.statSync(path.join(directoryPath, fileNameExt));
+  } catch (err) {
+   console.log(err);
+  }
+
+  if (false == fobj.isFile()) { 
+   continue;
+  }
+   
+  if ("xml" != GetFileExtension(fileNameExt)) {
+   continue;
+  }
+  
+  var fileName = path.basename(fileNameExt, ".xml");
+    
+  ++listCnt; 
+  
+  htmlRsp += ('<div >'
+          +  ' <span>'
+          +  '  <input type="checkbox" id="' + EscapeHtml(fileName) + '" name="' + EscapeHtml(fileName) + '" value="' + EscapeHtml(fileName) + '">' + EscapeHtml(fileName)        
+          +  ' </span><'
+          +  '/div>\n');
+ }
+  
+ console.log("< GetRecipesToExportList() size=" + htmlRsp.length);  
+ 
+ return htmlRsp;
+}
+
+export
 function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuisineFilter) {
 
  var listCnt = 0;
  var htmlRsp = "";
  
  var filesList = fs.readdirSync(directoryPath);
+ 
+ var totalFilesCnt = filesList.length;
   
- for (var i = 0; i < filesList.length; ++i) { 
+ for (var i = 0; i < totalFilesCnt; ++i) { 
   var fileNameExt = filesList[i];
   
   var fobj;
@@ -110,7 +156,8 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   }
  }
   
- htmlRsp += '<input id="filesListCnt" type="hidden" value="' + listCnt + '">';
+ htmlRsp += '<input id="filesListCnt"  type="hidden" value="' + listCnt       + '">\n';
+ htmlRsp += '<input id="totalFilesCnt" type="hidden" value="' + totalFilesCnt + '">';
   
  return htmlRsp;
 }
@@ -119,7 +166,8 @@ export
 function GenerateFilesListHtmlFromList(fs, xml2jsParser, directoryPath, filesArray) {
  console.log("> GenerateFilesListHtmlFromList()"); 
  
- var htmlRsp = '<input id="filesListCnt" type="hidden" value="' + filesArray.length + '">';
+ var htmlRsp = '<input id="filesListCnt"  type="hidden" value="' + filesArray.length + '">\n'
+             + '<input id="totalFilesCnt" type="hidden" value="' + filesArray.lengt  + '">\n';
  
  if (0 == filesArray.length) {
   htmlRsp += "No recipes contain the search term.";
