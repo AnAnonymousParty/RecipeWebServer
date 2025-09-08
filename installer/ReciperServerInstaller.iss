@@ -73,6 +73,7 @@ Filename: "{sys}\msiexec.exe"; Parameters: "/passive /i ""{app}\installer\{#NODE
 Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall add rule name=""Node In""  program=""{commonpf64}\nodejs\node.exe"" dir=in  action=allow enable=yes"; Flags: runhidden;
 Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall add rule name=""Node Out"" program=""{commonpf64}\nodejs\node.exe"" dir=out action=allow enable=yes"; Flags: runhidden;
 
+
 [UninstallRun]
 
 ; Uninstall node.js:
