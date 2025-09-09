@@ -2103,6 +2103,8 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
  }
  
  ToggleVisibility("fileUploadPopup");
+ 
+ UnhideElement("FileUploadForm");
 }
 
 function ShowImportRecipesPopup(parentElement) {
