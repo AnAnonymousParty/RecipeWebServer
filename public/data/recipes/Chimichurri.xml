@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Chimichurri_Chimichurri.jpg" name="Chimichurri" category="SAUCE" cuisine="SOUTHAMERICAN">
+  <Title image="Chimichurri_20250831_153248.jpg" name="Chimichurri" category="SAUCE" cuisine="SOUTHAMERICAN">
     <Yield amount="8" units="SERVING"/>
     <Times prep="10" cook="10"/>
   </Title>
@@ -8,49 +8,49 @@
   <Description>Herby garlicy olive oily mix to accompany meats.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>EVOO</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Wine Vinegar</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Parslry</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
       <Quantity units="CLOVE">3</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Chilies</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Oregano</Name>
       <Quantity units="TBSP">.75</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher / Sea Salt</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>GROUND</Prep>
@@ -58,7 +58,7 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Mix all ingredients together in a bowl. Allow to sit for 5-10 minutes to release all of the flavors into the oil before using. Ideally, let it sit for more than 2 hours, if time allows.</Step>
+    <Step type="STEP" image="">Mix all ingredients together in a bowl. Allow to sit for 5-10 minutes to release all of the flavors into the oil before using. Ideally, let it sit for more than 2 hours, if time allows.</Step>
   </Method>
   <Variations/>
 </Recipe>

@@ -10,18 +10,18 @@
 Once clarified it can be heated to a higher temperature for sautéing.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
-      <Name>Butter</Name>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Heat butter in pan over low heat without stirring until fully melted.</Step>
-    <Step image="">Notice the butter will have separated into three layers, water on the bottom, clarified butter in the middle and milk solids floating on top.</Step>
-    <Step image="">Skim the floating solids from the top.</Step>
-    <Step image="">Pour off clarified butter into a container, leaving the water behind.</Step>
+    <Step type="STEP" image="">Heat butter in pan over low heat without stirring until fully melted.</Step>
+    <Step type="STEP" image="">Notice the butter will have separated into three layers, water on the bottom, clarified butter in the middle and milk solids floating on top.</Step>
+    <Step type="STEP" image="">Skim the floating solids from the top.</Step>
+    <Step type="STEP" image="">Pour off clarified butter into a container, leaving the water behind.</Step>
   </Method>
   <Variations/>
 </Recipe>

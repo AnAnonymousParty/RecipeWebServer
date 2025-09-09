@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Carne Asada_20250831_173602.jpg" name="Carne Asada" category="ENTREE_BEEF" cuisine="MEXICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="60" cook="15"/>
+  </Title>
+  <Nutrition calories="248" fat="13" carbs="0" protein="28" sugar="0" sodium="152" fiber="0" servings="4" servingsUnit="OZ"/>
+  <Description>Grilled marinated skirt steak.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Skirt Steak</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Silverskin removed.</Notes>
+    </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Marinade</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lime Juice</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SQUEEZED</Prep>
+      <Notes>One lime's worth.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>EVOO</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Harlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="SPRIG">6</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Corriander</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CRUSHED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cumin</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dried Chile </Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="HEADING">Marinade</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_150018.jpg">Mix the EVOO, lime juice, salt, pepper, garlic, cilantro, corriander, cumin and chile pepper together in a bowl/cup.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_145524.jpg">Prepare skirt steak.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_150301.jpg">Paint the marinade onto the steak.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_150522.jpg">Put the steak in a ziplock bag. Add remaining marinade. Refrigerate for an hour.</Step>
+    <Step type="HEADING">Grill</Step>
+    <Step type="STEP" image="">Preheat grill for high heat cooking.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_150301.jpg">Remove meat from bag and allow to come yo room temperature while grill is preheating.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_171708.jpg">Place meat on grill.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_171903.jpg">Cook for about 3-4 minutes,</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_171921.jpg">FLip and cook another 3 minutes.</Step>
+    <Step type="STEP" image="">Remove from grill and rest for 8-10 minutes.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_173602.jpg">Slice thinly across the grain and serve with &lt;a href='/GetRecipe?recipeName=Chimichurri'&gt;chimichurri&lt;/a&gt;.</Step>
+  </Method>
+  <Variations>
+    <Variation>Make tacos.</Variation>
+    <Variation>Serve with refried beans and Spanish rice.</Variation>
+  </Variations>
+</Recipe>

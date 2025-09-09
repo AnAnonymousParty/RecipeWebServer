@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sauteed Mushrooms_20250906_174242.jpg" name="Sauteed Mushrooms" category="SIDE" cuisine="ALL">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="38" fat="4" carbs="1.9" protein=".6" sugar=".9" sodium="60" fiber=".5" servings="4" servingsUnit="OZ"/>
+  <Description>Sliced mushroom sauteed in butter.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Mushrooms</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes>Crimini/portabello or White button/champignons</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Heat butter in skillet.</Step>
+    <Step type="STEP" image="Sauteed%20Mushrooms_20250906_173812.jpg">Add mushrooms.</Step>
+    <Step type="STEP" image="">Saute mushrooms until they begin to brown.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add fresh chopped herbs: Parsley, thyme, chives.</Variation>
+  </Variations>
+</Recipe>

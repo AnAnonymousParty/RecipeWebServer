@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Potatoes au gratin_20250906_174214.jpg" name="Potatoes au gratin" category="SIDE" cuisine="FRENCH">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="30" cook="90"/>
+  </Title>
+  <Nutrition calories="200" fat="10" carbs="15" protein="6" sugar="2" sodium="281" fiber="1" servings="1" servingsUnit="CUP"/>
+  <Description>Without the cheese, this would be Potatoes Dauphinoise.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+    <Prerequisite>Butter the inside of a lidded casserole/baking dish.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Russet potatoes</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cheddar Cheese</Name>
+      <Quantity units="CUP">2.5</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes>Extra Sharp. &lt;b&gt;NOT&lt;/b&gt; pre-shredded.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Thyme</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_160531.jpg">Place a layer of potatoes in the baking dish.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_160100.jpg">Grind garlic, salt, pepper and thyme together in a mortar.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_160713.jpg">Mix Cream, butter and garlic/salt/pepper/thyme in a bowl.</Step>
+    <Step type="STEP" image="">Slice potatoes to 1/8 inch slices, preferrable using a &lt;a href='https://www.amazon.com/Mandoline-Adjustable-mandoline-Stainless-Cut-Resistant/dp/B0DHL1RCBJ?tag=bngsmtphsnus-20&amp;linkCode=df0&amp;hvadid=80814302619620&amp;hvnetw=s&amp;hvqmt=e&amp;hvbmt=be&amp;hvdev=c&amp;hvlocint=&amp;hvlocphy=97445&amp;hvtargid=pla-4584413770707590&amp;psc=1'&gt;mandoline&lt;/a&gt;.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_161352.jpg">Add some of the cream mixture and about 1/3 of the scallions.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_160848.jpg">Top with about 1/3of the cheese.</Step>
+    <Step type="STEP" image="">Build two more layers, omitting the cheese from the top layer.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_174055.jpg">Cover and bake for 60 minutes.</Step>
+    <Step type="STEP" image="Potatoes%20au%20gratin_20250906_174214.jpg">Top with remaining cheese and bake uncovered an additional 10-20 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
