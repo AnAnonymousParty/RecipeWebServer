@@ -188,6 +188,38 @@ function GetEnumFromPrepDesc(desc) {
 
 
 export
+const ScalingTypes = Object.freeze({
+ HALVE:     "/ 2",
+ NONE:      "X 1",
+ DOUBLE:    "X 2",
+ TRIPLE:    "X 3",
+ QUADRUPLE: "X 4"
+});
+
+export
+function GetDescFromScalingType(enumVal) {
+ for (var key in ScalingTypes) {
+  if (key == enumVal) {
+   return ScalingTypes[key];
+  } 
+ }
+ 
+  return "Undefined";
+}
+
+export
+function GetEnumFromScalingDesc(desc) {
+ for (var key in ScalingTypes) {
+  if (desc == ScalingTypes[key]) {
+   return key;
+  } 
+ }
+ 
+  return "UNDEFINED";
+}
+
+
+export
 const ServingSizeTypes = Object.freeze({   
  CUP:      "Cups",   
  ITEM:     "Item",

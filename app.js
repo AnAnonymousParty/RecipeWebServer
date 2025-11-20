@@ -189,8 +189,9 @@ app.get('/GetRecipesToExportList', (req, res) => {
 
 app.get('/SavePDF', (req, res) => {
  var recipeName = req.query.recipeName;
+ var scaling    =req.query.scaling;
  
- console.log("> savePDF(" + recipeName + ")");
+ console.log("> savePDF(" + recipeName + ", " + scaling + ")");
  
  var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml); 
@@ -698,10 +699,10 @@ function RemoveStaleImages() {
 
 // Use the puppeteer library to convert the printable version of the given
 // named recipe to a PDF document.
-async function generatePDFfromHTML(recipeName, outputFile) {
+async function generatePDFfromHTML(recipeName, scaling, outputFile) {
  var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
          + encodeURIComponent(recipeName)
-         + "&ShowButtons=N";
+         + "&scaling=" + scaling + "&ShowButtons=N";
  
  const browser = await puppeteer.launch();
  const page    = await browser.newPage();
@@ -713,12 +714,13 @@ async function generatePDFfromHTML(recipeName, outputFile) {
 
 async function handleSavePDF(req, res) {
   var recipeName = req.query.recipeName;
+  var scaling    = req.query.scaling;
   
-  console.log("> handleSavePDF(" + recipeName + ")");
+  console.log("> handleSavePDF(" + recipeName + ", " + scaling + ")");
   
   // Generate PDF file from recipe's 'print' view:
   
-  await generatePDFfromHTML(recipeName, recipeName + '.pdf');
+  await generatePDFfromHTML(recipeName, scaling, recipeName + '.pdf');
   
   // Send the PDF file to the client:
   

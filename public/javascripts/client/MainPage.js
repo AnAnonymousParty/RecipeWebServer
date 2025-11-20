@@ -1625,7 +1625,15 @@ function RequestPrintableView(recipeName) {
  
  var params = encodeURIComponent(recipeName);
  
- var loc = "/ShowPrintRecipePage?recipeToPrint=" + params;
+ var loc = "/ShowPrintRecipePage?recipeToPrint=" + params + "&scaling="
+ 
+ let sElem = document.getElementById("scaling");
+ 
+ if (null != sElem) {
+  loc += (sElem.selectedIndex).toString();;
+ } else {
+  loc += "1";
+ }
     
  window.open(loc); 
 }
@@ -1728,7 +1736,7 @@ function SaveIngredientHeading() {
  HideEditIngredientHeadingPopup();
 } 
 
-function SavePDF(recipeName) {
+function SavePDF(recipeName, scaling) {
  var xmlhttp = new XMLHttpRequest();
  
  xmlhttp.responseType = "blob";
@@ -1751,9 +1759,7 @@ function SavePDF(recipeName) {
   }
  }
 
- var params = encodeURIComponent(recipeName);
-    
- xmlhttp.open("GET", "/SavePDF?recipeName=" + params, true);
+ xmlhttp.open("GET", "/SavePDF?recipeName=" + encodeURIComponent(recipeName) + "&scaling=" + scaling.toString(), true);
  
  xmlhttp.send();  
 }
@@ -2040,6 +2046,47 @@ function SaveVariation() {
 
  HideEditVariationPopup();
 }  
+
+function ScaleRecipe() {
+ let scaleFactor = GetEnumFromScalingValue(document.getElementById("scaling").selectedIndex);
+ 
+ let multiplier = 1;
+ 
+ switch (scaleFactor) {
+  case ScalingTypes.HALVE: {
+   multiplier = 0.5;
+  }
+  break;  
+  
+  case ScalingTypes.NONE: {
+   multiplier = 1;
+  }
+  break;   
+  
+  case ScalingTypes.DOUBLE: {
+   multiplier = 2;
+  }
+  break;  
+  
+  case ScalingTypes.TRIPLE:  {
+   multiplier = 3;
+  }
+  break;
+  
+  case ScalingTypes.QUADRUPLE: {
+   multiplier = 4;
+  }
+  break;
+ }
+ 
+ let iTable = document.getElementById("ingredientsTable");
+ 
+ for (var rowNdx = 1; rowNdx < iTable.rows.length; ++rowNdx) {
+  let oldVal = document.getElementById("i." + (rowNdx - 1).toString()).value;
+  
+  iTable.rows[rowNdx].cells[1].innerHTML = (oldVal * multiplier).toString(); 
+ }
+}
 
 function ShowAddRecipePopup() {
  document.getElementById("recipeName2Add").value = "";

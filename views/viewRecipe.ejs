@@ -126,6 +126,19 @@
   </div>
   <br>
   <div class="centered">
+   Scaling: <select id="scaling" name="scaling" onchange="ScaleRecipe();">
+    <%  
+     Object.keys(enumUtils.ScalingTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == "NONE" ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enumUtils.ScalingTypes); 
+    %>   
+   </select>    
+  </div>
+  <br>  
+  <div class="centered">
   <table align="center" class="scrolling-table" id="ingredientsTable" width="880px">
    <thead>
     <tr>
@@ -162,11 +175,12 @@
        var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
      %>
       <tr>
-       <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %> </td>
-       <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %></td>
-       <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
-       <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
-       <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
+       <input type="hidden" id="i.<%-ndx%>" value="<%= ingredients[ndx].Quantity[0]._ %>">
+       <td style="max-width: 250px; min-width: 250px;                    word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %> </td>
+       <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %> </td>
+       <td style="max-width: 80px;  min-width: 80px;                     word-wrap: break-word;"><%= units %> </td>
+       <td style="max-width: 130px; min-width: 130px;                    word-wrap: break-word;"><%= prep %> </td>
+       <td style="max-width: 270px; min-width: 270px;                    word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %> </td>
       </tr>        
      <%       
       } else {

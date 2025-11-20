@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Sausage Gravy_SausageGravy.jpg" name="Sausage Gravy" category="SAUCE" cuisine="ALL">
+  <Title image="Sausage Gravy_20251011_095603.jpg" name="Sausage Gravy" category="SAUCE" cuisine="ALL">
     <Yield amount="4" units="CUP"/>
     <Times prep="10" cook="10"/>
   </Title>
@@ -8,31 +8,31 @@
   <Description>This is the gravy part of &lt;a href='/GetRecipe?recipeName=Biscuits%20and%20Gravy'&gt;Biscuits and Gravy&lt;/a&gt;.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Pork sausage</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Bechamel%20Sauce'&gt;Bechamel Sauce&lt;/a&gt;</Name>
       <Quantity units="CUP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes>Make using fat rendered from sausage.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black pepper</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Milk</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
@@ -40,10 +40,10 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Brown sausage in heavy skillet.</Step>
-    <Step image="">Make &lt;a href='/GetRecipe?recipeName=Bechamel%20Sauce'&gt;Bechamel Sauce&lt;/a&gt; using fat rendered from the sausage.</Step>
-    <Step image="">Add sausage to &lt;a href='/GetRecipe?recipeName=Bechamel%20Sauce'&gt;bechamel sauce&lt;/a&gt;.</Step>
-    <Step image="">Season to taste with salt and pepper, add milk if needed to thin gravy.</Step>
+    <Step type="STEP" image="Sausage%20Gravy_20251011_093716.jpg">Brown sausage in heavy skillet.</Step>
+    <Step type="STEP" image="Sausage%20Gravy_20251011_094356.jpg">Make &lt;a href='/GetRecipe?recipeName=Bechamel%20Sauce'&gt;Bechamel Sauce&lt;/a&gt; using fat rendered from the sausage.</Step>
+    <Step type="STEP" image="Sausage%20Gravy_20251011_095559.jpg">Add sausage to &lt;a href='/GetRecipe?recipeName=Bechamel%20Sauce'&gt;bechamel sauce&lt;/a&gt;.</Step>
+    <Step type="STEP" image="Sausage%20Gravy_20251011_095603.jpg">Season to taste with salt and pepper, add milk if needed to thin gravy.</Step>
   </Method>
   <Variations/>
 </Recipe>

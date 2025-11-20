@@ -12,37 +12,37 @@
     <Prerequisite>2 inch ice cream scoop, greased.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Self rising flour</Name>
       <Quantity units="CUP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes>Low protein preferred like, &lt;a href='https://www.whitelily.com//'&gt;White Lily&lt;/a&gt;.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
       <Quantity units="TBSP">7</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Heavy Cream</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Buttermilk</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>AP flour</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
@@ -50,15 +50,15 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Add flour and salt to a mixing bowl.</Step>
-    <Step image="">Cut 4 tbps of &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; into the flour, until no lumps larger than a pea remain.</Step>
-    <Step image="">Add butter milk and 2/3 cup of heavy cream. Stir mixture until it resembles cottage cheese, adding more heavy cream, if needed.</Step>
-    <Step image="">Put AP flour in another bowl.</Step>
-    <Step image="">Scoop portions of dough into the AP flour and shape the dough into a ball before placing them into the greased pan.
+    <Step type="STEP" image="Buttermilk%20Drop%20Biscuits_20251011_092335.jpg">Add flour and salt to a mixing bowl.</Step>
+    <Step type="STEP" image="Buttermilk%20Drop%20Biscuits_20251011_092540.jpg">Cut 4 tbps of &lt;a href='/GetRecipe?recipeName=Butter'&gt;butter&lt;/a&gt; into the flour, until no lumps larger than a pea remain.</Step>
+    <Step type="STEP" image="Buttermilk%20Drop%20Biscuits_20251011_093009.jpg">Add butter milk and 2/3 cup of heavy cream. Stir mixture until it resembles cottage cheese, adding more heavy cream, if needed.</Step>
+    <Step type="STEP" image="">Put AP flour in another bowl.</Step>
+    <Step type="STEP" image="Buttermilk%20Drop%20Biscuits_20251011_093157.jpg">Scoop portions of dough into the AP flour and shape the dough into a ball before placing them into the greased pan.
 
 The biscuits should be touching and fill the pan.</Step>
-    <Step image="">Bake for 20-25 minutes until biscuits are golden brown.</Step>
-    <Step image="">Brush the tops of the biscuits with the remaining butter, melted.</Step>
+    <Step type="STEP" image="Buttermilk%20Drop%20Biscuits_20251011_093659.jpg">Bake for 20-25 minutes until biscuits are golden brown.</Step>
+    <Step type="STEP" image="">Brush the tops of the biscuits with the remaining butter, melted.</Step>
   </Method>
   <Variations/>
 </Recipe>

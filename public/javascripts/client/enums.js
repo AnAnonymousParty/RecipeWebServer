@@ -178,6 +178,60 @@ function GetEnumFromPrepDesc(desc) {
 }
 
 
+const ScalingTypes = Object.freeze({
+ HALVE:     "/ 2",
+ NONE:      "X 1",
+ DOUBLE:    "X 2",
+ TRIPLE:    "X 3",
+ QUADRUPLE: "X 4"
+});
+
+function GetDescFromScalingType(enumVal) {
+ for (var key in ScalingTypes) {
+  if (key == enumVal) {
+   return ScalingTypes[key];
+  } 
+ }
+ 
+  return "Undefined";
+}
+
+function GetEnumFromScalingDesc(desc) {
+ for (var key in ScalingTypes) {
+  if (desc == ScalingTypes[key]) {
+   return key;
+  } 
+ }
+ 
+  return "UNDEFINED";
+}
+
+function GetEnumFromScalingValue(value) {
+ switch (value) {
+  case 0: {
+   return ScalingTypes.HALVE;
+  }  
+  
+  case 1: {
+   return ScalingTypes.NONE;
+  }  
+  
+  case 2: {
+   return ScalingTypes.DOUBLE;
+  }  
+  
+  case 3:  {
+   return ScalingTypes.TRIPLE;
+  }
+  
+  case 4: {
+   return ScalingTypes.QUADRUPLE;
+  }
+ }
+ 
+ return ScalingTypes.NONE;
+}
+
 const ServingSizeTypes = Object.freeze({   
  CUP:      "Cups", 
  ITEM:     "Item", 

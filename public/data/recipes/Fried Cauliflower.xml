@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Fried Cauliflower_FriedCauliflower.jpg" name="Fried Cauliflower" category="SIDE" cuisine="AMERICAN">
+  <Title image="Fried Cauliflower_20250911_170548.jpg" name="Fried Cauliflower" category="SIDE" cuisine="AMERICAN">
     <Yield amount="4" units="SERVING"/>
     <Times prep="20" cook="10"/>
   </Title>
@@ -11,43 +11,43 @@
     <Prerequisite>Large pot of salted boiling water.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cauliflower</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Egg</Name>
       <Quantity units="EACH">2</Quantity>
       <Prep>WHISKED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Panko bread crumbs</Name>
       <Quantity units="CUP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>AP flour</Name>
       <Quantity units="CUP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Salt</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic powder</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>GROUND</Prep>
@@ -55,13 +55,13 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="Fried%20Cauliflower_20250430_112808.jpg">Remove leaves from cauliflower and separate florets into bite sized piece</Step>
-    <Step image="Fried%20Cauliflower_20250430_143122.jpg">Blanch florets in boiling water for a couple of minutes until just softened and drain.</Step>
-    <Step image="">Arrange a series of pans in a row with AP flour in the first, eggs in the second, and bread crumbs in the third.</Step>
-    <Step image="Fried%20Cauliflower_20250430_160905.jpg">Dredge cauliflower in flour, coat with egg and roll in bread crumbs and arrange on a sheet pan.  </Step>
-    <Step image="">Heat oil in fryer to 350F.</Step>
-    <Step image="">Fry cauliflower in batches until golden brown, drain on sheet pan lined with paper towels.</Step>
-    <Step image="">Serve with ranch dressing.</Step>
+    <Step type="STEP" image="Fried%20Cauliflower_20250430_112808.jpg">Remove leaves from cauliflower and separate florets into bite sized piece</Step>
+    <Step type="STEP" image="Fried%20Cauliflower_20250430_143122.jpg">Blanch florets in boiling water for a couple of minutes until just softened and drain.</Step>
+    <Step type="STEP" image="">Arrange a series of pans in a row with AP flour in the first, eggs in the second, and bread crumbs in the third.</Step>
+    <Step type="STEP" image="Fried%20Cauliflower_20250430_160905.jpg">Dredge cauliflower in flour, coat with egg and roll in bread crumbs and arrange on a sheet pan.  </Step>
+    <Step type="STEP" image="">Heat oil in fryer to 350F.</Step>
+    <Step type="STEP" image="">Fry cauliflower in batches until golden brown, drain on sheet pan lined with paper towels.</Step>
+    <Step type="STEP" image="">Serve with ranch dressing.</Step>
   </Method>
   <Variations>
     <Variation>To prepare ahead. Follow recipe instructions but fry for only a minute, until the breading is set. 

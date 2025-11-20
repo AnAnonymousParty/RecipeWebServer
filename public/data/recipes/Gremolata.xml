@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="" name="Gremolata" category="SAUCE" cuisine="ITALIAN">
+    <Yield amount=".25" units="CUP"/>
+    <Times prep="5" cook="0"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TSP"/>
+  <Description>Parsley, garlic and lemon zest.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lemon Zest</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Combine all ingredients.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

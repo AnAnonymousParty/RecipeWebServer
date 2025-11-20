@@ -12,14 +12,20 @@ var enums  = require('../public/javascripts/server/enums.js');
 
 router.get('/', function(req, res, next) {  
  var recipeName  = req.query.recipeToPrint;
+ var scaling     = req.query.scaling;
  var showButtons = req.query.ShowButtons;
  
- console.log("> printRecipe(" + recipeName + ", " + showButtons + ")");
+ console.log("> printRecipe(" + recipeName + ", " + scaling + ", " + showButtons + ")");
  
  var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
- res.render('printRecipe', { commonUtils: common, enumUtils: enums, fractionUtils: fractional, recipeData: recipeDataJson, showButtons: showButtons });
+ res.render('printRecipe', { commonUtils:   common, 
+                             enumUtils:     enums,  
+                             fractionUtils: fractional, 
+                             recipeData:    recipeDataJson, 
+                             scaling,       scaling,
+                             showButtons:   showButtons });
  
  console.log("< printRecipe()");
 });

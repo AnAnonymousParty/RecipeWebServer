@@ -18,7 +18,9 @@ router.get('/', function(req, res, next) {
  console.log("JSON: ", JSON.stringify(recipeDataJson, null, 2));
  
  try {
-  res.render('viewRecipe', { commonUtils: common, enumUtils: enums, recipeData: recipeDataJson });
+  res.render('viewRecipe', { commonUtils: common, 
+                             enumUtils:   enums, 
+                             recipeData:  recipeDataJson });
  } catch(err) {
   console.log(err);
  }

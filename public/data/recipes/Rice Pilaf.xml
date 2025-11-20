@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Rice Pilaf_20251011_165436.jpg" name="Rice Pilaf" category="SIDE" cuisine="ALL">
+    <Yield amount="3" units="CUP"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings=".5" servingsUnit="CUP"/>
+  <Description>Toasted rice with herbs and vegetables.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>White Rice (basmati)</Name>
+      <Quantity units="CUP">1.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chicken Stock</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Onions</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Seperate tops and bottoms.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Harlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Small Chile Pepper</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Thyme, fried</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cayenne Pepper flakes</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sesame Oil</Name>
+      <Quantity units="DASH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For finishing.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_153226.jpg">Gather / prepare ingredients.</Step>
+    <Step type="STEP" image="GetRecipe?recipeName=Sausage%20Gravy">Melt butter in a large heavy bottomed sauce pan.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Increase heat to medium high, add rice.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_163236.jpg">Add bottoms from green onions and chile pepper.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_163550.jpg">Continue cooking rice, stirring as needed, until rice is toasted golden brown.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_163743.jpg">Add Chicken Stock, garlic, and half the green onion tops.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_163820.jpg">Cover pot, reduce heat to a simmer and cook for 20 minutes.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley,</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_164706.jpg">Stir in half of the parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+    <Step type="STEP" image="Rice%20Pilaf_20251011_165436.jpg">Serve, topped with some of the fresh green onion tops and parsley.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

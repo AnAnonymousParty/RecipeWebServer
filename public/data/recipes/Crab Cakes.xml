@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Crab Cakes_20250911_171819.jpg" name="Crab Cakes" category="ENTREE_SEAFOOD" cuisine="AMERICAN">
+    <Yield amount="8" units="EACH"/>
+    <Times prep="20" cook="10"/>
+  </Title>
+  <Nutrition calories="360" fat="23" carbs="15" protein="23" sugar="3" sodium="1280" fiber="1" servings="2" servingsUnit="ITEM"/>
+  <Description>Fresh lump crab meat, lightly seasoned and bound with just enough ingredients to hold them together and They are pan-fried golden brown and delicious.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Limp Crab Meat</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Mayonnaise'&gt;Mayonnaise&lt;/a&gt;.</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dijon Mustard</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Onion</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Old Bay Seasoning</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lemon Juice</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>SQUEEZED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Crackers</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>CRUMBLED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>White Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter and Olive oil</Name>
+      <Quantity units="TSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For frying.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Crab%20Cakes_20250911_154026.jpg">Gather / prep ingredients.</Step>
+    <Step type="STEP" image="Crab%20Cakes_20250911_154622.jpg">In a large mixing bowl, combine mayonnaise, Dijon mustard, eggs, scallions, parsley, Old Bay seasoning, lemon juice, salt, and pepper.</Step>
+    <Step type="STEP" image="Crab%20Cakes_20250911_154851.jpg">Add the crab meat and 1/2 cup of the cracker crumbs without breaking up the crab meat.</Step>
+    <Step type="STEP" image="">Divide the mixture into 8 equal portions and shape into patties about 1 inch thick.</Step>
+    <Step type="STEP" image="Crab%20Cakes_20250911_160719.jpg">Lightly coat each crab cake with additional cracker crumbs.</Step>
+    <Step type="STEP" image="">Place the crab cakes on a plate or tray and refrigerate for at least 30 minutes.</Step>
+    <Step type="STEP" image="">Heat the butter and olive oil in a large skillet over medium heat.</Step>
+    <Step type="STEP" image="Crab%20Cakes_20250911_170034.jpg">Add the crab cakes to the skillet and cook for 3–4 minutes per side, or until golden brown.</Step>
+    <Step type="STEP" image="">Serve with &lt;a href='/GetRecipe?recipeName=Remoulade%20Sauce'&gt;remoulade sauce&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
