@@ -1,5 +1,6 @@
 <form id="viewRecipeForm"> 
- <input id="recipeName" type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
+ <input id="recipeName"    type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
+ <input id="originalYield" type="hidden" value="<%- recipeData.Recipe.Title[0].Yield[0].$.amount %>">
  
  <div class="centered">
   <table class="plain-table">
@@ -48,7 +49,7 @@
     <td>
      Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
     </td>
-    <td>
+    <td id="yieldFld">
      <%= recipeData.Recipe.Title[0].Yield[0].$.amount %> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
     </td>
     <td>

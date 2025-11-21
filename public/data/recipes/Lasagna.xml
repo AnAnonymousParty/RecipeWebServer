@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Lasagna_20251120_163613.jpg" name="Lasagna" category="CASSEROLE" cuisine="ITALIAN">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="30" cook="45"/>
+  </Title>
+  <Nutrition calories="300" fat="10" carbs="33" protein="15" sugar="7" sodium="800" fiber="4" servings="1" servingsUnit="SLICE"/>
+  <Description>Layers of pasta, cheese and tomato/meat sauce.</Description>
+  <Prerequisites>
+    <Prerequisite>Coat Glass/ceramic baking dish with olive oil.</Prerequisite>
+    <Prerequisite>Preheat oven to 350F.</Prerequisite>
+    <Prerequisite>Set large pot of water to boil to precook pasta.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Marinara%20Sauce'&gt;Marinara Sauce&lt;/a&gt;</Name>
+      <Quantity units="QUART">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pork sausage, Salsiccia</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lasagna noodles</Name>
+      <Quantity units="BOX">1.5</Quantity>
+      <Prep>BLANCH</Prep>
+      <Notes>Or so, as needed.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Mozzarella, buffalo</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cottage cheease, small curd.</Name>
+      <Quantity units="PINT">1</Quantity>
+      <Prep>DRAINED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parmesan Reggiano</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh basil</Name>
+      <Quantity units="BUNCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Italian seasoning</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh Parsley</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Prepare &lt;a href='/GetRecipe?recipeName=Marinara%20Sauce'&gt;Marinara Sauce&lt;/a&gt;, with browned sausage.</Step>
+    <Step type="STEP" image="">Cook pasta until barely done, hold in a colander.</Step>
+    <Step type="STEP" image="Lasagna_20251120_144926.jpg">Make first layer with pasta, mozzarella slices and some meat sauce.</Step>
+    <Step type="STEP" image="Lasagna_20251120_145716.jpg">Make second layer with pasta and cottage cheese.</Step>
+    <Step type="STEP" image="Lasagna_20251120_150405.jpg">Make third layer with pasta, basil leaves and meat sauce.</Step>
+    <Step type="STEP" image="Lasagna_20251120_151601.jpg">Make fourth layer with pasta, more meat sauce and parmesan cheese.</Step>
+    <Step type="STEP" image="Lasagna_20251120_151829.jpg">Top with parsley, Italian seasoning and black pepper. Bake for 30-45 minutes.</Step>
+    <Step type="STEP" image="Lasagna_20251120_163613.jpg">Rest for 15-20 minutes, slice and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

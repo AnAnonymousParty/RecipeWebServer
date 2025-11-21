@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pasta_20251109_123520.jpg" name="Pasta" category="PASTA" cuisine="ITALIAN">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="30" cook=""/>
+  </Title>
+  <Nutrition calories="220" fat="1.3" carbs="43" protein="8" sugar=".8" sodium="1" fiber="2.5" servings="1" servingsUnit="CUP"/>
+  <Description>Basic pasta dough recipe using standard ratio of 1 egg per 1 cup of flour.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>High protein, King Arthur Bread Flour.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Water</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>More ot less, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Pasta_20251109_104011.jpg">Place mound of flour on counter, make well in flour, like a crater in a mountain. Add egg and salt to crater.</Step>
+    <Step type="STEP" image="Pasta_20251109_104350.jpg">Stir flour into egg from sides of crater until ball of dough begins to form.</Step>
+    <Step type="STEP" image="Pasta_20251109_105932.jpg">Knead dough until smooth. Add water as needed to keep dough workable.</Step>
+    <Step type="STEP" image="Pasta_20251109_110025.jpg">Cover dough ball with damp towel and let rest for 30 minutes.</Step>
+    <Step type="STEP" image="Pasta_20251109_120451.jpg">Divide dough into 4 pieces.</Step>
+    <Step type="STEP" image="Pasta_20251109_120509.jpg">Pass piece of dough through pasta machine.</Step>
+    <Step type="STEP" image="Pasta_20251109_120602.jpg">Continue passing dough strip through pasta machine, reducing thickness with each pass until desired thickness is reached.</Step>
+    <Step type="STEP" image="Pasta_20251109_120904.jpg">Dough can be used as is to make lasagna or ravioli, etc. Or it can be cut or passed through the pasta machine to make fettucini, linguine, etc. Dust the dough strip with flour and cover with a towel.</Step>
+    <Step type="STEP" image="Pasta_20251109_120913.jpg">To hand cut the pasta, fold by thirds.</Step>
+    <Step type="STEP" image="Pasta_20251109_122223.jpg">Cut the pasta into the desired widths.</Step>
+    <Step type="STEP" image="Pasta_20251109_123520.jpg">Dust the pasta with flour and dry slightly before using.</Step>
+  </Method>
+  <Variations>
+    <Variation>Use red wine instead of water.</Variation>
+  </Variations>
+</Recipe>

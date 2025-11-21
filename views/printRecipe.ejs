@@ -64,7 +64,7 @@
       Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
      </td>
      <td>
-      <%= recipeData.Recipe.Title[0].Yield[0].$.amount %> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
+      <%= recipeData.Recipe.Title[0].Yield[0].$.amount * scaling%> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
      </td>
      <td>
       Prep Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep)); %>

@@ -1629,11 +1629,17 @@ function RequestPrintableView(recipeName) {
  
  let sElem = document.getElementById("scaling");
  
+ let scaling = 1;
+ 
  if (null != sElem) {
-  loc += (sElem.selectedIndex).toString();;
- } else {
-  loc += "1";
- }
+  if (0 == sElem.selectedIndex) {
+    scaling = 0.5;
+   } else {
+    scaling = sElem.selectedIndex;
+   }
+ } 
+ 
+ loc += (scaling.toString());
     
  window.open(loc); 
 }
@@ -2078,6 +2084,16 @@ function ScaleRecipe() {
   }
   break;
  }
+ 
+ let origYieldVal = document.getElementById("originalYield").value;
+ 
+ let yieldFld = document.getElementById("yieldFld").innerText;
+ 
+ const parts = yieldFld.split(" ");
+ 
+ let yieldQuan = origYieldVal * multiplier;
+ 
+ document.getElementById("yieldFld").innerText = yieldQuan.toString() + " " + parts[1];
  
  let iTable = document.getElementById("ingredientsTable");
  

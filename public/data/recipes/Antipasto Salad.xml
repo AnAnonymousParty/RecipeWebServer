@@ -5,94 +5,94 @@
     <Times prep="15" cook="0"/>
   </Title>
   <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
-  <Description>Assorted marinated vegetable, meats and cheeses.</Description>
+  <Description>Assorted marinated vegetables, meats and cheeses.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Artichoke hearts</Name>
       <Quantity units="CUP">2</Quantity>
       <Prep>QUARTERED</Prep>
       <Notes>If canned, reserve liquid.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Hearts of palm</Name>
       <Quantity units="CAN">1</Quantity>
       <Prep>SLICED</Prep>
       <Notes>1/2 inch slices. Reserve liquid.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black olives</Name>
       <Quantity units="CAN">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>Reserve liquid.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Green olives</Name>
       <Quantity units="EACH">24</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Large caperberries</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Hard salami</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>CUBED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cherry peppers</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>SEARED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan&lt;/a&gt;</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>CUBED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Anchovies</Name>
       <Quantity units="EACH">2</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>EVOO</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Balsamic vinegar</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black pepper</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh Bay Leaves</Name>
       <Quantity units="EACH">6</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh Parsley</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>CHIFFONADE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher/sea salt</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
@@ -100,12 +100,12 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">In a large bowl (earthenware crock, if you have one), place the artichokes, hearts of palm, olives, capers, cheese, salami and roasted peppers. Add the bay leaves and black pepper.</Step>
-    <Step image="">In a blender, add olive oil, balsamic vinegar and anchovies. Puree for a minute.</Step>
-    <Step image="">Add portions of the reserved liquids of the canned/jarred ingredients to your taste, until you have enough liquid to almost cover the contents of the bowl, you can add more olive oil and balsamic vinegar as you wish and blend the ingredients.</Step>
-    <Step image="">Add salt to taste.</Step>
-    <Step image="">Pour the contents of the blender into the bowl. </Step>
-    <Step image="">Add parsley, stir to mix. Cover an chill for at least a day before serving to allow the flavors to marry. </Step>
+    <Step type="STEP" image="">In a large bowl (earthenware crock, if you have one), place the artichokes, hearts of palm, olives, capers, cheese, salami and roasted peppers. Add the bay leaves and black pepper.</Step>
+    <Step type="STEP" image="">In a blender, add olive oil, balsamic vinegar and anchovies. Puree for a minute.</Step>
+    <Step type="STEP" image="">Add portions of the reserved liquids of the canned/jarred ingredients to your taste, until you have enough liquid to almost cover the contents of the bowl, you can add more olive oil and balsamic vinegar as you wish and blend the ingredients.</Step>
+    <Step type="STEP" image="">Add salt to taste.</Step>
+    <Step type="STEP" image="">Pour the contents of the blender into the bowl. </Step>
+    <Step type="STEP" image="">Add parsley, stir to mix. Cover an chill for at least a day before serving to allow the flavors to marry. </Step>
   </Method>
   <Variations/>
 </Recipe>
