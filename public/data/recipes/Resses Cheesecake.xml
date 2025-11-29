@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Resses Cheesecake_ReesesCheesecake.png" name="Resses Cheesecake" category="DESSERT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="45" cook="675"/>
+  </Title>
+  <Nutrition calories="1405" fat="90" carbs="135" protein="26" sugar="107" sodium="900" fiber="7" servings="1" servingsUnit="SLICE"/>
+  <Description>Cheesecake with peanut butter in almost every square inch, thanks to some cleverly placed candy and a swirled peanut butter filling. It's creamy, crunchy, sweet and a little savory.
+
+It's an involved recipe, but worth it.</Description>
+  <Prerequisites>
+    <Prerequisite>Position a rack in the middle of the oven and preheat to 325 degrees F. </Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="HEADING">
+      <Heading>Crust</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>One 9-ounce package chocolate wafer cookies.</Name>
+      <Quantity units="PACKAGE">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter, unsalted</Name>
+      <Quantity units="STICK">1</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>14 Reese's Peanut Butter Cups</Name>
+      <Quantity units="EACH">14</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Filling</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>8-ounce packages cream cheese</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sour Cream</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes>Room temperature</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chocolate Chips</Name>
+      <Quantity units="OZ">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Peanut Butter</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Hot fudge sauce</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Topping</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Miniature Reese's Peanut Butter Cups</Name>
+      <Quantity units="EACH">15</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Reeses Pieces</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Whipped Cream</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For serving.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="HEADING">Crust</Step>
+    <Step type="STEP" image="">Pulse the cookies and sugar in a food processor to fine crumbs.</Step>
+    <Step type="STEP" image="">Add the butter and pulse until the mixture holds together when squeezed.</Step>
+    <Step type="STEP" image="">Firmly press the crumb mixture into the bottom and 1 inch up the side of a 9-inch springform pan.</Step>
+    <Step type="STEP" image="">Bake until crisp and set, 10 to 12 minutes. Let cool completely, about 30 minutes.</Step>
+    <Step type="STEP" image="">Let cool completely, about 30 minutes.</Step>
+    <Step type="STEP" image="">Cover the crust with the peanut butter cups.</Step>
+    <Step type="STEP" image="">Wrap the bottom and sides of the pan with a large piece of foil and put it in a large roasting pan. </Step>
+    <Step type="HEADING">Filling</Step>
+    <Step type="STEP" image="">Beat the cream cheese and sugar with an electric mixer on medium speed in a large bowl for 1 minute.</Step>
+    <Step type="STEP" image="">Add the sour cream and beat until just combined.</Step>
+    <Step type="STEP" image="">Mix in the eggs by hand, one at time.</Step>
+    <Step type="STEP" image="">Mix in the vanilla by hand until just combined. (Take care not to overmix, or the cheesecake will puff up and crack.) </Step>
+    <Step type="STEP" image="">Put the chocolate chips and peanut butter in 2 separate large microwave-safe bowls. Microwave each in 30 second intervals, stirring between each, until the chips and peanut butter are smooth and pourable, about 2 minutes. </Step>
+    <Step type="STEP" image="">Ladle 2 cups of the cheesecake batter into the bowl with the chocolate and fold until combined. Fold the remaining cheesecake batter into the bowl with the peanut butter until combined. </Step>
+    <Step type="STEP" image="">Use an ice cream scoop or large spoon and drop alternating scoopfuls of the batter onto the crust.</Step>
+    <Step type="STEP" image="">Drag a long wooden skewer through the batter, making sure the skewer reaches the bottom, to marble the colors in a tie-dye effect.</Step>
+    <Step type="STEP" image=""> Add enough hot water to the roasting pan to come about halfway up the side of the springform pan. </Step>
+    <Step type="STEP" image="">Bake until the outside of the cake is set, but the center is still slightly loose, about 1 hour 20 minutes. </Step>
+    <Step type="STEP" image="">Turn the oven off and leave the cheesecake in the oven for another hour. </Step>
+    <Step type="STEP" image="">Remove the cheesecake from the roasting pan to a cooling rack. Run a knife around the edge and cool to room temperature. Cover and refrigerate at least 8 hours. </Step>
+    <Step type="HEADING">Finish</Step>
+    <Step type="STEP" image="">Run a knife around the edge of the pan once more, unmold the cheesecake and transfer to a serving plate or cake stand.</Step>
+    <Step type="STEP" image=""> Smooth the edges with the knife.</Step>
+    <Step type="STEP" image=""> Drizzle the hot fudge sauce around the edge of the cake, letting it drip slightly over the sides.</Step>
+    <Step type="STEP">Make a decorative ring around the edge of the cheesecake with the miniature peanut butter cups, overlapping them slightly. </Step>
+    <Step type="STEP">Make another ring on the inside of the peanut butter cups with the Reese's Pieces.</Step>
+    <Step type="STEP">Slice and serve cold with whipped cream and more hot fudge sauce. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

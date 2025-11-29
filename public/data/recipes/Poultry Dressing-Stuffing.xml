@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Poultry Dressing-Stuffing_20251127_085023.jpg" name="Poultry Dressing-Stuffing" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="12" units="SERVING"/>
+    <Times prep="60" cook="60"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Description>Old family recipe for bread based stuffing with pork sausage and root vegetables.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Sliced bread, assorted types</Name>
+      <Quantity units="LOAF">2</Quantity>
+      <Prep>DRIED</Prep>
+      <Notes>Torn into bite sized pieces.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pork Sausage</Name>
+      <Quantity units="POUND">1.5</Quantity>
+      <Prep>BROWNED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Celery</Name>
+      <Quantity units="STALK">6</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Turkey/chicken stock</Name>
+      <Quantity units="QUART">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Poultry seasoning</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_123538.jpg">Tear bread into pieces and allow to dry on a sheet pan, turning occasionally.</Step>
+    <Step type="STEP" image="">Preheat oven to 350 F.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_081443.jpg">Place giblets and net in a small oiled pan and bake for 30 minuts, until browned. Meanwhile...</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_085806.jpg">Brown sausage.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_085813.jpg">Sweat celery an onions in a skillet with the fat from browning the sausage.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_091423.jpg">Remove giblets from oven.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_091810.jpg">Add giblets and vegetable trimmings to stock pot. Cover with 2 quarts of stock. Bring to a boil and simmer for two hours.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251126_112305.jpg">Remove giblets and chop finely.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251127_082415.jpg">Combine sausage, giblets, vegetables, bread, parsley, poultry seasoning, MSG and pepper in a large pan.</Step>
+    <Step type="STEP" image="">Add bread and mix together.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251127_083425.jpg">Add stock a cup at a time until the mixture is moistened, and workable, but not saturated.</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251127_092622.jpg">Fill the chest cavity with stuffing, but don't pack it tighthly,</Step>
+    <Step type="STEP" image="Poultry%20Dressing-Stuffing_20251127_085235.jpg">Fill the neck cavity and pin shut with skewers.</Step>
+    <Step type="STEP" image="">Any remaining stuffing can be baked in a pan at 350 F for 30-45 minutes.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Smoky Bites_20251127_110325.jpg" name="Smoky Bites" category="APPETIZER" cuisine="ALL">
+    <Yield amount="2" units="POUND"/>
+    <Times prep="20" cook="60"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="OZ"/>
+  <Description>Lil' Smokies, wrapped in bacon, baked and simmered in BBQ sauce.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350 F.</Prerequisite>
+    <Prerequisite>Place a rack over a foil lined sheet pan.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lil' Smokies</Name>
+      <Quantity units="POUND">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>BBQ Sauce</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Smoky%20Bites_20251126_115410.jpg">Wrap sausages in a piece of bacon and fasten with a tooth pick.</Step>
+    <Step type="STEP" image="Smoky%20Bites_20251126_115424.jpg">Hold the assembled bites on a plate.</Step>
+    <Step type="STEP" image="Smoky%20Bites_20251126_121317.jpg">Arrange the bites on the rack over the baking sheet.</Step>
+    <Step type="STEP" image="Smoky%20Bites_20251126_133823.jpg">Bake for about 60 minutes, until the bacon is browned.</Step>
+    <Step type="STEP" image="">Place the bites in a chafing dish.</Step>
+    <Step type="STEP" image="Smoky%20Bites_20251127_110325.jpg">Add heated BBQ sauce, allow to simmer in the chafing dish. </Step>
+  </Method>
+  <Variations/>
+</Recipe>

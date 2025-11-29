@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cookie Dough Pie Crust_20251126_150417.jpg" name="Cookie Dough Pie Crust" category="DESSERT" cuisine="ALL">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="" cook=""/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Cookie dough crust for filled pies.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350 F.</Prerequisite>
+    <Prerequisite>Butter a glass pie pan.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>SOFTENED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Brown sugar</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Packed.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg yolk</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cornstarch</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Baking soda</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Cookie%20Dough%20Pie%20Crust_20251126_135653.jpg">In a stand mixer, beat butter and brown sugar until creamy.</Step>
+    <Step type="STEP" image="Cookie%20Dough%20Pie%20Crust_20251126_135807.jpg">Add egg, egg yolk, and vanilla extract, beating until combined.</Step>
+    <Step type="STEP" image="">In a medium bowl, whisk together flour, cornstarch, baking soda, and salt.</Step>
+    <Step type="STEP" image="Cookie%20Dough%20Pie%20Crust_20251126_135934.jpg">Add the dry ingredients to the mixing bowl, and beat until combined.</Step>
+    <Step type="STEP" image="Cookie%20Dough%20Pie%20Crust_20251126_140840.jpg">Press dough evenly into the bottom and up the sides of the pie plate.
+8. Bake at 350 degrees for 30-35 minutes, or until the edges and top are golden</Step>
+    <Step type="STEP" image="">Bake at 350 degrees for 30-35 minutes, or until the edges and top are golden, the center
+appears crackly and set, and a toothpick inserted near the center comes out clean.</Step>
+    <Step type="STEP" image="Cookie%20Dough%20Pie%20Crust_20251126_150417.jpg">Crust will have puffed and risen, this is normal. It will deflate as it cools. Remove the cookie
+crust from the oven, and while hot, carefully use the bottom of a glass or a measuring cup to
+lightly reshape the crust so that it's form and edges are nice and structured!</Step>
+    <Step type="STEP" image="">Cool completely on a wire rack.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

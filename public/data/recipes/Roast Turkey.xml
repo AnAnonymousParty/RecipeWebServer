@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Roast Turkey_20251127_162315.jpg" name="Roast Turkey" category="ENTREE_POULTRY" cuisine="AMERICAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="10" cook="240"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="3" servingsUnit="SLICE"/>
+  <Description>Whole oven roasted turkey, a Thanksgiving tradition.</Description>
+  <Prerequisites>
+    <Prerequisite>Pot or cooler large enough to contain a turkey and water during brining.</Prerequisite>
+    <Prerequisite>Roasting pan with rack.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh turkey</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>16-20 pounds.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Watter</Name>
+      <Quantity units="GALLON">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so, enough to cover the bird in a pot or cooler.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>per gallon of water.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Brown sugar</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Per gallon of water,</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Per cup of water.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Poultryf%20Dressing-Stuffing%20Rice%20Stuffing'&gt;Poultry Stuffing&lt;/a&gt;</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sage leaves</Name>
+      <Quantity units="EACH">20</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Carrots</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Celery</Name>
+      <Quantity units="STALK">3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Add water, salt, sugar and MSG to a large pot.</Step>
+    <Step type="STEP" image="Roast%20Turkey_Giblets.jpg">Remove neck and giblets from turkey, reserve for stuffing.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_065621.jpg">Place turkey in pot of water and refrigerate for 24 to 36 hours.</Step>
+    <Step type="STEP" image="">Prepare &lt;a href='/GetRecipe?recipeName=Poultryf%20Dressing-Stuffing%20Rice%20Stuffing'&gt;Poultry Stuffing&lt;/a&gt;.</Step>
+    <Step type="STEP" image="">Pre-heat oven to 450 F.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_074835.jpg">Remove turkey from pot, discard water, dry turkey thoroughly.</Step>
+    <Step type="STEP" image="">Place sage leaves between skin and meat in multiple spots on the turkey.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_085235.jpg">Stuff the neck cavity and stitch it shut.</Step>
+    <Step type="STEP" image="">Place turkey breast side up on (greased) rack in roasting pan</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_092622.jpg">Stuff the body cavity.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_093704.jpg">Truss the turkey.</Step>
+    <Step type="STEP" image="">Rub turkey with oil, season with salt and pepper.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_092556.jpg">Add carrots, onion and celery to roasting pan.</Step>
+    <Step type="STEP" image="">Roast the turkey at 450 F for 30 minutes.</Step>
+    <Step type="STEP" image="Roast%20Turkey_20251127_103705.jpg">Reduce heat to 350 F, cover the breast with aluminum foil and roast until center of breast meat is 155 F.</Step>
+    <Step type="STEP" image="">Remove turkey from oven, tent with foil and rest for a minimum of 30 minutes.</Step>
+    <Step type="STEP" image="">Remove stuffing, carve and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

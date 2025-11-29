@@ -11,55 +11,55 @@
     <Prerequisite>Bake potatoes.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Russet potatoes</Name>
       <Quantity units="EACH">8</Quantity>
       <Prep>NONE</Prep>
       <Notes>Bake per prerequisites.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Bacon</Name>
       <Quantity units="SLICE">8</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes>Fried and drained.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Half and half</Name>
       <Quantity units="PINT">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Sour Cream</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh chives</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher/Sea salt</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>White cheddar cheese</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>GRATE</Prep>
@@ -67,14 +67,16 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="Baked%20Potato%20Soup_bps1.jpg">Peel and chop baked potatoes.</Step>
-    <Step image="Baked%20Potato%20Soup_bps2.jpg">Add half of the potatoes to a large sauce pan and break up with a potato masher.</Step>
-    <Step image="Baked%20Potato%20Soup_bps3.jpg">Add the half and half, heavy cream and sour cream to the sauce pan.</Step>
-    <Step image="Baked%20Potato%20Soup_bps4.jpg">Over low heat, mash the mixture into a puree.</Step>
-    <Step image="">Simmer to soup for fifteen minutes, stirring frequently to prevent sticking on the bottom of the pan.</Step>
-    <Step image="Baked%20Potato%20Soup_bps5.jpg">Add the remaining chunks of potatoes, bacon, butter, salt and pepper and simmer an additional fifteen minutes, stirring as needed.</Step>
-    <Step image="Baked%20Potato%20Soup_bps6.jpg">Add chives, reserving some for garnish at serving.</Step>
-    <Step image="">Serve with shredded cheese and additional chives.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps1.jpg">Peel and chop baked potatoes.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps2.jpg">Add half of the potatoes to a large sauce pan and break up with a potato masher.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps3.jpg">Add the half and half, heavy cream and sour cream to the sauce pan.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps4.jpg">Over low heat, mash the mixture into a puree.</Step>
+    <Step type="STEP" image="">Simmer to soup for fifteen minutes, stirring frequently to prevent sticking on the bottom of the pan.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps5.jpg">Add the remaining chunks of potatoes, bacon, butter, salt and pepper and simmer an additional fifteen minutes, stirring as needed.</Step>
+    <Step type="STEP" image="Baked%20Potato%20Soup_bps6.jpg">Add chives, reserving some for garnish at serving.</Step>
+    <Step type="STEP" image="">Serve with shredded cheese and additional chives.</Step>
   </Method>
-  <Variations/>
+  <Variations>
+    <Variation>Grated smoked gouda cheese is a nice finishing touch.</Variation>
+  </Variations>
 </Recipe>

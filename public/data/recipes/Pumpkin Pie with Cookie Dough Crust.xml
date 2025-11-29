@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pumpkin Pie with Cookie Dough Crust_20251126_163309.jpg" name="Pumpkin Pie with Cookie Dough Crust" category="DESSERT" cuisine="AMERICAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="15" cook="75"/>
+  </Title>
+  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="8" servingsUnit="SLICE"/>
+  <Description>Pumpkin Pie in a Cookie Dough crust.</Description>
+  <Prerequisites>
+    <Prerequisite>&lt;a href='/GetRecipe?recipeName=Cookie%20DoughCrust%20Pie%20'&gt;Cookie Dough Pie Crust&lt;/a&gt;.</Prerequisite>
+    <Prerequisite>Preheat oven to 425 F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Cookie%20DoughCrust%20Pie%20'&gt;Cookie Dough Pie Crust&lt;/a&gt;</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Prebaked and cooled.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pumpkin pie filling</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>30oz.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Evaporated Milk</Name>
+      <Quantity units="CUP">.67</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Allspice</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cloves</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Ginger</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cinnamon</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Nutmeg</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Pumpkin%20Pie%20with%20Cookie%20Dough%20Crust_20251126_151511.jpg">Combine all ingredients in stand mixer.</Step>
+    <Step type="STEP" image="Pumpkin%20Pie%20with%20Cookie%20Dough%20Crust_20251126_151618.jpg">Fill pie crust.</Step>
+    <Step type="STEP" image="">Bake, crust covered with a pie crust shield, for 15 minutes.</Step>
+    <Step type="STEP" image="">Bake at 350 F for 45 minutes.</Step>
+    <Step type="STEP" image="Pumpkin%20Pie%20with%20Cookie%20Dough%20Crust_20251126_163309.jpg">Allow to cool, then refrigerate or serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

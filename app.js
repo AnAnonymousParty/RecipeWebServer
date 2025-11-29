@@ -38,7 +38,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -46,6 +45,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + "/public/images/favicon.ico"));
 app.use(eformidable( { uploadDir: path.join(__dirname, "/public/images/Staging"), keepExtensions: true, maxFileSize: 1000 * 1024 * 1024 } ));
+
+// Enable logging, but not every GET for static resources:
+app.use(logger('dev', {
+ skip(req, res) {
+   return -1 !== ['.jpg', '.jpeg', '.png'].indexOf(path.extname(req.path));
+ }
+}));
+
 
 /*------------------------- GET handlers ------------------------------------*/
 
@@ -607,6 +614,8 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
  if (null != stepsData) {
   if (Array.isArray(stepsData)) {  
+   console.log("  ParsePostDataToXml(): # Steps = " + stepsData.length);
+   
    for (var i = 0; i < stepsData.length; ++i) {
     var step     = stepsData[i]; 
     var stepElem = methodElem.ele('Step');
@@ -619,7 +628,9 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
      var imgSrc = "";
      
-     if ("undefined" != typeof(postData.stepImage)) {
+     if ("undefined" != typeof(postData.stepImage[i])) {
+      console.log("  ParsePostDataToXml(): image[" + i + "]=" + postData.stepImage[i]);
+      
       imgSrc = postData.stepImage[i];
      }
      

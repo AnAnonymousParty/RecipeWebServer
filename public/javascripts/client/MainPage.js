@@ -2017,7 +2017,7 @@ function SaveStepHeading() {
  tbody.rows[rowNdx].cells[0].innerHTML = headingTxt
                                        + '<input name="step"      type="hidden" value="' + headingTxt + '">'
                                        + '<input name="stepType"  type="hidden" value="HEADING">'
-                                       + '<input name="stepImage" type="hidden" value="">';
+                                       + '<input name="stepImage" type="hidden" value="noimg.jpg">';
  HideEditStepHeadingPopup();
 }
 

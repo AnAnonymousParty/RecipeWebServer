@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Roux_Roux.jpg" name="Roux" category="ELEMENT" cuisine="ALL">
+  <Title image="Roux_20251126_101347.jpg" name="Roux" category="ELEMENT" cuisine="ALL">
     <Yield amount="1" units="CUP"/>
     <Times prep="1" cook="10"/>
   </Title>
@@ -11,13 +11,13 @@ Approximately equal parts of fat and flour, cooked to varying degrees of donenes
 </Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fat</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes>Bacon grease, duck fat, schmaltz, tallow, clarified butter, etc.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>AP flour</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>NONE</Prep>
@@ -25,10 +25,10 @@ Approximately equal parts of fat and flour, cooked to varying degrees of donenes
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Heat fat in a heavy bottomed skillet or pan.</Step>
-    <Step image="Roux_Roux1.jpg">Add flour.</Step>
-    <Step image="Roux_Roux2.jpg">Cook the roux, stirring constantly, until it reaches the desired shade.</Step>
-    <Step image="">Use or refrigerate.</Step>
+    <Step type="STEP" image="">Heat fat in a heavy bottomed skillet or pan.</Step>
+    <Step type="STEP" image="Roux_Roux1.jpg">Add flour.</Step>
+    <Step type="STEP" image="Roux_Roux2.jpg">Cook the roux, stirring constantly, until it reaches the desired shade.</Step>
+    <Step type="STEP" image="">Use or refrigerate.</Step>
   </Method>
   <Variations/>
 </Recipe>
