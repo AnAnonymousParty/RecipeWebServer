@@ -2251,18 +2251,20 @@ function ShowSettingsPopup() {
  ToggleVisibility("SettingsPopup");
 }
 
-function SubmitFileForUpload(imageUse) {
+function SubmitFileForUpload(imageUse) { 
  // Create a FormData object and add to it the fields that we'll need in the
  // request we'll send to the server to upload the file:
  
  let formData = new FormData();
  let image    = document.getElementById('image2Upload').files[0];
+
+ formData.append('recipeName', document.getElementById('recipeName').value);
+ formData.append('image',      image);
+ 
+
  let response = document.getElementById('response');
  
  HideElement("response");
- 
- formData.append('recipeName', document.getElementById('recipeName').value);
- formData.append('image',      image);
  
  
  // Build the request to send to the server:
@@ -2273,12 +2275,13 @@ function SubmitFileForUpload(imageUse) {
 
  // Provide the callback function to handle the response from the server:
  
+ 
  xmlhttpReq.onload = function() {
-  if (4 != xmlhttpReq.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;  // I shall serve no data before its time.
   }  
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    var data = xmlhttpReq.responseText;
    
    response.innerHTML = data;
@@ -2348,13 +2351,11 @@ function SubmitFileForUpload(imageUse) {
      
     break;  // Nothing lasts forever.
    }
+  } else {
+   //TODO: Handle server error somehow.
+  }
    
-   return;
-  } 
-  
-  var data = xmlhttpReq.responseText;
-   
-  response.innerHTML = `${data.msg}`;
+  response.innerHTML = xmlhttpReq.responseText;
  };
  
  
