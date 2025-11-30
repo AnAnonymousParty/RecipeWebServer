@@ -702,13 +702,15 @@
  <br>
  <div class="centered">
   <form action="/uploadImage" enctype="multipart/form-data" method="post">
-   <input id="imageUse" type="hidden" value="">
+   <input id="imageUse"  type="hidden" value="">
    <input id="puInvoker" type="hidden" value="">
-   <div class="request-div" id="fileUploadForm">
-    <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-    <img height="48px" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
+   <div>
+    <div class="fileUpload-div" id="fileUploadForm">
+     <input id="image2Upload" onchange="HandleImageSelectionChanged();" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
+     <img height="48px" id="uploadImgBtn" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
+    </div>
    </div>
   </form>
-  <div class="notifier" id="response">File Uploaded</div>
+  <div class="notifier" id="response">TBD</div>  <%# Will be modified by client javascript. %>
  </div>
 </div>

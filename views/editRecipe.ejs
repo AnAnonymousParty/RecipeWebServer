@@ -423,8 +423,8 @@
       <tr>
        <td colspan="2" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;">
         <%- commonUtils.RenderNewlines(step); %> 
-        <input name="step"     type="hidden" value="<%=step %>">
-        <input name="stepType" type="hidden" value="HEADING">
+        <input name="step"      type="hidden" value="<%=step %>">
+        <input name="stepType"  type="hidden" value="HEADING">
         <input name="stepImage" type="hidden" value="noimg.jpg">
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
@@ -838,7 +838,7 @@
      <div style="display: inline-block;">
       <!-- Buttons / images conditionally displayed. -->
       <button id="addImgBtn" onclick="ShowFileUploadPopup('stepImage', 'editStepPopup');" type="button">Upload</button>
-      <button id="delImgBtn" onclick="DeleteStepImage();" type="button">Delete</button>
+      <button id="delImgBtn" onclick="DeleteStepImage();"                                 type="button">Delete</button>
       <img height="80px" id="image2Edit" src="" style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" width="80px">
      </div>
     </span>
@@ -882,8 +882,8 @@
 <!-- Edit Variation Popup. -->
 <div class="popup" id="editVariationPopup">
  <form>
-  <input id="Action" type="hidden" value="">
-  <input id="variationRowId"  type="hidden" value="">
+  <input id="Action"         type="hidden" value="">
+  <input id="variationRowId" type="hidden" value="">
   <div class="heading">
    EDIT VARIATION&nbsp;<img height="32px" onclick="HideEditVariationPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
   </div>
@@ -914,13 +914,15 @@
  <br>
  <div class="centered">
   <form action="/uploadImage" enctype="multipart/form-data" method="post">
-   <input id="imageUse" type="hidden" value="">
+   <input id="imageUse"  type="hidden" value="">
    <input id="puInvoker" type="hidden" value="">
-   <div class="request-div" id="fileUploadForm">
-    <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-    <img height="48px" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
+   <div>
+    <div class="fileUpload-div" id="fileUploadForm">
+     <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
+     <img height="48px" id="uploadImgBtn" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
+    </div>
    </div>
   </form>
-  <div class="notifier" id="response">File Uploaded</div>
+  <div class="notifier" id="response">TBD</div>  <%# Will be modified by client javascript. %>
  </div>
 </div>

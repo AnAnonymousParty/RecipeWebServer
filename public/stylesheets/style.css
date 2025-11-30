@@ -49,6 +49,13 @@ div.scroll {
            width: 30%;
 }
 
+.fileUpload-div {
+     align-items: center;
+         display: flex;
+ justify-content: center;
+      visibility: visible;
+}
+
 .filters {
       align-items: center;
  background-color: AliceBlue;
@@ -150,11 +157,11 @@ div.scroll {
 }
 
 .recipeActions {
-         display: inline-block;
-          height: 50px;
-      text-align: left;
-  vertical-align: middle;
-           width: 30%;
+        display: inline-block;
+         height: 50px;
+     text-align: left;
+ vertical-align: middle;
+          width: 30%;
 }
 
 .request-div {

@@ -613,9 +613,7 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  var stepsData  = postData.step;
  
  if (null != stepsData) {
-  if (Array.isArray(stepsData)) {  
-   console.log("  ParsePostDataToXml(): # Steps = " + stepsData.length);
-   
+  if (Array.isArray(stepsData)) {   
    for (var i = 0; i < stepsData.length; ++i) {
     var step     = stepsData[i]; 
     var stepElem = methodElem.ele('Step');
@@ -629,8 +627,6 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
      var imgSrc = "";
      
      if ("undefined" != typeof(postData.stepImage[i])) {
-      console.log("  ParsePostDataToXml(): image[" + i + "]=" + postData.stepImage[i]);
-      
       imgSrc = postData.stepImage[i];
      }
      
@@ -656,7 +652,6 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
   }
  } 
  
-
  var varsElem = root.ele('Variations');
  var varData  = postData.variation;
  

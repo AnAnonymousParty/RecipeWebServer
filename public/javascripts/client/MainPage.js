@@ -1142,6 +1142,16 @@ function HandleDelAllVariationsBtnClkd() {
  }
 }
 
+function HandleImageSelectionChanged() {
+ let imagePathFile = document.getElementById('image2Upload').files[0];
+ 
+ if ('undefined' === typeof imagePathFile) {
+  HideElement("uploadImgBtn");
+ } else {
+  UnHideElement("uploadImgBtn", "inline");
+ }
+}
+
 function HandleExportAllBtnClkd() {
  var xmlhttpReq = new XMLHttpRequest();
  
@@ -2165,6 +2175,9 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
   document.getElementById("puInvoker").value = parentElement;
  }
  
+ HideElement("uploadImgBtn");
+ HideElement("response");
+ 
  ToggleVisibility("fileUploadPopup");
  
  UnhideElement("FileUploadForm");
@@ -2239,11 +2252,14 @@ function ShowSettingsPopup() {
 }
 
 function SubmitFileForUpload(imageUse) {
- // Create a FormData object and add the fields to it that we'll need in the
+ // Create a FormData object and add to it the fields that we'll need in the
  // request we'll send to the server to upload the file:
  
- var formData = new FormData();
- var image    = document.getElementById('image2Upload').files[0];
+ let formData = new FormData();
+ let image    = document.getElementById('image2Upload').files[0];
+ let response = document.getElementById('response');
+ 
+ HideElement("response");
  
  formData.append('recipeName', document.getElementById('recipeName').value);
  formData.append('image',      image);
@@ -2254,25 +2270,28 @@ function SubmitFileForUpload(imageUse) {
  var xmlhttpReq = new XMLHttpRequest();
 
  xmlhttpReq.open('POST', '/uploadImage', true);
- 
 
  // Provide the callback function to handle the response from the server:
  
  xmlhttpReq.onload = function() {
-  var response = document.getElementById('response');
+  if (4 != xmlhttpReq.readyState) {
+   return;  // I shall serve no data before its time.
+  }  
   
   if (200 === xmlhttpReq.status) {
    var data = xmlhttpReq.responseText;
    
    response.innerHTML = data;
    
-   ToggleVisibility("response");
+   HideElement("uploadImgBtn");
+   
+   UnHideElement("response");
     
    document.getElementById("fileUploadForm").style.display = "none";
     
    setTimeout(function() {
                document.getElementById("image2Upload").value = "";
-           
+  
                ToggleVisibility("response");
                ToggleVisibility("fileUploadForm");
               }, 3000);
@@ -2340,6 +2359,10 @@ function SubmitFileForUpload(imageUse) {
  
  
  // Send the request to the server:
+ 
+ response.innerHTML = "Uploading image...";
+ 
+ UnHideElement("response");
 
  xmlhttpReq.send(formData);
 }
