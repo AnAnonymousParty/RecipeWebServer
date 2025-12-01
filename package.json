@@ -24,6 +24,7 @@
     "unzipper": "^0.12.3",
     "xml2js": "^0.6.2",
     "xml2js-parser": "^1.1.1",
-    "xmlbuilder2": "^3.1.1"
+    "xmlbuilder2": "^3.1.1",
+    "xmldom": "^0.6.0"
   }
 }

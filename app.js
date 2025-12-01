@@ -17,7 +17,9 @@ const xml2js       = require('xml2js');
 const xml2jsParser = require('xml2js-parser');
 const zipUtils     = require('adm-zip');
 
-// javascript we we provide:
+const { DOMParser, XMLSerializer } = require('xmldom');
+
+// javascript we provide:
 
 var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
 var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
@@ -194,9 +196,35 @@ app.get('/GetRecipesToExportList', (req, res) => {
  res.status(200).send(rv);
 });
 
+app.get('/RenameRecipe', (req, res) => {
+ console.log("> RenameRecipe(" + decodeURIComponent(req.query.oldRecipeName) + ", " + decodeURIComponent(req.query.newRecipeName) + ")");
+
+ RenameExistingRecipe(decodeURIComponent(req.query.oldRecipeName), decodeURIComponent(req.query.newRecipeName));
+    
+ console.log("< RenameRecipe()");  
+
+ try {
+  var recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', decodeURIComponent(req.query.newRecipeName + '.xml'))); 
+ } catch (err) {
+  console.log(err);
+ }
+ 
+ var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
+ 
+ //console.log("JSONs: ", JSON.stringify(recipeDataJson, null, 2));
+ 
+ try {
+  res.render('editRecipe', { commonUtils: common,    
+                                   enums: enums,
+                              recipeData: recipeDataJson });
+ } catch (err) {
+  console.log(err);
+ }
+});
+
 app.get('/SavePDF', (req, res) => {
  var recipeName = req.query.recipeName;
- var scaling    =req.query.scaling;
+ var scaling    = req.query.scaling;
  
  console.log("> savePDF(" + recipeName + ", " + scaling + ")");
  
@@ -388,6 +416,7 @@ app.post("/UpdateRecipe", function (req, res) {
 
 // Handle image uploaded.
 app.post("/uploadImage", function (req, res) {
+ console.log("> uploadImage"); 
 
  var recipeName       = req.fields.recipeName; 
  var uploadedFileName = req.files.image.path;  
@@ -399,7 +428,7 @@ app.post("/uploadImage", function (req, res) {
   }
  });
  
- console.log("< UpdateRecipe()"); 
+ console.log("< uploadImage()"); 
  
  return res.send("Successfully uploaded");
 });
@@ -464,6 +493,49 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+function CheckForDuplicateRecipes(importPath) {
+ console.log("> CheckForDuplicateRecipes(" + importPath + ")");
+ 
+ var msg = ""
+ 
+ var filesList     = fs.readdirSync(path.join(importPath, "/Recipes/"));
+ var totalFilesCnt = filesList.length;
+  
+ for (var i = 0; i < totalFilesCnt; ++i) { 
+  var fileNameExt           = filesList[i];
+  var recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + fileNameExt;
+  
+  if (true == fs.existsSync(recipeFilePathNameExt)) {
+   msg += path.basename(fileNameExt, ".xml") + ".\n";
+   
+   // Append "-2" to whatever the recipe file is currently named:
+   
+   var oldRecipeNamePath    = path.join(importPath, "Recipes");
+   var oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldNameExt);
+   var oldRecipeName        = path.basename(oldNameExt, ".xml");
+   var newRecipeName        = oldRecipeName + "-2";
+   var newRecipeNamePathExt = path.join(oldRecipeNamePath, newRecipeName + ".xml");
+   
+   
+   // Try to rename the existing recipe:
+ 
+   RenameExistingRecipeFile(oldRecipeName, newRecipeName);
+  }
+ }  
+ 
+ if ("" != msg) {
+  msg = "The following recipes already exist:\n\n" + msg + "\n"
+      + "They have been renamed by adding '-2' to their names.\n\n"
+      + "If they are updates to existing recipes you may delete "
+      + "the old recipes.";
+ }
+     
+ console.log("< CheckForDuplicateRecipes() [" + msg + "]");     
+ 
+ return(msg);
+}
+
 async function ExportRecipes(recipesExportPathNameExt, req, res) {
  console.log("> ExportRecipes(" + recipesExportPathNameExt + ")");
  
@@ -486,10 +558,71 @@ async function ExportRecipes(recipesExportPathNameExt, req, res) {
  console.log("< ExportRecipesPDF()");  
 }
 
-// Parse the POST data to XML for processing by converting it to JSON and
-// then using the sblBuilder library to convert the JSON to XML and return
-// it.
+async function generatePDFfromHTML(recipeName, scaling, outputFile) {
+ // Use the puppeteer library to convert the printable version of the given
+ // named recipe to a PDF document.
+ 
+ var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
+         + encodeURIComponent(recipeName)
+         + "&scaling=" + scaling + "&ShowButtons=N";
+ 
+ const browser = await puppeteer.launch();
+ const page    = await browser.newPage();
+ 
+ await page.goto(url, { waitForOptions: "networkidle0" }); 
+ await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
+ await browser.close();
+}
+
+async function handleSavePDF(req, res) {
+  var recipeName = req.query.recipeName;
+  var scaling    = req.query.scaling;
+  
+  console.log("> handleSavePDF(" + recipeName + ", " + scaling + ")");
+  
+  // Generate PDF file from recipe's 'print' view:
+  
+  await generatePDFfromHTML(recipeName, scaling, recipeName + '.pdf');
+  
+  // Send the PDF file to the client:
+  
+  console.log('  handleSavePDF(): PDF ' + recipeName + '.pdf generated successfully.'); 
+  
+  var pdfFile = decodeURIComponent(req.query.recipeName);
+ 
+  var pdfFilePath = __dirname + "\\public\\data\\PDFs\\" + pdfFile + ".pdf";
+ 
+  const options = { headers: { 'Content-Type': 'application/octet-stream', }, };
+  
+  await res.download(pdfFilePath, pdfFile, options, (err) => {
+   if (err) {
+    res.status(500).send({ message: "Could not download the file. " + err});
+   } else {
+    // Remove the generated PDF file once it has been downloaded:
+    
+    fs.access(pdfFilePath, fs.constants.F_OK, (err) => {
+     if (err) {
+      fs.rmSync(pdfFilePath, {
+       force: true,
+      });
+     }
+     else {
+      fs.rmSync(pdfFilePath, {
+       force: true,
+      });
+     }
+    });     
+   }
+  });    
+
+  console.log("< handleSavePDF()");  
+}
+
 function ParsePostDataToXml(postData) {
+ // Parse the POST data to XML for processing by converting it to JSON and
+ // then using the sblBuilder library to convert the JSON to XML and return
+ // it.
+ 
 console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
  var doc = xmlBuilder.create({ version: '1.0' });
@@ -678,9 +811,10 @@ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  return(rv);
 }
 
-// Remove any images from the image staging directory that are more than 
-// four hours old.
 function RemoveStaleImages() {
+ // Remove any images from the image staging directory that are more than 
+ // four hours old.
+ 
  var now = new Date().getTime();
  
  fs.readdir(__dirname + "/public/images/Staging", (err, files) => {
@@ -703,158 +837,136 @@ function RemoveStaleImages() {
  }); 
 }
 
-// Use the puppeteer library to convert the printable version of the given
-// named recipe to a PDF document.
-async function generatePDFfromHTML(recipeName, scaling, outputFile) {
- var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
-         + encodeURIComponent(recipeName)
-         + "&scaling=" + scaling + "&ShowButtons=N";
+function RenameExistingRecipe(existingRecipeName, newRecipeName) {
+ // Rename an existing recipe xml data file. 
+ //
+ // It's not just as simple as that. Once the file has been renamed, any images 
+ // associated with that recipe need to be renamed as well. Then, any references
+ // to the old name and anu image files must also be renamed in the recipe file.
+ // Finally, any links in any other recipe files need to be modified to refer to
+ // the renamed recipe.
  
- const browser = await puppeteer.launch();
- const page    = await browser.newPage();
+ console.log("> RenameExistingRecipe(" + existingRecipeName + ", " + newRecipeName + ")");
  
- await page.goto(url, { waitForOptions: "networkidle0" }); 
- await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
- await browser.close();
-}
-
-async function handleSavePDF(req, res) {
-  var recipeName = req.query.recipeName;
-  var scaling    = req.query.scaling;
-  
-  console.log("> handleSavePDF(" + recipeName + ", " + scaling + ")");
-  
-  // Generate PDF file from recipe's 'print' view:
-  
-  await generatePDFfromHTML(recipeName, scaling, recipeName + '.pdf');
-  
-  // Send the PDF file to the client:
-  
-  console.log('  handleSavePDF(): PDF ' + recipeName + '.pdf generated successfully.'); 
-  
-  var pdfFile = decodeURIComponent(req.query.recipeName);
+ let existingRecipePathNameExt = path.join(__dirname, 'public/data/recipes/') + existingRecipeName + ".xml";
+ let newRecipePathNameExt      = path.join(__dirname, 'public/data/recipes/') + newRecipeName      + ".xml";
  
-  var pdfFilePath = __dirname + "\\public\\data\\PDFs\\" + pdfFile + ".pdf";
- 
-  const options = { headers: { 'Content-Type': 'application/octet-stream', }, };
-  
-  await res.download(pdfFilePath, pdfFile, options, (err) => {
-   if (err) {
-    res.status(500).send({ message: "Could not download the file. " + err});
-   } else {
-    // Remove the generated PDF file once it has been downloaded:
-    
-    fs.access(pdfFilePath, fs.constants.F_OK, (err) => {
-     if (err) {
-      fs.rmSync(pdfFilePath, {
-       force: true,
-      });
-     }
-     else {
-      fs.rmSync(pdfFilePath, {
-       force: true,
-      });
-     }
-    });     
-   }
-  });    
-
-  console.log("< handleSavePDF()");  
-}
-
-function CheckForDuplicateRecipes(importPath) {
- console.log("> CheckForDuplicateRecipes(" + importPath + ")");
- 
- var msg = ""
- 
- var filesList     = fs.readdirSync(path.join(importPath, "/Recipes/"));
- var totalFilesCnt = filesList.length;
-  
- for (var i = 0; i < totalFilesCnt; ++i) { 
-  var fileNameExt           = filesList[i];
-  var recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + fileNameExt;
-  
-  if (true == fs.existsSync(recipeFilePathNameExt)) {
-   msg += path.basename(fileNameExt, ".xml") + ".\n";
-   
-   RenameRecipeFile(importPath, fileNameExt);
-  }
- }  
- 
- if ("" != msg) {
-  msg = "The following recipes already exist:\n\n" + msg + "\n"
-      + "They have been renamed by adding '-2' to their names.\n\n"
-      + "If they are updates to existing recipes you may delete "
-      + "the old recipes.";
- }
-     
- console.log("< CheckForDuplicateRecipes() [" + msg + "]");     
- 
- return(msg);
-}
-
-// Append "-2" to whatever the recipe file is currently named.
-// Then, rename any associated image file names as well.
-// Finally, change all file name references within the file in 
-// the same manner.
-function RenameRecipeFile(importPath, oldNameExt) {
- console.log("> RenameRecipeFile(" + importPath + ", " + oldNameExt + ")");
- 
- // The new name is the current name + "-2":
- 
- var oldRecipeNamePath    = path.join(importPath, "Recipes");
- var oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldNameExt);
- var oldRecipeName        = path.basename(oldNameExt, ".xml");
- var newRecipeName        = oldRecipeName + "-2";
- var newRecipeNamePathExt = path.join(oldRecipeNamePath, newRecipeName + ".xml");
- 
+ console.log("  RenameExistingRecipe(): " + existingRecipePathNameExt + " " + newRecipePathNameExt);
  
  // Try to rename the recipe file:
  
- fs.renameSync(oldRecipeNamePathExt, newRecipeNamePathExt, function (err) {
-  if (err) {
-   console.log("< RenameRecipeFile(): Unable to rename file - " + err);
-      
-   return;
-  }
+ fs.renameSync(existingRecipePathNameExt, newRecipePathNameExt, function (err) {
+  console.log("< RenameExistingRecipe(): Unable to rename file - " + err);
  });
  
  
  // Rename any associated image files:
  
- var imagesPath        = path.join(importPath, "Images");
+ RenameImageFiles(existingRecipeName, newRecipeName);
+  
+  
+ // Try to change all name references within the recipe file to reflect the new name:
+ 
+ RenameRecipeFileInternalReferences(newRecipeName);
+
+ 
+ // Update any hyperlinks in the files:
+ 
+ UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), existingRecipeName, newRecipeName)
+ 
+ console.log("< RenameExistingRecipe()");
+}
+
+function RenameImageFiles(existingRecipeName, newRecipeName) {
+ console.log("> RenameImageFiles(" + existingRecipeName + ", " + newRecipeName +")");
+ 
+ var imagesPath        = path.join(__dirname, "/public/images/Recipes/");
  var imageFilesList    = fs.readdirSync(imagesPath);
  var imageFilesListCnt = imageFilesList.length;
   
  for (var i = 0; i < imageFilesListCnt; ++i) { 
-  var imageFileNameExt    = imageFilesList[i];  
-  var oldImageName        = path.basename(imageFileNameExt, ".xml");
-  var oldImageNamePathExt = path.join(importPath, "Images", oldImageName);
-  var newImageNamePathExt = oldImageNamePathExt.replaceAll(oldRecipeName, newRecipeName);
+  let existingImagePathNameExt = path.join(__dirname, "/public/images/Recipes/") + imageFilesList[i];
   
-  fs.renameSync(oldImageNamePathExt, newImageNamePathExt, function (err) {
+  let parsedExistingImagePathNameExt = path.parse(existingImagePathNameExt);
+  
+  const parts = parsedExistingImagePathNameExt.name.split("_");
+  
+  if (parts[0] != existingRecipeName) {
+   continue;
+  }
+   
+  let newImagePathNameExt = RenameImageFileName(parsedExistingImagePathNameExt, newRecipeName);
+  
+  fs.renameSync(existingImagePathNameExt, newImagePathNameExt, function (err) {
    if (err) {
-    console.log("< RenameRecipeFile(): Unable to rename file - " + err);
-       
-    return;
+    console.log("< RenameImageFiles(): Unable to rename file - " + err);
    }
   });
+ } 
+ 
+ console.log("< RenameImageFiles()");
+}
+
+function RenameImageFileName(parsedExistingImagePathNameExt, newRecipeName) {
+ console.log("> RenameImageFileName(" + parsedExistingImagePathNameExt.name + ", " + newRecipeName + ")");
+ 
+ const parts = parsedExistingImagePathNameExt.name.split("_");
+ 
+ let newImagePathNameExt = path.join(__dirname, "/public/images/Recipes/") + newRecipeName;
+
+ for (var partNdx = 1; partNdx < parts.length; ++partNdx) {
+  newImagePathNameExt += "_" + parts[partNdx];
  }
   
+ newImagePathNameExt += parsedExistingImagePathNameExt.ext; 
+ 
+ console.log("< RenameImageFileName() [" + newImagePathNameExt + "]");
+ 
+ return newImagePathNameExt;
+}
+
+function RenameRecipeFileInternalReferences(newRecipeName) {
+ console.log("> RenameRecipeFileInternalReferences(" + newRecipeName +")");
+ 
+ let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', newRecipeName + '.xml')); 
+ 
+ let s = recipeDataXml.toString();
+ 
+ try {
+  let xmlParser = new DOMParser();
+
+  let xmlDoc = xmlParser.parseFromString(s, "text/xml");
   
- // Try to change all name references within the file from the current name to the new name:
+  let titleElement = xmlDoc.getElementsByTagName("Title")[0];
+  
+  let title    = titleElement.getAttribute("name");
+  let titleImg = titleElement.getAttribute("image");
+  
+  titleElement.setAttribute("name", newRecipeName);
+  
+  if ("" != titleImg) {
+   titleElement.setAttribute("image", path.basename(RenameImageFileName(path.parse(titleImg), newRecipeName)));
+  }
+  
+  let method = xmlDoc.getElementsByTagName("Method")[0];
+  let steps  = method.getElementsByTagName("Step");
+  
+  for (var stepNdx = 0; stepNdx < steps.length; ++stepNdx) {
+   let newImageName = path.basename(RenameImageFileName(path.parse(steps[stepNdx].getAttribute("image")), newRecipeName));
    
- try { 
-  var data = fs.readFileSync(newRecipeNamePathExt, 'utf8');
+   if ("" != steps[stepNdx].setAttribute("image")) {
+    steps[stepNdx].setAttribute("image", newImageName);
+   }
+  }
+  
+  let xml = new XMLSerializer().serializeToString(xmlDoc);
+  
+  fs.writeFileSync(__dirname + "/public/data/recipes/" + newRecipeName + ".xml", xml.toString());
+ } catch(err) {
+  console.log("  RenameRecipeFileInternalReferences(): err=" + err);
+ }
  
-  var result = data.replaceAll(oldRecipeName, newRecipeName);
-   
-  fs.writeFileSync(newRecipeNamePathExt, result, 'utf8');
- } catch (error) {
-    console.log("  RenameRecipeFile(): error=" + error);
- }  
- 
- console.log("< RenameRecipeFile()");
+ console.log("< RenameRecipeFileInternalReferences()");  
 }
 
 function UnpackImport(pathFile) {
@@ -917,5 +1029,89 @@ function UnpackImport(pathFile) {
  
  return(msg);
 }
+
+
+function UpdateAllLinks(fs, path, recipesPath, oldRecipeName, newRecipeName) {
+ console.log("> UpdateAllLinks(fs, path, " + recipesPath + ", " + oldRecipeName + ", " + newRecipeName + ")");
+ 
+ try {
+  const files = fs.readdirSync(recipesPath);
+  
+  for (const file of files) {
+   const filePath = path.join(recipesPath, file);
+   const stats    = fs.statSync(filePath);
+   
+   if (true == stats.isDirectory()) {
+    continue;
+   } 
+   
+   UpdateLinksInFile(fs, path, filePath, oldRecipeName, newRecipeName);
+  }
+ } catch (error) {
+    console.error("  UpdateAllLinks(): Error reading '" + recipesPath + "' = " + error);
+ }
+ 
+ console.log("< UpdateAllLinks()");
+}
+
+function UpdateLinksInFile(fs, path, filePath, oldRecipeName, newRecipeName) {
+console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName + ", " + newRecipeName + ")");
+ 
+ let encodedORN = encodeURI(oldRecipeName);
+ let encodedNRN = encodeURI(newRecipeName);
+ 
+ let content = fs.readFileSync(filePath);
+ 
+ let changed = false;
+
+ let lines = content.toString().split('\n');
+
+ for (var lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
+  let line = lines[lineNdx];
+  
+  if (-1 == line.indexOf("href")) {
+   continue;
+  }
+  
+  let ol = "recipeName=" + encodedORN + "'";
+  let nl = "recipeName=" + encodedNRN + "'";
+  
+  if (-1 == line.indexOf(ol)) {
+   continue;
+  }
+  
+  changed = true;
+  
+  line = line.replaceAll(ol, nl);
+  
+  let ot = "&gt;" + oldRecipeName + "&lt;";
+  let nt = "&gt;" + newRecipeName + "&lt;";
+  
+  line = line.replaceAll(ot, nt);
+  
+  lines[lineNdx] = line;
+ }
+ 
+ if (true == changed) {
+  let newContent = "";
+  
+  for (var lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
+   newContent += lines[lineNdx];
+  }
+  
+  let xmlParser = new DOMParser();
+
+  let xmlDoc = xmlParser.parseFromString(newContent, "text/xml");
+  
+  let xml = new XMLSerializer().serializeToString(xmlDoc);
+  
+  console.log("  UpdateLinksInFile(): nl=" + xml.toString());
+  
+  fs.writeFileSync(filePath, xml.toString());
+ }
+ 
+ console.log("< UpdateLink()");
+}
+
 
 module.exports = app;

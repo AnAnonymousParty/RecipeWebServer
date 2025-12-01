@@ -263,11 +263,11 @@ function AddRecipe() {
  var xmlhttp = new XMLHttpRequest();
     
  xmlhttp.onreadystatechange = function() {
-  if (4 != xmlhttp.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
    return;
   }
  
-  if (200 == xmlhttp.status || 304 == xmlhttp.status) {
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
    if ("NO" == xmlhttp.response) {
     ToggleVisibility("addRecipePopup");
     
@@ -523,11 +523,11 @@ function DeleteAllRecipes() {
  var xmlhttp = new XMLHttpRequest();
  
  xmlhttp.onreadystatechange = function() {
-  if (4 != xmlhttp.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
    return;
   }
   
-  if (200 == xmlhttp.status) {
+  if (HttpStatusTypes.OK == xmlhttp.status) {
    var data = xmlhttp.responseText;
    
    const parser = new DOMParser();
@@ -670,11 +670,11 @@ function DeleteRecipe(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 != xmlhttp.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
    return;
   }
   
-  if (200 == xmlhttp.status) {
+  if (HttpStatusTypes.OK == xmlhttp.status) {
    var data = xmlhttp.responseText;
    
    const parser = new DOMParser();
@@ -919,7 +919,7 @@ function EditRecipe(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
    var data = xmlhttp.responseText;
     
    document.getElementById("recipesListContainer").innerHTML = data;
@@ -930,7 +930,7 @@ function EditRecipe(recipeName) {
    HideElement("viewPageBtns");
    
    UnHideElement("editPageBtns");
-   UnHideElement("recipeTitleContainer");
+   UnHideElement("recipeTitleContainer", "inline-block");
   }
   else {
    // TODO: Handle failure, if needed.
@@ -1173,11 +1173,11 @@ function HandleExportAllBtnClkd() {
   UnHideElement("indexPageBtns"); 
   UnHideElement("filtersContainer");
   
-  if (4 != xmlhttpReq.readyState) { 
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) { 
    return;
   }
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
    
    HideElement("ExportContainer");
@@ -1210,11 +1210,11 @@ function HandleExportSelectedBtnClkd() {
  xmlhttpReq.responseType = "blob";
  
  xmlhttpReq.onload = function() {
-  if (4 != xmlhttpReq.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;
   }
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
    
    HideElement("ExportContainer");
@@ -1247,6 +1247,37 @@ function HandleExportSelectedBtnClkd() {
  xmlhttpReq.send(json); 
 }
 
+function HandleRequestRenameRecipeBtnClkd() {
+ let newRecipeName = prompt("Enter new name for recipe and click OK to proceed.");
+  
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
+   if ("NO" == xmlhttp.response) {
+    let oldRecipeName = encodeURIComponent(document.getElementById("recipeTitle").innerText);
+    
+    RequestRenameRecipe(oldRecipeName, encodeURIComponent(newRecipeName));
+   } else {
+    alert("Recipe '" + newRecipeName + "' already exists.");
+   } 
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+  
+ var params = encodeURIComponent(newRecipeName);
+    
+ xmlhttp.open("GET", "/CheckRecipeExists?file2Check=" + params, true);
+ 
+ xmlhttp.send();
+}
+
 function HandleSearchBtnClkd() {
  var xmlhttpReq = new XMLHttpRequest();
  
@@ -1268,7 +1299,7 @@ function HandleSearchBtnClkd() {
    UnHideElement("indexPageBtns"); 
    UnHideElement("filtersContainer");
   
-  if (4 == xmlhttpReq.readyState && 200 === xmlhttpReq.status) {
+  if (ReadyStateTypes.DONE == xmlhttpReq.readyState && HttpStatusTypes.OK === xmlhttpReq.status) {
    var data = xmlhttpReq.responseText;
    
    const parser = new DOMParser();
@@ -1580,7 +1611,7 @@ function RequestFileDelete(fileName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
    // TODO: handle success.
   }
   else {
@@ -1600,11 +1631,11 @@ function RequestNewRecipePage(recipeName) {
     
  xmlhttp.onreadystatechange = function()
  {
-  if (4 != xmlhttp.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
    return;
   }
   
-  if (200 == xmlhttp.status) {
+  if (HttpStatusTypes.OK == xmlhttp.status) {
    document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
    document.getElementById("recipeName").value               = recipeName;
    document.getElementById("recipeTitle").innerText          = document.getElementById("recipeName").value; 
@@ -1652,6 +1683,31 @@ function RequestPrintableView(recipeName) {
  loc += (scaling.toString());
     
  window.open(loc); 
+}
+
+function RequestRenameRecipe(oldRecipeName, newRecipeName) {
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+   
+   document.getElementById("recipeTitle").innerHTML = decodeURI(newRecipeName);
+   
+   document.getElementById("recipesListContainer").innerHTML = data;
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+    
+ xmlhttp.open("GET", "/RenameRecipe?oldRecipeName=" + oldRecipeName + "&newRecipeName=" + newRecipeName, true);
+ 
+ xmlhttp.send();
 }
 
 function SaveIngredient() {
@@ -1758,8 +1814,8 @@ function SavePDF(recipeName, scaling) {
  xmlhttp.responseType = "blob";
     
  xmlhttp.onreadystatechange = function() {
-  if (4 == xmlhttp.readyState) {
-   if (200 == xmlhttp.status) {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState) {
+   if (HttpStatusTypes.OK == xmlhttp.status) {
     let blob = new Blob([xmlhttp.response], {type: 'application/octet-stream'});
     let uri = URL.createObjectURL(blob);
     let link = document.createElement("a");
@@ -1860,11 +1916,11 @@ function SaveRecipe() {
     UnHideElement("filtersContainer");
     UnHideElement("indexPageBtns"); 
     
-    if (4 != xmlhttpReq.readyState) {
+    if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
      return;
     }
 
-    if (200 === xmlhttpReq.status) {
+    if (HttpStatusTypes.OK === xmlhttpReq.status) {
      var data = xmlhttpReq.responseText;
      
      if ("" == data) { 
@@ -1915,11 +1971,11 @@ function SaveRecipe() {
    UnHideElement("filtersContainer");
    UnHideElement("indexPageBtns");    
     
-    if (4 != xmlhttpReq.readyState) {
+    if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
      return;
     }
 
-    if (200 === xmlhttpReq.status) {
+    if (HttpStatusTypes.OK === xmlhttpReq.status) {
      var data = xmlhttpReq.responseText;
      
      if ("" == data) { 
@@ -2132,11 +2188,11 @@ function ShowExportRecipesPopup(parentElement) {
  xmlhttpReq.open("GET", "/GetRecipesToExportList"); 
 
  xmlhttpReq.onload = function() {  
-  if (4 != xmlhttpReq.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;
   }
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    document.getElementById("overlayContainer").className = "overlay";
  
    if ("" != parentElement) {  
@@ -2211,11 +2267,11 @@ function ShowRecipesList(category, cuisine) {
   UnHideElement("indexPageBtns"); 
   UnHideElement("filtersContainer");
   
-  if (4 != xmlhttpReq.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;
   }
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    var data = xmlhttpReq.responseText;
    
    const parser = new DOMParser();
@@ -2273,8 +2329,8 @@ function SubmitFileForUpload(imageUse) {
 
  xmlhttpReq.open('POST', '/uploadImage', true);
 
+
  // Provide the callback function to handle the response from the server:
- 
  
  xmlhttpReq.onload = function() {
   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
@@ -2324,7 +2380,7 @@ function SubmitFileForUpload(imageUse) {
      }
       
      document.getElementById("mainImageName").value = image.name;
-     document.getElementById("mainImage").src = "images/Staging/" + recipeName + '_' + image.name;
+     document.getElementById("mainImage").src       = "images/Staging/" + recipeName + '_' + image.name;
      
      UnHideElement("mainImage");
      
@@ -2394,11 +2450,11 @@ function SubmitRecipesForUpload() {
  // Provide the callback function to handle the response from the server:
  
  xmlhttpReq.onload = function() {
-  if (4 != xmlhttpReq.readyState) {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;  // I shall serve no data before its time.
   }
   
-  if (200 === xmlhttpReq.status) {
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
    var response = document.getElementById('recipesUploadResponse');
    
    document.getElementById('recipesUploadResponse').innerHTML = "Recipes Imported";
@@ -2456,7 +2512,7 @@ function ViewRecipe(recipeName) {
  var xmlhttp = new XMLHttpRequest();
     
  xmlhttp.onreadystatechange = function() {
-  if (4 == xmlhttp.readyState && 200 == xmlhttp.status) {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
    document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
    document.getElementById("recipeTitle").innerText          = document.getElementById("recipeName").value; 
    

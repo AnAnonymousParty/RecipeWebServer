@@ -1,6 +1,6 @@
 export
 function SearchDirectory(fs, path, directoryPath, searchTerm) {
- console.log("> SearchDirectory(" + directoryPath + ", " + searchTerm +")");
+ console.log("> SearchDirectory(" + directoryPath + ", " + searchTerm + ")");
  
  const results = [];
  
@@ -30,7 +30,7 @@ function SearchDirectory(fs, path, directoryPath, searchTerm) {
 
 
 function SearchFile(fs, filePath, searchTerm) {
- console.log("> SearchFile(" + filePath + ", " + searchTerm +")");
+ console.log("> SearchFile(" + filePath + ", " + searchTerm + ")");
  
  const searchRegex = new RegExp(searchTerm, "gi");
  

@@ -11,6 +11,7 @@
   <script src="/javascripts/client/validate.js"></script>
   <title><%= title %></title>
  </head>
+ 
  <body background="/images/veges.jpg" onload="InitPage();">
   <div class="header-section"> 
    <span class="filters" id="filtersContainer">
@@ -27,9 +28,12 @@
     <img height="20px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="20px">
     <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <span id="totalCnt"><%- recipesCnt %></span></span>
    </span>   
-   <span id="recipeTitleContainer" style="display: none; visibility: collapse; text-align: center;">
-    <h2 id="recipeTitle">Placeholder</h2>
-   </span>   
+   <div id="recipeTitleContainer" style="align-items: center; display: none; visibility: collapse; text-align: center; vertical-align:middle;">
+    <span style="align-items: center; display: inline; vertical-align: middle;">
+     <h2 id="recipeTitle" style="display: inline;">Placeholder</h2> 
+     <img height="24px" id="RenameRecipeBtn();" onclick="HandleRequestRenameRecipeBtnClkd();" src="/images/Buttons/EditBtn_48X48_White.png" style="margin: 0px 0px 0px 5px;" title="Rename Recipe" width="24px"> 
+    </span>
+   </div>   
   </div>
   <div class="content-section" id="recipesListContainer">
    <%-filesList %>
