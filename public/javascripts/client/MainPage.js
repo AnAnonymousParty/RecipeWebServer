@@ -1253,7 +1253,19 @@ function HandleRequestRenameRecipeBtnClkd() {
  if (null == newRecipeName) {
   return;
  }
+ 
+ if (false == IsFileName(newRecipeName)) {
+  alert("A name must be provided and may contain \"'0123456789 abcdefghijklmnopqrstuvwxyz-_\".");
   
+  return;
+ }
+ 
+ if (false == IsNotOnlySpaces(newRecipeName)) {
+  alert("A name cannot be just spaces,");
+  
+  return;
+ }
+
  var xmlhttp = new XMLHttpRequest();
     
  xmlhttp.onreadystatechange = function() {

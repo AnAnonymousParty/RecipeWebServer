@@ -93,3 +93,7 @@ function IsFileName(sString)
          return(true);
         }     
         
+ function IsNotOnlySpaces(sString)
+        {
+         return sString.trim();
+        }          
