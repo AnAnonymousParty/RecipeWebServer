@@ -85,6 +85,23 @@
  
  <div class="recipe-line">
   <span class="field-header">
+   Saturated Fat:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="saturatedFat" max="999" min= "0" name="saturatedFat" type="number"> g
+  </span>
+ </div>
+ 
+ <div class="recipe-line">
+  <span class="field-header">
+   Cholesterol:
+  </span>
+  <span class="field-value">
+   <input data-validation="vNumeric" id="cholesterol" max="999" min= "0" name="cholesterol" type="number"> g
+  </span>
+ </div> 
+ <div class="recipe-line">
+  <span class="field-header">
    Carbs:
   </span>
   <span class="field-value">
@@ -701,7 +718,7 @@
  </div>
  <br>
  <div class="centered">
-  <form action="/uploadImage" enctype="multipart/form-data" method="post">
+  <form action="/UploadImage" enctype="multipart/form-data" method="post">
    <input id="imageUse"  type="hidden" value="">
    <input id="puInvoker" type="hidden" value="">
    <div>

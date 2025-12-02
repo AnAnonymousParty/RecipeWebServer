@@ -18,64 +18,135 @@
 
   <div class="centered">
    <table class="plain-table">
-    <tr>
-     <th>
-      CUISINE
-     </th>
-     <th>
-      COURSE
-     </th>    
-     <th colspan="7">
-      NUTRITION, per serving (<%= recipeData.Recipe.Nutrition[0].$.servings %> <% var i = recipeData.Recipe.Nutrition[0].$.servingsUnit; %> <%= enumUtils.GetDescFromServingSizeType(i) %>)
-     </th>      
-     <th colspan="1">
-      YIELD
-     </th> 
-     <th colspan="3">
-      TIMES
-     </th>     
-    </tr>     
-    <tr>
-     <td>
-      <% var i = recipeData.Recipe.Title[0].$.cuisine; %> <%= enumUtils.GetDescFromCuisineType(i) %>
-     </td>    
-     <td>
-      <% var i = recipeData.Recipe.Title[0].$.category; %> <%= enumUtils.GetDescFromCategoryType(i) %>
-     </td>
-     <td>
-      Calories: <%= recipeData.Recipe.Nutrition[0].$.calories %> 
-     </td>
-     <td>
-      Fat: <%= recipeData.Recipe.Nutrition[0].$.fat %> g 
-     </td>
-     <td>
-      Carbs: <%= recipeData.Recipe.Nutrition[0].$.carbs %> g
-     </td>
-     <td>
-      Protein: <%= recipeData.Recipe.Nutrition[0].$.protein %> g
-     </td>     
-     <td>
-      Sugar: <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
-     </td>
-     <td>
-      Sodium: <%= recipeData.Recipe.Nutrition[0].$.sodium %> g 
-     </td>      
-     <td>
-      Fiber: <%= recipeData.Recipe.Nutrition[0].$.fiber %> g
-     </td>
-     <td>
-      <%= recipeData.Recipe.Title[0].Yield[0].$.amount * scaling%> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
-     </td>
-     <td>
-      Prep Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep)); %>
-     </td>
-     <td>
-      Cook Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.cook)); %>
-     </td>
-     <td>
-      Total Time: <%= commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep) + parseInt(recipeData.Recipe.Title[0].Times[0].$.cook)); %>
-     </td>
-    </tr>
+   <tr>
+    <th>
+     CUISINE
+    </th>
+    <th>
+     COURSE
+    </th>  
+    <th colspan="4">
+     NUTRITION, per serving (<%= recipeData.Recipe.Nutrition[0].$.servings %> <% var i = recipeData.Recipe.Nutrition[0].$.servingsUnit; %> <%= enumUtils.GetDescFromServingSizeType(i) %>)
+    </th>   
+    <th colspan="1">
+     YIELD
+    </th> 
+    <th colspan="1">
+     TIMES
+    </th>     
+   </tr>     
+   <tr>
+    <td valign="top">
+     <% var i = recipeData.Recipe.Title[0].$.cuisine; %> <%= enumUtils.GetDescFromCuisineType(i) %>
+    </td>    
+    <td valign="top">
+     <% var i = recipeData.Recipe.Title[0].$.category; %> <%= enumUtils.GetDescFromCategoryType(i) %>
+    </td>
+    <td valign="top">
+     Calories: <%= recipeData.Recipe.Nutrition[0].$.calories %> 
+    </td>
+    <td valign="top">
+     <div style="width: 140px;">
+      <span style="display: inline-block; text-align: right; width: 70%;">
+       Fat:           
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 30%;">
+       <%= recipeData.Recipe.Nutrition[0].$.fat %> g 
+      </span> 
+     </div>
+     <div style="width: 140px;">
+      <span style="display: inline-block; text-align: right; width: 70%;">
+       Saturated Fat: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 30%;">
+       <%= recipeData.Recipe.Nutrition[0].$.saturatedFat %> g 
+      </span>
+     </div>
+     <div style="width: 140px;">
+      <span style="display: inline-block; text-align: right; width: 70%;">
+       Cholesterol:    
+      </span>
+      <span style="display: inline-block; text-align: left; width: 30%;">
+       <%= recipeData.Recipe.Nutrition[0].$.cholesterol %> g
+      </span>
+     </div>
+    </td>
+    <td valign="top">
+     <div style="width: 100px;">
+      <span style="display: inline-block; text-align: right; width: 55%;">    
+       Carbs: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 45%;">
+       <%= recipeData.Recipe.Nutrition[0].$.carbs %> g
+      </span>
+     </div>
+     <div style="width: 100px;">
+      <span style="display: inline-block; text-align: right; width: 55%;">       
+       Protein: 
+      </span>
+      <span style="display: inline-block; text-align: left; width: 45%;"> 
+       <%= recipeData.Recipe.Nutrition[0].$.protein %> g      
+      </span>
+     </div>
+     <div style="width: 100px;">
+      <span style="display: inline-block; text-align: right; width: 55%;">  
+       Fiber: 
+      </span>
+      <span style="display: inline-block; text-align: left; width: 45%;">        
+       <%= recipeData.Recipe.Nutrition[0].$.fiber %> g  
+      </span>
+     </div>       
+    </td>    
+    <td valign="top">
+     <div style="width: 110px;">
+      <span style="display: inline-block; text-align: right; width: 45%;">      
+       Sugar: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 55%;">     
+       <%= recipeData.Recipe.Nutrition[0].$.sugar %> g 
+      </span>
+     </div>
+     <div style="width: 110px;">
+      <span style="display: inline-block; text-align: right; width: 45%;">      
+       Sodium: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 55%;">        
+       <%= recipeData.Recipe.Nutrition[0].$.sodium %> mg 
+      </span>
+     </div>         
+    </td>    
+    <td id="yieldFld" valign="top">
+     <%= recipeData.Recipe.Title[0].Yield[0].$.amount %> <% var i = recipeData.Recipe.Title[0].Yield[0].$.units; %> <%= enumUtils.GetDescFromUnitType(i) %>
+    </td>
+    <td valign="top">
+     <div style="width: 170px;">
+      <span style="display: inline-block; text-align: right; width: 45%;"> 
+       Prep Time: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 55%;">        
+       <%= ("" == recipeData.Recipe.Title[0].Times[0].$.prep ? "" : commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.prep))); %>
+      </span>
+     </div>
+     <div style="width: 170px;">
+      <span style="display: inline-block; text-align: right; width: 45%;">      
+       Cook Time: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 55%;">     
+       <%= ("" == recipeData.Recipe.Title[0].Times[0].$.cook ? "" : commonUtils.FormatTime(parseInt(recipeData.Recipe.Title[0].Times[0].$.cook))); %>
+      </span>
+     </div>
+     <div style="width: 170px;">
+      <span style="display: inline-block; text-align: right; width: 45%;">   
+       Total Time: 
+      </span> 
+      <span style="display: inline-block; text-align: left; width: 55%;">       
+       <%= 
+        commonUtils.FormatTime(parseInt(("" == recipeData.Recipe.Title[0].Times[0].$.prep ? 0 : recipeData.Recipe.Title[0].Times[0].$.prep) + ("" == recipeData.Recipe.Title[0].Times[0].$.cook ? 0 : recipeData.Recipe.Title[0].Times[0].$.cook))); 
+       %>
+      </span>
+     </div>       
+    </td>
+   </tr>   
    </table>  
   </div> 
 

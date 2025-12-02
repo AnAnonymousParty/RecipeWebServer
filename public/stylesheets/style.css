@@ -243,7 +243,7 @@ div.scroll {
           margin: 10px;
      margin-left: auto;
     margin-right: auto;          
-           width: 90%;
+           width:auto;
 }
 
 .plain-table th {
@@ -280,7 +280,6 @@ div.scroll {
 .simple-table tr:nth-child(even) {
  background-color: #f2f2f2;
 }
-
 
 // Styles for popup windows:
 

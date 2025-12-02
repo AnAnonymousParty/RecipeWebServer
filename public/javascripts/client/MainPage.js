@@ -1891,7 +1891,7 @@ function SaveRecipe() {
   return;
  }
  
-  var xmlhttpReq = new XMLHttpRequest();
+ var xmlhttpReq = new XMLHttpRequest();
 
  for (;;) {
   if (null != document.getElementById("newRecipeForm")) {
@@ -1964,13 +1964,13 @@ function SaveRecipe() {
    xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
    
    xmlhttpReq.onload = function() {
-   HideElement("editPageBtns");
-   HideElement("recipeTitleContainer");
-   HideElement("viewPageBtns");
-   
-   UnHideElement("filtersContainer");
-   UnHideElement("indexPageBtns");    
+    HideElement("editPageBtns");
+    HideElement("recipeTitleContainer");
+    HideElement("viewPageBtns");
     
+    UnHideElement("filtersContainer");
+    UnHideElement("indexPageBtns");    
+     
     if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
      return;
     }
@@ -2327,7 +2327,7 @@ function SubmitFileForUpload(imageUse) {
  
  var xmlhttpReq = new XMLHttpRequest();
 
- xmlhttpReq.open('POST', '/uploadImage', true);
+ xmlhttpReq.open('POST', '/UploadImage', true);
 
 
  // Provide the callback function to handle the response from the server:
@@ -2444,7 +2444,7 @@ function SubmitRecipesForUpload() {
  
  var xmlhttpReq = new XMLHttpRequest();
 
- xmlhttpReq.open('POST', '/uploadRecipes', true);
+ xmlhttpReq.open('POST', '/UploadRecipes', true);
  
 
  // Provide the callback function to handle the response from the server:
