@@ -1249,6 +1249,10 @@ function HandleExportSelectedBtnClkd() {
 
 function HandleRequestRenameRecipeBtnClkd() {
  let newRecipeName = prompt("Enter new name for recipe and click OK to proceed.");
+ 
+ if (null == newRecipeName) {
+  return;
+ }
   
  var xmlhttp = new XMLHttpRequest();
     
