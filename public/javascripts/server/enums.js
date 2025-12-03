@@ -251,6 +251,33 @@ function GetEnumFromServingSizeDesc(desc) {
  return "UNDEFINED";
 }
 
+export
+const SystemOfUnitsTypes = Object.freeze({
+ IMPERIAL:       "Imperial",
+ METRIC:         "Metric"
+});
+
+export
+function GetDescFromSystemOfUnitsType(enumVal) {
+ for (var key in SystemOfUnitsTypes) {
+  if (key == enumVal) {
+   return SystemOfUnitsTypes[key];
+  } 
+ }
+ 
+  return "Undefined";
+}
+
+export
+function GetEnumFromSystemOfUnitsDesc(desc) {
+ for (var key in SystemOfUnitsTypes) {
+  if (desc == SystemOfUnitsTypes[key]) {
+   return key;
+  } 
+ }
+ 
+  return "UNDEFINED";
+}
 
 export
 const UnitTypes = Object.freeze({

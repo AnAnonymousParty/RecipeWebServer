@@ -6,6 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="/javascripts/client/common.js"></script>
   <script src="/javascripts/client/constants.js"></script>
+  <script src="/javascripts/client/conversions.js"></script>   
   <script src="/javascripts/client/enums.js"></script>
   <script src="/javascripts/client/MainPage.js"></script>
   <script src="/javascripts/client/validate.js"></script>
@@ -184,11 +185,11 @@
          var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
        %> 
        <tr>
-        <td style="max-width: 250px; min-width: 250px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %>  </td>
-        <td style="text-align: right; max-width: 70px;  min-width: 70px;  word-wrap: break-word;"><%=ingredients[ndx].Quantity[0]._ %></td>
-        <td style="max-width: 80px;  min-width: 80px;  word-wrap: break-word;"><%=units %></td>
-        <td style="max-width: 130px; min-width: 130px; word-wrap: break-word;"><%=prep %> </td>
-        <td style="max-width: 270px; min-width: 270px; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
+        <td style="max-width: 250px; min-width: 250px;                    word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Name[0]); %>  </td>
+        <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;"><%=ingredients[ndx].Quantity[0]._ %></td>
+        <td style="max-width: 80px;  min-width: 80px;                     word-wrap: break-word;"><%=units %></td>
+        <td style="max-width: 130px; min-width: 130px;                    word-wrap: break-word;"><%=prep %> </td>
+        <td style="max-width: 270px; min-width: 270px;                    word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Notes[0]); %></td>
        </tr> 
        <%}%>  
       </tbody>
@@ -325,9 +326,9 @@
   </div>
   
   
-  <!-- Conditionally displayed items for pop-ups, notifications, etc. -->
+  <%# Conditionally displayed items for pop-ups, notifications, etc. %>
   
-  <!-- Add Recipe Popup. -->
+  <%# Add Recipe Popup. %>
   <div class="popup" id="addRecipePopup" style="width: 30%;">
    <div class="heading">
     ADD RECIPE&nbsp;<img height="32px" onclick="HideAddRecipePopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
@@ -349,7 +350,7 @@
    </div>
   </div>  
   
-  <!-- Error Popup. -->
+  <%# Error Popup. %>
   <div class="popup" id="errorPopup" style="width: 25%;">
    <div class="heading">
     WARNING&nbsp;<img height="32px" id="epCloseImg" onclick="HideErrorPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
@@ -360,7 +361,7 @@
    </div>
   </div>
   
-  <!-- Recipe Exists Warning Popup. -->
+  <%# Recipe Exists Warning Popup. %>
   <div class="popup" id="recipeExistsWarningPopup" style="width: 35%;">
    <div class="heading">
     WARNING&nbsp;<img height="32px" onclick="HideRecipeExistsWarningPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
@@ -371,7 +372,7 @@
    </div>
   </div>
   
-  <!-- Overlay to 'dim' content behind popups. -->
+  <%# Overlay to 'dim' content behind popups. %>
   <div class="no-overlay" id="overlayContainer"></div>
  </body>
 </html>
