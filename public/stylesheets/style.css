@@ -141,12 +141,10 @@ div.scroll {
 }
 
 .recipeLine {
-        display: block;
-         margin: 0 auto;
-        padding: 0px 0px 5px 0px;
-       position: relative;
-     text-align: center;
- vertical-align: middle; 
+     margin: 0px 400px 0px 0px;
+    padding: 0px 0px 5px 0px;
+   position: relative;
+ text-align: center;
 }
 
 .recipeTitle {
@@ -157,11 +155,12 @@ div.scroll {
 }
 
 .recipeActions {
-        display: inline-block;
-         height: 50px;
-     text-align: left;
- vertical-align: middle;
-          width: 30%;
+         margin: 0;
+       position: absolute;
+            top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+          width: auto;
 }
 
 .request-div {

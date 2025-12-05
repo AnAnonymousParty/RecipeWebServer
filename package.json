@@ -18,13 +18,13 @@
     "http-errors": "~1.6.3",
     "jquery": "^3.7.1",
     "jsdom": "^26.1.0",
-    "morgan": "~1.9.1",
+    "morgan": "^1.10.1",
     "puppeteer": "^24.16.1",
     "serve-favicon": "^2.5.0",
     "unzipper": "^0.12.3",
     "xml2js": "^0.6.2",
     "xml2js-parser": "^1.1.1",
-    "xmlbuilder2": "^3.1.1",
+    "xmlbuilder2": "^4.0.3",
     "xmldom": "^0.6.0"
   }
 }
