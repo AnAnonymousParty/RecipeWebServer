@@ -65,7 +65,7 @@ const CuisineTypes = Object.freeze({
  MEXICAN:       "Mexican",
  POLYNESIAN:    "Polynesian",
  SOUTHAMERICAN: "South American",
- SPANISH:       "Spainsh"
+ SPANISH:       "Spanish"
 });
 
 export

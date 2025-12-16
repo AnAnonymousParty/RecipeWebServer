@@ -4,7 +4,7 @@
     <Yield amount="4" units="SERVING"/>
     <Times prep="60" cook="15"/>
   </Title>
-  <Nutrition calories="248" fat="13" carbs="0" protein="28" sugar="0" sodium="152" fiber="0" servings="4" servingsUnit="OZ"/>
+  <Nutrition calories="248" fat="13" saturatedFat="" cholesterol="" carbs="0" protein="28" sugar="0" sodium="152" fiber="0" servings="4" servingsUnit="OZ"/>
   <Description>Grilled marinated skirt steak.</Description>
   <Prerequisites/>
   <Ingredients>
@@ -80,10 +80,10 @@
     <Step type="STEP" image="Carne%20Asada_20250831_150522.jpg">Put the steak in a ziplock bag. Add remaining marinade. Refrigerate for an hour.</Step>
     <Step type="HEADING">Grill</Step>
     <Step type="STEP" image="">Preheat grill for high heat cooking.</Step>
-    <Step type="STEP" image="Carne%20Asada_20250831_150301.jpg">Remove meat from bag and allow to come yo room temperature while grill is preheating.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_150301.jpg">Remove meat from bag and allow to come to room temperature while grill is preheating.</Step>
     <Step type="STEP" image="Carne%20Asada_20250831_171708.jpg">Place meat on grill.</Step>
     <Step type="STEP" image="Carne%20Asada_20250831_171903.jpg">Cook for about 3-4 minutes,</Step>
-    <Step type="STEP" image="Carne%20Asada_20250831_171921.jpg">FLip and cook another 3 minutes.</Step>
+    <Step type="STEP" image="Carne%20Asada_20250831_171921.jpg">Flip and cook another 3 minutes.</Step>
     <Step type="STEP" image="">Remove from grill and rest for 8-10 minutes.</Step>
     <Step type="STEP" image="Carne%20Asada_20250831_173602.jpg">Slice thinly across the grain and serve with &lt;a href='/GetRecipe?recipeName=Chimichurri'&gt;chimichurri&lt;/a&gt;.</Step>
   </Method>

@@ -936,7 +936,7 @@
    <input id="puInvoker" type="hidden" value="">
    <div>
     <div class="fileUpload-div" id="fileUploadForm">
-     <input id="image2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
+     <input id="image2Upload" onchange="HandleImageSelectionChanged();" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
      <img height="48px" id="uploadImgBtn" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
     </div>
    </div>

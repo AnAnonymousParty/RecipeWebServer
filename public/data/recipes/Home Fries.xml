@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Home Fries_20251210_181342.jpg" name="Home Fries" category="SIDE" cuisine="AMERICAN">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="15" cook="5"/>
+  </Title>
+  <Nutrition calories="180" fat="12" saturatedFat="10" cholesterol="0" carbs="20" protein="2" sugar="1" sodium="275" fiber="1" servings="" servingsUnit="CUP"/>
+  <Description>Crisp on the outside, fluffy on the inside, never soggy.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Russet Potatoes</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Home%20Fries_20251210_151317.jpg">Cut potatoes length wise, then into 1/2 inch slices.</Step>
+    <Step type="STEP" image="Home%20Fries_20251210_152836.jpg">Add potatoes and salt to large pot. Add water to cover. Bring to a boil and cook until potatoes are almost fork tender.</Step>
+    <Step type="STEP" image="Home%20Fries_20251210_175017.jpg">Drain water from potatoes, toss with parsley and allow to cool in colander/strainer.</Step>
+    <Step type="STEP" image="">Heat oil in deep fryer to 375 F.</Step>
+    <Step type="STEP" image="">Add potatoes to oil and fry until golden brown.</Step>
+    <Step type="STEP" image="Home%20Fries_20251210_181342.jpg">Transfer potatoes to paper towel lined bowl and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

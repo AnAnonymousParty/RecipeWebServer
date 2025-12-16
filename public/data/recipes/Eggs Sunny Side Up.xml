@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Eggs Sunny Side Up_20251201_135053.jpg" name="Eggs Sunny Side Up" category="BREAKFAST" cuisine="AMERICAN">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="1" cook="2"/>
+  </Title>
+  <Nutrition calories="90" fat="7" saturatedFat="2" cholesterol="185" carbs=".4" protein="6" sugar=".2" sodium="95" fiber="0" servings="1" servingsUnit="ITEM"/>
+  <Description>Fried eggs, as simple as that.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="DASH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Eggs%20Sunny%20Side%20Up_20251201_134511.jpg">Heat butter in pan over medium heat.</Step>
+    <Step type="STEP" image="Eggs%20Sunny%20Side%20Up_20251201_135022.jpg">Add eggs, season.</Step>
+    <Step type="STEP" image="">Add a teaspoon of water to the pan, cover with a lid and cook until white are just set.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

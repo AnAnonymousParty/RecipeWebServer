@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sheet Pan Bacon_20251201_131643.jpg" name="Sheet Pan Bacon" category="BREAKFAST" cuisine="AMERICAN">
+    <Yield amount="1" units="POUND"/>
+    <Times prep="1" cook="30"/>
+  </Title>
+  <Nutrition calories="168" fat="13" saturatedFat="4" cholesterol="35" carbs=".6" protein="12" sugar="0" sodium="606" fiber="0" servings="3" servingsUnit="SLICE"/>
+  <Description>Almost as good as pan fried.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to 350 F.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Line a sheet pan with aluminum foil or parchment paper, paint with oil.</Step>
+    <Step type="STEP" image="Sheet%20Pan%20Bacon_20251201_131649.jpg">Lay strips of bacon in the pan.</Step>
+    <Step type="STEP" image="">Season with pepper and MSG.</Step>
+    <Step type="STEP" image="Sheet%20Pan%20Bacon_20251201_131643.jpg">Bake for ~30 minutes, until as crisp as desired.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

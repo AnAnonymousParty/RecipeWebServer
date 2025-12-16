@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Spanish Rice_20251206_163523.jpg" name="Spanish Rice" category="SIDE" cuisine="SPANISH">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="5" cook="20"/>
+  </Title>
+  <Nutrition calories="220" fat="8" saturatedFat="5" cholesterol="20" carbs="33" protein="4" sugar="4" sodium="800" fiber="2" servings=".75" servingsUnit="CUP"/>
+  <Description>Tomato-ey rice pilaf.</Description>
+  <Prerequisites>
+    <Prerequisite>Make &lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato Concassé&lt;/a&gt;.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Long grain white rice (basmati).</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Chicken%20Stock'&gt;Chicken Stock&lt;/a&gt;</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Tomato%20Concasse'&gt;Tomato Concassé&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or a can of Rotel.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomato Paste</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Spanish%20Rice_20251206_161612.jpg">Melt butter in sauce pan over high heat. Add rice and stir to coat rice with butter.</Step>
+    <Step type="STEP" image="Spanish%20Rice_20251206_162129.jpg">Continue stirring the rice until toasted and browned.</Step>
+    <Step type="STEP" image="Spanish%20Rice_20251206_162224.jpg">Add chicken stock.</Step>
+    <Step type="STEP" image="Spanish%20Rice_20251206_162400.jpg">Add remaining ingredients. Cover, bring to a boil then reduce to a simmer. Cook for about 20 minutes or until all liquid absorbed.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

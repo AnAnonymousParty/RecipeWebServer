@@ -4,71 +4,71 @@
     <Yield amount="1" units="CUP"/>
     <Times prep="1" cook="1"/>
   </Title>
-  <Nutrition calories="1" fat="0" carbs=".2" protein=".1" sugar="0" sodium="25" fiber=".1" servings="1" servingsUnit="TBSP"/>
+  <Nutrition calories="1" fat="0" saturatedFat="" cholesterol="" carbs=".2" protein=".1" sugar="0" sodium="25" fiber=".1" servings="1" servingsUnit="TBSP"/>
   <Description>Chile Pepper blend for chili, meats, beans, etc.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Ancho Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Puya Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Mulato Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried De Abol Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Chipotle Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried New Mexico Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried Poblano Pepper</Name>
       <Quantity units="EACH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cumin</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic Powder</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Onion Powder</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>MSG</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
@@ -76,8 +76,8 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Remove Stem and most seeds from dried peppers, cut or tear into strips.</Step>
-    <Step image="">Grind all ingredients together in a coffee/spice grinder.</Step>
+    <Step type="STEP" image="">Remove Stem and most seeds from dried peppers, cut or tear into strips.</Step>
+    <Step type="STEP" image="Chile%20Seasoning_20251206_142304.jpg">Grind all ingredients together in a coffee/spice grinder.</Step>
   </Method>
   <Variations/>
 </Recipe>

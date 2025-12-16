@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Pork Tenderloin with Roasted Cabbage_20251210_181435.jpg" name="Pork Tenderloin with Roasted Cabbage" category="ENTREE_PORK" cuisine="AMERICAN">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="15" cook="45"/>
+  </Title>
+  <Nutrition calories="400" fat="18" saturatedFat="9" cholesterol="140" carbs="17" protein="43" sugar="9" sodium="600" fiber="6" servings="16" servingsUnit="OZ"/>
+  <Description>Juicy pork tenderloin with buttry cabbage and carrots.</Description>
+  <Prerequisites>
+    <Prerequisite>Sheet pan, lined with foil.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Pork Tenderloin</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cabbage</Name>
+      <Quantity units="HEAD">.5</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Carrots</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>CLEANPEEL</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">6</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Maggi'&gt;Maggi Seasoning&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="HEADING">Marinade</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_153642.jpg">Coat tenderloin(s) with Maggi seasoning, roll in garlic and cover with ground black pepper. Marinate for 2 hours, turning occasionally.</Step>
+    <Step type="HEADING">Roast meat and vegetables</Step>
+    <Step type="STEP" image="">Preheat oven to 500 F.</Step>
+    <Step type="STEP" image="">Meanwhile, paint sheet pan with butter.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_152834.jpg">Slice cabbage into 1/2 inch slice and arrange along the sides of the sheet pan.
+Slice carrots lengthwise and add to pan. Drizzle cabbage with remaining butter and season with salt and pepper.</Step>
+    <Step type="STEP" image="">Melt bacon fat in heavy skillet over high heat.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_171551.jpg">Add tenderloins to skillet.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_171728.jpg">Sear meat on all sides.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_172234.jpg">Transfer meat to center of sheet pan and into the oven.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_174007.jpg">Roast meat to 145 F, about 15 minutes and transfer meet to warm plate to rest.</Step>
+    <Step type="HEADING">Finish roasting vegetables</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_180506.jpg">Reduce oven to 450 F, return sheet pan to oven and finish roasting vegetables, about 15 minutes.</Step>
+    <Step type="STEP" image="Pork%20Tenderloin%20with%20Roasted%20Cabbage_20251210_181002.jpg">Slice meat, serve with cabbage and &lt;a href='/GetRecipe?recipeName=Home%20Fries'&gt;Home Fries&lt;/a&gt;.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

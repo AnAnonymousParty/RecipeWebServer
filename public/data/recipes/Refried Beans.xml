@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Refried Beans_RFB.jpg" name="Refried Beans" category="SIDE" cuisine="MEXICAN">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="5" cook="10"/>
+  </Title>
+  <Nutrition calories="130" fat="6" saturatedFat="1" cholesterol="10" carbs="16" protein="5" sugar="0" sodium="320" fiber="5" servings="4" servingsUnit="OZ"/>
+  <Description>Mashed fried beans with no added sugar.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Canned Beans</Name>
+      <Quantity units="CAN">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>16oz, Pinto or Black Beans.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon fat</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Powdered garlic</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Chile%20Seasoning'&gt;Chile Seasoning&lt;/a&gt;</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Liquid Smoke</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Hard aged &lt;a href='https://en.wikipedia.org/wiki/Cotija_cheese'&gt;Cojita Cheese&lt;/a&gt;</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Koasher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chicken or Beef stock</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or so, as needed.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Melt bacon fat in skillet.</Step>
+    <Step type="STEP" image="">Add canned beans and mash with a potato masher.</Step>
+    <Step type="STEP" image="">Add powdered garlic, chile seasoning, and liquid smoke.</Step>
+    <Step type="STEP" image="">Heat until bubbly, adding stock as need to desired consistency.</Step>
+    <Step type="STEP" image="">Adjust seasoning with salt to taste.</Step>
+    <Step type="STEP" image="">Garnish with cheese and cilantro.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

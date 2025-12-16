@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Scrambled Eggs_20251201_134754.jpg" name="Scrambled Eggs" category="BREAKFAST" cuisine="AMERICAN">
+    <Yield amount="2" units="SERVING"/>
+    <Times prep="1" cook="5"/>
+  </Title>
+  <Nutrition calories="90" fat="7" saturatedFat="2" cholesterol="170" carbs="1" protein="6" sugar=".8" sodium="88" fiber="0" servings="1" servingsUnit="CUP"/>
+  <Description>Good old country style scrambled eggs.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>BEATEN</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="TBSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Heavy Cream</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="DASH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Heat butter in non-stick skillet over medium heat.</Step>
+    <Step type="STEP" image="Scrambled%20Eggs_20251201_131308.jpg">Beat eggs and cream together.</Step>
+    <Step type="STEP" image="Scrambled%20Eggs_20251201_131131.jpg">Combine with salt, pepper and MSG.</Step>
+    <Step type="STEP" image="Scrambled%20Eggs_20251201_134754.jpg">Add egg mixture to pan, cook, turning with a spatula under desired done as desired.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

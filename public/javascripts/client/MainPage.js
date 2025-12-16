@@ -1142,16 +1142,6 @@ function HandleDelAllVariationsBtnClkd() {
  }
 }
 
-function HandleImageSelectionChanged() {
- let imagePathFile = document.getElementById('image2Upload').files[0];
- 
- if ('undefined' === typeof imagePathFile) {
-  HideElement("uploadImgBtn");
- } else {
-  UnHideElement("uploadImgBtn", "inline");
- }
-}
-
 function HandleExportAllBtnClkd() {
  var xmlhttpReq = new XMLHttpRequest();
  
@@ -1245,6 +1235,16 @@ function HandleExportSelectedBtnClkd() {
  UnHideElement("ExportButtonsContainer");
 
  xmlhttpReq.send(json); 
+}
+
+function HandleImageSelectionChanged() {
+ let imagePathFile = document.getElementById('image2Upload').files[0];
+ 
+ if ('undefined' === typeof imagePathFile) {
+  HideElement("uploadImgBtn");
+ } else {
+  UnHideElement("uploadImgBtn", "inline");
+ }
 }
 
 function HandleRequestRenameRecipeBtnClkd() {
@@ -2252,7 +2252,7 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
  
  ToggleVisibility("fileUploadPopup");
  
- UnhideElement("FileUploadForm");
+ UnHideElement("FileUploadForm");
 }
 
 function ShowImportRecipesPopup(parentElement) {
