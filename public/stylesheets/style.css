@@ -280,6 +280,20 @@ div.scroll {
  background-color: #f2f2f2;
 }
 
+.tempC {
+        border: 1px solid #333;
+ border-radius: 5px;
+  padding-left: 2px;
+ padding-right: 2px;
+}
+
+.tempF {
+        border: 1px solid #333;
+ border-radius: 5px;
+  padding-left: 2px;
+ padding-right: 2px;
+}
+
 // Styles for popup windows:
 
 .no-overlay {

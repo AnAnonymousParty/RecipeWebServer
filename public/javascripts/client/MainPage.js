@@ -666,7 +666,7 @@ function DeleteRecipe(recipeName) {
   return;
  }
  
- var xmlhttp = new XMLHttpRequest();
+ let xmlhttp = new XMLHttpRequest();
     
  xmlhttp.onreadystatechange = function()
  {
@@ -694,14 +694,13 @@ function DeleteRecipe(recipeName) {
    }
   }
   else {
-   // TODO: Handle failure, if needed.
+   alert("Recipe could not be deleted.");
   }
  }
  
  var params = encodeURIComponent(recipeName);
  
  xmlhttp.open("GET", "/DeleteRecipe?recipe2Delete=" + params, true);
- 
  xmlhttp.send(); 
  
  if (null != document.getElementById("viewRecipeForm")) {
@@ -1885,13 +1884,10 @@ function SavePrerequisite() {
 }  
 
 function SaveRecipe() {
- var errs        = "";
- var description = document.getElementById("description").value;
- var valid       = true;
+ let description = document.getElementById("description").value;
+ let errs        = "";
  
  if (true == IsEmpty(description)) {
-  valid = false;
-  
   errs += "Description text must be provided.\n";
   
   document.getElementById("description").style.backgroundColor = errBg;
@@ -1899,7 +1895,7 @@ function SaveRecipe() {
   document.getElementById("description").style.backgroundColor = validBg;
  } 
   
- if (false == valid) {
+ if (false == IsEmpty(errs)) {
   errs = "The following problems were detected and must be corrected:\n\n" + errs;
   
   alert(errs);
@@ -1907,20 +1903,16 @@ function SaveRecipe() {
   return;
  }
  
- var xmlhttpReq = new XMLHttpRequest();
-
  for (;;) {
   if (null != document.getElementById("newRecipeForm")) {
-   var mainImageName = document.getElementById("mainImageName").value;
+   let mainImageName = document.getElementById("mainImageName").value;
    
    if ("" != mainImageName) {
     document.getElementById("mainImageName").value = document.getElementById("recipeName").value + "_" + mainImageName;
-   }
-   
-   var formData = new FormData(document.getElementById("newRecipeForm"));
-   var obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
-   var json     = JSON.stringify(obj);  
+   } 
 
+   let xmlhttpReq = new XMLHttpRequest();
+ 
    xmlhttpReq.open("POST", "/AddNewRecipe", true); 
    xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
    
@@ -1953,10 +1945,11 @@ function SaveRecipe() {
     } else {
      document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
     }
-    
-    document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
-    document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
    };   
+   
+   let formData = new FormData(document.getElementById("newRecipeForm"));
+   let obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
+   let json     = JSON.stringify(obj); 
 
    xmlhttpReq.send(json);  
 
@@ -1964,7 +1957,7 @@ function SaveRecipe() {
   }
   
   if (null != document.getElementById("editRecipeForm")) {
-   var mainImageName = document.getElementById("mainImageName").value;
+   let mainImageName = document.getElementById("mainImageName").value;
    
    if ("" != mainImageName && mainImageName != document.getElementById("recipeName").value + "_" + mainImageName) {
     if (false == document.getElementById("mainImageName").value.startsWith(document.getElementById("recipeName").value + "_")) {
@@ -1972,10 +1965,8 @@ function SaveRecipe() {
     }
    }   
    
-   var formData = new FormData(document.getElementById("editRecipeForm"));
-   var obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
-   var json     = JSON.stringify(obj);  
-
+   let xmlhttpReq = new XMLHttpRequest();
+   
    xmlhttpReq.open("POST", "/UpdateRecipe", true); 
    xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
    
@@ -2008,11 +1999,12 @@ function SaveRecipe() {
     } else {
      document.getElementById("recipesListContainer").innerHTML = "Recipe not saved";
     }
-    
-    document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
-    document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
    };   
-      
+   
+   let formData = new FormData(document.getElementById("editRecipeForm"));
+   let obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
+   let json     = JSON.stringify(obj);     
+   
    xmlhttpReq.send(json);  
 
    break;    
@@ -2522,6 +2514,39 @@ function SubmitRecipesForUpload() {
  HideElement("recipesImportForm");
 
  xmlhttpReq.send(formData);
+}
+
+function ToggleTemp(id) {
+ let tempElem    = document.getElementById(id);
+ let tempElemTxt = tempElem.innerText;
+ let tempTxt     = tempElemTxt.substring(0, tempElemTxt.length - 3);
+ let tempVal     = parseFloat(tempTxt);
+ 
+ if (NaN == tempVal) {
+  return;
+ }
+ 
+ for (;;) {
+  if ("tempC" == tempElem.getAttribute("class")) {
+   let newTemp = document.getElementById("O" + id).value;
+   
+   tempElem.innerText = Math.trunc(newTemp) + "° F";
+   tempElem.setAttribute("class", "tempF");
+   
+   break;
+  }
+  
+  if ("tempF" == tempElem.getAttribute("class")) {
+   let newTemp = FToC(tempVal);
+   
+   tempElem.innerText = Math.trunc(newTemp) + "° C";
+   tempElem.setAttribute("class", "tempC");
+   
+   break;
+  }
+  
+  break;
+ }
 }
 
 function ViewRecipe(recipeName) {

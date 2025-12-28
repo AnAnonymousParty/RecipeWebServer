@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Toffee_20251223_080222.jpg" name="Toffee" category="DESSERT" cuisine="AMERICAN">
+    <Yield amount="20" units="SERVING"/>
+    <Times prep="5" cook="30"/>
+  </Title>
+  <Nutrition calories="280" fat="18" saturatedFat="10" cholesterol="50" carbs="30" protein="2" sugar="28" sodium="20" fiber="0" servings="1" servingsUnit="OZ"/>
+  <Description>Crunchy, nutty, chocolatey toffee candy bites.</Description>
+  <Prerequisites>
+    <Prerequisite>Sheet pan lined with parchment paper or buttered aluminum foil.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='/GetRecipe?recipeName=Butter'&gt;Butter&lt;/a&gt;</Name>
+      <Quantity units="CUP">2.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Room temperature.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Light Corn Syrup</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Water</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pecans</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chocolate Chips</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Toast pecans, set aside.</Step>
+    <Step type="STEP" image="Toffee_20251222_152451.jpg">Add the butter to a large saucepan and heat over medium heat until the butter has melted.</Step>
+    <Step type="STEP" image="Toffee_20251222_153140.jpg">Stir in the sugar, corn syrup, and water.</Step>
+    <Step type="STEP" image="Toffee_20251222_155408.jpg">Stir and bring to a simmer. </Step>
+    <Step type="STEP" image="Toffee_20251222_162817.jpg">Let the mixture simmer on low to medium heat for 30=45 minutes, or until it reaches 295-300° F. A slower simmer is better to prevent the butter fat from separating. Avoid stirring the mixture.</Step>
+    <Step type="STEP" image="Toffee_20251222_162953.jpg">Pour the mixture into the prepared baking dish and spread out evenly. Let the mixture set for about 5 minutes.</Step>
+    <Step type="STEP" image="Toffee_20251222_164629.jpg">Sprinkle the chocolate chips on top in an even layer and let sit for a few minutess.</Step>
+    <Step type="STEP" image="Toffee_20251222_165356.jpg">Use an offset or rubber spatula to spread the melted chocolate chips out in an even and smooth layer.</Step>
+    <Step type="STEP" image="Toffee_20251222_172602.jpg">Sprinkle the toasted pecans or &lt;a href='https://en.wikipedia.org/wiki/Fleur_de_sel'&gt;Fleur de Sel&lt;/a&gt; on top, then let set for 1-2 hours or until completely cooled. </Step>
+    <Step type="STEP" image="Toffee_20251223_080222.jpg">Once completely cooled, break into pieces and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

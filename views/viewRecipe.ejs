@@ -2,6 +2,8 @@
  <input id="recipeName"    type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
  <input id="originalYield" type="hidden" value="<%- recipeData.Recipe.Title[0].Yield[0].$.amount %>">
  
+ <% stringUtils.TEMPCOUNT = 0; %>
+ 
  <div class="centered">
   <table class="plain-table">
    <tr>
@@ -177,7 +179,7 @@
      %> 
       <tr>
        <td style="max-width: 505px; min-width: 505px; word-wrap: break-word;">
-        <%- commonUtils.RenderNewlines(prerequisites[ndx]); %>
+        <%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(prerequisites[ndx])); %>
        </td>
       </tr> 
      <%}%>

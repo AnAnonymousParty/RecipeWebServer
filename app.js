@@ -24,6 +24,7 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
 var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
 var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
+var stringUtils = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
 
 // Route Handlers:
 
@@ -79,7 +80,7 @@ app.get('/DeleteAllRecipes', (req, res) => {
  
  var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 app.get('/DeleteFile', (req, res) => {
@@ -132,7 +133,6 @@ app.get("/ExportAllRecipes", function (req, res) {
 
 app.get('/DeleteRecipe', (req, res) => {
 var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
-
  // Delete the recipe .xml file:
  
  try {
@@ -142,10 +142,20 @@ var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
    fs.rmSync(__dirname + "/public/data/recipes/" + recipe2Delete + ".xml", { force: true, });
   } catch (err) {
    console.log(err);
+   
+   res.responseText = err;
+   res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+   
+   return;
   }   
  } catch (err) {
   
   console.log(err);
+  
+  res.responseText = err;
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+  
+  return;
 } 
  
  // Delete any image files associated with the recipe:
@@ -170,7 +180,7 @@ var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
  
 var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
-res.status(200).send(rv);
+res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 app.get('/GetRecipesList', (req, res) => {
@@ -183,7 +193,7 @@ app.get('/GetRecipesList', (req, res) => {
  
  var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), category, cuisine);
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 app.get('/GetRecipesToExportList', (req, res) => {
@@ -193,7 +203,7 @@ app.get('/GetRecipesToExportList', (req, res) => {
  
  var rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/recipes'));
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 app.get('/RenameRecipe', (req, res) => {
@@ -258,7 +268,7 @@ app.get('/SearchRecipes', (req, res) => {
     
  console.log("< /SearchRecipe");
  
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 /*------------------------------- POST handlers -----------------------------*/
@@ -307,7 +317,7 @@ app.post("/AddNewRecipe", function (req, res) {
  
  var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
  
  console.log("< AddNewRecipe(" + recipeName + ")"); 
 });
@@ -321,7 +331,7 @@ app.post("/ExportSelectedRecipes", function (req, res) {
  if (0 == Object.keys(formData).length) {
   console.log("< ExportSelectedRecipes() - No Data"); 
   
-  res.status(200).send("No files to export");
+  res.status(enums.HttpStatusTypes.OK).send("No files to export");
   
   return;
  }
@@ -411,7 +421,7 @@ app.post("/UpdateRecipe", function (req, res) {
  
  console.log("< UpdateRecipe()"); 
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 // Handle image uploaded.
@@ -464,7 +474,7 @@ app.post("/UploadRecipes", function (req, res) {
  
  console.log("< UploadRecipes()"); 
     
- res.status(200).send(rv);
+ res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 
@@ -489,7 +499,7 @@ app.use(function(err, req, res, next) {
   res.locals.error   = req.app.get('env') === 'development' ? err : {};
 
   // Render the error page:
-  res.status(err.status || 500);
+  res.status(err.status || enums.HttpStatusTypes.INTERNALSERVERERROR);
   res.render('error');
 });
 

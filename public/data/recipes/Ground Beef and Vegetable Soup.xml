@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Ground Beef and Vegetable Soup_20251221_131635.jpg" name="Ground Beef and Vegetable Soup" category="SOUP" cuisine="AMERICAN">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="20" cook="60"/>
+  </Title>
+  <Nutrition calories="325" fat="6" saturatedFat="3" cholesterol="70" carbs="38" protein="31" sugar="6" sodium="480" fiber="17" servings="1" servingsUnit="CUP"/>
+  <Description>Beef, cabbage, and root vegetable soup with diatlini pasta.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground Beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Butter</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cabbage</Name>
+      <Quantity units="HEAD">.3</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Carrots</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>PEELED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Celery</Name>
+      <Quantity units="STALK">3</Quantity>
+      <Prep>CLEANTRIM</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Beef Stock</Name>
+      <Quantity units="CUP">6</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='https://www.americastestkitchen.com/how_tos/13310-boost-savory-flavor-with-maggi-seasoning'&gt;Maggi Seasoning&lt;/a&gt;</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tomato Paste</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bay leaves</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Italian Seasoning</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Paprika</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>&lt;a href='https://en.wikipedia.org/wiki/Ditalini'&gt;Ditalini pasta&lt;/a&gt;</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Ground%20Beef%20and%20Vegetable%20Soup_20251221_125511.jpg">In a large stock pot, brown ground beef in butter. Meanwhile...</Step>
+    <Step type="STEP" image="Ground%20Beef%20and%20Vegetable%20Soup_20251221_130127.jpg">Chop cabbage, slice carrots and celery, onion and garlic.</Step>
+    <Step type="STEP" image="Ground%20Beef%20and%20Vegetable%20Soup_20251221_130935.jpg">Add cabbage and cook until softened, 5-10 minutes.</Step>
+    <Step type="STEP" image="Ground%20Beef%20and%20Vegetable%20Soup_20251221_131234.jpg">Add carrots, celery, onions and garlic.</Step>
+    <Step type="STEP" image="">Add beef stock.</Step>
+    <Step type="STEP" image="Ground%20Beef%20and%20Vegetable%20Soup_20251221_131635.jpg">Add tomato paste, Maggi seasoning, bay leaves, Italian seasoning, paprika, and pepper.</Step>
+    <Step type="STEP" image="">Bring to a boil, reduce to a simmer. Cook for 60 minutes.</Step>
+    <Step type="STEP" image="">Add ditalini, Cook until paste is al dente. Serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

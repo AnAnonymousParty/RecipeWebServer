@@ -1,9 +1,13 @@
+function CToF(cval) {
+ return ((cval * 1.8) + 32.0);
+}
+
 function CupsToMilliliters(cupsVal) {
  return OzsToMilliliters(cupsVal * 8.0);
 }
 
 function FToC(fval) {
- return (fval - 32.0) / 1.8;
+ return ((fval - 32.0) / 1.8);
 }
 
 function GalsToMilliliters(galsVal) {
