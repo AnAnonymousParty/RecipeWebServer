@@ -12,6 +12,8 @@
   <title><%=recipeData.Recipe.Title[0].$.name %></title>
  </head>
  
+ <% stringUtils.TEMPCOUNT = 0; %>
+ 
  <body>
   <div class="centered">
    <h2><%=recipeData.Recipe.Title[0].$.name %></h2>
@@ -191,7 +193,7 @@
       %> 
        <tr>
         <td style="max-width: 500px; min-width: 500px; word-wrap: break-word;">
-         <%- commonUtils.RenderNewlines(prerequisites[ndx]) %>
+         <%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(prerequisites[ndx])) %>
         </td>
        </tr> 
       <%}%>

@@ -7,8 +7,9 @@ var xmlBuilder   = require('xmlbuilder2');
 var xml2js       = require('xml2js');
 var xml2jsParser = require('xml2js-parser')
 
-var common = require('../public/javascripts/server/common.js');
-var enums  = require('../public/javascripts/server/enums.js');
+var common       = require('../public/javascripts/server/common.js');
+var enums        = require('../public/javascripts/server/enums.js');
+var stringUtils  = require('../public/javascripts/server/stringUtils.js');
 
 router.get('/', function(req, res, next) {  
  var recipeName  = req.query.recipeToPrint;
@@ -24,8 +25,9 @@ router.get('/', function(req, res, next) {
                              enumUtils:     enums,  
                              fractionUtils: fractional, 
                              recipeData:    recipeDataJson, 
-                             scaling,       scaling,
-                             showButtons:   showButtons });
+                             scaling:       scaling,
+                             showButtons:   showButtons,
+                             stringUtils:   stringUtils});
  
  console.log("< printRecipe()");
 });
