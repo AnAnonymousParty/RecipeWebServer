@@ -110,7 +110,7 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
   
  var category = recipeDataJson.Recipe.Title[0].$.category;
  var cuisine  = recipeDataJson.Recipe.Title[0].$.cuisine;
- var imageSrc = recipeDataJson.Recipe.Title[0].$.image;
+ var imageSrc = EscapeHtml(recipeDataJson.Recipe.Title[0].$.image);
  var imgStyle = ("" == imageSrc ? "display: none;   height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;" 
                                 : "display: inline; height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;");
  
@@ -141,19 +141,19 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
  if ("xml" == fext) {   
   ++listCnt; 
   
-  htmlRsp += ('<div class="recipeLine">'
+  htmlRsp += ('<div class="recipeLine">\n'
            +  ' <span style="display: inline-block; vertical-align: middle; height: 50px; text-align: right; width: 40%;">' 
            +     fileName  
-           +  ' </span>'
-           +  ' <span style="display: inline-block; vertical-align: middle; width: auto;">'            
-           +  '  <img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">'
-           +  ' </span> '
-           +  ' <span class="recipeActions">'
-           +  '  <img height="20px" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/ViewBtn_48X48.jpg"   style="margin: 0px 5px 0px 20px;" title="View Recipe" width="20px">'           
-           +  '  <img height="20px" onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' src="/images/Buttons/PrintBtn_48X48.png"  style="margin: 0px 5px 0px 0px;"  title="View Printable Version" width="20px">'           
-           +  '  <img height="20px" onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/EditBtn_48X48.jpg"   style="margin: 0px 5px 0px 0px;"  title="Edit Recipe" width="20px">'  
-           +  '  <img height="20px" onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' src="/images/Buttons/DeleteBtn_48X48.jpg" style="margin: 0px 5px 0px 0px;"  title="Delete Recipe" width="20px">'         
-           +  ' </span>'
+           +  ' </span>\n'
+           +  ' <span style="display: inline-block; vertical-align: middle; width: auto;">\n'            
+           +  '  <img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">\n'
+           +  ' </span>\n'
+           +  ' <span class="recipeActions">\n'
+           +  '  <img height="20px" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/ViewBtn_48X48.jpg"   style="margin: 0px 5px 0px 20px;" title="View Recipe" width="20px">\n'           
+           +  '  <img height="20px" onclick=\'RequestPrintableView("' + EscapeHtml(fileName) + '");\' src="/images/Buttons/PrintBtn_48X48.png"  style="margin: 0px 5px 0px 0px;"  title="View Printable Version" width="20px">\n'           
+           +  '  <img height="20px" onclick=\'EditRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/EditBtn_48X48.jpg"   style="margin: 0px 5px 0px 0px;"  title="Edit Recipe" width="20px">\n'  
+           +  '  <img height="20px" onclick=\'DeleteRecipe("'         + EscapeHtml(fileName) + '");\' src="/images/Buttons/DeleteBtn_48X48.jpg" style="margin: 0px 5px 0px 0px;"  title="Delete Recipe" width="20px">\n'         
+           +  ' </span>\n'
            +  '</div>\n');
   }
  }

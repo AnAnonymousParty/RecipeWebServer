@@ -23,7 +23,6 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 
 var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
 var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
-var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
 var stringUtils = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
 
 // Route Handlers:
@@ -430,7 +429,7 @@ app.post("/UploadImage", function (req, res) {
 
  var recipeName       = req.fields.recipeName; 
  var uploadedFileName = req.files.image.path;  
- var targetFileName   = path.join(__dirname, "/public/images/Staging/") + recipeName + '_' + req.files.image.name;
+ var targetFileName   = path.join(__dirname, "/public/images/Staging/") + common.UnEscapeHtml(recipeName) + '_' + req.files.image.name;
  
  fs.rename(uploadedFileName, targetFileName, function(err) {
   if (err) {

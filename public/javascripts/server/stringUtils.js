@@ -1,4 +1,3 @@
-
 /**
 * Class that associates markup string delimiters with their
 * corresponding IDs.
@@ -18,7 +17,7 @@ class MarkupIds {
      if (true == candidate.includes(MarkupIds.RECIPELINK))  { return true; }                 
      if (true == candidate.includes(MarkupIds.TEMPERATURE)) { return true; } 
      if (true == candidate.includes(MarkupIds.UNDERLINE))   { return true; }
-    
+  
      return false;
     }
 }
@@ -116,7 +115,6 @@ function ConvertMarkup(raw) {
 * @param delimiter String containing the delimiter sequence.
 *
 * @returns A DelimitedString object containing the result of the search.
-*
 */
 function FindDelimitedString(candidate, delimiter) {
  console.log("> FindDelimitedString(" + candidate + ", " + delimiter + ")");
@@ -175,7 +173,7 @@ function PerformBoldSubstitutions(raw) {
   let newStr = "<b>" 
              + delimitedString.GetUndelimitedString()
              + "</b>";
-             
+  
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);
@@ -216,7 +214,7 @@ function PerformItalicSubstitutions(raw) {
   let newStr = "<i>" 
              + delimitedString.GetUndelimitedString()
              + "</i>";
-             
+  
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);
@@ -269,7 +267,7 @@ function PerformLinkSubstitutions(raw) {
              + "\">"
              + linkTxt
              + "</a>";
-             
+ 
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);
@@ -310,7 +308,7 @@ function PerformRecipeLinkSubstitutions(raw) {
              + "\">"
              + delimitedString.GetUndelimitedString()
              + "</a>";
-             
+  
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);
@@ -356,7 +354,7 @@ function PerformTempSubstitutions(raw) {
              + "<span class=\"tempF\" id=\"temp_" + TEMPCOUNT + "\" onclick=\"ToggleTemp('temp_" + TEMPCOUNT + "');\" title=\"Click to toggle C/F\">" 
              + delimitedString.GetUndelimitedString() + "° F"
              + "</span>";
-             
+  
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);

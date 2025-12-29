@@ -1,3 +1,12 @@
+function EscapeHtml(text) {
+ var rv = String(text).replaceAll("&", "&amp;")
+                      .replaceAll("<", "&lt;")
+                      .replaceAll(">", "&gt;")
+                      .replaceAll('"', "&quot;")
+                      .replaceAll("'", "&#39;");
+ return rv;
+}
+
 function GenerateUID(length) {
  return window.btoa(String.fromCharCode(...window.crypto.getRandomValues(new Uint8Array(length * 2)))).replace(/[+/]/g, "").substring(0, length);
 }
@@ -51,6 +60,15 @@ function ToggleVisibility(id) {
  }
  
  UnHideElement(id);
+}
+
+function UnEscapeHtml(text) {
+ var rv = String(text).replaceAll("&amp;",  "&")
+                      .replaceAll("&lt;",   "<")
+                      .replaceAll("&gt;",   ">")
+                      .replaceAll("&quot;", '"')
+                      .replaceAll("&#39;",  "'");
+ return rv;
 }
 
 function UnHideElement(id, display) {

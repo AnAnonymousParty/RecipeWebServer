@@ -2273,7 +2273,7 @@ function ShowRecipesList(category, cuisine) {
   HideElement("viewPageBtns");
   
   UnHideElement("indexPageBtns"); 
-  UnHideElement("filtersContainer");
+  UnHideElement("filtersContainer", "inline-flex");
   
   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;
