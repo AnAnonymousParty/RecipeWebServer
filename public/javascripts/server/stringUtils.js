@@ -12,12 +12,18 @@ class MarkupIds {
     static UNDERLINE   = "__";
 
     static IsMarkup(candidate) {
-        return (candidate.includes(MarkupIds.BOLD)        |
-                candidate.includes(MarkupIds.ITALICS)     |
-                candidate.includes(MarkupIds.LINK)        |
-                candidate.includes(MarkupIds.RECIPELINK)  |                
-                candidate.includes(MarkupIds.TEMPERATURE) |
-                candidate.includes(MarkupIds.UNDERLINE));
+     console.log("> IsMarkup(" + candidate + ")");
+     
+     if (-1 != candidate.indexOf(MarkupIds.BOLD))        { console.log("> IsMarkup() [true] B"); return true; }
+     if (-1 != candidate.indexOf(MarkupIds.ITALICS))     { console.log("> IsMarkup() [true] I"); return true; }     
+     if (-1 != candidate.indexOf(MarkupIds.LINK))        { console.log("> IsMarkup() [true] L"); return true; }        
+     if (-1 != candidate.indexOf(MarkupIds.RECIPELINK))  { console.log("> IsMarkup() [true] R"); return true; }                 
+     if (-1 != candidate.indexOf(MarkupIds.TEMPERATURE)) { console.log("> IsMarkup() [true] T"); return true; } 
+     if (-1 != candidate.indexOf(MarkupIds.UNDERLINE))   { console.log("> IsMarkup() [true] U"); return true; }
+     
+     console.log("> IsMarkup() [false]");
+                     
+     return false;
     }
 }
 
@@ -395,7 +401,7 @@ function PerformUnderlineSubstitutions(raw) {
   let newStr = "<u>" 
              + delimitedString.GetUndelimitedString()
              + "</u>";
-             
+ 
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
   raw = raw.replace(oldStr, newStr);
