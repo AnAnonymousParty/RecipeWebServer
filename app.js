@@ -23,7 +23,7 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 
 var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
 var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
-var stringUtils = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
+var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
 
 // Route Handlers:
 
@@ -260,7 +260,7 @@ app.get('/SearchRecipes', (req, res) => {
  var filesList = [];
  
  filesList = searchUtils.SearchDirectory(fs, path, dirPath, searchTerm);
-
+ 
  // Return the list of recipes: 
  
  var rv = common.GenerateFilesListHtmlFromList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), filesList);

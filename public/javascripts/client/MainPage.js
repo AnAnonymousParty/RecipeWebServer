@@ -708,7 +708,7 @@ function DeleteRecipe(recipeName) {
    HideElement("recipeTitleContainer");  
    HideElement("viewPageBtns");
    
-   UnHideElement("filtersContainer");
+   UnHideElement("filtersContainer", "inline-flex");
    UnHideElement("indexPageBtns"); 
  }
 }
@@ -1160,7 +1160,7 @@ function HandleExportAllBtnClkd() {
   HideElement("viewPageBtns");
   
   UnHideElement("indexPageBtns"); 
-  UnHideElement("filtersContainer");
+  UnHideElement("filtersContainer", "inline-flex");
   
   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) { 
    return;
@@ -1312,7 +1312,7 @@ function HandleSearchBtnClkd() {
    HideElement("viewPageBtns");
    
    UnHideElement("indexPageBtns"); 
-   UnHideElement("filtersContainer");
+   UnHideElement("filtersContainer", "inline-flex");
   
   if (ReadyStateTypes.DONE == xmlhttpReq.readyState && HttpStatusTypes.OK === xmlhttpReq.status) {
    var data = xmlhttpReq.responseText;
@@ -1921,7 +1921,7 @@ function SaveRecipe() {
     HideElement("recipeTitleContainer");
     HideElement("viewPageBtns");
     
-    UnHideElement("filtersContainer");
+    UnHideElement("filtersContainer", "inline-flex");
     UnHideElement("indexPageBtns"); 
     
     if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
@@ -1975,7 +1975,7 @@ function SaveRecipe() {
     HideElement("recipeTitleContainer");
     HideElement("viewPageBtns");
     
-    UnHideElement("filtersContainer");
+    UnHideElement("filtersContainer", "inline-flex");
     UnHideElement("indexPageBtns");    
      
     if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
