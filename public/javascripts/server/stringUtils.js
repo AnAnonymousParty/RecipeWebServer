@@ -12,17 +12,13 @@ class MarkupIds {
     static UNDERLINE   = "__";
 
     static IsMarkup(candidate) {
-     console.log("> IsMarkup(" + candidate + ")");
-     
-     if (-1 != candidate.indexOf(MarkupIds.BOLD))        { console.log("> IsMarkup() [true] B"); return true; }
-     if (-1 != candidate.indexOf(MarkupIds.ITALICS))     { console.log("> IsMarkup() [true] I"); return true; }     
-     if (-1 != candidate.indexOf(MarkupIds.LINK))        { console.log("> IsMarkup() [true] L"); return true; }        
-     if (-1 != candidate.indexOf(MarkupIds.RECIPELINK))  { console.log("> IsMarkup() [true] R"); return true; }                 
-     if (-1 != candidate.indexOf(MarkupIds.TEMPERATURE)) { console.log("> IsMarkup() [true] T"); return true; } 
-     if (-1 != candidate.indexOf(MarkupIds.UNDERLINE))   { console.log("> IsMarkup() [true] U"); return true; }
-     
-     console.log("> IsMarkup() [false]");
-                     
+     if (true == candidate.includes(MarkupIds.BOLD))        { return true; }
+     if (true == candidate.includes(MarkupIds.ITALICS))     { return true; }     
+     if (true == candidate.includes(MarkupIds.LINK))        { return true; }        
+     if (true == candidate.includes(MarkupIds.RECIPELINK))  { return true; }                 
+     if (true == candidate.includes(MarkupIds.TEMPERATURE)) { return true; } 
+     if (true == candidate.includes(MarkupIds.UNDERLINE))   { return true; }
+    
      return false;
     }
 }
