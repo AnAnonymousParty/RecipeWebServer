@@ -65,7 +65,6 @@ function GenerateExportList(fs, path, directoryPath) {
 
 export
 function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuisineFilter) {
-
  var listCnt = 0;
  var htmlRsp = "";
  
@@ -111,8 +110,13 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
  var category = recipeDataJson.Recipe.Title[0].$.category;
  var cuisine  = recipeDataJson.Recipe.Title[0].$.cuisine;
  var imageSrc = EscapeHtml(recipeDataJson.Recipe.Title[0].$.image);
- var imgStyle = ("" == imageSrc ? "display: none;   height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;" 
-                                : "display: inline; height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;");
+ var imgStyle = "display: inline; height: 50px; margin: 0px 5px 0px 5px; visibility: visible; width: 50px;";
+ 
+ if (null == imageSrc || "" == imageSrc) {
+  imageSrc = "NoImage_290X330.png";
+ } else {
+  imageSrc = "Recipes/" + imageSrc;
+ }
  
  if ("ALL" != categoryFilter && "ALL" != category) {
   if (category != categoryFilter) {
@@ -146,7 +150,7 @@ function GenerateFilesList(fs, xml2jsParser, directoryPath, categoryFilter, cuis
            +     fileName  
            +  ' </span>\n'
            +  ' <span style="display: inline-block; vertical-align: middle; width: auto;">\n'            
-           +  '  <img onclick=\'ViewImage("/images/Recipes/' + imageSrc + '");\' src="/images/Recipes/' + imageSrc + '" style="' + imgStyle + '">\n'
+           +  '  <img onclick=\'ViewImage("/images/' + imageSrc + '");\' src="/images/' + imageSrc + '" style="' + imgStyle + '">\n'
            +  ' </span>\n'
            +  ' <span class="recipeActions">\n'
            +  '  <img height="20px" onclick=\'ViewRecipe("'           + EscapeHtml(fileName) + '");\' src="/images/Buttons/ViewBtn_48X48.jpg"   style="margin: 0px 5px 0px 20px;" title="View Recipe" width="20px">\n'           
