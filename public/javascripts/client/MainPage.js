@@ -1447,6 +1447,10 @@ function HideFileUploadPopup() {
  ToggleVisibility("fileUploadPopup");
 }
 
+function HideHelpPopup() { 
+ ToggleVisibility("helpPopup");
+}
+
 function HideImportRecipesPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
@@ -2245,6 +2249,29 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
  ToggleVisibility("fileUploadPopup");
  
  UnHideElement("FileUploadForm");
+}
+
+function ShowHelpPopup() {
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function()
+ {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (HttpStatusTypes.OK == xmlhttp.status) {
+   document.getElementById("helpContainer").innerHTML = xmlhttp.responseText;
+   
+   ToggleVisibility("helpPopup");
+  } else {
+   alert("Unable to access help: " + xmlhttp.responseText);
+  }
+ }
+    
+ xmlhttp.open("GET", "/GetHelpInfo", true);
+ 
+ xmlhttp.send();
 }
 
 function ShowImportRecipesPopup(parentElement) {

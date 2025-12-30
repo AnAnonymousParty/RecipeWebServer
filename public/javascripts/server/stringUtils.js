@@ -3,23 +3,23 @@
 * corresponding IDs.
 */
 class MarkupIds {
-    static BOLD        = "**";
-    static ITALICS     = "--";
-    static LINK        = "##";
-    static RECIPELINK  = "@@";
-    static TEMPERATURE = "%%";
-    static UNDERLINE   = "__";
+ static BOLD        = "**";
+ static ITALICS     = "--";
+ static LINK        = "##";
+ static RECIPELINK  = "@@";
+ static TEMPERATURE = "%%";
+ static UNDERLINE   = "__";
 
-    static IsMarkup(candidate) {
-     if (true == candidate.includes(MarkupIds.BOLD))        { return true; }
-     if (true == candidate.includes(MarkupIds.ITALICS))     { return true; }     
-     if (true == candidate.includes(MarkupIds.LINK))        { return true; }        
-     if (true == candidate.includes(MarkupIds.RECIPELINK))  { return true; }                 
-     if (true == candidate.includes(MarkupIds.TEMPERATURE)) { return true; } 
-     if (true == candidate.includes(MarkupIds.UNDERLINE))   { return true; }
-  
-     return false;
-    }
+ static IsMarkup(candidate) {
+  if (true == candidate.includes(MarkupIds.BOLD))        { return true; }
+  if (true == candidate.includes(MarkupIds.ITALICS))     { return true; }     
+  if (true == candidate.includes(MarkupIds.LINK))        { return true; }        
+  if (true == candidate.includes(MarkupIds.RECIPELINK))  { return true; }                 
+  if (true == candidate.includes(MarkupIds.TEMPERATURE)) { return true; } 
+  if (true == candidate.includes(MarkupIds.UNDERLINE))   { return true; }
+
+  return false;
+ }
 }
 
 let TEMPCOUNT = 0;  // Used to ensure all temperature fields have have unique IDs.

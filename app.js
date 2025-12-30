@@ -12,9 +12,9 @@ const fsExtra      = require('fs-extra');
 const logger       = require('morgan');
 const path         = require('path');
 const puppeteer    = require('puppeteer');
-const xmlBuilder   = require('xmlbuilder2');
 const xml2js       = require('xml2js');
 const xml2jsParser = require('xml2js-parser');
+const xmlBuilder   = require('xmlbuilder2');
 const zipUtils     = require('adm-zip');
 
 const { DOMParser, XMLSerializer } = require('xmldom');
@@ -180,6 +180,26 @@ var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
 var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
 res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+app.get('/GetHelpInfo', (req, res) => {
+ console.log("> GetHelpInfo()"); 
+ 
+ let helpHtml = "";
+ 
+  try {
+  helpHtml = fs.readFileSync(__dirname + "/public/html/help.html", {encoding: 'utf8', flag: 'r'}); 
+ } catch (err) {
+  console.log("< GetHelpInfo(): Error=" + err); 
+   
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+
+  return; 
+ } 
+ 
+ res.status(enums.HttpStatusTypes.OK).send(helpHtml);
+ 
+ console.log("< GetHelpInfo()"); 
 });
 
 app.get('/GetRecipesList', (req, res) => {

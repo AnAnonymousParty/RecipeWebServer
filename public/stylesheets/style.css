@@ -241,7 +241,7 @@ div.scroll {
           margin: 10px;
      margin-left: auto;
     margin-right: auto;          
-           width:auto;
+           width: auto;
 }
 
 .plain-table th {
@@ -277,6 +277,29 @@ div.scroll {
 
 .simple-table tr:nth-child(even) {
  background-color: #f2f2f2;
+}
+
+.table-noborder {
+ border-collapse: collapse;
+          margin: 10px;
+     margin-left: auto;
+    margin-right: auto;          
+           width: auto;
+}
+
+.table-noborder th {
+     border: none;
+  font-size: 12px;
+    padding: 8px;
+ text-align: center;
+}
+
+.table-noborder td {
+      border: none;
+   font-size: 12px;
+     padding: 8px;
+  text-align: center;
+ white-space: nowrap;
 }
 
 .tempC {
