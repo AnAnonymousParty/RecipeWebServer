@@ -587,13 +587,14 @@ async function ExportRecipes(recipesExportPathNameExt, req, res) {
  console.log("< ExportRecipesPDF()");  
 }
 
-async function GeneratePDFfromHTML(recipeName, scaling, outputFile) {
+async function GeneratePDFfromHTML(recipeName, scaling, units, outputFile) {
+ console.log("> GeneratePDFfromHTML(" + recipeName + ", " + scaling + ", " + units + ", " + outputFile + ")");
  // Use the puppeteer library to convert the printable version of the given
  // named recipe to a PDF document.
  
  var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
          + encodeURIComponent(recipeName)
-         + "&scaling=" + scaling + "&ShowButtons=N";
+         + "&scaling=" + scaling + "&units=" + units + "&ShowButtons=N";
  
  const browser = await puppeteer.launch();
  const page    = await browser.newPage();
@@ -601,17 +602,20 @@ async function GeneratePDFfromHTML(recipeName, scaling, outputFile) {
  await page.goto(url, { waitForOptions: "networkidle0" }); 
  await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
  await browser.close();
+ 
+ console.log("< GeneratePDFfromHTML()");
 }
 
 async function HandleSavePDF(req, res) {
   var recipeName = req.query.recipeName;
   var scaling    = req.query.scaling;
+  var units      = req.query.units;
   
-  console.log("> HandleSavePDF(" + recipeName + ", " + scaling + ")");
+  console.log("> HandleSavePDF(" + recipeName + ", " + scaling + ", " + units + ")");
   
   // Generate PDF file from recipe's 'print' view:
   
-  await GeneratePDFfromHTML(recipeName, scaling, recipeName + '.pdf');
+  await GeneratePDFfromHTML(recipeName, scaling, units, recipeName + '.pdf');
   
   // Send the PDF file to the client:
   

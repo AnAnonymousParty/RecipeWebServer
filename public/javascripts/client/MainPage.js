@@ -1831,7 +1831,7 @@ function SaveIngredientHeading() {
  HideEditIngredientHeadingPopup();
 } 
 
-function SavePDF(recipeName, scaling) {
+function SavePDF(recipeName, scaling, units) {
  var xmlhttp = new XMLHttpRequest();
  
  xmlhttp.responseType = "blob";
@@ -1854,7 +1854,7 @@ function SavePDF(recipeName, scaling) {
   }
  }
 
- xmlhttp.open("GET", "/SavePDF?recipeName=" + encodeURIComponent(recipeName) + "&scaling=" + scaling.toString(), true);
+ xmlhttp.open("GET", "/SavePDF?recipeName=" + encodeURIComponent(recipeName) + "&scaling=" + scaling.toString() + "&units=" + units, true);
  
  xmlhttp.send();  
 }
