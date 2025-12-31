@@ -272,7 +272,7 @@
       } else {
      %> 
       <tr>
-       <td colspan="5" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;"><%- commonUtils.RenderNewlines(ingredients[ndx].Heading[0]); %> </td>
+       <td colspan="5" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;"><%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(ingredients[ndx].Heading[0])); %> </td>
       </tr>        
       <%}%> 
     <%}%>  
