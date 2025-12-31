@@ -200,7 +200,7 @@
   </div>
   <br>
   <div class="centered">
-   Scaling: <select id="scaling" name="scaling" onchange="ScaleRecipe();">
+   Scaling: <select id="scaling" name="scaling" onchange="UpdateIngredients();">
     <%  
      Object.keys(enumUtils.ScalingTypes).forEach(function(key, index) { 
     %>
@@ -210,6 +210,17 @@
      }, enumUtils.ScalingTypes); 
     %>   
    </select>    
+   &nbsp;
+   Units: <select id="units" name="units" onchange="UpdateIngredients();">
+    <%  
+     Object.keys(enumUtils.SystemOfUnitsTypes).forEach(function(key, index) { 
+    %>
+     <% var s = (key == "NONE" ? "selected" : " "); %>
+     <option <%=s%> value="<%=key %>"><%=this[key]%></option>
+    <% 
+     }, enumUtils.SystemOfUnitsTypes); 
+    %>   
+   </select> 
   </div>
   <br>  
   <div class="centered">
@@ -249,7 +260,8 @@
        var units = enumUtils.GetDescFromUnitType(ingredients[ndx].Quantity[0].$.units);
      %>
       <tr>
-       <input type="hidden" id="i.<%-ndx%>" value="<%= ingredients[ndx].Quantity[0]._ %>">
+       <input type="hidden" id="i.<%-ndx%>"  value="<%= ingredients[ndx].Quantity[0]._ %>">
+       <input type="hidden" id="iu.<%-ndx%>" value="<%= units %>">
        <td style="max-width: 250px; min-width: 250px;                    word-wrap: break-word;"><%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(ingredients[ndx].Name[0])); %> </td>
        <td style="max-width: 70px;  min-width: 70px;  text-align: right; word-wrap: break-word;"><%= ingredients[ndx].Quantity[0]._ %> </td>
        <td style="max-width: 80px;  min-width: 80px;                     word-wrap: break-word;"><%= units %> </td>

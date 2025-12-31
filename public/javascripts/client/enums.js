@@ -344,8 +344,8 @@ function GetEnumFromServingSizeDesc(desc) {
 
 
 const SystemOfUnitsTypes = Object.freeze({
- IMPERIAL:       "Imperial",
- METRIC:         "Metric"
+ US:     "US",
+ METRIC: "Metric"
 });
 
 function GetDescFromSystemOfUnitsType(enumVal) {
@@ -368,6 +368,19 @@ function GetEnumFromSystemOfUnitsDesc(desc) {
   return "UNDEFINED";
 }
 
+function GetEnumFromSystemOfUnitsValue(value) {
+ switch (value) {
+  case 0: {
+   return SystemOfUnitsTypes.US;
+  }  
+  
+  case 1: {
+   return SystemOfUnitsTypes.METRIC;
+  }  
+ }
+ 
+ return SystemOfUnitsTypes.US;
+}
 
 const UnitTypes = Object.freeze({
  BAG:      "Bag",
@@ -383,13 +396,14 @@ const UnitTypes = Object.freeze({
  DASH:     "Dash",
  DROP:     "Drop",
  EACH:     "Each", 
+ FLOZ:     "fl ozs",
  GALLON:   "Gallons",
  GRAM:     "Grams",
  HEAD:     "Head", 
  JIGGER:   "Jigger",
  LITER:    "Liters",
  LOAF:     "Loaf",
- ML:       "mLs",
+ ML:       "mls",
  OZ:       "Ozs",
  PACKAGE:  "Pkgs",
  PECK:     "Peck",

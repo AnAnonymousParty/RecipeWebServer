@@ -43,7 +43,7 @@ function ShotsToMilliliters(shotsVal) {
 }
 
 function TbspsToMilliliters(tbspsVal) {
- return OzsToMilliliters(tspVal * 0.5);
+ return OzsToMilliliters(tbspsVal * 0.5);
 }
 
 function TspsToMilliliters(tspVal) {

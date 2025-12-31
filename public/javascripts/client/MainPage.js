@@ -1474,6 +1474,10 @@ function HideSettingsPopup() {
 }
 
 function InitPage() {
+ if (null == document.getElementById("filesListCnt")) {
+  return;
+ }
+ 
  var recipesCnt = document.getElementById("filesListCnt").value;
  
  if (0 == recipesCnt) {
@@ -2131,57 +2135,6 @@ function SaveVariation() {
  HideEditVariationPopup();
 }  
 
-function ScaleRecipe() {
- let scaleFactor = GetEnumFromScalingValue(document.getElementById("scaling").selectedIndex);
- 
- let multiplier = 1;
- 
- switch (scaleFactor) {
-  case ScalingTypes.HALVE: {
-   multiplier = 0.5;
-  }
-  break;  
-  
-  case ScalingTypes.NONE: {
-   multiplier = 1;
-  }
-  break;   
-  
-  case ScalingTypes.DOUBLE: {
-   multiplier = 2;
-  }
-  break;  
-  
-  case ScalingTypes.TRIPLE:  {
-   multiplier = 3;
-  }
-  break;
-  
-  case ScalingTypes.QUADRUPLE: {
-   multiplier = 4;
-  }
-  break;
- }
- 
- let origYieldVal = document.getElementById("originalYield").value;
- 
- let yieldFld = document.getElementById("yieldFld").innerText;
- 
- const parts = yieldFld.split(" ");
- 
- let yieldQuan = origYieldVal * multiplier;
- 
- document.getElementById("yieldFld").innerText = yieldQuan.toString() + " " + parts[1];
- 
- let iTable = document.getElementById("ingredientsTable");
- 
- for (var rowNdx = 1; rowNdx < iTable.rows.length; ++rowNdx) {
-  let oldVal = document.getElementById("i." + (rowNdx - 1).toString()).value;
-  
-  iTable.rows[rowNdx].cells[1].innerHTML = (oldVal * multiplier).toString(); 
- }
-}
-
 function ShowAddRecipePopup() {
  document.getElementById("recipeName2Add").value = "";
  
@@ -2549,7 +2502,7 @@ function ToggleTemp(id) {
  let tempTxt     = tempElemTxt.substring(0, tempElemTxt.length - 3);
  let tempVal     = parseFloat(tempTxt);
  
- if (NaN == tempVal) {
+ if (true == Number.isNaN(tempVal)) {
   return;
  }
  
@@ -2566,6 +2519,10 @@ function ToggleTemp(id) {
   if ("tempF" == tempElem.getAttribute("class")) {
    let newTemp = FToC(tempVal);
    
+   if (true == Number.isNaN(newTemp)) {
+    break;
+   }
+   
    tempElem.innerText = Math.trunc(newTemp) + "° C";
    tempElem.setAttribute("class", "tempC");
    
@@ -2573,6 +2530,167 @@ function ToggleTemp(id) {
   }
   
   break;
+ }
+}
+
+function UpdateIngredients() {
+ let scaleFactor   = GetEnumFromScalingValue(document.getElementById("scaling").selectedIndex);
+ let selectedUnits = GetEnumFromSystemOfUnitsValue(document.getElementById("units").selectedIndex);
+ 
+ let multiplier = 1;
+ 
+ switch (scaleFactor) {
+  case ScalingTypes.HALVE: {
+   multiplier = 0.5;
+  }
+  break;  
+  
+  case ScalingTypes.NONE: {
+   multiplier = 1;
+  }
+  break;   
+  
+  case ScalingTypes.DOUBLE: {
+   multiplier = 2;
+  }
+  break;  
+  
+  case ScalingTypes.TRIPLE:  {
+   multiplier = 3;
+  }
+  break;
+  
+  case ScalingTypes.QUADRUPLE: {
+   multiplier = 4;
+  }
+  break;
+ }
+ 
+ let origYieldVal = document.getElementById("originalYield").value;
+ 
+ let yieldFld = document.getElementById("yieldFld").innerText;
+ 
+ const parts = yieldFld.split(" ");
+ 
+ let yieldQuan = origYieldVal * multiplier;
+ 
+ document.getElementById("yieldFld").innerText = yieldQuan.toString() + " " + parts[1];
+ 
+ let tempElems = document.getElementsByName("tempFld");
+ 
+ for (var tempElemNdx = 0; tempElemNdx < tempElems.length; ++tempElemNdx) {
+  let tempElem = tempElems[tempElemNdx];
+  
+  let tempElemTxt = tempElem.innerText;
+  let tempTxt     = tempElemTxt.substring(0, tempElemTxt.length - 3);
+  let tempVal     = parseFloat(tempTxt);
+ 
+  if (true == Number.isNaN(tempVal)) {
+   continue;
+  }
+  
+  if ("Metric" == selectedUnits) {
+   let newTemp = FToC(tempVal);
+   
+   tempElem.innerText = Math.trunc(newTemp) + "° C";
+   tempElem.setAttribute("class", "tempC");
+  } else {
+   let newTemp = document.getElementById("O" + tempElem.id).value;
+   
+   tempElem.innerText = Math.trunc(newTemp) + "° F";
+   tempElem.setAttribute("class", "tempF");   
+  }
+ }
+ 
+ let iTable = document.getElementById("ingredientsTable");
+ 
+ for (var rowNdx = 1; rowNdx < iTable.rows.length; ++rowNdx) {
+  let origVal   = document.getElementById("i." + (rowNdx - 1).toString()).value;
+  let origUnits = document.getElementById("iu." + (rowNdx - 1).toString()).value;
+  
+  let dispVal = origVal * multiplier;
+  
+  let eut = GetEnumFromUnitDesc(origUnits);
+  
+  switch (eut) {
+   case "BAG":    
+   case "BATCH":  
+   case "BOTTLE": 
+   case "BOX":    
+   case "BULB":   
+   case "BUNCH":  
+   case "BUSHEL": 
+   case "CAN":    
+   case "CLOVE": 
+   case "DASH":   
+   case "DROP":   
+   case "EACH":
+   case "HEAD":  
+   case "LOAF": 
+   case "PACKAGE": 
+   case "PECK":   
+   case "PIECE":  
+   case "PINCH":   
+   case "SERVING":
+   case "SHEET":  
+   case "SLAB":   
+   case "SLICE":  
+   case "SPRIG":  
+   case "STALK":  
+   case "STICK": {
+    iTable.rows[rowNdx].cells[1].innerText = dispVal;
+   }
+   break; 
+   
+   case "CUP": 
+   case "FLOZ":
+   case "GALLON": 
+   case "JIGGER":
+   case "PINT":
+   case "POUND":
+   case "QUART":
+   case "SHOT":
+   case "TBSP":
+   case "TSP":  {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(CupsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;   
+   
+   case "GRAM":
+   case "LITER": 
+   case "ML": {
+    iTable.rows[rowNdx].cells[1].innerText = document.getElementById("i."  + (rowNdx - 1)).value;
+    iTable.rows[rowNdx].cells[2].innerText = document.getElementById("iu." + (rowNdx - 1)).value;
+   } 
+   break;     
+    
+   case "OZ": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(OzsToGrams(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;     
+    }
+   }
+   break;          
+   
+   default: {
+    iTable.rows[rowNdx].cells[1].innerText = dispVal;
+    iTable.rows[rowNdx].cells[2].innerText = origUnits;    
+   }
+   break;
+  }   
  }
 }
 

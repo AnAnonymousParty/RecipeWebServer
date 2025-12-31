@@ -170,9 +170,7 @@ function PerformBoldSubstitutions(raw) {
    break;
   }
   
-  let newStr = "<b>" 
-             + delimitedString.GetUndelimitedString()
-             + "</b>";
+  let newStr = "<b>" + delimitedString.GetUndelimitedString() + "</b>";
   
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
@@ -211,9 +209,7 @@ function PerformItalicSubstitutions(raw) {
    break;
   }
   
-  let newStr = "<i>" 
-             + delimitedString.GetUndelimitedString()
-             + "</i>";
+  let newStr = "<i>" + delimitedString.GetUndelimitedString() + "</i>";
   
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
@@ -350,9 +346,9 @@ function PerformTempSubstitutions(raw) {
   // restore the original value instead of reconverting it back and then
   // having a cascade of rounding issues.
   
-  let newStr = "<input id=\"Otemp_" + TEMPCOUNT + "\" type=\"hidden\" value=\"" + delimitedString.GetUndelimitedString() + "\"> "  
-             + "<span class=\"tempF\" id=\"temp_" + TEMPCOUNT + "\" onclick=\"ToggleTemp('temp_" + TEMPCOUNT + "');\" title=\"Click to toggle C/F\">" 
-             + delimitedString.GetUndelimitedString() + "° F"
+  let newStr = "<input id=\"Otemp_" + TEMPCOUNT + "\" name=\"temp\" type=\"hidden\" value=\"" + delimitedString.GetUndelimitedString() + "\"> "  
+             + "<span class=\"tempF\" id=\"temp_" + TEMPCOUNT + "\" name=\"tempFld\" onclick=\"ToggleTemp('temp_" + TEMPCOUNT + "');\" title=\"Click to toggle C/F\">" 
+             +  delimitedString.GetUndelimitedString() + "° F"
              + "</span>";
   
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
@@ -392,9 +388,7 @@ function PerformUnderlineSubstitutions(raw) {
    break;
   }
   
-  let newStr = "<u>" 
-             + delimitedString.GetUndelimitedString()
-             + "</u>";
+  let newStr = "<u>" + delimitedString.GetUndelimitedString() + "</u>";
  
   let oldStr = raw.substring(startNdx, startNdx + delimitedStringLength);
 
