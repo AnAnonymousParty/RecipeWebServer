@@ -2664,11 +2664,56 @@ function UpdateIngredients() {
    }
    break;   
    
-   case "GRAM":
-   case "LITER": 
+   case "GRAM": {
+    if ("Metric" == selectedUnits) {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    } else {
+     let ozs = Math.trunc(GramsToOzs(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = ozs;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("OZ");     
+    }    
+   }
+   break;
+   
+   case "LITER": {
+    if ("Metric" == selectedUnits) {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    } else {
+     let ozs = MillilitersToOzs(dispVal * 1000);
+     
+     if (ozs >= 1) {
+      iTable.rows[rowNdx].cells[1].innerText = ozs.toFixed(2);
+      iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("FLOZ");  
+     } else {
+      let tsps = MillilitersToTsps(dispVal);
+      
+      iTable.rows[rowNdx].cells[1].innerText = tsps;
+      iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("TSP");       
+     }      
+    }
+   } 
+   break;  
+   
    case "ML": {
-    iTable.rows[rowNdx].cells[1].innerText = document.getElementById("i."  + (rowNdx - 1)).value;
-    iTable.rows[rowNdx].cells[2].innerText = document.getElementById("iu." + (rowNdx - 1)).value;
+    if ("Metric" == selectedUnits) {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    } else {
+     let ozs = MillilitersToOzs(dispVal);
+     
+     if (ozs >= 1) {
+      iTable.rows[rowNdx].cells[1].innerText = ozs.toFixed(2);
+      iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("FLOZ");  
+     } else {
+      let tsps = MillilitersToTsps(dispVal);
+      
+      iTable.rows[rowNdx].cells[1].innerText = tsps;
+      iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("TSP");       
+     }      
+    }
    } 
    break;     
     

@@ -14,8 +14,20 @@ function GalsToMilliliters(galsVal) {
  return OzsToMilliliters(cupsVal * 128.0);
 }
 
+function GramsToOzs(gramVal) {
+ return(gramVal / 28.34952);
+}
+
 function JiggersToMilliliters(jigsVal) {
   return OzsToMilliliters(jigdVal * 1.5);
+}
+
+function MillilitersToOzs(mlVal) {
+ return(mlVal / 29.57353);
+}
+
+function MillilitersToTsps(mlVal) {
+ return mlVal / 5.0;
 }
 
 function OzsToGrams(ozVal) {
