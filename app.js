@@ -656,17 +656,18 @@ function ParsePostDataToXml(postData) {
  // then using the sblBuilder library to convert the JSON to XML and return
  // it.
  
-console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
+ console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
  var doc = xmlBuilder.create({ version: '1.0' });
  
  var root  = doc.ele('Recipe');
  var title = root.ele('Title');
  
- title.att('image',    postData.mainImageName);
- title.att('name',     postData.recipeName);
- title.att('category', postData.category);
- title.att('cuisine',  postData.cuisine);
+ title.att('image',       postData.mainImageName);
+ title.att('name',        postData.recipeName);
+ title.att('category',    postData.category);
+ title.att('cuisine',     postData.cuisine);
+ title.att('nativeUnits', "US");
  
  var yieldElem = title.ele('Yield');
  
