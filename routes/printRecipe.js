@@ -8,25 +8,30 @@ var xml2js       = require('xml2js');
 var xml2jsParser = require('xml2js-parser')
 
 var common       = require('../public/javascripts/server/common.js');
+var conversions  = require('../public/javascripts/server/conversions.js');
 var enums        = require('../public/javascripts/server/enums.js');
 var stringUtils  = require('../public/javascripts/server/stringUtils.js');
 
 router.get('/', function(req, res, next) {  
- var recipeName  = req.query.recipeToPrint;
- var scaling     = req.query.scaling;
- var showButtons = req.query.ShowButtons;
+ var recipeName    = req.query.recipeToPrint;
+ var scaling       = req.query.scaling;
+ var selectedUnits = req.query.units;
+ var showButtons   = req.query.ShowButtons;
+
  
- console.log("> printRecipe(" + recipeName + ", " + scaling + ", " + showButtons + ")");
+ console.log("> printRecipe(" + recipeName + ", " + scaling + ", " + showButtons + ", " + selectedUnits + ")");
  
  var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
  res.render('printRecipe', { commonUtils:   common, 
+                             conversions:   conversions,
                              enumUtils:     enums,  
                              fractionUtils: fractional, 
                              recipeData:    recipeDataJson, 
                              scaling:       scaling,
                              showButtons:   showButtons,
+                             selectedUnits: selectedUnits,
                              stringUtils:   stringUtils});
  
  console.log("< printRecipe()");

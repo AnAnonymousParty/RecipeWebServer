@@ -11,7 +11,7 @@ function FToC(fval) {
 }
 
 function GalsToMilliliters(galsVal) {
- return OzsToMilliliters(cupsVal * 128.0);
+ return OzsToMilliliters(galsVal * 128.0);
 }
 
 function GramsToOzs(gramVal) {
@@ -19,7 +19,7 @@ function GramsToOzs(gramVal) {
 }
 
 function JiggersToMilliliters(jigsVal) {
-  return OzsToMilliliters(jigdVal * 1.5);
+  return OzsToMilliliters(jigsVal * 1.5);
 }
 
 function MillilitersToOzs(mlVal) {
@@ -39,7 +39,7 @@ function OzsToMilliliters(ozVal) {
 }
 
 function PintsToMilliliters(pintsVal) {
- return OzsToMilliliters(cupsVal * 16.0); 
+ return OzsToMilliliters(pintsVal * 16.0); 
 }
 
 function PoundsToGrams(lbsVal) {
@@ -47,7 +47,7 @@ function PoundsToGrams(lbsVal) {
 }
 
 function QuartzToMilliliters(qtsVal) {
- return OzsToMilliliters(cupsVal * 32.0);
+ return OzsToMilliliters(qtsVal * 32.0);
 }
 
 function ShotsToMilliliters(shotsVal) {

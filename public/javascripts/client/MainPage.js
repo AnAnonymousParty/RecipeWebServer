@@ -1703,7 +1703,7 @@ function RequestPrintableView(recipeName) {
    }
  } 
  
- loc += (scaling.toString());
+ loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
     
  window.open(loc); 
 }
@@ -2642,18 +2642,127 @@ function UpdateIngredients() {
    }
    break; 
    
-   case "CUP": 
-   case "FLOZ":
-   case "GALLON": 
-   case "JIGGER":
-   case "PINT":
-   case "POUND":
-   case "QUART":
-   case "SHOT":
-   case "TBSP":
-   case "TSP":  {
+   case "CUP": {
     if ("Metric" == selectedUnits) {
      let mls = Math.trunc(CupsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "FLOZ":  {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(OzsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "GALLON": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(GalsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "JIGGER": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(JiggerssToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "PINT": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(PintsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "POUND": {
+    if ("Metric" == selectedUnits) {
+     let gms = Math.trunc(PoundsToGrams(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = gms;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("GRAM");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "QUART":{
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(QuartsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "SHOT": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(ShotsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   case "TBSP": {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(TbspsToMilliliters(dispVal));
+     
+     iTable.rows[rowNdx].cells[1].innerText = mls;
+     iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
+    } else {
+     iTable.rows[rowNdx].cells[1].innerText = dispVal;
+     iTable.rows[rowNdx].cells[2].innerText = origUnits;
+    }
+   }
+   break;
+   
+   
+   case "TSP":  {
+    if ("Metric" == selectedUnits) {
+     let mls = Math.trunc(TspsToMilliliters(dispVal));
      
      iTable.rows[rowNdx].cells[1].innerText = mls;
      iTable.rows[rowNdx].cells[2].innerText = GetDescFromUnitType("ML");
