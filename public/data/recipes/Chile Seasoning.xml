@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Chile Seasoning_ChilePowder.jpg" name="Chile Seasoning" category="ELEMENT" cuisine="MEXICAN">
+  <Title image="Chile Seasoning_ChilePowder.jpg" name="Chile Seasoning" category="ELEMENT" cuisine="MEXICAN" nativeUnits="US">
     <Yield amount="1" units="CUP"/>
     <Times prep="1" cook="1"/>
   </Title>
@@ -51,6 +51,12 @@
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
+      <Name>Paprika</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cumin</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
@@ -76,7 +82,7 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step type="STEP" image="">Remove Stem and most seeds from dried peppers, cut or tear into strips.</Step>
+    <Step type="STEP" image="Chile%20Seasoning_20260224_150846.jpg">Remove Stem and most seeds from dried peppers, cut or tear into strips.</Step>
     <Step type="STEP" image="Chile%20Seasoning_20251206_142304.jpg">Grind all ingredients together in a coffee/spice grinder.</Step>
   </Method>
   <Variations/>

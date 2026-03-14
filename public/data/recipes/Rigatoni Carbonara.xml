@@ -1,65 +1,65 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Rigatoni Carbonara_RigatoniCarbonara.jpg" name="Rigatoni Carbonara" category="PASTA" cuisine="ITALIAN">
+  <Title image="Rigatoni Carbonara_20260103_171716.jpg" name="Rigatoni Carbonara" category="PASTA" cuisine="ITALIAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="10" cook="10"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="CUP"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="CUP"/>
   <Description>Pasta with bacon and eggs in a creamy cheesy sauce.</Description>
   <Prerequisites>
     <Prerequisite>Set a large pot of water to boil.</Prerequisite>
     <Prerequisite>Cook bacon until mostly crispy.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Guancilae, Pancetta or Bacon</Name>
       <Quantity units="POUND">.5</Quantity>
       <Prep>CHOPCOARSE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Rigatoni</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Heavy Cream</Name>
       <Quantity units="CUP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Eggs</Name>
       <Quantity units="EACH">4</Quantity>
       <Prep>BEATEN</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Parmesan''&gt;Parmesan Cheese&lt;/a&gt;</Name>
       <Quantity units="CUP">1</Quantity>
       <Prep>GRATE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Parsley tops</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
       <Quantity units="CLOVE">2</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes>To taste</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher/Sea Salt</Name>
       <Quantity units="TSP">4</Quantity>
       <Prep>NONE</Prep>
@@ -67,11 +67,11 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">In a bowl, combine eggs, cream, 3/4 of the cheese, 3 tbsp of parsley and the pepper.</Step>
-    <Step image="">Add salt and garlic to the boiling water, then the pasta.</Step>
-    <Step image="">Cook pasta until al dente and drain.</Step>
-    <Step image="">Add the Egg/cream/cheese mixture to the pasta and stir to combine.</Step>
-    <Step image="">Serve with the remaining cheese and parsley as garnish.</Step>
+    <Step type="STEP" image="Rigatoni%20Carbonara_20260103_161247.jpg">In a bowl, combine eggs, cream, 3/4 of the cheese, 3 tbsp of parsley and the pepper.</Step>
+    <Step type="STEP" image="">Add salt and garlic to the boiling water, then the pasta.</Step>
+    <Step type="STEP" image="">Cook pasta until al dente and drain.</Step>
+    <Step type="STEP" image="Rigatoni%20Carbonara_20260103_171313.jpg">Add the bacon and egg/cream/cheese mixture to the pasta and stir to combine.</Step>
+    <Step type="STEP" image="Rigatoni%20Carbonara_20260103_171536.jpg">Serve with the remaining cheese and parsley as garnish.</Step>
   </Method>
   <Variations/>
 </Recipe>

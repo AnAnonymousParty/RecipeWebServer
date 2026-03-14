@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="" name="Yeasty Biscuits" category="BAKEDGOOD" cuisine="AMERICAN">
+  <Title image="Yeasty Biscuits_20260129_161846.jpg" name="Yeasty Biscuits" category="BAKEDGOOD" cuisine="AMERICAN" nativeUnits="US">
     <Yield amount="12" units="EACH"/>
     <Times prep="125" cook="20"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="ITEM"/>
   <Description>Biscuits, but yeast risen, slightly kneaded.</Description>
-  <Prerequisites/>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to %%425%%.</Prerequisite>
+    <Prerequisite>Butter an 8 inch baking dish.</Prerequisite>
+  </Prerequisites>
   <Ingredients>
     <Ingredient type="INGREDIENT">
       <Name>Water, warm.</Name>
@@ -70,17 +73,16 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step type="STEP" image="">Stir the yeast and 1 teaspoon sugar in the warm water and let stand for five minutes.</Step>
-    <Step type="STEP" image="">In a large bowl, combine all dry ingredients, including remaining sugar. </Step>
-    <Step type="STEP" image="">Cut in the butter and shortening with two forks or a pastry blender until texture resembles coarse crumbs.</Step>
-    <Step type="STEP" image="">Add yeast mixture and buttermilk to flour mixture, stirring until dry ingredients are moistened. 
+    <Step type="STEP" image="Yeasty%20Biscuits_20260129_153029.jpg">Stir the yeast and 1 teaspoon sugar in the warm water and let stand for five minutes.</Step>
+    <Step type="STEP" image="Yeasty%20Biscuits_20260129_153023.jpg">In a large bowl, combine all dry ingredients, including remaining sugar. </Step>
+    <Step type="STEP" image="Yeasty%20Biscuits_20260129_153854.jpg">Cut in the butter and shortening with two forks or a pastry blender until texture resembles coarse crumbs.</Step>
+    <Step type="STEP" image="Yeasty%20Biscuits_20260129_154439.jpg">Add yeast mixture and buttermilk to flour mixture, stirring until dry ingredients are moistened. 
 
 Cover with plastic wrap and chill at least two hours.</Step>
-    <Step type="STEP" image="">Preheat oven to 400 degrees.</Step>
     <Step type="STEP" image="">Turn dough out onto a lightly floured surface and knead three to four times.</Step>
     <Step type="STEP" image="">Gently roll into a 1/2-inch-thick circle and then fold in half. Repeat rolling to 1/2-inch-thickness and cut with 2-inch round cutter.Place rounds with sides touching in a 10- to 12-inch cast-iron skillet.</Step>
     <Step type="STEP" image="">Brush biscuits with two tablespoons melted butter.</Step>
-    <Step type="STEP" image="">  Bake in preheated oven until golden, 15 to 20 minutes. Brush baked biscuits with remaining melted butter.</Step>
+    <Step type="STEP" image="Yeasty%20Biscuits_20260129_161846.jpg">  Bake in preheated oven until golden, 15 to 20 minutes. Brush baked biscuits with remaining melted butter.</Step>
   </Method>
   <Variations/>
 </Recipe>

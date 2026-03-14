@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Black-eyed Peas with Bacon_20260101_155417.jpg" name="Black-eyed Peas with Bacon" category="ALL" cuisine="ALL" nativeUnits="US">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="540" cook="240"/>
+  </Title>
+  <Nutrition calories="220" fat="14" saturatedFat="5" cholesterol="39" carbs="14" protein="12" sugar="2" sodium="380" fiber="3" servings="1" servingsUnit="CUP"/>
+  <Description>Traditional for New Year's Day.</Description>
+  <Prerequisites>
+    <Prerequisite>Soak peas overnight in a large pot of water.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Dried black-eyed peas</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>SOAKED</Prep>
+      <Notes>1 Pound bag, soaked over night.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow Onion</Name>
+      <Quantity units="BULB">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Chicken Stock@@</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Paprika</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bay Leaves</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cumin</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Thyme</Name>
+      <Quantity units="TSP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Black-eyed%20Peas%20with%20Bacon_20260101_124100.jpg">Drain beans.</Step>
+    <Step type="STEP" image="">Cook bacon in skillet, transfer to bowl to hold.</Step>
+    <Step type="STEP" image="Black-eyed%20Peas%20with%20Bacon_20260101_124518.jpg">Discard all but 1 tbsp of the bacon grease, add onions and cook until softened.</Step>
+    <Step type="STEP" image="Black-eyed%20Peas%20with%20Bacon_20260101_125046.jpg">Add beans, bacon, onions, and all remaining ingredient to a large stock pot. Add chicken stock.</Step>
+    <Step type="STEP" image="Black-eyed%20Peas%20with%20Bacon_20260101_125400.jpg">Bring to a boil, reduce to a simmer and cook for four hours.</Step>
+    <Step type="STEP" image="">Serve with @@Corn Bread@@.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

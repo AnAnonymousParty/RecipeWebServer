@@ -1703,8 +1703,12 @@ function RequestPrintableView(recipeName) {
    }
  } 
  
- loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
-    
+ if (null != document.getElementById("units")) {
+  loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
+ } else {
+  loc += (scaling.toString()) + "&units=US";
+ }
+ 
  window.open(loc); 
 }
 

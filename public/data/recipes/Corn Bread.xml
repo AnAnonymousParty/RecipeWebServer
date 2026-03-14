@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Corn Bread_CornBread.webp" name="Corn Bread" category="BAKEDGOOD" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="12" units="SLICE"/>
+    <Times prep="10" cook="35"/>
+  </Title>
+  <Nutrition calories="180" fat="5" saturatedFat="4" cholesterol="2" carbs="29" protein="4" sugar="10" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Description>Golden squares of corny bread.</Description>
+  <Prerequisites>
+    <Prerequisite>Butter a 9 inch round or 8 inch square baking pan.</Prerequisite>
+    <Prerequisite>Preheat oven to %%400%%.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Butter@@</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>MELTED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Milk</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Corn Meal</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Baking Powder</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Corn%20Bread_20260101_130557.jpg">In a large bowl, beat the melted butter, milk, and egg with a wire whisk or fork until well mixed.</Step>
+    <Step type="STEP" image="Corn%20Bread_20260101_130655.jpg">Add the cornmeal, flour, sugar, baking powder, and salt all at once. Using a spoon, stir just until the flour is moistened—the batter will be lumpy. Don’t overmix; it shouldn’t be smooth. Overmixing can make the cornbread tough instead of tender.</Step>
+    <Step type="STEP" image="Corn%20Bread_20260101_131051.jpg">Pour batter into the pan; use a rubber spatula to scrape batter from bowl. Spread batter evenly in pan and smooth top of batter.</Step>
+    <Step type="STEP" image="">Place the pan in the oven on the middle rack. Bake 20 to 25 minutes or until golden brown and a toothpick inserted in the center comes out clean. The crispy sides of the cornbread will also pull away from the edges of the pan.</Step>
+    <Step type="STEP" image="">Remove from oven to the cooling rack. Let cool 10 to 15 minutes before cutting. Serve warm with butter and honey.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

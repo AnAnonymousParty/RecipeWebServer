@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chili with Beef and Beans_Chili.jpg" name="Chili with Beef and Beans" category="STEW" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="15" cook="60"/>
+  </Title>
+  <Nutrition calories="280" fat="16" saturatedFat="10" cholesterol="5" carbs="44" protein="40" sugar="2" sodium="300" fiber="2" servings="1" servingsUnit="CUP"/>
+  <Description>Beef and bean stew, southwest style.</Description>
+  <Prerequisites>
+    <Prerequisite>Soak bean overnight.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Beef, ground or whole</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dried red Kidney or Pinot beans, or mix</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>SOAKED</Prep>
+      <Notes>1 pound bag.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Bacon Grease</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow Onion</Name>
+      <Quantity units="BULB">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Chili Seasoning@@</Name>
+      <Quantity units="CUP">.3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>More or Less.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Beef Stock@@</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Chili%20with%20Beef%20and%20Beans_20260117_090731.jpg">Add bacon grease to a heavy skillet. Add beef and brown. Transfer to a bowl to hold.</Step>
+    <Step type="STEP" image="Chili%20with%20Beef%20and%20Beans_20260117_092222.jpg">Ad onions to pan and cook until softened.</Step>
+    <Step type="STEP" image="">Add a little beef stock to deglaze pan, pour contents into a large stock pot.</Step>
+    <Step type="STEP" image="Chili%20with%20Beef%20and%20Beans_20260117_103111.jpg">Drain beans, add to stock pot with remaining beef stock.</Step>
+    <Step type="STEP" image="Chili%20with%20Beef%20and%20Beans_20260117_103111.jpg">Add all remaining ingredients, bring to a boil and reduce to a simmer.</Step>
+    <Step type="STEP" image="">Cook until beans are softened and broth has thicken, at least an hour.</Step>
+    <Step type="STEP" image="">Adjust seasoning and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

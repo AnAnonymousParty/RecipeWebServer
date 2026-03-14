@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Chicken Goulash_20260108_171409.jpg" name="Chicken Goulash" category="STEW" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="6" units="SERVING"/>
+    <Times prep="10" cook="60"/>
+  </Title>
+  <Nutrition calories="65" fat="1" saturatedFat=".3" cholesterol="14" carbs="8" protein="7" sugar=".5" sodium="220" fiber="2" servings="1" servingsUnit="CUP"/>
+  <Description>Chunks of chicken and potato in a papriky broth.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Chicken</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Potatoes</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow Onion</Name>
+      <Quantity units="BULB">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Olives</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Chicken Broth @@</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Paprika</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Poultry Seasoning</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Koser /Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Butter@@</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Peel and cut potatoes into 3/4 inch cubes. Cut chicken into 3/4 inch cubes.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_155603.jpg">Heat 1 tbsp of butter in heavy skillet. Add chicken and brown on all sides. Transfer to bowl to hold.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_154537.jpg">Add 1 tbsp butter to skillet. Add potatoes and brown on all sides. Transfer to bowl to hold.</Step>
+    <Step type="STEP" image="">Add onions to skillet, cook until softened. Add a little chicken stock to deglaze pan.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_160222.jpg">Transfer onions and juice to large stock pot. Add chicken, potatoes, garlic and remaining stock. </Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_160406.jpg">Add salt, pepper, msg, poultry seasoning and paprika to pot.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_160456.jpg">Being to a boil, reduce to a simmer and cook for about 45 minutes.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_161051.jpg">Add sliced olives.</Step>
+    <Step type="STEP" image="Chicken%20Goulash_20260108_165702.jpg">Simmer and additional 10 minutes, adjust seasoning and serve.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
