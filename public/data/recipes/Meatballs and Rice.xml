@@ -1,138 +1,128 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Meatballs and Rice_20250419_162936.jpg" name="Meatballs and Rice" category="ENTREE_BEEF" cuisine="AMERICAN">
+  <Title image="Meatballs and Rice_20250419_162936.jpg" name="Meatballs and Rice" category="ENTREE_BEEF" cuisine="AMERICAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="20" cook="20"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" fiber=""/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="" servingsUnit="CUP"/>
   <Description>Bite sized meatballs in brown gravy over white rice.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Meatballs</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Ground Beef</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Onion</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Parsley</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Rosemary</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Thyme</Name>
       <Quantity units="TSP">2</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Black Pepper</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Salt</Name>
       <Quantity units="PINCH">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
       <Quantity units="CLOVE">2</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic powder</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Onion powder</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>MSG</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Beef stock</Name>
       <Quantity units="CUP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>AP Flour</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>White Rice</Name>
-      <Quantity units="CUP">1.5</Quantity>
-      <Prep>NONE</Prep>
-      <Notes>Basmati</Notes>
-    </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Butter</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>Water</Name>
-      <Quantity units="CUP">3</Quantity>
-      <Prep>NONE</Prep>
-      <Notes>Approximately</Notes>
-    </Ingredient>
-    <Ingredient>
-      <Name>Baking Soda</Name>
-      <Quantity units="PINCH">1</Quantity>
-      <Prep>NONE</Prep>
-      <Notes/>
-    </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Olive oil</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Rice</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@White Rice@@</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="Meatballs%20and%20Rice_20250419_124613.jpg">Saute onion in pan with olive oil until lightly browned, set aside.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_125423.jpg">In a bowl, add ground beef, baking soda, salt, pepper, MSG, bread crumbs, onion, garlic, parsley, rosemary, thyme, garlic powder and onion powder.</Step>
-    <Step image="">Combine ingredients to form a loose loaf.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_125829.jpg">Using a two ounce scoop, form the meat ball.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_130506.jpg">Assemble the formed meat balls.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_132017.jpg">Preheat a heavy bottom skillet, add the meatballs and brown them, turning as needed.</Step>
-    <Step image="">Remove the meatballs from the pan and set aside.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_132022.jpg">Add flour to the render beef fat in the pan and cook the flour to create a brown roux.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_155959.jpg">Add beef stock to the pan, whisking to combine with the roux. Raise the heat until the mixture begins to boil and then reduce to simmer.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_160923.jpg">Add meatballs to simmering gravy.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_160927.jpg">In a large sauce pan, melt butter over low heat and then stir in rice to coat.</Step>
-    <Step image="">Add enough wdter to pan with rice until the rice is covered such that when the tip of your finger is touching the rice, the water is just at the first joint of your finger.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_162735.jpg">Bring the rice to a boil and reduce to a simmer until all the water is absorbed.</Step>
-    <Step image="">Adjust the seasoning.</Step>
-    <Step image="Meatballs%20and%20Rice_20250419_162918.jpg">Serve meatballs over the rice.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_124613.jpg">Saute onion in pan with olive oil until lightly browned, set aside.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_125423.jpg">In a bowl, add ground beef, baking soda, salt, pepper, MSG, bread crumbs, onion, garlic, parsley, rosemary, thyme, garlic powder and onion powder.</Step>
+    <Step type="STEP" image="">Combine ingredients to form a loose loaf.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_125829.jpg">Using a two ounce scoop, form the meat ball.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_130506.jpg">Assemble the formed meat balls.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_132017.jpg">Preheat a heavy bottom skillet, add the meatballs and brown them, turning as needed.</Step>
+    <Step type="STEP" image="">Remove the meatballs from the pan and set aside.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_132022.jpg">Add flour to the render beef fat in the pan and cook the flour to create a brown roux.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_155959.jpg">Add beef stock to the pan, whisking to combine with the roux. Raise the heat until the mixture begins to boil and then reduce to simmer.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_160923.jpg">Add meatballs to simmering gravy.</Step>
+    <Step type="STEP" image="Meatballs%20and%20Rice_20250419_162918.jpg">Serve meatballs over the rice.</Step>
   </Method>
   <Variations/>
 </Recipe>

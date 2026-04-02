@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Beef with potatoes and spinach casserole_20260325_164539.jpg" name="Beef with potatoes and spinach casserole" category="CASSEROLE" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="15"/>
+  </Title>
+  <Nutrition calories="280" fat="15" saturatedFat="8" cholesterol="135" carbs="4" protein="32" sugar="2" sodium="500" fiber="1" servings="1.5" servingsUnit="CUP"/>
+  <Description>Ground beef with sauteed potatoes and spinach.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground beef</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Potatoes</Name>
+      <Quantity units="EACH">3</Quantity>
+      <Prep>CUBED</Prep>
+      <Notes>3/4 inch cubes.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Spinach</Name>
+      <Quantity units="BAG">1</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Onion</Name>
+      <Quantity units="EACH">4</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Parmesan@@ Cheese</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>GRATE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Broen Beef Stock@@</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garloc</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Oregano</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Butter@@</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_161358.jpg">In a heavy skillet, saute potatoes in butter until well browned. Transfer to plate/bowl to hold.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_161818.jpg">Add ground beef to skillet to pan. Season with salt, pepper. Add oregano, and cook until well browned.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_162845.jpg">Return potatoes to pan. Add green oinions and garlic, saute briefly until onions are softened.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_163214.jpg">Add beef stock and parsley. Simmer for about 5 minutes.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_163324.jpg">Add parmesan cheese.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_164349.jpg">Add spinach. Cook until spinach is just wilted.</Step>
+    <Step type="STEP" image="Beef%20with%20potatoes%20and%20spinach%20casserole_20260325_164539.jpg">Adjust seasoning, serve with crusty bread.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Cubed Steak_20260316_173135.jpg" name="Cubed Steak" category="ENTREE_BEEF" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="175" fat="8" saturatedFat="1.5" cholesterol="52" carbs="4" protein="22" sugar="0" sodium="175" fiber=".1" servings="1" servingsUnit="ITEM"/>
+  <Description>Cubed steak, breaded and fried with brown gravy.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Beef Cubed Steak</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>4 pieces.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Egg</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>AP Flour</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Beef Stock</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Paprika</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic Powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion Powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Oil / Bacon grease</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>For frying.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Cubed%20Steak_20260316_153152.jpg">Season cubed steak with salt, pepper and MSG.</Step>
+    <Step type="STEP" image="Cubed%20Steak_20260316_153120.jpg">Prepare for @@Standard Breading Method - A l'Alglaise@@. Combine flour, pakrika, garlic powder, and onion powder.</Step>
+    <Step type="STEP" image="Cubed%20Steak_20260316_154523.jpg">Dredge cubed steaks in flour, shake to remove excess. Dip in egg to coat, then into flour/herb mixture. Place on wire rack and let sit for 20 minutes.</Step>
+    <Step type="STEP" image="">Heat oil in heavy skillet. Fry cubed steaks until golden brown, transfer to a plate and keep warm.</Step>
+    <Step type="STEP" image="">Make Brown @@Gravy@@ using the beef stock and unused flour.</Step>
+  </Method>
+  <Variations>
+    <Variation>Serve with @@Mashed Potatoes@@ and @@Steamed Broccoli@@.</Variation>
+  </Variations>
+</Recipe>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="" name="Magic Shell" category="DESSERT" cuisine="AMERICAN">
+  <Title image="Magic Shell_20260331_182207.jpg" name="Magic Shell" category="DESSERT" cuisine="AMERICAN" nativeUnits="US">
     <Yield amount="1.25" units="CUP"/>
-    <Times prep="" cook=""/>
+    <Times prep="2" cook="5"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="OZ"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="OZ"/>
   <Description>Chocolate topping that hardens when chilled, for making chocolate dipped ice cream cones, etc.</Description>
   <Prerequisites/>
   <Ingredients>
@@ -22,10 +22,12 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step type="STEP" image="">Add the chocolate chips and coconut oil to a microwave-safe bowl. </Step>
-    <Step type="STEP" image="">Microwave in 20-30 second increments, making sure to stir very well after each increment, until completely melted and smooth.</Step>
+    <Step type="STEP" image="Magic%20Shell_20260331_181923.jpg">Add the chocolate chips and coconut oil to a microwave-safe bowl. </Step>
+    <Step type="STEP" image="Magic%20Shell_20260331_182102.jpg">Microwave in 20-30 second increments, making sure to stir very well after each increment, until completely melted and smooth.</Step>
     <Step type="STEP" image="">Drizzle over ice cream.</Step>
     <Step type="STEP" image="">Do not refrigerate.</Step>
   </Method>
-  <Variations/>
+  <Variations>
+    <Variation>The vigilant can be successful preparing this in a non-stick skillet over low heat.</Variation>
+  </Variations>
 </Recipe>
