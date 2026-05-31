@@ -156,6 +156,140 @@ const HttpStatusTypes = Object.freeze({
 });
 
 
+const PopupTypes = Object.freeze({
+ AddIngredient:            "AddIngredientPopup",
+ AddIngredientHeading:     "AddIngredientHeadingPopup",
+ AddPrerequisite:          "AddPrerequisitePopup",
+ AddRecipe:                "AddRecipePopup",
+ AddStep:                  "AddStepPopup",
+ AddStepHeading:           "AddStepHeadingPopup",
+ AddVariation:             "AddVariationPopup",
+ EditIngredient:           "AddIngredientPopup",
+ EditIngredientHeading:    "AddIngredientHeadingPopup",
+ EditPrerequisite:         "AddPrerequisitePopup",
+ EditStep:                 "EditStepPopup",
+ EditStepHeading:          "EditStepHeadingPopup",
+ EditVariation:            "AddVariationPopup", 
+ Error:                    "ErrorPopup",
+ ExportRecipes:            "ExportRecipesPopup",
+ ImportRecipes:            "ImportRecipesPopup",
+ Help:                     "HelpPopup",
+ PrepList:                 "PrepListPopup",
+ RecipeExistsWarning:      "RecipeExistsWarningPopup",
+ Settings:                 "SettingsPopup",
+ ShoppingList:             "ShoppingListPopup",
+ Undefined:                "Undefined"
+});
+
+function GetDescFromPopupType(enumVal) {
+ switch(enumVal) {
+  case PopupTypes.AddIngredient: {
+   return "Add Ingredient";
+  }   
+  
+  case PopupTypes.AddIngredientHeading: {
+   return "Add Heading";
+  }   
+  
+  case PopupTypes.AddPrerequisite: {
+   return "Add Prerequisite";
+  }     
+  
+  case PopupTypes.AddRecipe: {
+   return "Add New Recipe";
+  }   
+  
+  case PopupTypes.AddStep: {
+   return "Add Step";
+  }        
+  
+  case PopupTypes.AddStepHeading: {
+   return "Add Heading";
+  }  
+  
+  case PopupTypes.AddVariation: {
+   return "Add Variation";
+  }  
+  
+  case PopupTypes.EditIngredient: {
+   return "Edit Ingredient";
+  }        
+  
+  case PopupTypes.EditIngredientHeading: {
+   return "Edit Heading";
+  }        
+  
+  case PopupTypes.EditPrerequisite: {
+   return "Edit Prerequisite";
+  }        
+  
+  case PopupTypes.EditStep: {
+   return "Edit Step";
+  }   
+  
+  case PopupTypes.EditStepHeading: {
+   return "Edit Heading";
+  }        
+ 
+  case PopupTypes.EditVariation: {
+   return "Edit Variation";
+  }        
+  
+  case PopupTypes.Error: {
+   return "Error";
+  }        
+  
+  case PopupTypes.ExportRecipes: {
+   return "Export Recipes";
+  }
+  
+   case PopupTypes.Help: {
+   return "Help";
+  }
+  
+  case PopupTypes.ImportRecipes: {
+   return "Import Recipes";
+  }   
+  
+  case PopupTypes.PrepList: {
+   return "Prep List";
+  }
+  
+  case PopupTypes.RecipeExistsWarning: {
+   return "Recipe Exists";
+  }
+  
+  case PopupTypes.Settings: {
+   return "Settings";
+  }
+  
+  case PopupTypes.ShoppingList: {
+   return "Shopping List";
+  }
+  
+  case PopupTypes.Undefined: {
+   return "Undefined";
+  }
+  
+  default: {
+   return "Undefined";
+  }
+ }
+ 
+  return "Undefined";
+}
+
+function GetEnumFromPopupDesc(desc) {
+ for (var key in PopupTypes) {
+  if (desc == PopupTypes[key]) {
+   return key;
+  } 
+ }
+ 
+ return PopupTypes.Undefined;
+}
+
+
 const PreparationTypes = Object.freeze({
  NONE:         "",
  BATON:        "Batonned",
@@ -381,6 +515,7 @@ function GetEnumFromSystemOfUnitsValue(value) {
  
  return SystemOfUnitsTypes.US;
 }
+
 
 const UnitTypes = Object.freeze({
  BAG:      "Bag",

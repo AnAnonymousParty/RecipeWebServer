@@ -9,6 +9,7 @@
   <script src="/javascripts/client/conversions.js"></script>   
   <script src="/javascripts/client/enums.js"></script>
   <script src="/javascripts/client/MainPage.js"></script>
+  <script src="/javascripts/client/PopupBehaviors.js"></script>
   <script src="/javascripts/client/validate.js"></script>
   <title><%= title %></title>
  </head>
@@ -16,14 +17,14 @@
  <body background="/images/veges.jpg" onload="InitPage();">
   <div class="header-section"> 
    <span class="filters" id="filtersContainer">
-    <img height="20px" onclick="ShowSettingsPopup();" src="/images/Buttons/SettingsBtn_48X48.jpg" style="margin: 2px 10px 0px 0px;" title="Access Settings" width="20px">
+    <img height="20px" onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Settings %>');" src="/images/Buttons/SettingsBtn_48X48.jpg" style="margin: 2px 10px 0px 0px;" title="Access Settings" width="20px">
     Cuisine: 
     <select id="cuisines" name="cuisines" onChange="ApplyFilter();" style="margin: 0px 10px 0px 5px;">
-     <% Object.keys(cuisineTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, cuisineTypes); %>
+     <% Object.keys(enums.CuisineTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.CuisineTypes); %>
     </select>
     Course: 
     <select id="categories" name="category" onChange="ApplyFilter();" style="margin: 0px 0px 0px 5px;">
-     <% Object.keys(categoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, categoryTypes); %>
+     <% Object.keys(enums.CategoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.CategoryTypes); %>
     </select>
     <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
     <img height="18px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="18px">
@@ -45,8 +46,8 @@
     <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();" src="/images/Buttons/ReturnBtn_48X48.png" style="margin: 0px 10px 0px 0px;" title="Return to Recipes List" width="48px">     
    </div>  
    <div id="indexPageBtns" style="display: inline; visibility: visible;">
-    <img height="48px" id="AddNewRecipeBtn"     onclick="ShowAddRecipePopup();" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
-    <img height="48px" id="DeleteAllRecipesBtn" onclick="DeleteAllRecipes();"   src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
+    <img height="48px" id="AddNewRecipeBtn"     onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddRecipe %>');" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
+    <img height="48px" id="DeleteAllRecipesBtn" onclick="DeleteAllRecipes();"                                              src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
    </div> 
    <div id="viewPageBtns" style="display: none; visibility: collapse;">
     <img height="48px" id="EditRecipeBtn"      onclick="EditRecipe();"           src="/images/Buttons/EditBtn_48X48_White.png"   style="margin: 0px 10px 0px 0px;" title="Edit Recipe"             width="48px">
@@ -60,9 +61,13 @@
   <%# Conditionally displayed items for pop-ups, notifications, etc. %>
   
   <%# Add Recipe Popup. %>
-  <div class="popup" id="addRecipePopup" style="width: 30%;">
+  <div class="popup" id="<%= enums.PopupTypes.AddRecipe %>" style="width: 30%;">
    <div class="heading">
-    ADD RECIPE&nbsp;<img height="32px" onclick="HideAddRecipePopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.AddRecipe); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddRecipe %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="centered">
@@ -82,9 +87,14 @@
   </div>  
   
   <%# Error Popup. %>
-  <div class="popup" id="errorPopup" style="width: 25%;">
+  <div class="popup" id="<%= enums.PopupTypes.Error %>" style="width: 25%;">
    <div class="heading">
-    WARNING&nbsp;<img height="32px" id="epCloseImg" onclick="HideErrorPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.Error); %>&nbsp;
+    <img height="32px" 
+         id="epCloseImg" 
+         onclick="HidePopup('<%= enums.PopupTypes.Error %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="request-div">
@@ -93,16 +103,21 @@
   </div>
   
   <%# Export Recipes Popup. %>
-  <div class="popup" id="exportRecipesPopup" style="width: 40%;">
+  <div class="popup" id="<%= enums.PopupTypes.ExportRecipes %>" style="width: 40%;">
    <div class="heading">
-    EXPORT RECIPES&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideExportRecipesPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.ExportRecipes); %>&nbsp;
+    <img height="32px" 
+         id="fupCloseBtn" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ExportRecipes %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="centered" id="ExportContainer">
     <form enctype="multipart/form-data" id="ExportRecipesForm" method="post" name="exportRecipesForm">
      <input id="erppuInvoker" type="hidden" value="">
      <div class="scroll" id="exportFilesList">
-      <<%#List placeholder, filled in by server upon request. %>
+      <%# List placeholder, filled in by server upon request. %>
      </div>    
      <div class="centered" id="ExportButtonsContainer">
       <button id="ExportSelected" name="ExportSelected" onclick="HandleExportSelectedBtnClkd();" type="button">Export Selected</button>
@@ -116,9 +131,14 @@
   </div>
   
   <%# Import Recipes Popup. %>
-  <div class="popup" id="importRecipesPopup" style="width: 30%;">
+  <div class="popup" id="<%= enums.PopupTypes.ImportRecipes %>" style="width: 30%;">
    <div class="heading">
-    IMPORT RECIPES&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideImportRecipesPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.ImportRecipes); %>&nbsp;
+    <img height="32px" 
+         id="fupCloseBtn" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ImportRecipes %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="centered">
@@ -136,10 +156,29 @@
    </div>
   </div>
   
-  <%# Recipe Exists Warning Popup. %>
-  <div class="popup" id="recipeExistsWarningPopup" style="width: 35%;">
+  <%# Prep List Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.PrepList %>" style="width: 50%;">
    <div class="heading">
-    WARNING&nbsp;<img height="32px" onclick="HideRecipeExistsWarningPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.PrepList); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('PrepListPopup');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
+   </div>
+   <br>
+   <div class="centered">
+   
+   </div>
+  </div>
+  
+  <%# Recipe Exists Warning Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.RecipeExistsWarning %>" style="width: 35%;">
+   <div class="heading">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.RecipeExistsWarning); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.RecipeExistsWarning %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="request-div">
@@ -148,15 +187,42 @@
   </div>
   
   <%# Settings Popup. %>
-  <div class="popup" id="SettingsPopup" style="width: 50%;">
+  <div class="popup" id="<%= enums.PopupTypes.Settings %>" style="width: 50%;">
    <div class="heading">
-    SETTINGS&nbsp;<img height="32px" onclick="HideSettingsPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.Settings); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.Settings %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="centered">
-    <img height="32px" onclick='ShowImportRecipesPopup("SettingsPopup");' src="/images/Buttons/ImportBtn_48X48.png" title="Import Recipes" width="32px">
+    <img height="32px" 
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ImportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
+         src="/images/Buttons/ImportBtn_48X48.png" 
+         title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ImportRecipes); %>" 
+         width="32px">
     &nbsp;
-    <img height="32px" onclick='ShowExportRecipesPopup("SettingsPopup");' src="/images/Buttons/ExportBtn_60X48.png" title="Export Recipes" width="32px">    
+    <img height="32px" 
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ExportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
+         src="/images/Buttons/ExportBtn_60X48.png" 
+         title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ExportRecipes); %>" 
+         width="32px">    
+   </div>
+  </div>
+  
+  <%# Shopping List Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.ShoppingList %>" style="width: 50%;">
+   <div class="heading">
+     <%= enums.GetDescFromPopupType(enums.PopupTypes.ShoppingList); %>&nbsp;
+     <img height="32px" 
+          onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ShoppingList %>');" 
+          src="/images/Buttons/CloseIcon_512X512.png" 
+          width="32px">
+   </div>
+   <br>
+   <div class="centered">
+   
    </div>
   </div>
   

@@ -1,5 +1,5 @@
 <form id="viewRecipeForm"> 
- <input id="recipeName"    type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
+ <input id="recipeName"    type="hidden" value="<%= recipeData.Recipe.Title[0].$.name %>">
  <input id="originalYield" type="hidden" value="<%- recipeData.Recipe.Title[0].Yield[0].$.amount %>">
  
  <% stringUtils.TEMPCOUNT = 0; %>
@@ -185,7 +185,7 @@
      <%}%>
     </tbody>
    </table>
-  </div>
+  </div>  
  </div> 
  <%} %> 
  
@@ -278,7 +278,15 @@
     <%}%>  
    </tbody>
   </table>
+  <br>
   </div>
+   <div class="centered">
+    <img height="32px" 
+         onclick="PopupBehaviors.RevealPopup(PopupTypes.ShoppingList);"
+         src="/images/Buttons/ListBtn_48X48.png" 
+         title="<%- enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.ShoppingList); %>"
+         width="32px">    
+   </div>  
  </div>  
 <%} %> 
  
@@ -356,12 +364,22 @@
       </tr> 
      <% } else { %> 
       <tr>
-       <td colspan="2" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;"><%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(step)); %> </td>
+       <td colspan="2" style="font-weight: bold; max-width: 250px; min-width: 250px; text-align: center; word-wrap: break-word;">
+        <%- commonUtils.RenderNewlines(stringUtils.ConvertMarkup(step)); %> 
+       </td>
       </tr>        
      <%}%>      
      <%}%>  
     </tbody>
    </table>
+  </div> 
+  <br>
+  <div class="centered">
+   <img height="32px" 
+        onclick='PopupBehaviors.RevealPopup(PopupTypes.PrepList);'  
+        src="/images/Buttons/ListBtn_48X48.png" 
+        title="<%- enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.PrepList); %>"
+        width="32px">   
   </div> 
  </div>
  <%} %> 

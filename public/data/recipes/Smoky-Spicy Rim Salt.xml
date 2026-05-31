@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Smoky-Spicy Rim Salt_SpicyRimSalt.jpg" name="Smoky-Spicy Rim Salt" category="ELEMENT" cuisine="ALL">
+  <Title image="Smoky-Spicy Rim Salt_SpicyRimSalt.jpg" name="Smoky-Spicy Rim Salt" category="ELEMENT" cuisine="ALL" nativeUnits="US">
     <Yield amount="4" units="OZ"/>
     <Times prep="5" cook="1"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TSP"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="TSP"/>
   <Description>Smoky/Spicy herb mix for rimming drink glasses for Bloody Marys, Watermelon Margeritas, etc.</Description>
   <Prerequisites/>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Smoked Paprika</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Mustard seed</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Corriander</Name>
       <Quantity units="TBSP">2</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Kosher salt</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cayenne pepper</Name>
       <Quantity units="TSP">2</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Dried chili pepper</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
@@ -46,7 +46,7 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Combine all ingredients and grind in a coffee/spice grinder.</Step>
+    <Step type="STEP" image="">Combine all ingredients and grind in a coffee/spice grinder.</Step>
   </Method>
   <Variations/>
 </Recipe>

@@ -522,14 +522,21 @@
 <%# Conditionally displayed items for pop-ups, notifications, etc. %>
 
 <%# Add Ingredient Popup. %>
-<div class="popup" id="addIngredientPopup">
+<div class="popup" id="<%= enums.PopupTypes.AddIngredient %>">
  <form>
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"  
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   ADD INGREDIENT
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.AddIngredient); %>
    &nbsp;
-   <img height="32px" onclick="HideAddIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddIngredient %>');"
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addIngredientForm">
@@ -579,21 +586,32 @@
    </div>
    <br>
    <div class="centered">
-    <img height="48px" onclick="AddIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="AddIngredient();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Add Ingredient Heading Popup. %>
-<div class="popup" id="addIngredientHeadingPopup">
+<div class="popup" id="<%= enums.PopupTypes.AddIngredientHeading %>">
  <form>
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   ADD INGREDIENT HEADING
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.AddIngredientHeading); %>
    &nbsp;
-   <img height="32px" onclick="HideAddIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddIngredient %>');"   
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addIngredientHeadingForm">
@@ -607,21 +625,32 @@
    </div>   
    <br>
    <div class="centered">
-    <img height="48px" onclick="AddIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="AddIngredientHeading();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div> 
  </form>
 </div>
 
 <%# Add Prerequisite Popup. %>
-<div class="popup" id="addPrerequisitePopup">
+<div class="popup" id="<%= enums.PopupTypes.AddPrerequisite %>">
  <form>
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');" 
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp; 
    ADD PREREQUISITE
    &nbsp;
-   <img height="32px" onclick="HideAddPrerequisitePopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddPrerequisite %>');"  
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addPrerequisiteForm">
@@ -630,27 +659,45 @@
      Prerequisite:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="prerequisite2Add" maxlength="4096" name="prerequisite2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="prerequisite2Add" 
+               maxlength="4096" 
+               name="prerequisite2Add" 
+               required="required" 
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>      
     </span>
    </div> 
    <br> 
    <div class="centered">
-    <img height="48px" onclick="AddPrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="AddPrerequisite();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Add Step Popup. %>
-<div class="popup" id="addStepPopup">
+<div class="popup" id="<%= enums.PopupTypes.AddStep %>">
  <form>
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   ADD STEP
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.AddStep); %>
    &nbsp;
-   <img height="32px" onclick="HideAddStepPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddStep %>');" 
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addStepForm">
@@ -659,7 +706,14 @@
      Step:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="step2Add" maxlength="4096" name="step2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="step2Add" 
+               maxlength="4096" 
+               name="step2Add" 
+               required="required" 
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>     
     </span>
    </div> 
@@ -671,27 +725,42 @@
     <span class="field-value">
      <div style="display: inline-block;">
       <button onclick="ShowFileUploadPopup('stepImage', 'addStepPopup');" type="button">Upload</button>
-      <img height="80px" id="stepAddImage" src="" style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" width="80px">
+      <img height="80px" 
+           id="stepAddImage" 
+           src="" 
+           style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" 
+           width="80px">
      </div>
     </span>
    </div>    
    <br> 
    <div class="centered">
-    <img height="48px" onclick="AddStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="AddStep();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Add Step Heading Popup. %>
-<div class="popup" id="addStepHeadingPopup">
+<div class="popup" id="<%= enums.PopupTypes.AddStepHeading %>">
  <form>
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddHelp %>');"
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   ADD STEP HEADING
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.AddStepHeading); %>
    &nbsp;
-   <img height="32px" onclick="HideAddStepHeadingPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddStepHeading %>');"
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addStepForm">
@@ -700,7 +769,14 @@
      Heading:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="stepHeading2Add" maxlength="4096" name="stepHeading2Add" required="required" rows="1" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="stepHeading2Add" 
+               maxlength="4096" 
+               name="stepHeading2Add" 
+               required="required" 
+               rows="1" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>     
     </span>
    </div> 
@@ -713,14 +789,21 @@
 </div>
 
 <%# Add Variation Popup. %>
-<div class="popup" id="addVariationPopup">
+<div class="popup" id="<%= enums.PopupTypes.AddVariation %>">
  <form >
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"  
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   ADD VARIATION
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.AddVariation); %>
    &nbsp;
-   <img height="32px" onclick="HideAddVariationPopup()" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px"
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddVariation %>');" 
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="addVariationForm">
@@ -729,29 +812,48 @@
      Variation:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="variation2Add" maxlength="4096" name="variation2Add" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="variation2Add" 
+               maxlength="4096" 
+               name="variation2Add" 
+               required="required" 
+               
+               rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>      
     </span>
    </div> 
    <br> 
    <div class="centered">
-    <img height="48px" onclick="AddVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="AddVariation();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Edit Ingredient Popup. %>
-<div class="popup" id="editIngredientPopup">
+<div class="popup" id="<%= enums.PopupTypes.EditIngredient %>">
  <form>
   <input id="ingredientAction" type="hidden" value="">
   <input id="ingredientRowId"  type="hidden" value="">
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');" 
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   EDIT INGREDIENT
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditIngredient); %>
    &nbsp;
-   <img height="32px" onclick="HideEditIngredientPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   &nbsp;
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditIngredient %>');" 
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editIngredientForm">
@@ -768,7 +870,12 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Edit" max="999" min="0" name="quantity2Add" type="number">
+     <input data-validation="vNumeric" 
+            id="quantity2Edit" 
+            max="999" 
+            min="0" 
+            name="quantity2Add" 
+            type="number">
     </span>
    </div>  
    <div class="recipe-line">
@@ -801,19 +908,33 @@
    </div>
    <br>
    <div class="centered">
-    <img height="48px" onclick="SaveIngredient();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="SaveIngredient();"  
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Edit Ingredient Heading Popup. %>
-<div class="popup" id="editIngredientHeadingPopup">
+<div class="popup" id="<%= enums.PopupTypes.EditIngredientHeading %>">
  <form>
   <input id="headingRowId"     type="hidden" value="">
   <input id="ingredientAction" type="hidden" value="">
   <div class="heading">
-   EDIT INGREDIENT HEADING&nbsp;<img height="32px" onclick="HideEditIngredientHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="24px" 
+      onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"   
+      src="images/Buttons/HelpBtn_48X48.png" 
+      title="Display editing help" 
+      width="24px"> 
+   &nbsp;  
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditIngredientHeading); %>&nbsp;
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditIngredientHeading %>');"
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editIngredientHeadingForm">
@@ -827,23 +948,34 @@
    </div>
    <br>
    <div class="centered">
-    <img height="48px" onclick="SaveIngredientHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+    <img height="48px" 
+         onclick="SaveIngredientHeading();" 
+         src="/images/Buttons/SaveBtn_48X48.png" 
+         title="Save" 
+         width="48px">
    </div>
   </div>
  </form>
 </div>
 
 <%# Edit Prerequisite Popup. %>
-<div class="popup" id="editPrerequisitePopup">
+<div class="popup" id="<%= enums.PopupTypes.EditPrerequisite %>">
  <form>
   <input id="prerequisiteAction" type="hidden" value="">
   <input id="prerequisiteRowId"  type="hidden" value="">
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Change Image" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Change Image" 
+        width="24px"> 
    &nbsp;
-   EDIT PREREQUISITE
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditPrerequisite); %>
    &nbsp;
-   <img height="32px" onclick="HideEditPrerequisitePopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditPrerequisite %>');" 
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editPrerequisiteForm">
@@ -852,29 +984,47 @@
      Prerequisite:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="prerequisite2Edit" maxlength="4096" name="prerequisite2Rdit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="prerequisite2Edit" 
+               maxlength="4096" 
+               name="prerequisite2Rdit" 
+               required="required" 
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>      
     </span>
    </div> 
   </div>
   <br> 
   <div class="centered">
-   <img height="48px" onclick="SavePrerequisite();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+   <img height="48px" 
+        onclick="SavePrerequisite();" 
+        src="/images/Buttons/SaveBtn_48X48.png" 
+        title="Save" 
+        width="48px">
   </div>  
  </form>
 </div>
 
 <%# Edit Step Popup. %>
-<div class="popup" id="editStepPopup">
+<div class="popup" id="<%= enums.PopupTypes.EditStep %>">
  <form>
   <input id="stepAction" type="hidden" value="">
   <input id="stepRowId"  type="hidden" value="">
   <div class="heading">
-   <img height="24px" onclick='ShowHelpPopup();' src="images/Buttons/HelpBtn_48X48.png" title="Display editing help" width="24px"> 
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"  
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
    &nbsp;
-   EDIT STEP
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditStep); %>
    &nbsp;
-   <img height="32px" onclick="HideEditStepPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditStep %>');"  
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editStepForm">
@@ -883,7 +1033,14 @@
      Step:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="step2Edit" maxlength="4096" name="step2Edit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="step2Edit" 
+               maxlength="4096" 
+               name="step2Edit" 
+               required="required" 
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea> 
     </span>
    </div> 
@@ -904,7 +1061,11 @@
   </div>
   <br> 
   <div class="centered">
-   <img height="48px" onclick="SaveStep();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+   <img height="48px" 
+        onclick="SaveStep();" 
+        src="/images/Buttons/SaveBtn_48X48.png" 
+        title="Save" 
+        width="48px">
   </div>  
  </form>
 </div>
@@ -915,7 +1076,18 @@
   <input id="stepAction"       type="hidden" value="">
   <input id="stepHeadingRowId" type="hidden" value="">
   <div class="heading">
-   EDIT STEP HEADING&nbsp;<img height="32px" onclick="HideEditStepHeadingPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
+   &nbsp;  
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditStepHeading); %>  
+   E&nbsp;
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditStepHeading %>');"
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editStepHeadingForm">
@@ -924,7 +1096,14 @@
      Heading:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="stepHeading2Edit" maxlength="256" name="stepHeading2Edit" required="required" rows="1" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="stepHeading2Edit" 
+               maxlength="256" 
+               name="stepHeading2Edit" 
+               required="required" 
+               rows="1" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea> 
     </span>
    </div> 
@@ -932,18 +1111,33 @@
   </div>
   <br> 
   <div class="centered">
-   <img height="48px" onclick="SaveStepHeading();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+   <img height="48px" 
+        onclick="SaveStepHeading();" 
+        src="/images/Buttons/SaveBtn_48X48.png" 
+        title="Save" 
+        width="48px">
   </div>  
  </form>
 </div>
 
 <%# Edit Variation Popup. %>
-<div class="popup" id="editVariationPopup">
+<div class="popup" id="<%= enums.PopupTypes.EditStepVariation %>">
  <form>
   <input id="Action"         type="hidden" value="">
   <input id="variationRowId" type="hidden" value="">
   <div class="heading">
-   EDIT VARIATION&nbsp;<img height="32px" onclick="HideEditVariationPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+   <img height="24px" 
+        onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"   
+        src="images/Buttons/HelpBtn_48X48.png" 
+        title="Display editing help" 
+        width="24px"> 
+   &nbsp;
+   <%= enums.GetDescFromPopupType(enums.PopupTypes.EditVariation); %>
+   &nbsp;
+   <img height="32px" 
+        onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditVariation %>');"
+        src="/images/Buttons/CloseIcon_512X512.png" 
+        width="32px">
   </div>
   <br>
   <div class="request-div" id="editVariationForm">
@@ -952,14 +1146,25 @@
      Variation:
     </span>
     <span class="field-value">
-     <textarea cols="40" data-validation="vAlNum" id="variation2Edit" maxlength="4096" name="variation2Rdit" required="required" rows="4" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+     <textarea cols="40" 
+               data-validation="vAlNum" 
+               id="variation2Edit" 
+               maxlength="4096" 
+               name="variation2Rdit" 
+               required="required" 
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
      </textarea>      
     </span>
    </div> 
   </div>
   <br> 
   <div class="centered">
-   <img height="48px" onclick="SaveVariation();" src="/images/Buttons/SaveBtn_48X48.png" title="Save" width="48px">
+   <img height="48px" 
+        onclick="SaveVariation();" 
+        src="/images/Buttons/SaveBtn_48X48.png" 
+        title="Save" 
+        width="48px">
   </div>  
  </form>
 </div>
@@ -967,7 +1172,12 @@
 <%# File Uploader Popup. %>
 <div class="popup" id="fileUploadPopup" style="width: 30%;">
  <div class="heading">
-  UPLOAD IMAGE&nbsp;<img height="32px" id="fupCloseBtn" onclick="HideFileUploadPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  UPLOAD IMAGE&nbsp;
+  <img height="32px" 
+       id="fupCloseBtn" 
+       onclick="HideFileUploadPopup();" 
+       src="/images/Buttons/CloseIcon_512X512.png" 
+       width="32px">
  </div>
  <br>
  <div class="centered">
@@ -981,17 +1191,26 @@
     </div>
    </div>
   </form>
-  <div class="notifier" id="response">TBD</div>  <%# Will be modified by client javascript. %>
+  <div class="notifier" id="response">
+   <%# This content will be replaced via client javascript, populated from server response to help request. %>
+  </div> 
  </div>
 </div>
 
 <%# Help Popup. %>
-<div class="popup" id="helpPopup" style="width: 30%;">
+<div class="popup" 
+     id="<%= enums.PopupTypes.Help %>"  
+     style="width: 30%;">
  <div class="heading">
-  Markup Help&nbsp;<img height="32px" id="hpuCloseBtn" onclick="HideHelpPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+  Markup <%= enums.GetDescFromPopupType(enums.PopupTypes.Help); %>&nbsp;
+  <img height="32px" 
+       id="hpuCloseBtn" 
+       onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.Help %>');"  
+       src="/images/Buttons/CloseIcon_512X512.png" 
+       width="32px">
  </div>
  <br>
  <div class="centered" id="helpContainer">
-  <%# Will be modified by client javascript from server response to help request. %>
+  <%# This content will be replaced via client javascript, populated from server response to help request. %>
  </div>
 </div>

@@ -120,7 +120,7 @@ function AddIngredient() {
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible"; 
  
- HideAddIngredientPopup();
+  PopupBehaviors.HidePopup(PopupTypes.AddIngredient);
 }
 
 function AddIngredientHeading() {
@@ -192,7 +192,7 @@ function AddIngredientHeading() {
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddIngredientHeadingPopup();
+ PopupBehaviors.HidePopup(PopupTypes.AddIngredientHeading);
 }
 
 function AddPrerequisite() { 
@@ -269,13 +269,13 @@ function AddRecipe() {
  
   if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
    if ("NO" == xmlhttp.response) {
-    ToggleVisibility("addRecipePopup");
+    PopupBehaviors.HidePopup(PopupTypes.AddRecipe);
     
     RequestNewRecipePage(recipeName);
    } else {
-    HideElement("addRecipePopup");
+    PopupBehaviors.HidePopup(PopupTypes.AddRecipe);
     
-    ToggleVisibility("recipeExistsWarningPopup");
+    PopupBehaviors.RevealPopup(PopupTypes.RecipeExistsWarning);
    } 
   }
   else {
@@ -800,15 +800,6 @@ function DeleteVariation(rowNum) {
  }
 }
 
-function DisplayError(errorMsg, originator) {
- document.getElementById("errorMsg").innerHTML = errorMsg;
- 
- document.getElementById("epCloseImg").onclick = function() { HideErrorPopup(originator); };
- 
- ToggleVisibility("errorPopup");
- ToggleVisibility(originator);
-}
-
 function EditIngredient(rowNum) {
  var tbody = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
  var row   = tbody.rows[rowNum];
@@ -869,15 +860,13 @@ function EditIngredient(rowNum) {
   }
  }
  
- document.getElementById("overlayContainer").className = "overlay";
- 
  if ("INGREDIENT" == type) {
-  ToggleVisibility("editIngredientPopup");
+  PopupBehaviors.RevealPopup(PopupTypes.EditIngredient);
  } else {
   document.getElementById("headingRowId").value = rowNum;
   document.getElementById("heading2Edit").value = ingredient2Edit;
   
-  ToggleVisibility("editIngredientHeadingPopup");
+  PopupBehaviors.RevealPopup(PopupTypes.EditIngredientHeading);
  }
 }
 
@@ -899,9 +888,8 @@ function EditPrerequisite(rowNum) {
  
  document.getElementById("prerequisiteRowId").value    = rowNum;
  document.getElementById("prerequisite2Edit").value    = prerequisite2Edit;
- document.getElementById("overlayContainer").className = "overlay";
  
- ToggleVisibility("editPrerequisitePopup");
+ PopupBehaviors.RevealPopup(PopupTypes.EditPrerequisite);
 }
 
 function EditRecipe(recipeName) {
@@ -987,15 +975,14 @@ function EditStep(rowNum) {
   UnHideElement("image2Edit");
  }  
  
- document.getElementById("overlayContainer").className = "overlay";
- 
  if ("STEP" == type) {
+  PopupBehaviors.RevealPopup(PopupTypes.EditStep);
   ToggleVisibility("editStepPopup");
  } else {
   document.getElementById("stepHeadingRowId").value = rowNum;
   document.getElementById("stepHeading2Edit").value = step2Edit;
   
-  ToggleVisibility("editStepHeadingPopup");
+  PopupBehaviors.RevealPopup(PopupTypes.EditStepHeading);
  }
 } 
 
@@ -1018,9 +1005,7 @@ function EditStepHeading(rowNum) {
  document.getElementById("stepHeadingRowId").value = rowNum;
  document.getElementById("stepHeading2Edit").value = stepHeading2Edit;  
  
- document.getElementById("overlayContainer").className = "overlay";
- 
- ToggleVisibility("editStepHeadingPopup");
+ PopupBehaviors.RevealPopup(PopupTypes.EditStepHeading);
 } 
 
 function EditVariation(rowNum) { 
@@ -1043,78 +1028,31 @@ function EditVariation(rowNum) {
  document.getElementById("variation2Edit").value       = variation2Edit;
  document.getElementById("overlayContainer").className = "overlay";
  
- ToggleVisibility("editVariationPopup");
+ PopupBehaviors.RevealPopup(PopupTypes.EditVariation);
 }
 
 function HandleAddIngredientBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("heading2Add").value    = ""; 
- document.getElementById("ingredient2Add").value = "";
- document.getElementById("notes2Add").value      = "";
- document.getElementById("quantity2Add").value   = "1";
- 
- ToggleVisibility("addIngredientPopup");
- 
- document.getElementById('ingredient2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddIngredient);
 }
 
 function HandleAddIngredientHeadingBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("heading2Add").value    = ""; 
- document.getElementById("ingredient2Add").value = "";
- document.getElementById("notes2Add").value      = "";
- document.getElementById("quantity2Add").value   = "";
- 
- ToggleVisibility("addIngredientHeadingPopup");
- 
- document.getElementById('heading2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddIngredientHeading);
 }
 
 function HandleAddPrerequisiteBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("prerequisite2Add").value = "";
- 
- ToggleVisibility("addPrerequisitePopup");
- 
- document.getElementById('prerequisite2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddPrerequisite);
 }
 
 function HandleAddStepBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("step2Add").value   = "";
- document.getElementById("stepAddImage").src = "";
- 
- HideElement("stepAddImage");
- 
- document.getElementById("image2Upload").value = "";
- 
- ToggleVisibility("addStepPopup");
- 
- document.getElementById('step2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddStep);
 }
 
 function HandleAddStepHeadingBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("stepHeading2Add").value = "";
- 
- ToggleVisibility("addStepHeadingPopup");
- 
- document.getElementById('stepHeading2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddStep);
 }
 
 function HandleAddVariationBtnClkd() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- document.getElementById("variation2Add").value = "";
- 
- ToggleVisibility("addVariationPopup");
- 
- document.getElementById('variation2Add').focus();
+ PopupBehaviors.RevealPopup(PopupTypes.AddVariation);
 }
 
 function HandleDelAllIngredientsBtnClkd() {
@@ -1341,100 +1279,6 @@ function HandleSearchBtnClkd() {
  xmlhttpReq.send(); 
 } 
 
-function HideAddIngredientPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addIngredientPopup");
-}
-
-function HideAddIngredientHeadingPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addIngredientHeadingPopup");
-}
-
-function HideAddPrerequisitePopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addPrerequisitePopup");
-}
-
-function HideAddRecipePopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addRecipePopup");
-}
-
-function HideAddStepPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addStepPopup");
-}
-
-function HideAddStepHeadingPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addStepHeadingPopup");
-}
-
-function HideAddVariationPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("addVariationPopup");
-}
-
-function HideEditIngredientPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editIngredientPopup");
-}
-
-function HideEditIngredientHeadingPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editIngredientHeadingPopup");
-}
-
-function HideEditPrerequisitePopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editPrerequisitePopup");
-}
-
-function HideEditStepPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editStepPopup");
-}
-
-function HideEditStepHeadingPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editStepHeadingPopup");
-}
-
-function HideEditVariationPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("editVariationPopup");
-}
-
-function HideErrorPopup(restoree) {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- if ("" != restoree) {
-  ToggleVisibility(restoree);
- }
- 
- ToggleVisibility("errorPopup");
-}
-
-function HideExportRecipesPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- ToggleVisibility("exportRecipesPopup");
-}
-
 function HideFileUploadPopup() {
  document.getElementById("overlayContainer").className = "no-overlay";
  
@@ -1445,32 +1289,6 @@ function HideFileUploadPopup() {
  }
  
  ToggleVisibility("fileUploadPopup");
-}
-
-function HideHelpPopup() { 
- ToggleVisibility("helpPopup");
-}
-
-function HideImportRecipesPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- UnHideElement(document.getElementById("ppuInvoker").value);
- 
- ToggleVisibility("importRecipesPopup");
-}
-
-function HideRecipeExistsWarningPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
-     
- UnHideElement("addRecipePopup");
-
- ToggleVisibility("recipeExistsWarningPopup");
-}
-
-function HideSettingsPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
-
- ToggleVisibility("SettingsPopup");
 }
 
 function InitPage() {
@@ -2139,56 +1957,6 @@ function SaveVariation() {
  HideEditVariationPopup();
 }  
 
-function ShowAddRecipePopup() {
- document.getElementById("recipeName2Add").value = "";
- 
- ToggleVisibility("addRecipePopup");
- 
- document.getElementById('recipeName2Add').focus();
-}
-
-function ShowExportRecipesPopup(parentElement) {
- HideElement("ExportRecipesResponseContainer");
- UnHideElement("ExportContainer"); 
- UnHideElement("ExportButtonsContainer");
- 
- var xmlhttpReq = new XMLHttpRequest();
- 
- xmlhttpReq.open("GET", "/GetRecipesToExportList"); 
-
- xmlhttpReq.onload = function() {  
-  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
-   return;
-  }
-  
-  if (HttpStatusTypes.OK === xmlhttpReq.status) {
-   document.getElementById("overlayContainer").className = "overlay";
- 
-   if ("" != parentElement) {  
-    HideElement(parentElement);
-    
-    document.getElementById("ppuInvoker").value = parentElement;
-   }
-   
-   ToggleVisibility("exportRecipesPopup");
-   
-   var html = xmlhttpReq.responseText;
-   
-   if ("" == html) {
-    document.getElementById("exportFilesList").innerHTML = "There are no recipes in the system. Why do you add/import some?";
-    
-    HideElement("ExportButtonsContainer");
-   } else {
-    document.getElementById("exportFilesList").innerHTML = html;
-    
-    UnHideElement("ExportButtonsContainer");
-   }
-  }
- };
-
- xmlhttpReq.send();
-}
-
 function ShowFileUploadPopup(imageTgt, parentElement) {
  document.getElementById("imageUse").value             = imageTgt;
  document.getElementById("overlayContainer").className = "overlay";
@@ -2206,44 +1974,6 @@ function ShowFileUploadPopup(imageTgt, parentElement) {
  ToggleVisibility("fileUploadPopup");
  
  UnHideElement("FileUploadForm");
-}
-
-function ShowHelpPopup() {
- var xmlhttp = new XMLHttpRequest();
-    
- xmlhttp.onreadystatechange = function()
- {
-  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
-   return;
-  }
-  
-  if (HttpStatusTypes.OK == xmlhttp.status) {
-   document.getElementById("helpContainer").innerHTML = xmlhttp.responseText;
-   
-   ToggleVisibility("helpPopup");
-  } else {
-   alert("Unable to access help: " + xmlhttp.responseText);
-  }
- }
-    
- xmlhttp.open("GET", "/GetHelpInfo", true);
- 
- xmlhttp.send();
-}
-
-function ShowImportRecipesPopup(parentElement) {
- document.getElementById("overlayContainer").className = "overlay";
- 
- HideElement("recipesUploadResponse");
- UnHideElement("recipesImportForm");
- 
- if ("" != parentElement) {  
-  HideElement(parentElement);
-  
-  document.getElementById("ppuInvoker").value = parentElement;
- }
- 
- ToggleVisibility("importRecipesPopup");
 }
 
 function ShowRecipesList(category, cuisine) {
@@ -2291,12 +2021,6 @@ function ShowRecipesList(category, cuisine) {
  };
 
  xmlhttpReq.send();
-}
-
-function ShowSettingsPopup() {
- document.getElementById("overlayContainer").className = "overlay";
- 
- ToggleVisibility("SettingsPopup");
 }
 
 function SubmitFileForUpload(imageUse) { 
