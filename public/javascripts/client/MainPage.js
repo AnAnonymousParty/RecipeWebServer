@@ -1439,12 +1439,44 @@ function MoveStepUp(rowNum) {
  }
 }
 
+function PrintPrepList() {
+ HideElement("HidePrepListBtn");
+ HideElement("PrintPrepListBtn");
+ 
+ let divToPrint = document.getElementById(PopupTypes.PrepList);
+ let newWin     = window.open("");
+ 
+ newWin.document.write(divToPrint.outerHTML);
+ 
+ newWin.print();
+ newWin.close();
+ 
+ UnHideElement("HidePrepListBtn");
+ UnHideElement("PrintPrepListBtn", "inline");
+}
+
 function PrintRecipe() {
  HideElement("PrintRecipeBtn");
  
  window.print();
  
  UnHideElement("PrintRecipeBtn", "inline");
+}
+
+function PrintShoppingList() {
+ HideElement("HideShoppingListBtn");
+ HideElement("PrintShoppingListBtn");
+ 
+ let divToPrint = document.getElementById(PopupTypes.ShoppingList);
+ let newWin     = window.open("");
+ 
+ newWin.document.write(divToPrint.outerHTML);
+ 
+ newWin.print();
+ newWin.close();
+ 
+ UnHideElement("HideShoppingListBtn");
+ UnHideElement("PrintShoppingListBtn", "inline");
 }
 
 function RequestFileDelete(fileName) {

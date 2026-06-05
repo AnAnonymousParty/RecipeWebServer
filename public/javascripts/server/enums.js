@@ -395,7 +395,287 @@ function GetEnumFromPrepDesc(desc) {
   return "UNDEFINED";
 }
 
+export
+function GetDirectionFromPrepType(enumVal) {
+  if (enumVal == "NONE") {
+   return "";
+  } 
+  
+  if (enumVal == "BATON") {
+   return "Cut into batons";
+  } 
+        
+  if (enumVal == "BEATEN") {
+   return "Beat";
+  } 
+        
+  if (enumVal == "BLANCH") {
+   return "Blanch";
+  } 
+       
+  if (enumVal == "BROWNED") {
+   return "Brown";
+  } 
+      
+  if (enumVal == "BRUNOISE") {
+   return "Cut into brunoise";
+  } 
+     
+  if (enumVal == "CHIFFONADE") {
+   return "Chiffonade";
+  } 
+   
+  if (enumVal == "CHILLED") {
+   return "Chill";
+  } 
+      
+  if (enumVal == "CHIPPED") {
+   return "Chip";
+  } 
+      
+  if (enumVal == "CHOPCOARSE") {
+   return "Coarsely chop";
+  } 
+    
+  if (enumVal == "CHOPFINE") {
+   return "Finely chop";
+  } 
+      
+  if (enumVal == "CLEANED") {
+   return "Clean";
+  } 
+       
+  if (enumVal == "CLEANPEEL") {
+   return "Clean and peel";
+  } 
+     
+  if (enumVal == "CLEANTRIM") {
+   return "Clean and trim";
+  } 
+     
+  if (enumVal == "CORED") {
+   return "Remove cores from";
+  } 
+        
+  if (enumVal == "CRACKED") {
+   return "Crack";
+  } 
+       
+  if (enumVal == "CRUMBLED") {
+   return "Crumble";
+  } 
+     
+  if (enumVal == "CRUSHED") {
+   return "Crush";
+  } 
+      
+  if (enumVal == "CUBED") {
+   return "Cube";
+  } 
+        
+  if (enumVal == "DICELARGE") {
+   return "Cut into large dice";
+  } 
+     
+  if (enumVal == "DICEMEDIUM") {
+   return "Cut into medium dice";
+  } 
+    
+  if (enumVal == "DICESMALL") {
+   return "Cut into smal dice";
+  } 
+    
+  if (enumVal == "DRAINED") {
+   return "Drain";
+  } 
+        
+  if (enumVal == "DRIED") {
+   return "Dry";
+  } 
+          
+  if (enumVal == "FLATTENED") {
+   return "Pound/Roll flat";
+  } 
+       
+  if (enumVal == "FRENCHED") {
+   return "Cut into frence style";
+  } 
+        
+  if (enumVal == "GRATE") {
+   return "Grate";
+  } 
+           
+  if (enumVal == "GROUND") {
+   return "Grind";
+  } 
+          
+  if (enumVal == "JULIENNE") {
+   return "Julienne";
+  } 
+        
+  if (enumVal == "MACERATED") {
+   return "Macerate";
+  } 
+      
+  if (enumVal == "MARINATED") {
+   return "Marinate";
+  } 
+      
+  if (enumVal == "MASHED") {
+   return "Mash";
+  } 
+         
+  if (enumVal == "MELTED") {
+   return "Melt";
+  } 
+         
+  if (enumVal == "MINCED") {
+   return "Mince";
+  } 
+          
+  if (enumVal == "MIXED") {
+   return "Combine";
+  } 
+          
+  if (enumVal == "MUDDLED") {
+   return "Muddle";
+  } 
+         
+  if (enumVal == "OBLIQUE") {
+   return "Cut into oblique pieces";
+  } 
+        
+  if (enumVal == "PEELED") {
+   return "Remove peels from";
+  } 
+         
+  if (enumVal == "PEELEDSEEDED") {
+   return "Remove peel and seeds from";
+  } 
+    
+  if (enumVal == "PEELVEIN") {
+   return "Peel and devein";
+  } 
+        
+  if (enumVal == "PITTED") {
+   return "Remove pits from";
+  } 
+         
+  if (enumVal == "POACHED") {
+   return "Poach";
+  } 
+        
+  if (enumVal == "POUNDED") {
+   return "Pound flat";
+  } 
+         
+  if (enumVal == "POWDERED") {
+   return "Turn into powder";
+  } 
+       
+  if (enumVal == "QUARTERED") {
+   return "Quarter";
+  } 
+       
+  if (enumVal == "REHYDRATE") {
+   return "Add water to";
+  } 
+      
+  if (enumVal == "ROASTED") {
+   return "Roast";
+  } 
+        
+  if (enumVal == "SCALD") {
+   return "Scald";
+  } 
+          
+  if (enumVal == "SEARED") {
+   return "Sear";
+  } 
+         
+  if (enumVal == "SEASONED") {
+   return "Season";
+  } 
+       
+  if (enumVal == "SEEDED") {
+   return "Remove seeds from";
+  } 
+         
+  if (enumVal == "SEEDEDPLUS") {
+   return "Remove seeds and membranes from";
+  } 
+      
+  if (enumVal == "SEPARATED") {
+   return "Separate";
+  } 
+       
+  if (enumVal == "SIFT") {
+   return "Sift";
+  } 
+           
+  if (enumVal == "SHAVED") {
+   return "Shave";
+  } 
+         
+  if (enumVal == "SHELLED") {
+   return "Remove shells from";
+  } 
+        
+  if (enumVal == "SHREAD") {
+   return "Shread";
+  } 
+         
+  if (enumVal == "SHUCKED") {
+   return "Shuck";
+  } 
+        
+  if (enumVal == "SKINNED") {
+   return "Remove shin from";
+  } 
+        
+  if (enumVal == "SLICED") {
+   return "Slice";
+  } 
+         
+  if (enumVal == "SOAKED") {
+   return "Soak";
+  } 
+         
+  if (enumVal == "SOFTENED") {
+   return "Soften";
+  } 
+       
+  if (enumVal == "SQUEEZED") {
+   return "Squeeze juice from";
+  } 
+       
+  if (enumVal == "SMASHED") {
+   return "Smash";
+  } 
+        
+  if (enumVal == "STRAIN") {
+   return "Strain";
+  } 
+         
+  if (enumVal == "TOASTED") {
+   return "Toast";
+  } 
+        
+  if (enumVal == "TOURNEED") {
+   return "Tournée";
+  } 
+      
+  if (enumVal == "WHIPPED") {
+   return "Whip";
+  } 
+      
+  if (enumVal == "WHISKED") {
+   return "Whisk";
+  } 
 
+ return "You decide what to do with";  
+}
+ 
 export
 const ScalingTypes = Object.freeze({
  HALVE:     "/ 2",

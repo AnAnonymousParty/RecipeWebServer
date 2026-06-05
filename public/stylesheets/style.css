@@ -302,6 +302,22 @@ div.scroll {
  white-space: nowrap;
 }
 
+.table-noborder-list {
+ border-collapse: collapse;
+          margin: 10px;
+     margin-left: auto;
+    margin-right: auto;          
+           width: auto;
+}
+
+.table-noborder-list td {
+      border: none;
+   font-size: 12px;
+     padding: 8px;
+  text-align: right;
+ white-space: nowrap;
+}
+
 .tempC {
         border: 1px solid #AAF;
  border-radius: 5px;

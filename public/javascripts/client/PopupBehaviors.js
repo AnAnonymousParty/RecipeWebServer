@@ -139,6 +139,7 @@ class PopupBehaviors {
    default: {
    
    }
+   break;
   }
  }
 }
@@ -613,8 +614,44 @@ class PrepListPopupBehavior extends PopupBehavior {
   
  RevealPopup() {
   super.RevealPopup();
+  
+  var recipeName = document.getElementById("recipeName").value;
+  
+  var xmlhttpReq = new XMLHttpRequest();
+  
+  xmlhttpReq.extraInfo = this;
  
-  ToggleVisibility(this.popupId);
+  xmlhttpReq.open("GET", "/GetPrepList?recipeName=" + recipeName); 
+
+  xmlhttpReq.onload = function() {  
+   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
+    return;
+   }
+  
+   if (HttpStatusTypes.OK === xmlhttpReq.status) {
+    document.getElementById("overlayContainer").className = "overlay";
+ 
+    if (undefined != xmlhttpReq.extraInfo.parentElement && "" != xmlhttpReq.extraInfo.parentElement) {  
+     HideElement(xmlhttpReq.extraInfo.parentElement);
+    
+     document.getElementById("ppuInvoker").value = xmlhttpReq.extraInfo.parentElement;
+    }
+   
+    ToggleVisibility(this.extraInfo.popupId);
+   
+    var html = xmlhttpReq.responseText;
+   
+    if ("" == html) {
+
+    } else {
+     document.getElementById("prepListContainer").innerHTML = html;
+     
+     document.getElementById("PrepListTitle").innerHTML = recipeName + " - " + GetDescFromPopupType(PopupTypes.PrepList) + "&nbsp;";
+    }
+   }
+  };
+
+  xmlhttpReq.send();  
  }
 } 
 
@@ -672,7 +709,43 @@ class ShoppingListPopupBehavior extends PopupBehavior {
   
  RevealPopup() {
   super.RevealPopup();
+  
+  var recipeName = document.getElementById("recipeName").value;
+  
+  var xmlhttpReq = new XMLHttpRequest();
+  
+  xmlhttpReq.extraInfo = this;
  
-  ToggleVisibility(this.popupId);
+  xmlhttpReq.open("GET", "/GetShoppingList?recipeName=" + recipeName); 
+
+  xmlhttpReq.onload = function() {  
+   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
+    return;
+   }
+  
+   if (HttpStatusTypes.OK === xmlhttpReq.status) {
+    document.getElementById("overlayContainer").className = "overlay";
+ 
+    if (undefined != xmlhttpReq.extraInfo.parentElement && "" != xmlhttpReq.extraInfo.parentElement) {  
+     HideElement(xmlhttpReq.extraInfo.parentElement);
+    
+     document.getElementById("ppuInvoker").value = xmlhttpReq.extraInfo.parentElement;
+    }
+   
+    ToggleVisibility(this.extraInfo.popupId);
+   
+    var html = xmlhttpReq.responseText;
+   
+    if ("" == html) {
+
+    } else {
+     document.getElementById("shoppingListContainer").innerHTML = html;
+     
+     document.getElementById("ShoppingListTitle").innerHTML = recipeName + " - " + GetDescFromPopupType(PopupTypes.ShoppingList) + "&nbsp;";
+    }
+   }
+  };
+
+  xmlhttpReq.send();  
  }
 }

@@ -131,7 +131,8 @@ app.get("/ExportAllRecipes", function (req, res) {
 });
 
 app.get('/DeleteRecipe', (req, res) => {
-var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
+ var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
+
  // Delete the recipe .xml file:
  
  try {
@@ -202,6 +203,63 @@ app.get('/GetHelpInfo', (req, res) => {
  console.log("< GetHelpInfo()"); 
 });
 
+app.get('/GetPrepList', (req, res) => {
+ let recipeName = decodeURIComponent(req.query.recipeName);
+ 
+ console.log("> GetPrepList(" + recipeName + ")"); 
+  
+ let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ 
+ let prepListHtml = "";
+ 
+ try {
+  let xmlParser          = new DOMParser();
+  let xmlDoc             = xmlParser.parseFromString(recipeDataXml.toString(), "text/xml");
+  let titleElement       = xmlDoc.getElementsByTagName("Title")[0];
+  let ingredientsElement = xmlDoc.getElementsByTagName("Ingredients")[0];
+  let ingredients        = ingredientsElement.getElementsByTagName("Ingredient");
+  let prepItems          = 0;
+  
+  for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
+   let ingredient = ingredients[ingredientNdx];
+   let prep       = ingredient.getElementsByTagName("Prep")[0].textContent;
+
+   if ("NONE" == prep) {
+    continue;
+   }
+   
+   let name  = ingredient.getElementsByTagName("Name")[0].textContent;
+   let notes = ingredient.getElementsByTagName("Notes")[0].textContent;
+   
+   ++prepItems;
+   
+   prepListHtml += "<tr>"
+                +   "<td><input type='checkbox'></td>" 
+                +   "<td align='right'>" + enums.GetDirectionFromPrepType(prep) + ":</td>" 
+                +   "<td align='left'>" + name + ("" != notes ? " (" + notes + ")</td>" : "")
+                +  "</tr>";
+  }
+  
+  if (0 == prepItems) {
+   prepListHtml = "No prep to perform";
+  } else {
+   prepListHtml = "<table class='table.noborder-list' id='PrepList'>" + prepListHtml + "</table>"
+                + "<br><br>"
+                + "<img height='48px' id='PrintPrepListBtn' onclick='PrintPrepList();' src='/images/Buttons/PrintBtn_48X48.png' style='margin: 0px 10px 0px 0px;' title='Print Prep List';>"
+  }
+ } catch(err) {
+  console.log("< GetPrepList(): Error = " + err);
+  
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+
+  return; 
+ }
+ 
+ res.status(enums.HttpStatusTypes.OK).send(prepListHtml);
+ 
+ console.log("< GetPrepList()"); 
+});
+
 app.get('/GetRecipesList', (req, res) => {
  var category = req.query.category;
  var cuisine  = req.query.cuisine; 
@@ -223,6 +281,50 @@ app.get('/GetRecipesToExportList', (req, res) => {
  var rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/recipes'));
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+app.get('/GetShoppingList', (req, res) => {
+ let recipeName = decodeURIComponent(req.query.recipeName);
+ 
+ console.log("> GetShoppingList(" + recipeName + ")"); 
+  
+ let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ 
+ let shoppingListHtml = "";
+ 
+ try {
+  let xmlParser          = new DOMParser();
+  let xmlDoc             = xmlParser.parseFromString(recipeDataXml.toString(), "text/xml");
+  let titleElement       = xmlDoc.getElementsByTagName("Title")[0];
+  let ingredientsElement = xmlDoc.getElementsByTagName("Ingredients")[0];
+  let ingredients        = ingredientsElement.getElementsByTagName("Ingredient");
+  
+  for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
+   let ingredient = ingredients[ingredientNdx];
+   let quan       = ingredient.getElementsByTagName("Quantity")[0].textContent;
+   let name       = ingredient.getElementsByTagName("Name")[0].textContent;
+   
+   shoppingListHtml += "<tr>"
+                    +   "<td><input type='checkbox'></td>" 
+                    +   "<td align='left'>" + name + "</td>" 
+                    +  "</tr>";
+  }
+  
+
+  shoppingListHtml = "<table class='table.noborder-list' id='ShoppingList'>" + shoppingListHtml + "</table>"
+                   + "<br><br>"
+                   + "<img height='48px' id='PrintShoppingListBtn' onclick='PrintShoppingList();' src='/images/Buttons/PrintBtn_48X48.png' style='margin: 0px 10px 0px 0px;' title='Print Shopping List';>"
+ } catch(err) {
+  console.log("< GetPrepList(): Error = " + err);
+  
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+
+  return; 
+ }
+ 
+ res.status(enums.HttpStatusTypes.OK).send(shoppingListHtml);
+ 
+ console.log("< GetShoppingList()"); 
 });
 
 app.get('/RenameRecipe', (req, res) => {

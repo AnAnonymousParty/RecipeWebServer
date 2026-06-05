@@ -17,7 +17,12 @@
  <body background="/images/veges.jpg" onload="InitPage();">
   <div class="header-section"> 
    <span class="filters" id="filtersContainer">
-    <img height="20px" onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Settings %>');" src="/images/Buttons/SettingsBtn_48X48.jpg" style="margin: 2px 10px 0px 0px;" title="Access Settings" width="20px">
+    <img height="20px" 
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Settings %>');" 
+         src="/images/Buttons/SettingsBtn_48X48.jpg" 
+         style="margin: 2px 10px 0px 0px;" 
+         title="Access Settings" 
+         width="20px">
     Cuisine: 
     <select id="cuisines" name="cuisines" onChange="ApplyFilter();" style="margin: 0px 10px 0px 5px;">
      <% Object.keys(enums.CuisineTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.CuisineTypes); %>
@@ -159,16 +164,17 @@
   <%# Prep List Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.PrepList %>" style="width: 50%;">
    <div class="heading">
-    <%= enums.GetDescFromPopupType(enums.PopupTypes.PrepList); %>&nbsp;
+    <span id="PrepListTitle"> </span>
     <img height="32px" 
+         id="HidePrepListBtn"
          onclick="PopupBehaviors.HidePopup('PrepListPopup');" 
          src="/images/Buttons/CloseIcon_512X512.png" 
          width="32px">
    </div>
    <br>
-   <div class="centered">
-   
-   </div>
+   <div class="centered" id="prepListContainer">
+    <%# This content will be replaced via client javascript, populated from server response to Prep List request. %>
+   </div>   
   </div>
   
   <%# Recipe Exists Warning Popup. %>
@@ -214,15 +220,16 @@
   <%# Shopping List Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.ShoppingList %>" style="width: 50%;">
    <div class="heading">
-     <%= enums.GetDescFromPopupType(enums.PopupTypes.ShoppingList); %>&nbsp;
+         <span id="ShoppingListTitle"> </span>
      <img height="32px" 
+          id="HideShoppingListBtn"
           onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ShoppingList %>');" 
           src="/images/Buttons/CloseIcon_512X512.png" 
           width="32px">
    </div>
    <br>
-   <div class="centered">
-   
+   <div id="shoppingListContainer" style="margin: auto; width: 60%;">
+    <%# This content will be replaced via client javascript, populated from server response to Shopping List request. %>
    </div>
   </div>
   
