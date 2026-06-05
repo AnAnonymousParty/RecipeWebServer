@@ -222,7 +222,13 @@ app.get('/GetPrepList', (req, res) => {
   
   for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
    let ingredient = ingredients[ingredientNdx];
-   let prep       = ingredient.getElementsByTagName("Prep")[0].textContent;
+   let type       = ingredient.getAttribute("type"); 
+   
+   if ("HEADING" == type) {
+    continue;
+   }
+   
+   let prep = ingredient.getElementsByTagName("Prep")[0].textContent;
 
    if ("NONE" == prep) {
     continue;
@@ -301,19 +307,31 @@ app.get('/GetShoppingList', (req, res) => {
   
   for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
    let ingredient = ingredients[ingredientNdx];
-   let quan       = ingredient.getElementsByTagName("Quantity")[0].textContent;
-   let name       = ingredient.getElementsByTagName("Name")[0].textContent;
+   let type       = ingredient.getAttribute("type");
    
+   if (type == "HEADING") {
+    continue;
+   }
+   
+   let quan = ingredient.getElementsByTagName("Quantity")[0].textContent;
+   let name = ingredient.getElementsByTagName("Name")[0].textContent;
+   let unit = (ingredient.getElementsByTagName("Quantity")[0]).getAttribute("units");
+
    shoppingListHtml += "<tr>"
                     +   "<td><input type='checkbox'></td>" 
-                    +   "<td align='left'>" + name + "</td>" 
+                    +   "<td align='left'>" 
+                    +    name 
+                    +    ("EACH" == unit ? " (" + quan + ")" : "")  
+                    +   "</td>"                    
                     +  "</tr>";
   }
   
 
   shoppingListHtml = "<table class='table.noborder-list' id='ShoppingList'>" + shoppingListHtml + "</table>"
                    + "<br><br>"
-                   + "<img height='48px' id='PrintShoppingListBtn' onclick='PrintShoppingList();' src='/images/Buttons/PrintBtn_48X48.png' style='margin: 0px 10px 0px 0px;' title='Print Shopping List';>"
+                   + "<div style='margin: auto; text-align: center;'>"
+                   + " <img height='48px' id='PrintShoppingListBtn' onclick='PrintShoppingList();' src='/images/Buttons/PrintBtn_48X48.png' style='margin: 0px 10px 0px 0px;' title='Print Shopping List';>"
+                   + "</div>"
  } catch(err) {
   console.log("< GetPrepList(): Error = " + err);
   
