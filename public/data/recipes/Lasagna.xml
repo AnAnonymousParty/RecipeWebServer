@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Lasagna_20251120_163613.jpg" name="Lasagna" category="CASSEROLE" cuisine="ITALIAN">
+  <Title image="Lasagna_20251120_163613.jpg" name="Lasagna" category="CASSEROLE" cuisine="ITALIAN" nativeUnits="US">
     <Yield amount="1" units="BATCH"/>
     <Times prep="30" cook="45"/>
   </Title>
-  <Nutrition calories="300" fat="10" carbs="33" protein="15" sugar="7" sodium="800" fiber="4" servings="1" servingsUnit="SLICE"/>
+  <Nutrition calories="300" fat="10" saturatedFat="" cholesterol="" carbs="33" protein="15" sugar="7" sodium="800" fiber="4" servings="1" servingsUnit="SLICE"/>
   <Description>Layers of pasta, cheese and tomato/meat sauce.</Description>
   <Prerequisites>
     <Prerequisite>Coat Glass/ceramic baking dish with olive oil.</Prerequisite>
@@ -37,7 +37,7 @@
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
-      <Name>Cottage cheease, small curd.</Name>
+      <Name>Cottage cheease, small curd</Name>
       <Quantity units="PINT">1</Quantity>
       <Prep>DRAINED</Prep>
       <Notes/>

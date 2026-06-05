@@ -1,64 +1,64 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Roasted Garlic Parmesan Cabbage_RoastedGarlicParmesanCabbage.PNG" name="Roasted Garlic Parmesan Cabbage" category="SIDE" cuisine="ITALIAN">
+  <Title image="Roasted Garlic Parmesan Cabbage_RoastedGarlicParmesanCabbage.PNG" name="Roasted Garlic Parmesan Cabbage" category="SIDE" cuisine="ITALIAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="10" cook="20"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="SLICE"/>
   <Description>Slices of caramelized cabbage, topped with &lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;.</Description>
   <Prerequisites>
     <Prerequisite>Preheat oven to 425°</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Cabbage</Name>
       <Quantity units="HEAD">.5</Quantity>
       <Prep>CLEANED</Prep>
       <Notes>Sliced into 8 wedges, core intact.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>&lt;a href='/GetRecipe?recipeName=Parmesan'&gt;Parmesan Cheese&lt;/a&gt;</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>GRATE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
       <Quantity units="CLOVE">4</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>EVOO</Name>
       <Quantity units="TBSP">3</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Rice Vinegar</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Soy Sauce</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>osher/Sea Salt</Name>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher/Sea Salt</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Pepper Flakes</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>White Pepper</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
@@ -66,12 +66,12 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Combine Parmesan, garlic, oil, vinegar, soy sauce and salt in a small bowl. </Step>
-    <Step image="">Arrange the cabbage wedges, cut-side down, on a large rimmed baking sheet. </Step>
-    <Step image="">Brush all sides of the cabbage with the garlic-Parmesan mixture. </Step>
-    <Step image="">Roast cabbage int bottom begins to brown, 5-10 minutes.</Step>
-    <Step image="">Flip and roast until the cabbage is tender and golden, about 10 minutes more. </Step>
-    <Step image="">Garnish with crushed red pepper and/or Parmesan, if desired. </Step>
+    <Step type="STEP" image="">Combine Parmesan, garlic, oil, vinegar, soy sauce and salt in a small bowl. </Step>
+    <Step type="STEP" image="">Arrange the cabbage wedges, cut-side down, on a large rimmed baking sheet. </Step>
+    <Step type="STEP" image="">Brush all sides of the cabbage with the garlic-Parmesan mixture. </Step>
+    <Step type="STEP" image="">Roast cabbage int bottom begins to brown, 5-10 minutes.</Step>
+    <Step type="STEP" image="">Flip and roast until the cabbage is tender and golden, about 10 minutes more. </Step>
+    <Step type="STEP" image="">Garnish with crushed red pepper and/or Parmesan, if desired. </Step>
   </Method>
   <Variations/>
 </Recipe>

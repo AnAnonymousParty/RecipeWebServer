@@ -322,15 +322,31 @@ app.get('/GetShoppingList', (req, res) => {
     continue;
    }
    
-   let quan = ingredient.getElementsByTagName("Quantity")[0].textContent;
-   let name = ingredient.getElementsByTagName("Name")[0].textContent;
-   let unit = (ingredient.getElementsByTagName("Quantity")[0]).getAttribute("units");
-
+   let quan    = ingredient.getElementsByTagName("Quantity")[0].textContent;
+   let name    = ingredient.getElementsByTagName("Name")[0].textContent;
+   let unit    = (ingredient.getElementsByTagName("Quantity")[0]).getAttribute("units");
+   let unitStr = "";
+   
+   let dispUnit = false;
+   
+   if ("EACH"    == unit || "BAG"    == unit || "BATCH" == unit || "BOTTLE" == unit || 
+       "BOX"     == unit || "BULB"   == unit || "BUNCH" == unit || "BUSHEL" == unit ||
+       "CAN"     == unit || "GALLON" == unit || "HEAD"  == unit || "LOAF"   == unit ||
+       "PACKAGE" == unit || "PECK"   == unit || "PINT"  == unit || "POUND"  == unit ||
+       "QUART"   == unit || "SLAB"   == unit || "STICK" == unit) {
+    dispUnit = true;    
+    unitStr  = " " + enums.GetDescFromUnitType(unit);
+   }
+   
+   if ("EACH" == unit) {
+    unitStr = "";
+   }
+   
    shoppingListHtml += "<tr>"
                     +   "<td><input type='checkbox'></td>" 
                     +   "<td align='left'>" 
                     +    stringUtils.ConvertMarkup(name) 
-                    +    ("EACH" == unit ? " (" + quan + ")" : "")  
+                    +    (true == dispUnit ? " (" + quan + unitStr + ")" : "")  
                     +   "</td>"                    
                     +  "</tr>";
   }

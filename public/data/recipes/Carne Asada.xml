@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Carne Asada_20250831_173602.jpg" name="Carne Asada" category="ENTREE_BEEF" cuisine="MEXICAN">
+  <Title image="Carne Asada_20250831_173602.jpg" name="Carne Asada" category="ENTREE_BEEF" cuisine="MEXICAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="60" cook="15"/>
   </Title>
@@ -30,7 +30,7 @@
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
-      <Name>Harlic</Name>
+      <Name>Garlic</Name>
       <Quantity units="CLOVE">1</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>

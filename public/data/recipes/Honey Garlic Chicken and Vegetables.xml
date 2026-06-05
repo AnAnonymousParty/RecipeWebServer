@@ -1,94 +1,94 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Honey Garlic Chicken and Vegetables_HoneyGarlicChickenVegs.jpg" name="Honey Garlic Chicken and Vegetables" category="ENTREE_POULTRY" cuisine="AMERICAN">
+  <Title image="Honey Garlic Chicken and Vegetables_HoneyGarlicChickenVegs.jpg" name="Honey Garlic Chicken and Vegetables" category="ENTREE_POULTRY" cuisine="AMERICAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="10" cook="240"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="ITEM"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="2" servingsUnit="ITEM"/>
   <Description>Chicken thighs slow roasted in a sweet garlicky sauce with root vegetables.</Description>
   <Prerequisites>
     <Prerequisite>Preheat oven to 300F, or prepare slow cooker.</Prerequisite>
   </Prerequisites>
   <Ingredients>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Chicken Thighs</Name>
       <Quantity units="EACH">8</Quantity>
       <Prep>SEASONED</Prep>
       <Notes>Bone in, skin on.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Small Red Potatoes</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>Halved.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Baby carrots</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>CLEANED</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Green Beans</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>CLEANTRIM</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Soy Sauce</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Honey</Name>
       <Quantity units="CUP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Ketchup</Name>
       <Quantity units="CUP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>Garkic</Name>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
       <Quantity units="CLOVE">8</Quantity>
       <Prep>SHAVED</Prep>
       <Notes>Paul Sorvino style.</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Basil</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>CHIFFONADE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Oregano</Name>
       <Quantity units="TSP">.5</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Red Pepper Flakes</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Fresh Black Pepper</Name>
       <Quantity units="TSP">.25</Quantity>
       <Prep>GROUND</Prep>
       <Notes/>
     </Ingredient>
-    <Ingredient>
-      <Name>KO=osher / Sea Salt</Name>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher / Sea Salt</Name>
       <Quantity units="TBSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>To Taste</Notes>
     </Ingredient>
-    <Ingredient>
+    <Ingredient type="INGREDIENT">
       <Name>Bacon Grease</Name>
       <Quantity units="TBSP">4</Quantity>
       <Prep>NONE</Prep>
@@ -96,13 +96,13 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step image="">Heat bacon grease in a large heavy pan.</Step>
-    <Step image="">Sear chicken thighs on both sides, set aside.</Step>
-    <Step image="">Combine soy sauce, honey, ketchup, garlic, basil, oregano, red pepper flakes and pepper. </Step>
-    <Step image="">Place chicken thighs, potatoes, carrots and soy sauce mixture into a 6-qt slow cooker or lidded casserole dish. </Step>
-    <Step image="">Cover and cook on low heat for 3-4 hours.</Step>
-    <Step image="">Add green beans and cook an additional 30 minutes.</Step>
-    <Step image="">Serve chicken immediately with potatoes, carrots and green beans, garnished with parsley, if desired. </Step>
+    <Step type="STEP" image="">Heat bacon grease in a large heavy pan.</Step>
+    <Step type="STEP" image="">Sear chicken thighs on both sides, set aside.</Step>
+    <Step type="STEP" image="">Combine soy sauce, honey, ketchup, garlic, basil, oregano, red pepper flakes and pepper. </Step>
+    <Step type="STEP" image="">Place chicken thighs, potatoes, carrots and soy sauce mixture into a 6-qt slow cooker or lidded casserole dish. </Step>
+    <Step type="STEP" image="">Cover and cook on low heat for 3-4 hours.</Step>
+    <Step type="STEP" image="">Add green beans and cook an additional 30 minutes.</Step>
+    <Step type="STEP" image="">Serve chicken immediately with potatoes, carrots and green beans, garnished with parsley, if desired. </Step>
   </Method>
   <Variations/>
 </Recipe>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Refried Beans_RFB.jpg" name="Refried Beans" category="SIDE" cuisine="MEXICAN">
+  <Title image="Refried Beans_RFB.jpg" name="Refried Beans" category="SIDE" cuisine="MEXICAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="5" cook="10"/>
   </Title>
@@ -51,7 +51,7 @@
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
-      <Name>Koasher / Sea Salt</Name>
+      <Name>Kosher / Sea Salt</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>NONE</Prep>
       <Notes>To taste.</Notes>
