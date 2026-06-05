@@ -24,6 +24,7 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
 var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
 var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
+var stringUtils = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
 
 // Route Handlers:
 
@@ -320,7 +321,7 @@ app.get('/GetShoppingList', (req, res) => {
    shoppingListHtml += "<tr>"
                     +   "<td><input type='checkbox'></td>" 
                     +   "<td align='left'>" 
-                    +    name 
+                    +    stringUtils.ConvertMarkup(name) 
                     +    ("EACH" == unit ? " (" + quan + ")" : "")  
                     +   "</td>"                    
                     +  "</tr>";
