@@ -208,8 +208,16 @@ app.get('/GetPrepList', (req, res) => {
  let recipeName = decodeURIComponent(req.query.recipeName);
  
  console.log("> GetPrepList(" + recipeName + ")"); 
+ 
+ let recipeDataXml = "";
   
- let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ try { 
+  recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ } catch (err) {
+  console.log("  GetPrepList(): " + err);
+ }
+ 
+ console.log("  GetPrepList() 1");
  
  let prepListHtml = "";
  
