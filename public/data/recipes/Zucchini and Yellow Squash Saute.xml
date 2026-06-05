@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Zucchini and Yellow Squash Saute_20250810_164926.jpg" name="Zucchini and Yellow Squash Saute" category="SIDE" cuisine="ITALIAN">
+  <Title image="Zucchini and Yellow Squash Saute_20250810_164926.jpg" name="Zucchini and Yellow Squash Saute" category="SIDE" cuisine="ITALIAN" nativeUnits="US">
     <Yield amount="4" units="SERVING"/>
     <Times prep="20" cook="5"/>
   </Title>
@@ -68,11 +68,11 @@
   <Method>
     <Step type="STEP" image="Zucchini and Yellow Squash Saute_20250810_161515.jpg">Add squash to a bowl and toss with salt, then spread on towel lined sheet pan and cover with a layer of paper towel. Let rest for 20 minutes to draw out moisture.</Step>
     <Step type="STEP" image="Zucchini and Yellow Squash Saute_20250810_161542.jpg">Press squash slightly to remove excess moisture.</Step>
-    <Step type="STEP" image="Zucchini and Yellow Squash Saute">Whisk oil, garlic, pepper and anchovy together.</Step>
+    <Step type="STEP" image="">Whisk oil, garlic, pepper and anchovy together.</Step>
     <Step type="STEP" image="Zucchini and Yellow Squash Saute_20250810_163737.jpg">Heat saute pan over medium heat with a bit of EVOO.</Step>
-    <Step type="STEP" image="Zucchini and Yellow Squash Saute">When pan begins to smoke, add EVOO mixture and squash. Toss and saute until lightly browned.</Step>
+    <Step type="STEP" image="">When pan begins to smoke, add EVOO mixture and squash. Toss and saute until lightly browned.</Step>
     <Step type="STEP" image="Zucchini and Yellow Squash Saute_20250810_164705.jpg">Add basil and vinegar, toss.</Step>
-    <Step type="STEP" image="Zucchini and Yellow Squash Saute">Adjust seasoning.</Step>
+    <Step type="STEP" image="">Adjust seasoning.</Step>
     <Step type="STEP" image="Zucchini and Yellow Squash Saute_20250810_164926.jpg">Transfer to a serving bowl and top with grated parmesan cheese, and serve.</Step>
   </Method>
   <Variations/>

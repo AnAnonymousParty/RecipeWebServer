@@ -243,7 +243,7 @@ app.get('/GetPrepList', (req, res) => {
    prepListHtml += "<tr>"
                 +   "<td><input type='checkbox'></td>" 
                 +   "<td align='right'>" + enums.GetDirectionFromPrepType(prep) + ":</td>" 
-                +   "<td align='left'>" + name + ("" != notes ? " (" + notes + ")</td>" : "")
+                +   "<td align='left'>" + stringUtils.ConvertMarkup(name)  + ("" != notes ? " (" + notes + ")</td>" : "")
                 +  "</tr>";
   }
   
