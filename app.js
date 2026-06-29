@@ -590,7 +590,7 @@ app.post("/UpdateRecipe", function (req, res) {
 
 // Handle image uploaded.
 app.post("/UploadImage", function (req, res) {
- console.log("> UploadImage"); 
+ console.log("> UploadImage(" + req.fields.recipeName + ", " + req.files.image.path + ")"); 
 
  var recipeName       = req.fields.recipeName; 
  var uploadedFileName = req.files.image.path;  

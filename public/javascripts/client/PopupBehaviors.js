@@ -39,14 +39,14 @@ class PopupBehaviors {
  }
 
 
- static RevealPopup(popupId, parentElement) {
+ static RevealPopup(popupId, parentElement, params) {
   const behaviors = new PopupBehaviors();
-  const behavior  = behaviors.GetBehavior(popupId, parentElement);
+  const behavior  = behaviors.GetBehavior(popupId, parentElement, params);
   
   behavior.RevealPopup();
  }
  
- GetBehavior(popupTypeId, parentElement) {
+ GetBehavior(popupTypeId, parentElement, params) {
   switch (popupTypeId) {
    case PopupTypes.AddIngredient: {
     return new AddIngredientPopupBehavior(popupTypeId);
@@ -68,7 +68,7 @@ class PopupBehaviors {
     return new AddStepPopupBehavior(popupTypeId);
    }
 
-   case PopupTypes.AddStepHeadingRecipe: {
+   case PopupTypes.AddStepHeading: {
     return new AddStepHeadingPopupBehavior(popupTypeId);
    }   
    
@@ -135,6 +135,10 @@ class PopupBehaviors {
    case PopupTypes.ShoppingList: {
     return new ShoppingListPopupBehavior(popupTypeId);
    }    
+   
+   case PopupTypes.UploadFile: {
+    return new UploadFilePopupBehavior(popupTypeId, parentElement, params);
+   } 
     
    default: {
    
@@ -747,5 +751,48 @@ class ShoppingListPopupBehavior extends PopupBehavior {
   };
 
   xmlhttpReq.send();  
+ }
+}
+
+
+class UploadFilePopupBehavior extends PopupBehavior  {
+ constructor(popupTypeId, parentElement, imageTgt) {
+  super(popupTypeId, parentElement);
+  
+  this.imageTgt = imageTgt;
+ }
+
+ HidePopup() {
+  super.HidePopup();
+
+  ToggleVisibility(this.popupId);
+ 
+  var imageUse = document.getElementById("imageUse").value;
+     
+  if ("stepImage" == imageUse) {
+   UnHideElement(document.getElementById("puInvoker").value);
+  } 
+ }
+  
+ RevealPopup() {
+  super.RevealPopup();
+  
+  let it = this.imageTgt;
+  
+  document.getElementById("imageUse").value     = this.imageTgt;
+  document.getElementById("image2Upload").value = "";
+ 
+  if (undefined != this.parentElement && "" != this.parentElement) {  
+   HideElement(this.parentElement);
+  
+   document.getElementById("puInvoker").value = this.parentElement;
+  }
+ 
+  HideElement("uploadImgBtn");
+  HideElement("response");
+ 
+  ToggleVisibility(this.popupId);
+ 
+  UnHideElement("FileUploadForm");  
  }
 }

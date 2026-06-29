@@ -115,12 +115,12 @@ function AddIngredient() {
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right";                 
  
- var btnStyle = document.getElementById("delAllIngredientsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllIngredients).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible"; 
  
-  PopupBehaviors.HidePopup(PopupTypes.AddIngredient);
+ PopupBehaviors.HidePopup(PopupTypes.AddIngredient);
 }
 
 function AddIngredientHeading() {
@@ -186,8 +186,8 @@ function AddIngredientHeading() {
  cell.style.maxWidth  = "150px"; 
  cell.style.minWidth  = "150px"; 
  cell.style.textAlign = "right";                 
- 
- var btnStyle = document.getElementById("delAllIngredientsBtn").style;
+
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllIngredients).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
@@ -237,12 +237,12 @@ function AddPrerequisite() {
                       + "<img height='24px' onclick='EditPrerequisite("   + (tbody.rows.length - 1) + ");' src='/images/Buttons/EditBtn_48X48.jpg'   title='Edit Prerequisite'   width='24px'>" 
                       + "</span>"
  
- var btnStyle = document.getElementById("delAllPrerequisitesBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllPrerequisites).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddPrerequisitePopup();
+ PopupBehaviors.HidePopup(PopupTypes.Prerequisite);
 }
 
 function AddRecipe() {
@@ -317,10 +317,10 @@ function AddStep() {
  var imgSrc  = document.getElementById("stepAddImage").src;
  var imgName = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.length);
   
- var tbody = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
- var row   = tbody.insertRow();
+ var tbody   = document.getElementById("stepsTable").getElementsByTagName('tbody')[0];
+ var row     = tbody.insertRow();
  
- var cell  = row.insertCell(-1);
+ var cell    = row.insertCell(-1);
  
  cell.innerHTML      = document.getElementById("step2Add").value 
                      + '<input name="step"     type="hidden" value="' + document.getElementById("step2Add").value + '">'
@@ -357,12 +357,12 @@ function AddStep() {
                       + (tbody.rows.length - 1)
                       + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>";                 
 
- var btnStyle = document.getElementById("delAllStepsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllSteps).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddStepPopup();
+ PopupBehaviors.HidePopup(PopupTypes.AddStep);
 }
 
 function AddStepHeading() {
@@ -422,7 +422,7 @@ function AddStepHeading() {
                       + (0 == tbody.rows.length ? 0 : tbody.rows.length - 1)
                       + ");' src='/images/Buttons/DownBtn_48X48.png' title='Move Step Down' width='24px'>"; 
 
- var btnStyle = document.getElementById("delAllStepsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllSteps).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
@@ -474,12 +474,12 @@ function AddVariation() {
                       + ");' src='/images/Buttons/EditBtn_48X48.jpg' title='Edit Variation' width='24px'>"
                       + "</span>";
 
- var btnStyle = document.getElementById("delAllVariationsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllVariations).style;
  
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddVariationPopup();
+ PopupBehaviors.HidePopup(PopupTypes.AddVariation);
 }
 
 function ApplyFilter() {
@@ -494,7 +494,7 @@ function DeleteAllIngredients() {
   
  tbody.innerHTML = "";
  
- var btnStyle = document.getElementById("delAllIngredientsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllIngredients).style;
  
  btnStyle.display    = "none";
  btnStyle.visibility = "collapse";
@@ -505,7 +505,7 @@ function DeleteAllPrerequisites() {
   
  tbody.innerHTML = "";
  
- var btnStyle = document.getElementById("delAllPrerequisitesBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllPrerequisites).style;
  
  btnStyle.display    = "none";
  btnStyle.visibility = "collapse";
@@ -581,7 +581,7 @@ function DeleteAllSteps() {
   
  tbody.innerHTML = "";
  
- var btnStyle = document.getElementById("delAllStepsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllSteps).style;
  
  btnStyle.display    = "none";
  btnStyle.visibility = "collapse";
@@ -592,7 +592,7 @@ function DeleteAllVariations() {
   
  tbody.innerHTML = "";
  
- var btnStyle = document.getElementById("delAllVariationsBtn").style;
+ var btnStyle = document.getElementById(ButtonTypes.DeleteAllVariations).style;
  
  btnStyle.display    = "none";
  btnStyle.visibility = "collapse";
@@ -618,7 +618,7 @@ function DeleteIngredient(rowNum) {
  }
  
  if (0 == tbody.rows.length) {
-  var btnStyle = document.getElementById("delAllIngredientsBtn").style;
+  var btnStyle = document.getElementById(ButtonTypes.DeleteAllIngredients).style;
  
   btnStyle.display    = "none";
   btnStyle.visibility = "collapse";
@@ -645,7 +645,7 @@ function DeletePrerequisite(rowNum) {
  }
  
  if (0 == tbody.rows.length) {
-  var btnStyle = document.getElementById("delAllPrerequisitesBtn").style;
+  var btnStyle = document.getElementById(ButtonTypes.DeleteAllPrerequisites).style;
  
   btnStyle.display    = "none";
   btnStyle.visibility = "collapse";
@@ -741,7 +741,7 @@ function DeleteStep(rowNum) {
  }
  
  if (0 == tbody.rows.length) {
-  var btnStyle = document.getElementById("delAllStepsBtn").style;
+  var btnStyle = document.getElementById(ButtonTypes.DeleteAllSteps).style;
  
   btnStyle.display    = "none";
   btnStyle.visibility = "collapse";
@@ -793,7 +793,7 @@ function DeleteVariation(rowNum) {
  }
  
  if (0 == tbody.rows.length) {
-  var btnStyle = document.getElementById("delAllVariationsBtn").style;
+  var btnStyle = document.getElementById(ButtonTypes.DeleteAllVariations).style;
  
   btnStyle.display    = "none";
   btnStyle.visibility = "collapse";
@@ -1031,149 +1031,6 @@ function EditVariation(rowNum) {
  PopupBehaviors.RevealPopup(PopupTypes.EditVariation);
 }
 
-function HandleAddIngredientBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddIngredient);
-}
-
-function HandleAddIngredientHeadingBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddIngredientHeading);
-}
-
-function HandleAddPrerequisiteBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddPrerequisite);
-}
-
-function HandleAddStepBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddStep);
-}
-
-function HandleAddStepHeadingBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddStep);
-}
-
-function HandleAddVariationBtnClkd() {
- PopupBehaviors.RevealPopup(PopupTypes.AddVariation);
-}
-
-function HandleDelAllIngredientsBtnClkd() {
- if (true == confirm("Are you sure you want to delete all of the ingredients in the recipe?")) {
-  DeleteAllIngredients();
- } 
-}
-
-function HandleDelAllPrerequisitesBtnClkd() {
- if (true == confirm("Are you sure you want to delete all of the prerequisites in the recipe?")) {
-  DeleteAllPrerequisites();
- }
-}
-
-function HandleDelAllStepsBtnClkd() {
-  if (true == confirm("Are you sure you want to delete all of the steps in the recipe?")) {
-  DeleteAllSteps();
- }
-}
-
-function HandleDelAllVariationsBtnClkd() {
- if (true == confirm("Are you sure you want to delete all of the variations in the recipe?")) {
-  DeleteAllVariations();
- }
-}
-
-function HandleExportAllBtnClkd() {
- var xmlhttpReq = new XMLHttpRequest();
- 
- document.getElementById("ExportRecipesResponseContainer").innerHTML = "Exporting all recipes.<br><br>Depending on the number of recipes, this can take some time.<br><br>Please be patient.";
- 
- HideElement("ExportContainer"); 
- HideElement("ExportButtonsContainer");
- UnHideElement("ExportRecipesResponseContainer"); 
- 
- xmlhttpReq.open("GET", "/ExportAllRecipes"); 
- 
- xmlhttpReq.responseType = "blob";
-
- xmlhttpReq.onload = function() {
-  HideElement("editPageBtns");
-  HideElement("recipeTitleContainer");
-  HideElement("viewPageBtns");
-  
-  UnHideElement("indexPageBtns"); 
-  UnHideElement("filtersContainer", "inline-flex");
-  
-  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) { 
-   return;
-  }
-  
-  if (HttpStatusTypes.OK === xmlhttpReq.status) {
-   document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
-   
-   HideElement("ExportContainer");
-   UnHideElement("ExportRecipesResponseContainer");
-
-   let blob = new Blob([xmlhttpReq.response], {type: 'application/zip'});
-   let uri  = URL.createObjectURL(blob);
-   let link = document.createElement("a");
-   
-   link.download = "recipes.zip";
-   link.href     = uri;
-
-   document.body.appendChild(link);
-   link.click();
-   document.body.removeChild(link);
-  } else {
-   alert("Unable to download .zip file");
-  }
- };
-
- xmlhttpReq.send(); 
-}
-
-function HandleExportSelectedBtnClkd() {
- var xmlhttpReq = new XMLHttpRequest();
- 
- xmlhttpReq.open("POST", "/ExportSelectedRecipes", true); 
- xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
- 
- xmlhttpReq.responseType = "blob";
- 
- xmlhttpReq.onload = function() {
-  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
-   return;
-  }
-  
-  if (HttpStatusTypes.OK === xmlhttpReq.status) {
-   document.getElementById("ExportRecipesResponseContainer").innerText = "Recipes Exported.";
-   
-   HideElement("ExportContainer");
-   UnHideElement("ExportRecipesResponseContainer");
-  
-   let blob = new Blob([xmlhttpReq.response], {type: 'application/octet-stream'});
-   let uri  = URL.createObjectURL(blob);
-   let link = document.createElement("a");
-   
-   link.download = "recipes.zip";
-   link.href     = uri;
-
-   document.body.appendChild(link);
-   link.click();
-   document.body.removeChild(link);
-  } else {
-   alert("Unable to download .zip file");
-  }
- }; 
- 
- var formData = new FormData(document.getElementById("ExportRecipesForm"));
- var obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
- var json     = JSON.stringify(obj); 
- 
- document.getElementById("ExportRecipesResponseContainer").innerText = "Exporting selected recipes.<br><br>Depending on the number of recipes, this can take some time.<br><br>Please be patient.";
- 
- HideElement("ExportContainer"); 
- UnHideElement("ExportButtonsContainer");
-
- xmlhttpReq.send(json); 
-}
-
 function HandleImageSelectionChanged() {
  let imagePathFile = document.getElementById('image2Upload').files[0];
  
@@ -1182,113 +1039,6 @@ function HandleImageSelectionChanged() {
  } else {
   UnHideElement("uploadImgBtn", "inline");
  }
-}
-
-function HandleRequestRenameRecipeBtnClkd() {
- let newRecipeName = prompt("Enter new name for recipe and click OK to proceed.");
- 
- if (null == newRecipeName) {
-  return;
- }
- 
- if (false == IsFileName(newRecipeName)) {
-  alert("A name must be provided and may contain \"'0123456789 abcdefghijklmnopqrstuvwxyz-_\".");
-  
-  return;
- }
- 
- if (false == IsNotOnlySpaces(newRecipeName)) {
-  alert("A name cannot be just spaces,");
-  
-  return;
- }
-
- var xmlhttp = new XMLHttpRequest();
-    
- xmlhttp.onreadystatechange = function() {
-  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
-   return;
-  }
- 
-  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
-   if ("NO" == xmlhttp.response) {
-    let oldRecipeName = encodeURIComponent(document.getElementById("recipeTitle").innerText);
-    
-    RequestRenameRecipe(oldRecipeName, encodeURIComponent(newRecipeName));
-   } else {
-    alert("Recipe '" + newRecipeName + "' already exists.");
-   } 
-  }
-  else {
-   // TODO: Handle failure, if needed.
-  }
- }
-  
- var params = encodeURIComponent(newRecipeName);
-    
- xmlhttp.open("GET", "/CheckRecipeExists?file2Check=" + params, true);
- 
- xmlhttp.send();
-}
-
-function HandleSearchBtnClkd() {
- var xmlhttpReq = new XMLHttpRequest();
- 
- var searchTerm = document.getElementById("searchTerm").value;
- 
- if ("" == searchTerm) {
-  alert("Please enter a search term to perform a search.");
-  
-  return;  
- }
- 
- xmlhttpReq.open("GET", "/SearchRecipes?searchTerm=" + searchTerm); 
-
- xmlhttpReq.onload = function() {
-   HideElement("editPageBtns");
-   HideElement("recipeTitleContainer");
-   HideElement("viewPageBtns");
-   
-   UnHideElement("indexPageBtns"); 
-   UnHideElement("filtersContainer", "inline-flex");
-  
-  if (ReadyStateTypes.DONE == xmlhttpReq.readyState && HttpStatusTypes.OK === xmlhttpReq.status) {
-   var data = xmlhttpReq.responseText;
-   
-   const parser = new DOMParser();
-   const doc    = parser.parseFromString(data, 'text/html');
-   
-   var filesListCnt = doc.getElementById("filesListCnt").value;
-    
-   document.getElementById("displayCnt").innerText = filesListCnt;
-   
-   if ("" == data) { 
-    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system for the selected filters.<br><br>Why don't you add some?";
-    
-    HideElement("DeleteAllRecipesBtn");
-   } else {   
-    document.getElementById("recipesListContainer").innerHTML = data;
-    
-    UnHideElement("DeleteAllRecipesBtn", "inline");
-   }
-  } else {
-   document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
-  }
- };
-
- xmlhttpReq.send(); 
-} 
-
-function HideFileUploadPopup() {
- document.getElementById("overlayContainer").className = "no-overlay";
- 
- var imageUse = document.getElementById("imageUse").value;
-     
- if ("stepImage" == imageUse) {
-  UnHideElement(document.getElementById("puInvoker").value);
- }
- 
- ToggleVisibility("fileUploadPopup");
 }
 
 function InitPage() {
@@ -1307,6 +1057,8 @@ function InitPage() {
    
    UnHideElement("DeleteAllRecipesBtn", "inline");
  }
+ 
+ document.getElementById("searchTerm").focus();
 }
 
 function MoveIngredientDown(rowNum) {
@@ -1646,7 +1398,8 @@ function SaveIngredient() {
                                        + '<input name="prep" type="hidden" value="' + preparation + '">';
  tbody.rows[rowNdx].cells[4].innerHTML = notes
                                        + '<input name="notes" type="hidden" value="' + notes + '">'; 
- HideEditIngredientPopup();
+
+ PopupBehaviors.HidePopup(PopupTypes.EditIngredient);
 } 
 
 function SaveIngredientHeading() {
@@ -1682,7 +1435,8 @@ function SaveIngredientHeading() {
                                        + '<input name="measure"        type="hidden" value="BAG">'
                                        + '<input name="prep"           type="hidden" value="NONE">'
                                        + '<input name="notes"          type="hidden" value=" ">'; 
- HideEditIngredientHeadingPopup();
+
+ PopupBehaviors.HidePopup(PopupTypes.EditIngredientHeading); 
 } 
 
 function SavePDF(recipeName, scaling, units) {
@@ -1742,7 +1496,7 @@ function SavePrerequisite() {
  tbody.rows[rowNdx].cells[0].innerHTML = document.getElementById("prerequisite2Edit").value
                                        + '<input name="prerequisite" type="hidden" value="' + document.getElementById("prerequisite2Edit").value + '">';
 
- HideEditPrerequisitePopup();
+ PopupBehaviors.HidePopup(PopupTypes.EditPrerequisite); 
 }  
 
 function SaveRecipe() {
@@ -1909,7 +1663,8 @@ function SaveStep() {
  var imgUri  = document.getElementById("image2Edit").src;
  var imgName = imgUri.substring(imgUri.lastIndexOf("/") + 1, imgUri.length);
  
- tbody.rows[rowNdx].cells[1].innerHTML = '<img height="80px" src="' + ("" == imgName ? '' : imgUri) + '" ' + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
+ tbody.rows[rowNdx].cells[1].innerHTML = '<img height="80px" src="' + ("" == imgName ? '' : imgUri) + '" ' 
+                                       + ("" == imgName ? 'style="display: none; visibility: collapse;" ' : '') + 'width="80px">'
                                        + '<input name="stepImage" type="hidden" value="' + imgName + '">';
  if ("" == imgName) {
   HideElement("image2Edit");
@@ -1921,7 +1676,7 @@ function SaveStep() {
   UnHideElement("image2Edit");
  }
 
- HideEditStepPopup();
+ PopupBehaviors.HidePopup(PopupTypes.EditStep);
 } 
 
 function SaveStepHeading() {
@@ -1954,7 +1709,8 @@ function SaveStepHeading() {
                                        + '<input name="step"      type="hidden" value="' + headingTxt + '">'
                                        + '<input name="stepType"  type="hidden" value="HEADING">'
                                        + '<input name="stepImage" type="hidden" value="noimg.jpg">';
- HideEditStepHeadingPopup();
+
+ PopupBehaviors.HidePopup(PopupTypes.EditStepHeading); 
 }
 
 function SaveVariation() {
@@ -1986,27 +1742,8 @@ function SaveVariation() {
  tbody.rows[rowNdx].cells[0].innerHTML = document.getElementById("variation2Edit").value
                                        + '<input name="variation" type="hidden" value="' + document.getElementById("variation2Edit").value + '">';
 
- HideEditVariationPopup();
+ PopupBehaviors.HidePopup(PopupTypes.EditVariation);
 }  
-
-function ShowFileUploadPopup(imageTgt, parentElement) {
- document.getElementById("imageUse").value             = imageTgt;
- document.getElementById("overlayContainer").className = "overlay";
- document.getElementById("image2Upload").value         = "";
- 
- if ("" != parentElement) {  
-  HideElement(parentElement);
-  
-  document.getElementById("puInvoker").value = parentElement;
- }
- 
- HideElement("uploadImgBtn");
- HideElement("response");
- 
- ToggleVisibility("fileUploadPopup");
- 
- UnHideElement("FileUploadForm");
-}
 
 function ShowRecipesList(category, cuisine) {
  var xmlhttpReq = new XMLHttpRequest();
@@ -2156,7 +1893,7 @@ function SubmitFileForUpload(imageUse) {
     break;  // Nothing lasts forever.
    }
   } else {
-   //TODO: Handle server error somehow.
+   response.innerHTML = "Server Error: File upload rejected";
   }
    
   response.innerHTML = xmlhttpReq.responseText;

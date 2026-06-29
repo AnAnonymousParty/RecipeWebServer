@@ -1,5 +1,11 @@
-<form action="UpdateRecipe" id="editRecipeForm" method="post" name="editRecipeForm"> 
- <input id="recipeName" name="recipeName" type="hidden" value="<%= recipeData.Recipe.Title[0].$.name %>">   
+<form action="UpdateRecipe" 
+      id="editRecipeForm" 
+      method="post" 
+      name="editRecipeForm"> 
+ <input id="recipeName" 
+        name="recipeName" 
+        type="hidden" 
+        value="<%= recipeData.Recipe.Title[0].$.name %>">   
 
  <div class="recipe-line">
   <span class="field-header">
@@ -196,8 +202,17 @@
    <%
     var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; visibility: collapse;" : "display: inline; visibility: visible;");
    %> 
-   <img height="300px" id="mainImage" onclick='ViewImage("/images/Recipes/recipeData.Recipe.Title[0].$.image %>");' src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" style="<%=style %>" width="300px">
-   <input id="mainImageName" name="mainImageName" readonly="readonly" type="hidden" value="<%=recipeData.Recipe.Title[0].$.image %>">
+   <img height="300px" 
+        id="mainImage" 
+        onclick='ViewImage("/images/Recipes/recipeData.Recipe.Title[0].$.image %>");' 
+        src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" 
+        style="<%=style %>" 
+        width="300px">
+   <input id="mainImageName" 
+          name="mainImageName" 
+          readonly="readonly" 
+          type="hidden" 
+          value="<%=recipeData.Recipe.Title[0].$.image %>">
   </span>
  </div> 
  
@@ -206,7 +221,11 @@
    &nbsp;
   </span>
   <span class="field-value">
-   <img height="24px" onclick='ShowFileUploadPopup("mainImage", "");' src="/images/Buttons/ChangeBtn_48X48.png" title="Change Image" width="24px">    
+   <img height="24px"  
+        onclick='PopupBehaviors.RevealPopup("<%= enums.PopupTypes.UploadFile %>", "", "mainImage");' 
+        src="/images/Buttons/ChangeBtn_48X48.png" 
+        title="Change Image" 
+        width="24px">    
   </span>
  </div> 
  
@@ -243,8 +262,16 @@
         </td>
         <td colspan="2" style="max-width: 55px; min-width: 55px; text-align: right;">
          <span>
-          <img height="24px" onclick="DeletePrerequisite(<%=ndx %>);" src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Prerequisite" width="24px">  
-          <img height="24px" onclick="EditPrerequisite(<%=ndx %>);"   src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Prerequisite"   width="24px">       
+          <img height="24px" 
+               onclick="DeletePrerequisite(<%=ndx %>);" 
+               src="/images/Buttons/DeleteBtn_48X48.jpg" 
+               title="Delete Prerequisite" 
+               width="24px">  
+          <img height="24px" 
+               onclick="EditPrerequisite(<%=ndx %>);"   
+               src="/images/Buttons/EditBtn_48X48.jpg"   
+               title="Edit Prerequisite"   
+               width="24px">       
          </span>         
         </td>
        </tr> 
@@ -254,8 +281,20 @@
   </div>
   <br>
   <div class="centered">
-   <img height="48px" id="AddPrerequisiteBtn"     onclick="HandleAddPrerequisiteBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"    style="margin: 0px 10px 0px 0px;" title="Add Prerequisite"         width="48px">   
-   <img height="48px" id="delAllPrerequisitesBtn" onclick="HandleDelAllPrerequisitesBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="<%=ps %>"                  title="Delete All Prerequisites" width="48px">   
+   <img height="48px" 
+        id="<%= enums.ButtonTypes.AddPrerequisite %>"     
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddPrerequisite %>');"     
+        src="/images/Buttons/AddBtn_60X48_Dark.png"    
+        style="margin: 0px 10px 0px 0px;" 
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddPrerequisite); %>"         
+        width="48px">   
+   <img height="48px" 
+        id="<%= enums.ButtonTypes.DeleteAllPrerequisites %>" 
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.DeleteAllPrerequisites %>');" 
+        src="/images/Buttons/DelAllBtn_48X48_Dark.png" 
+        style="<%=ps %>"                  
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.DeleteAllPrerequisites); %>" 
+        width="48px">   
   </div> 
  </div> 
  
@@ -349,10 +388,26 @@
         <input name="notes"          type="hidden" value="">
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <img height="24px" onclick="DeleteIngredient(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Ingredient"    width="24px">   
-        <img height="24px" onclick="EditIngredient(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Ingredient"      width="24px">        
-        <img height="24px" onclick="MoveIngredientUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Ingredient Up"   width="24px">   
-        <img height="24px" onclick="MoveIngredientDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Ingredient Down" width="24px">            
+        <img height="24px" 
+             onclick="DeleteIngredient(<%=ndx %>);"   
+             src="/images/Buttons/DeleteBtn_48X48.jpg" 
+             title="Delete Ingredient"    
+             width="24px">   
+        <img height="24px" 
+             onclick="EditIngredient(<%=ndx %>);"    
+             src="/images/Buttons/EditBtn_48X48.jpg"   
+             title="Edit Ingredient"      
+             width="24px">        
+        <img height="24px" 
+             onclick="MoveIngredientUp(<%=ndx %>);"   
+             src="/images/Buttons/UpBtn_48X48.png"     
+             title="Move Ingredient Up"   
+             width="24px">   
+        <img height="24px" 
+             onclick="MoveIngredientDown(<%=ndx %>);" 
+             src="/images/Buttons/DownBtn_48X48.png"   
+             title="Move Ingredient Down" 
+             width="24px">            
        </td>        
       </tr>        
       <%}%>       
@@ -362,9 +417,23 @@
   </div>
   <br>
   <div class="centered">
-   <img height="48px"                           onclick="HandleAddIngredientBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                      title="Add Ingredient"         width="48px">
-   <img height="48px"                           onclick="HandleAddIngredientHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  title="Add Ingredient Heading" width="48px">  
-   <img height="48px" id="delAllIngredientsBtn" onclick="HandleDelAllIngredientsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png"  style="<%=is %>" title="Delete All Ingredients" width="48px">  
+   <img height="48px"                           
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddIngredient %>');"        
+        src="/images/Buttons/AddBtn_60X48_Dark.png"                      
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddIngredient); %>"         
+        width="48px">
+   <img height="48px"                           
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddIngredientHeading %>');" 
+        src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddIngredientHeading); %>" 
+        width="48px">  
+   <img height="48px" 
+        id="<%= enums.ButtonTypes.DeleteAllIngredients %>" 
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.DeleteAllIngredients %>');"    
+        src="/images/Buttons/DelAllBtn_48X48_Dark.png"  
+        style="<%=is %>" 
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.DeleteAllIngredients); %>"
+        width="48px">  
   </div> 
  </div>  
  
@@ -463,9 +532,23 @@
   </div> 
   <br>
   <div class="centered">
-   <img height="48px"                           onclick="HandleAddStepBtnClkd();"        src="/images/Buttons/AddBtn_60X48_Dark.png"                      title="Add Step"         width="48px">
-   <img height="48px"                           onclick="HandleAddStepHeadingBtnClkd();" src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  title="Add Step Heading" width="48px">  
-   <img height="48px" id="delAllIngredientsBtn" onclick="HandleDelAllStepsBtnClkd();"    src="/images/Buttons/DelAllBtn_48X48_Dark.png"  style="<%=is %>" title="Delete All Steps" width="48px"> 
+   <img height="48px"                           
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddStep %>');"        
+        src="/images/Buttons/AddBtn_60X48_Dark.png"                      
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddStep); %>"        
+        width="48px">
+   <img height="48px"                           
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddStepHeading %>');" 
+        src="/images/Buttons/AddHdngBtn_60X48_Dark.png"                  
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddStepHeading); %>"
+        width="48px">  
+   <img height="48px" 
+        id="<%= enums.ButtonTypes.DeleteAllSteps %>" 
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.DeleteAllSteps %>');"    
+        src="/images/Buttons/DelAllBtn_48X48_Dark.png"  
+        style="<%=is %>" 
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.DeleteAllSteps); %>" 
+        width="48px"> 
   </div> 
  </div>  
 
@@ -502,8 +585,16 @@
         </td>
         <td colspan="2" style="max-width: 95px; min-width: 95px; text-align: right;">
          <span>
-          <img height="24px" onclick="DeleteVariation(<%=ndx %>);" src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Variation" width="24px">   
-          <img height="24px" onclick="EditVariation(<%=ndx %>);"   src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Variation"   width="24px">           
+          <img height="24px" 
+               onclick="DeleteVariation(<%=ndx %>);"  
+               src="/images/Buttons/DeleteBtn_48X48.jpg" 
+               title="Delete Variation" 
+               width="24px">   
+          <img height="24px" 
+               onclick="EditVariation(<%=ndx %>);"   
+               src="/images/Buttons/EditBtn_48X48.jpg"   
+               title="Edit Variation"   
+               width="24px">           
          </span>         
         </td>
        </tr> 
@@ -513,8 +604,18 @@
   </div>
   <br>
   <div class="centered">
-   <img height="48px"                           onclick="HandleAddVariationBtnClkd();"     src="/images/Buttons/AddBtn_60X48_Dark.png"                     title="Add Variation"         width="48px">
-   <img height="48px" id="delAllVariationsBtn"  onclick="HandleDelAllVariationsBtnClkd();" src="/images/Buttons/DelAllBtn_48X48_Dark.png" style="<%=ps %>" title="Delete All Variations" width="48px">    
+   <img height="48px"                           
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.AddVariation %>');"     
+        src="/images/Buttons/AddBtn_60X48_Dark.png"                     
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.AddVariation); %>"         
+        width="48px">
+   <img height="48px" 
+        id="<%= enums.ButtonTypes.DeleteAllVariations %>"  
+        onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.DeleteAllVariations %>');" 
+        src="/images/Buttons/DelAllBtn_48X48_Dark.png" 
+        style="<%=ps %>" 
+        title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.DeleteAllVariations); %>" 
+        width="48px">    
   </div> 
  </div>  
 </form>
@@ -724,7 +825,10 @@
     </span>
     <span class="field-value">
      <div style="display: inline-block;">
-      <button onclick="ShowFileUploadPopup('stepImage', 'addStepPopup');" type="button">Upload</button>
+      <button onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.UploadFile %>', '<%= enums.PopupTypes.AddStep %>', 'stepImage');" 
+              type="button">
+       Upload
+      </button>
       <img height="80px" 
            id="stepAddImage" 
            src="" 
@@ -1052,9 +1156,21 @@
     <span class="field-value">
      <div style="display: inline-block;">
       <!-- Buttons / images conditionally displayed. -->
-      <button id="addImgBtn" onclick="ShowFileUploadPopup('stepImage', 'editStepPopup');" type="button">Upload</button>
-      <button id="delImgBtn" onclick="DeleteStepImage();"                                 type="button">Delete</button>
-      <img height="80px" id="image2Edit" src="" style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" width="80px">
+      <button id="addImgBtn" 
+              onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.UploadFile %>', '<%= enums.PopupTypes.EditStep %>', 'stepImage');" 
+              type="button">
+       Upload
+      </button>
+      <button id="delImgBtn" 
+              onclick="DeleteStepImage();"                                 
+              type="button">
+       Delete
+      </button>
+      <img height="80px" 
+           id="image2Edit" 
+           src="" 
+           style="display: none; margin: 10px 0px 0px 0px; visibility: collapse;" 
+           width="80px">
      </div>
     </span>
    </div>    
@@ -1170,12 +1286,12 @@
 </div>
 
 <%# File Uploader Popup. %>
-<div class="popup" id="fileUploadPopup" style="width: 30%;">
+<div class="popup" id="<%= enums.PopupTypes.UploadFile %>" style="width: 30%;">
  <div class="heading">
   UPLOAD IMAGE&nbsp;
   <img height="32px" 
        id="fupCloseBtn" 
-       onclick="HideFileUploadPopup();" 
+       onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.UploadFile %>');"
        src="/images/Buttons/CloseIcon_512X512.png" 
        width="32px">
  </div>
@@ -1186,8 +1302,17 @@
    <input id="puInvoker" type="hidden" value="">
    <div>
     <div class="fileUpload-div" id="fileUploadForm">
-     <input id="image2Upload" onchange="HandleImageSelectionChanged();" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-     <img height="48px" id="uploadImgBtn" onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Upload" width="48px">    
+     <input id="image2Upload" 
+            onchange="HandleImageSelectionChanged();" 
+            required="required" 
+            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
+            type="file">
+     <img height="48px" 
+          id="uploadImgBtn"  
+          onclick="SubmitFileForUpload(document.getElementById('imageUse').value);" 
+          src="/images/Buttons/UploadBtn_48X48.png" 
+          title="Upload" 
+          width="48px">    
     </div>
    </div>
   </form>

@@ -3,7 +3,9 @@
 <html>
  <head>
   <link href='/stylesheets/style.css' rel='stylesheet' />
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/javascripts/client/ButtonBehaviors.js"></script>
   <script src="/javascripts/client/common.js"></script>
   <script src="/javascripts/client/constants.js"></script>
   <script src="/javascripts/client/conversions.js"></script>   
@@ -11,6 +13,7 @@
   <script src="/javascripts/client/MainPage.js"></script>
   <script src="/javascripts/client/PopupBehaviors.js"></script>
   <script src="/javascripts/client/validate.js"></script>
+  
   <title><%= title %></title>
  </head>
  
@@ -31,14 +34,32 @@
     <select id="categories" name="category" onChange="ApplyFilter();" style="margin: 0px 0px 0px 5px;">
      <% Object.keys(enums.CategoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.CategoryTypes); %>
     </select>
-    <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
-    <img height="18px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="18px">
+    <input data-validation="v" 
+           id="searchTerm" 
+           maxlength="128" 
+           name="searchTerm" 
+           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.Search %>');}"
+           size="48" 
+           style="margin: 0px 0px 0px 30px;" 
+           type="text">
+    <img height="18px" 
+         onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.Search %>');" 
+         src="/images/Buttons/SearchBtn_48X48.jpg" 
+         style="margin: 0px 10px 0px 5px;" 
+         title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.Search) %>" 
+         width="18px">
     <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <span id="totalCnt"><%- recipesCnt %></span></span>
    </span>   
    <div id="recipeTitleContainer" style="align-items: center; display: none; visibility: collapse; text-align: center; vertical-align:middle;">
     <span style="align-items: center; display: flex; vertical-align: middle;">
      <h2 id="recipeTitle" style="display: inline;">Placeholder</h2> 
-     <img height="24px" id="RenameRecipeBtn();" onclick="HandleRequestRenameRecipeBtnClkd();" src="/images/Buttons/EditBtn_48X48_White.png" style="margin: 0px 0px 0px 5px;" title="Rename Recipe" width="24px"> 
+     <img height="24px" 
+          id="RenameRecipeBtn();" 
+          onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.RenameRecipe %>');" 
+          src="/images/Buttons/EditBtn_48X48_White.png" 
+          style="margin: 0px 0px 0px 5px;" 
+          title="<%= enums.GetDescFromButtonType(enums.ButtonTypes.RenameRecipe) %>" 
+          width="24px"> 
     </span>
    </div>   
   </div>
@@ -125,8 +146,18 @@
       <%# List placeholder, filled in by server upon request. %>
      </div>    
      <div class="centered" id="ExportButtonsContainer">
-      <button id="ExportSelected" name="ExportSelected" onclick="HandleExportSelectedBtnClkd();" type="button">Export Selected</button>
-      <button id="ExportAll"      name="ExportAll"      onclick="HandleExportAllBtnClkd();"      type="button">Export All</button>
+      <button id="ExportSelected" 
+              name="ExportSelected" 
+              onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.ExportSelected %>');" 
+              type="button">
+              <%= enums.GetDescFromButtonType(enums.ButtonTypes.ExportSelected); %>
+      </button>
+      <button id="ExportAll"     
+              name="ExportAll"      
+              onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.ExportAll %>');"      
+              type="button">
+              <%= enums.GetDescFromButtonType(enums.ButtonTypes.ExportAll); %>
+      </button>
      </div>
     </form>
    </div>

@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
  try {
   var recipeDataXml = fs.readFileSync(path.join(__dirname, '/../public/data/recipes/', recipeName + '.xml')); 
  } catch (err) {
-  console.log(err);
+  console.log("  EditRecipe(): Error - " + err);
  }
  
  var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
@@ -25,11 +25,13 @@ router.get('/', function(req, res, next) {
  //console.log("JSONs: ", JSON.stringify(recipeDataJson, null, 2));
  
  try {
+  console.log("  EditRecipe(): Rendering...");
+  
   res.render('editRecipe', { commonUtils: common,    
                                    enums: enums,
                               recipeData: recipeDataJson });
  } catch (err) {
-  console.log(err);
+  console.log("  EditRecipe(): Error - " + err);
  }
  
  console.log("< EditRecipe()");

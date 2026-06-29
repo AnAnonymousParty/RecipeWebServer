@@ -1,3 +1,101 @@
+const ButtonTypes = Object.freeze({
+ AddIngredient:           "AddIngredientBtn",
+ AddIngredientHeading:    "AddIngredientHeadingBtn",
+ AddPrerequisite:         "AddPrerequisiteBtn",
+ AddStep:                 "AddStepBtn",
+ AddStepHeading:          "AddStepHeadingBtn",
+ AddVariation:            "AddVariationBtn",
+ DeleteAllIngredients:    "DelAllIngredientsBtn",
+ DeleteAllPrerequisites:  "DelAllPrerequisitesBtn",
+ DeleteAllSteps:          "DelAllStepsBtn",
+ DeleteAllVariations:     "DelAllVariationsBtn",
+ ExportAll:               "ExportAllBtn",
+ ExportSelected:          "ExportSelectedBtn",
+ RenameRecipe:            "RenameRecipeBtn",
+ Search:                  "SearchBtn",
+ Undefined:               "Undefined"
+});
+
+function GetDescFromButtonType(enumVal) {
+ switch(enumVal) {
+  case PopupTypes.AddIngredient: {
+   return "Add Ingredient";
+   }
+   
+  case PopupTypes.AddIngredientHeading: {
+     return "Add Ingredient Headin";
+     }
+       
+  case PopupTypes.AddPrerequisite: {
+     return "Add Prerequisite";
+     }
+            
+  case PopupTypes.AddStep: {
+     return "Add Step";
+     }
+                    
+  case PopupTypes.AddStepHeading: {
+     return "Add Step Heading";
+     }
+             
+  case PopupTypes.AddVariation: {
+     return "Add Variation";
+     }
+               
+  case PopupTypes.DeleteAllIngredients: {
+     return "Delete All Ingredients";
+     }
+     
+  case PopupTypes.DeleteAllPrerequisites: {
+     return "Delete All Prerequisites";
+     }
+        
+  case PopupTypes.DeleteAllSteps: {
+     return "Delet All Steps";
+     }
+                
+  case PopupTypes.DeleteAllVariations: {
+     return "Delete All Variations";
+     }
+           
+  case PopupTypes.ExportAll: {
+     return "Export All Recipes";
+     }
+                  
+  case PopupTypes.ExportSelected: {
+     return "Export Selected Tecipes";
+     }
+             
+  case PopupTypes.RequestRenameRecipe: {
+     return "Rename Recipe";
+     }
+        
+  case PopupTypes.Search: {
+     return "Search";
+     }
+                     
+  case PopupTypes.Undefined: {
+     return "UNDEFINED";
+     }
+     
+  default: {
+     return "UNDEFINED";
+     }     
+ }
+ return "UNDEFINED";
+}
+
+function GetEnumFromButtonDesc(desc) {
+ for (var key in ButtonTypes) {
+  if (desc == ButtonTypes[key]) {
+   return key;
+  } 
+ }
+ 
+  return "UNDEFINED";
+}
+
+
 const CategoryTypes = Object.freeze({
  ALL:            "All",
  APPETIZER:      "Appetizer",
@@ -178,7 +276,8 @@ const PopupTypes = Object.freeze({
  RecipeExistsWarning:      "RecipeExistsWarningPopup",
  Settings:                 "SettingsPopup",
  ShoppingList:             "ShoppingListPopup",
- Undefined:                "Undefined"
+ Undefined:                "Undefined",
+ UploadFile:               "UploadFilePopup"
 });
 
 function GetDescFromPopupType(enumVal) {
@@ -270,6 +369,10 @@ function GetDescFromPopupType(enumVal) {
   case PopupTypes.Undefined: {
    return "Undefined";
   }
+  
+  case PopupTypes.UploadFile: {
+   return "Upload File";
+  }  
   
   default: {
    return "Undefined";
