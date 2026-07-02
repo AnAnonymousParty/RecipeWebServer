@@ -68,18 +68,64 @@
   </div>  
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
-    <img height="48px" id="SaveRecipesListBtn" onclick="SaveRecipe();"  src="/images/Buttons/SaveBtn_48X48.png"   style="margin: 0px 10px 0px 0px;" title="Save Recipe"            width="48px"> 
-    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();" src="/images/Buttons/ReturnBtn_48X48.png" style="margin: 0px 10px 0px 0px;" title="Return to Recipes List" width="48px">     
+    <img height="48px" 
+         id="SaveRecipesListBtn" 
+         onclick="SaveRecipe();"  
+         src="/images/Buttons/SaveBtn_48X48.png"   
+         style="margin: 0px 10px 0px 0px;" title="Save Recipe"            
+         width="48px"> 
+    <img height="48px" 
+         id="ShowRecipesListBtn" 
+         onclick="ApplyFilter();" 
+         src="/images/Buttons/ReturnBtn_48X48.png" 
+         style="margin: 0px 10px 0px 0px;" 
+         title="Return to Recipes List" 
+         width="48px">     
    </div>  
    <div id="indexPageBtns" style="display: inline; visibility: visible;">
-    <img height="48px" id="AddNewRecipeBtn"     onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddRecipe %>');" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
-    <img height="48px" id="DeleteAllRecipesBtn" onclick="DeleteAllRecipes();"                                              src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
+    <img height="48px" 
+         id="AddNewRecipeBtn"     
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddRecipe %>');" 
+         src="/images/Buttons/AddBtn_60X48.jpg"    
+         style="margin: 0px 10px 0px 0px;" 
+         title="Add New Recipe"     
+         width="48px">
+    <img height="48px" 
+         id="DeleteAllRecipesBtn" 
+         onclick="DeleteAllRecipes();"                                              
+         src="/images/Buttons/DelAllBtn_48X48.png"                                   
+         title="Delete All Recipes"
+         width="48px">    
    </div> 
    <div id="viewPageBtns" style="display: none; visibility: collapse;">
-    <img height="48px" id="EditRecipeBtn"      onclick="EditRecipe();"           src="/images/Buttons/EditBtn_48X48_White.png"   style="margin: 0px 10px 0px 0px;" title="Edit Recipe"             width="48px">
-    <img height="48px" id="DeleteRecipeBtn"    onclick="DeleteRecipe();"         src="/images/Buttons/DeleteBtn_48X48_White.png" style="margin: 0px 10px 0px 0px;" title="Delete Recipe"           width="48px">    
-    <img height="48px" id="PrintRecipeBtn"     onclick="RequestPrintableView();" src="/images/Buttons/PrintBtn_48X48.png"        style="margin: 0px 10px 0px 0px;" title="Print Recipe"            width="48px">      
-    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();"          src="/images/Buttons/ReturnBtn_48X48.png"       style="margin: 0px 10px 0px 0px;" title="Return to Recipes List"  width="48px">    
+    <img height="48px" 
+         id="EditRecipeBtn"     
+         onclick="EditRecipe();"           
+         src="/images/Buttons/EditBtn_48X48_White.png"   
+         style="margin: 0px 10px 0px 0px;" 
+         title="Edit Recipe"             
+         width="48px">
+    <img height="48px" 
+         id="DeleteRecipeBtn"    
+         onclick="DeleteRecipe();"         
+         src="/images/Buttons/DeleteBtn_48X48_White.png" 
+         style="margin: 0px 10px 0px 0px;" 
+         title="Delete Recipe"           
+         width="48px">    
+    <img height="48px" 
+         id="PrintRecipeBtn"     
+         onclick="RequestPrintableView();" 
+         src="/images/Buttons/PrintBtn_48X48.png"        
+         style="margin: 0px 10px 0px 0px;" 
+         title="Print Recipe"            
+         width="48px">      
+    <img height="48px" 
+         id="ShowRecipesListBtn" 
+         onclick="ApplyFilter();"          
+         src="/images/Buttons/ReturnBtn_48X48.png"       
+         style="margin: 0px 10px 0px 0px;" 
+         title="Return to Recipes List"  
+         width="48px">    
    </div>   
   </div>
   
@@ -102,7 +148,9 @@
       Name:
      </span>
      <span class="field-value">
-      <input id="recipeName2Add" type="text">
+      <input id="recipeName2Add" 
+             maxLength="128"
+             type="text">
      </span>
     </div>
     <br> 

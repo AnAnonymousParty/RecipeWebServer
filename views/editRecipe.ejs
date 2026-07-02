@@ -370,10 +370,26 @@
         <input name="notes" type="hidden" value="<%=ingredients[ndx].Notes[0] %>">        
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <img height="24px" onclick="DeleteIngredient(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Ingredient"    width="24px">   
-        <img height="24px" onclick="EditIngredient(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Ingredient"      width="24px">        
-        <img height="24px" onclick="MoveIngredientUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Ingredient Up"   width="24px">   
-        <img height="24px" onclick="MoveIngredientDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Ingredient Down" width="24px">                  
+        <img height="24px" 
+             onclick="DeleteIngredient(<%=ndx %>);"   
+             src="/images/Buttons/DeleteBtn_48X48.jpg" 
+             title="Delete Ingredient"    
+             width="24px">   
+        <img height="24px" 
+             onclick="EditIngredient(<%=ndx %>);"     
+             src="/images/Buttons/EditBtn_48X48.jpg"   
+             title="Edit Ingredient"      
+             width="24px">        
+        <img height="24px" 
+             onclick="MoveIngredientUp(<%=ndx %>);"   
+             src="/images/Buttons/UpBtn_48X48.png"     
+             title="Move Ingredient Up"   
+             width="24px">   
+        <img height="24px" 
+             onclick="MoveIngredientDown(<%=ndx %>);" 
+             src="/images/Buttons/DownBtn_48X48.png"   
+             title="Move Ingredient Down" 
+             width="24px">                  
        </td>       
       </tr> 
      <% } else { %> 
@@ -504,10 +520,26 @@
          <td style="text-align: center; max-width: 100px; min-width: 100px; word-wrap: break-word;"><% 
           if ("" != imgSrc) { %><img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px"><input name="stepImage" type="hidden" value="<%=imgSrc %>"> <% } else { %><span>&nbsp;</span><input name="stepImage" type="hidden" value="<%=imgSrc %>"><%}%></td>         
          <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-          <img height="24px" onclick="DeleteStep(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Step"    width="24px">   
-          <img height="24px" onclick="EditStep(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Step"      width="24px">        
-          <img height="24px" onclick="MoveStepUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Step Up"   width="24px">   
-          <img height="24px" onclick="MoveStepDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Step Down" width="24px">            
+          <img height="24px" 
+               onclick="DeleteStep(<%=ndx %>);"   
+               src="/images/Buttons/DeleteBtn_48X48.jpg" 
+               title="Delete Step"    
+               width="24px">   
+          <img height="24px" 
+               onclick="EditStep(<%=ndx %>);"     
+               src="/images/Buttons/EditBtn_48X48.jpg"   
+               title="Edit Step"      
+               width="24px">        
+          <img height="24px" 
+               onclick="MoveStepUp(<%=ndx %>);"   
+               src="/images/Buttons/UpBtn_48X48.png"     
+               title="Move Step Up"   
+               width="24px">   
+          <img height="24px" 
+               onclick="MoveStepDown(<%=ndx %>);" 
+               src="/images/Buttons/DownBtn_48X48.png"   
+               title="Move Step Down" 
+               width="24px">            
          </td>        
         </tr> 
      <% } else { %> 
@@ -519,10 +551,26 @@
         <input name="stepImage" type="hidden" value="noimg.jpg">
        </td>
        <td colspan="2" style="max-width: 150px; min-width: 150px; text-align: right;">
-        <img height="24px" onclick="DeleteStep(<%=ndx %>);"   src="/images/Buttons/DeleteBtn_48X48.jpg" title="Delete Step"    width="24px">   
-        <img height="24px" onclick="EditStep(<%=ndx %>);"     src="/images/Buttons/EditBtn_48X48.jpg"   title="Edit Step"      width="24px">        
-        <img height="24px" onclick="MoveStepUp(<%=ndx %>);"   src="/images/Buttons/UpBtn_48X48.png"     title="Move Step Up"   width="24px">   
-        <img height="24px" onclick="MoveStepDown(<%=ndx %>);" src="/images/Buttons/DownBtn_48X48.png"   title="Move Step Down" width="24px">                 
+        <img height="24px" 
+             onclick="DeleteStep(<%=ndx %>);"   
+             src="/images/Buttons/DeleteBtn_48X48.jpg" 
+             title="Delete Step"    
+             width="24px">   
+        <img height="24px" 
+             onclick="EditStep(<%=ndx %>);"     
+             src="/images/Buttons/EditBtn_48X48.jpg"   
+             title="Edit Step"      
+             width="24px">        
+        <img height="24px" 
+             onclick="MoveStepUp(<%=ndx %>);"   
+             src="/images/Buttons/UpBtn_48X48.png"     
+             title="Move Step Up"   
+             width="24px">   
+        <img height="24px" 
+             onclick="MoveStepDown(<%=ndx %>);" 
+             src="/images/Buttons/DownBtn_48X48.png"   
+             title="Move Step Down" 
+             width="24px">                 
        </td> 
       </tr>        
      <%}%>         

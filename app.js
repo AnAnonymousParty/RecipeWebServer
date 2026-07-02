@@ -21,22 +21,23 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 
 // javascript we provide:
 
-var common      = require(path.join(__dirname, '/public/javascripts/server/common.js'));
-var enums       = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
-var searchUtils = require(path.join(__dirname, '/public/javascripts/server/search.js'));
-var stringUtils = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
+let common          = require(path.join(__dirname, '/public/javascripts/server/common.js'));
+let enums           = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
+let searchUtils     = require(path.join(__dirname, '/public/javascripts/server/search.js'));
+let stringUtils     = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
+let validationUtils = require(path.join(__dirname, '/public/javascripts/server/validation.js'));
 
 // Route Handlers:
 
-var indexRouter       = require('./routes/index');
-var editRecipeRouter  = require('./routes/editRecipe');
-var getRecipeRouter   = require('./routes/getRecipe');
-var newRecipeRouter   = require('./routes/newRecipe');
-var printRecipeRouter = require('./routes/printRecipe');
-var viewRecipeRouter  = require('./routes/viewRecipe');
+let indexRouter       = require('./routes/index');
+let editRecipeRouter  = require('./routes/editRecipe');
+let getRecipeRouter   = require('./routes/getRecipe');
+let newRecipeRouter   = require('./routes/newRecipe');
+let printRecipeRouter = require('./routes/printRecipe');
+let viewRecipeRouter  = require('./routes/viewRecipe');
 
 
-var app = express();
+let app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -60,8 +61,8 @@ app.use(logger('dev', {
 /*------------------------- GET handlers ------------------------------------*/
 
 app.get('/CheckRecipeExists', (req, res) => {
- var f          = req.query.file2Check + ".xml"
- var file2Check = decodeURIComponent(f);
+ let f          = req.query.file2Check + ".xml"
+ let file2Check = decodeURIComponent(f);
  
  if (fs.existsSync(__dirname + "/public/data/recipes/" + file2Check)) {
   res.send('YES');
@@ -78,13 +79,13 @@ app.get('/DeleteAllRecipes', (req, res) => {
 
  // Return the new (empty) list of recipes: 
  
- var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
 app.get('/DeleteFile', (req, res) => {
- var file2Delete = decodeURIComponent(req.query.file2Delete);
+ let file2Delete = decodeURIComponent(req.query.file2Delete);
  
  fs.access(__dirname + "/public/images/Staging/" + file2Delete, fs.constants.F_OK, (err) => {
   if (err) {
@@ -115,7 +116,7 @@ app.get("/ExportAllRecipes", function (req, res) {
   fs.mkdirSync(exportPath);
  }
 
- var zip = new zipUtils();
+ let zip = new zipUtils();
  
  try {
   zip.addLocalFolder(recipesPath, "recipes");
@@ -132,7 +133,7 @@ app.get("/ExportAllRecipes", function (req, res) {
 });
 
 app.get('/DeleteRecipe', (req, res) => {
- var recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
+ let recipe2Delete = decodeURIComponent(req.query.recipe2Delete);
 
  // Delete the recipe .xml file:
  
@@ -166,20 +167,22 @@ app.get('/DeleteRecipe', (req, res) => {
    console.log(err);
   }
   
- files.forEach(file => {
-  if (recipe2Delete == file.substring(0, recipe2Delete.length)) { 
-   if (err) {
-    console.log(err);
+  recipe2Delete += "_"; 
+  
+  files.forEach(file => {
+   if (recipe2Delete == file.substring(0, recipe2Delete.length)) { 
+    if (err) {
+     console.log(err);
+    }
+    
+    fs.rmSync(__dirname + "/public/images/recipes/" + file, { force: true, }); 
    }
-   
-   fs.rmSync(__dirname + "/public/images/recipes/" + file, { force: true, }); 
-  }
- });
+  });
 });
 
 // Return the new list of recipes: 
  
-var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
 res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -229,7 +232,7 @@ app.get('/GetPrepList', (req, res) => {
   let ingredients        = ingredientsElement.getElementsByTagName("Ingredient");
   let prepItems          = 0;
   
-  for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
+  for (let ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
    let ingredient = ingredients[ingredientNdx];
    let type       = ingredient.getAttribute("type"); 
    
@@ -276,14 +279,14 @@ app.get('/GetPrepList', (req, res) => {
 });
 
 app.get('/GetRecipesList', (req, res) => {
- var category = req.query.category;
- var cuisine  = req.query.cuisine; 
+ let category = req.query.category;
+ let cuisine  = req.query.cuisine; 
  
- var dirPath = path.join(__dirname, '/public/data/recipes');
+ let dirPath = path.join(__dirname, '/public/data/recipes');
 
  // Return the list of recipes: 
  
- var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), category, cuisine);
+ let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), category, cuisine);
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -293,7 +296,7 @@ app.get('/GetRecipesToExportList', (req, res) => {
 
  // Return the list of recipes: 
  
- var rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/recipes'));
+ let rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/recipes'));
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -314,7 +317,7 @@ app.get('/GetShoppingList', (req, res) => {
   let ingredientsElement = xmlDoc.getElementsByTagName("Ingredients")[0];
   let ingredients        = ingredientsElement.getElementsByTagName("Ingredient");
   
-  for (var ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
+  for (let ingredientNdx = 0; ingredientNdx < ingredients.length; ++ingredientNdx) {
    let ingredient = ingredients[ingredientNdx];
    let type       = ingredient.getAttribute("type");
    
@@ -378,12 +381,12 @@ app.get('/RenameRecipe', (req, res) => {
  console.log("< RenameRecipe()");  
 
  try {
-  var recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', decodeURIComponent(req.query.newRecipeName + '.xml'))); 
+  let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', decodeURIComponent(req.query.newRecipeName + '.xml'))); 
  } catch (err) {
   console.log(err);
  }
  
- var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
+ let recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml);
  
  //console.log("JSONs: ", JSON.stringify(recipeDataJson, null, 2));
  
@@ -397,13 +400,13 @@ app.get('/RenameRecipe', (req, res) => {
 });
 
 app.get('/SavePDF', (req, res) => {
- var recipeName = req.query.recipeName;
- var scaling    = req.query.scaling;
+ let recipeName = req.query.recipeName;
+ let scaling    = req.query.scaling;
  
  console.log("> savePDF(" + recipeName + ", " + scaling + ")");
  
- var recipeDataXml  = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
- var recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml); 
+ let recipeDataXml  = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
+ let recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml); 
  
  try {                          
   HandleSavePDF(req, res);
@@ -418,17 +421,17 @@ app.get('/SavePDF', (req, res) => {
 app.get('/SearchRecipes', (req, res) => {
  console.log("> /SearchRecipe ");
  
- var searchTerm = req.query.searchTerm;
+ let searchTerm = req.query.searchTerm;
 
- var dirPath = path.join(__dirname, '/public/data/recipes')
+ let dirPath = path.join(__dirname, '/public/data/recipes')
  
- var filesList = [];
+ let filesList = [];
  
  filesList = searchUtils.SearchDirectory(fs, path, dirPath, searchTerm);
  
  // Return the list of recipes: 
  
- var rv = common.GenerateFilesListHtmlFromList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), filesList);
+ let rv = common.GenerateFilesListHtmlFromList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), filesList);
     
  console.log("< /SearchRecipe");
  
@@ -441,12 +444,20 @@ app.get('/SearchRecipes', (req, res) => {
 app.post("/AddNewRecipe", function (req, res) {
  postData = req.body;
 
- var recipeName = postData.recipeName;
+ let recipeName = postData.recipeName;
  
  console.log("> AddNewRecipe(" + recipeName + ")"); 
  //console.log("  AddNewRecipe(): JSON=", JSON.stringify(postData, null, 2));
  
- var xml = ParsePostDataToXml(postData); 
+ let xml = ParsePostDataToXml(postData); 
+ 
+ if ("DATAINVALID" == xml) {
+  res.status(enums.HttpStatusTypes.INTERNALSERVEREROOR).send("Submitted data was invalid");
+  
+  console.log("< AddNewRecipe() [Data Invalid]"); 
+  
+  return;
+ }
  
  try {
   fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", xml);
@@ -454,9 +465,9 @@ app.post("/AddNewRecipe", function (req, res) {
   console.log(error);
  }
   
- console.log("The file was saved!");
+ console.log("  AddNewRecipe(): The file was saved!");
 
- var files;
+ let files;
 
  try {
   files = fs.readdirSync(__dirname + "/public/images/Staging");
@@ -466,8 +477,8 @@ app.post("/AddNewRecipe", function (req, res) {
   
  files.forEach(file => {
   if (recipeName == file.substring(0, recipeName.length)) {
-   var uploadedFileName = path.join(__dirname, "/public/images/Staging/") + file;  
-   var targetFileName   = path.join(__dirname, "/public/images/Recipes/") + file;
+   let uploadedFileName = path.join(__dirname, "/public/images/Staging/") + file;  
+   let targetFileName   = path.join(__dirname, "/public/images/Recipes/") + file;
   
    try {
     fs.renameSync(uploadedFileName, targetFileName);
@@ -479,18 +490,18 @@ app.post("/AddNewRecipe", function (req, res) {
 
  RemoveStaleImages();
  
- var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
  
- console.log("< AddNewRecipe(" + recipeName + ")"); 
+ console.log("< AddNewRecipe()"); 
 });
 
 // Handle Export Selected recipes.
 app.post("/ExportSelectedRecipes", function (req, res) {
  console.log("> ExportSelectedRecipes()"); 
  
- var formData = req.body;
+ let formData = req.body;
  
  if (0 == Object.keys(formData).length) {
   console.log("< ExportSelectedRecipes() - No Data"); 
@@ -511,9 +522,9 @@ app.post("/ExportSelectedRecipes", function (req, res) {
  
  const imagesList = fs.readdirSync(path.join(__dirname,  "/public/images/Recipes"));
  
- var zip = new zipUtils();
+ let zip = new zipUtils();
   
- for (var key in formData) { 
+ for (let key in formData) { 
   console.log("> ExportSelectedRecipes(): Exporting " + key);
   
   try {
@@ -522,9 +533,9 @@ app.post("/ExportSelectedRecipes", function (req, res) {
    console.log("  ExportSelectedRecipes() " + err); 
   }  
   
-  var imageNamePrefix = key + "_";
+  let imageNamePrefix = key + "_";
   
-  for (var imageFile of imagesList) {
+  for (let imageFile of imagesList) {
 	  if (false == imageFile.startsWith(imageNamePrefix)) {
 		  continue;
 	  }
@@ -545,19 +556,19 @@ app.post("/ExportSelectedRecipes", function (req, res) {
 
 // Handle Recipe updated:
 app.post("/UpdateRecipe", function (req, res) {
- var postData   = req.body;
- var recipeName = postData.recipeName;
+ let postData   = req.body;
+ let recipeName = postData.recipeName;
  
  console.log("> UpdateRecipe(" + recipeName + ")"); 
  //console.log("  UpdateRecipe(): JSON=", JSON.stringify(postData, null, 2));
  
- var xml = ParsePostDataToXml(postData);
+ let xml = ParsePostDataToXml(postData);
  
  //console.log("  UpdateRecipe(" + recipeName + "): XML=" + xml); 
 
  try {
   fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", xml);
-  console.log("The file was saved!");
+  console.log("  UpdateRecipe(): The file was saved!");
  } catch (err) {
    console.log(error);
  }
@@ -569,8 +580,8 @@ app.post("/UpdateRecipe", function (req, res) {
   
   files.forEach(file => {
    if (recipeName == file.substring(0, recipeName.length)) {
-    var uploadedFileName = path.join(__dirname, "/public/images/Staging/") + file;  
-    var targetFileName   = path.join(__dirname, "/public/images/Recipes/") + file;
+    let uploadedFileName = path.join(__dirname, "/public/images/Staging/") + file;  
+    let targetFileName   = path.join(__dirname, "/public/images/Recipes/") + file;
     
     fs.rename(uploadedFileName, targetFileName, function(err) {
      if (err) {
@@ -581,7 +592,7 @@ app.post("/UpdateRecipe", function (req, res) {
   });
  });
 
- var rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
  
  console.log("< UpdateRecipe()"); 
     
@@ -592,9 +603,9 @@ app.post("/UpdateRecipe", function (req, res) {
 app.post("/UploadImage", function (req, res) {
  console.log("> UploadImage(" + req.fields.recipeName + ", " + req.files.image.path + ")"); 
 
- var recipeName       = req.fields.recipeName; 
- var uploadedFileName = req.files.image.path;  
- var targetFileName   = path.join(__dirname, "/public/images/Staging/") + common.UnEscapeHtml(recipeName) + '_' + req.files.image.name;
+ let recipeName       = req.fields.recipeName; 
+ let uploadedFileName = req.files.image.path;  
+ let targetFileName   = path.join(__dirname, "/public/images/Staging/") + common.UnEscapeHtml(recipeName) + '_' + req.files.image.name;
  
  fs.rename(uploadedFileName, targetFileName, function(err) {
   if (err) {
@@ -611,15 +622,14 @@ app.post("/UploadImage", function (req, res) {
 app.post("/UploadRecipes", function (req, res) {
  console.log("> UploadRecipes()"); 
  
- var uploadedFileName = req.files.recipesFile.path; 
- var uploadPath = path.join(__dirname, "/public/import/");
+ let uploadedFileName = req.files.recipesFile.path; 
+ let uploadPath       = path.join(__dirname, "/public/import/");
  
  if (false == fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath);
  }
- 
- var uploadedFileName = req.files.recipesFile.path;  
- var targetFileName   = uploadPath + req.files.recipesFile.name;
+  
+ let targetFileName   = uploadPath + req.files.recipesFile.name;
  
  fs.rename(uploadedFileName, targetFileName, function(err) {
   if (err) {
@@ -627,13 +637,13 @@ app.post("/UploadRecipes", function (req, res) {
   }
  });
  
- var errMsg = UnpackImport(targetFileName);
+ let errMsg = UnpackImport(targetFileName);
  
- var dirPath = path.join(__dirname, '/public/data/recipes');
+ let dirPath = path.join(__dirname, '/public/data/recipes');
 
  // Return the list of recipes: 
  
- var rv = '<input id="messageFromServer" type="hidden" value="' + errMsg + '">'
+ let rv = '<input id="messageFromServer" type="hidden" value="' + errMsg + '">'
         + common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), "ALL", "ALL");
  
  console.log("< UploadRecipes()"); 
@@ -671,25 +681,25 @@ app.use(function(err, req, res, next) {
 function CheckForDuplicateRecipes(importPath) {
  console.log("> CheckForDuplicateRecipes(" + importPath + ")");
  
- var msg = ""
+ let msg = ""
  
- var filesList     = fs.readdirSync(path.join(importPath, "/Recipes/"));
- var totalFilesCnt = filesList.length;
+ let filesList     = fs.readdirSync(path.join(importPath, "/Recipes/"));
+ let totalFilesCnt = filesList.length;
   
- for (var i = 0; i < totalFilesCnt; ++i) { 
-  var fileNameExt           = filesList[i];
-  var recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + fileNameExt;
+ for (let i = 0; i < totalFilesCnt; ++i) { 
+  let fileNameExt           = filesList[i];
+  let recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + fileNameExt;
   
   if (true == fs.existsSync(recipeFilePathNameExt)) {
    msg += path.basename(fileNameExt, ".xml") + ".\n";
    
    // Append "-2" to whatever the recipe file is currently named:
    
-   var oldRecipeNamePath    = path.join(importPath, "Recipes");
-   var oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldNameExt);
-   var oldRecipeName        = path.basename(oldNameExt, ".xml");
-   var newRecipeName        = oldRecipeName + "-2";
-   var newRecipeNamePathExt = path.join(oldRecipeNamePath, newRecipeName + ".xml");
+   let oldRecipeNamePath    = path.join(importPath, "Recipes");
+   let oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldNameExt);
+   let oldRecipeName        = path.basename(oldNameExt, ".xml");
+   let newRecipeName        = oldRecipeName + "-2";
+   let newRecipeNamePathExt = path.join(oldRecipeNamePath, newRecipeName + ".xml");
    
    
    // Try to rename the existing recipe:
@@ -737,7 +747,7 @@ async function GeneratePDFfromHTML(recipeName, scaling, units, outputFile) {
  // Use the puppeteer library to convert the printable version of the given
  // named recipe to a PDF document.
  
- var url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
+ let url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
          + encodeURIComponent(recipeName)
          + "&scaling=" + scaling + "&units=" + units + "&ShowButtons=N";
  
@@ -752,9 +762,9 @@ async function GeneratePDFfromHTML(recipeName, scaling, units, outputFile) {
 }
 
 async function HandleSavePDF(req, res) {
-  var recipeName = req.query.recipeName;
-  var scaling    = req.query.scaling;
-  var units      = req.query.units;
+  let recipeName = req.query.recipeName;
+  let scaling    = req.query.scaling;
+  let units      = req.query.units;
   
   console.log("> HandleSavePDF(" + recipeName + ", " + scaling + ", " + units + ")");
   
@@ -766,9 +776,9 @@ async function HandleSavePDF(req, res) {
   
   console.log('  HandleSavePDF(): PDF ' + recipeName + '.pdf generated successfully.'); 
   
-  var pdfFile = decodeURIComponent(req.query.recipeName);
+  let pdfFile = decodeURIComponent(req.query.recipeName);
  
-  var pdfFilePath = __dirname + "\\public\\data\\PDFs\\" + pdfFile + ".pdf";
+  let pdfFilePath = __dirname + "\\public\\data\\PDFs\\" + pdfFile + ".pdf";
  
   const options = { headers: { 'Content-Type': 'application/octet-stream', }, };
   
@@ -798,15 +808,21 @@ async function HandleSavePDF(req, res) {
 
 function ParsePostDataToXml(postData) {
  // Parse the POST data to XML for processing by converting it to JSON and
- // then using the sblBuilder library to convert the JSON to XML and return
+ // then using the xmlBuilder library to convert the JSON to XML and return
  // it.
  
  console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
- var doc = xmlBuilder.create({ version: '1.0' });
+ if (false == ValidateRcvdPostData(postData)) {
+  console.log("< ParsePostDataToXml() [Data Invalid]");
+  
+  return("DATAINVALID");
+ }
  
- var root  = doc.ele('Recipe');
- var title = root.ele('Title');
+ let doc = xmlBuilder.create({ version: '1.0' });
+ 
+ let root  = doc.ele('Recipe');
+ let title = root.ele('Title');
  
  title.att('image',       postData.mainImageName);
  title.att('name',        postData.recipeName);
@@ -814,18 +830,18 @@ function ParsePostDataToXml(postData) {
  title.att('cuisine',     postData.cuisine);
  title.att('nativeUnits', "US");
  
- var yieldElem = title.ele('Yield');
+ let yieldElem = title.ele('Yield');
  
  yieldElem.att('amount', postData.yield);
  yieldElem.att('units',  postData.yieldUnit);
  
- var times = title.ele('Times');
+ let times = title.ele('Times');
  
  times.att('prep', postData.prepTime);
  times.att('cook', postData.cookTime);
  
  
- var nutrition = root.ele('Nutrition');
+ let nutrition = root.ele('Nutrition');
  
  nutrition.att('calories',     postData.calories);
  nutrition.att('fat',          postData.fat); 
@@ -840,46 +856,46 @@ function ParsePostDataToXml(postData) {
  nutrition.att('servingsUnit', postData.servingsUnit);  
  
  
- var desc = root.ele('Description');
+ let desc = root.ele('Description');
  
  desc.txt(postData.description);
  
  
- var presElem = root.ele('Prerequisites');
- var preData  = postData.prerequisite;
+ let presElem = root.ele('Prerequisites');
+ let preData  = postData.prerequisite;
  
  if (null != preData) {
   if (Array.isArray(preData)) {
-   for (var i = 0; i < preData.length; ++i) {
-    var prerequisite = preData[i];
+   for (let i = 0; i < preData.length; ++i) {
+    let prerequisite = preData[i];
    
-    var preElem = presElem.ele('Prerequisite');
+    let preElem = presElem.ele('Prerequisite');
     
     preElem.txt(prerequisite);
    }
   } else {
-   var preElem = presElem.ele('Prerequisite');
+   let preElem = presElem.ele('Prerequisite');
    
    preElem.txt(preData);
   }
  } 
  
  
- var ingredientsElem = root.ele('Ingredients');
- var ingredientsData = postData.ingredient;
+ let ingredientsElem = root.ele('Ingredients');
+ let ingredientsData = postData.ingredient;
  
  if (null != ingredientsData) {
   if (Array.isArray(ingredientsData)) {
-   for (var i = 0; i < ingredientsData.length; ++i) {
-    var ingredientName = ingredientsData[i];
-    var ingredientElem = ingredientsElem.ele('Ingredient');
-    var ingredientType = postData.ingredientType[i];
+   for (let i = 0; i < ingredientsData.length; ++i) {
+    let ingredientName = ingredientsData[i];
+    let ingredientElem = ingredientsElem.ele('Ingredient');
+    let ingredientType = postData.ingredientType[i];
     
     if ("INGREDIENT" == ingredientType) {
-     var ingredientNameElem = ingredientElem.ele("Name");
-     var quantityElem       = ingredientElem.ele("Quantity");
-     var prepElem           = ingredientElem.ele("Prep");
-     var notesElem          = ingredientElem.ele("Notes");     
+     let ingredientNameElem = ingredientElem.ele("Name");
+     let quantityElem       = ingredientElem.ele("Quantity");
+     let prepElem           = ingredientElem.ele("Prep");
+     let notesElem          = ingredientElem.ele("Notes");     
      
      ingredientElem.att('type', "INGREDIENT");
      ingredientNameElem.txt(ingredientName);
@@ -890,22 +906,22 @@ function ParsePostDataToXml(postData) {
     } else {
       ingredientElem.att('type', "HEADING");
       
-      var headingElem = ingredientElem.ele('Heading'); 
+      let headingElem = ingredientElem.ele('Heading'); 
 
       headingElem.txt(ingredientName);     
     }
    }
   } else {
-    var ingredientName = ingredientsData;   
-    var ingredientType = postData.ingredientType;
+    let ingredientName = ingredientsData;   
+    let ingredientType = postData.ingredientType;
     
     if ("INGREDIENT" == ingredientType) {
-     var ingredientElem = ingredientsElem.ele('Ingredient');
+     let ingredientElem = ingredientsElem.ele('Ingredient');
      
-     var ingredientNameElem = ingredientElem.ele("Name");
-     var quantityElem       = ingredientElem.ele("Quantity");
-     var prepElem           = ingredientElem.ele("Prep");
-     var notesElem          = ingredientElem.ele("Notes");     
+     let ingredientNameElem = ingredientElem.ele("Name");
+     let quantityElem       = ingredientElem.ele("Quantity");
+     let prepElem           = ingredientElem.ele("Prep");
+     let notesElem          = ingredientElem.ele("Notes");     
      
      ingredientElem.att('type', "INGREDIENT");
      ingredientNameElem.txt(ingredientName);
@@ -916,7 +932,7 @@ function ParsePostDataToXml(postData) {
     } else {
       ingredientElem.att('type', "HEADING");
       
-      var headingElem = ingredientElem.ele('Heading');
+      let headingElem = ingredientElem.ele('Heading');
       
       headingElem.txt(heading);
     }
@@ -924,22 +940,22 @@ function ParsePostDataToXml(postData) {
  }
  
  
- var methodElem = root.ele('Method');
- var stepsData  = postData.step;
+ let methodElem = root.ele('Method');
+ let stepsData  = postData.step;
  
  if (null != stepsData) {
   if (Array.isArray(stepsData)) {   
-   for (var i = 0; i < stepsData.length; ++i) {
-    var step     = stepsData[i]; 
-    var stepElem = methodElem.ele('Step');
-    var stepType = postData.stepType[i]; 
+   for (let i = 0; i < stepsData.length; ++i) {
+    let step     = stepsData[i]; 
+    let stepElem = methodElem.ele('Step');
+    let stepType = postData.stepType[i]; 
     
     stepElem.txt(step);
     
     if ("STEP" == stepType) { 
      stepElem.att('type', "STEP");  
  
-     var imgSrc = "";
+     let imgSrc = "";
      
      if ("undefined" != typeof(postData.stepImage[i])) {
       imgSrc = postData.stepImage[i];
@@ -951,9 +967,9 @@ function ParsePostDataToXml(postData) {
     }
    }
   } else {
-    var step     = stepsData;
-    var stepElem = methodElem.ele('Step');
-    var stepType = postData.stepType; 
+    let step     = stepsData;
+    let stepElem = methodElem.ele('Step');
+    let stepType = postData.stepType; 
     
     stepElem.txt(step);
    
@@ -967,28 +983,30 @@ function ParsePostDataToXml(postData) {
   }
  } 
  
- var varsElem = root.ele('Variations');
- var varData  = postData.variation;
+ let varsElem = root.ele('Variations');
+ let varData  = postData.variation;
  
  if (null != varData) {
   if (Array.isArray(varData)) {
-   for (var i = 0; i < varData.length; ++i) {
-    var variation = varData[i];
+   for (let i = 0; i < varData.length; ++i) {
+    let variation = varData[i];
    
-    var varElem = varsElem.ele('Variation');
+    let varElem = varsElem.ele('Variation');
     
     varElem.txt(variation);
    }
   } else {
-   var varElem = varsElem.ele('Variation');
+   let varElem = varsElem.ele('Variation');
    
    varElem.txt(varData);
   }
  }
  
- var rv = doc.end({ prettyPrint: true });
+ let rv = doc.end({ prettyPrint: true });
  
  //console.log("< ParsePostDataToXml() [" + rv + "]");
+ 
+ console.log("< ParsePostDataToXml()");
  
  return(rv);
 }
@@ -997,7 +1015,7 @@ function RemoveStaleImages() {
  // Remove any images from the image staging directory that are more than 
  // four hours old.
  
- var now = new Date().getTime();
+ let now = new Date().getTime();
  
  fs.readdir(__dirname + "/public/images/Staging", (err, files) => {
   if (err) {
@@ -1005,10 +1023,10 @@ function RemoveStaleImages() {
   }
   
   files.forEach(file => {
-   var stats = fs.statSync(path.join(__dirname, "/public/images/Staging/") + file);
-   var fileCreatedDate = stats.ctime;
+   let stats = fs.statSync(path.join(__dirname, "/public/images/Staging/") + file);
+   let fileCreatedDate = stats.ctime;
   
-   var expiredTime = new Date(fileCreatedDate).getTime() + (4 * 60 * 60 * 1000);
+   let expiredTime = new Date(fileCreatedDate).getTime() + (4 * 60 * 60 * 1000);
   
    if (now > expiredTime) {
     console.log("Removing " + file);
@@ -1066,7 +1084,7 @@ function RenameImageFileName(parsedExistingImagePathNameExt, newRecipeName) {
  
  let newImagePathNameExt = path.join(__dirname, "/public/images/Recipes/") + newRecipeName;
 
- for (var partNdx = 1; partNdx < parts.length; ++partNdx) {
+ for (let partNdx = 1; partNdx < parts.length; ++partNdx) {
   newImagePathNameExt += "_" + parts[partNdx];
  }
   
@@ -1080,11 +1098,11 @@ function RenameImageFileName(parsedExistingImagePathNameExt, newRecipeName) {
 function RenameImageFiles(existingRecipeName, newRecipeName) {
  console.log("> RenameImageFiles(" + existingRecipeName + ", " + newRecipeName +")");
  
- var imagesPath        = path.join(__dirname, "/public/images/Recipes/");
- var imageFilesList    = fs.readdirSync(imagesPath);
- var imageFilesListCnt = imageFilesList.length;
+ let imagesPath        = path.join(__dirname, "/public/images/Recipes/");
+ let imageFilesList    = fs.readdirSync(imagesPath);
+ let imageFilesListCnt = imageFilesList.length;
   
- for (var i = 0; i < imageFilesListCnt; ++i) { 
+ for (let i = 0; i < imageFilesListCnt; ++i) { 
   let existingImagePathNameExt = path.join(__dirname, "/public/images/Recipes/") + imageFilesList[i];
   
   let parsedExistingImagePathNameExt = path.parse(existingImagePathNameExt);
@@ -1131,7 +1149,7 @@ function RenameRecipeFileInternalReferences(newRecipeName) {
   let method = xmlDoc.getElementsByTagName("Method")[0];
   let steps  = method.getElementsByTagName("Step");
   
-  for (var stepNdx = 0; stepNdx < steps.length; ++stepNdx) {
+  for (let stepNdx = 0; stepNdx < steps.length; ++stepNdx) {
    let newImageName = path.basename(RenameImageFileName(path.parse(steps[stepNdx].getAttribute("image")), newRecipeName));
    
    if ("" != steps[stepNdx].setAttribute("image")) {
@@ -1152,7 +1170,7 @@ function RenameRecipeFileInternalReferences(newRecipeName) {
 function UnpackImport(pathFile) {
  console.log("> UnpackImport(" + pathFile + ")");
  
- var zip = new zipUtils(pathFile);
+ let zip = new zipUtils(pathFile);
  
  const importFileName = path.parse(path.basename(pathFile)).name;
  const destDir        = path.join(__dirname, "/public/import/", importFileName); 
@@ -1171,7 +1189,7 @@ function UnpackImport(pathFile) {
   return(pathFile + " does not appear to be a valid import (.zip) file. No recipes were imported.");
  } 
  
- var msg = CheckForDuplicateRecipes(destDir);
+ let msg = CheckForDuplicateRecipes(destDir);
  
  fs.cpSync(path.join(destDir, "/Recipes"), 
             path.join(__dirname, "/public/data/recipes"), 
@@ -1191,7 +1209,7 @@ function UnpackImport(pathFile) {
                      }
  });
  
- var filesList = fs.readdirSync(path.join(__dirname, "/public/data/recipes"));
+ let filesList = fs.readdirSync(path.join(__dirname, "/public/data/recipes"));
  
  console.log("  UnpackImport(): # files: " + filesList.length);
  
@@ -1241,7 +1259,7 @@ console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName +
 
  let lines = content.toString().split('\n');
 
- for (var lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
+ for (let lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
   let line = lines[lineNdx];
   
   if (-1 == line.indexOf("href")) {
@@ -1270,7 +1288,7 @@ console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName +
  if (true == changed) {
   let newContent = "";
   
-  for (var lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
+  for (let lineNdx = 0; lineNdx < lines.length; ++lineNdx) {
    newContent += lines[lineNdx];
   }
   
@@ -1286,5 +1304,41 @@ console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName +
  console.log("< UpdateLinksInFile()");
 }
 
+function ValidateRcvdPostData(rcvdPostData) {
+ console.log("> ValidateRcvdPostData()");
+ 
+ let retVal           = false;
+ let validationResult = "";
+ 
+ for (;;) {
+  let recipeName = rcvdPostData.recipeName;
+  
+  if ("" == recipeName) {
+   validationResult = "No Recipe Name";
+   
+   break;
+  }
+  
+  if (recipeName.length > 128) {
+   validationResult = "Recipe name too long";
+   
+   break;
+  }
+  
+  if (false == validationUtils.IsFileName(recipeName)) {
+   validationResult = "Recipe name invalid";
+   
+   break;
+  }  
+  
+  retVal = true;
+  
+  break;
+ }
+ 
+ console.log("< ValidateRcvdPostData() [" + retVal + "] " + validationResult);
+ 
+ return (retVal);
+}
 
 module.exports = app;
