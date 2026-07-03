@@ -4,11 +4,13 @@
  <head>
   <link href='/stylesheets/style.css' rel='stylesheet' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/javascripts/client/ButtonBehaviors.js"></script>
   <script src="/javascripts/client/common.js"></script>
   <script src="/javascripts/client/constants.js"></script>
   <script src="/javascripts/client/conversions.js"></script>   
   <script src="/javascripts/client/enums.js"></script>
   <script src="/javascripts/client/MainPage.js"></script>
+  <script src="/javascripts/client/PopupBehaviors.js"></script>  
   <script src="/javascripts/client/validate.js"></script>
   <title><%= title %></title>
  </head>
@@ -24,9 +26,20 @@
     <select id="categories" name="category" onChange="ApplyFilter();" style="margin: 0px 0px 0px 5px;">
      <% Object.keys(enumUtils.CategoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enumUtils.CategoryTypes); %>
     </select>
-    <input data-validation="v" id="searchTerm" maxlength="128" name="searchTerm" size="48" style="margin: 0px 0px 0px 30px;" type="text">
-    <img height="20px" onclick="HandleSearchBtnClkd();" src="/images/Buttons/SearchBtn_48X48.jpg" style="margin: 0px 10px 0px 5px;" title="Search Recipes" width="20px">
-    <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <%- recipesCnt %></span>    
+    <input data-validation="v" 
+           id="searchTerm" 
+           maxlength="128" 
+           name="searchTerm" 
+           size="48" 
+           style="margin: 0px 0px 0px 30px;" 
+           type="text">
+    <img height="20px" 
+         onclick="ButtonBehaviors.HandleButtonClkd('<%= enumUtils.ButtonTypes.Search %>');" 
+         src="/images/Buttons/SearchBtn_48X48.jpg" 
+         style="margin: 0px 10px 0px 5px;" 
+         title="<%= enumUtils.GetDescFromButtonType(enumUtils.ButtonTypes.Search) %>" 
+         width="20px">
+    <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <span id="totalCnt"><%- recipesCnt %></span></span>    
    </span>
    <span id="recipeTitleContainer" style="display: inline; visibility: visible; text-align: center;">
     <h2 id="recipeTitle"><%=recipeData.Recipe.Title[0].$.name %></h2>

@@ -21,11 +21,11 @@ const { DOMParser, XMLSerializer } = require('xmldom');
 
 // javascript we provide:
 
-let common          = require(path.join(__dirname, '/public/javascripts/server/common.js'));
-let enums           = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
-let searchUtils     = require(path.join(__dirname, '/public/javascripts/server/search.js'));
-let stringUtils     = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
-let validationUtils = require(path.join(__dirname, '/public/javascripts/server/validation.js'));
+let common             = require(path.join(__dirname, '/public/javascripts/server/common.js'));
+let enums              = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
+let searchUtils        = require(path.join(__dirname, '/public/javascripts/server/search.js'));
+let stringUtils        = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
+let validationUtilsLib = require(path.join(__dirname, '/public/javascripts/server/validation.js'));
 
 // Route Handlers:
 
@@ -35,7 +35,6 @@ let getRecipeRouter   = require('./routes/getRecipe');
 let newRecipeRouter   = require('./routes/newRecipe');
 let printRecipeRouter = require('./routes/printRecipe');
 let viewRecipeRouter  = require('./routes/viewRecipe');
-
 
 let app = express();
 
@@ -1325,7 +1324,7 @@ function ValidateRcvdPostData(rcvdPostData) {
    break;
   }
   
-  if (false == validationUtils.IsFileName(recipeName)) {
+  if (false == validationUtilsLib.IsFileName(recipeName)) {
    validationResult = "Recipe name invalid";
    
    break;

@@ -143,13 +143,16 @@
    </div>
    <br>
    <div class="centered">
-    <div class="recipe-line">
+    <div class="recipe-line"
      <span class="field-header">
       Name:
      </span>
      <span class="field-value">
-      <input id="recipeName2Add" 
-             maxLength="128"
+      <input data-validation="<%= (validationRules.GetValidationRule('recipeName2Add')).GetFieldTypeId(); %>"
+             id="recipeName2Add" 
+             maxLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMaxLength(); %>"
+             minLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMinLength(); %>"
+             <%= (validationRules.GetValidationRule('recipeName2Add')).IsRequired(); %>
              type="text">
      </span>
     </div>

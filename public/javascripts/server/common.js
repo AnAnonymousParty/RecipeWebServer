@@ -173,7 +173,7 @@ function GenerateFilesListHtmlFromList(fs, xml2jsParser, directoryPath, filesArr
  console.log("> GenerateFilesListHtmlFromList()"); 
  
  var htmlRsp = '<input id="filesListCnt"  type="hidden" value="' + filesArray.length + '">\n'
-             + '<input id="totalFilesCnt" type="hidden" value="' + filesArray.lengt  + '">\n';
+             + '<input id="totalFilesCnt" type="hidden" value="' + filesArray.length + '">\n';
  
  if (0 == filesArray.length) {
   htmlRsp += "No recipes contain the search term.";

@@ -15,11 +15,11 @@ router.get('/', function(req, res, next) {
  
  var recipesList = fs.readdirSync(directoryPath);
  
- res.render('getRecipe', { title: 'Recipe Server', 
+ res.render('getRecipe', { title:       'Recipe Server', 
                            commonUtils: common, 
-                           enumUtils: enums, 
-                           recipeData: recipeDataJson,
-                           recipesCnt: recipesList.length});
+                           enumUtils:   enums, 
+                           recipeData:  recipeDataJson,
+                           recipesCnt:  recipesList.length});
 });
 
 module.exports = router;

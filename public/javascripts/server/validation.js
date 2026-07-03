@@ -103,4 +103,55 @@ function IsNumeric(sString)
    }
 
   return(true);
- }        
+ }   
+
+export
+function ValidateField(fieldId) {
+ let validationRule = validationRules.GetValidationRule(fieldId);
+ 
+ if (undefined == validationRule) {
+  return (true);  // No rule? No problem! But there really should be a rule. Without rules there is chaos.
+ }
+ 
+ let fieldTypeId = validationRule.GetFieldTypeId();
+ 
+ switch (fieldTypeId) {
+  case "vAlpha": {
+   
+  }
+  break;
+  
+  case "vAlnum": {
+   
+  }
+  break;
+  
+  case "vDigits": {
+   
+  }
+  break;
+  
+  case "vFileName": {
+   let fieldValue = document.getElementById(fieldId);
+   
+   if (0 == fieldValue.length && true == validationRule.IsRequired()) {
+    return (false);
+   }
+
+   if (fieldValue.length > validationRule.GetMaxLength()) {
+    return (false);
+   }    
+   
+   if (false == IsFileName(fieldValue)) {
+    return (false);
+   }
+  }
+  break;  
+  
+  default: {
+   return (false);
+  }
+ }
+ 
+ return (true);
+}
