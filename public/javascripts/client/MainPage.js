@@ -1787,6 +1787,8 @@ function ShowRecipesList(category, cuisine) {
   } else {
    document.getElementById("recipesListContainer").innerHTML = "No recipes can be displayed.";
   }
+  
+  InitPage();
  };
 
  xmlhttpReq.send();

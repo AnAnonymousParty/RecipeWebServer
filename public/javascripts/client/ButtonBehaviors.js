@@ -460,6 +460,8 @@ class SearchButtonBehavior extends ButtonBehavior {
    } else {
     document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
    }
+   
+   InitPage();
   };
 
   xmlhttpReq.send();

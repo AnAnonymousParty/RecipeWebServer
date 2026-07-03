@@ -30,6 +30,7 @@
            id="searchTerm" 
            maxlength="128" 
            name="searchTerm" 
+           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enumUtils.ButtonTypes.Search %>');}"
            size="48" 
            style="margin: 0px 0px 0px 30px;" 
            type="text">
@@ -114,7 +115,11 @@
      <%
       var style = ("" == recipeData.Recipe.Title[0].$.image ? "display: none; margin: 10px 0px 10px 0px; visibility: collapse;" : "display: inline; margin: 10px 0px 10px 0px; visibility: visible;");
      %> 
-     <img height="300px" onclick='ViewImage("/images/Recipes/<%=recipeData.Recipe.Title[0].$.image %>");' src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" style="<%=style %>" width="300px">
+     <img height="300px" 
+          onclick='ViewImage("/images/Recipes/<%=recipeData.Recipe.Title[0].$.image %>");' 
+          src="/images/Recipes/<%= recipeData.Recipe.Title[0].$.image %>" 
+          style="<%=style %>" 
+          width="300px">
     </div> 
     <br>
     <div style="margin-left: auto; margin-right: auto; width: 80%;">
@@ -264,7 +269,10 @@
            <%
             if ("" != imgSrc) {
            %>
-             <img height="32px" onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' src="/images/Recipes/<%=imgSrc %>" width="32px">
+             <img height="32px" 
+                  onclick='ViewImage("/images/Recipes/<%=imgSrc %>");' 
+                  src="/images/Recipes/<%=imgSrc %>" 
+                  width="32px">
            <%  
             } else {
            %>        
@@ -323,18 +331,65 @@
   </div>  
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
-    <img height="48px" id="SaveRecipesListBtn" onclick="SaveRecipe();"  src="/images/Buttons/SaveBtn_48X48.png"   style="margin: 0px 10px 0px 0px;" title="Save Recipe"            width="48px"> 
-    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();" src="/images/Buttons/ReturnBtn_48X48.png" style="margin: 0px 10px 0px 0px;" title="Return to Recipes List" width="48px">     
+    <img height="48px" 
+         id="SaveRecipesListBtn" 
+         onclick="SaveRecipe();"  
+         src="/images/Buttons/SaveBtn_48X48.png"   
+         style="margin: 0px 10px 0px 0px;" 
+         title="Save Recipe"            
+         width="48px"> 
+    <img height="48px" 
+         id="ShowRecipesListBtn" 
+         onclick="ApplyFilter();" 
+         src="/images/Buttons/ReturnBtn_48X48.png" 
+         style="margin: 0px 10px 0px 0px;" 
+         title="Return to Recipes List" 
+         width="48px">     
    </div>  
    <div id="indexPageBtns" style="display: none; visibility: collapse;">
-    <img height="48px" id="AddNewRecipeBtn"    onclick="ShowAddRecipePopup();" src="/images/Buttons/AddBtn_60X48.jpg"    style="margin: 0px 10px 0px 0px;" title="Add New Recipe"     width="48px">
-    <img height="48px" id="DeleteAllRecipeBtn" onclick="DeleteAllRecipes();"   src="/images/Buttons/DelAllBtn_48X48.png"                                   title="Delete All Recipes" width="48px">    
+    <img height="48px" 
+         id="AddNewRecipeBtn"    
+         onclick="PopupBehaviors.RevealPopup('<%= enumUtils.PopupTypes.AddRecipe %>');" 
+         src="/images/Buttons/AddBtn_60X48.jpg"    
+         style="margin: 0px 10px 0px 0px;" 
+         title="Add New Recipe"     
+         width="48px">
+    <img height="48px" 
+         id="DeleteAllRecipeBtn" 
+         onclick="DeleteAllRecipes();"   
+         src="/images/Buttons/DelAllBtn_48X48.png"                                   
+         title="Delete All Recipes" 
+         width="48px">    
    </div> 
    <div id="viewPageBtns" style="display: inline; visibility: visible;">
-    <img height="48px" id="EditRecipeBtn"      onclick="EditRecipe();"           src="/images/Buttons/EditBtn_48X48_White.png"   style="margin: 0px 10px 0px 0px;" title="Edit Recipe"             width="48px">
-    <img height="48px" id="DeleteRecipeBtn"    onclick="DeleteRecipe();"         src="/images/Buttons/DeleteBtn_48X48_White.png" style="margin: 0px 10px 0px 0px;" title="Delete Recipe"           width="48px">    
-    <img height="48px" id="PrintRecipeBtn"     onclick="RequestPrintableView();" src="/images/Buttons/PrintBtn_48X48.png"        style="margin: 0px 10px 0px 0px;" title="Print Recipe"            width="48px">      
-    <img height="48px" id="ShowRecipesListBtn" onclick="ApplyFilter();"          src="/images/Buttons/ReturnBtn_48X48.png"       style="margin: 0px 10px 0px 0px;" title="Return to Recipes List"  width="48px">    
+    <img height="48px" 
+         id="EditRecipeBtn"      
+         onclick="EditRecipe();"           
+         src="/images/Buttons/EditBtn_48X48_White.png"   
+         style="margin: 0px 10px 0px 0px;" 
+         title="Edit Recipe"             
+         width="48px">
+    <img height="48px" 
+         id="DeleteRecipeBtn"    
+         onclick="DeleteRecipe();"         
+         src="/images/Buttons/DeleteBtn_48X48_White.png" 
+         style="margin: 0px 10px 0px 0px;" 
+         title="Delete Recipe"           
+         width="48px">    
+    <img height="48px" 
+         id="PrintRecipeBtn"     
+         onclick="RequestPrintableView();" 
+         src="/images/Buttons/PrintBtn_48X48.png"        
+         style="margin: 0px 10px 0px 0px;" 
+         title="Print Recipe"            
+         width="48px">      
+    <img height="48px" 
+         id="ShowRecipesListBtn" 
+         onclick="ApplyFilter();"          
+         src="/images/Buttons/ReturnBtn_48X48.png"       
+         style="margin: 0px 10px 0px 0px;" 
+         title="Return to Recipes List"  
+         width="48px">    
    </div>   
   </div>
   
@@ -342,9 +397,13 @@
   <%# Conditionally displayed items for pop-ups, notifications, etc. %>
   
   <%# Add Recipe Popup. %>
-  <div class="popup" id="addRecipePopup" style="width: 30%;">
+  <div class="popup" id="<%= enumUtils.PopupTypes.AddRecipe %>" style="width: 30%;">
    <div class="heading">
-    ADD RECIPE&nbsp;<img height="32px" onclick="HideAddRecipePopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.AddRecipe); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enumUtils.PopupTypes.AddRecipe %>');"  
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="centered">
@@ -353,7 +412,12 @@
       Name:
      </span>
      <span class="field-value">
-      <input id="recipeName2Add" type="text">
+      <input data-validation="<%= (validationRules.GetValidationRule('recipeName2Add')).GetFieldTypeId(); %>"
+             id="recipeName2Add" 
+             maxLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMaxLength(); %>"
+             minLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMinLength(); %>"
+             <%= (validationRules.GetValidationRule('recipeName2Add')).IsRequired(); %>
+             type="text">
      </span>
     </div>
     <br> 
@@ -364,9 +428,14 @@
   </div>  
   
   <%# Error Popup. %>
-  <div class="popup" id="errorPopup" style="width: 25%;">
+  <div class="popup" id="<%= enumUtils.PopupTypes.Error %>" style="width: 25%;">
    <div class="heading">
-    WARNING&nbsp;<img height="32px" id="epCloseImg" onclick="HideErrorPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.Error); %>&nbsp;
+    <img height="32px" 
+         id="epCloseImg" 
+         onclick="HidePopup('<%= enumUtils.PopupTypes.Error %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="request-div">
@@ -375,9 +444,13 @@
   </div>
   
   <%# Recipe Exists Warning Popup. %>
-  <div class="popup" id="recipeExistsWarningPopup" style="width: 35%;">
+  <div class="popup" id="<%= enumUtils.PopupTypes.RecipeExistsWarning %>" style="width: 35%;">
    <div class="heading">
-    WARNING&nbsp;<img height="32px" onclick="HideRecipeExistsWarningPopup();" src="/images/Buttons/CloseIcon_512X512.png" width="32px">
+    <%= enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.RecipeExistsWarning); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enumUtils.PopupTypes.RecipeExistsWarning %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
    </div>
    <br>
    <div class="request-div">
