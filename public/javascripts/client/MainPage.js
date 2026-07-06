@@ -1494,7 +1494,8 @@ function SavePrerequisite() {
  var tbody  = document.getElementById("prerequisitesTable").getElementsByTagName('tbody')[0];
 
  tbody.rows[rowNdx].cells[0].innerHTML = document.getElementById("prerequisite2Edit").value
-                                       + '<input name="prerequisite" type="hidden" value="' + document.getElementById("prerequisite2Edit").value + '">';
+                                       + '<input name="prerequisite" type="hidden" value="' 
+                                       + document.getElementById("prerequisite2Edit").value + '">';
 
  PopupBehaviors.HidePopup(PopupTypes.EditPrerequisite); 
 }  

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Antipasto Salad_AntipastoSalad.jpg" name="Antipasto Salad" category="APPETIZER" cuisine="ITALIAN">
+  <Title image="Antipasto Salad_AntipastoSalad.jpg" name="Antipasto Salad" category="APPETIZER" cuisine="ITALIAN" nativeUnits="US">
     <Yield amount="12" units="SERVING"/>
     <Times prep="15" cook="0"/>
   </Title>
-  <Nutrition calories="" fat="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
   <Description>Assorted marinated vegetables, meats and cheeses.</Description>
   <Prerequisites/>
   <Ingredients>

@@ -1,5 +1,11 @@
-<form action="AddNewRecipe" id="newRecipeForm" method="post" name="newRecipeForm"> 
- <input id="recipeName" name="recipeName" type="hidden" value="">
+<form action="AddNewRecipe" 
+      id="newRecipeForm" 
+      method="post" 
+      name="newRecipeForm"> 
+ <input id="recipeName" 
+        name="recipeName" 
+        type="hidden" 
+        value="">
   
  <div class="recipe-line">
   <span class="field-header">
@@ -28,7 +34,16 @@
    Yield:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="yield" max="999" min= "1" name="yield" type="number">
+   <input data-validation="<%= (validationRules.GetValidationRule('yield')).GetFieldTypeId(); %>" 
+          id="yield" 
+          max="<%= (validationRules.GetValidationRule('yield')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('yield')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('yield')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('yield')).GetMinLength(); %>"
+          name="yield"
+          <%= (validationRules.GetValidationRule('yield')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('yield')).GetMinValue(); %>">
    <select id="yieldUnit" name="yieldUnit">
     <% Object.keys(enums.UnitTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.UnitTypes); %>
    </select>
@@ -40,7 +55,16 @@
    Serving Size:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="servings" max="999" min= "1" name="servings" type="number">
+   <input data-validation="<%= (validationRules.GetValidationRule('servings')).GetFieldTypeId(); %>" 
+          id="servings" 
+          max="<%= (validationRules.GetValidationRule('servings')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('servings')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('servings')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('servings')).GetMinLength(); %>"
+          name="servings"
+          <%= (validationRules.GetValidationRule('servings')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('servings')).GetMinValue(); %>">
    <select id="servingsUnit" name="servingsUnit">
     <% Object.keys(enums.ServingSizeTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enums.ServingSizeTypes); %>
    </select>
@@ -52,7 +76,16 @@
    Prep Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="prepTime" max="999" min= "0" name="prepTime" type="number"> minutes
+   <input data-validation="<%= (validationRules.GetValidationRule('prepTime')).GetFieldTypeId(); %>" 
+          id="prepTime" 
+          max="<%= (validationRules.GetValidationRule('prepTime')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('prepTime')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('prepTime')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('prepTime')).GetMinLength(); %>"
+          name="prepTime"
+          <%= (validationRules.GetValidationRule('prepTime')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('prepTime')).GetMinValue(); %>"> minutes
   </span>
  </div>  
  
@@ -61,7 +94,16 @@
    Cook Time:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="cookTime" max="999" min= "0" name="cookTime" type="number"> minutes
+   <input data-validation="<%= (validationRules.GetValidationRule('cookTime')).GetFieldTypeId(); %>" 
+          id="cookTime" 
+          max="<%= (validationRules.GetValidationRule('cookTime')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('cookTime')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('cookTime')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('cookTime')).GetMinLength(); %>"
+          name="cookTime"
+          <%= (validationRules.GetValidationRule('cookTime')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('cookTime')).GetMinValue(); %>"> minutes
   </span>
  </div> 
  
@@ -70,7 +112,16 @@
    Calories:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="calories" max="999" min= "0" name="calories" type="number">
+   <input data-validation="<%= (validationRules.GetValidationRule('calories')).GetFieldTypeId(); %>" 
+          id="calories" 
+          max="<%= (validationRules.GetValidationRule('calories')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('calories')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('calories')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('calories')).GetMinLength(); %>"
+          name="calories"
+          <%= (validationRules.GetValidationRule('calories')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('calories')).GetMinValue(); %>">
   </span>
  </div>
  
@@ -79,7 +130,16 @@
    Fat:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fat" max="999" min= "0" name="fat" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('fat')).GetFieldTypeId(); %>" 
+          id="fat" 
+          max="<%= (validationRules.GetValidationRule('fat')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('fat')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('fat')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('fat')).GetMinLength(); %>"
+          name="fat"
+          <%= (validationRules.GetValidationRule('fat')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('fat')).GetMinValue(); %>"> g
   </span>
  </div>
  
@@ -88,7 +148,16 @@
    Saturated Fat:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="saturatedFat" max="999" min= "0" name="saturatedFat" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('saturatedFat')).GetFieldTypeId(); %>" 
+          id="saturatedFat" 
+          max="<%= (validationRules.GetValidationRule('saturatedFat')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('saturatedFat')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('saturatedFat')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('saturatedFat')).GetMinLength(); %>"
+          name="saturatedFat"
+          <%= (validationRules.GetValidationRule('saturatedFat')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('saturatedFat')).GetMinValue(); %>"> g
   </span>
  </div>
  
@@ -97,7 +166,16 @@
    Cholesterol:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="cholesterol" max="999" min= "0" name="cholesterol" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('cholesterol')).GetFieldTypeId(); %>" 
+          id="cholesterol" 
+          max="<%= (validationRules.GetValidationRule('cholesterol')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('cholesterol')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('cholesterol')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('cholesterol')).GetMinLength(); %>"
+          name="cholesterol"
+          <%= (validationRules.GetValidationRule('cholesterol')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('cholesterol')).GetMinValue(); %>"> g
   </span>
  </div> 
  
@@ -106,7 +184,16 @@
    Carbs:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="carbs" max="999" min= "0" name="carbs" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('carbs')).GetFieldTypeId(); %>" 
+          id="carbs" 
+          max="<%= (validationRules.GetValidationRule('carbs')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('carbs')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('carbs')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('carbs')).GetMinLength(); %>"
+          name="carbs"
+          <%= (validationRules.GetValidationRule('carbs')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('carbs')).GetMinValue(); %>"> g
   </span>
  </div>
  
@@ -115,7 +202,16 @@
    Protein:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="protein" max="999" min= "0" name="protein" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('protein')).GetFieldTypeId(); %>" 
+          id="protein" 
+          max="<%= (validationRules.GetValidationRule('protein')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('protein')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('protein')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('protein')).GetMinLength(); %>"
+          name="protein"
+          <%= (validationRules.GetValidationRule('protein')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('protein')).GetMinValue(); %>"> g
   </span>
  </div> 
  
@@ -124,7 +220,16 @@
    Sugar:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="sugar" max="999" min= "0" name="sugar" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('sugar')).GetFieldTypeId(); %>" 
+          id="sugar" 
+          max="<%= (validationRules.GetValidationRule('sugar')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('sugar')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('sugar')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('sugar')).GetMinLength(); %>"
+          name="sugar"
+          <%= (validationRules.GetValidationRule('sugar')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('sugar')).GetMinValue(); %>"> g
   </span>
  </div>
  
@@ -133,7 +238,16 @@
    Sodium:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="sodium" max="999" min= "0" name="sodium" type="number"> mg
+   <input data-validation="<%= (validationRules.GetValidationRule('sodium')).GetFieldTypeId(); %>" 
+          id="sodium" 
+          max="<%= (validationRules.GetValidationRule('sodium')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('sodium')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('sodium')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('sodium')).GetMinLength(); %>"
+          name="sodium"
+          <%= (validationRules.GetValidationRule('sodium')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('sodium')).GetMinValue(); %>"> mg
   </span>
  </div>
  
@@ -142,9 +256,21 @@
    Fiber:
   </span>
   <span class="field-value">
-   <input data-validation="vNumeric" id="fiber" max="999" min= "0" name="fiber" type="number"> g
+   <input data-validation="<%= (validationRules.GetValidationRule('fiber')).GetFieldTypeId(); %>" 
+          id="fiber" 
+          max="<%= (validationRules.GetValidationRule('fiber')).GetMaxValue(); %>" 
+          maxLength="<%= (validationRules.GetValidationRule('fiber')).GetMaxLength(); %>"
+          min="<%= (validationRules.GetValidationRule('fiber')).GetMinValue(); %>" 
+          minLength="<%= (validationRules.GetValidationRule('fiber')).GetMinLength(); %>"
+          name="fiber"
+          <%= (validationRules.GetValidationRule('fiber')).IsRequired(); %>          
+          type="number"
+          value="<%= (validationRules.GetValidationRule('fiber')).GetMinValue(); %>"> g
   </span>
+
  </div> 
+ 
+ <br>
  
  <div class="recipe-line">
   <span class="field-header">
@@ -160,14 +286,21 @@
   </span>
   <span class="field-value">
    <textarea cols="64" 
-             data-validation="vAlNum" 
+             data-validation="<%= (validationRules.GetValidationRule('description')).GetFieldTypeId(); %>" 
              id="description" 
-             maxlength="4096" 
-             name="description" 
-             required="required" 
-             rows="4"></textarea>
+             max="<%= (validationRules.GetValidationRule('description')).GetMaxValue(); %>" 
+             maxLength="<%= (validationRules.GetValidationRule('description')).GetMaxLength(); %>"
+             min="<%= (validationRules.GetValidationRule('description')).GetMinValue(); %>" 
+             minLength="<%= (validationRules.GetValidationRule('description')).GetMinLength(); %>"
+             name="description"
+             placeholder="Provide a short description."
+             <%= (validationRules.GetValidationRule('description')).IsRequired(); %>  
+             rows="4"             
+             type="text"></textarea>
   </span>
  </div> 
+ 
+ <br>
 
  <div class="recipe-line">
   <span class="field-header">
@@ -385,6 +518,7 @@
 <%# Add Ingredient Popup. %>
 <div class="popup" id="<%= enums.PopupTypes.AddIngredient %>">
  <form>
+  <input id="ingredientType" name="ingredientType" type="hidden" value="INGREDIENT">
   <div class="heading">
    <img height="24px" 
         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');" 
@@ -406,7 +540,16 @@
      Ingredient:
     </span>
     <span class="field-value">
-     <input data-validation="vAlNum" id="ingredient2Add" name="ingredient2Add" type="text">
+     <input data-validation="<%= (validationRules.GetValidationRule('ingredientName')).GetFieldTypeId(); %>" 
+            id="ingredient2Add" 
+            max="<%= (validationRules.GetValidationRule('ingredientName')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('ingredientName')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('ingredientName')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('ingredientName')).GetMinLength(); %>"
+            name="ingredient2Add"
+            <%= (validationRules.GetValidationRule('ingredientName')).IsRequired(); %>   
+            placeholder="Enter ingredient name."
+            type="text">
     </span>
    </div>
    <div class="recipe-line">
@@ -414,7 +557,15 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Add" max="999" min="0" name="quantity2Add" type="number">
+     <input data-validation="<%= (validationRules.GetValidationRule('quantity')).GetFieldTypeId(); %>" 
+            id="quantity2Add" 
+            max="<%= (validationRules.GetValidationRule('quantity')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('quantity')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('quantity')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('quantity')).GetMinLength(); %>"
+            name="quantity2Add"
+            <%= (validationRules.GetValidationRule('quantity')).IsRequired(); %>   
+            type="number">
     </span>
    </div>  
    <div class="recipe-line">
@@ -442,9 +593,15 @@
      Notes:
     </span>
     <span class="field-value">
-     <input data-validation="vAlNum" 
+     <input data-validation="<%= (validationRules.GetValidationRule('notes')).GetFieldTypeId(); %>" 
             id="notes2Add" 
-            name="notes2Add" 
+            max="<%= (validationRules.GetValidationRule('notes')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('notes')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('notes')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('notes')).GetMinLength(); %>"
+            name="notes2Add"
+            <%= (validationRules.GetValidationRule('notes')).IsRequired(); %>   
+            placeholder="Enter notes."
             type="text">
     </span>
    </div>
@@ -454,10 +611,8 @@
    <img height="48px" 
         onclick="AddIngredient();" 
         src="/images/Buttons/SaveBtn_48X48.png" 
-        title="Save" width="48px">   
-   </div>     
+        title="Save" width="48px">       
   </div>
-  
  </form>
 </div>
 
@@ -485,7 +640,16 @@
      Heading Text:
     </span>
     <span class="field-value">
-     <input data-validation="vAlNum" id="heading2Add" name="heading2Add" type="text">
+     <input data-validation="<%= (validationRules.GetValidationRule('heading')).GetFieldTypeId(); %>" 
+            id="heading2Add" 
+            max="<%= (validationRules.GetValidationRule('heading')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('heading')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('heading')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('heading')).GetMinLength(); %>"
+            name="heading2Add"
+            <%= (validationRules.GetValidationRule('heading')).IsRequired(); %>   
+            placeholder="Enter heading text."
+            type="text">
     </span>
    </div>   
    <br>
@@ -503,7 +667,6 @@
 <%# Add Prerequisite Popup. %>
 <div class="popup" id="<%= enums.PopupTypes.AddPrerequisite %>">
  <form>
-  <input id="ingredientType" name="ingredientType" type="hidden" value="INGREDIENT">
   <div class="heading">
    <img height="24px" 
         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.Help %>');"
@@ -526,14 +689,18 @@
     </span>
     <span class="field-value">
      <textarea cols="40" 
-               data-validation="vAlNum" 
+               data-validation="<%= (validationRules.GetValidationRule('prerequisite')).GetFieldTypeId(); %>" 
                id="prerequisite2Add" 
-               maxlength="4096" 
-               name="prerequisite2Add" 
-               required="required" 
+               max="<%= (validationRules.GetValidationRule('prerequisite')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('prerequisite')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('prerequisite')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('prerequisite')).GetMinLength(); %>"
+               name="prerequisite2Add"
+               <%= (validationRules.GetValidationRule('prerequisite')).IsRequired(); %>   
+               placeholder="Enter prerequisite text."
                rows="4" 
-               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
-     </textarea>     
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text"></textarea>     
     </span>
    </div> 
    <br> 
@@ -573,13 +740,18 @@
     </span>
     <span class="field-value">
      <textarea cols="40" 
-               data-validation="vAlNum" 
+               data-validation="<%= (validationRules.GetValidationRule('step')).GetFieldTypeId(); %>" 
                id="step2Add" 
-               maxlength="4096" 
-               name="step2Add" 
-               required="required" 
+               max="<%= (validationRules.GetValidationRule('step')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('step')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('step')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('step')).GetMinLength(); %>"
+               name="step2Add"
+               <%= (validationRules.GetValidationRule('step')).IsRequired(); %>   
+               placeholder="Enter step text."
                rows="4" 
-               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text">
      </textarea>     
     </span>
    </div> 
@@ -639,13 +811,18 @@
     </span>
     <span class="field-value">
      <textarea cols="40" 
-               data-validation="vAlNum"  
+               data-validation="<%= (validationRules.GetValidationRule('heading')).GetFieldTypeId(); %>" 
                id="stepHeading2Add" 
-               maxlength="256" 
-               name="stepHeading2Add" 
-               required="required" 
-               rows="1" 
-               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
+               max="<%= (validationRules.GetValidationRule('heading')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('heading')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('heading')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('heading')).GetMinLength(); %>"
+               name="stepHeading2Add"
+               <%= (validationRules.GetValidationRule('heading')).IsRequired(); %>   
+               placeholder="Enter step heading text."
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text">
      </textarea>     
     </span>
    </div>    
@@ -685,14 +862,18 @@
     </span>
     <span class="field-value">
      <textarea cols="40" 
-               data-validation="vAlNum" 
+               data-validation="<%= (validationRules.GetValidationRule('variation')).GetFieldTypeId(); %>" 
                id="variation2Add" 
-               maxlength="4096" 
-               name="variation2Add" 
-               required="required" 
+               max="<%= (validationRules.GetValidationRule('variation')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('variation')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('variation')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('variation')).GetMinLength(); %>"
+               name="variation2Add"
+               <%= (validationRules.GetValidationRule('variation')).IsRequired(); %>   
+               placeholder="Enter variation text."
                rows="4" 
-               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;">
-     </textarea>     
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text"></textarea>     
     </span>
    </div> 
    <br> 
@@ -733,7 +914,16 @@
      Ingredient:
     </span>
     <span class="field-value">
-     <input id="ingredient2Edit" name="ingredient2Edit" type="text">
+     <input data-validation="<%= (validationRules.GetValidationRule('ingredientName')).GetFieldTypeId(); %>" 
+            id="ingredient2Edit"
+            max="<%= (validationRules.GetValidationRule('ingredientName')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('ingredientName')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('ingredientName')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('ingredientName')).GetMinLength(); %>"
+            name="ingredient2Edit"
+            <%= (validationRules.GetValidationRule('ingredientName')).IsRequired(); %>   
+            placeholder="Enter ingredient name."
+            type="text">
     </span>
    </div>
    <div class="recipe-line">
@@ -741,7 +931,15 @@
      Quantity:
     </span>
     <span class="field-value">
-     <input data-validation="vNumeric" id="quantity2Edit" max="999" min="1" name="quantity2Add" type="number">
+     <input data-validation="<%= (validationRules.GetValidationRule('quantity')).GetFieldTypeId(); %>" 
+            id="quantity2Edit" 
+            max="<%= (validationRules.GetValidationRule('quantity')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('quantity')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('quantity')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('quantity')).GetMinLength(); %>"
+            name="quantity2Edit"
+            <%= (validationRules.GetValidationRule('quantity')).IsRequired(); %>   
+            type="number">
     </span>
    </div>  
    <div class="recipe-line">
@@ -769,7 +967,16 @@
      Notes:
     </span>
     <span class="field-value">
-     <input id="notes2Edit" name="notes2Edit" type="text">
+     <input data-validation="<%= (validationRules.GetValidationRule('notes')).GetFieldTypeId(); %>" 
+            id="notes2Edit" 
+            max="<%= (validationRules.GetValidationRule('notes')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('notes')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('notes')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('notes')).GetMinLength(); %>"
+            name="notes2Edit"
+            <%= (validationRules.GetValidationRule('notes')).IsRequired(); %>   
+            placeholder="Enter notes."
+            type="text">
     </span>
    </div>
    <br>
@@ -806,7 +1013,16 @@
      Heading:
     </span>
     <span class="field-value">
-     <input id="heading2Edit" name="heading2Edit" type="text">
+     <input data-validation="<%= (validationRules.GetValidationRule('heading')).GetFieldTypeId(); %>" 
+            id="heading2Edit" 
+            max="<%= (validationRules.GetValidationRule('heading')).GetMaxValue(); %>" 
+            maxLength="<%= (validationRules.GetValidationRule('heading')).GetMaxLength(); %>"
+            min="<%= (validationRules.GetValidationRule('heading')).GetMinValue(); %>" 
+            minLength="<%= (validationRules.GetValidationRule('heading')).GetMinLength(); %>"
+            name="heading2Edit"
+            <%= (validationRules.GetValidationRule('heading')).IsRequired(); %>   
+            placeholder="Enter heading text."
+            type="text">
     </span>
    </div>
    <br>
@@ -847,10 +1063,19 @@
      Prerequisite:
     </span>
     <span class="field-value">
-     <input id="prerequisite2Edit" 
-            required="required" 
-            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
-            type="textarea">
+     <textarea cols="40" 
+               data-validation="<%= (validationRules.GetValidationRule('prerequisite')).GetFieldTypeId(); %>" 
+               id="prerequisite2Edit" 
+               max="<%= (validationRules.GetValidationRule('prerequisite')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('prerequisite')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('prerequisite')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('prerequisite')).GetMinLength(); %>"
+               name="prerequisite2Edit"
+               <%= (validationRules.GetValidationRule('prerequisite')).IsRequired(); %>   
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text">
+     </textarea>
     </span>
    </div> 
   </div>
@@ -891,10 +1116,20 @@
      Step:
     </span>
     <span class="field-value">
-     <input id="step2Edit" 
-            required="required" 
-            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
-            type="textarea">
+     <textArea cols="40" 
+               data-validation="<%= (validationRules.GetValidationRule('step')).GetFieldTypeId(); %>" 
+               id="step2Edit" 
+               max="<%= (validationRules.GetValidationRule('step')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('step')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('step')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('step')).GetMinLength(); %>"
+               name="step2Edit"
+               <%= (validationRules.GetValidationRule('step')).IsRequired(); %>   
+               placeholder="Enter new step text."
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text">
+     </textArea>
     </span>
    </div> 
    <br>
@@ -961,10 +1196,20 @@
      Heading:
     </span>
     <span class="field-value">
-     <input id="stepHeading2Edit" 
-            required="required" 
-            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
-            type="textarea">
+     <textArea cols="40" 
+               data-validation="<%= (validationRules.GetValidationRule('heading')).GetFieldTypeId(); %>" 
+               id="stepHeading2Edit" 
+               max="<%= (validationRules.GetValidationRule('heading')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('heading')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('heading')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('heading')).GetMinLength(); %>"
+               name="stepHeading2Edit"
+               <%= (validationRules.GetValidationRule('heading')).IsRequired(); %>   
+               placeholder="Enter new step heading text."
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text">
+     </textArea>
     </span>
    </div> 
    <br>   
@@ -981,7 +1226,7 @@
 </div>
 
 <%# Edit Variation Popup. %>
-<div class="popup" id="<%= enums.PopupTypes.EditStepVariation %>">
+<div class="popup" id="<%= enums.PopupTypes.EditVariation %>">
  <form >
   <input id="variationAction" type="hidden" value="">
   <input id="variationRowId"  type="hidden" value="">
@@ -1006,10 +1251,19 @@
      Variation:
     </span>
     <span class="field-value">
-     <input id="variation2Edit" 
-            required="required"  
-            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
-            type="textarea">
+     <textarea cols="40" 
+               data-validation="<%= (validationRules.GetValidationRule('variation')).GetFieldTypeId(); %>" 
+               id="variation2Edit" 
+               max="<%= (validationRules.GetValidationRule('variation')).GetMaxValue(); %>" 
+               maxLength="<%= (validationRules.GetValidationRule('variation')).GetMaxLength(); %>"
+               min="<%= (validationRules.GetValidationRule('variation')).GetMinValue(); %>" 
+               minLength="<%= (validationRules.GetValidationRule('variation')).GetMinLength(); %>"
+               name="variation2Edit"
+               <%= (validationRules.GetValidationRule('variation')).IsRequired(); %>   
+               placeholder="Enter new variation text."
+               rows="4" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
+               type="text"></textarea>
     </span>
    </div> 
   </div>

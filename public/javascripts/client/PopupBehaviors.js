@@ -96,7 +96,7 @@ class PopupBehaviors {
     return new EditStepPopupBehavior(popupTypeId);
    }
 
-   case PopupTypes.EditStepHeadingRecipe: {
+   case PopupTypes.EditStepHeading: {
     return new EditStepHeadingPopupBehavior(popupTypeId);
    }   
    

@@ -84,6 +84,7 @@ function GetDescFromButtonType(enumVal) {
      return "UNDEFINED";
      }     
  }
+ 
  return "UNDEFINED";
 }
 
@@ -97,7 +98,6 @@ function GetEnumFromButtonDesc(desc) {
  
   return "UNDEFINED";
 }
-
 
 
 export
@@ -135,7 +135,7 @@ function GetDescFromCategoryType(enumVal) {
   } 
  }
  
-  return "Undefined";
+ return "Undefined";
 }
 
 export
@@ -146,7 +146,16 @@ function GetEnumFromCategoryDesc(desc) {
   } 
  }
  
-  return "UNDEFINED";
+ return "UNDEFINED";
+}
+
+export 
+function IsCategory(val) {
+ if (undefined == CategoryTypes[val]) {
+  return false;
+ }
+ 
+ return true;
 }
 
 
@@ -190,6 +199,15 @@ function GetEnumFromCuisineDesc(desc) {
  }
  
   return "UNDEFINED";
+}
+
+export 
+function IsCuisine(val) {
+ if (undefined == CuisineTypes[val]) {
+  return false;
+ }
+ 
+ return true;
 }
 
 
@@ -784,6 +802,16 @@ function GetDirectionFromPrepType(enumVal) {
 }
  
 export
+function IsPrepType(val) {
+ if (undefined == PreparationTypes[val]) {
+  return false;
+ }
+ 
+ return true;
+}
+
+
+export
 const ScalingTypes = Object.freeze({
  HALVE:     "/ 2",
  NONE:      "X 1",
@@ -812,6 +840,15 @@ function GetEnumFromScalingDesc(desc) {
  }
  
   return "UNDEFINED";
+}
+
+export
+function IsScalingType(val) {
+ if (undefined == ScalingTypes[val]) {
+  return false;
+ }
+ 
+ return true;
 }
 
 
@@ -847,6 +884,15 @@ function GetEnumFromServingSizeDesc(desc) {
  return "UNDEFINED";
 }
 
+export
+function IsServingSizeType(val) {
+ if (undefined == ServingSizeTypes[val]) {
+  return false;
+ }
+ 
+ return true;
+}
+
 
 export
 const SystemOfUnitsTypes = Object.freeze({
@@ -874,6 +920,15 @@ function GetEnumFromSystemOfUnitsDesc(desc) {
  }
  
   return "UNDEFINED";
+}
+
+export
+function IsSystemOfUnitsType(val) {
+ if (undefined == SystemOfUnitsTypes[val]) {
+  return false;
+ }
+ 
+ return true;
 }
 
 
@@ -940,4 +995,13 @@ function GetEnumFromUnitDesc(desc) {
  }
  
  return "UNDEFINED";
+}
+
+export
+function IsUnitType(val) {
+ if (undefined == UnitTypes[val]) {
+  return false;
+ }
+ 
+ return true;
 }
