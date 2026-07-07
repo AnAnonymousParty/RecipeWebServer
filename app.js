@@ -376,6 +376,16 @@ app.get('/GetShoppingList', (req, res) => {
 app.get('/RenameRecipe', (req, res) => {
  console.log("> RenameRecipe(" + decodeURIComponent(req.query.oldRecipeName) + ", " + decodeURIComponent(req.query.newRecipeName) + ")");
 
+ let validationRules = new validationRulesLib.ValidationRules();
+ 
+ if (false == validationUtilsLib.ValidateField('recipeName', req.query.oldRecipeName, validationRules)
+  || false == validationUtilsLib.ValidateField('recipeName', req.query.newRecipeName, validationRules)) {
+   
+  console.log("< /RenameRecipe: Recipe names invalid."); 
+  
+  res.status(enums.HttpStatusTypes.OK).send("Unable to rename recipe.");
+ } 
+
  RenameExistingRecipe(decodeURIComponent(req.query.oldRecipeName), decodeURIComponent(req.query.newRecipeName));
     
  console.log("< RenameRecipe()");  
@@ -422,6 +432,14 @@ app.get('/SearchRecipes', (req, res) => {
  console.log("> /SearchRecipe ");
  
  let searchTerm = req.query.searchTerm;
+ 
+ let validationRules = new validationRulesLib.ValidationRules();
+ 
+ if (false == validationUtilsLib.ValidateField('search', searchTerm, validationRules)) {
+  console.log("< /SearchRecipe"); 
+  
+  res.status(enums.HttpStatusTypes.OK).send("Search term invalid");
+ } 
 
  let dirPath = path.join(__dirname, '/public/data/recipes')
  
@@ -1312,7 +1330,7 @@ function ValidateRcvdPostData(rcvdPostData) {
  let validationRules  = new validationRulesLib.ValidationRules();
  
  for (;;) {
-  if (false == validationUtilsLib.ValidateField('recipeName2Add', rcvdPostData.recipeName, validationRules)) {
+  if (false == validationUtilsLib.ValidateField('recipeName', rcvdPostData.recipeName, validationRules)) {
   
    validationResult = "Recipe name invalid";
    

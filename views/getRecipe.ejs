@@ -26,11 +26,13 @@
     <select id="categories" name="category" onChange="ApplyFilter();" style="margin: 0px 0px 0px 5px;">
      <% Object.keys(enumUtils.CategoryTypes).forEach(function(key, index) { %><option value="<%=key %>"><%=this[key]%></option><% }, enumUtils.CategoryTypes); %>
     </select>
-    <input data-validation="v" 
+    <input data-validation="<%= (validationRules.GetValidationRule('search')).GetFieldTypeId(); %>"
            id="searchTerm" 
-           maxlength="128" 
+           maxLength="<%= (validationRules.GetValidationRule('search')).GetMaxLength(); %>"
+           minLength="<%= (validationRules.GetValidationRule('search')).GetMinLength(); %>"
            name="searchTerm" 
-           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enumUtils.ButtonTypes.Search %>');}"
+           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.Search %>');}"
+           <%= (validationRules.GetValidationRule('search')).IsRequired(); %>           
            size="48" 
            style="margin: 0px 0px 0px 30px;" 
            type="text">
@@ -412,11 +414,11 @@
       Name:
      </span>
      <span class="field-value">
-      <input data-validation="<%= (validationRules.GetValidationRule('recipeName2Add')).GetFieldTypeId(); %>"
+      <input data-validation="<%= (validationRules.GetValidationRule('recipeName')).GetFieldTypeId(); %>"
              id="recipeName2Add" 
-             maxLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMaxLength(); %>"
-             minLength="<%= (validationRules.GetValidationRule('recipeName2Add')).GetMinLength(); %>"
-             <%= (validationRules.GetValidationRule('recipeName2Add')).IsRequired(); %>
+             maxLength="<%= (validationRules.GetValidationRule('recipeName')).GetMaxLength(); %>"
+             minLength="<%= (validationRules.GetValidationRule('recipeName')).GetMinLength(); %>"
+             <%= (validationRules.GetValidationRule('recipeName')).IsRequired(); %>
              type="text">
      </span>
     </div>

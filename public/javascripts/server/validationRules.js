@@ -69,7 +69,7 @@ class ValidationRules {
  InitRules() {
   this.rules.clear();
   
-  //                                   ID                 TYPE        ML   MV   mL mV   REQ
+  //                                   ID              TYPE        ML   MV   mL mV   REQ
   this.AddRule(new ValidationRule("calories",       "vNumeric",   3,    999, 1, 0,  false));
   this.AddRule(new ValidationRule("carbs",          "vNumeric",   3,    999, 1, 0,  false));    
   this.AddRule(new ValidationRule("cookTime",       "vNumeric",   3,    999, 1, 0,  false));  
@@ -85,8 +85,9 @@ class ValidationRules {
   this.AddRule(new ValidationRule("prerequisite",   "vAlnum",     4096, "",  1, "", true));    
   this.AddRule(new ValidationRule("protein",        "vNumeric",   3,    999, 1, 0,  false));  
   this.AddRule(new ValidationRule("quantity",       "vNumeric",   3,    999, 1, 0,  true));   
-  this.AddRule(new ValidationRule("recipeName2Add", "vFileName",  128,  "",  1, "", true));
-  this.AddRule(new ValidationRule("saturatedFat",   "vNumeric",   3,    999, 1, 0,  false));   
+  this.AddRule(new ValidationRule("recipeName",     "vFileName",  128,  "",  1, "", true));
+  this.AddRule(new ValidationRule("saturatedFat",   "vNumeric",   3,    999, 1, 0,  false)); 
+  this.AddRule(new ValidationRule("search",         "vText",      256,  "",  1, "", true));   
   this.AddRule(new ValidationRule("servings",       "vNumeric",   3,    999, 1, 1,  false));
   this.AddRule(new ValidationRule("sodium",         "vNumeric",   3,    999, 1, 0,  false));  
   this.AddRule(new ValidationRule("step",           "vText",      4096, "",  1, "", true));   

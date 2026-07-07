@@ -276,7 +276,7 @@
   <span class="field-header">
    <span style="display: inline-flex;  vertical-align: middle;">
     <img height="16px" 
-         onclick="ShowPopup('<%= enums.PopupTypes.Help %>');" 
+         onclick='PopupBehaviors.RevealPopup("<%= enums.PopupTypes.Help %>");' 
          src="images/Buttons/HelpBtn_48X48.png" 
          title="Display editing help" 
          width="16px"> 
@@ -516,7 +516,7 @@
 <%# Conditionally displayed items for pop-ups, notifications, etc. %>
 
 <%# Add Ingredient Popup. %>
-<div class="popup" id="<%= enums.PopupTypes.AddIngredient %>">
+<div class="popup" id="<%= enums.PopupTypes.AddIngredient %>" >
  <form>
   <input id="ingredientType" name="ingredientType" type="hidden" value="INGREDIENT">
   <div class="heading">
@@ -822,8 +822,7 @@
                placeholder="Enter step heading text."
                rows="4" 
                style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
-               type="text">
-     </textarea>     
+               type="text"></textarea>     
     </span>
    </div>    
    <br> 
@@ -1208,8 +1207,7 @@
                placeholder="Enter new step heading text."
                rows="4" 
                style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;"               
-               type="text">
-     </textArea>
+               type="text"></textArea>
     </span>
    </div> 
    <br>   
