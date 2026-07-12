@@ -1,27 +1,29 @@
 // javascript libraries we need:
 
-const bodyParser   = require("body-parser");
-const cookieParser = require('cookie-parser');
-const createError  = require('http-errors');
-const eformidable  = require('express-formidable-v2');
-const express      = require('express');
-const favicon      = require('serve-favicon');
-const fractional   = require('fractional');
-const fs           = require('fs');
-const fsExtra      = require('fs-extra');
-const logger       = require('morgan');
-const path         = require('path');
-const puppeteer    = require('puppeteer');
-const xml2js       = require('xml2js');
-const xml2jsParser = require('xml2js-parser');
-const xmlBuilder   = require('xmlbuilder2');
-const zipUtils     = require('adm-zip');
+const bodyParser                 = require("body-parser");
+const CloudmersiveVirusApiClient = require('cloudmersive-virus-api-client');
+const cookieParser               = require('cookie-parser');
+const createError                = require('http-errors');
+const eformidable                = require('express-formidable-v2');
+const express                    = require('express');
+const favicon                    = require('serve-favicon');
+const fractional                 = require('fractional');
+const fs                         = require('fs');
+const fsExtra                    = require('fs-extra');
+const logger                     = require('morgan');
+const path                       = require('path');
+const puppeteer                  = require('puppeteer');
+const xml2js                     = require('xml2js');
+const xml2jsParser               = require('xml2js-parser');
+const xmlBuilder                 = require('xmlbuilder2');
+const zipUtils                   = require('adm-zip');
 
 const { DOMParser, XMLSerializer } = require('xmldom');
 
 // javascript we provide:
 
 const common             = require(path.join(__dirname, '/public/javascripts/server/common.js'));
+const configManagerLib   = require(path.join(__dirname, '/public/javascripts/server/ConfigManager.js'));
 const enums              = require(path.join(__dirname, '/public/javascripts/server/enums.js'));
 const searchUtils        = require(path.join(__dirname, '/public/javascripts/server/search.js'));
 const stringUtils        = require(path.join(__dirname, '/public/javascripts/server/stringUtils.js'));
@@ -48,7 +50,12 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + "/public/images/favicon.ico"));
-app.use(eformidable( { uploadDir: path.join(__dirname, "/public/images/Staging"), keepExtensions: true, maxFileSize: 1000 * 1024 * 1024 } ));
+
+// Setup file uploading:
+app.use(eformidable( { keepExtensions: true, 
+                       maxFiles:       1,
+                       maxFileSize:    1000 * 1024 * 1024,
+                       uploadDir:      path.join(__dirname, "/public/images/Staging") } ));
 
 // Enable logging, but not every GET for static resources:
 app.use(logger('dev', {
@@ -57,6 +64,7 @@ app.use(logger('dev', {
  }
 }));
 
+configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.join(__dirname, '/private/Config/', 'Config.xml'));
 
 /*------------------------- GET handlers ------------------------------------*/
 
@@ -64,7 +72,7 @@ app.get('/CheckRecipeExists', (req, res) => {
  let f          = req.query.file2Check + ".xml"
  let file2Check = decodeURIComponent(f);
  
- if (fs.existsSync(__dirname + "/public/data/recipes/" + file2Check)) {
+ if (true == fs.existsSync(__dirname + "/public/data/recipes/" + file2Check)) {
   res.send('YES');
  } else {
   res.send('NO');
@@ -618,22 +626,88 @@ app.post("/UpdateRecipe", function (req, res) {
 });
 
 // Handle image uploaded.
-app.post("/UploadImage", function (req, res) {
+app.post("/UploadImage", async function (req, res) {
  console.log("> UploadImage(" + req.fields.recipeName + ", " + req.files.image.path + ")"); 
-
+ 
  let recipeName       = req.fields.recipeName; 
  let uploadedFileName = req.files.image.path;  
  let targetFileName   = path.join(__dirname, "/public/images/Staging/") + common.UnEscapeHtml(recipeName) + '_' + req.files.image.name;
  
- fs.rename(uploadedFileName, targetFileName, function(err) {
-  if (err) {
-   console.log('ERROR: ' + err);
+ console.log("> UploadImage(): file = " + uploadedFileName);
+ 
+ let htmlRsp   = "";
+ let retStatus = enums.HttpStatusTypes.OK;
+ 
+ if ("true" != configManager.IsValidateUploadedFileEnabled()) {
+  await fs.rename(uploadedFileName, targetFileName, function(err) {
+   if (err) {
+    htmlRsp = err;
+    
+    console.log('ERROR: ' + err);
+   } else {
+    htmlRsp = "Image successfully uploaded";
+   }
+  });
+
+  htmlRsp = "Image successfully uploaded";  
+ } else {
+  let fileValidationResult = await ValidateFile(uploadedFileName);
+  
+  console.log("  UploadImage(): result = " + JSON.stringify(fileValidationResult));
+  
+  switch (fileValidationResult.Result) {
+   case enums.FileValidationResultTypes.FAILED: {
+    htmlRsp   = "Received file not accepted.";
+    retStatus = enums.HttpStatusTypes.NOTACCEPTABLE; 
+    
+    fs.rmSync(uploadedFileName, { force: true, });    
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.NOAPIKEY: {
+    htmlRsp = "Unable to validate file due to missing API Key.<br>"
+            + "Visit <a href='https://portal.cloudmersive.com/'>Cloudmersive</a><br>"
+            + "to register and obtain a key.";
+                
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR;  
+
+    fs.rmSync(uploadedFileName, { force: true, });     
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.PASSED: {
+    await fs.rename(uploadedFileName, targetFileName, function(err) {
+     if (err) {
+      htmlRsp = err;
+      
+      console.log('ERROR: ' + err);
+     } else {
+      htmlRsp = "Image successfully uploaded";
+     }
+    }); 
+    
+    htmlRsp = "Image successfully uploaded";
+   }
+   break;  
+   
+   case enums.FileValidationResultTypes.SERVERERROR: {
+    htmlRsp   = fileValidationResult.Errors;
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR; 
+    
+    fs.rmSync(uploadedFileName, { force: true, }); 
+   }
+   break;  
+   
+   default: {
+    console.log("  UploadImage(): WTF?");
+   }
+   break;
   }
- });
+ }
+
+ console.log("< UploadImage() [" + retStatus + ", " + htmlRsp + "]");
  
- console.log("< UploadImage()"); 
- 
- return res.send("Successfully uploaded");
+ res.status(retStatus).send(htmlRsp);
 });
 
 // Handle recipes (import) file uploaded.
@@ -647,7 +721,7 @@ app.post("/UploadRecipes", function (req, res) {
   fs.mkdirSync(uploadPath);
  }
   
- let targetFileName   = uploadPath + req.files.recipesFile.name;
+ let targetFileName = uploadPath + req.files.recipesFile.name;
  
  fs.rename(uploadedFileName, targetFileName, function(err) {
   if (err) {
@@ -1320,6 +1394,92 @@ console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName +
  }
  
  console.log("< UpdateLinksInFile()");
+}
+
+async function ValidateFile(filePathName) {
+ console.log("> ValidateFile(" + filePathName + ")");
+ 
+ if (false == fs.existsSync(path.join(__dirname, '\\private\\APIKeys\\cloudmersiveAPIKey.txt'))) {
+  // Cloudmersive API key is not present, there's no validation that can be performed:
+  
+  console.log("< ValidateFile() [NOAPIKEY, ''] - Cloudmersive API key not present, file upload checking cannot be performed.");
+  
+  return { Result: enums.FileValidationResultTypes.NOAPIKEY, Errors: ""};
+ }  
+  
+  
+ // Cloudmersive API is available, try to validate the file via Cloudmersive: 
+ 
+ let result = {};
+ 
+ try {
+  result = await ValidateFileViaAPI(filePathName);
+  
+  console.log("< ValidateFile() - API returned " + JSON.stringify(result));      
+ } catch(error) {
+  console.log("< ValidateFile() ERROR:" + error);
+  
+  result = error;
+ }  
+ 
+ console.log("< ValidateFile() [" + result.Result + ", " + result.Errors + "]");
+ 
+ return (result);  
+}
+
+async function ValidateFileViaAPI(filePathName) {
+ console.log("> ValidateFileViaAPI(" + filePathName + ")");
+ 
+ return new Promise((resolve, reject) => {
+  var defaultClient = CloudmersiveVirusApiClient.ApiClient.instance;
+
+  var Apikey = defaultClient.authentications['Apikey'];
+   
+  Apikey.apiKey = fs.readFileSync(path.join(__dirname, '\\private\\APIKeys\\cloudmersiveAPIKey.txt'));
+   
+  var apiInstance = new CloudmersiveVirusApiClient.ScanApi();
+
+  var inputFile = Buffer.from(fs.readFileSync(filePathName).buffer); 
+
+  var opts = { 
+   'allowExecutables':             false, 
+   'allowInvalidFiles':            false, 
+   'allowScripts':                 false, 
+   'allowPasswordProtectedFiles':  false, 
+   'allowMacros':                  false, 
+   'allowXmlExternalEntities':     false, 
+   'allowInsecureDeserialization': false, 
+   'allowHtml':                    false, 
+   'restrictFileTypes':            ".gif,.jpeg,.jpg,.pdf,.png" };  
+   
+  apiInstance.scanFileAdvanced(inputFile, opts, (error, data, response) => {
+   if (error) {
+    console.error("  ValidateFileViaAPI() - Error: " + error.response.text);
+    
+    reject({ Result: enums.FileValidationResultTypes.SERVERERROR, Errors: "File not saved due to server error.<br>See server logs for details." });
+   }
+  
+   console.log("< ValidateFileViaAPI(): data - " + JSON.stringify(data));
+  
+   if (200 == response.status) {
+    var result = data.CleanResult;
+    
+    if (true == result) {
+     console.log("< ValidateFileViaAPI(): File accepted");
+     
+     resolve({ Result: enums.FileValidationResultTypes.PASSED, Errors: "" });
+    } else {
+     console.log("  ValidateFileViaAPI(): File suspect.");
+     
+     resolve({ Result: enums.FileValidationResultTypes.FAILED, Errors: "" }); 
+    }   
+   } else {
+    console.log("< ValidateFileViaAPI(): Error" + JSON.stringify(data));
+     
+    reject({ Result: enums.FileValidationResultTypes.SERVERERROR, Errors: "File not saved due to server error.<br>See server logs for details." });     
+   }  
+  });
+ });
 }
 
 function ValidateRcvdPostData(rcvdPostData) {

@@ -212,6 +212,15 @@ function IsCuisine(val) {
 
 
 export
+const FileValidationResultTypes = Object.freeze({
+ FAILED:       "Failed validation",
+ NOAPIKEY:     "API Key not present",
+ PASSED:       "Passed validation",
+ SERVERERROR:  "Server error"
+});
+
+
+export
 const HttpStatusTypes = Object.freeze({
 	CONTINUE:           100,
 	SWITCHINGPROTOCOLS: 101,

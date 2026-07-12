@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<Config> 
+ <Validation>
+  <ValidateUploadedFiles>true</ValidateUploadedFiles>
+ </Validation>
+ <UserInterface>
+  <Units>
+   <NativeUnits>US</NativeUnits>
+  </Units>
+ </UserInterface>
+</Config>
