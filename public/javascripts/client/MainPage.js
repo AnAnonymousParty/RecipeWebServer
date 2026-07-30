@@ -598,6 +598,67 @@ function DeleteAllVariations() {
  btnStyle.visibility = "collapse";
 }
 
+function DeleteArticle(recipeName) {
+ // recipeName is provided when a Delete button is clicked in the Recipes List.
+ // If the Delete button is clicked on the Recipe View page, recipeName will be
+ // empty, implying that it is meant to delete THAT recipe, and the name can be 
+ // obtained from within the hidden page data:
+ 
+ if (undefined == recipeName || "" == recipeName) {
+  recipeName = document.getElementById("recipeName").value;
+ } 
+ 
+ if (false == confirm("Are you sure you want to delete the recipe?")) {
+  return;
+ }
+ 
+ let xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function()
+ {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (HttpStatusTypes.OK == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+   
+   const parser = new DOMParser();
+   const doc    = parser.parseFromString(data, 'text/html');
+   
+   document.getElementById("displayCnt").innerText = doc.getElementById("filesListCnt").value;
+   document.getElementById("totalCnt").innerText   = doc.getElementById("totalFilesCnt").value;
+      
+   if ("" == data) { 
+    document.getElementById("recipesListContainer").innerHTML = "There are no recipes in the system.<br><br>Why don't you add some?";
+    
+    HideElement("DeleteAllRecipesBtn");
+   } else {   
+    document.getElementById("recipesListContainer").innerHTML = data;
+    
+    UnHideElement("DeleteAllRecipesBtn", "inline");
+   }
+  }
+  else {
+   alert("Recipe could not be deleted.");
+  }
+ }
+ 
+ var params = encodeURIComponent(recipeName);
+ 
+ xmlhttp.open("GET", "/DeleteRecipe?recipe2Delete=" + params, true);
+ xmlhttp.send(); 
+ 
+ if (null != document.getElementById("viewRecipeForm")) {
+   HideElement("editPageBtns");
+   HideElement("recipeTitleContainer");  
+   HideElement("viewPageBtns");
+   
+   UnHideElement("filtersContainer", "inline-flex");
+   UnHideElement("indexPageBtns"); 
+ }
+}
+
 function DeleteIngredient(rowNum) {
  var tbody = document.getElementById("ingredientsTable").getElementsByTagName('tbody')[0];
  
@@ -798,6 +859,10 @@ function DeleteVariation(rowNum) {
   btnStyle.display    = "none";
   btnStyle.visibility = "collapse";
  }
+}
+
+function EditArticle(articleName) {
+  
 }
 
 function EditIngredient(rowNum) {
@@ -1029,6 +1094,16 @@ function EditVariation(rowNum) {
  document.getElementById("overlayContainer").className = "overlay";
  
  PopupBehaviors.RevealPopup(PopupTypes.EditVariation);
+}
+
+function HandleContentFileSelectionChanged() {
+ let contentPathFile = document.getElementById('content2Upload').files[0];
+ 
+ if ('undefined' === typeof contentPathFile || "" == contentPathFile) {
+  HideElement("uploadContentBtn");
+ } else {
+  UnHideElement("uploadContentBtn", "inline");
+ }
 }
 
 function HandleImageSelectionChanged() {
@@ -1279,38 +1354,72 @@ function RequestNewRecipePage(recipeName) {
  xmlhttp.send();
 }
 
-function RequestPrintableView(recipeName) {
+function RequestPrintableView(recipeName, type) {
  // recipeName is provided when an Edit button is clicked in the Recipes List.
  // If the Print button is clicked on the Recipe View page, recipeName will be
  // empty, implying that it is meant to print THAT recipe, and the name can be 
  // obtained from within the hidden page data:
  
- if (undefined == recipeName || "" == recipeName) {
-  recipeName = document.getElementById("recipeName").value;
- }
+ let loc = "";
  
- var params = encodeURIComponent(recipeName);
- 
- var loc = "/ShowPrintRecipePage?recipeToPrint=" + params + "&scaling="
- 
- let sElem = document.getElementById("scaling");
- 
- let scaling = 1;
- 
- if (null != sElem) {
-  if (0 == sElem.selectedIndex) {
-    scaling = 0.5;
-   } else {
-    scaling = sElem.selectedIndex;
+ if (undefined == type || "recipe" == type) {
+  if (undefined == recipeName || "" == recipeName) {
+   if (null != document.getElementById("recipeName")) {
+    recipeName = document.getElementById("recipeName").value;
    }
- } 
- 
- if (null != document.getElementById("units")) {
-  loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
+  }
+
+  if (null != recipeName && "" != recipeName) {
+   loc = "/ShowPrintRecipePage?recipeToPrint=" + encodeURIComponent(recipeName) + "&type=recipe&scaling=";
+    
+   let sElem = document.getElementById("scaling");
+    
+   let scaling = 1;
+    
+   if (null != sElem) {
+    if (0 == sElem.selectedIndex) {
+      scaling = 0.5;
+     } else {
+      scaling = sElem.selectedIndex;
+     }
+   } 
+   
+   if (null != document.getElementById("units")) {
+    loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
+   } else {
+    loc += (scaling.toString()) + "&units=US";
+   }
+  } else {
+   let articleName = "";
+   
+   if (undefined == type || "article" == type) {
+    if (undefined == recipeName || "" == recipeName) {
+     if (null != document.getElementById("articleName")) {
+      articleName = document.getElementById("articleName").value;
+     } 
+    } else {
+     articleName = recipeName;
+    }
+   }
+  
+   loc = "/GetArticle?articleName=" + encodeURIComponent(articleName) + "&type=article";
+  }
  } else {
-  loc += (scaling.toString()) + "&units=US";
+  let articleName = "";
+  
+  if (undefined == type || "article" == type) {
+   if (undefined == recipeName || "" == recipeName) {
+    if (null != document.getElementById("articleName")) {
+     articleName = document.getElementById("articleName").value;
+    } 
+   } else {
+    articleName = recipeName;
+   }
+  }
+  
+  loc = "/GetArticle?articleName=" + encodeURIComponent(articleName) + "&type=article";
  }
- 
+  
  window.open(loc); 
 }
 
@@ -1793,6 +1902,76 @@ function ShowRecipesList(category, cuisine) {
  };
 
  xmlhttpReq.send();
+}
+
+function SubmitContentFileForUpload(imageUse) { 
+ let pageName = document.getElementById('staticPage2Add').value;
+ 
+ if ('undefined' === typeof pageName  || "" == pageName) {
+  alert("A name must be provided.");
+  
+  return;
+ }
+ 
+ let content  = document.getElementById('content2Upload').files[0];
+ 
+ let formData = new FormData();
+
+ formData.append('recipeName', pageName);
+ formData.append('content',    content);
+
+ let response = document.getElementById('response');
+ 
+ HideElement("response");
+ 
+ 
+ // Build the request to send to the server:
+ 
+ var xmlhttpReq = new XMLHttpRequest();
+
+ xmlhttpReq.open('POST', '/UploadContent', true);
+
+
+ // Provide the callback function to handle the response from the server:
+ 
+ xmlhttpReq.onload = function() {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
+   return;  // I shall serve no data before its time.
+  }  
+  
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
+   var data = xmlhttpReq.responseText;
+   
+   response.innerHTML = data;
+   
+   HideElement("uploadContentBtn");
+   
+   UnHideElement("response");
+    
+   document.getElementById("FileUploadForm").style.display = "none";
+    
+   setTimeout(function() {
+               document.getElementById("content2Upload").value = "";
+  
+               ToggleVisibility("response");
+               ToggleVisibility("fileUploadForm");
+              }, 3000);
+
+  } else {
+   response.innerHTML = "Server Error: File upload rejected";
+  }
+   
+  response.innerHTML = xmlhttpReq.responseText;
+ };
+ 
+ 
+ // Send the request to the server:
+ 
+ response.innerHTML = "Uploading content...";
+ 
+ UnHideElement("response");
+
+ xmlhttpReq.send(formData);
 }
 
 function SubmitFileForUpload(imageUse) { 
@@ -2346,6 +2525,28 @@ function UpdateIngredients() {
    break;
   }   
  }
+}
+
+function ViewArticle(articleName) {
+ let xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
+   document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
+   document.getElementById("recipeTitle").innerText          = articleName; 
+   
+   HideElement("editPageBtns");
+   HideElement("filtersContainer");
+   HideElement("indexPageBtns");
+   
+   UnHideElement("viewPageBtns"); 
+   UnHideElement("recipeTitleContainer"); 
+  }
+ }
+    
+ xmlhttp.open("GET", "/GetArticle?articleName=" + encodeURIComponent(articleName), true);
+ 
+ xmlhttp.send(); 
 }
 
 function ViewRecipe(recipeName) {

@@ -90,7 +90,11 @@ class ButtonBehaviors {
 
    case ButtonTypes.Search: {
     return new SearchButtonBehavior(buttonTypeId);
-   }    
+   }  
+
+   case ButtonTypes.UploadContent: {
+    return new UploadContentButtonBehavior(buttonTypeId);
+   }   
     
    default: {
    
@@ -467,3 +471,16 @@ class SearchButtonBehavior extends ButtonBehavior {
   xmlhttpReq.send();
  }
 }
+
+class UploadContentButtonBehavior extends ButtonBehavior {
+ constructor(buttonTypeId) {
+  super(buttonTypeId);
+ }
+
+ HandleButtonClkd() {
+  super.HandleButtonClkd();
+ 
+
+ }
+}
+

@@ -31,5 +31,8 @@
   },
   "allowScripts": {
     "puppeteer@24.17.0": true
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1"
   }
 }

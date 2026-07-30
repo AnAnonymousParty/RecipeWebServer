@@ -9,9 +9,9 @@ var enumsLib           = require(path.join(__dirname, '../public/javascripts/ser
 let validationRulesLib = require(path.join(__dirname, '../public/javascripts/server/validationRules.js'));
 
 router.get('/', function(req, res, next) {
-  var directoryPath    = path.join(__dirname, '../public/data/recipes'); 
-  var recipesList      = fs.readdirSync(directoryPath); 
-  var rv               = commonLib.GenerateFilesList(fs, xml2jsParser, directoryPath, 'ALL', 'ALL');
+  var directoryPath   = path.join(__dirname, '../public/data/recipes'); 
+  var recipesList     = fs.readdirSync(directoryPath); 
+  var rv              = commonLib.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
   var validationRules = new validationRulesLib.ValidationRules();
  
   res.render('index', { title:              'Recipe Server', 

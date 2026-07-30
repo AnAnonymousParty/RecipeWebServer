@@ -136,6 +136,10 @@ class PopupBehaviors {
     return new ShoppingListPopupBehavior(popupTypeId);
    }    
    
+   case PopupTypes.UploadContent: {
+    return new UploadContentPopupBehavior(popupTypeId, parentElement, params);
+   }   
+   
    case PopupTypes.UploadFile: {
     return new UploadFilePopupBehavior(popupTypeId, parentElement, params);
    } 
@@ -238,6 +242,8 @@ class AddRecipePopupBehavior extends PopupBehavior {
  }
   
  RevealPopup() {
+  super.RevealPopup();
+  
   document.getElementById("recipeName2Add").value = "";
   
   ToggleVisibility(this.popupId);
@@ -512,7 +518,7 @@ class ExportRecipesPopupBehavior extends PopupBehavior {
   
    if (HttpStatusTypes.OK === xmlhttpReq.status) {
     document.getElementById("overlayContainer").className = "overlay";
- 
+
     if (undefined != xmlhttpReq.extraInfo.parentElement && "" != xmlhttpReq.extraInfo.parentElement) {  
      HideElement(xmlhttpReq.extraInfo.parentElement);
     
@@ -751,6 +757,38 @@ class ShoppingListPopupBehavior extends PopupBehavior {
   };
 
   xmlhttpReq.send();  
+ }
+}
+
+
+class UploadContentPopupBehavior extends PopupBehavior  {
+ constructor(popupTypeId, parentElement, imageTgt) {
+  super(popupTypeId, parentElement);
+  
+  this.imageTgt = imageTgt;
+ }
+
+ HidePopup() {
+  super.HidePopup();
+
+  ToggleVisibility(this.popupId);
+ 
+
+ }
+  
+ RevealPopup() {
+  super.RevealPopup();
+
+  HideElement("uploadContentBtn");
+  
+  document.getElementById("staticPage2Add").value = "";
+  document.getElementById("content2Upload").value = "";
+  
+  ToggleVisibility(this.popupId);
+  
+  document.getElementById('staticPage2Add').focus();
+ 
+  UnHideElement("FileUploadForm");  
  }
 }
 

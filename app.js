@@ -87,7 +87,7 @@ app.get('/DeleteAllRecipes', (req, res) => {
 
  // Return the new (empty) list of recipes: 
  
- let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -190,9 +190,28 @@ app.get('/DeleteRecipe', (req, res) => {
 
 // Return the new list of recipes: 
  
-let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
     
 res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+app.get('/GetArticle', (req, res) => {
+ console.log("> GetArticle(" + req.query.articleName + ")"); 
+ 
+ try {
+  articleHtml = "<input id='articleName' type='hidden' value='" + req.query.articleName +"'>"
+              + fs.readFileSync(__dirname + "/public/data/statics/" + req.query.articleName + ".html", {encoding: 'utf8', flag: 'r'}); 
+ } catch (err) {
+  console.log("< GetArticle(): Error=" + err); 
+   
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+
+  return; 
+ } 
+ 
+ res.status(enums.HttpStatusTypes.OK).send(articleHtml);
+ 
+ console.log("< GetArticle()"); 
 });
 
 app.get('/GetHelpInfo', (req, res) => {
@@ -291,10 +310,10 @@ app.get('/GetRecipesList', (req, res) => {
  let cuisine  = req.query.cuisine; 
  
  let dirPath = path.join(__dirname, '/public/data/recipes');
-
+path
  // Return the list of recipes: 
  
- let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), category, cuisine);
+ let rv = common.GenerateFilesList(fs, path, xml2jsParser, category, cuisine);
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -516,7 +535,7 @@ app.post("/AddNewRecipe", function (req, res) {
 
  RemoveStaleImages();
  
- let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
  
@@ -618,11 +637,98 @@ app.post("/UpdateRecipe", function (req, res) {
   });
  });
 
- let rv = common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), 'ALL', 'ALL');
+ let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
  
  console.log("< UpdateRecipe()"); 
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+// Handle content uploaded.
+app.post("/UploadContent", async function (req, res) {
+ console.log("> UploadContent(" + req.fields.recipeName + ", " + req.files.content.path + ")"); 
+ 
+ let recipeName       = req.fields.recipeName; 
+ let uploadedFileName = req.files.content.path;  
+ let targetFileName   = path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(recipeName) + '_' + req.files.content.name;
+ 
+ console.log("  UploadContent(): file = " + uploadedFileName);
+ 
+ let htmlRsp   = "";
+ let retStatus = enums.HttpStatusTypes.OK;
+ 
+ if ("true" != configManager.IsValidateUploadedFileEnabled()) {
+  await fs.rename(uploadedFileName, targetFileName, function(err) {
+   if (err) {
+    htmlRsp = err;
+    
+    console.log('ERROR: ' + err);
+   } else {
+    htmlRsp = "Content successfully uploaded";
+   }
+  });
+
+  htmlRsp = "Content successfully uploaded";  
+ } else {
+  let fileValidationResult = await ValidateFile(uploadedFileName);
+  
+  console.log("  UploadImage(): result = " + JSON.stringify(fileValidationResult));
+  
+  switch (fileValidationResult.Result) {
+   case enums.FileValidationResultTypes.FAILED: {
+    htmlRsp   = "Received file not accepted.";
+    retStatus = enums.HttpStatusTypes.NOTACCEPTABLE; 
+    
+    fs.rmSync(uploadedFileName, { force: true, });    
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.NOAPIKEY: {
+    htmlRsp = "Unable to validate file due to missing API Key.<br>"
+            + "Visit <a href='https://portal.cloudmersive.com/'>Cloudmersive</a><br>"
+            + "to register and obtain a key.";
+                
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR;  
+
+    fs.rmSync(uploadedFileName, { force: true, });     
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.PASSED: {
+    await fs.rename(uploadedFileName, targetFileName, function(err) {
+     if (err) {
+      htmlRsp = err;
+      
+      console.log('ERROR: ' + err);
+     } else {
+      htmlRsp = "Content successfully uploaded";
+      
+      let fileContent = "<embed height='500px' id='articleContainer' src='" + "static/" + common.UnEscapeHtml(recipeName) + '_' + req.files.content.name + "' width='100%'></embed>";
+      
+      fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(recipeName) + ".html", fileContent);  
+     }
+    }); 
+   }
+   break;  
+   
+   case enums.FileValidationResultTypes.SERVERERROR: {
+    htmlRsp   = fileValidationResult.Errors;
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR; 
+    
+    fs.rmSync(uploadedFileName, { force: true, }); 
+   }
+   break;  
+   
+   default: {
+    console.log("  UploadContent(): WTF?");
+   }
+   break;
+  }
+ }
+
+ console.log("< UploadContent() [" + retStatus + ", " + htmlRsp + "]");
+ 
+ res.status(retStatus).send(htmlRsp);
 });
 
 // Handle image uploaded.
@@ -736,7 +842,7 @@ app.post("/UploadRecipes", function (req, res) {
  // Return the list of recipes: 
  
  let rv = '<input id="messageFromServer" type="hidden" value="' + errMsg + '">'
-        + common.GenerateFilesList(fs, xml2jsParser, path.join(__dirname, '/public/data/recipes'), "ALL", "ALL");
+        + common.GenerateFilesList(fs, path, xml2jsParser, "ALL", "ALL");
  
  console.log("< UploadRecipes()"); 
     
@@ -752,6 +858,8 @@ app.use('/ShowEditRecipePage',  editRecipeRouter);
 app.use('/ShowNewRecipePage',   newRecipeRouter);
 app.use('/ShowPrintRecipePage', printRecipeRouter);
 app.use('/ShowViewRecipePage',  viewRecipeRouter);
+
+app.use('/static', express.static(path.join(__dirname, 'public/data/statics')));
 
 // Catch 404 and forward to error handler.
 app.use(function(req, res, next) {
@@ -1415,9 +1523,9 @@ async function ValidateFile(filePathName) {
  try {
   result = await ValidateFileViaAPI(filePathName);
   
-  console.log("< ValidateFile() - API returned " + JSON.stringify(result));      
+  console.log("  ValidateFile() - API returned " + JSON.stringify(result));      
  } catch(error) {
-  console.log("< ValidateFile() ERROR:" + error);
+  console.log("  ValidateFile() ERROR:" + error);
   
   result = error;
  }  

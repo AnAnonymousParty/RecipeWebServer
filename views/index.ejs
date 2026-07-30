@@ -93,6 +93,13 @@
          title="Add New Recipe"     
          width="48px">
     <img height="48px" 
+         id="UploadContentBtn"     
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.UploadContent %>');" 
+         src="/images/Buttons/UploadDocBtn_60X48.png"    
+         style="margin: 0px 10px 0px 0px;" 
+         title="Upload Content"     
+         width="48px">         
+    <img height="48px" 
          id="DeleteAllRecipesBtn" 
          onclick="DeleteAllRecipes();"                                              
          src="/images/Buttons/DelAllBtn_48X48.png"                                   
@@ -145,7 +152,7 @@
    </div>
    <br>
    <div class="centered">
-    <div class="recipe-line"
+    <div class="recipe-line">
      <span class="field-header">
       Name:
      </span>
@@ -158,7 +165,7 @@
              type="text">
      </span>
     </div>
-    <br> 
+    <br>
     <div class="centered">
      <button onclick="AddRecipe();" type="button">OK</button>
     </div>  
@@ -217,7 +224,7 @@
    <div class="notifier" id="ExportRecipesResponseContainer">
     <%# Placeholder, filled in by server as needed. %>  
    </div>    
-  </div>
+  </div>  
   
   <%# Import Recipes Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.ImportRecipes %>" style="width: 30%;">
@@ -235,8 +242,16 @@
      <input id="recipesFile" type="hidden" value="">
      <input id="ppuInvoker"  type="hidden" value="">
      <div class="request-div" id="recipesImportForm">
-      <input accept=".zip" id="recipesFile2Upload" required="required" style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" type="file">
-      <img height="48px" onclick="SubmitRecipesForUpload(document.getElementById('recipesFile').value);" src="/images/Buttons/UploadBtn_48X48.png" title="Import Recipes" width="48px">    
+      <input accept=".zip" 
+            id="recipesFile2Upload" 
+            required="required" 
+            style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
+            type="file">
+      <img height="48px" 
+           onclick="SubmitRecipesForUpload(document.getElementById('recipesFile').value);" 
+           src="/images/Buttons/UploadBtn_48X48.png" 
+           title="Import Recipes" 
+           width="48px">    
      </div>
     </form>
     <div class="notifier" id="recipesUploadResponse">
@@ -314,6 +329,64 @@
    <br>
    <div id="shoppingListContainer" style="margin: auto; width: 60%;">
     <%# This content will be replaced via client javascript, populated from server response to Shopping List request. %>
+   </div>
+  </div>
+  
+  <%# Upload Content Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.UploadContent %>" style="width: 30%;">
+   <div class="heading">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.UploadContent); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.UploadContent %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
+   </div>
+   <br>
+   <div class="centered">
+    <div class="recipe-line">
+     <span class="field-header">
+      Name:
+     </span>
+     <span class="field-value">
+      <input data-validation="<%= (validationRules.GetValidationRule('recipeName')).GetFieldTypeId(); %>"
+             id="staticPage2Add" 
+             maxLength="<%= (validationRules.GetValidationRule('recipeName')).GetMaxLength(); %>"
+             minLength="<%= (validationRules.GetValidationRule('recipeName')).GetMinLength(); %>"
+             <%= (validationRules.GetValidationRule('recipeName')).IsRequired(); %>
+             type="text">
+     </span>
+    </div>
+    <br>
+    <div class="centered">
+     <form action="/UploadStaticContent" enctype="multipart/form-data" method="post">
+      <input id="contentFile" type="hidden" value="">
+      <input id="puInvoker"   type="hidden" value="">
+      <div class="fileUpload-div" id="FileUploadForm">
+       <span class="fileUpload-div">
+        <input id="content2Upload" 
+               onchange="HandleContentFileSelectionChanged();" 
+               required="required" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
+               type="file">
+        <img height="48px" 
+             id="uploadContentBtn" 
+             onclick="SubmitContentFileForUpload(document.getElementById('contentFile').value);" 
+             src="/images/Buttons/UploadBtn_48X48.png" 
+             style="margin: 0px 10px 0px 0px;"
+             title="Upload" 
+             width="48px">    
+       </span>
+      </div>
+     </form>
+     <div class="notifier" id="response">
+      <%# This content will be replaced via client javascript, populated from server response to help request. %>
+     </div>    
+    </div>
+    <div class="centered">
+     <span style="margin: 10px 0px 0px 0p;">
+      <button onclick="AddRecipe();" type="button">OK</button>
+     </span>
+    </div>  
    </div>
   </div>
   

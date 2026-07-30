@@ -14,7 +14,9 @@ const ButtonTypes = Object.freeze({
  ExportSelected:         "ExportSelectedBtn",
  RenameRecipe:           "RenameRecipeBtn",
  Search:                 "SearchBtn",
- Undefined:              "Undefined"
+ Undefined:              "Undefined",
+ UploadContent:          "UploadContentBtn", 
+ UploadImage:            "UploadImageBtn",  
 });
 
 export
@@ -80,9 +82,21 @@ function GetDescFromButtonType(enumVal) {
      return "UNDEFINED";
      }
      
+  case ButtonTypes.UploadContent: {
+   return "Upload Content";
+  }   
+  
+  case ButtonTypes.UploadFile: {
+   return "Upload File";
+  }     
+  
+  case ButtonTypes.UploadImage: {
+   return "Upload Image";
+  }  
+     
   default: {
      return "UNDEFINED";
-     }     
+     }   
  }
  
  return "UNDEFINED";
@@ -115,7 +129,8 @@ const CategoryTypes = Object.freeze({
  ENTREE_FISH:    "Entree (fish)",
  ENTREE_PORK:    "Entree (pork)",
  ENTREE_POULTRY: "Entree (poultry)",
- ENTREE_SEAFOOD: "Entree (seafood)",  
+ ENTREE_SEAFOOD: "Entree (seafood)", 
+ KNOWLEDGE:      "Knowledge", 
  PASTA:          "Pasta",
  SALAD:          "Salad",
  SANDWICH:       "Sandwich", 
@@ -316,7 +331,9 @@ const PopupTypes = Object.freeze({
  Settings:                 "SettingsPopup",
  ShoppingList:             "ShoppingListPopup",
  Undefined:                "Undefined",
- UploadFile:               "UploadFilePopup"
+ UploadContent:            "UploadContentPopup",
+ UploadFile:               "UploadFilePopup",
+ UploadImage:              "UploadImagePopup" 
 });
 
 export
@@ -410,13 +427,25 @@ function GetDescFromPopupType(enumVal) {
    return "Undefined";
   }
   
+  case PopupTypes.UploadContent: {
+   return "Upload Content";
+  }   
+  
   case PopupTypes.UploadFile: {
    return "Upload File";
+  }
+  
+  case PopupTypes.UploadImage: {
+   return "Upload Image";
   }
   
   default: {
    return "Undefined";
   }
+  
+  case PopupTypes.UploadContent: {
+     return "Upload Page Content";
+     }    
  }
  
   return "Undefined";
