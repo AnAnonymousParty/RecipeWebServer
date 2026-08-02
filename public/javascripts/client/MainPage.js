@@ -1354,70 +1354,49 @@ function RequestNewRecipePage(recipeName) {
  xmlhttp.send();
 }
 
-function RequestPrintableView(recipeName, type) {
- // recipeName is provided when an Edit button is clicked in the Recipes List.
- // If the Print button is clicked on the Recipe View page, recipeName will be
- // empty, implying that it is meant to print THAT recipe, and the name can be 
- // obtained from within the hidden page data:
+function RequestPrintableView(documentName, type) {
+ // This is invoked in two ways: 
+ //  1 - User clicks Print button associated with an article or recipe in the 
+ //      recipes list,
+ //  2 - User clicks Print button when viewing a specific article or recipe.
+ // In the first case, the article or recipe name and type will be provided. 
+ // In the second case, the name and type will not be provided and will have 
+ // to be obtained from values contained in hidden fields embedded in the page.
  
- let loc = "";
- 
- if (undefined == type || "recipe" == type) {
-  if (undefined == recipeName || "" == recipeName) {
-   if (null != document.getElementById("recipeName")) {
-    recipeName = document.getElementById("recipeName").value;
-   }
-  }
-
-  if (null != recipeName && "" != recipeName) {
-   loc = "/ShowPrintRecipePage?recipeToPrint=" + encodeURIComponent(recipeName) + "&type=recipe&scaling=";
-    
-   let sElem = document.getElementById("scaling");
-    
-   let scaling = 1;
-    
-   if (null != sElem) {
-    if (0 == sElem.selectedIndex) {
-      scaling = 0.5;
-     } else {
-      scaling = sElem.selectedIndex;
-     }
-   } 
-   
-   if (null != document.getElementById("units")) {
-    loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
-   } else {
-    loc += (scaling.toString()) + "&units=US";
-   }
+ if (undefined == documentName) {
+  type = document.getElementById("documentType").value;
+  
+  if ("article" == type) {
+   documentName = document.getElementById("articleName").value;
   } else {
-   let articleName = "";
+   documentName = document.getElementById("recipeName").value;
+  }
+ }
+  
+ let loc = "";
    
-   if (undefined == type || "article" == type) {
-    if (undefined == recipeName || "" == recipeName) {
-     if (null != document.getElementById("articleName")) {
-      articleName = document.getElementById("articleName").value;
-     } 
-    } else {
-     articleName = recipeName;
-    }
-   }
-  
-   loc = "/GetArticle?articleName=" + encodeURIComponent(articleName) + "&type=article";
-  }
+ if ("article" == type) { 
+  loc = "/GetArticle?articleName=" + encodeURIComponent(documentName) + "&type=article";
  } else {
-  let articleName = "";
-  
-  if (undefined == type || "article" == type) {
-   if (undefined == recipeName || "" == recipeName) {
-    if (null != document.getElementById("articleName")) {
-     articleName = document.getElementById("articleName").value;
-    } 
+  loc = "/ShowPrintRecipePage?recipeToPrint=" + encodeURIComponent(documentName) + "&type=recipe&scaling=";
+   
+  let sElem = document.getElementById("scaling");
+   
+  let scaling = 1;
+   
+  if (null != sElem) {
+   if (0 == sElem.selectedIndex) {
+    scaling = 0.5;
    } else {
-    articleName = recipeName;
+    scaling = sElem.selectedIndex;
    }
+  } 
+   
+  if (null != document.getElementById("units")) {
+   loc += (scaling.toString()) + "&units=" + document.getElementById("units").value;
+  } else {
+   loc += (scaling.toString()) + "&units=US";
   }
-  
-  loc = "/GetArticle?articleName=" + encodeURIComponent(articleName) + "&type=article";
  }
   
  window.open(loc); 

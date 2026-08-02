@@ -36,8 +36,8 @@ router.get('/', function(req, res, next) {
   
   let renderParameters = { 
    commonUtils:     common,    
-         enums:     enums,
-    recipeData:     recipeDataJson,
+   enums:           enums,
+   recipeData:      recipeDataJson,
    validationRules: validationRules 
   };
   

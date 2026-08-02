@@ -1,6 +1,7 @@
 <form id="viewRecipeForm"> 
- <input id="recipeName"    type="hidden" value="<%= recipeData.Recipe.Title[0].$.name %>">
+ <input id="documentType"  type="hidden" value="recipe">
  <input id="originalYield" type="hidden" value="<%- recipeData.Recipe.Title[0].Yield[0].$.amount %>">
+ <input id="recipeName"    type="hidden" value="<%= recipeData.Recipe.Title[0].$.name %>">
  
  <% stringUtils.TEMPCOUNT = 0; %>
  

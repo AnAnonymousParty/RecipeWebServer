@@ -199,7 +199,8 @@ app.get('/GetArticle', (req, res) => {
  console.log("> GetArticle(" + req.query.articleName + ")"); 
  
  try {
-  articleHtml = "<input id='articleName' type='hidden' value='" + req.query.articleName +"'>"
+  articleHtml = "<input id='articleName'  type='hidden' value='" + req.query.articleName +"'>"
+              + "<input id='documentType' type='hidden' value='article'>"
               + fs.readFileSync(__dirname + "/public/data/statics/" + req.query.articleName + ".html", {encoding: 'utf8', flag: 'r'}); 
  } catch (err) {
   console.log("< GetArticle(): Error=" + err); 
