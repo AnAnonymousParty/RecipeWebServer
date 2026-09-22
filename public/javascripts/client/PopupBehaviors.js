@@ -31,9 +31,9 @@ class PopupBehavior {
  PopupBehavior instance via the passed PopupTypeId parameter.
 */
 class PopupBehaviors {
- static HidePopup(popupId) {
+ static HidePopup(popupId, parentElement) {
   const behaviors = new PopupBehaviors();
-  const behavior  = behaviors.GetBehavior(popupId);
+  const behavior  = behaviors.GetBehavior(popupId, parentElement);
   
   behavior.HidePopup();
  }
@@ -48,6 +48,10 @@ class PopupBehaviors {
  
  GetBehavior(popupTypeId, parentElement, params) {
   switch (popupTypeId) {
+   case PopupTypes.AddArticle: {
+    return new AddArticlePopupBehavior(popupTypeId);
+   }
+      
    case PopupTypes.AddIngredient: {
     return new AddIngredientPopupBehavior(popupTypeId);
    }
@@ -75,6 +79,14 @@ class PopupBehaviors {
    case PopupTypes.AddVariation: {
     return new AddVariationPopupBehavior(popupTypeId);
    }   
+   
+   case PopupTypes.ArticleExistsWarning: {
+    return new ArticleExistsWarningPopupBehavior(popupTypeId, parentElement);
+   }
+ 
+   case PopupTypes.EditArticle: {
+    return new EditArticlePopupBehavior(popupTypeId, parentElement, params);
+   }
    
    case PopupTypes.EditIngredient: {
     return new EditIngredientPopupBehavior(popupTypeId);
@@ -125,7 +137,7 @@ class PopupBehaviors {
    }
     
    case PopupTypes.RecipeExistsWarning: {
-    return new RecipeExistsWarningPopupBehavior(popupTypeId);
+    return new RecipeExistsWarningPopupBehavior(popupTypeId, parentElement);
    }
    
    case PopupTypes.Settings: {
@@ -149,6 +161,28 @@ class PopupBehaviors {
    }
    break;
   }
+ }
+}
+ 
+class AddArticlePopupBehavior extends PopupBehavior {
+ constructor(popupTypeId, parentElement) {
+  super(popupTypeId, parentElement);
+ }
+
+ HidePopup() {
+  super.HidePopup();
+
+  ToggleVisibility(this.popupId);
+ }
+  
+ RevealPopup() {
+  super.RevealPopup();
+  
+  document.getElementById("newStaticPageName").value = "";
+  
+  ToggleVisibility(this.popupId);
+  
+  document.getElementById('newStaticPageName').focus();
  }
 }
  
@@ -328,6 +362,52 @@ class AddVariationPopupBehavior extends PopupBehavior {
 }  
 
 
+class ArticleExistsWarningPopupBehavior extends PopupBehavior {
+ constructor(popupTypeId, parentElement) {
+  super(popupTypeId, parentElement);
+ }
+
+ HidePopup() {
+  super.HidePopup();
+
+  HideElement(this.popupId);
+  
+  UnHideElement(this.parentElement);
+ }
+  
+ RevealPopup() {
+  super.RevealPopup();  
+  
+  document.getElementById("overlayContainer").className = "overlay";
+ 
+  UnHideElement(this.popupId);
+ } 
+}
+
+
+class EditArticlePopupBehavior extends PopupBehavior {
+ constructor(popupTypeId, parentElement, articleName) {
+  super(popupTypeId, parentElement);
+  
+  this.articleName = articleName;
+ }
+
+ HidePopup() {
+  super.HidePopup();
+
+  ToggleVisibility(this.popupId);
+ }
+  
+ RevealPopup() {
+  super.RevealPopup();
+ 
+  document.getElementById("ogPageName").value = this.articleName;
+ 
+  ToggleVisibility(this.popupId);
+ }
+}  
+
+
 class EditIngredientPopupBehavior extends PopupBehavior {
  constructor(popupTypeId, parentElement) {
   super(popupTypeId, parentElement);
@@ -348,7 +428,7 @@ class EditIngredientPopupBehavior extends PopupBehavior {
   
 
 class EditIngredientHeadingPopupBehavior extends PopupBehavior {
- constructor(popupTypeId, parentElement) {
+ constructor(popupTypeId, parentElement, params) {
   super(popupTypeId, parentElement);
  }
 
@@ -667,22 +747,24 @@ class PrepListPopupBehavior extends PopupBehavior {
 
 
 class RecipeExistsWarningPopupBehavior extends PopupBehavior {
- constructor(popupTypeId) {
-  super(popupTypeId);
+ constructor(popupTypeId, parentElement) {
+  super(popupTypeId, parentElement);
  }
 
  HidePopup() {
   super.HidePopup();
-     
-  UnHideElement("AddRecipePopup");
 
-  ToggleVisibility(this.popupId);
+  HideElement(this.popupId);
+  
+  UnHideElement(this.parentElement);
  }
   
  RevealPopup() {
-super.RevealPopup();  document.getElementById("overlayContainer").className = "overlay";
+  super.RevealPopup(); 
+  
+  document.getElementById("overlayContainer").className = "overlay";
  
-  ToggleVisibility(this.popupId);
+  UnHideElement(this.popupId);
  } 
 }
 
@@ -779,14 +861,14 @@ class UploadContentPopupBehavior extends PopupBehavior  {
  RevealPopup() {
   super.RevealPopup();
 
-  HideElement("uploadContentBtn");
+  HideElement("sendNewContentBtn");
   
-  document.getElementById("staticPage2Add").value = "";
-  document.getElementById("content2Upload").value = "";
+  document.getElementById("newStaticPageName").value = "";
+  document.getElementById("file2UploadAsNew").value = "";
   
   ToggleVisibility(this.popupId);
   
-  document.getElementById('staticPage2Add').focus();
+  document.getElementById('newStaticPageName').focus();
  
   UnHideElement("FileUploadForm");  
  }

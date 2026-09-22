@@ -19,7 +19,11 @@ router.get('/', function(req, res, next) {
  let showButtons   = req.query.ShowButtons;
  let type          = req.query.type;
 
- console.log("> printRecipe(" + recipeName + ", " + type + ", " + scaling + ", " + showButtons + ", " + selectedUnits + ")");
+ console.log("> printRecipe(" + recipeName + ", " + type + ", " + scaling + ", " + showButtons + ", " + selectedUnits + ")");undefined
+ 
+ if (undefined == type) {
+  type = "recipe";  // TODO: Remove after new type handling fixed.
+ }
  
  let recipeDataJson = "";
  

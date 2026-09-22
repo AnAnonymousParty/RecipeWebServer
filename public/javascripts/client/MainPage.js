@@ -1,3 +1,57 @@
+function AddArticle() {
+ let documentName = document.getElementById("newStaticPageName").value;
+  
+ if ("" != documentName) {
+  isRecipe = false;
+ }
+
+ if ("" == documentName) {
+  alert("Name must be provided.");
+  
+  return;
+ }
+ 
+ if (false == IsFileName(documentName)) {
+  alert("Name may contain only 0-9, A-Z, a-z and '-_ '.");
+  
+  return;
+ } 
+ 
+ let xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
+   PopupBehaviors.HidePopup(PopupTypes.AddArticle);
+   
+   if ("NO" == xmlhttp.response) {
+    RequestNewArticlePage(documentName);
+   } else {
+    if ("RECIPE" == xmlhttp.response) {
+     PopupBehaviors.RevealPopup(PopupTypes.RecipeExistsWarning, PopupTypes.AddRecipe);
+     
+     document.getElementById("rewpp").value = PopupTypes.AddArticle;
+    } else {    
+     PopupBehaviors.RevealPopup(PopupTypes.ArticleExistsWarning, PopupTypes.AddArticle);
+     
+     document.getElementById("aewpp").value = PopupTypes.AddArticle;
+    }
+   } 
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+  
+    
+ xmlhttp.open("GET", "/CheckArticleOrRecipeExists?file2Check=" + encodeURIComponent(documentName), true);
+ 
+ xmlhttp.send();
+}
+
 function AddIngredient() {
  var errs       = "";
  var ingredient = document.getElementById("ingredient2Add").value;
@@ -246,21 +300,31 @@ function AddPrerequisite() {
 }
 
 function AddRecipe() {
- var recipeName = document.getElementById("recipeName2Add").value;
+ let isRecipe = true;
  
- if ("" == recipeName) {
-  alert("Recipe name must be provided.");
+ let documentName = document.getElementById("recipeName2Add").value;
+ 
+ if ("" == documentName) {
+  documentName = document.getElementById("newStaticPageName").value;
+  
+  if ("" != documentName) {
+   isRecipe = false;
+  }
+ }
+ 
+ if ("" == documentName) {
+  alert("Name must be provided.");
   
   return;
  }
  
- if (false == IsFileName(recipeName)) {
-  alert("Recipe name my contain only 0-9, A-Z, a-z and '-_ '.");
+ if (false == IsFileName(documentName)) {
+  alert("Name my contain only 0-9, A-Z, a-z and '-_ '.");
   
   return;
  } 
  
- var xmlhttp = new XMLHttpRequest();
+ let xmlhttp = new XMLHttpRequest();
     
  xmlhttp.onreadystatechange = function() {
   if (ReadyStateTypes.DONE != xmlhttp.readyState) {
@@ -268,14 +332,24 @@ function AddRecipe() {
   }
  
   if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
+   PopupBehaviors.HidePopup(PopupTypes.AddRecipe); 
+   
    if ("NO" == xmlhttp.response) {
-    PopupBehaviors.HidePopup(PopupTypes.AddRecipe);
-    
-    RequestNewRecipePage(recipeName);
-   } else {
-    PopupBehaviors.HidePopup(PopupTypes.AddRecipe);
-    
-    PopupBehaviors.RevealPopup(PopupTypes.RecipeExistsWarning);
+    if (true == isRecipe) {
+     RequestNewRecipePage(documentName);
+    } else {
+     ShowRecipesList("ALL", "ALL");
+    }
+   } else {     
+    if ("RECIPE" == xmlhttp.response) {      
+     PopupBehaviors.RevealPopup(PopupTypes.RecipeExistsWarning, PopupTypes.AddRecipe);
+     
+     document.getElementById("rewpp").value = PopupTypes.AddRecipe;
+    } else {    
+     PopupBehaviors.RevealPopup(PopupTypes.ArticleExistsWarning, PopupTypes.AddArticle);
+     
+     document.getElementById("aewpp").value = PopupTypes.AddRecipe;
+    }
    } 
   }
   else {
@@ -283,10 +357,8 @@ function AddRecipe() {
   }
  }
   
- 
- var params = encodeURIComponent(recipeName);
     
- xmlhttp.open("GET", "/CheckRecipeExists?file2Check=" + params, true);
+ xmlhttp.open("GET", "/CheckArticleOrRecipeExists?file2Check=" + encodeURIComponent(documentName), true);
  
  xmlhttp.send();
 }
@@ -598,17 +670,12 @@ function DeleteAllVariations() {
  btnStyle.visibility = "collapse";
 }
 
-function DeleteArticle(recipeName) {
- // recipeName is provided when a Delete button is clicked in the Recipes List.
- // If the Delete button is clicked on the Recipe View page, recipeName will be
- // empty, implying that it is meant to delete THAT recipe, and the name can be 
- // obtained from within the hidden page data:
- 
- if (undefined == recipeName || "" == recipeName) {
-  recipeName = document.getElementById("recipeName").value;
+function DeleteArticle(articleName) {
+ if (undefined == articleName || "" == articleName) {
+  articleName = document.getElementById("articleName").value;
  } 
  
- if (false == confirm("Are you sure you want to delete the recipe?")) {
+ if (false == confirm("Are you sure you want to delete the article?")) {
   return;
  }
  
@@ -640,13 +707,13 @@ function DeleteArticle(recipeName) {
    }
   }
   else {
-   alert("Recipe could not be deleted.");
+   alert("Article could not be deleted.");
   }
  }
  
- var params = encodeURIComponent(recipeName);
+ var params = encodeURIComponent(articleName);
  
- xmlhttp.open("GET", "/DeleteRecipe?recipe2Delete=" + params, true);
+ xmlhttp.open("GET", "/DeleteArticle?article2Delete=" + params, true);
  xmlhttp.send(); 
  
  if (null != document.getElementById("viewRecipeForm")) {
@@ -862,7 +929,7 @@ function DeleteVariation(rowNum) {
 }
 
 function EditArticle(articleName) {
-  
+ PopupBehaviors.RevealPopup(PopupTypes.EditArticle, null, articleName);
 }
 
 function EditIngredient(rowNum) {
@@ -964,7 +1031,12 @@ function EditRecipe(recipeName) {
  // obtained from within the hidden page data:
  
  if (undefined == recipeName || "" == recipeName) {
-  recipeName = document.getElementById("recipeName").value;
+  if ("article" == document.getElementById("documentType").value) {
+   recipeName = document.getElementById("articleName").value;
+  }
+  else {
+   recipeName = document.getElementById("recipeName").value;
+  }
  }
  
  var xmlhttp = new XMLHttpRequest();
@@ -1096,13 +1168,13 @@ function EditVariation(rowNum) {
  PopupBehaviors.RevealPopup(PopupTypes.EditVariation);
 }
 
-function HandleContentFileSelectionChanged() {
- let contentPathFile = document.getElementById('content2Upload').files[0];
+function HandleFileSelectionChanged(file, buttonId) {
+ let contentPathFile = document.getElementById(file).files[0];
  
  if ('undefined' === typeof contentPathFile || "" == contentPathFile) {
-  HideElement("uploadContentBtn");
+  HideElement(buttonId);
  } else {
-  UnHideElement("uploadContentBtn", "inline");
+  UnHideElement(buttonId, "inline");
  }
 }
 
@@ -1322,6 +1394,34 @@ function RequestFileDelete(fileName) {
  var params = encodeURIComponent(fileName);
     
  xmlhttp.open("GET", "/DeleteFile?file2Delete=" + params, true);
+ 
+ xmlhttp.send();
+}
+
+function RequestNewArticlePage(recipeName) {
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function()
+ {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+  
+  if (HttpStatusTypes.OK == xmlhttp.status) {
+   document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
+   document.getElementById("articleName").value              = recipeName;
+   document.getElementById("recipeTitle").innerText          = document.getElementById("articleName").value; 
+   
+   HideElement("indexPageBtns");
+   HideElement("filtersContainer");
+   HideElement("viewPageBtns");
+   
+   UnHideElement("editPageBtns");
+   UnHideElement("recipeTitleContainer");
+  }
+ }
+    
+ xmlhttp.open("GET", "/ShowNewArticlePage", true);
  
  xmlhttp.send();
 }
@@ -1834,6 +1934,118 @@ function SaveVariation() {
  PopupBehaviors.HidePopup(PopupTypes.EditVariation);
 }  
 
+function SendNewContentFile() { 
+ let pageName = document.getElementById('articleName').value;
+  
+ if ('undefined' === typeof pageName  || "" == pageName) {
+  alert("A name must be provided.");
+  
+  return;
+ }
+ 
+ let formData = new FormData();
+ 
+ let filePathName = document.getElementById('articleFilePathName').files[0];
+
+ formData.append('recipeName', pageName);
+ formData.append('content',    filePathName);
+ 
+ 
+ // Build the request to send to the server:
+ 
+ var xmlhttpReq = new XMLHttpRequest();
+
+ xmlhttpReq.open('POST', '/UploadContent', true);
+
+
+ // Provide the callback function to handle the response from the server:
+ 
+ xmlhttpReq.onload = function() {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
+   return;  // I shall serve no data before its time.
+  }  
+  
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
+   var data = xmlhttpReq.responseText;
+   
+   document.getElementById("articleContainer").src = "data/statics/" + pageName + "_" + filePathName.name;
+  } else {
+
+  }
+   
+
+ };
+ 
+ 
+ // Send the request to the server:
+ 
+
+ xmlhttpReq.send(formData);
+}
+
+function SendRevisedContentFile() { 
+ let originalPageName = document.getElementById('ogPageName').value;
+ 
+ let formData = new FormData();
+
+ formData.append('content',        document.getElementById('file2UploadAsRevised').files[0]);
+ formData.append('newArticleName', originalPageName);
+ formData.append('oldArticleName', originalPageName);
+
+ let responseCOntainer = document.getElementById('UpdateContentRspContainer');
+ 
+ HideElement("UpdateContentRspContainer");
+ 
+ 
+ // Build the request to send to the server:
+ 
+ var xmlhttpReq = new XMLHttpRequest();
+
+ xmlhttpReq.open('POST', '/UpdateArticle', true);
+
+
+ // Provide the callback function to handle the response from the server:
+ 
+ xmlhttpReq.onload = function() {
+  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
+   return;  // I shall serve no data before its time.
+  }  
+  
+  if (HttpStatusTypes.OK === xmlhttpReq.status) {
+   var data = xmlhttpReq.responseText;
+   
+   response.innerHTML = data;
+   
+   HideElement("updateStaticContentBtn");
+   
+   UnHideElement("UpdateContentRspContainer");
+    
+   document.getElementById("RevisedFileUploadContainer").style.display = "none";
+    
+   setTimeout(function() {
+    document.getElementById("file2UploadAsRevised").value = "";
+
+    ToggleVisibility("UpdateContentRspContainer");
+    ToggleVisibility("RevisedFileUploadContainer");
+   }, 3000);
+
+  } else {
+   responseContainer.innerHTML = "Server Error: File upload rejected";
+  }
+   
+  responseContainer.innerHTML = xmlhttpReq.responseText;
+ };
+ 
+ 
+ // Send the request to the server:
+ 
+ responseContainer.innerHTML = "Uploading content...";
+ 
+ UnHideElement("UpdateContentRspContainer");
+
+ xmlhttpReq.send(formData);
+}
+
 function ShowRecipesList(category, cuisine) {
  var xmlhttpReq = new XMLHttpRequest();
  
@@ -1881,76 +2093,6 @@ function ShowRecipesList(category, cuisine) {
  };
 
  xmlhttpReq.send();
-}
-
-function SubmitContentFileForUpload(imageUse) { 
- let pageName = document.getElementById('staticPage2Add').value;
- 
- if ('undefined' === typeof pageName  || "" == pageName) {
-  alert("A name must be provided.");
-  
-  return;
- }
- 
- let content  = document.getElementById('content2Upload').files[0];
- 
- let formData = new FormData();
-
- formData.append('recipeName', pageName);
- formData.append('content',    content);
-
- let response = document.getElementById('response');
- 
- HideElement("response");
- 
- 
- // Build the request to send to the server:
- 
- var xmlhttpReq = new XMLHttpRequest();
-
- xmlhttpReq.open('POST', '/UploadContent', true);
-
-
- // Provide the callback function to handle the response from the server:
- 
- xmlhttpReq.onload = function() {
-  if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
-   return;  // I shall serve no data before its time.
-  }  
-  
-  if (HttpStatusTypes.OK === xmlhttpReq.status) {
-   var data = xmlhttpReq.responseText;
-   
-   response.innerHTML = data;
-   
-   HideElement("uploadContentBtn");
-   
-   UnHideElement("response");
-    
-   document.getElementById("FileUploadForm").style.display = "none";
-    
-   setTimeout(function() {
-               document.getElementById("content2Upload").value = "";
-  
-               ToggleVisibility("response");
-               ToggleVisibility("fileUploadForm");
-              }, 3000);
-
-  } else {
-   response.innerHTML = "Server Error: File upload rejected";
-  }
-   
-  response.innerHTML = xmlhttpReq.responseText;
- };
- 
- 
- // Send the request to the server:
- 
- response.innerHTML = "Uploading content...";
- 
- UnHideElement("response");
-
- xmlhttpReq.send(formData);
 }
 
 function SubmitFileForUpload(imageUse) { 

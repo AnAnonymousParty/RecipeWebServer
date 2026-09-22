@@ -406,7 +406,7 @@ class RenameRecipeButtonBehavior extends ButtonBehavior {
    
   var params = encodeURIComponent(newRecipeName);
      
-  xmlhttp.open("GET", "/CheckRecipeExists?file2Check=" + params, true);
+  xmlhttp.open("GET", "/CheckArticleOrRecipeExists?file2Check=" + params, true);
   
   xmlhttp.send(); 
 
@@ -471,6 +471,7 @@ class SearchButtonBehavior extends ButtonBehavior {
   xmlhttpReq.send();
  }
 }
+
 
 class UploadContentButtonBehavior extends ButtonBehavior {
  constructor(buttonTypeId) {

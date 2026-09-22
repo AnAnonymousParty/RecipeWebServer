@@ -1,4 +1,5 @@
 const ButtonTypes = Object.freeze({
+ AddArticle:              "AddArticleBtn", 
  AddIngredient:           "AddIngredientBtn",
  AddIngredientHeading:    "AddIngredientHeadingBtn",
  AddPrerequisite:         "AddPrerequisiteBtn",
@@ -20,6 +21,10 @@ const ButtonTypes = Object.freeze({
 
 function GetDescFromButtonType(enumVal) {
  switch(enumVal) {
+  case PopupTypes.AddArticle: {
+   return "Add Article";
+   }  
+   
   case PopupTypes.AddIngredient: {
    return "Add Ingredient";
    }
@@ -68,7 +73,7 @@ function GetDescFromButtonType(enumVal) {
      return "Export Selected Tecipes";
      }
              
-  case ButtonTypes.RequestRenameRecipe: {
+  case ButtonTypes.RenameRecipe: {
      return "Rename Recipe";
      }
         
@@ -266,6 +271,7 @@ const HttpStatusTypes = Object.freeze({
 
 
 const PopupTypes = Object.freeze({
+ AddArticle:               "AddArticlePopup", 
  AddIngredient:            "AddIngredientPopup",
  AddIngredientHeading:     "AddIngredientHeadingPopup",
  AddPrerequisite:          "AddPrerequisitePopup",
@@ -273,6 +279,8 @@ const PopupTypes = Object.freeze({
  AddStep:                  "AddStepPopup",
  AddStepHeading:           "AddStepHeadingPopup",
  AddVariation:             "AddVariationPopup",
+ ArticleExistsWarning:     "ArticleExistsWarningPopup",
+ EditArticle:              "EditArticlePopup",
  EditIngredient:           "EditIngredientPopup",
  EditIngredientHeading:    "EditIngredientHeadingPopup",
  EditPrerequisite:         "EditPrerequisitePopup",
@@ -294,6 +302,10 @@ const PopupTypes = Object.freeze({
 
 function GetDescFromPopupType(enumVal) {
  switch(enumVal) {
+  case PopupTypes.AddArticle: {
+   return "Add Article";
+  }  
+  
   case PopupTypes.AddIngredient: {
    return "Add Ingredient";
   }   
@@ -321,6 +333,14 @@ function GetDescFromPopupType(enumVal) {
   case PopupTypes.AddVariation: {
    return "Add Variation";
   }  
+  
+  case PopupTypes.ArticleExistsWarning: {
+   return "Article Exists";
+  }  
+  
+  case PopupTypes.EditArticle: {
+   return "Edit Article";
+  }        
   
   case PopupTypes.EditIngredient: {
    return "Edit Ingredient";

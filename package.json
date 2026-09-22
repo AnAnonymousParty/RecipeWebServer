@@ -21,6 +21,7 @@
     "jquery": "^3.7.1",
     "jsdom": "^26.1.0",
     "morgan": "^1.10.1",
+    "node-html-parser": "^9.0.1",
     "puppeteer": "^24.16.1",
     "serve-favicon": "^2.5.0",
     "unzipper": "^0.12.3",

@@ -10,6 +10,7 @@ const favicon                    = require('serve-favicon');
 const fractional                 = require('fractional');
 const fs                         = require('fs');
 const fsExtra                    = require('fs-extra');
+const htmlParserLib              = require('node-html-parser');
 const logger                     = require('morgan');
 const path                       = require('path');
 const puppeteer                  = require('puppeteer');
@@ -35,6 +36,7 @@ const validationUtilsLib = require(path.join(__dirname, '/public/javascripts/ser
 let indexRouter       = require('./routes/index');
 let editRecipeRouter  = require('./routes/editRecipe');
 let getRecipeRouter   = require('./routes/getRecipe');
+let newArticleRouter  = require('./routes/newArticle');
 let newRecipeRouter   = require('./routes/newRecipe');
 let printRecipeRouter = require('./routes/printRecipe');
 let viewRecipeRouter  = require('./routes/viewRecipe');
@@ -68,14 +70,19 @@ configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.jo
 
 /*------------------------- GET handlers ------------------------------------*/
 
-app.get('/CheckRecipeExists', (req, res) => {
- let f          = req.query.file2Check + ".xml"
- let file2Check = decodeURIComponent(f);
+app.get('/CheckArticleOrRecipeExists', (req, res) => {
+ let file2Check = decodeURIComponent(req.query.file2Check + ".xml");
  
  if (true == fs.existsSync(__dirname + "/public/data/recipes/" + file2Check)) {
-  res.send('YES');
+  res.send('RECIPE');
  } else {
-  res.send('NO');
+  file2Check = decodeURIComponent(req.query.file2Check + ".html");  
+  
+  if (true == fs.existsSync(__dirname + "/public/data/statics/" + file2Check)) {
+   res.send('ARTICLE');
+  } else {
+   res.send('NO');
+  }  
  }
 });
 
@@ -83,9 +90,58 @@ app.get('/DeleteAllRecipes', (req, res) => {
  console.log("> DeleteAllRecipes()");
 
  fsExtra.emptyDirSync(__dirname + "/public/data/recipes");
+ fsExtra.emptyDirSync(__dirname + "/public/data/statics");
  fsExtra.emptyDirSync(__dirname + "/public/images/recipes");
 
  // Return the new (empty) list of recipes: 
+ 
+ let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
+    
+ res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+app.get('/DeleteArticle', (req, res) => {
+ let article2Delete = decodeURIComponent(req.query.article2Delete);
+ 
+ console.log("> DeleteArticle(" + article2Delete +")");
+
+ // Delete the article .pdf & .html files:
+ 
+ let pdfFile = "";
+ 
+ try {
+  let files = fs.readdirSync(__dirname + "/public/data/statics/").filter(fn => fn.startsWith(article2Delete + "_"));
+  
+  if (1 == files.length) {
+   pdfFile = files[0];
+  } else {
+   console.log("  DeleteArticle() No PDF file?");
+  }
+ } catch (err) {
+  console.log(err);
+   
+  res.responseText = err;
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);   
+  
+  return;
+ }
+
+ try {
+  fs.accessSync(__dirname + "/public/data/statics/" + article2Delete + ".html", fs.constants.F_OK);
+  fs.accessSync(__dirname + "/public/data/statics/" + pdfFile,                  fs.constants.F_OK);
+  
+  fs.rmSync(__dirname + "/public/data/statics/" + pdfFile,                  { force: true, });
+  fs.rmSync(__dirname + "/public/data/statics/" + article2Delete + ".html", { force: true, });
+ } catch (err) {
+  console.log(err);
+  
+  res.responseText = err;
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+  
+  return;
+ }   
+ 
+ // Return the new list of recipes: 
  
  let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
     
@@ -109,35 +165,6 @@ app.get('/DeleteFile', (req, res) => {
  });
  
  res.send('ok');
-});
-
-// Handle Export All recipes.
-app.get("/ExportAllRecipes", function (req, res) {
- console.log("> ExportAllRecipes()"); 
- 
- const exportPath               = path.join(__dirname,  "/public/exports");
- const imagesPath               = path.join(__dirname,  "/public/images/Recipes");
- const recipesExportPathNameExt = path.join(exportPath, "recipes.zip");
- const recipesPath              = path.join(__dirname,  "/public/data/recipes");
- 
- if (false == fs.existsSync(exportPath)) {
-  fs.mkdirSync(exportPath);
- }
-
- let zip = new zipUtils();
- 
- try {
-  zip.addLocalFolder(recipesPath, "recipes");
-  zip.addLocalFolder(imagesPath,  "images");
- 
-  zip.writeZip(recipesExportPathNameExt);
- } catch (err) {
-  console.log("  ExportAllRecipes() " + err); 
- }
- 
- ExportRecipes(recipesExportPathNameExt, req, res) 
- 
- console.log("< ExportAllRecipes()"); 
 });
 
 app.get('/DeleteRecipe', (req, res) => {
@@ -193,6 +220,37 @@ app.get('/DeleteRecipe', (req, res) => {
 let rv = common.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
     
 res.status(enums.HttpStatusTypes.OK).send(rv);
+});
+
+// Handle Export All recipes.
+app.get("/ExportAllRecipes", function (req, res) {
+ console.log("> ExportAllRecipes()"); 
+ 
+ const articlesPath             = path.join(__dirname,  "/public/data/statics");
+ const exportPath               = path.join(__dirname,  "/public/exports");
+ const imagesPath               = path.join(__dirname,  "/public/images/Recipes");
+ const recipesExportPathNameExt = path.join(exportPath, "recipes.zip");
+ const recipesPath              = path.join(__dirname,  "/public/data/recipes");
+ 
+ if (false == fs.existsSync(exportPath)) {
+  fs.mkdirSync(exportPath);
+ }
+
+ let zip = new zipUtils();
+ 
+ try {
+  zip.addLocalFolder(articlesPath, "Articles");
+  zip.addLocalFolder(recipesPath,  "Recipes");
+  zip.addLocalFolder(imagesPath,   "Images");
+ 
+  zip.writeZip(recipesExportPathNameExt);
+ } catch (err) {
+  console.log("  ExportAllRecipes() " + err); 
+ }
+ 
+ ExportRecipes(recipesExportPathNameExt, req, res) 
+ 
+ console.log("< ExportAllRecipes()"); 
 });
 
 app.get('/GetArticle', (req, res) => {
@@ -600,6 +658,190 @@ app.post("/ExportSelectedRecipes", function (req, res) {
  console.log("< ExportSelectedRecipes()"); 
 });
 
+// Handle content uploaded.
+app.post("/UpdateArticle", async function (req, res) {
+ let htmlRsp          = "";
+ let newArticleName   = req.fields.newArticleName; 
+ let oldArticleName   = req.fields.oldArticleName; 
+ let retStatus        = enums.HttpStatusTypes.OK; 
+ let uploadedFileName = "";  
+ let targetFileName   = "";
+ 
+ if (undefined != req.files.content) {
+  uploadedFileName = req.files.content.path;
+ }
+ 
+ console.log("> UpdateArticle(" + req.fields.newArticleName +", " + req.fields.oldArticleName + ", '" + uploadedFileName + "')"); 
+ 
+ let articlePathFile = path.join(__dirname, "/public");
+ 
+ try {
+  let articleHtml = fs.readFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(oldArticleName) + ".html");
+  let parsedHtml  = htmlParserLib.parse(articleHtml);  
+  let elements    = parsedHtml.getElementsByTagName("embed");
+  
+  articlePathFile += elements[0].getAttribute("src");
+  
+  console.log("  UpdateArticle() " + articlePathFile);
+ } catch (err) {
+  console.log("  UpdateArticle() Error: " + err);
+ }
+ 
+ // Cases:
+ //
+ // 1: Article is being renamed, using same .pdf file.
+ //    - Rename existing .pdf file, delete old .html file and add new .html file.
+ // 2: Article is being renamed, using new .pdf file.
+ //    - UploadContent will have deleted the old .pdf file, so remove old .html
+ //      file and generate a new one.
+ // 3: Article is not being renamed, using same .pdf file.
+ //    - Do nothing.
+ // 4: Article is not being renamed, using new .pdf file.
+ //    - UploadContent will have deleted the old .pdf file, so remove old .html
+ //      file and generate a new one.
+ 
+ 
+ if (newArticleName != oldArticleName) {
+  if ("" == uploadedFileName) {
+   console.log("  UpdateArticle(): Renaming existing file, no .pdf file uploaded.");
+   
+   // No .pdf file uploaded, reuse existing ,pdf file by renaming it, delete 
+   // existing .html file and generate new one.
+   
+   let newPdfFile = path.join(__dirname, "/public/data/statics/") + newArticleName + "_" + path.basename(articlePathFile).substring(oldArticleName.length + 1);
+  
+   await fs.rename(articlePathFile, newPdfFile, function(err) {
+    if (err) {
+     htmlRsp = err;
+     
+     console.log('ERROR: ' + err);
+    } else {
+     let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
+                     + common.UnEscapeHtml(newPdfFile) + "' width='100%'></embed>";
+      
+     fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  
+     
+     fs.rmSync(path.join(__dirname, "/public/data/statics/") + oldArticleName + ".html", { force: true, });
+         
+     htmlRsp = "Article updated";
+     
+     res.status(retStatus).send(htmlRsp); 
+     
+     return;
+    }
+   });     
+  } else {
+   console.log("  UpdateArticle(): Renaming existing file, rcv'd new .pdf file: " + req.files.content.name);   
+   
+   targetFileName = path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + '_' + req.files.content.name;
+  }
+ } else {
+  if ("" == uploadedFileName) {
+   console.log("  UpdateArticle(): No name change, no .pdf file uploaded.");
+   
+   htmlRsp = "Article update required no changes.";
+   
+   console.log("< UploadArticle() [" + retStatus + ", " + htmlRsp + "]");
+ 
+   res.status(retStatus).send(htmlRsp); 
+
+   return;   
+  } else {
+   console.log("  UpdateArticle(): No name change, rcv'd new .pdf file: " + req.files.content.name);
+   
+   targetFileName = path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + '_' + req.files.content.name;
+   
+   let pdfFile = "";
+   
+   try {
+    fs.rmSync(articlePathFile, { force: true, });
+    fs.rmSync(__dirname + "/public/data/statics/" + oldArticleName + ".html", { force: true, });
+   } catch (err) {
+    console.log(err);
+    
+    res.responseText = err;
+    res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+    
+    return;
+   }          
+  }
+ }
+ 
+ if ("true" != configManager.IsValidateUploadedFileEnabled()) {
+  await fs.rename(uploadedFileName, targetFileName, function(err) {
+   if (err) {
+    htmlRsp = err;
+    
+    console.log('ERROR: ' + err);
+   } else {
+    htmlRsp = "Content successfully uploaded";
+   }
+  });
+
+  htmlRsp = "Content successfully uploaded";  
+ } else {
+  let fileValidationResult = await ValidateFile(uploadedFileName);
+  
+  console.log("  UpdateArticle(): result = " + JSON.stringify(fileValidationResult));
+  
+  switch (fileValidationResult.Result) {
+   case enums.FileValidationResultTypes.FAILED: {
+    htmlRsp   = "Received file not accepted.";
+    retStatus = enums.HttpStatusTypes.NOTACCEPTABLE; 
+    
+    fs.rmSync(uploadedFileName, { force: true, });    
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.NOAPIKEY: {
+    htmlRsp = "Unable to validate file due to missing API Key.<br>"
+            + "Visit <a href='https://portal.cloudmersive.com/'>Cloudmersive</a><br>"
+            + "to register and obtain a key.";
+                
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR;  
+
+    fs.rmSync(uploadedFileName, { force: true, });     
+   }
+   break;
+   
+   case enums.FileValidationResultTypes.PASSED: {    
+    await fs.rename(uploadedFileName, targetFileName, function(err) {
+     if (err) {
+      htmlRsp = err;
+      
+      console.log('ERROR: ' + err);
+     } else {
+      htmlRsp = "Content successfully uploaded";
+      
+      let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
+                      + common.UnEscapeHtml(newArticleName) + '_' + req.files.content.name + "' width='100%'></embed>";
+      
+      fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  
+     }
+    }); 
+   }
+   break;  
+   
+   case enums.FileValidationResultTypes.SERVERERROR: {
+    htmlRsp   = fileValidationResult.Errors;
+    retStatus = enums.HttpStatusTypes.INTERNALSERVERERROR; 
+    
+    fs.rmSync(uploadedFileName, { force: true, }); 
+   }
+   break;  
+   
+   default: {
+    console.log("  UpdateArticle(): WTF?");
+   }
+   break;
+  }
+ }
+
+ console.log("< UploadArticle() [" + retStatus + ", " + htmlRsp + "]");
+ 
+ res.status(retStatus).send(htmlRsp);
+});
+
 // Handle Recipe updated:
 app.post("/UpdateRecipe", function (req, res) {
  let postData   = req.body;
@@ -649,31 +891,28 @@ app.post("/UpdateRecipe", function (req, res) {
 app.post("/UploadContent", async function (req, res) {
  console.log("> UploadContent(" + req.fields.recipeName + ", " + req.files.content.path + ")"); 
  
+ let htmlRsp          = "";
  let recipeName       = req.fields.recipeName; 
+ let retStatus        = enums.HttpStatusTypes.OK;
  let uploadedFileName = req.files.content.path;  
- let targetFileName   = path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(recipeName) + '_' + req.files.content.name;
- 
- console.log("  UploadContent(): file = " + uploadedFileName);
- 
- let htmlRsp   = "";
- let retStatus = enums.HttpStatusTypes.OK;
+ let targetFileName   = path.join(__dirname, 
+                                  "/public/data/statics/",  
+                                  common.UnEscapeHtml(recipeName) + '_' + req.files.content.name);
  
  if ("true" != configManager.IsValidateUploadedFileEnabled()) {
-  await fs.rename(uploadedFileName, targetFileName, function(err) {
-   if (err) {
-    htmlRsp = err;
-    
-    console.log('ERROR: ' + err);
-   } else {
-    htmlRsp = "Content successfully uploaded";
-   }
-  });
-
-  htmlRsp = "Content successfully uploaded";  
+  try {
+   fs.renameSync(uploadedFileName, targetFileName);
+  
+   htmlRsp = "Content successfully uploaded";
+  } catch (err) {
+   htmlRsp = err;
+  
+   console.log('ERROR: ' + err);
+  }  
  } else {
   let fileValidationResult = await ValidateFile(uploadedFileName);
   
-  console.log("  UploadImage(): result = " + JSON.stringify(fileValidationResult));
+  console.log("  UploadContent(): result = " + JSON.stringify(fileValidationResult));
   
   switch (fileValidationResult.Result) {
    case enums.FileValidationResultTypes.FAILED: {
@@ -696,19 +935,47 @@ app.post("/UploadContent", async function (req, res) {
    break;
    
    case enums.FileValidationResultTypes.PASSED: {
-    await fs.rename(uploadedFileName, targetFileName, function(err) {
-     if (err) {
-      htmlRsp = err;
+    try {
+     let fileList = fs.readdirSync(__dirname + "/public/data/statics/").filter(fn => fn.startsWith(recipeName + "_"));
+     
+     if (fileList.length > 0) {
+      console.log("  UploadContent(): Deleting " + fileList.length + " files.");
       
-      console.log('ERROR: ' + err);
-     } else {
-      htmlRsp = "Content successfully uploaded";
-      
-      let fileContent = "<embed height='500px' id='articleContainer' src='" + "static/" + common.UnEscapeHtml(recipeName) + '_' + req.files.content.name + "' width='100%'></embed>";
-      
-      fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(recipeName) + ".html", fileContent);  
+      for (let filesNdx = 0; filesNdx < fileList.length; ++filesNdx) {
+       let file2Delete = path.join(__dirname, "/public/data/statics/", fileList[filesNdx]);
+       
+       console.log("  UploadContent(): Deleting " + file2Delete);
+       
+       fs.rmSync(file2Delete, { force: true, });
+      }
      }
-    }); 
+    } catch (err) {
+     console.log("  UploadContent(): " + err);
+      
+     res.responseText = err;
+     res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);   
+     
+     return;
+    }    
+    
+    try {
+     fs.renameSync(uploadedFileName, targetFileName);
+     
+     htmlRsp = "Content successfully uploaded";
+    
+     let fileContent = "<embed height='500px' id='articleContainer' src='" 
+                     + "/data/statics/" + common.UnEscapeHtml(recipeName) + '_' 
+                     + req.files.content.name + "' width='100%'></embed>";
+    
+     fs.writeFileSync(path.join(__dirname, 
+                                "/public/data/statics/", 
+                                common.UnEscapeHtml(recipeName) + ".html"), 
+                      fileContent);       
+    } catch (err) {
+     htmlRsp = err;
+       
+     console.log("  UploadContent(): ERROR = " + err);
+    } 
    }
    break;  
    
@@ -856,6 +1123,7 @@ app.post("/UploadRecipes", function (req, res) {
 app.use('/',                    indexRouter);
 app.use('/GetRecipe',           getRecipeRouter);
 app.use('/ShowEditRecipePage',  editRecipeRouter);
+app.use('/ShowNewArticlePage',  newArticleRouter);
 app.use('/ShowNewRecipePage',   newRecipeRouter);
 app.use('/ShowPrintRecipePage', printRecipeRouter);
 app.use('/ShowViewRecipePage',  viewRecipeRouter);
@@ -1392,7 +1660,25 @@ function UnpackImport(pathFile) {
  
  let msg = CheckForDuplicateRecipes(destDir);
  
- fs.cpSync(path.join(destDir, "/Recipes"), 
+  fs.cpSync(path.join(destDir, "/Articles"), 
+            path.join(__dirname, "/public/data/statics"), 
+            {recursive: true}, 
+            (err) => {
+                      if (err) {
+                       console.error(err);
+                      }
+ });
+
+  fs.cpSync(path.join(destDir, "/Images"),  
+            path.join(__dirname, "/public/images/Recipes"), 
+            {recursive: true}, 
+            (err) => {
+                     if (err) {
+                      console.error(err);
+                     }
+ });
+ 
+  fs.cpSync(path.join(destDir, "/Recipes"), 
             path.join(__dirname, "/public/data/recipes"), 
             {recursive: true}, 
             (err) => {
@@ -1401,15 +1687,6 @@ function UnpackImport(pathFile) {
                       }
  });
 
- fs.cpSync(path.join(destDir, "/Images"),  
-           path.join(__dirname, "/public/images/Recipes"), 
-           {recursive: true}, 
-           (err) => {
-                     if (err) {
-                      console.error(err);
-                     }
- });
- 
  let filesList = fs.readdirSync(path.join(__dirname, "/public/data/recipes"));
  
  console.log("  UnpackImport(): # files: " + filesList.length);

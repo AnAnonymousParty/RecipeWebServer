@@ -54,7 +54,7 @@
    </span>   
    <div id="recipeTitleContainer" style="align-items: center; display: none; visibility: collapse; text-align: center; vertical-align:middle;">
     <span style="align-items: center; display: flex; vertical-align: middle;">
-     <h2 id="recipeTitle" style="display: inline;">Placeholder</h2> 
+     <h2 id="recipeTitle" style="display: inline;">s</h2> 
      <img height="24px" 
           id="RenameRecipeBtn();" 
           onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.RenameRecipe %>');" 
@@ -93,11 +93,11 @@
          title="Add New Recipe"     
          width="48px">
     <img height="48px" 
-         id="UploadContentBtn"     
-         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.UploadContent %>');" 
+         id="AddNewArticleBtn"     
+         onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddArticle %>');" 
          src="/images/Buttons/UploadDocBtn_60X48.png"    
          style="margin: 0px 10px 0px 0px;" 
-         title="Upload Content"     
+         title="<%= enums.GetDescFromPopupType(enums.PopupTypes.AddArticle); %>"     
          width="48px">         
     <img height="48px" 
          id="DeleteAllRecipesBtn" 
@@ -141,6 +141,42 @@
   
   <%# Conditionally displayed items for pop-ups, notifications, etc. %>
   
+  <%# Add Article Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.AddArticle %>" style="width: 30%;">
+   <div class="heading">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.AddArticle); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.AddArticle %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
+   </div>
+   <br>
+   <div class="centered">
+    <div class="recipe-line">
+     <span class="field-header">
+      Name:
+     </span>
+     <span class="field-value">
+      <input data-validation="<%= (validationRules.GetValidationRule('recipeName')).GetFieldTypeId(); %>"
+             id="newStaticPageName" 
+             maxLength="<%= (validationRules.GetValidationRule('recipeName')).GetMaxLength(); %>"
+             minLength="<%= (validationRules.GetValidationRule('recipeName')).GetMinLength(); %>"
+             <%= (validationRules.GetValidationRule('recipeName')).IsRequired(); %>
+             type="text">
+     </span>
+    </div>
+    <br>
+    <div class="centered">
+     <span style="margin: 10px 0px 0px 0p;">
+      <button onclick="AddArticle(document.getElementById('newStaticPageName').value);" 
+              type="button">
+        OK
+       </button>
+     </span>
+    </div>  
+   </div>
+  </div>
+    
   <%# Add Recipe Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.AddRecipe %>" style="width: 30%;">
    <div class="heading">
@@ -172,6 +208,71 @@
    </div>
   </div>  
   
+  <%# Article Exists Warning Popup. %>
+  <div class="popup" id="<%= enums.PopupTypes.ArticleExistsWarning %>" style="width: 35%;">
+   <input id="aewpp" type="hidden" value="">
+   <div class="heading">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.ArticleExistsWarning); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ArticleExistsWarning %>', document.getElementById('aewpp').value);" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
+   </div>
+   <br>
+   <div class="centered">
+    An article with that name already exists. 
+   </div>
+  </div>
+  
+  <%# Edit Article Popup: Replace existing content with new uploaded content To  %>
+  <div class="popup" id="<%= enums.PopupTypes.EditArticle %>" style="width: 30%;">
+   <div class="heading">
+    <%= enums.GetDescFromPopupType(enums.PopupTypes.EditArticle); %>&nbsp;
+    <img height="32px" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditArticle %>');" 
+         src="/images/Buttons/CloseIcon_512X512.png" 
+         width="32px">
+   </div>
+   <br>
+   <div class="centered">
+    <div class="centered">
+     <form action="/UploadStaticContent" enctype="multipart/form-data" method="post">
+      <input id="contentFile" type="hidden" value="">
+      <input id="ogPageName"  type="hidden" value=""> 
+      <input id="puInvoker"   type="hidden" value="">
+      <div class="fileUpload-div" id="RevisedFileUploadContainer">
+       <span class="fileUpload-div">
+        <input id="file2UploadAsRevised" 
+               onchange="HandleFileSelectionChanged('file2UploadAsRevised', 'updateStaticContentBtn');" 
+               required="required" 
+               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
+               type="file">
+        <img height="48px" 
+             id="updateStaticContentBtn" 
+             onclick="SendRevisedContentFile();" 
+             src="/images/Buttons/UploadBtn_48X48.png" 
+             style="margin: 0px 0px 0px 0px;"
+             title="Upload" 
+             width="48px">    
+       </span>
+      </div>
+     </form>
+     <div class="notifier" id="UpdateContentRspContainer">
+      <%# This content will be replaced via client javascript, populated from server response to help request. %>
+     </div>    
+    </div>
+    <br>
+    <div class="centered">
+     <span style="margin: 10px 0px 0px 0p;">
+      <button onclick="ViewArticle(document.getElementById('ogPageName').value); PopupBehaviors.HidePopup('<%= enums.PopupTypes.EditArticle %>');" 
+              type="button">
+       OK
+      </button>
+     </span>
+    </div>  
+   </div>
+  </div>
+    
   <%# Error Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.Error %>" style="width: 25%;">
    <div class="heading">
@@ -278,15 +379,16 @@
   
   <%# Recipe Exists Warning Popup. %>
   <div class="popup" id="<%= enums.PopupTypes.RecipeExistsWarning %>" style="width: 35%;">
+   <input id="rewpp" type="hidden" value="">
    <div class="heading">
     <%= enums.GetDescFromPopupType(enums.PopupTypes.RecipeExistsWarning); %>&nbsp;
     <img height="32px" 
-         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.RecipeExistsWarning %>');" 
+         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.RecipeExistsWarning %>', document.getElementById('rewpp').value);" 
          src="/images/Buttons/CloseIcon_512X512.png" 
          width="32px">
    </div>
    <br>
-   <div class="request-div">
+   <div class="centered">
     A recipe with that name already exists. 
    </div>
   </div>
@@ -329,64 +431,6 @@
    <br>
    <div id="shoppingListContainer" style="margin: auto; width: 60%;">
     <%# This content will be replaced via client javascript, populated from server response to Shopping List request. %>
-   </div>
-  </div>
-  
-  <%# Upload Content Popup. %>
-  <div class="popup" id="<%= enums.PopupTypes.UploadContent %>" style="width: 30%;">
-   <div class="heading">
-    <%= enums.GetDescFromPopupType(enums.PopupTypes.UploadContent); %>&nbsp;
-    <img height="32px" 
-         onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.UploadContent %>');" 
-         src="/images/Buttons/CloseIcon_512X512.png" 
-         width="32px">
-   </div>
-   <br>
-   <div class="centered">
-    <div class="recipe-line">
-     <span class="field-header">
-      Name:
-     </span>
-     <span class="field-value">
-      <input data-validation="<%= (validationRules.GetValidationRule('recipeName')).GetFieldTypeId(); %>"
-             id="staticPage2Add" 
-             maxLength="<%= (validationRules.GetValidationRule('recipeName')).GetMaxLength(); %>"
-             minLength="<%= (validationRules.GetValidationRule('recipeName')).GetMinLength(); %>"
-             <%= (validationRules.GetValidationRule('recipeName')).IsRequired(); %>
-             type="text">
-     </span>
-    </div>
-    <br>
-    <div class="centered">
-     <form action="/UploadStaticContent" enctype="multipart/form-data" method="post">
-      <input id="contentFile" type="hidden" value="">
-      <input id="puInvoker"   type="hidden" value="">
-      <div class="fileUpload-div" id="FileUploadForm">
-       <span class="fileUpload-div">
-        <input id="content2Upload" 
-               onchange="HandleContentFileSelectionChanged();" 
-               required="required" 
-               style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
-               type="file">
-        <img height="48px" 
-             id="uploadContentBtn" 
-             onclick="SubmitContentFileForUpload(document.getElementById('contentFile').value);" 
-             src="/images/Buttons/UploadBtn_48X48.png" 
-             style="margin: 0px 10px 0px 0px;"
-             title="Upload" 
-             width="48px">    
-       </span>
-      </div>
-     </form>
-     <div class="notifier" id="response">
-      <%# This content will be replaced via client javascript, populated from server response to help request. %>
-     </div>    
-    </div>
-    <div class="centered">
-     <span style="margin: 10px 0px 0px 0p;">
-      <button onclick="AddRecipe();" type="button">OK</button>
-     </span>
-    </div>  
    </div>
   </div>
   
