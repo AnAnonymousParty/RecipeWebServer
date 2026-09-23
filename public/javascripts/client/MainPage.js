@@ -1415,9 +1415,11 @@ function RequestNewArticlePage(recipeName) {
    HideElement("indexPageBtns");
    HideElement("filtersContainer");
    HideElement("viewPageBtns");
+   HideElement("SaveRecipeBtn");
    
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer");
+   UnHideElement("SaveArticleBtn", "inline");   
   }
  }
     
@@ -1443,9 +1445,11 @@ function RequestNewRecipePage(recipeName) {
    HideElement("indexPageBtns");
    HideElement("filtersContainer");
    HideElement("viewPageBtns");
-   
+   HideElement("SaveArticleBtn");
+ 
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer");
+   UnHideElement("SaveRecipeBtn", "inline");
   }
  }
     
@@ -1526,6 +1530,45 @@ function RequestRenameRecipe(oldRecipeName, newRecipeName) {
  
  xmlhttp.send();
 }
+
+function SaveArticle() {
+ let documentName = document.getElementById("articleFilePathName").value;
+ 
+ if (true == IsEmpty(documentName)) {
+  alert("Content file must be selected.");
+
+  return;
+ }
+ 
+ documentName = document.getElementById("articleFilePathName").files[0];
+ 
+ let xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {   
+   if ("NO" == xmlhttp.response) {
+    alert("Content file must be uploaded.");
+   } else {
+    ShowRecipesList("ALL", "ALL");
+   } 
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+  
+    
+ xmlhttp.open("GET", 
+              "/CheckArticleOrRecipeExists?file2Check=" + 
+              encodeURIComponent(document.getElementById("articleName").value + "_" + documentName.name), true);
+ 
+ xmlhttp.send(); 
+}
+
 
 function SaveIngredient() {
  var errs        = "";

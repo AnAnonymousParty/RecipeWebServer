@@ -71,19 +71,41 @@ configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.jo
 /*------------------------- GET handlers ------------------------------------*/
 
 app.get('/CheckArticleOrRecipeExists', (req, res) => {
+ console.log("> CheckArticleOrRecipeExists(" + req.query.file2Check + ")");
+ 
  let file2Check = decodeURIComponent(req.query.file2Check + ".xml");
  
  if (true == fs.existsSync(__dirname + "/public/data/recipes/" + file2Check)) {
   res.send('RECIPE');
- } else {
-  file2Check = decodeURIComponent(req.query.file2Check + ".html");  
   
-  if (true == fs.existsSync(__dirname + "/public/data/statics/" + file2Check)) {
-   res.send('ARTICLE');
-  } else {
-   res.send('NO');
-  }  
+  console.log("< CheckArticleOrRecipeExists() [RECIPE]");
+  
+  return;
  }
+ 
+ file2Check = decodeURIComponent(req.query.file2Check + ".html");  
+ 
+ if (true == fs.existsSync(__dirname + "/public/data/statics/" + file2Check)) {
+  res.send('ARTICLE');
+  
+  console.log("< CheckArticleOrRecipeExists() [ARTICLE - html]");
+  
+  return;
+ } 
+ 
+ file2Check = decodeURIComponent(req.query.file2Check);  
+ 
+ if (true == fs.existsSync(__dirname + "/public/data/statics/" + file2Check)) {
+  res.send('ARTICLE');
+  
+  console.log("< CheckArticleOrRecipeExists() [ARTICLE - pdf]");
+  
+  return;
+ }  
+ 
+ res.send('NO');
+ 
+ console.log("< CheckArticleOrRecipeExists() [NO]");
 });
 
 app.get('/DeleteAllRecipes', (req, res) => {

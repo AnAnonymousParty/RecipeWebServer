@@ -71,10 +71,18 @@
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
     <img height="48px" 
-         id="SaveRecipesListBtn" 
+         id="SaveArticleBtn" 
+         onclick="SaveArticle();"  
+         src="/images/Buttons/SaveBtn_48X48.png"   
+         style="margin: 0px 10px 0px 0px;"
+         title="Save Article"          
+         width="48px">    
+    <img height="48px" 
+         id="SaveRecipeBtn" 
          onclick="SaveRecipe();"  
          src="/images/Buttons/SaveBtn_48X48.png"   
-         style="margin: 0px 10px 0px 0px;" title="Save Recipe"            
+         style="margin: 0px 10px 0px 0px;"
+         title="Save Recipe"          
          width="48px"> 
     <img height="48px" 
          id="ShowRecipesListBtn" 
@@ -90,7 +98,7 @@
          onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.AddRecipe %>');" 
          src="/images/Buttons/AddBtn_60X48.jpg"    
          style="margin: 0px 10px 0px 0px;" 
-         title="Add New Recipe"     
+         title="<%= enums.GetDescFromPopupType(enums.PopupTypes.AddRecipe); %>"     
          width="48px">
     <img height="48px" 
          id="AddNewArticleBtn"     

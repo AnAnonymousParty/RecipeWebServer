@@ -1,0 +1,35 @@
+<form action="AddNewArticle" 
+      id="newArticleForm" 
+      method="post" 
+      name="newArticleForm"> 
+ <input id="articleName" 
+        name="articleName" 
+        type="hidden" 
+        value=""> 
+ <br>
+ <div class="centered"> 
+  <span style="display: inline-block; width: 400px;">
+   <div style="display: flex; align-items: center;">
+    <span style="display: inline-block; vertical-align: middle;">
+     <input id="articleFilePathName" 
+            onchange="HandleFileSelectionChanged('articleFilePathName', 'uploadNewContentBtn');" 
+            required="required" 
+            style="color: black; vertical-align: middle;" 
+            type="file"
+            value="">   
+     <img height="48px" 
+          id="uploadNewContentBtn"
+          onclick="SendNewContentFile();"
+          src="/images/Buttons/UploadBtn_48X48.png"
+          style="display: hidden; visibility: collapse; vertical-align: middle;"
+          title="Upload New Content File" 
+          width="48px"> 
+    </span> 
+   </div>
+  <span>
+ </div>
+ <br>
+ <embed height="500px" id="articleContainer" src="" width="100%">
+  <%# This content will be replaced via client javascript, populated from server response to file upload request. %>
+ </embed>
+</form>  
