@@ -70,6 +70,26 @@ configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.jo
 
 /*------------------------- GET handlers ------------------------------------*/
 
+// Handle Article added:
+app.get("/AddArticle", function (req, res) {
+ let articleName     = decodeURIComponent(req.query.articleName);
+ let contentFileName = decodeURIComponent(req.query.contentFileName);
+ 
+ console.log("> AddArticle(" + articleName + ", " + contentFileName + ")"); 
+ 
+ let fileContent = "<embed height='500px' id='articleContainer' src='" 
+                + "/data/statics/" + articleName + '_' 
+                + contentFileName + "' width='100%'></embed>";
+    
+ fs.writeFileSync(path.join(__dirname, 
+                            "/public/data/statics/", 
+                            articleName + ".html"), 
+                  fileContent);  
+
+ console.log("< AddArticle()"); 
+});
+
+
 app.get('/CheckArticleOrRecipeExists', (req, res) => {
  console.log("> CheckArticleOrRecipeExists(" + req.query.file2Check + ")");
  
@@ -623,7 +643,7 @@ app.post("/AddNewRecipe", function (req, res) {
  console.log("< AddNewRecipe()"); 
 });
 
-// Handle Export Selected recipes.
+// Handle Export Selected recipes:
 app.post("/ExportSelectedRecipes", function (req, res) {
  console.log("> ExportSelectedRecipes()"); 
  
@@ -680,7 +700,7 @@ app.post("/ExportSelectedRecipes", function (req, res) {
  console.log("< ExportSelectedRecipes()"); 
 });
 
-// Handle content uploaded.
+// Handle Article updated:
 app.post("/UpdateArticle", async function (req, res) {
  let htmlRsp          = "";
  let newArticleName   = req.fields.newArticleName; 
@@ -909,7 +929,7 @@ app.post("/UpdateRecipe", function (req, res) {
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
 
-// Handle content uploaded.
+// Handle content uploaded:
 app.post("/UploadContent", async function (req, res) {
  console.log("> UploadContent(" + req.fields.recipeName + ", " + req.files.content.path + ")"); 
  
@@ -983,16 +1003,7 @@ app.post("/UploadContent", async function (req, res) {
     try {
      fs.renameSync(uploadedFileName, targetFileName);
      
-     htmlRsp = "Content successfully uploaded";
-    
-     let fileContent = "<embed height='500px' id='articleContainer' src='" 
-                     + "/data/statics/" + common.UnEscapeHtml(recipeName) + '_' 
-                     + req.files.content.name + "' width='100%'></embed>";
-    
-     fs.writeFileSync(path.join(__dirname, 
-                                "/public/data/statics/", 
-                                common.UnEscapeHtml(recipeName) + ".html"), 
-                      fileContent);       
+     htmlRsp = "Content successfully uploaded";     
     } catch (err) {
      htmlRsp = err;
        
@@ -1021,7 +1032,7 @@ app.post("/UploadContent", async function (req, res) {
  res.status(retStatus).send(htmlRsp);
 });
 
-// Handle image uploaded.
+// Handle image uploaded:
 app.post("/UploadImage", async function (req, res) {
  console.log("> UploadImage(" + req.fields.recipeName + ", " + req.files.image.path + ")"); 
  
@@ -1106,7 +1117,7 @@ app.post("/UploadImage", async function (req, res) {
  res.status(retStatus).send(htmlRsp);
 });
 
-// Handle recipes (import) file uploaded.
+// Handle recipes (import) file uploaded:
 app.post("/UploadRecipes", function (req, res) {
  console.log("> UploadRecipes()"); 
  

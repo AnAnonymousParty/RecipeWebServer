@@ -1532,7 +1532,8 @@ function RequestRenameRecipe(oldRecipeName, newRecipeName) {
 }
 
 function SaveArticle() {
- let documentName = document.getElementById("articleFilePathName").value;
+ let articleName  = document.getElementById("articleName").value;
+ let documentName = document.getElementById("articleFilePathName").files[0].name;
  
  if (true == IsEmpty(documentName)) {
   alert("Content file must be selected.");
@@ -1540,33 +1541,45 @@ function SaveArticle() {
   return;
  }
  
- documentName = document.getElementById("articleFilePathName").files[0];
- 
- let xmlhttp = new XMLHttpRequest();
+ let xhrChkFileExists = new XMLHttpRequest();
     
- xmlhttp.onreadystatechange = function() {
-  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+ xhrChkFileExists.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xhrChkFileExists.readyState) {
    return;
   }
  
-  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {   
-   if ("NO" == xmlhttp.response) {
+  if (HttpStatusTypes.OK == xhrChkFileExists.status || HttpStatusTypes.NOTMODIFIED == xhrChkFileExists.status) {   
+   if ("NO" == xhrChkFileExists.response) {
     alert("Content file must be uploaded.");
    } else {
-    ShowRecipesList("ALL", "ALL");
-   } 
-  }
-  else {
-   // TODO: Handle failure, if needed.
+    let xhrAddArticle = new XMLHttpRequest();
+    
+    xhrAddArticle.onreadystatechange = function() {
+     if (ReadyStateTypes.DONE != xhrAddArticle.readyState) {
+      return;
+     }
+ 
+     if (HttpStatusTypes.OK == xhrAddArticle.status || HttpStatusTypes.NOTMODIFIED == xhrAddArticle.status) {
+      ShowRecipesList("ALL", "ALL");
+     } else {
+      // TODO: Handle failure, if needed.
+     }
+    }
+    
+    xhrAddArticle.open("GET", 
+                       "/AddArticle?articleName=" + encodeURIComponent(articleName) + "&contentFileName=" + documentName, 
+                       true);
+ 
+    xhrAddArticle.send();    
+   }
   }
  }
   
-    
- xmlhttp.open("GET", 
-              "/CheckArticleOrRecipeExists?file2Check=" + 
-              encodeURIComponent(document.getElementById("articleName").value + "_" + documentName.name), true);
+ xhrChkFileExists.open("GET", 
+                       "/CheckArticleOrRecipeExists?file2Check=" + encodeURIComponent(articleName + "_" + documentName), 
+                       true);
  
- xmlhttp.send(); 
+ xhrChkFileExists.send(); 
 }
 
 
