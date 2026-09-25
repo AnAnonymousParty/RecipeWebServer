@@ -1533,13 +1533,15 @@ function RequestRenameRecipe(oldRecipeName, newRecipeName) {
 
 function SaveArticle() {
  let articleName  = document.getElementById("articleName").value;
- let documentName = document.getElementById("articleFilePathName").files[0].name;
+ let documentName = document.getElementById("articleFilePathName").value;
  
  if (true == IsEmpty(documentName)) {
   alert("Content file must be selected.");
 
   return;
  }
+ 
+ documentName = document.getElementById("articleFilePathName").files[0].name;
  
  let xhrChkFileExists = new XMLHttpRequest();
     
@@ -1581,7 +1583,6 @@ function SaveArticle() {
  
  xhrChkFileExists.send(); 
 }
-
 
 function SaveIngredient() {
  var errs        = "";
@@ -2011,9 +2012,6 @@ function SendNewContentFile() {
  
  var xmlhttpReq = new XMLHttpRequest();
 
- xmlhttpReq.open('POST', '/UploadContent', true);
-
-
  // Provide the callback function to handle the response from the server:
  
  xmlhttpReq.onload = function() {
@@ -2021,20 +2019,20 @@ function SendNewContentFile() {
    return;  // I shall serve no data before its time.
   }  
   
+  HideElement("uploadNewContentSpinner");
+  
   if (HttpStatusTypes.OK === xmlhttpReq.status) {
-   var data = xmlhttpReq.responseText;
-   
    document.getElementById("articleContainer").src = "data/statics/" + pageName + "_" + filePathName.name;
   } else {
-
+   alert("Article upload failed: " + xmlhttpReq.responseText);
   }
-   
-
  };
- 
  
  // Send the request to the server:
  
+ UnHideElement("uploadNewContentSpinner");
+ 
+ xmlhttpReq.open('POST', '/UploadContent', true);
 
  xmlhttpReq.send(formData);
 }

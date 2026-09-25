@@ -70,7 +70,7 @@ configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.jo
 
 /*------------------------- GET handlers ------------------------------------*/
 
-// Handle Article added:
+// Handle Add Article request:
 app.get("/AddArticle", function (req, res) {
  let articleName     = decodeURIComponent(req.query.articleName);
  let contentFileName = decodeURIComponent(req.query.contentFileName);
@@ -81,14 +81,20 @@ app.get("/AddArticle", function (req, res) {
                 + "/data/statics/" + articleName + '_' 
                 + contentFileName + "' width='100%'></embed>";
     
+ try {   
  fs.writeFileSync(path.join(__dirname, 
                             "/public/data/statics/", 
                             articleName + ".html"), 
                   fileContent);  
+ } catch (err) {
+  res.responseText = err;
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err); 
+ }
+
+ res.status(enums.HttpStatusTypes.OK).send("Article Saved");                  
 
  console.log("< AddArticle()"); 
 });
-
 
 app.get('/CheckArticleOrRecipeExists', (req, res) => {
  console.log("> CheckArticleOrRecipeExists(" + req.query.file2Check + ")");
