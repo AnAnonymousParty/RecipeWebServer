@@ -34,6 +34,7 @@ const validationUtilsLib = require(path.join(__dirname, '/public/javascripts/ser
 // Route Handlers:
 
 let indexRouter       = require('./routes/index');
+let editArticleRouter = require('./routes/editArticle');
 let editRecipeRouter  = require('./routes/editRecipe');
 let getRecipeRouter   = require('./routes/getRecipe');
 let newArticleRouter  = require('./routes/newArticle');
@@ -303,10 +304,10 @@ app.get("/ExportAllRecipes", function (req, res) {
 
 app.get('/GetArticle', (req, res) => {
  console.log("> GetArticle(" + req.query.articleName + ")"); 
- 
+
  try {
-  articleHtml = "<input id='articleName'  type='hidden' value='" + req.query.articleName +"'>"
-              + "<input id='documentType' type='hidden' value='article'>"
+  articleHtml = "<input id=\"articleName\"  type=\"hidden\" value=\"" + req.query.articleName + "V>"
+              + "<input id=\"documentType\" type=\"hidden\" value=\"article\">"            
               + fs.readFileSync(__dirname + "/public/data/statics/" + req.query.articleName + ".html", {encoding: 'utf8', flag: 'r'}); 
  } catch (err) {
   console.log("< GetArticle(): Error=" + err); 
@@ -1161,6 +1162,7 @@ app.post("/UploadRecipes", function (req, res) {
 
 app.use('/',                    indexRouter);
 app.use('/GetRecipe',           getRecipeRouter);
+app.use('/ShowEditArticlePage', editArticleRouter);
 app.use('/ShowEditRecipePage',  editRecipeRouter);
 app.use('/ShowNewArticlePage',  newArticleRouter);
 app.use('/ShowNewRecipePage',   newRecipeRouter);

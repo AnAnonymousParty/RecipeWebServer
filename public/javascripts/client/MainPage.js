@@ -929,7 +929,50 @@ function DeleteVariation(rowNum) {
 }
 
 function EditArticle(articleName) {
- PopupBehaviors.RevealPopup(PopupTypes.EditArticle, null, articleName);
+ // articleName is provided when an Edit button is clicked in the Recipes List.
+ // If the Edit button is clicked on the Article View page, articleName will be
+ // empty, implying that it is meant to edit THAT recipe, and the name can be 
+ // obtained from within the hidden page data:
+ 
+ if (undefined == articleName || "" == articleName) {
+  if ("article" == document.getElementById("documentType").value) {
+   articleName = document.getElementById("articleName").value;
+  }
+  else {
+   articleName = document.getElementById("recipeName").value;
+  }
+ }
+ 
+ document.getElementById("recipeTitle").innerHTML = articleName;
+ 
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function()
+ {
+  if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+    
+   document.getElementById("recipesListContainer").innerHTML = data;
+   
+   HideElement("indexPageBtns");
+   HideElement("filtersContainer");
+   HideElement("viewPageBtns");
+   HideElement("SaveRecipeBtn");
+   
+   UnHideElement("SaveArticleBtn", "inline");   
+   UnHideElement("editPageBtns");
+   UnHideElement("recipeTitleContainer", "inline-block");
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+ 
+ var params = encodeURIComponent(articleName);
+    
+ xmlhttp.open("GET", "/ShowEditArticlePage?articleToEdit=" + params, true);
+ 
+ xmlhttp.send(); 
 }
 
 function EditIngredient(rowNum) {
@@ -2716,6 +2759,7 @@ function ViewArticle(articleName) {
    HideElement("filtersContainer");
    HideElement("indexPageBtns");
    HideElement("EditRecipeBtn");
+   HideElement("RenameRecipeBtn");   
    
    UnHideElement("EditArticleBtn", "inline");   
    UnHideElement("viewPageBtns"); 
