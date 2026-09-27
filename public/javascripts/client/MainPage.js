@@ -962,6 +962,7 @@ function EditArticle(articleName) {
    
    UnHideElement("DeleteArticleBtn", "inline"); 
    UnHideElement("SaveArticleBtn", "inline");   
+   UnHideElement("RenameRecipeBtn", "inline");    
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer", "inline-block");
   }
@@ -1101,6 +1102,7 @@ function EditRecipe(recipeName) {
    HideElement("SaveArticleBtn");
    
    UnHideElement("DeleteRecipeBtn", "inline");    
+   UnHideElement("RenameRecipeBtn", "inline");     
    UnHideElement("SaveRecipeBtn", "inline");   
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer", "inline-block");
@@ -2791,6 +2793,7 @@ function ViewRecipe(recipeName) {
    HideElement("indexPageBtns");
    HideElement("DeleteArticleBtn");   
    HideElement("EditArticleBtn");
+   HideElement("RenameRecipeBtn");    
    
    UnHideElement("DeleteRecipeBtn", "inline"); 
    UnHideElement("EditRecipeBtn", "inline");
