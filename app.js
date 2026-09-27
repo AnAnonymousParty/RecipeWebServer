@@ -92,6 +92,8 @@ app.get("/AddArticle", function (req, res) {
   res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err); 
  }
 
+ CleanArticles(articleName + "_" + contentFileName);
+
  res.status(enums.HttpStatusTypes.OK).send("Article Saved");                  
 
  console.log("< AddArticle()"); 
@@ -982,31 +984,8 @@ app.post("/UploadContent", async function (req, res) {
     fs.rmSync(uploadedFileName, { force: true, });     
    }
    break;
-   
+  
    case enums.FileValidationResultTypes.PASSED: {
-    try {
-     let fileList = fs.readdirSync(__dirname + "/public/data/statics/").filter(fn => fn.startsWith(recipeName + "_"));
-     
-     if (fileList.length > 0) {
-      console.log("  UploadContent(): Deleting " + fileList.length + " files.");
-      
-      for (let filesNdx = 0; filesNdx < fileList.length; ++filesNdx) {
-       let file2Delete = path.join(__dirname, "/public/data/statics/", fileList[filesNdx]);
-       
-       console.log("  UploadContent(): Deleting " + file2Delete);
-       
-       fs.rmSync(file2Delete, { force: true, });
-      }
-     }
-    } catch (err) {
-     console.log("  UploadContent(): " + err);
-      
-     res.responseText = err;
-     res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);   
-     
-     return;
-    }    
-    
     try {
      fs.renameSync(uploadedFileName, targetFileName);
      
@@ -1228,6 +1207,86 @@ function CheckForDuplicateRecipes(importPath) {
  console.log("< CheckForDuplicateRecipes() [" + msg + "]");     
  
  return(msg);
+}
+
+function CleanArticles(article2Protect) {
+ console.log("> CleanArticles(" + article2Protect + ")");
+ 
+ // Get list of all files in the articles directory:
+ 
+ let articlesList = new Array();
+ 
+ try {
+  articlesList = fs.readdirSync(path.join(__dirname, '/public/data/statics/'));
+ } catch (err) {
+  console.log("  CleanArticles(): err = " + err);  
+ }
+ 
+ console.log("  CleanArticles() # articles = " + articlesList.length);
+ 
+ let articleNamesList = new Array();
+ let contentFilesList = new Array();
+  
+ 
+ // Using the list of of files just obtained, create a list of article names 
+ // from those with a '.hmtl' extension, and a list of content files (those 
+ // with a '.pdf' extension:
+ 
+ for (let articlesListNdx = 0; articlesListNdx < articlesList.length; ++articlesListNdx) {
+  let article = articlesList[articlesListNdx];
+  
+  if (".html" == path.extname(article).toLowerCase()) {
+   console.log("  CleanArticles(): Adding " + path.basename(article, ".html") + " to names list.");  
+   
+   articleNamesList.push(path.basename(article, ".html") + "_");
+   
+   continue;
+  }
+  
+  if (".pdf" == path.extname(article).toLowerCase()) {
+   console.log("  CleanArticles(): Adding " + article + " to files list.");     
+   
+   contentFilesList.push(article);
+  }
+ }
+ 
+ 
+ // Remove any files from the list of content files whose name begins with one 
+ // of the names in the file names list:
+ 
+ for (let articlesListNdx = 0; articlesListNdx < articleNamesList.length; ++articlesListNdx) {
+  console.log("  CleanArticles(): Checking " + articleNamesList[articlesListNdx] + ".");  
+  
+  for (let contentFilesListNdx = 0; contentFilesListNdx < contentFilesList.length; ++contentFilesListNdx) {
+   if (contentFilesList[contentFilesListNdx].startsWith(path.basename(articleNamesList[articlesListNdx]))) {
+    console.log("  CleanArticles(): Removing [" + contentFilesListNdx + "] " + contentFilesList[contentFilesListNdx] + ".");  
+    
+    contentFilesList.splice(contentFilesListNdx, 1);
+   }
+  }
+ }
+ 
+ 
+ // Now the content files list only contains files not associated with an 
+ // article file, which must now be be deleted:
+ 
+ for (let contentFilesListNdx = 0; contentFilesListNdx < contentFilesList.length; ++contentFilesListNdx) {
+   if (article2Protect == contentFilesList[contentFilesListNdx]) {
+    console.log("  CleanArticles(): preserving " + path.join(__dirname, '/public/data/statics/', contentFilesList[contentFilesListNdx]) + ".");
+  
+    continue;
+   }  
+   
+  console.log("  CleanArticles(): Deleting " + path.join(__dirname, '/public/data/statics/', contentFilesList[contentFilesListNdx]) + ".");
+     
+  try {
+   fs.rmSync(path.join(__dirname, "/public/data/statics/", contentFilesList[contentFilesListNdx]), { force: true, });  
+  } catch (err) {
+   console.log("  CleanArticles(): err = " + err);  
+  }
+ } 
+ 
+ console.log("< CleanArticles()");
 }
 
 async function ExportRecipes(recipesExportPathNameExt, req, res) {
@@ -2245,5 +2304,6 @@ function ValidateRcvdPostData(rcvdPostData) {
  
  return (retVal);
 }
+
 
 module.exports = app;
