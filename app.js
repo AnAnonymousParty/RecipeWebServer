@@ -308,7 +308,7 @@ app.get('/GetArticle', (req, res) => {
  console.log("> GetArticle(" + req.query.articleName + ")"); 
 
  try {
-  articleHtml = "<input id=\"articleName\"  type=\"hidden\" value=\"" + req.query.articleName + "V>"
+  articleHtml = "<input id=\"articleName\"  type=\"hidden\" value=\"" + req.query.articleName + "\">"
               + "<input id=\"documentType\" type=\"hidden\" value=\"article\">"            
               + fs.readFileSync(__dirname + "/public/data/statics/" + req.query.articleName + ".html", {encoding: 'utf8', flag: 'r'}); 
  } catch (err) {
@@ -1271,11 +1271,11 @@ function CleanArticles(article2Protect) {
  // article file, which must now be be deleted:
  
  for (let contentFilesListNdx = 0; contentFilesListNdx < contentFilesList.length; ++contentFilesListNdx) {
-   if (article2Protect == contentFilesList[contentFilesListNdx]) {
-    console.log("  CleanArticles(): preserving " + path.join(__dirname, '/public/data/statics/', contentFilesList[contentFilesListNdx]) + ".");
-  
-    continue;
-   }  
+  if (article2Protect == contentFilesList[contentFilesListNdx]) {
+   console.log("  CleanArticles(): preserving " + path.join(__dirname, '/public/data/statics/', contentFilesList[contentFilesListNdx]) + ".");
+ 
+   continue;
+  }  
    
   console.log("  CleanArticles(): Deleting " + path.join(__dirname, '/public/data/statics/', contentFilesList[contentFilesListNdx]) + ".");
      
