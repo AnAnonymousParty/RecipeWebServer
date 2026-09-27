@@ -158,31 +158,11 @@ app.get('/DeleteArticle', (req, res) => {
 
  // Delete the article .pdf & .html files:
  
- let pdfFile = "";
- 
- try {
-  let files = fs.readdirSync(__dirname + "/public/data/statics/").filter(fn => fn.startsWith(article2Delete + "_"));
-  
-  if (1 == files.length) {
-   pdfFile = files[0];
-  } else {
-   console.log("  DeleteArticle() No PDF file?");
-  }
- } catch (err) {
-  console.log(err);
-   
-  res.responseText = err;
-  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);   
-  
-  return;
- }
 
  try {
-  fs.accessSync(__dirname + "/public/data/statics/" + article2Delete + ".html", fs.constants.F_OK);
-  fs.accessSync(__dirname + "/public/data/statics/" + pdfFile,                  fs.constants.F_OK);
-  
-  fs.rmSync(__dirname + "/public/data/statics/" + pdfFile,                  { force: true, });
   fs.rmSync(__dirname + "/public/data/statics/" + article2Delete + ".html", { force: true, });
+  
+  CleanArticles("");
  } catch (err) {
   console.log(err);
   
