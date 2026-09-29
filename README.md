@@ -1,6 +1,6 @@
 # RecipeServer
 
-![alt text](https://github.com/AnAnonymousParty/RecipeWebServer/blob/main/ScreenShot.JPG?raw=true)
+![alt text](https://github.com/AnAnonymousParty/RecipeWebServer/blob/main/ScreenShot.png?raw=true)
 
 node.js app for recipe website.
 
