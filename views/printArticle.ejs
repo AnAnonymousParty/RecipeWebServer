@@ -1,2 +1,43 @@
-<input id="articleName" type="hidden" value="<%- articleName %>">
-<%- content %>
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <link href='/stylesheets/style.css' rel='stylesheet' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/javascripts/client/common.js"></script>
+  <script src="/javascripts/client/constants.js"></script>
+  <script src="/javascripts/client/conversions.js"></script>  
+  <script src="/javascripts/client/enums.js"></script>
+  <script src="/javascripts/client/MainPage.js"></script>
+  <title><%- articleName %></title>
+ </head>
+ 
+ <body>
+  <div class="centered">
+   <h2><%- articleName %></h2>
+  </div>
+  
+  <%- content %>
+  
+  <br>
+
+  <div class="centered" id="ButtonsSection">
+   <% if ("N" != showButtons) { %>
+   <img height="48px" 
+        id="PrintArticleBtn"    
+        onclick="PrintArticle();" 
+        src="/images/Buttons/PrintBtn_48X48.png"    
+        style="margin: 0px 10px 0px 0px;" 
+        title="Print Recipe"     
+        width="48px">
+   <img height="48px" 
+        id="SavePdfBtn"    
+        onclick='SavePDF("<%- articleName  %>", "article", "", "");'
+        src="/images/Buttons/PDFBtn_48X48.jpg"    
+        style="margin: 0px 10px 0px 0px;" 
+        title="Save as PDF file"     
+        width="48px">
+   <% } %>
+  </div>  
+ </body>
+</html>

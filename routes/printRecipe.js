@@ -55,30 +55,26 @@ router.get('/', function(req, res, next) {
    
    let renderParameters = { 
     articleName: recipeName,
-    content:     content
+    content:     content,
+    showButtons: showButtons
    };
    
-   res.render('printArticle', renderParameters, RenderResultsHandler);
+   res.render('printArticle', renderParameters, function (errors, htmlOutput) {
+    if (undefined != errors) {
+     console.log("  print: Error = " + errors);
+     
+     res.send("Internal Server Error. Unable to render print necipe page.<br><br>" + errors);                
+    } else {
+     console.log("  printRecipe(): " + htmlOutput);
+     res.send(htmlOutput);
+    }
+   })
   } catch (err) {
    console.log(err);  
   } 
  }
  
  console.log("< printRecipe()");
-});
-
- /**
-  Nested function to process the rendering results by either returning an error
-  message or the rendered html results back to the client.
- */
- function RenderResultsHandler(errors, htmlOutput) {
-  if (undefined != errors) {
-   console.log("  print: Error = " + errors);
-   
-   res.send("Internal Server Error. Unable to render print necipe page.<br><br>" + errors);                
-  } else {
-   res.send(htmlOutput);
-  }
- } 
+}); 
 
 module.exports = router;

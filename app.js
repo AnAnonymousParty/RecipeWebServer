@@ -79,7 +79,7 @@ app.get("/AddArticle", function (req, res) {
  console.log("> AddArticle(" + articleName + ", " + contentFileName + ")"); 
  
  let fileContent = "<embed height='500px' id='articleContainer' src='" 
-                + "/data/statics/" + articleName + '_' 
+                + "http://127.0.0.1:3000/data/statics/" + articleName + '_' 
                 + contentFileName + "' width='100%'></embed>";
     
  try {   
@@ -529,11 +529,9 @@ app.get('/RenameRecipe', (req, res) => {
 app.get('/SavePDF', (req, res) => {
  let recipeName = req.query.recipeName;
  let scaling    = req.query.scaling;
+ let type       = req.query.type;
  
- console.log("> savePDF(" + recipeName + ", " + scaling + ")");
- 
- let recipeDataXml  = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', recipeName + '.xml')); 
- let recipeDataJson = xml2jsParser.parseStringSync(recipeDataXml); 
+ console.log("> savePDF(" + recipeName + ", " + type + ", " + scaling + ")");
  
  try {                          
   HandleSavePDF(req, res);
@@ -747,7 +745,7 @@ app.post("/UpdateArticle", async function (req, res) {
      
      console.log('ERROR: ' + err);
     } else {
-     let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
+     let fileContent = "<embed height='500px' id='articleContainer' src='" + "http://127.0.0.1:3000/data/statics/" 
                      + common.UnEscapeHtml(newPdfFile) + "' width='100%'></embed>";
       
      fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  
@@ -844,7 +842,7 @@ app.post("/UpdateArticle", async function (req, res) {
      } else {
       htmlRsp = "Content successfully uploaded";
       
-      let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
+      let fileContent = "<embed height='500px' id='articleContainer' src='" + "http://127.0.0.1:3000/data/statics/" 
                       + common.UnEscapeHtml(newArticleName) + '_' + req.files.content.name + "' width='100%'></embed>";
       
       fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  
@@ -1291,21 +1289,36 @@ async function ExportRecipes(recipesExportPathNameExt, req, res) {
  console.log("< ExportRecipesPDF()");  
 }
 
-async function GeneratePDFfromHTML(recipeName, scaling, units, outputFile) {
- console.log("> GeneratePDFfromHTML(" + recipeName + ", " + scaling + ", " + units + ", " + outputFile + ")");
+async function GeneratePDFfromHTML(recipeName, type, scaling, units, outputFile) {
+ console.log("> GeneratePDFfromHTML(" + recipeName + ", " + type + ", " + scaling + ", " + units + ", " + outputFile + ")");
  // Use the puppeteer library to convert the printable version of the given
  // named recipe to a PDF document.
  
- let url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
-         + encodeURIComponent(recipeName)
-         + "&scaling=" + scaling + "&units=" + units + "&ShowButtons=N";
- 
- const browser = await puppeteer.launch();
- const page    = await browser.newPage();
- 
- await page.goto(url, { waitForOptions: "networkidle0" }); 
- await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
- await browser.close();
+ if ("recipe" == type) {
+  let url = "http://127.0.0.1:3000/ShowPrintRecipePage?recipeToPrint=" 
+          + encodeURIComponent(recipeName)
+          + "&type=" + type + "&scaling=" + scaling + "&units=" + units + "&ShowButtons=N";
+  
+  const browser = await puppeteer.launch();
+  const page    = await browser.newPage();
+  
+  await page.goto(url, { waitForOptions: "networkidle0" }); 
+  await page.pdf({ path: __dirname + "/public/data/PDFs/" + outputFile, format: 'A4' });
+  await browser.close();
+ } else {
+  let files = fs.readdirSync(path.join(__dirname + "/public/data/statics"));
+  
+  for (let i = 0; i < files.length; i++) {
+   let filename = files[i];
+       
+    if (true == filename.startsWith(recipeName) && filename.endsWith(".pdf")) {
+     fs.copyFileSync(path.join(__dirname, "/public/data/statics/") + filename, 
+                     path.join(__dirname, "/public/data/PDFs/" + recipeName + ".pdf"), null);
+     
+     break;
+    }
+  }
+ }
  
  console.log("< GeneratePDFfromHTML()");
 }
@@ -1313,13 +1326,14 @@ async function GeneratePDFfromHTML(recipeName, scaling, units, outputFile) {
 async function HandleSavePDF(req, res) {
   let recipeName = req.query.recipeName;
   let scaling    = req.query.scaling;
+  let type       = req.query.type;
   let units      = req.query.units;
   
-  console.log("> HandleSavePDF(" + recipeName + ", " + scaling + ", " + units + ")");
+  console.log("> HandleSavePDF(" + recipeName + ", " + type +", " + scaling + ", " + units + ")");
   
   // Generate PDF file from recipe's 'print' view:
   
-  await GeneratePDFfromHTML(recipeName, scaling, units, recipeName + '.pdf');
+  await GeneratePDFfromHTML(recipeName, type, scaling, units, recipeName + '.pdf');
   
   // Send the PDF file to the client:
   

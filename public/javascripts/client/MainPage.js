@@ -1389,6 +1389,14 @@ function MoveStepUp(rowNum) {
  }
 }
 
+function PrintArticle() {
+ HideElement("PrintArticleBtn");
+ 
+ window.print();
+ 
+ UnHideElement("PrintArticleBtn", "inline");
+}
+
 function PrintPrepList() {
  HideElement("HidePrepListBtn");
  HideElement("PrintPrepListBtn");
@@ -1531,7 +1539,7 @@ function RequestPrintableView(documentName, type) {
  let loc = "";
    
  if ("article" == type) { 
-  loc = "/GetArticle?articleName=" + encodeURIComponent(documentName) + "&type=article";
+  loc = "/ShowPrintRecipePage?recipeToPrint=" + encodeURIComponent(documentName) + "&type=article&scaling=";
  } else {
   loc = "/ShowPrintRecipePage?recipeToPrint=" + encodeURIComponent(documentName) + "&type=recipe&scaling=";
    
@@ -1735,7 +1743,7 @@ function SaveIngredientHeading() {
  PopupBehaviors.HidePopup(PopupTypes.EditIngredientHeading); 
 } 
 
-function SavePDF(recipeName, scaling, units) {
+function SavePDF(recipeName, type, scaling, units) {
  var xmlhttp = new XMLHttpRequest();
  
  xmlhttp.responseType = "blob";
@@ -1758,7 +1766,9 @@ function SavePDF(recipeName, scaling, units) {
   }
  }
 
- xmlhttp.open("GET", "/SavePDF?recipeName=" + encodeURIComponent(recipeName) + "&scaling=" + scaling.toString() + "&units=" + units, true);
+ xmlhttp.open("GET", 
+              "/SavePDF?recipeName=" + encodeURIComponent(recipeName) + 
+              "&type=" + type + "&scaling=" + scaling.toString() + "&units=" + units, true);
  
  xmlhttp.send();  
 }
