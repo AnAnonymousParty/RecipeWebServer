@@ -2092,11 +2092,10 @@ function ValidateRcvdPostData(rcvdPostData) {
    break;
   }   
   
-    console.log("  ValidateRcvdPostData() a");
   
-  let preData = postData.prerequisite;  // There may be 0, 1 or an array of these.
- 
-   console.log("  ValidateRcvdPostData() b");
+  //---------------------- PREREQUISITES --------------------------------------
+  
+  let preData = rcvdPostData.prerequisite;  // There may be 0, 1 or an array of these.
  
   if (null != preData) {
    if (Array.isArray(preData)) {
@@ -2116,16 +2115,17 @@ function ValidateRcvdPostData(rcvdPostData) {
    }
   }  
   
-  console.log("  ValidateRcvdPostData() 1");
   
-  let ingredientsData = postData.ingredient;  // There may be 0, 1 or an array of these.
+  //----------------------- INGREDIENTS ---------------------------------------
+  
+  let ingredientsData = rcvdPostData.ingredient;  // There may be 0, 1 or an array of these.
   
   if (null != ingredientsData) {
    if (Array.isArray(ingredientsData)) {
     // Case where there are multiple ingredients:
     
     for (let i = 0; i < ingredientsData.length; ++i) {
-     let ingredientType = postData.ingredientType[i];
+     let ingredientType = rcvdPostData.ingredientType[i];
      
      if ("INGREDIENT" == ingredientType) {
       if (false == validationUtilsLib.ValidateField('ingredientName', ingredientsData[i], validationRules)) {
@@ -2134,31 +2134,29 @@ function ValidateRcvdPostData(rcvdPostData) {
        break;
       }
       
-      if (false == enums.IsUnitType(enums.GetEnumFromUnitDesc(postData.measure[i]))) {
+      if (false == enums.IsUnitType(enums.GetEnumFromUnitDesc(rcvdPostData.measure[i]))) {
        validationResult = "Unit of Measure invalid";
        
        break;
       }
       
-      if (false == validationUtilsLib.ValidateField('quantity', postData.quantity[i], validationRules)) {
+      if (false == validationUtilsLib.ValidateField('quantity', rcvdPostData.quantity[i], validationRules)) {
        validationResult = "Quantity invalid";
    
        break;
       }      
       
-      if (false == enums.IsPrepType(enums.GetEnumFromPrepDesc(postData.prep[i]))) {
+      if (false == enums.IsPrepType(enums.GetEnumFromPrepDesc(rcvdPostData.prep[i]))) {
        validationResult = "Preparation invalid";
        
        break;
       }      
       
-      if (false == validationUtilsLib.ValidateField('notes', postData.notes[i], validationRules)) {
+      if (false == validationUtilsLib.ValidateField('notes', rcvdPostData.notes[i], validationRules)) {
        validationResult = "Notes invalid";
    
        break;
       } 
-
-      continue;
      } else {
       if ("HEADING" == ingredientType) { 
        if (false == validationUtilsLib.ValidateField('heading', ingredientsData[i], validationRules)) {
@@ -2175,125 +2173,118 @@ function ValidateRcvdPostData(rcvdPostData) {
       }
      }
     }
-    
-    break;
-   }
-   
-   
-   // Case where there is only one ingredient:
-   
-   let ingredientType = postData.ingredientType;
-   
-   if ("INGREDIENT" == ingredientType) {
-    if (false == validationUtilsLib.ValidateField('ingredientName', ingredientsData, validationRules)) {
-     validationResult = "Ingredient Name invalid";
-
-     break;
-    }
-    
-    if (false == enums.IsUnitType(enums.GetEnumFromUnitDesc(postData.measure))) {
-     validationResult = "Unit of Measure invalid";
-     
-     break;
-    }
-    
-    if (false == validationUtilsLib.ValidateField('quantity', postData.quantity, validationRules)) {
-     validationResult = "Quantity invalid";
-
-     break;
-    }      
-    
-    if (false == enums.IsPrepType(enums.GetEnumFromPrepDesc(postData.prep))) {
-     validationResult = "Preparation invalid";
-     
-     break;
-    }      
-    
-    if (false == validationUtilsLib.ValidateField('notes', postData.notes, validationRules)) {
-     validationResult = "Notes invalid";
-
-     break;
-    } 
    } else {
-    if ("HEADING" == ingredientType) { 
-     if (false == validationUtilsLib.ValidateField('heading', ingredientsData, validationRules)) {
+    // Case where there is only one ingredient:
+   
+    let ingredientType = rcvdPostData.ingredientType;
+   
+    if ("INGREDIENT" == ingredientType) {
+     if (false == validationUtilsLib.ValidateField('ingredientName', ingredientsData, validationRules)) {
+      validationResult = "Ingredient Name invalid";
+
+      break;
+     }
+    
+     if (false == enums.IsUnitType(enums.GetEnumFromUnitDesc(rcvdPostData.measure))) {
+      validationResult = "Unit of Measure invalid";
+      
+      break;
+     }
+     
+     if (false == validationUtilsLib.ValidateField('quantity', rcvdPostData.quantity, validationRules)) {
+      validationResult = "Quantity invalid";
+
+      break;
+     }      
+     
+     if (false == enums.IsPrepType(enums.GetEnumFromPrepDesc(rcvdPostData.prep))) {
+      validationResult = "Preparation invalid";
+      
+      break;
+     }      
+     
+     if (false == validationUtilsLib.ValidateField('notes', rcvdPostData.notes, validationRules)) {
+      validationResult = "Notes invalid";
+
+      break;
+     } 
+    } else {
+     if ("HEADING" == ingredientType) { 
+      if (false == validationUtilsLib.ValidateField('heading', ingredientsData, validationRules)) {
       validationResult = "Ingredient Heading invalid";
    
       break;
      }
-    } else {
-     validationResult = "Ingredient Type invalid";
+     } else {
+      validationResult = "Ingredient Type invalid";
       
-     break;
-    } 
-   }
-  }  
+      break;
+     } 
+    }
+   }  
+  }
   
-  console.log("  ValidateRcvdPostData() 2");
   
-  let stepsData = postData.ingredient;  // There may be 0, 1 or an array of these.
+  //-------------------------- STEPS ------------------------------------------
+  
+  let stepsData = rcvdPostData.step;  // There may be 0, 1 or an array of these.
   
   if (null != stepsData) {
    if (Array.isArray(stepsData)) {
     // Case where there are multiple steps:
     
     for (let i = 0; i < stepsData.length; ++i) {
-     let stepType = postData.stepType[i];
+     let stepType = rcvdPostData.stepType[i];
      
      if ("STEP" == stepType) {
       if (false == validationUtilsLib.ValidateField('step', stepsData[i], validationRules)) {
        validationResult = "Step invalid";
    
        break;
-      } 
+      }
 
-      continue;
+      continue;      
      }
-    }
+     
+     if ("HEADING" == stepType) { 
+      if (false == validationUtilsLib.ValidateField('heading', stepsData[i], validationRules)) {
+       validationResult = "Step heading invalid";
+     
+       break;
+      }
+     } else {
+      validationResult = "Step Type invalid";
+        
+      break;
+     } 
+    } 
+   } else {
+    // Case where there is only one step:
     
-    break;
-   } else {
-    if ("HEADING" == stepType) { 
-     if (false == validationUtilsLib.ValidateField('heading', stepsData[i], validationRules)) {
+    let stepType = rcvdPostData.stepType;
+    
+    if ("STEP" == stepType) {
+     if (false == validationUtilsLib.ValidateField('step', stepsData, validationRules)) {
       validationResult = "Step invalid";
-   
-      break;
-     }
-    } else {
-     validationResult = "Step Type invalid";
-      
-     break;
-    } 
-   }
-   
-   
-   // Case where there is only one step:
-   
-   let stepType = postData.stepType;
-   
-   if ("STEP" == stepType) {
-    if (false == validationUtilsLib.ValidateField('step', stepsData, validationRules)) {
-     validationResult = "Step invalid";
 
-     break;
-    }
-   } else {
-    if ("HEADING" == stepType) { 
-     if (false == validationUtilsLib.ValidateField('heading', stepData, validationRules)) {
-      validationResult = "Step invalid";
-   
       break;
      }
     } else {
-     validationResult = "Step Type invalid";
-      
-     break;
-    } 
+     if ("HEADING" == stepType) { 
+      if (false == validationUtilsLib.ValidateField('heading', stepData, validationRules)) {
+       validationResult = "Step heading invalid";
+    
+       break;
+      }
+     } else {
+      validationResult = "Step Type invalid";
+       
+      break;
+     } 
+    }
    }
   }  
-  
-    
-  
+   
   // If we made it through that guantlet, the data is probably good enough to use.
   
   retVal = true;
