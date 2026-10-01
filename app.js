@@ -2092,7 +2092,11 @@ function ValidateRcvdPostData(rcvdPostData) {
    break;
   }   
   
+    console.log("  ValidateRcvdPostData() a");
+  
   let preData = postData.prerequisite;  // There may be 0, 1 or an array of these.
+ 
+   console.log("  ValidateRcvdPostData() b");
  
   if (null != preData) {
    if (Array.isArray(preData)) {
@@ -2111,6 +2115,8 @@ function ValidateRcvdPostData(rcvdPostData) {
     } 
    }
   }  
+  
+  console.log("  ValidateRcvdPostData() 1");
   
   let ingredientsData = postData.ingredient;  // There may be 0, 1 or an array of these.
   
@@ -2223,6 +2229,7 @@ function ValidateRcvdPostData(rcvdPostData) {
    }
   }  
   
+  console.log("  ValidateRcvdPostData() 2");
   
   let stepsData = postData.ingredient;  // There may be 0, 1 or an array of these.
   

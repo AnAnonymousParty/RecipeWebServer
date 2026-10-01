@@ -41,24 +41,18 @@ router.get('/', function(req, res, next) {
    validationRules: validationRules 
   };
   
-  res.render('editRecipe', renderParameters, RenderResultsHandler);
+  res.render('editRecipe', renderParameters, function (errors, htmlOutput) {
+   if (undefined != errors) {
+    console.log("  EditRecipe: Error = " + errors);
+   
+    res.send("Internal Server Error. Unable to edit necipe.<br><br>" + errors);                
+   } else {
+    res.send(htmlOutput);
+   }
+  })
  } catch (err) {
   console.log("  EditRecipe(): Error - " + err);
- }
- 
- /**
-  Nested function to process the rendering results by either returning an error
-  message or the rendered html results back to the client.
- */
- function RenderResultsHandler(errors, htmlOutput) {
-  if (undefined != errors) {
-   console.log("  EditRecipe: Error = " + errors);
-   
-   res.send("Internal Server Error. Unable to edit necipe.<br><br>" + errors);                
-  } else {
-   res.send(htmlOutput);
-  }
- }  
+ } 
  
  console.log("< EditRecipe()");
 });

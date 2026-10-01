@@ -137,6 +137,7 @@
    Calories:
   </span>
   <span class="field-value">
+   <% var cals = ("" == recipeData.Recipe.Nutrition[0].$.calories ? 0 : recipeData.Recipe.Nutrition[0].$.calories); %>   
    <input data-validation="<%= (validationRules.GetValidationRule('calories')).GetFieldTypeId(); %>" 
           id="calories" 
           max="<%= (validationRules.GetValidationRule('calories')).GetMaxValue(); %>" 
@@ -146,7 +147,7 @@
           name="calories"
           <%= (validationRules.GetValidationRule('calories')).IsRequired(); %>          
           type="number"
-          value="<%=recipeData.Recipe.Nutrition[0].$.calories %>"> 
+          value="<%=cals%>"> 
   </span>
  </div>  
  
@@ -155,6 +156,7 @@
    Saturated Fat:
   </span>
   <span class="field-value">
+   <% var satfat = 0; ("" == recipeData.Recipe.Nutrition[0].$.saturatedFat ? 0 : recipeData.Recipe.Nutrition[0].$.saturatedFat); %>
    <input data-validation="<%= (validationRules.GetValidationRule('saturatedFat')).GetFieldTypeId(); %>" 
           id="saturatedFat" 
           max="<%= (validationRules.GetValidationRule('saturatedFat')).GetMaxValue(); %>" 
@@ -164,7 +166,7 @@
           name="saturatedFat"
           <%= (validationRules.GetValidationRule('saturatedFat')).IsRequired(); %>          
           type="number"
-          value="<%=recipeData.Recipe.Nutrition[0].$.saturatedFat %>"> g
+          value="<%=satfat%>"> g
   </span>
  </div> 
  
@@ -173,6 +175,7 @@
    Cholesterol:
   </span>
   <span class="field-value">
+   <% var cholesterol = 0; ("" == recipeData.Recipe.Nutrition[0].$.cholesterol? 0 : recipeData.Recipe.Nutrition[0].$.cholesterol);  %>  
    <input data-validation="<%= (validationRules.GetValidationRule('cholesterol')).GetFieldTypeId(); %>" 
           id="cholesterol" 
           max="<%= (validationRules.GetValidationRule('cholesterol')).GetMaxValue(); %>" 
@@ -181,7 +184,7 @@
           minLength="<%= (validationRules.GetValidationRule('cholesterol')).GetMinLength(); %>"
           name="cholesterol"
           <%= (validationRules.GetValidationRule('cholesterol')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.cholesterol %>"> g
+          value="<%=cholesterol%>"> g
   </span>
  </div> 
  
@@ -190,6 +193,7 @@
    Fat:
   </span>
   <span class="field-value">
+   <% var fat = 0;  ("" == recipeData.Recipe.Nutrition[0].$.fat ? 0 : recipeData.Recipe.Nutrition[0].$.fat); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('fat')).GetFieldTypeId(); %>" 
           id="fat" 
           max="<%= (validationRules.GetValidationRule('fat')).GetMaxValue(); %>" 
@@ -198,7 +202,7 @@
           minLength="<%= (validationRules.GetValidationRule('fat')).GetMinLength(); %>"
           name="fat"
           <%= (validationRules.GetValidationRule('fat')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.fat %>"> g
+          value="<%=fat%>"> g
   </span>
  </div> 
  
@@ -207,6 +211,7 @@
    Carbs:
   </span>
   <span class="field-value">
+   <% var carbs = ("" == recipeData.Recipe.Nutrition[0].$.carbs ? 0 : recipeData.Recipe.Nutrition[0].$.carbs); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('carbs')).GetFieldTypeId(); %>" 
           id="carbs" 
           max="<%= (validationRules.GetValidationRule('carbs')).GetMaxValue(); %>" 
@@ -215,7 +220,7 @@
           minLength="<%= (validationRules.GetValidationRule('carbs')).GetMinLength(); %>"
           name="carbs"
           <%= (validationRules.GetValidationRule('carbs')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.carbs %>"> g
+          value="<%=carbs%>"> g
   </span>
  </div>  
  
@@ -224,6 +229,7 @@
    Protein:
   </span>
   <span class="field-value">
+   <% var protein = ("" == recipeData.Recipe.Nutrition[0].$.protein ? 0 : recipeData.Recipe.Nutrition[0].$.protein); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('protein')).GetFieldTypeId(); %>" 
           id="protein" 
           max="<%= (validationRules.GetValidationRule('protein')).GetMaxValue(); %>" 
@@ -232,7 +238,7 @@
           minLength="<%= (validationRules.GetValidationRule('protein')).GetMinLength(); %>"
           name="protein"
           <%= (validationRules.GetValidationRule('protein')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.protein %>"> g
+          value="<%=protein%>"> g
   </span>
  </div>  
  
@@ -241,6 +247,7 @@
    Sugar:
   </span>
   <span class="field-value">
+   <% var sugar = ("" == recipeData.Recipe.Nutrition[0].$.sugar ? 0 : recipeData.Recipe.Nutrition[0].$.sugar); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('sugar')).GetFieldTypeId(); %>" 
           id="sugar" 
           max="<%= (validationRules.GetValidationRule('sugar')).GetMaxValue(); %>" 
@@ -249,7 +256,7 @@
           minLength="<%= (validationRules.GetValidationRule('sugar')).GetMinLength(); %>"
           name="sugar"
           <%= (validationRules.GetValidationRule('sugar')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.sugar %>"> g
+          value="<%=sugar%>"> g
   </span>
  </div> 
  
@@ -258,6 +265,7 @@
    Sodium:
   </span>
   <span class="field-value">
+   <% var sodium = ("" == recipeData.Recipe.Nutrition[0].$.sodium ? 0 : recipeData.Recipe.Nutrition[0].$.sodium);  %>    
    <input data-validation="<%= (validationRules.GetValidationRule('sodium')).GetFieldTypeId(); %>" 
           id="sodium" 
           max="<%= (validationRules.GetValidationRule('sodium')).GetMaxValue(); %>" 
@@ -266,7 +274,7 @@
           minLength="<%= (validationRules.GetValidationRule('sodium')).GetMinLength(); %>"
           name="sodium"
           <%= (validationRules.GetValidationRule('sodium')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.sodium %>"> mg
+          value="<%=sodium%>"> mg
   </span>
  </div> 
  
@@ -275,6 +283,7 @@
    Fiber:
   </span>
   <span class="field-value">
+   <% var fiber = ("" == recipeData.Recipe.Nutrition[0].$.fiber ? 0 : recipeData.Recipe.Nutrition[0].$.fiber); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('fiber')).GetFieldTypeId(); %>" 
           id="fiber" 
           max="<%= (validationRules.GetValidationRule('fiber')).GetMaxValue(); %>" 
@@ -283,7 +292,7 @@
           minLength="<%= (validationRules.GetValidationRule('fiber')).GetMinLength(); %>"
           name="fiber"
           <%= (validationRules.GetValidationRule('fiber')).IsRequired(); %>          
-          value="<%=recipeData.Recipe.Nutrition[0].$.fiber %>"> g
+          value="<%=fiber%>"> g
   </span>
  </div>  
  
