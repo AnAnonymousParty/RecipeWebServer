@@ -3,7 +3,7 @@
 
 ; Added by the wizard based on user inout:
 #define MyAppName      "RecipeServer"
-#define MyAppVersion   "1.5"
+#define MyAppVersion   "1.6"
 #define MyAppPublisher "AnAnonymousParty"
 #define MyAppURL       "https://github.com/AnAnonymousParty"
 
@@ -58,10 +58,11 @@ Source: "..\bin\*";                   DestDir: "{app}\bin";               Flags:
 Source: "..\installer\*";             DestDir: "{app}\installer";         Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\node_modules\*";          DestDir: "{app}\node_modules";      Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\node_modules\.bin\*";     DestDir: "{app}\node_modules\.bin"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\private\*";               DestDir: "{app}\private";           Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\public\*";                DestDir: "{app}\public";            Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\routes\*";                DestDir: "{app}\routes";            Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\views\*";                 DestDir: "{app}\views";             Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\private\*";               DestDir: "{app}\private";           Flags: ignoreversion recursesubdirs createallsubdirs
+
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 
