@@ -31,7 +31,7 @@
            maxLength="<%= (validationRules.GetValidationRule('search')).GetMaxLength(); %>"
            minLength="<%= (validationRules.GetValidationRule('search')).GetMinLength(); %>"
            name="searchTerm" 
-           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.Search %>');}"
+           onkeyup="if ('Enter' == event.key) {ButtonBehaviors.HandleButtonClkd('<%= enumUtils.ButtonTypes.Search %>');}"
            <%= (validationRules.GetValidationRule('search')).IsRequired(); %>           
            size="48" 
            style="margin: 0px 0px 0px 30px;" 
