@@ -3,7 +3,7 @@
 
 ; Added by the wizard based on user inout:
 #define MyAppName      "RecipeServer"
-#define MyAppVersion   "1.5"
+#define MyAppVersion   "1.6"
 #define MyAppPublisher "AnAnonymousParty"
 #define MyAppURL       "https://github.com/AnAnonymousParty"
 
