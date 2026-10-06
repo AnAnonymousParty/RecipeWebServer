@@ -745,7 +745,7 @@ app.post("/UpdateArticle", async function (req, res) {
      
      console.log('ERROR: ' + err);
     } else {
-     let fileContent = "<embed height='500px' id='articleContainer' src='" + "http://127.0.0.1:3000/data/statics/" 
+     let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
                      + common.UnEscapeHtml(newPdfFile) + "' width='100%'></embed>";
       
      fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  
@@ -842,7 +842,7 @@ app.post("/UpdateArticle", async function (req, res) {
      } else {
       htmlRsp = "Content successfully uploaded";
       
-      let fileContent = "<embed height='500px' id='articleContainer' src='" + "http://127.0.0.1:3000/data/statics/" 
+      let fileContent = "<embed height='500px' id='articleContainer' src='" + "/data/statics/" 
                       + common.UnEscapeHtml(newArticleName) + '_' + req.files.content.name + "' width='100%'></embed>";
       
       fs.writeFileSync(path.join(__dirname, "/public/data/statics/") + common.UnEscapeHtml(newArticleName) + ".html", fileContent);  

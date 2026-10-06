@@ -1505,6 +1505,7 @@ function RequestNewRecipePage(recipeName) {
    HideElement("filtersContainer");
    HideElement("viewPageBtns");
    HideElement("SaveArticleBtn");
+   HideElement("RenameRecipeBtn"); 
  
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer");

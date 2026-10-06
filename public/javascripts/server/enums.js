@@ -187,7 +187,7 @@ const CuisineTypes = Object.freeze({
  ASIAN:         "Asian",
  CAJUN:         "Cajun",
  CARIBBEAN:     "Caribbean",
- EASTEUROPE:    "Easern European", 
+ EASTEUROPE:    "Eastern European", 
  FRENCH:        "French",
  GERMAN:        "German",
  ITALIAN:       "Italian",
