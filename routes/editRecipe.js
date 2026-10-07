@@ -10,13 +10,13 @@ const common             = require('../public/javascripts/server/common.js');
 const enums              = require('../public/javascripts/server/enums.js');
 const validationRulesLib = require('../public/javascripts/server/validationRules.js');
 
-const validationRules = new validationRulesLib.ValidationRules();
-
 router.get('/', function(req, res, next) {
  let recipeName = req.query.recipeToEdit;
  
  console.log("> EditRecipe(" + recipeName + ")");
-  
+ 
+ let validationRules = new validationRulesLib.ValidationRules();
+ 
  let recipeDataXml = "";
  
  try {
@@ -38,14 +38,14 @@ router.get('/', function(req, res, next) {
    commonUtils:     common,    
    enums:           enums,
    recipeData:      recipeDataJson,
-   validationRules: validationRules 
+   validationRules: validationRules
   };
   
   res.render('editRecipe', renderParameters, function (errors, htmlOutput) {
    if (undefined != errors) {
     console.log("  EditRecipe: Error = " + errors);
    
-    res.send("Internal Server Error. Unable to edit necipe.<br><br>" + errors);                
+    res.send("Internal Server Error. Unable to edit recipe.<br><br>" + errors);                
    } else {
     res.send(htmlOutput);
    }

@@ -82,7 +82,7 @@ function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter
  for (var i = 0; i < totalFilesCnt; ++i) { 
   let fileNameExt = filesList[i];
   
-  console.log("  GenerateFilesList() " + fileNameExt); 
+  //console.log("  GenerateFilesList() " + fileNameExt); 
   
   var fobj;
 
@@ -205,7 +205,7 @@ function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter
  htmlRsp += '<input id="filesListCnt"  type="hidden" value="' + listCnt       + '">\n';
  htmlRsp += '<input id="totalFilesCnt" type="hidden" value="' + totalFilesCnt + '">';
  
- console.log("< GetRecipesToExportList() found " + listCnt + " items."); 
+ console.log("< GenerateFilesList() found " + listCnt + " items."); 
   
  return htmlRsp;
 }

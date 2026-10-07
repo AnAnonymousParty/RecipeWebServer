@@ -505,10 +505,10 @@ app.get('/RenameRecipe', (req, res) => {
 
  RenameExistingRecipe(decodeURIComponent(req.query.oldRecipeName), decodeURIComponent(req.query.newRecipeName));
     
- console.log("< RenameRecipe()");  
+ let recipeDataXml = "";
 
  try {
-  let recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', decodeURIComponent(req.query.newRecipeName + '.xml'))); 
+  recipeDataXml = fs.readFileSync(path.join(__dirname, '/public/data/recipes/', decodeURIComponent(req.query.newRecipeName + '.xml'))); 
  } catch (err) {
   console.log(err);
  }
@@ -518,12 +518,15 @@ app.get('/RenameRecipe', (req, res) => {
  //console.log("JSONs: ", JSON.stringify(recipeDataJson, null, 2));
  
  try {
-  res.render('editRecipe', { commonUtils: common,    
-                                   enums: enums,
-                              recipeData: recipeDataJson });
+  res.render('editRecipe', { commonUtils:     common,    
+                                   enums:     enums,
+                              recipeData:     recipeDataJson,
+                             validationRules: validationRules });
  } catch (err) {
   console.log(err);
  }
+ 
+ console.log("< RenameRecipe()");  
 });
 
 app.get('/SavePDF', (req, res) => {
@@ -1820,7 +1823,7 @@ function UpdateAllLinks(fs, path, recipesPath, oldRecipeName, newRecipeName) {
 }
 
 function UpdateLinksInFile(fs, path, filePath, oldRecipeName, newRecipeName) {
-console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName + ", " + newRecipeName + ")");
+// console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName + ", " + newRecipeName + ")");
  
  let encodedORN = encodeURI(oldRecipeName);
  let encodedNRN = encodeURI(newRecipeName);
@@ -1873,7 +1876,7 @@ console.log("> UpdateLinksInFile(fs, path, " + filePath + ", " + oldRecipeName +
   fs.writeFileSync(filePath, xml.toString());
  }
  
- console.log("< UpdateLinksInFile()");
+ // console.log("< UpdateLinksInFile()");
 }
 
 async function ValidateFile(filePathName) {
