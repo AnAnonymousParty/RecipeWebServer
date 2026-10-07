@@ -12,12 +12,6 @@ router.get('/', function(req, res, next) {
  let articleName = req.query.articleToEdit;
  
  console.log("> editArticle(" + articleName + ")");
- 
- let renderParameters = { 
-  commonUtils:     commonLib,
-  enums:           enumsLib,
-  validationRules: validationRules 
- };
   
  console.log("  editArticle(): Rendering...");
   

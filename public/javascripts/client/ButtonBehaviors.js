@@ -394,7 +394,11 @@ class RenameRecipeButtonBehavior extends ButtonBehavior {
     if ("NO" == xmlhttp.response) {
      let oldRecipeName = encodeURIComponent(document.getElementById("recipeTitle").innerText);
      
-     RequestRenameRecipe(oldRecipeName, encodeURIComponent(newRecipeName));
+     if ("article" == document.getElementById("documentType").value) {
+      RequestRenameArticle(oldRecipeName, encodeURIComponent(newRecipeName));
+     } else {
+      RequestRenameRecipe(oldRecipeName, encodeURIComponent(newRecipeName));
+     }
     } else {
      alert("Recipe '" + newRecipeName + "' already exists.");
     } 

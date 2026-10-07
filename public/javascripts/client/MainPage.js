@@ -1475,6 +1475,7 @@ function RequestNewArticlePage(recipeName) {
    HideElement("filtersContainer");
    HideElement("viewPageBtns");
    HideElement("SaveRecipeBtn");
+   HideElement("RenameRecipeBtn");
    
    UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer");
@@ -1564,6 +1565,31 @@ function RequestPrintableView(documentName, type) {
  }
   
  window.open(loc); 
+}
+
+function RequestRenameArticle(oldArticleName, newArticleName) {
+ var xmlhttp = new XMLHttpRequest();
+    
+ xmlhttp.onreadystatechange = function() {
+  if (ReadyStateTypes.DONE != xmlhttp.readyState) {
+   return;
+  }
+ 
+  if (HttpStatusTypes.OK == xmlhttp.status || HttpStatusTypes.NOTMODIFIED == xmlhttp.status) {
+   var data = xmlhttp.responseText;
+   
+   document.getElementById("recipeTitle").innerHTML = decodeURI(newArticleName);
+   
+   document.getElementById("recipesListContainer").innerHTML = data;
+  }
+  else {
+   // TODO: Handle failure, if needed.
+  }
+ }
+    
+ xmlhttp.open("GET", "/RenameArticle?oldArticleName=" + oldArticleName + "&newArticleName=" + newArticleName, true);
+ 
+ xmlhttp.send();
 }
 
 function RequestRenameRecipe(oldRecipeName, newRecipeName) {

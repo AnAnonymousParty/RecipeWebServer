@@ -490,6 +490,69 @@ app.get('/GetShoppingList', (req, res) => {
  console.log("< GetShoppingList()"); 
 });
 
+app.get('/RenameArticle', (req, res) => {
+ console.log("> RenameArticle(" + decodeURIComponent(req.query.oldArticleName) + ", " + decodeURIComponent(req.query.newArticleName) + ")");
+
+ let validationRules = new validationRulesLib.ValidationRules();
+ 
+ if (false == validationUtilsLib.ValidateField('recipeName', req.query.oldArticleName, validationRules)
+  || false == validationUtilsLib.ValidateField('recipeName', req.query.newArticleName, validationRules)) {
+   
+  console.log("< /RenameArticle: Article name invalid."); 
+  
+  res.status(enums.HttpStatusTypes.OK).send("Unable to rename article.");
+ } 
+
+ RenameExistingArticle(decodeURIComponent(req.query.oldArticleName), decodeURIComponent(req.query.newArticleName));
+    
+ console.log("  RenameArticle(): Rendering...");
+ 
+ let articleHtml = "";
+  
+ try {
+  articleHtml = "<input id='articleName'  type='hidden' value='" + req.query.newArticleName + "'>"
+              + "<input id='documentType' type='hidden' value='article'>"
+              + "<div class=\"centered\">" 
+              + " <span style=\"display: inline-block; width: 400px;\">"
+              + "  <div style=\"display: flex; align-items: center;\">"
+              + "    <span style=\"display: inline-block; vertical-align: middle;\">"
+              + "     <input id=\"articleFilePathName\"" 
+              + "            onchange=\"HandleFileSelectionChanged('articleFilePathName', 'uploadNewContentBtn');\"" 
+              + "            required\"required\""
+              + "            style=\"color: black; vertical-align: middle;\""
+              + "            type=\"file\""
+              + "            value=\"\">"   
+              + "     <img height=\"48px\"" 
+              + "          id=\"uploadNewContentBtn\""
+              + "          onclick=\"SendNewContentFile();\""
+              + "          src=\"/images/Buttons/UploadBtn_48X48.png\""
+              + "          style=\"display: hidden; visibility: collapse; vertical-align: middle;\""
+              + "          title=\"Upload New Content File\""
+              + "          width=\"48px\">" 
+              + "    </span>" 
+              + "   </div>"
+              + "  <span>"
+              + " </div>"    
+              + " <br>"    
+              + " <img height=\"100px\"" 
+              + "      id=\"uploadNewContentSpinner\""
+              + "      src=\"/images/Spinner.gif\""
+              + "      style=\"display: hidden; margin: auto; visibility: collapse;\""
+              + "      width=\"100px\">"               
+              + fs.readFileSync(__dirname + "/public/data/statics/" + req.query.newArticleName + ".html", {encoding: 'utf8', flag: 'r'}); 
+ } catch (err) {
+  console.log("< RenameArticle(): Error=" + err); 
+   
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(err);
+
+  return; 
+ }    
+   
+ res.status(enums.HttpStatusTypes.OK).send(articleHtml);
+ 
+ console.log("< RenameArticle()");  
+});
+
 app.get('/RenameRecipe', (req, res) => {
  console.log("> RenameRecipe(" + decodeURIComponent(req.query.oldRecipeName) + ", " + decodeURIComponent(req.query.newRecipeName) + ")");
 
@@ -1601,6 +1664,66 @@ function RemoveStaleImages() {
    }
   });
  }); 
+}
+
+function RenameExistingArticle(oldArticleName, newArticleName) {
+ // Rename an existing article xml data file, and the PDF file it references.
+ 
+ console.log("> RenameExistingArticle(" + oldArticleName + ", " + newArticleName + ")");
+
+ let newArticlePathNameExt = path.join(__dirname, 'public/data/statics/') + newArticleName + ".html";
+ let oldArticlePathNameExt = path.join(__dirname, 'public/data/statics/') + oldArticleName + ".html";    
+ 
+ console.log("  RenameExistingArticle(): " + oldArticlePathNameExt + " " + newArticlePathNameExt);
+ 
+ // Rename the associated PDF file:
+ 
+ let pdfPath         = path.join(__dirname, "/public/data/statics/");
+ let pdfFilesList    = fs.readdirSync(pdfPath);
+ let pdfFilesListCnt = pdfFilesList.length;
+ 
+ for (let pdfFilesNdx = 0; pdfFilesNdx < pdfFilesListCnt; ++pdfFilesNdx) { 
+  let oldPdfFile = pdfFilesList[pdfFilesNdx];
+  
+  if (oldPdfFile.startsWith(oldArticleName) && oldPdfFile.endsWith(".pdf")) {
+   console.log("  RenameExistingArticle(): " + oldPdfFile);
+   
+   let newPdfFilePathNameExt = path.join(__dirname, 'public/data/statics/') + newArticleName + oldPdfFile.substring(newArticleName.length);   
+   let oldPdfFilePathNameExt = path.join(__dirname, 'public/data/statics/') + oldPdfFile;
+   
+   fs.renameSync(oldPdfFilePathNameExt, newPdfFilePathNameExt, function (err) {
+    console.log("< RenameExistingArticle(): Unable to rename pdf file - " + err);
+   });   
+   
+   let newArticleHtml = "<embed height='500px' id='articleContainer' src='/data/statics/"
+                      + newArticleName + oldPdfFile.substring(newArticleName.length)
+                      + "' width='100%'></embed>";
+
+   console.log("  RenameExistingArticle(): Writing " + newArticleHtml + " to " + newArticlePathNameExt);      
+
+   fs.writeFileSync(newArticlePathNameExt, newArticleHtml, err => {
+    if (err) {
+      console.log(err);
+    } else {
+     
+    }
+   });
+   
+   console.log("  RenameExistingArticle(): Deleting " + oldArticlePathNameExt);  
+   
+   fs.rmSync(oldArticlePathNameExt, {
+    force: true,
+   });
+ 
+   break;    
+  }
+ }
+ 
+ // Update any hyperlinks in all of the other recipe files:
+ 
+ UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), oldArticleName, newArticleName)
+ 
+ console.log("< RenameExistingArticle()");
 }
 
 function RenameExistingRecipe(existingRecipeName, newRecipeName) {
