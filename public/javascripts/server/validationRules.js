@@ -82,7 +82,7 @@ class ValidationRules {
   this.AddRule(new ValidationRule("mainImageName",  "vImageName", 128,  "",  1, "", false)); 
   this.AddRule(new ValidationRule("notes",          "vText",      4096, "",  1, "", true));    
   this.AddRule(new ValidationRule("prepTime",       "vNumeric",   3,    999, 1, 0,  false));
-  this.AddRule(new ValidationRule("prerequisite",   "vAlnum",     4096, "",  1, "", true));    
+  this.AddRule(new ValidationRule("prerequisite",   "vText",      4096, "",  1, "", true));    
   this.AddRule(new ValidationRule("protein",        "vNumeric",   3,    999, 1, 0,  false));  
   this.AddRule(new ValidationRule("quantity",       "vNumeric",   3,    999, 1, 0,  true));   
   this.AddRule(new ValidationRule("recipeName",     "vFileName",  128,  "",  1, "", true));
