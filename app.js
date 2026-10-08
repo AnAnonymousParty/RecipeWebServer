@@ -413,7 +413,7 @@ app.get('/GetRecipesToExportList', (req, res) => {
 
  // Return the list of recipes: 
  
- let rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/recipes'));
+ let rv = common.GenerateExportList(fs, path, path.join(__dirname, '/public/data/'));
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -503,7 +503,7 @@ app.get('/RenameArticle', (req, res) => {
   res.status(enums.HttpStatusTypes.OK).send("Unable to rename article.");
  } 
 
- RenameExistingArticle(decodeURIComponent(req.query.oldArticleName), decodeURIComponent(req.query.newArticleName));
+ RenameExistingArticle(decodeURIComponent(req.query.oldArticleName), decodeURIComponent(req.query.newArticleName), true);
     
  console.log("  RenameArticle(): Rendering...");
  
@@ -566,7 +566,7 @@ app.get('/RenameRecipe', (req, res) => {
   res.status(enums.HttpStatusTypes.OK).send("Unable to rename recipe.");
  } 
 
- RenameExistingRecipe(decodeURIComponent(req.query.oldRecipeName), decodeURIComponent(req.query.newRecipeName));
+ RenameExistingRecipe(decodeURIComponent(req.query.oldRecipeName), decodeURIComponent(req.query.newRecipeName), true);
     
  let recipeDataXml = "";
 
@@ -710,6 +710,7 @@ app.post("/ExportSelectedRecipes", function (req, res) {
   return;
  }
  
+ const articlesPath             = path.join(__dirname,  "/public/data/statics");
  const exportPath               = path.join(__dirname,  "/public/exports");
  const imagesPath               = path.join(__dirname,  "/public/images/Recipes");
  const recipesExportPathNameExt = path.join(exportPath, "recipes.zip");
@@ -719,30 +720,53 @@ app.post("/ExportSelectedRecipes", function (req, res) {
   fs.mkdirSync(exportPath);
  }
  
- const imagesList = fs.readdirSync(path.join(__dirname,  "/public/images/Recipes"));
- 
  let zip = new zipUtils();
   
  for (let key in formData) { 
   console.log("> ExportSelectedRecipes(): Exporting " + key);
   
-  try {
-   zip.addLocalFile(path.join(recipesPath, key + ".xml"), "recipes");
-  } catch (err) {
-   console.log("  ExportSelectedRecipes() " + err); 
-  }  
-  
-  let imageNamePrefix = key + "_";
-  
-  for (let imageFile of imagesList) {
-	  if (false == imageFile.startsWith(imageNamePrefix)) {
-		  continue;
-	  }
+  if (key.startsWith("A")) {
+   const pdfsList = fs.readdirSync(path.join(__dirname, "/public/data/statics")); 
+   
    try {
-    zip.addLocalFile(path.join(imagesPath, imageFile), "images");
+    zip.addLocalFile(path.join(articlesPath, key.substring(1) + ".html"), "articles");
    } catch (err) {
     console.log("  ExportSelectedRecipes() " + err); 
    }  
+   
+   let pdfNamePrefix = key.substring(1) + "_";
+   
+   for (let pdfFile of pdfsList) {
+    if (false == pdfFile.startsWith(pdfNamePrefix) && pdfFile.endsWith(".pdf")) {
+     continue;
+    }
+    try {
+     zip.addLocalFile(path.join(articlesPath, pdfFile), "articles");
+    } catch (err) {
+     console.log("  ExportSelectedRecipes() " + err); 
+    }  
+   }
+  } else {
+   const imagesList = fs.readdirSync(path.join(__dirname,  "/public/images/Recipes"));   
+   
+   try {
+    zip.addLocalFile(path.join(recipesPath, key.substring(1) + ".xml"), "recipes");
+   } catch (err) {
+    console.log("  ExportSelectedRecipes() " + err); 
+   }  
+   
+   let imageNamePrefix = key.substring(1) + "_";
+   
+   for (let imageFile of imagesList) {
+    if (false == imageFile.startsWith(imageNamePrefix)) {
+     continue;
+    }
+    try {
+     zip.addLocalFile(path.join(imagesPath, imageFile), "images");
+    } catch (err) {
+     console.log("  ExportSelectedRecipes() " + err); 
+    }  
+   }
   }
  }
  
@@ -1216,33 +1240,59 @@ function CheckForDuplicateRecipes(importPath) {
  
  let msg = ""
  
- let filesList     = fs.readdirSync(path.join(importPath, "/Recipes/"));
+ let filesList     = fs.readdirSync(path.join(importPath, "/recipes/"));
  let totalFilesCnt = filesList.length;
   
  for (let i = 0; i < totalFilesCnt; ++i) { 
-  let fileNameExt           = filesList[i];
-  let recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + fileNameExt;
+  let oldFileNameExt        = filesList[i];
+  let recipeFilePathNameExt = path.join(__dirname, "/public/data/recipes/") + oldFileNameExt;
   
   if (true == fs.existsSync(recipeFilePathNameExt)) {
-   msg += path.basename(fileNameExt, ".xml") + ".\n";
+   msg += path.basename(oldFileNameExt, ".xml") + ".\n";
    
    // Append "-2" to whatever the recipe file is currently named:
    
-   let oldRecipeNamePath    = path.join(importPath, "Recipes");
-   let oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldNameExt);
-   let oldRecipeName        = path.basename(oldNameExt, ".xml");
+   let oldRecipeNamePath    = path.join(importPath, "recipes");
+   let oldRecipeNamePathExt = path.join(oldRecipeNamePath, oldFileNameExt);
+   let oldRecipeName        = path.basename(oldFileNameExt, ".xml");
    let newRecipeName        = oldRecipeName + "-2";
    let newRecipeNamePathExt = path.join(oldRecipeNamePath, newRecipeName + ".xml");
    
    
    // Try to rename the existing recipe:
  
-   RenameExistingRecipeFile(oldRecipeName, newRecipeName);
+   RenameExistingRecipe(oldRecipeName, newRecipeName, false);
   }
  }  
  
+ filesList     = fs.readdirSync(path.join(importPath, "/articles/"));
+ totalFilesCnt = filesList.length;
+  
+ for (let i = 0; i < totalFilesCnt; ++i) { 
+  let oldFileNameExt         = filesList[i];
+  let articleFilePathNameExt = path.join(__dirname, "/public/data/statics/") + oldFileNameExt;
+  
+  if (true == fs.existsSync(articleFilePathNameExt)) {
+   msg += path.basename(oldFileNameExt, ".html") + ".\n";
+   
+   // Append "-2" to whatever the recipe file is currently named:
+   
+   let oldArticleNamePath    = path.join(importPath, "articles");
+   let oldArticleNamePathExt = path.join(oldArticleNamePath, oldFileNameExt);
+   let oldArticleName        = path.basename(oldFileNameExt, ".html");
+   let newArticleName        = oldArticleName + "-2";
+   let newArticleNamePathExt = path.join(oldArticleNamePath, newArticleName + ".html");
+   
+   
+   // Try to rename the existing recipe:
+ 
+   RenameExistingArticle(oldArticleName, newArticleName, false);
+  }
+ } 
+ 
+ 
  if ("" != msg) {
-  msg = "The following recipes already exist:\n\n" + msg + "\n"
+  msg = "The following articles/recipes already exist:\n\n" + msg + "\n"
       + "They have been renamed by adding '-2' to their names.\n\n"
       + "If they are updates to existing recipes you may delete "
       + "the old recipes.";
@@ -1345,7 +1395,7 @@ async function ExportRecipes(recipesExportPathNameExt, req, res) {
    res.status(500).send({ message: "Could not download the file. " + err});
   } else {
    try {
-    fs.rmdirSync(path.join(__dirname,  "/public/exports"), { recursive: true, force: true });
+    fs.rmdirSync(path.join(__dirname, "/public/exports"), { recursive: true, force: true });
    } catch (err) {
     console.log("  ExportAllRecipes(): " + err);
    }    
@@ -1666,7 +1716,7 @@ function RemoveStaleImages() {
  }); 
 }
 
-function RenameExistingArticle(oldArticleName, newArticleName) {
+function RenameExistingArticle(oldArticleName, newArticleName, fixLinks) {
  // Rename an existing article xml data file, and the PDF file it references.
  
  console.log("> RenameExistingArticle(" + oldArticleName + ", " + newArticleName + ")");
@@ -1688,7 +1738,7 @@ function RenameExistingArticle(oldArticleName, newArticleName) {
   if (oldPdfFile.startsWith(oldArticleName) && oldPdfFile.endsWith(".pdf")) {
    console.log("  RenameExistingArticle(): " + oldPdfFile);
    
-   let newPdfFilePathNameExt = path.join(__dirname, 'public/data/statics/') + newArticleName + oldPdfFile.substring(newArticleName.length);   
+   let newPdfFilePathNameExt = path.join(__dirname, 'public/data/statics/') + newArticleName + oldPdfFile.substring(oldArticleName.length);   
    let oldPdfFilePathNameExt = path.join(__dirname, 'public/data/statics/') + oldPdfFile;
    
    fs.renameSync(oldPdfFilePathNameExt, newPdfFilePathNameExt, function (err) {
@@ -1721,12 +1771,14 @@ function RenameExistingArticle(oldArticleName, newArticleName) {
  
  // Update any hyperlinks in all of the other recipe files:
  
- UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), oldArticleName, newArticleName)
+ if (true == fixLinks) {
+  UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), oldArticleName, newArticleName);
+ }
  
  console.log("< RenameExistingArticle()");
 }
 
-function RenameExistingRecipe(existingRecipeName, newRecipeName) {
+function RenameExistingRecipe(existingRecipeName, newRecipeName, fixLinks) {
  // Rename an existing recipe xml data file. 
  //
  // It's not as simple as just that. Once the file has been renamed, any images 
@@ -1761,7 +1813,9 @@ function RenameExistingRecipe(existingRecipeName, newRecipeName) {
  
  // Update any hyperlinks in all of the other recipe files:
  
- UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), existingRecipeName, newRecipeName)
+ if (true == fixLinks) {
+  UpdateAllLinks(fs, path, path.join(__dirname, 'public/data/recipes/'), existingRecipeName, newRecipeName);
+ }
  
  console.log("< RenameExistingRecipe()");
 }
@@ -1872,7 +1926,7 @@ function UnpackImport(pathFile) {
   return(pathFile + " does not appear to be a (.zip) file. No recipes were imported.");
  }
  
- if (false == fs.existsSync(path.join(destDir + "/Recipes"))) {
+ if (false == fs.existsSync(path.join(destDir + "/recipes"))) {
   console.log("  UnpackImport(): import file malformed.");
   
   return(pathFile + " does not appear to be a valid import (.zip) file. No recipes were imported.");
@@ -1880,7 +1934,7 @@ function UnpackImport(pathFile) {
  
  let msg = CheckForDuplicateRecipes(destDir);
  
-  fs.cpSync(path.join(destDir, "/Articles"), 
+  fs.cpSync(path.join(destDir, "/articles"), 
             path.join(__dirname, "/public/data/statics"), 
             {recursive: true}, 
             (err) => {
@@ -1889,7 +1943,7 @@ function UnpackImport(pathFile) {
                       }
  });
 
-  fs.cpSync(path.join(destDir, "/Images"),  
+  fs.cpSync(path.join(destDir, "/images"),  
             path.join(__dirname, "/public/images/Recipes"), 
             {recursive: true}, 
             (err) => {
@@ -1898,7 +1952,7 @@ function UnpackImport(pathFile) {
                      }
  });
  
-  fs.cpSync(path.join(destDir, "/Recipes"), 
+  fs.cpSync(path.join(destDir, "/recipes"), 
             path.join(__dirname, "/public/data/recipes"), 
             {recursive: true}, 
             (err) => {

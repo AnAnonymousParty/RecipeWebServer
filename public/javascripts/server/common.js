@@ -23,18 +23,56 @@ export
 function GenerateExportList(fs, path, directoryPath) {
  console.log("> GetRecipesToExportList(,, " + directoryPath + ")"); 
  
- var listCnt       = 0;
- var htmlRsp       = "";
- var filesList     = fs.readdirSync(directoryPath);
- var totalFilesCnt = filesList.length;
+ let articlesPath = directoryPath + "statics";
+ 
+ let listCnt       = 0;
+ let htmlRsp       = "";
+ let filesList     = fs.readdirSync(articlesPath);
+ let totalFilesCnt = filesList.length;
   
  for (var i = 0; i < totalFilesCnt; ++i) { 
-  var fileNameExt = filesList[i];
+  let fileNameExt = filesList[i];
   
-  var fobj;
+  let fobj;
 
   try {
-   fobj = fs.statSync(path.join(directoryPath, fileNameExt));
+   fobj = fs.statSync(path.join(articlesPath, fileNameExt));
+  } catch (err) {
+   console.log(err);
+  }
+
+  if (false == fobj.isFile()) { 
+   continue;
+  }
+   
+  if ("html" != GetFileExtension(fileNameExt)) {
+   continue;
+  }
+  
+  let fileName = path.basename(fileNameExt, ".html");
+    
+  ++listCnt; 
+  
+  htmlRsp += ('<div >'
+          +  ' <span>'
+          +  '  <input type="checkbox" id="' + EscapeHtml(fileName) + '" name="A' + EscapeHtml(fileName) + '" value="' + EscapeHtml(fileName) + '">' + EscapeHtml(fileName)        
+          +  ' </span><'
+          +  '/div>\n');
+ }
+ 
+ let recipesPath  = directoryPath + "recipes";
+ 
+ listCnt       = 0;
+ filesList     = fs.readdirSync(recipesPath);
+ totalFilesCnt = filesList.length;
+  
+ for (var i = 0; i < totalFilesCnt; ++i) { 
+  let fileNameExt = filesList[i];
+  
+  let fobj;
+
+  try {
+   fobj = fs.statSync(path.join(recipesPath, fileNameExt));
   } catch (err) {
    console.log(err);
   }
@@ -47,16 +85,16 @@ function GenerateExportList(fs, path, directoryPath) {
    continue;
   }
   
-  var fileName = path.basename(fileNameExt, ".xml");
+  let fileName = path.basename(fileNameExt, ".xml");
     
   ++listCnt; 
   
   htmlRsp += ('<div >'
           +  ' <span>'
-          +  '  <input type="checkbox" id="' + EscapeHtml(fileName) + '" name="' + EscapeHtml(fileName) + '" value="' + EscapeHtml(fileName) + '">' + EscapeHtml(fileName)        
+          +  '  <input type="checkbox" id="' + EscapeHtml(fileName) + '" name="R' + EscapeHtml(fileName) + '" value="' + EscapeHtml(fileName) + '">' + EscapeHtml(fileName)        
           +  ' </span><'
           +  '/div>\n');
- }
+ } 
  
  console.log("< GetRecipesToExportList() size=" + htmlRsp.length);  
  
