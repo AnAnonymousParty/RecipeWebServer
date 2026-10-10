@@ -2182,7 +2182,7 @@ function ValidateRcvdPostData(rcvdPostData) {
    break;
   } 
   
-  if (false == enums.IsUnitType(rcvdPostData.servingsUnit)) {
+  if (false == enums.IsServingSizeType(rcvdPostData.servingsUnit)) {
    validationResult = "Serving Size Units invalid";
    
    break;
