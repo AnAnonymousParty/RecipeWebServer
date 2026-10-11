@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Toll House Pie_TollHousePie.jpg" name="Toll House Pie" category="DESSERT" cuisine="ALL" nativeUnits="US">
+    <Yield amount="1" units="EACH"/>
+    <Times prep="5" cook="30"/>
+  </Title>
+  <Nutrition calories="600" fat="0" saturatedFat="0" cholesterol="0" carbs="65" protein="6" sugar="40" sodium="300" fiber="3" servings="1" servingsUnit="SLICE"/>
+  <Description>It's a cookie! It's a pie! It's both!</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to %%325%%.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>AP flour</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Brown sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Vanilla</Name>
+      <Quantity units="TSP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Salted @@Butter@@</Name>
+      <Quantity units="CUP">.75</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Chocolate Chips</Name>
+      <Quantity units="CUP">1.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Ghardeilli 60% cacao.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Pie Crust@@</Name>
+      <Quantity units="BATCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Or store bought pie shell.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Beat eggs until foamy.</Step>
+    <Step type="STEP" image="">Incorporate flour, sugars and vanilla.</Step>
+    <Step type="STEP" image="">Add butter and mix until creamy, scraping bowl as required.</Step>
+    <Step type="STEP" image="">Add chocolate chips an mix until just combined.</Step>
+    <Step type="STEP" image="">Pour batter into pie shell.</Step>
+    <Step type="STEP" image="">Bake 50 minutes, until toothpick inserted midway between the center and edge of the pie comes out clean,</Step>
+    <Step type="STEP" image="">Allow to cool for about and hour, then slice and serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Top with chocolate sauce or @@Whipped Cream@@ when serving.</Variation>
+  </Variations>
+</Recipe>

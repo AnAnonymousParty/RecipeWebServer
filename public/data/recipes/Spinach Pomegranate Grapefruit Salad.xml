@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Spinach Pomegranate Grapefruit Salad_SpinachPomegraniteGrapefuitSalad.png" name="Spinach Pomegranate Grapefruit Salad" category="SALAD" cuisine="ALL" nativeUnits="US">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="10" cook="5"/>
+  </Title>
+  <Nutrition calories="250" fat="18" saturatedFat="4" cholesterol="15" carbs="16" protein="5" sugar="8" sodium="400" fiber="3" servings="1" servingsUnit="CUP"/>
+  <Description>Spinach salad with pomegranate and grapefruit with a warm balsamic vinaigrette.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Baby Spinach</Name>
+      <Quantity units="CUP">6</Quantity>
+      <Prep>CLEANED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pomegranate Seeds</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Pink Grapefruit</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>PEELEDSEEDED</Prep>
+      <Notes>Sections separated.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Red Onion</Name>
+      <Quantity units="EACH">.25</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Balsamic Vinaigrette@@</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Toss spinach, onion, and grapefruit with the vinaigrette. Top with pomegranate seeds.</Step>
+  </Method>
+  <Variations>
+    <Variation>Serve with @@Pork Milanese.</Variation>
+    <Variation>Add avocado slices, toasted walnuts, feta cheese, cherry tomatoes.</Variation>
+  </Variations>
+</Recipe>

@@ -1896,6 +1896,13 @@ function SaveRecipe() {
      data = xmlhttpReq.responseText;
      
      alert("Recipe could not be saved.\n\n" + data);
+     
+     UnHideElement("editPageBtns");
+    
+     HideElement("recipeTitleContainer");
+     HideElement("viewPageBtns");
+     HideElement("filtersContainer", "inline-flex");
+     HideElement("indexPageBtns");      
     }
    };   
    

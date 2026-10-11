@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Lavender Ice Cream_LavenderCommercial.png" name="Lavender Ice Cream" category="DESSERT" cuisine="ALL" nativeUnits="US">
+    <Yield amount="8" units="SERVING"/>
+    <Times prep="10" cook="20"/>
+  </Title>
+  <Nutrition calories="280" fat="16" saturatedFat="11" cholesterol="53" carbs="25" protein="4" sugar="21" sodium="60" fiber="1" servings=".5" servingsUnit="CUP"/>
+  <Description>What do you do when you have a bunch of lavender? Make Ice Cream.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare ice cream maker.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="HEADING">
+      <Heading>Chocolate Tahini Bits</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dark Chocolate Chips</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>Ghirardelli 60% cacao.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Tahini</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher Salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="HEADING">
+      <Heading>Ice Cream</Heading>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Heavy Cream</Name>
+      <Quantity units="CUP">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>WHy do you think it's called ice **cream**?</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Whole Milk</Name>
+      <Quantity units="CUP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Sugar</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Honey</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh Lavender Flowers</Name>
+      <Quantity units="CUP">.33</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="HEADING">Chocolate Tahini Bits</Step>
+    <Step type="STEP" image="">Melt chocolate, tahini and salt in a sauce pan.</Step>
+    <Step type="STEP" image="">Spread the mixture in a thin layer over a parchment paper lined sheet pan and place in the freezer to chill.</Step>
+    <Step type="HEADING">Ice Cream</Step>
+    <Step type="STEP" image="">Combine cream, milk, sugar, and lavender (reserving a few lavender flowers) in a sauce pan.</Step>
+    <Step type="STEP" image="">Bring to a boil, reduce to a simmer for 5 minutes.</Step>
+    <Step type="STEP" image="">Strain mixture and set aside to cool to room temperature.</Step>
+    <Step type="STEP" image="">Add the honey and remaining lavender flowers and blend briefly.</Step>
+    <Step type="STEP" image="">Add the mixture to the ice cream make and process according to the manufacturer's instructions, until almost set.</Step>
+    <Step type="STEP" image="">Remove chocolate tahini  from the freezer,  and chop coarsely. Add to ice cream mixture and finish processing.</Step>
+    <Step type="STEP" image="">Serve or freeze until ready to serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add a few blueberries while processing the ice cream for color.</Variation>
+  </Variations>
+</Recipe>

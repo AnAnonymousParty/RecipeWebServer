@@ -44,13 +44,21 @@
          width="20px">
     <span style="margin: 0px 20px 0px 0px;">Showing <span id="displayCnt">0</span> of <span id="totalCnt"><%- recipesCnt %></span></span>    
    </span>
-   <span id="recipeTitleContainer" style="display: inline; visibility: visible; text-align: center;">
+   <span id="recipeTitleContainer" style="align-items: center; display: flex; vertical-align: middle;">
     <h2 id="recipeTitle"><%=recipeData.Recipe.Title[0].$.name %></h2>
+    <img height="24px" 
+         id="RenameRecipeBtn" 
+         onclick="ButtonBehaviors.HandleButtonClkd('<%= enumUtils.ButtonTypes.RenameRecipe %>');" 
+         src="/images/Buttons/EditBtn_48X48_White.png" 
+         style="margin: 0px 0px 0px 5px;" 
+         title="<%= enumUtils.GetDescFromButtonType(enumUtils.ButtonTypes.RenameRecipe) %>" 
+         width="24px">     
    </span>   
   </div>
   <div class="content-section" id="recipesListContainer">
    <form id="viewRecipeForm"> 
     <input id="recipeName" type="hidden" value="<%=recipeData.Recipe.Title[0].$.name %>">
+    <input id="documentType"  type="hidden" value="recipe">    
     <div class="centered">
      <table class="plain-table">
       <tr>
@@ -334,6 +342,13 @@
   <div class="footer-section">
    <div id="editPageBtns" style="display: none; visibility: collapse;">
     <img height="48px" 
+         id="SaveArticleBtn" 
+         onclick="SaveArticle();"  
+         src="/images/Buttons/SaveBtn_48X48.png"   
+         style="margin: 0px 10px 0px 0px;"
+         title="Save Article"          
+         width="48px">  
+    <img height="48px" 
          id="SaveRecipesListBtn" 
          onclick="SaveRecipe();"  
          src="/images/Buttons/SaveBtn_48X48.png"   
@@ -357,6 +372,13 @@
          title="Add New Recipe"     
          width="48px">
     <img height="48px" 
+         id="AddNewArticleBtn"     
+         onclick="PopupBehaviors.RevealPopup('<%= enumUtils.PopupTypes.AddArticle %>');" 
+         src="/images/Buttons/UploadDocBtn_60X48.png"    
+         style="margin: 0px 10px 0px 0px;" 
+         title="<%= enumUtils.GetDescFromPopupType(enumUtils.PopupTypes.AddArticle); %>"     
+         width="48px">           
+    <img height="48px" 
          id="DeleteAllRecipeBtn" 
          onclick="DeleteAllRecipes();"   
          src="/images/Buttons/DelAllBtn_48X48.png"                                   
@@ -371,6 +393,20 @@
          style="margin: 0px 10px 0px 0px;" 
          title="Edit Recipe"             
          width="48px">
+    <img height="48px" 
+         id="EditArticleBtn"     
+         onclick="EditArticle();"           
+         src="/images/Buttons/EditBtn_48X48_White.png"   
+         style="display: none; margin: 0px 10px 0px 0px; visibility: collapse;" 
+         title="Edit Article"             
+         width="48px">           
+    <img height="48px" 
+         id="DeleteArticleBtn"    
+         onclick="DeleteArticle();"         
+         src="/images/Buttons/DeleteBtn_48X48_White.png" 
+         style="display: none; margin: 0px 10px 0px 0px; visibility: collapse;"
+         title="Delete Article"           
+         width="48px">           
     <img height="48px" 
          id="DeleteRecipeBtn"    
          onclick="DeleteRecipe();"         

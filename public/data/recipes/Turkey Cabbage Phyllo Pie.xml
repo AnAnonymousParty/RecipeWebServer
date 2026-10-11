@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Turkey Cabbage Phyllo Pie_TurkeyCabbagePhylloPie.jpg" name="Turkey Cabbage Phyllo Pie" category="ENTREE_POULTRY" cuisine="GREEK" nativeUnits="US">
+    <Yield amount="1" units="PIE"/>
+    <Times prep="20" cook="45"/>
+  </Title>
+  <Nutrition calories="450" fat="0" saturatedFat="0" cholesterol="0" carbs="0" protein="0" sugar="0" sodium="0" fiber="0" servings="1" servingsUnit="SLICE"/>
+  <Description>Pie made with cripsy phyllo layers, stuffed with ground turkey and cabbage.</Description>
+  <Prerequisites>
+    <Prerequisite>Preheat oven to %%375%%.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Grounf turkey</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cabbage</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Yellow onion</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>SLICED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Phyllo dough</Name>
+      <Quantity units="SHEET">12</Quantity>
+      <Prep>UNDEFINED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Parsley</Name>
+      <Quantity units="TBSP">2</Quantity>
+      <Prep>CHOPCOARSE</Prep>
+      <Notes>For garnish.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fresh thyle</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Olive oil</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Add a couple of tablespoons of olive oil to a heavy skillet and heat over medium heat.</Step>
+    <Step type="STEP" image="">Add ground turkey, cabbage, onions, salt and pepper. Cool until there is no moisture remaining in pan.</Step>
+    <Step type="STEP" image="">Combine with garlic and thyme.</Step>
+    <Step type="STEP" image="">Brush 9 inch pie pan with olive oil. Add 4 sheets of phyllo dough, brushing each with olive oil and staggering the corners.</Step>
+    <Step type="STEP" image="">Pre-bake for 5 minutes.</Step>
+    <Step type="STEP" image="">Add filling to pie. Top with 8 more sheets of phyllo dough, brushing each with olive oil and folding over the corners.</Step>
+    <Step type="STEP" image="">Bake 35-40 minutes until golden and crisp all over. Let rest 10 minutes. Slice and garnish with parsley.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

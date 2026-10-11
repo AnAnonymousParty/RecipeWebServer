@@ -969,12 +969,18 @@ app.post("/UpdateRecipe", function (req, res) {
  console.log("> UpdateRecipe(" + recipeName + ")"); 
  //console.log("  UpdateRecipe(): JSON=", JSON.stringify(postData, null, 2));
  
- let xml = ParsePostDataToXml(postData);
+ let parseResults = ParsePostDataToXml(postData);
  
  //console.log("  UpdateRecipe(" + recipeName + "): XML=" + xml); 
+ 
+ if (false == parseResults.result) {
+  console.log("< UpdateRecipe()"); 
+    
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(parseResults.errors);  
+ }
 
  try {
-  fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", xml);
+  fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", parseResults.xml);
   console.log("  UpdateRecipe(): The file was saved!");
  } catch (err) {
    console.log(error);

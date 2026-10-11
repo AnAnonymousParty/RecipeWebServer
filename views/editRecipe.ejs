@@ -6,6 +6,9 @@
         name="recipeName" 
         type="hidden" 
         value="<%= recipeData.Recipe.Title[0].$.name %>">   
+ <input id="documentType"  
+        type="hidden" 
+        value="recipe">           
 
  <div class="recipe-line">
   <span class="field-header">
@@ -156,7 +159,7 @@
    Saturated Fat:
   </span>
   <span class="field-value">
-   <% var satfat = 0; ("" == recipeData.Recipe.Nutrition[0].$.saturatedFat ? 0 : recipeData.Recipe.Nutrition[0].$.saturatedFat); %>
+   <% var satfat = ("" == recipeData.Recipe.Nutrition[0].$.saturatedFat ? 0 : recipeData.Recipe.Nutrition[0].$.saturatedFat); %>
    <input data-validation="<%= (validationRules.GetValidationRule('saturatedFat')).GetFieldTypeId(); %>" 
           id="saturatedFat" 
           max="<%= (validationRules.GetValidationRule('saturatedFat')).GetMaxValue(); %>" 
@@ -175,7 +178,7 @@
    Cholesterol:
   </span>
   <span class="field-value">
-   <% var cholesterol = 0; ("" == recipeData.Recipe.Nutrition[0].$.cholesterol? 0 : recipeData.Recipe.Nutrition[0].$.cholesterol);  %>  
+   <% var cholesterol = ("" == recipeData.Recipe.Nutrition[0].$.cholesterol? 0 : recipeData.Recipe.Nutrition[0].$.cholesterol);  %>  
    <input data-validation="<%= (validationRules.GetValidationRule('cholesterol')).GetFieldTypeId(); %>" 
           id="cholesterol" 
           max="<%= (validationRules.GetValidationRule('cholesterol')).GetMaxValue(); %>" 
@@ -193,7 +196,7 @@
    Fat:
   </span>
   <span class="field-value">
-   <% var fat = 0;  ("" == recipeData.Recipe.Nutrition[0].$.fat ? 0 : recipeData.Recipe.Nutrition[0].$.fat); %>    
+   <% var fat = ("" == recipeData.Recipe.Nutrition[0].$.fat ? 0 : recipeData.Recipe.Nutrition[0].$.fat); %>    
    <input data-validation="<%= (validationRules.GetValidationRule('fat')).GetFieldTypeId(); %>" 
           id="fat" 
           max="<%= (validationRules.GetValidationRule('fat')).GetMaxValue(); %>" 

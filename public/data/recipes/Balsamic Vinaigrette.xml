@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Balsamic Vinaigrette_BalsamicVinaigrette.jpg" name="Balsamic Vinaigrette" category="SAUCE" cuisine="ALL" nativeUnits="US">
+    <Yield amount="1" units="CUP"/>
+    <Times prep="0" cook="0"/>
+  </Title>
+  <Nutrition calories="130" fat="14" saturatedFat="2" cholesterol="0" carbs="3" protein="0" sugar="2" sodium="35" fiber="0" servings="1" servingsUnit="TBSP"/>
+  <Description>Basic oil and vinegar salad dressing.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Olive oil</Name>
+      <Quantity units="CUP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Balsamic vinegar</Name>
+      <Quantity units="CUP">.25</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Shallot</Name>
+      <Quantity units="EACH">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Galric</Name>
+      <Quantity units="CLOVE">1</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Dijon mustard</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Honey</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Combine vinegar, salt and pepper, stir until salt is dissolved.</Step>
+    <Step type="STEP" image="">Add all other ingredients, whisk or shake in a bottle or jar until well blended.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
