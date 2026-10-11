@@ -648,10 +648,10 @@ app.post("/AddNewRecipe", function (req, res) {
  console.log("> AddNewRecipe(" + recipeName + ")"); 
  //console.log("  AddNewRecipe(): JSON=", JSON.stringify(postData, null, 2));
  
- let xml = ParsePostDataToXml(postData); 
+ let parseResults = ParsePostDataToXml(postData); 
  
- if ("DATAINVALID" == xml) {
-  res.status(enums.HttpStatusTypes.INTERNALSERVEREROOR).send("Submitted data was invalid");
+ if (false == parseResults.result) {
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(parseResults.errors);
   
   console.log("< AddNewRecipe() [Data Invalid]"); 
   
@@ -659,7 +659,7 @@ app.post("/AddNewRecipe", function (req, res) {
  }
  
  try {
-  fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", xml);
+  fs.writeFileSync(__dirname + "/public/data/recipes/" + recipeName + ".xml", parseResults.xml);
  } catch {
   console.log(error);
  }
@@ -1492,10 +1492,16 @@ function ParsePostDataToXml(postData) {
  
  console.log("> ParsePostDataToXml(", JSON.stringify(postData, null, 2) + ")");
  
- if (false == ValidateRcvdPostData(postData)) {
+ let validationResult = ValidateRcvdPostData(postData);
+ 
+ let retVal = { result: false, errors: "", xml: "" };
+ 
+ if (false == validationResult.result) {
   console.log("< ParsePostDataToXml() [Data Invalid]");
   
-  return("DATAINVALID");
+  retVal.errors = validationResult.errors
+  
+  return(retVal);
  }
  
  let doc = xmlBuilder.create({ version: '1.0' });
@@ -1687,7 +1693,10 @@ function ParsePostDataToXml(postData) {
  
  console.log("< ParsePostDataToXml()");
  
- return(rv);
+ retVal.result = true;
+ retVal.xml    = rv;
+ 
+ return(retVal);
 }
 
 function RemoveStaleImages() {
@@ -2145,129 +2154,129 @@ async function ValidateFileViaAPI(filePathName) {
 function ValidateRcvdPostData(rcvdPostData) {
  console.log("> ValidateRcvdPostData()");
  
- let retVal           = false;
+ let retVal           = { result: false, errors: "" };
  let validationResult = "";
  let validationRules  = new validationRulesLib.ValidationRules();
  
  for (;;) {
   if (false == validationUtilsLib.ValidateField('recipeName', rcvdPostData.recipeName, validationRules)) {
   
-   validationResult = "Recipe name invalid";
+   validationResult += "Recipe name invalid.\n";
    
    break;
   }  
   
   if (false == validationUtilsLib.ValidateField('mainImageName', rcvdPostData.mainImageName, validationRules)) {
   
-   validationResult = "Main image name invalid";
+   validationResult += "Main image name invalid.\n";
 
    break;
   }    
   
   if (false == enums.IsCategory(rcvdPostData.category)) {
-   validationResult = "Category invalid";
+   validationResult += "Category invalid.\n";
    
    break;
   } 
   
   if (false == enums.IsCuisine(rcvdPostData.cuisine)) {
-   validationResult = "Cuisine invalid";
+   validationResult += "Cuisine invalid.\n";
    
    break;
   }   
   
   if (false == validationUtilsLib.ValidateField('yield', rcvdPostData.yield, validationRules)) {
-   validationResult = "Yield invalid";
+   validationResult += "Yield invalid.\n";
    
    break;
   } 
   
   if (false == enums.IsServingSizeType(rcvdPostData.servingsUnit)) {
-   validationResult = "Serving Size Units invalid";
+   validationResult += "Serving Size Units invalid.\n";
    
    break;
   }  
   
   if (false == enums.IsUnitType(rcvdPostData.yieldUnit)) {
-   validationResult = "Yield Units invalid";
+   validationResult += "Yield Units invalid.\n";
    
    break;
   }   
   
   if (false == validationUtilsLib.ValidateField('servings', rcvdPostData.servings, validationRules)) {
-   validationResult = "Servings invalid";
+   validationResult += "Servings invalid.\n";
    
    break;
   } 
   
   if (false == validationUtilsLib.ValidateField('cookTime', rcvdPostData.cookTime, validationRules)) {
-   validationResult = "Cook Time invalid";
+   validationResult += "Cook Time invalid.\n";
    
    break;
   }   
   
   if (false == validationUtilsLib.ValidateField('prepTime', rcvdPostData.prepTime, validationRules)) {
-   validationResult = "Prep Time invalid";
+   validationResult += "Prep Time invalid.\n";
    
    break;
   } 
   
   if (false == validationUtilsLib.ValidateField('calories', rcvdPostData.calories, validationRules)) {
-   validationResult = "Calories invalid";
+   validationResult += "Calories invalid.\n";
    
    break;
   } 
   
   if (false == validationUtilsLib.ValidateField('fat', rcvdPostData.fat, validationRules)) {
-   validationResult = "Fat invalid";
+   validationResult += "Fat invalid.\n";
    
    break;
   } 
   
   if (false == validationUtilsLib.ValidateField('saturatedFat', rcvdPostData.saturatedFat, validationRules)) {
-   validationResult = "Saturated Fat invalid";
+   validationResult += "Saturated Fat invalid.\n";
    
    break;
   }   
  
   if (false == validationUtilsLib.ValidateField('carbs', rcvdPostData.carbs, validationRules)) {
-   validationResult = "Carbohydrates invalid";
+   validationResult += "Carbohydrates invalid.\n";
    
    break;
   }   
  
   if (false == validationUtilsLib.ValidateField('cholesterol', rcvdPostData.cholesterol, validationRules)) {
-   validationResult = "Cholesterol invalid";
+   validationResult += "Cholesterol invalid.\n";
    
    break;
   }  
   
   if (false == validationUtilsLib.ValidateField('protein', rcvdPostData.protein, validationRules)) {
-   validationResult = "Protein invalid";
+   validationResult += "Protein invalid.\n";
    
    break;
   }  
 
   if (false == validationUtilsLib.ValidateField('sugar', rcvdPostData.sugar, validationRules)) {
-   validationResult = "Sugar invalid";
+   validationResult += "Sugar invalid.\n";
    
    break;
   }
   
   if (false == validationUtilsLib.ValidateField('sodium', rcvdPostData.sodium, validationRules)) {
-   validationResult = "Sodium invalid";
+   validationResult += "Sodium invalid.\n";
    
    break;
   }  
   
   if (false == validationUtilsLib.ValidateField('fiber', rcvdPostData.fiber, validationRules)) {
-   validationResult = "Fiber invalid";
+   validationResult += "Fiber invalid.\n";
    
    break;
   } 
 
   if (false == validationUtilsLib.ValidateField('description', rcvdPostData.description, validationRules)) {
-   validationResult = "Description invalid";
+   validationResult += "Description invalid.\n";
    
    break;
   }   
@@ -2288,7 +2297,7 @@ function ValidateRcvdPostData(rcvdPostData) {
     }
    } else {
     if (false == validationUtilsLib.ValidateField('prerequisite', preData, validationRules)) {
-     validationResult = "Prerequisite invalid";
+     validationResult += "Prerequisite invalid.\n";
    
      break;
     } 
@@ -2360,43 +2369,43 @@ function ValidateRcvdPostData(rcvdPostData) {
    
     if ("INGREDIENT" == ingredientType) {
      if (false == validationUtilsLib.ValidateField('ingredientName', ingredientsData, validationRules)) {
-      validationResult = "Ingredient Name invalid";
+      validationResult += "Ingredient Name invalid.\n";
 
       break;
      }
     
      if (false == enums.IsUnitType(enums.GetEnumFromUnitDesc(rcvdPostData.measure))) {
-      validationResult = "Unit of Measure invalid";
+      validationResult += "Unit of Measure invalid.\n";
       
       break;
      }
      
      if (false == validationUtilsLib.ValidateField('quantity', rcvdPostData.quantity, validationRules)) {
-      validationResult = "Quantity invalid";
+      validationResult += "Quantity invalid.\n";
 
       break;
      }      
      
      if (false == enums.IsPrepType(enums.GetEnumFromPrepDesc(rcvdPostData.prep))) {
-      validationResult = "Preparation invalid";
+      validationResult += "Preparation invalid.\n";
       
       break;
      }      
      
      if (false == validationUtilsLib.ValidateField('notes', rcvdPostData.notes, validationRules)) {
-      validationResult = "Notes invalid";
+      validationResult += "Notes invalid.\n";
 
       break;
      } 
     } else {
      if ("HEADING" == ingredientType) { 
       if (false == validationUtilsLib.ValidateField('heading', ingredientsData, validationRules)) {
-      validationResult = "Ingredient Heading invalid";
+      validationResult += "Ingredient Heading invalid.\n";
    
       break;
      }
      } else {
-      validationResult = "Ingredient Type invalid";
+      validationResult += "Ingredient Type invalid.\n";
       
       break;
      } 
@@ -2418,7 +2427,7 @@ function ValidateRcvdPostData(rcvdPostData) {
      
      if ("STEP" == stepType) {
       if (false == validationUtilsLib.ValidateField('step', stepsData[i], validationRules)) {
-       validationResult = "Step invalid";
+       validationResult += "Step invalid.\n";
    
        break;
       }
@@ -2433,7 +2442,7 @@ function ValidateRcvdPostData(rcvdPostData) {
        break;
       }
      } else {
-      validationResult = "Step Type invalid";
+      validationResult += "Step Type invalid.\n";
         
       break;
      } 
@@ -2445,19 +2454,19 @@ function ValidateRcvdPostData(rcvdPostData) {
     
     if ("STEP" == stepType) {
      if (false == validationUtilsLib.ValidateField('step', stepsData, validationRules)) {
-      validationResult = "Step invalid";
+      validationResult += "Step invalid.\n";
 
       break;
      }
     } else {
      if ("HEADING" == stepType) { 
       if (false == validationUtilsLib.ValidateField('heading', stepData, validationRules)) {
-       validationResult = "Step heading invalid";
+       validationResult += "Step heading invalid.\n";
     
        break;
       }
      } else {
-      validationResult = "Step Type invalid";
+      validationResult += "Step Type invalid.\n";
        
       break;
      } 
@@ -2467,12 +2476,16 @@ function ValidateRcvdPostData(rcvdPostData) {
    
   // If we made it through that guantlet, the data is probably good enough to use.
   
-  retVal = true;
+  retVal.result = true;
   
   break;
  }  
  
- console.log("< ValidateRcvdPostData() [" + retVal + "] " + validationResult);
+ if (false == retVal.result) {
+  retVal.errors = validationResult;
+ }
+ 
+ console.log("< ValidateRcvdPostData() [" + retVal.result + ", " + retVal.errors + "] " + validationResult);
  
  return (retVal);
 }

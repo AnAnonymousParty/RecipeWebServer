@@ -296,7 +296,7 @@ function AddPrerequisite() {
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- PopupBehaviors.HidePopup(PopupTypes.Prerequisite);
+ PopupBehaviors.HidePopup(PopupTypes.AddPrerequisite);
 }
 
 function AddRecipe() {
@@ -499,7 +499,7 @@ function AddStepHeading() {
  btnStyle.display    = "inline";
  btnStyle.visibility = "visible";
  
- HideAddStepHeadingPopup();
+ PopupBehaviors.HidePopup(PopupTypes.ArticleExistsWarning, PopupTypes.AddStepHeading);
 }
 
 function AddVariation() { 
@@ -1165,7 +1165,7 @@ function EditStep(rowNum) {
  
  if ("STEP" == type) {
   PopupBehaviors.RevealPopup(PopupTypes.EditStep);
-  ToggleVisibility("editStepPopup");
+  ToggleVisibility(PopupTypes.EditStepPopup);
  } else {
   document.getElementById("stepHeadingRowId").value = rowNum;
   document.getElementById("stepHeading2Edit").value = step2Edit;
@@ -1893,7 +1893,9 @@ function SaveRecipe() {
       UnHideElement("DeleteAllRecipesBtn", "inline");
      } 
     } else {
-     document.getElementById("recipesListContainer").innerHTML =  "Recipe not saved";
+     data = xmlhttpReq.responseText;
+     
+     alert("Recipe could not be saved.\n\n" + data);
     }
    };   
    
