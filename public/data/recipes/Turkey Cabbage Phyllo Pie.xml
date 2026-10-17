@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Turkey Cabbage Phyllo Pie_TurkeyCabbagePhylloPie.jpg" name="Turkey Cabbage Phyllo Pie" category="ENTREE_POULTRY" cuisine="GREEK" nativeUnits="US">
+  <Title image="Turkey Cabbage Phyllo Pie_20261014_165943.jpg" name="Turkey Cabbage Phyllo Pie" category="ENTREE_POULTRY" cuisine="GREEK" nativeUnits="US">
     <Yield amount="1" units="PIE"/>
     <Times prep="20" cook="45"/>
   </Title>
@@ -11,7 +11,7 @@
   </Prerequisites>
   <Ingredients>
     <Ingredient type="INGREDIENT">
-      <Name>Grounf turkey</Name>
+      <Name>Ground turkey</Name>
       <Quantity units="POUND">1</Quantity>
       <Prep>NONE</Prep>
       <Notes/>
@@ -20,7 +20,7 @@
       <Name>Cabbage</Name>
       <Quantity units="CUP">4</Quantity>
       <Prep>SHREAD</Prep>
-      <Notes/>
+      <Notes>Green or red, or a combination.</Notes>
     </Ingredient>
     <Ingredient type="INGREDIENT">
       <Name>Yellow onion</Name>
@@ -30,14 +30,14 @@
     </Ingredient>
     <Ingredient type="INGREDIENT">
       <Name>Garlic</Name>
-      <Quantity units="CLOVE">1</Quantity>
+      <Quantity units="CLOVE">3</Quantity>
       <Prep>MINCED</Prep>
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
       <Name>Phyllo dough</Name>
       <Quantity units="SHEET">12</Quantity>
-      <Prep>UNDEFINED</Prep>
+      <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
     <Ingredient type="INGREDIENT">
@@ -59,7 +59,7 @@
       <Notes>To taste.</Notes>
     </Ingredient>
     <Ingredient type="INGREDIENT">
-      <Name>Fresh thyle</Name>
+      <Name>Fresh thyme</Name>
       <Quantity units="TSP">1</Quantity>
       <Prep>CHOPFINE</Prep>
       <Notes/>
@@ -70,15 +70,23 @@
       <Prep>NONE</Prep>
       <Notes/>
     </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
   </Ingredients>
   <Method>
     <Step type="STEP" image="">Add a couple of tablespoons of olive oil to a heavy skillet and heat over medium heat.</Step>
-    <Step type="STEP" image="">Add ground turkey, cabbage, onions, salt and pepper. Cool until there is no moisture remaining in pan.</Step>
-    <Step type="STEP" image="">Combine with garlic and thyme.</Step>
-    <Step type="STEP" image="">Brush 9 inch pie pan with olive oil. Add 4 sheets of phyllo dough, brushing each with olive oil and staggering the corners.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_131208.jpg">Add ground turkey and brown it before breaking into small pieces.&lt;br&gt;(See @@Browning Ground Meat@@.)</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_131457.jpg">Add cabbage, onions, salt, pepper and MSG. Continue cooking for about 15-20 minutes.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_132435.jpg">Combine with 3/4 garlic and thyme, cook for about 10 minutes, until there is just a little bit of liquid left in the pan. Remove from heat and set aside to cool for about 10-15 minutes.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_153802.jpg">Brush 9 inch pie pan with olive oil. Add 4 sheets of phyllo dough, brushing each with olive oil and staggering the corners.</Step>
     <Step type="STEP" image="">Pre-bake for 5 minutes.</Step>
-    <Step type="STEP" image="">Add filling to pie. Top with 8 more sheets of phyllo dough, brushing each with olive oil and folding over the corners.</Step>
-    <Step type="STEP" image="">Bake 35-40 minutes until golden and crisp all over. Let rest 10 minutes. Slice and garnish with parsley.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_154929.jpg">Add remaining garlic to filling and add filling to pie.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_155818.jpg">Top with 8 more sheets of phyllo dough, brushing each with olive oil and folding over the corners. Sprinkle any remaining thyme between layers.</Step>
+    <Step type="STEP" image="Turkey%20Cabbage%20Phyllo%20Pie_20261014_165717.jpg">Bake 35-40 minutes until golden and crisp all over. Let rest 10 minutes. Slice and garnish with parsley.</Step>
   </Method>
   <Variations/>
 </Recipe>

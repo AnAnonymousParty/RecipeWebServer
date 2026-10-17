@@ -1,3 +1,31 @@
+const ActivityTypes = Object.freeze({
+ EditConfig:      "Edit Configuration",
+ EditPage:        "Edit Page",
+ ViewPage:        "View Page",
+ ViewRecipesList: "Recipes List"
+});
+
+function GetDescFromActivityType(enumVal) {
+ for (var key in ActivityTypes) {
+  if (key == enumVal) {
+   return ActivityTypes[key];
+  } 
+ }
+ 
+  return "Undefined";
+}
+
+function GetEnumFromActivityDesc(desc) {
+ for (var key in ActivityTypes) {
+  if (desc == ActivityTypes[key]) {
+   return key;
+  } 
+ }
+ 
+  return "UNDEFINED";
+}
+
+
 const ButtonTypes = Object.freeze({
  AddArticle:              "AddArticleBtn", 
  AddIngredient:           "AddIngredientBtn",
@@ -10,9 +38,11 @@ const ButtonTypes = Object.freeze({
  DeleteAllPrerequisites:  "DelAllPrerequisitesBtn",
  DeleteAllSteps:          "DelAllStepsBtn",
  DeleteAllVariations:     "DelAllVariationsBtn",
+ EditConfig:              "EditConfigBtn", 
  ExportAll:               "ExportAllBtn",
  ExportSelected:          "ExportSelectedBtn",
  RenameRecipe:            "RenameRecipeBtn",
+ SaveConfig:              "SaveConfigBtn",
  Search:                  "SearchBtn",
  Undefined:               "Undefined",
  UploadContent:           "UploadContentBtn",
@@ -30,7 +60,7 @@ function GetDescFromButtonType(enumVal) {
    }
    
   case ButtonTypes.AddIngredientHeading: {
-     return "Add Ingredient Headin";
+     return "Add Ingredient Heading";
      }
        
   case ButtonTypes.AddPrerequisite: {
@@ -64,6 +94,10 @@ function GetDescFromButtonType(enumVal) {
   case ButtonTypes.DeleteAllVariations: {
      return "Delete All Variations";
      }
+     
+  case ButtonTypes.EditConfig: {
+     return "Access Settings";
+     }     
            
   case ButtonTypes.ExportAll: {
      return "Export All Recipes";
@@ -76,6 +110,10 @@ function GetDescFromButtonType(enumVal) {
   case ButtonTypes.RenameRecipe: {
      return "Rename Recipe";
      }
+     
+  case ButtonTypes.SaveConfig: {
+     return "Save Configuration";
+     }     
         
   case ButtonTypes.Search: {
      return "Search";

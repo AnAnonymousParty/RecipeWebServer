@@ -105,10 +105,16 @@ export
 function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter) {
  console.log("> GenerateFilesList(,, " +  categoryFilter + ", " + cuisineFilter + ")"); 
  
+ let curDir = path.resolve();
+ 
+ console.log("  GenerateFilesList() " + curDir); 
+ 
  let filesList = new Array();
  
- let knowledgeFilesList = fs.readdirSync("public\\data\\statics");
- let recipeFilesList    = fs.readdirSync("public\\data\\recipes");
+ let knowledgeFilesList = fs.readdirSync(curDir + "\\public\\data\\statics");
+ let recipeFilesList    = fs.readdirSync(curDir + "\\public\\data\\recipes");
+ 
+  console.log("  GenerateFilesList() found " + knowledgeFilesList.length + " articles and " + recipeFilesList.length + " recipes."); 
  
  knowledgeFilesList.forEach((file, ndx) => filesList.push("public\\data\\statics\\" + file)); 
  recipeFilesList.forEach((file, ndx)    => filesList.push("public\\data\\recipes\\" + file)); 
@@ -243,7 +249,7 @@ function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter
  htmlRsp += '<input id="filesListCnt"  type="hidden" value="' + listCnt       + '">\n';
  htmlRsp += '<input id="totalFilesCnt" type="hidden" value="' + totalFilesCnt + '">';
  
- console.log("< GenerateFilesList() found " + listCnt + " items."); 
+ console.log("< GenerateFilesList() returning " + listCnt + " items after filtering."); 
   
  return htmlRsp;
 }

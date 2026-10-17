@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Recipe>
-  <Title image="Toll House Pie_TollHousePie.jpg" name="Toll House Pie" category="DESSERT" cuisine="ALL" nativeUnits="US">
+  <Title image="Toll House Pie_20261014_183215.jpg" name="Toll House Pie" category="DESSERT" cuisine="ALL" nativeUnits="US">
     <Yield amount="1" units="EACH"/>
     <Times prep="5" cook="30"/>
   </Title>
@@ -60,12 +60,13 @@
     </Ingredient>
   </Ingredients>
   <Method>
-    <Step type="STEP" image="">Beat eggs until foamy.</Step>
-    <Step type="STEP" image="">Incorporate flour, sugars and vanilla.</Step>
-    <Step type="STEP" image="">Add butter and mix until creamy, scraping bowl as required.</Step>
-    <Step type="STEP" image="">Add chocolate chips an mix until just combined.</Step>
-    <Step type="STEP" image="">Pour batter into pie shell.</Step>
-    <Step type="STEP" image="">Bake 50 minutes, until toothpick inserted midway between the center and edge of the pie comes out clean,</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_112757.jpg">Beat butter in a stand mixer until creamy, scraping bowl as required.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_113025.jpg">Add sugars and continue beating and scraping.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_113138.jpg">Add eggs and vanilla and mix until smooth.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_113156.jpg">Add flour and mix until just combined.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_113430.jpg">Add chocolate chips and mix until just combined.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_113957.jpg">Pour batter into pie shell.</Step>
+    <Step type="STEP" image="Toll%20House%20Pie_20261014_123142.jpg">Bake 50 minutes, until toothpick inserted midway between the center and edge of the pie comes out clean,</Step>
     <Step type="STEP" image="">Allow to cool for about and hour, then slice and serve.</Step>
   </Method>
   <Variations>

@@ -11,9 +11,11 @@ const ButtonTypes = Object.freeze({
  DeleteAllPrerequisites: "DelAllPrerequisitesBtn",
  DeleteAllSteps:         "DelAllStepsBtn",
  DeleteAllVariations:    "DelAllVariationsBtn",
+ EditConfig:             "EditConfigBtn",
  ExportAll:              "ExportAllBtn",
  ExportSelected:         "ExportSelectedBtn",
  RenameRecipe:           "RenameRecipeBtn",
+ SaveConfig:             "SaveConfigBtn", 
  Search:                 "SearchBtn",
  Undefined:              "Undefined",
  UploadContent:          "UploadContentBtn", 
@@ -67,6 +69,10 @@ function GetDescFromButtonType(enumVal) {
      return "Delete All Variations";
      }
            
+  case ButtonTypes.EditConfig: {
+     return "Access Settings";
+     }           
+           
   case ButtonTypes.ExportAll: {
      return "Export All Recipes";
      }
@@ -78,6 +84,10 @@ function GetDescFromButtonType(enumVal) {
   case ButtonTypes.RenameRecipe: {
      return "Rename Recipe";
      }
+     
+  case ButtonTypes.SaveConfig: {
+     return "Save Configuration";
+     }        
         
   case ButtonTypes.Search: {
      return "Search Recipes";

@@ -952,18 +952,17 @@ function EditArticle(articleName) {
   if (ReadyStateTypes.DONE == xmlhttp.readyState && HttpStatusTypes.OK == xmlhttp.status) {
    var data = xmlhttp.responseText;
     
-   document.getElementById("recipesListContainer").innerHTML = data;
+   document.getElementById("recipesListContainer").innerHTML = data
    
-   HideElement("indexPageBtns");
+   SetMode(ActivityTypes.EditPage);
+   
    HideElement("filtersContainer");
-   HideElement("viewPageBtns");
    HideElement("DeleteRecipeBtn");
    HideElement("SaveRecipeBtn");
    
    UnHideElement("DeleteArticleBtn", "inline"); 
    UnHideElement("SaveArticleBtn", "inline");   
    UnHideElement("RenameRecipeBtn", "inline");    
-   UnHideElement("editPageBtns");
    UnHideElement("recipeTitleContainer", "inline-block");
   }
   else {
@@ -1095,16 +1094,16 @@ function EditRecipe(recipeName) {
    document.getElementById("recipesListContainer").innerHTML = data;
    document.getElementById("recipeTitle").innerText          = document.getElementById("recipeName").value; 
    
-   HideElement("indexPageBtns");
+   SetMode(ActivityTypes.EditPage);
+   
    HideElement("filtersContainer");
-   HideElement("viewPageBtns");
    HideElement("DeleteArticleBtn");
    HideElement("SaveArticleBtn");
    
    UnHideElement("DeleteRecipeBtn", "inline");    
    UnHideElement("RenameRecipeBtn", "inline");     
    UnHideElement("SaveRecipeBtn", "inline");   
-   UnHideElement("editPageBtns");
+
    UnHideElement("recipeTitleContainer", "inline-block");
   }
   else {
@@ -2197,18 +2196,77 @@ function SendRevisedContentFile() {
  xmlhttpReq.send(formData);
 }
 
+function SetMode(mode) {
+ switch (mode) {
+  case ActivityTypes.EditConfig: {
+   document.getElementById("recipeTitle").innerHTML = "Settings";
+   
+   HideElement("editPageBtns");
+   HideElement("filtersContainer");
+   HideElement("indexPageBtns");
+   HideElement("DeleteRecipeBtn");
+   HideElement("EditRecipeBtn");
+   HideElement("viewPageBtns"); 
+   HideElement("RenameRecipeBtn");
+   
+   UnHideElement("recipeTitleContainer"); 
+   UnHideElement("editCfgBtns");     
+  }
+  break;
+  
+  case ActivityTypes.EditPage: {
+   HideElement("editCfgBtns");   
+   HideElement("filtersContainer");
+   HideElement("indexPageBtns");
+   HideElement("DeleteRecipeBtn");
+   HideElement("EditRecipeBtn");
+   
+   HideElement("viewPageBtns"); 
+ 
+   UnHideElement("editPageBtns");   
+  }
+  break;    
+  
+  case ActivityTypes.ViewPage: {
+   HideElement("editCfgBtns");   
+   HideElement("editPageBtns");
+   HideElement("filtersContainer");
+   HideElement("indexPageBtns");
+   HideElement("DeleteRecipeBtn");
+   HideElement("EditRecipeBtn");
+   
+   UnHideElement("viewPageBtns"); 
+   UnHideElement("recipeTitleContainer");    
+  }
+  break;  
+  
+  case ActivityTypes.ViewRecipesList: {
+   HideElement("editCfgBtns");   
+   HideElement("editPageBtns");
+   HideElement("filtersContainer");
+   HideElement("DeleteRecipeBtn");
+   HideElement("EditRecipeBtn");
+   HideElement("viewPageBtns");    
+   HideElement("recipeTitleContainer"); 
+   
+   UnHideElement("filtersContainer", "inline-flex");
+   UnHideElement("indexPageBtns");   
+  }
+  break;
+  
+  default: {
+  }
+  break;
+ }
+}
+
 function ShowRecipesList(category, cuisine) {
  var xmlhttpReq = new XMLHttpRequest();
  
  xmlhttpReq.open("GET", "/GetRecipesList?category=" + category + "&cuisine=" + cuisine, true); 
 
  xmlhttpReq.onload = function() {
-  HideElement("editPageBtns");
-  HideElement("recipeTitleContainer");
-  HideElement("viewPageBtns");
-  
-  UnHideElement("indexPageBtns"); 
-  UnHideElement("filtersContainer", "inline-flex");
+  SetMode(ActivityTypes.ViewRecipesList);
   
   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) {
    return;
@@ -2807,17 +2865,14 @@ function ViewArticle(articleName) {
    document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
    document.getElementById("recipeTitle").innerText          = articleName; 
    
-   HideElement("editPageBtns");
-   HideElement("filtersContainer");
-   HideElement("indexPageBtns");
+   SetMode(ActivityTypes.ViewPage);
+   
    HideElement("DeleteRecipeBtn");
    HideElement("EditRecipeBtn");
    HideElement("RenameRecipeBtn");   
    
    UnHideElement("DeleteArticleBtn", "inline"); 
    UnHideElement("EditArticleBtn", "inline");   
-   UnHideElement("viewPageBtns"); 
-   UnHideElement("recipeTitleContainer"); 
   }
  }
     
@@ -2834,16 +2889,16 @@ function ViewRecipe(recipeName) {
    document.getElementById('recipesListContainer').innerHTML = xmlhttp.responseText;
    document.getElementById("recipeTitle").innerText          = document.getElementById("recipeName").value; 
    
-   HideElement("editPageBtns");
+   SetMode(ActivityTypes.ViewPage);
+   
    HideElement("filtersContainer");
-   HideElement("indexPageBtns");
    HideElement("DeleteArticleBtn");   
    HideElement("EditArticleBtn");
    HideElement("RenameRecipeBtn");    
    
    UnHideElement("DeleteRecipeBtn", "inline"); 
    UnHideElement("EditRecipeBtn", "inline");
-   UnHideElement("viewPageBtns"); 
+
    UnHideElement("recipeTitleContainer"); 
   }
  }

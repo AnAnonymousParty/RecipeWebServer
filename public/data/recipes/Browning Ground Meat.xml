@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Browning Ground Meat_20261014_131208.jpg" name="Browning Ground Meat" category="TECHNIQUE" cuisine="ALL" nativeUnits="US">
+    <Yield amount="1" units="BATCH"/>
+    <Times prep="0" cook="20"/>
+  </Title>
+  <Nutrition calories="0" fat="0" saturatedFat="0" cholesterol="0" carbs="0" protein="0" sugar="0" sodium="0" fiber="0" servings="1" servingsUnit="CUP"/>
+  <Description>Properly browned meat creates foundational flavors. Try this method to avoid gray tasteless meat.</Description>
+  <Prerequisites>
+    <Prerequisite>Heavy bottomed skillet, ideally black iron.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Ground Meat</Name>
+      <Quantity units="POUND">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Fat or oil</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>Bacon grease, vegetable oil, etc.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">.5</Quantity>
+      <Prep>NONE</Prep>
+      <Notes>To taste.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="">Heat pan over high heat. Add oil/fat and swirl around pan.</Step>
+    <Step type="STEP" image="">Add meat in one solid piece without breaking it up, like a big burger. Breaking it up will cause the contained liquid to seep into the pan and prevent it from browning. Leave it alone until the bottom is well browned.</Step>
+    <Step type="STEP" image="">When the bottom has sufficiently browned, flip the entire thing and repeat the browning on that side.</Step>
+    <Step type="STEP" image="">Once both sides are browned, you can begin breaking it up, season with salt and pepper and finish browning.</Step>
+  </Method>
+  <Variations/>
+</Recipe>

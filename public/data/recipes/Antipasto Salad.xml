@@ -4,7 +4,7 @@
     <Yield amount="12" units="SERVING"/>
     <Times prep="15" cook="0"/>
   </Title>
-  <Nutrition calories="" fat="" saturatedFat="" cholesterol="" carbs="" protein="" sugar="" sodium="" fiber="" servings="1" servingsUnit="CUP"/>
+  <Nutrition calories="0" fat="0" saturatedFat="0" cholesterol="0" carbs="0" protein="0" sugar="0" sodium="0" fiber="0" servings="1" servingsUnit="CUP"/>
   <Description>Assorted marinated vegetables, meats and cheeses.</Description>
   <Prerequisites/>
   <Ingredients>

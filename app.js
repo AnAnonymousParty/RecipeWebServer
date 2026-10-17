@@ -1,4 +1,4 @@
-// javascript libraries we need:
+// 3rd Party javascript libraries we need:
 
 const bodyParser                 = require("body-parser");
 const CloudmersiveVirusApiClient = require('cloudmersive-virus-api-client');
@@ -35,6 +35,7 @@ const validationUtilsLib = require(path.join(__dirname, '/public/javascripts/ser
 
 let indexRouter       = require('./routes/index');
 let editArticleRouter = require('./routes/editArticle');
+let editConfigRouter  = require('./routes/editConfig');
 let editRecipeRouter  = require('./routes/editRecipe');
 let getRecipeRouter   = require('./routes/getRecipe');
 let newArticleRouter  = require('./routes/newArticle');
@@ -67,7 +68,11 @@ app.use(logger('dev', {
  }
 }));
 
-configManager = new configManagerLib.ConfigManager(enums, fs, DOMParser, path.join(__dirname, '/private/Config/', 'Config.xml'));
+const configManager = new configManagerLib.ConfigManager(enums, 
+                                                         fs, 
+                                                         DOMParser, 
+                                                         path.join(__dirname, '/private/Config/', 'Config.xml'),
+                                                         xmlBuilder);
 
 /*------------------------- GET handlers ------------------------------------*/
 
@@ -399,11 +404,15 @@ app.get('/GetRecipesList', (req, res) => {
  let category = req.query.category;
  let cuisine  = req.query.cuisine; 
  
+ console.log("> GetRecipesList(" + category + ", " + cuisine + ")");
+ 
  let dirPath = path.join(__dirname, '/public/data/recipes');
-path
+
  // Return the list of recipes: 
  
  let rv = common.GenerateFilesList(fs, path, xml2jsParser, category, cuisine);
+ 
+ console.log("< GetRecipesList() []");
     
  res.status(enums.HttpStatusTypes.OK).send(rv);
 });
@@ -961,6 +970,54 @@ app.post("/UpdateArticle", async function (req, res) {
  res.status(retStatus).send(htmlRsp);
 });
 
+// Handle Save Configuration:
+app.post("/SaveConfiguration", async function (req, res) {
+ let postData      = req.body;
+ 
+ let units         = postData.units; 
+ let validateFiles = postData.validateFiles; 
+ 
+ console.log("> SaveConfiguration(" + units + ", " + validateFiles + ")"); 
+ 
+ let validationErrors = "";
+ 
+ if ("Y" == validateFiles) {
+  validateFiles = true;
+ } else {
+  if ("N" == validateFiles) { 
+   validateFiles = false;
+  } else {
+   validationErrors += "File Validation selection is invalid./n";
+  }
+ }
+ 
+ if ("US" == units) {
+  units = enums.SystemOfUnitsTypes.US;
+ } else {
+  if ("METRIC" == units) {
+   units = enums.SystemOfUnitsTypes.METRIC;
+  } else {  
+   validationErrors += "Native Units selection is invalid./n";
+  }
+ }
+ 
+ if ("" != validationErrors) {
+  console.log("< SaveConfiguration() [INTERNALSERVERERROR , " + validationErrors + "]");
+ 
+  res.status(enums.HttpStatusTypes.INTERNALSERVERERROR).send(validationErrors);  
+  
+  return;
+ }
+
+ configManager.SetNativeUnits(units);
+ configManager.SetValidateUploadedFiles(validateFiles);
+ configManager.SaveConfiguration();
+ 
+ console.log("< SaveConfiguration() [OK, Configuration Saved,]");
+ 
+ res.status(enums.HttpStatusTypes.OK).send("Configuration saved.");
+});
+
 // Handle Recipe updated:
 app.post("/UpdateRecipe", function (req, res) {
  let postData   = req.body;
@@ -1216,6 +1273,7 @@ app.post("/UploadRecipes", function (req, res) {
 app.use('/',                    indexRouter);
 app.use('/GetRecipe',           getRecipeRouter);
 app.use('/ShowEditArticlePage', editArticleRouter);
+app.use('/ShowEditConfigPage',  editConfigRouter);
 app.use('/ShowEditRecipePage',  editRecipeRouter);
 app.use('/ShowNewArticlePage',  newArticleRouter);
 app.use('/ShowNewRecipePage',   newRecipeRouter);

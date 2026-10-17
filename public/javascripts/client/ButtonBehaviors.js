@@ -75,6 +75,10 @@ class ButtonBehaviors {
    case ButtonTypes.DeleteAllVariations: {
     return new DeleteAllVariationsButtonBehavior(buttonTypeId);
    }
+  
+   case ButtonTypes.EditConfig: {
+    return new EditConfigButtonBehavior(buttonTypeId);
+   }   
    
    case ButtonTypes.ExportAll: {
     return new ExportAllButtonBehavior(buttonTypeId);
@@ -87,6 +91,10 @@ class ButtonBehaviors {
    case ButtonTypes.RenameRecipe: {
     return new RenameRecipeButtonBehavior(buttonTypeId);
    }   
+
+   case ButtonTypes.SaveConfig: {
+    return new SaveConfigButtonBehavior(buttonTypeId);
+   }  
 
    case ButtonTypes.Search: {
     return new SearchButtonBehavior(buttonTypeId);
@@ -239,6 +247,43 @@ class DelAllVariationsButtonBehavior extends ButtonBehavior {
   if (true == confirm("Are you sure you want to delete all of the variations in the recipe?")) {
    DeleteAllVariations();
   } 
+ }
+}
+
+
+class EditConfigButtonBehavior extends ButtonBehavior {
+ constructor(buttonTypeId) {
+  super(buttonTypeId);
+ }
+
+ HandleButtonClkd() {
+  super.HandleButtonClkd();
+ 
+  var xmlhttpReq = new XMLHttpRequest();
+  
+  xmlhttpReq.open("GET", "/ShowEditConfigPage"); 
+  
+  xmlhttpReq.responseType = "text";
+
+  xmlhttpReq.onload = function() {
+
+   
+   if (ReadyStateTypes.DONE != xmlhttpReq.readyState) { 
+    return;
+   }
+   
+   if (HttpStatusTypes.OK === xmlhttpReq.status) {
+    var data = xmlhttpReq.responseText;
+    
+    document.getElementById("recipesListContainer").innerHTML = data;
+    
+    SetMode(ActivityTypes.EditConfig);
+   } else {
+    alert("Unable to access settings.");
+   }
+  };
+
+  xmlhttpReq.send();
  }
 }
 
@@ -414,6 +459,39 @@ class RenameRecipeButtonBehavior extends ButtonBehavior {
   
   xmlhttp.send(); 
 
+ }
+}
+
+
+class SaveConfigButtonBehavior extends ButtonBehavior {
+ constructor(buttonTypeId) {
+  super(buttonTypeId);
+ }
+
+ HandleButtonClkd() {
+  super.HandleButtonClkd();
+ 
+  var xmlhttpReq = new XMLHttpRequest();
+  
+  xmlhttpReq.open("POST", "/SaveConfiguration", true); 
+  xmlhttpReq.setRequestHeader("Content-Type", "application/json;charset=UTF-8");  
+
+  xmlhttpReq.onload = function() {
+   
+   if (ReadyStateTypes.DONE == xmlhttpReq.readyState && HttpStatusTypes.OK === xmlhttpReq.status) {
+    alert("Configuration saved.");
+    
+    ShowRecipesList("ALL", "ALL");
+   } else {
+    alert("Configuration could not be saved./n/n" + xmlhttpReq.responseText);
+   }
+  };
+
+  let formData = new FormData(document.getElementById("EditConfigurationForm"));
+  let obj      = Object.fromEntries(Array.from(formData.keys()).map(key => [key, formData.getAll(key).length > 1 ? formData.getAll(key) : formData.get(key)]))
+  let json     = JSON.stringify(obj); 
+
+  xmlhttpReq.send(json);  
  }
 }
 
