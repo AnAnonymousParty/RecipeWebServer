@@ -78,7 +78,7 @@ function GetDescFromButtonType(enumVal) {
      }
                   
   case ButtonTypes.ExportSelected: {
-     return "Export Selected Tecipes";
+     return "Export Selected Recipes";
      }
              
   case ButtonTypes.RenameRecipe: {

@@ -36,16 +36,89 @@
  </div>
  <br>
  <div class="centered">
- <img height="32px" 
-      onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ImportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
-      src="/images/Buttons/ImportBtn_48X48.png" 
-      title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ImportRecipes); %>" 
-      width="32px">
- &nbsp;
- <img height="32px" 
-      onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ExportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
-      src="/images/Buttons/ExportBtn_60X48.png" 
-      title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ExportRecipes); %>" 
-      width="32px">    
-</div>
- </form>  
+  <img height="32px" 
+       onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ImportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
+       src="/images/Buttons/ImportBtn_48X48.png" 
+       title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ImportRecipes); %>" 
+       width="32px">
+  &nbsp;
+  <img height="32px" 
+       onclick="PopupBehaviors.RevealPopup('<%= enums.PopupTypes.ExportRecipes %>', '<%= enums.PopupTypes.Settings %>');" 
+       src="/images/Buttons/ExportBtn_60X48.png" 
+       title=" <%= enums.GetDescFromPopupType(enums.PopupTypes.ExportRecipes); %>" 
+       width="32px">    
+ </div>
+</form>  
+ 
+<%# Export Recipes Popup. %>
+<div class="popup" id="<%= enums.PopupTypes.ExportRecipes %>" style="width: 40%;">
+ <div class="heading">
+  <%= enums.GetDescFromPopupType(enums.PopupTypes.ExportRecipes); %>&nbsp;
+  <img height="32px" 
+       id="fupCloseBtn" 
+       onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ExportRecipes %>');" 
+       src="/images/Buttons/CloseIcon_512X512.png" 
+       width="32px">
+ </div>
+ <br>
+ <div class="centered" id="ExportContainer">
+  <form enctype="multipart/form-data" id="ExportRecipesForm" method="post" name="exportRecipesForm">
+   <input id="erppuInvoker" type="hidden" value="">
+   <div class="scroll" id="exportFilesList">
+    <%# List placeholder, filled in by server upon request. %>
+   </div>    
+   <div class="centered" id="ExportButtonsContainer">
+    <button id="ExportSelected" 
+            name="ExportSelected" 
+            onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.ExportSelected %>');" 
+            type="button">
+            <%= enums.GetDescFromButtonType(enums.ButtonTypes.ExportSelected); %>
+    </button>
+    <button id="ExportAll"     
+            name="ExportAll"      
+            onclick="ButtonBehaviors.HandleButtonClkd('<%= enums.ButtonTypes.ExportAll %>');"      
+            type="button">
+            <%= enums.GetDescFromButtonType(enums.ButtonTypes.ExportAll); %>
+    </button>
+   </div>
+  </form>
+ </div>
+ <div class="notifier" id="ExportRecipesResponseContainer">
+  <%# Placeholder, filled in by server as needed. %>  
+ </div>    
+</div>  
+
+<%# Conditionally displayed items for pop-ups, notifications, etc. %>
+
+<%# Import Recipes Popup. %>
+<div class="popup" id="<%= enums.PopupTypes.ImportRecipes %>" style="width: 30%;">
+ <div class="heading">
+  <%= enums.GetDescFromPopupType(enums.PopupTypes.ImportRecipes); %>&nbsp;
+  <img height="32px" 
+       id="fupCloseBtn" 
+       onclick="PopupBehaviors.HidePopup('<%= enums.PopupTypes.ImportRecipes %>');" 
+       src="/images/Buttons/CloseIcon_512X512.png" 
+       width="32px">
+ </div>
+ <br>
+ <div class="centered">
+  <form action="/UploadRecipes" enctype="multipart/form-data" method="post">
+   <input id="recipesFile" type="hidden" value="">
+   <div class="request-div" id="recipesImportForm">
+    <input accept=".zip" 
+          id="recipesFile2Upload" 
+          required="required" 
+          style="color: black; margin: 0px 0px 0px 3px; padding: 0px 0px 5px 0px;" 
+          type="file">
+    <img height="48px" 
+         onclick="SubmitRecipesForUpload(document.getElementById('recipesFile').value);" 
+         src="/images/Buttons/UploadBtn_48X48.png" 
+         title="Import Recipes" 
+         width="48px">    
+   </div>
+  </form>
+  <div class="notifier" id="recipesUploadResponse">
+   <%# Placeholder, filled in by server as needed. %>
+  </div>
+ </div>
+</div> 

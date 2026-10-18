@@ -598,12 +598,6 @@ class ExportRecipesPopupBehavior extends PopupBehavior {
   
    if (HttpStatusTypes.OK === xmlhttpReq.status) {
     document.getElementById("overlayContainer").className = "overlay";
-
-    if (undefined != xmlhttpReq.extraInfo.parentElement && "" != xmlhttpReq.extraInfo.parentElement) {  
-     HideElement(xmlhttpReq.extraInfo.parentElement);
-    
-     document.getElementById("ppuInvoker").value = xmlhttpReq.extraInfo.parentElement;
-    }
    
     ToggleVisibility(PopupTypes.ExportRecipes);
    
@@ -669,8 +663,6 @@ class ImportRecipesPopupBehavior extends PopupBehavior {
  HidePopup() {
   super.HidePopup();
  
-  UnHideElement(document.getElementById("ppuInvoker").value);
- 
   ToggleVisibility(this.popupId);
  }
   
@@ -679,12 +671,6 @@ class ImportRecipesPopupBehavior extends PopupBehavior {
  
  HideElement("recipesUploadResponse");
  UnHideElement("recipesImportForm");
- 
- if (undefined != this.parentElement && "" != this.parentElement) {  
-  HideElement(this.parentElement);
-  
-  document.getElementById("ppuInvoker").value = this.parentElement;
- }
  
  ToggleVisibility(this.popupId);
  }
