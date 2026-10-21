@@ -84,7 +84,7 @@ app.get("/AddArticle", function (req, res) {
  console.log("> AddArticle(" + articleName + ", " + contentFileName + ")"); 
  
  let fileContent = "<embed height='500px' id='articleContainer' src='" 
-                + "http://127.0.0.1:3000/data/statics/" + articleName + '_' 
+                + "/data/statics/" + articleName + '_' 
                 + contentFileName + "' width='100%'></embed>";
     
  try {   

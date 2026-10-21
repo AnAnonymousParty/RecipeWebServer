@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Guacamole Grande_20261021_134738.jpg" name="Guacamole Grande" category="APPETIZER" cuisine="MEXICAN" nativeUnits="US">
+    <Yield amount="2" units="CUP"/>
+    <Times prep="15" cook="0"/>
+  </Title>
+  <Nutrition calories="96" fat="9" saturatedFat="1" cholesterol="0" carbs="6" protein="1.2" sugar="1" sodium="110" fiber="5" servings=".25" servingsUnit="CUP"/>
+  <Description>Avocados and stuff. Lots of stuff.</Description>
+  <Prerequisites>
+    <Prerequisite>Prepare @@Tomato Concasse@@.</Prerequisite>
+  </Prerequisites>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Avocados</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>PEELEDSEEDED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Tomato concasse@@</Name>
+      <Quantity units="TBSP">3</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Red Onion</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Green Onion</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes>Tops only.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Jalepeno Pepper</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Cilantro</Name>
+      <Quantity units="TBSP">.5</Quantity>
+      <Prep>CHOPFINE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Garlic</Name>
+      <Quantity units="CLOVE">2</Quantity>
+      <Prep>MINCED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">.5</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Lime Juice</Name>
+      <Quantity units="EACH">.5</Quantity>
+      <Prep>SQUEEZED</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Chile Seasoning@@</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Guacamole%20Grande_20261021_131902.jpg">In a mortar, mash garlic with salt, pepper, MSG and @@Chile Seasoning@@ to make a paste.</Step>
+    <Step type="STEP" image="">Mash avocado and transfer to a mixing bowl.</Step>
+    <Step type="STEP" image="Guacamole%20Grande_20261021_134152.jpg">Add @@Tomato Concasse@@, red onion, 1/2 the green onion, jalepeno and cilantro to the bowl.</Step>
+    <Step type="STEP" image="Guacamole%20Grande_20261021_134254.jpg">Add lime juice to the garlic paste and mix.</Step>
+    <Step type="STEP" image="Guacamole%20Grande_20261021_134448.jpg">Add the garlic paste to the other ingredients in the bowl. Mix well. Taste and adjust seasoning.</Step>
+    <Step type="STEP" image="Guacamole%20Grande_20261021_134738.jpg">Transfer to you favorite avocado bowl (you --do-- have a favorite avocado bowl, right?). Sprinkle with a little lime juice and green onion, chill and serve.</Step>
+  </Method>
+  <Variations>
+    <Variation>Add a dash or two of your favorite hot sauce.</Variation>
+  </Variations>
+</Recipe>

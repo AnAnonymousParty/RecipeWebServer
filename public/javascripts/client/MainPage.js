@@ -717,12 +717,10 @@ function DeleteArticle(articleName) {
  xmlhttp.send(); 
  
  if (null != document.getElementById("viewRecipeForm")) {
-   HideElement("editPageBtns");
-   HideElement("recipeTitleContainer");  
-   HideElement("viewPageBtns");
+  SetMode(ActivityTypes.ViewRecipesList);
    
-   UnHideElement("filtersContainer", "inline-flex");
-   UnHideElement("indexPageBtns"); 
+  UnHideElement("filtersContainer", "inline-flex");
+  UnHideElement("indexPageBtns"); 
  }
 }
 
@@ -1164,7 +1162,6 @@ function EditStep(rowNum) {
  
  if ("STEP" == type) {
   PopupBehaviors.RevealPopup(PopupTypes.EditStep);
-  ToggleVisibility(PopupTypes.EditStepPopup);
  } else {
   document.getElementById("stepHeadingRowId").value = rowNum;
   document.getElementById("stepHeading2Edit").value = step2Edit;

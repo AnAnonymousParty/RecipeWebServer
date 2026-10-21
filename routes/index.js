@@ -1,24 +1,28 @@
-var express      = require('express');
-var fs           = require('fs');
-var path         = require('path');
-var router       = express.Router();
-var xml2jsParser = require('xml2js-parser');
+const express      = require('express');
+const fs           = require('fs');
+const path         = require('path');
+const router       = express.Router();
+const xml2jsParser = require('xml2js-parser');
 
-var commonLib          = require(path.join(__dirname, '../public/javascripts/server/common.js'));
-var enumsLib           = require(path.join(__dirname, '../public/javascripts/server/enums.js'));
-let validationRulesLib = require(path.join(__dirname, '../public/javascripts/server/validationRules.js'));
+const  commonLib          = require(path.join(__dirname, '../public/javascripts/server/common.js'));
+const  enumsLib           = require(path.join(__dirname, '../public/javascripts/server/enums.js'));
+const  validationRulesLib = require(path.join(__dirname, '../public/javascripts/server/validationRules.js'));
 
 router.get('/', function(req, res, next) {
-  var directoryPath   = path.join(__dirname, '../public/data/recipes'); 
-  var recipesList     = fs.readdirSync(directoryPath); 
-  var rv              = commonLib.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
-  var validationRules = new validationRulesLib.ValidationRules();
- 
+  console.log("> index()"); 
+  
+  let directoryPath   = path.join(__dirname, '../public/data/recipes'); 
+  let recipesList     = fs.readdirSync(directoryPath); 
+  let rv              = commonLib.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
+  let validationRules = new validationRulesLib.ValidationRules();
+  
   res.render('index', { title:              'Recipe Server', 
                         enums:              enumsLib,                        
                         filesList:          rv,
                         recipesCnt:         recipesList.length,
                         validationRules:    validationRules});
+                        
+  console.log("< index()");
 });
 
 module.exports = router;
