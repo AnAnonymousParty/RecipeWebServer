@@ -114,7 +114,7 @@ function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter
  let knowledgeFilesList = fs.readdirSync(curDir + "\\public\\data\\statics");
  let recipeFilesList    = fs.readdirSync(curDir + "\\public\\data\\recipes");
  
-  console.log("  GenerateFilesList() found " + knowledgeFilesList.length + " articles and " + recipeFilesList.length + " recipes."); 
+ console.log("  GenerateFilesList() found " + knowledgeFilesList.length + " articles and " + recipeFilesList.length + " recipes."); 
  
  knowledgeFilesList.forEach((file, ndx) => filesList.push("public\\data\\statics\\" + file)); 
  recipeFilesList.forEach((file, ndx)    => filesList.push("public\\data\\recipes\\" + file)); 
@@ -154,7 +154,7 @@ function GenerateFilesList(fs, path, xml2jsParser, categoryFilter, cuisineFilter
  
   for (;;) {
     if (".html" == fext) {  
-     if ("ALL" != categoryFilter && "KNOWLEDGE" != categoryFilter) {
+     if ("KNOWLEDGE" != categoryFilter) {
       break;
      }
     

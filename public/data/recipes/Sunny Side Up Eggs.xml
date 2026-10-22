@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Sunny Side Up Eggs_talking_egg.gif" name="Sunny Side Up Eggs" category="BREAKFAST" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="1" units="SERVING"/>
+    <Times prep="1" cook="5"/>
+  </Title>
+  <Nutrition calories="155" fat="12" saturatedFat="4" cholesterol="375" carbs="1" protein="13" sugar="0" sodium="0" fiber="0" servings="2" servingsUnit="ITEM"/>
+  <Description>Sunny, but not runny.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Eggs</Name>
+      <Quantity units="EACH">2</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Butter@@</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black pepper</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Sunny%20Side%20Up%20Eggs_20261018_100425.jpg">Heat butter in a non-stick skillet over medium heat.</Step>
+    <Step type="STEP" image="Sunny%20Side%20Up%20Eggs_20261018_100528.jpg">Carefully crack two eggs into the pan. Season with salt, pepper and MSG.</Step>
+    <Step type="STEP" image="Sunny%20Side%20Up%20Eggs_20261018_100700.jpg">Cook until whites are set and edges are crisp. </Step>
+  </Method>
+  <Variations>
+    <Variation>To set the whites faster, add a teaspoon of water to the pan and cover with a lid, although it may cloud the yolks.</Variation>
+  </Variations>
+</Recipe>

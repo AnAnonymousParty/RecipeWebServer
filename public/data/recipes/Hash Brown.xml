@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Recipe>
+  <Title image="Hash Brown_20261018_100628.jpg" name="Hash Brown" category="BREAKFAST" cuisine="AMERICAN" nativeUnits="US">
+    <Yield amount="4" units="SERVING"/>
+    <Times prep="15" cook="10"/>
+  </Title>
+  <Nutrition calories="263" fat="13" saturatedFat="2" cholesterol="3" carbs="35" protein="3" sugar="1" sodium="340" fiber="3" servings="1" servingsUnit="CUP"/>
+  <Description>Shredded potatoes, fried to a crisp.</Description>
+  <Prerequisites/>
+  <Ingredients>
+    <Ingredient type="INGREDIENT">
+      <Name>Russet potatoes</Name>
+      <Quantity units="CUP">4</Quantity>
+      <Prep>SHREAD</Prep>
+      <Notes>Peeled or not.</Notes>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>@@Butter@@</Name>
+      <Quantity units="TBSP">4</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Kosher salt</Name>
+      <Quantity units="TBSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Black Pepper</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>GROUND</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>MSG</Name>
+      <Quantity units="PINCH">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+    <Ingredient type="INGREDIENT">
+      <Name>Onion powder</Name>
+      <Quantity units="TSP">1</Quantity>
+      <Prep>NONE</Prep>
+      <Notes/>
+    </Ingredient>
+  </Ingredients>
+  <Method>
+    <Step type="STEP" image="Hash%20Brown_20261018_092520.jpg">Place shredded potatoes in a bowl lined with a colander, or a salad spinner. Cover with cold water. When water becomes cloudy, drain and repeat until water is mostly clear.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_092613.jpg">Combine potatoes and salt, let sit for about five minutes.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_093629.jpg">Transfer potatoes to a towel.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_093643.jpg">Roll up towel, then wring as much water from the potatoes as you can.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_093832.jpg">Unroll the towel and fluff the potatoes.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_093629.jpg">Spread the potatoes to cover the center 1/3 of the towel. Fold the towel to cover the potatoes and microwave for 2-4 minutes, until potatoes start producing steam.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_094729.jpg">Heat a shallow skillet over medium heat. Add a tablespoon of butter, swirl it around and add half of the potatoes, spreading them out into a circle. Season with pepper, onion powder and MSG.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_095155.jpg">Cook over medium heat, without messing with them, until the edges are browned and crisp.</Step>
+    <Step type="STEP" image="Hash%20Brown_20261018_095323.jpg">Slide hash browns onto a plate. Add another tbsp of butter to the pan. Flip the plate into the pan. Continue cooking until browned and crisp.</Step>
+  </Method>
+  <Variations/>
+</Recipe>
