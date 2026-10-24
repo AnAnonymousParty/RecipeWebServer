@@ -16,12 +16,23 @@ router.get('/', function(req, res, next) {
   let rv              = commonLib.GenerateFilesList(fs, path, xml2jsParser, 'ALL', 'ALL');
   let validationRules = new validationRulesLib.ValidationRules();
   
-  res.render('index', { title:              'Recipe Server', 
-                        enums:              enumsLib,                        
-                        filesList:          rv,
-                        recipesCnt:         recipesList.length,
-                        validationRules:    validationRules});
-                        
+  let renderParameters = { 
+   title:           'Recipe Server', 
+   enums:           enumsLib,                        
+   filesList:       rv,
+   recipesCnt:      recipesList.length,
+   validationRules: validationRules };
+  
+  res.render('index', renderParameters, function (errors, htmlOutput) {
+   if (undefined != errors) {
+    console.log("< index: Error = " + errors);
+   
+    res.send("Internal Server Error. Unable to obtain recipes.<br><br>" + errors);                
+   } else {
+    res.send(htmlOutput);
+   }
+  });
+ 
   console.log("< index()");
 });
 
